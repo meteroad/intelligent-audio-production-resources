@@ -39,7 +39,7 @@ const translations = {
     "projects.openDetails": "View project details",
     "projects.dialogLabel": "Project details",
     "projects.closeDetails": "Close project details",
-    "projects.licenseFilter": "Filter projects by license status",
+    "projects.licenseFilter": "Filter projects by license",
     "projects.capabilityFilter": "Filter projects by availability capability",
     "projects.statusFilter": "Filter projects by availability status",
     "projects.taskFilter": "Filter projects by reviewed task",
@@ -202,7 +202,7 @@ const translations = {
     "projects.openDetails": "查看项目详情",
     "projects.dialogLabel": "项目详情",
     "projects.closeDetails": "关闭项目详情",
-    "projects.licenseFilter": "按许可证状态筛选项目",
+    "projects.licenseFilter": "按许可证筛选项目",
     "projects.capabilityFilter": "按可用能力筛选项目",
     "projects.statusFilter": "按可用状态筛选项目",
     "projects.taskFilter": "按已核验任务筛选项目",
@@ -365,7 +365,6 @@ const elements = {
 
 const availabilityCapabilities = ["source", "checkpoint", "inference", "training", "dataset"];
 const availabilityStatuses = ["linked", "documented", "tested", "gated", "restricted", "not-found", "not-applicable", "not-reviewed"];
-const licenseStatuses = ["identified", "custom", "not-verified"];
 
 function getInitialLanguage() {
   try {
@@ -461,6 +460,38 @@ function populateSelect(select, values, allLabelKey, labelForValue) {
   select.value = values.includes(selected) ? selected : "all";
 }
 
+function projectLicenseFilterValue(project) {
+  if (project.license.spdx) return `spdx:${project.license.spdx}`;
+  if (project.license.status === "not-verified") return "status:not-verified";
+  return `name:${project.license.en}`;
+}
+
+function populateProjectLicenseFilter() {
+  const selected = elements.projectLicense.value || "all";
+  const options = new Map();
+  state.projects.forEach((project) => {
+    const value = projectLicenseFilterValue(project);
+    const label = value === "status:not-verified"
+      ? t("license.status.not-verified")
+      : project.license.spdx ?? localized(project.license);
+    options.set(value, label);
+  });
+
+  const sortedOptions = [...options.entries()].sort(([, left], [, right]) => left.localeCompare(right, state.language));
+  elements.projectLicense.replaceChildren();
+  const all = document.createElement("option");
+  all.value = "all";
+  all.textContent = t("controls.allLicenses");
+  elements.projectLicense.append(all);
+  sortedOptions.forEach(([value, label]) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = label;
+    elements.projectLicense.append(option);
+  });
+  elements.projectLicense.value = options.has(selected) ? selected : "all";
+}
+
 function reviewedTaxonomyValues(field) {
   return [...new Set(
     state.projects
@@ -474,7 +505,7 @@ function reviewedTaxonomyValues(field) {
 
 function populateProjectFilters() {
   populateAreaFilter(elements.projectArea, state.projects);
-  populateSelect(elements.projectLicense, licenseStatuses, "controls.allLicenses", (status) => t(`license.status.${status}`));
+  populateProjectLicenseFilter();
   populateSelect(elements.projectCapability, availabilityCapabilities, "controls.allCapabilities", (capability) => t(`availability.${capability}`));
   populateSelect(elements.projectStatus, availabilityStatuses, "controls.allStatuses", (status) => t(`availability.status.${status}`));
 
@@ -548,7 +579,7 @@ function renderProjects() {
   const selectedEffect = elements.projectEffect.value;
   const filtered = state.projects.filter((project) => {
     const matchesArea = selectedArea === "all" || project.areas.includes(selectedArea);
-    const matchesLicense = selectedLicense === "all" || project.license.status === selectedLicense;
+    const matchesLicense = selectedLicense === "all" || projectLicenseFilterValue(project) === selectedLicense;
     const availabilityEntries = availabilityCapabilities.map((capability) => [capability, project.availability[capability]]);
     const matchesCapability = selectedCapability === "all"
       || (

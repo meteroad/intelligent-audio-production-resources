@@ -70,7 +70,7 @@ Only `paperIds` are stored on projects. Paper-to-project links should be derived
 
 ## Website behavior
 
-The project table supports compound filtering by text, area, license status, availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The reset button clears all project filters.
+The project table supports compound filtering by text, area, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The reset button clears all project filters.
 
 Each project row contains a keyboard-focusable details button. The details dialog shows related papers, license metadata and evidence, source/checkpoint/inference/training/dataset status and evidence, taxonomy tags and evidence, project links, and the verification date. Interface labels are localized in English and Chinese.
 
