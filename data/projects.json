@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-26",
   "projects": [
     {
       "id": "csteinmetz1-automix-toolkit",
@@ -16,16 +16,28 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "automatic-mixing",
+          "differentiable-processing",
+          "evaluation"
+        ],
+        "effects": [
+          "gain",
+          "equalization",
+          "compression",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/csteinmetz1/automix-toolkit/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -35,20 +47,28 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/csteinmetz1/automix-toolkit"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"
+          ]
         }
       },
       "relations": {
@@ -57,11 +77,15 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
           "url": "https://github.com/csteinmetz1/automix-toolkit"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/csteinmetz1/automix-toolkit"
         }
       ]
     },
@@ -78,16 +102,32 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-modeling",
+          "parameter-estimation",
+          "effect-control",
+          "effect-transfer",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "gain",
+          "equalization",
+          "compression",
+          "distortion",
+          "reverberation",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/csteinmetz1/dasp-pytorch/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/csteinmetz1/dasp-pytorch/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -97,27 +137,35 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-applicable",
+          "evidence": [
+            "https://github.com/csteinmetz1/dasp-pytorch/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/dasp-pytorch/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/dasp-pytorch/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/dasp-pytorch/blob/main/README.md"
+          ]
         }
       },
       "relations": {
         "paperIds": [],
         "reviewStatus": "not-reviewed"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -138,16 +186,26 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-modeling",
+          "representation-learning",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "distortion",
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/magenta/ddsp/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/magenta/ddsp/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -157,20 +215,28 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/ddsp/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/ddsp/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/ddsp/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/ddsp/blob/main/README.md"
+          ]
         }
       },
       "relations": {
@@ -179,7 +245,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -201,7 +267,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -264,16 +331,29 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-modeling",
+          "effect-control",
+          "mastering",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "equalization",
+          "compression",
+          "distortion",
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/adobe-research/DeepAFx/blob/main/README.md"
+        ]
       },
       "license": {
-        "en": "Custom/other; see repository terms",
-        "zh": "自定义或其他条款；请查看仓库",
+        "en": "Custom Adobe Research License",
+        "zh": "Adobe Research 自定义许可证",
         "status": "custom",
         "spdx": null,
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/adobe-research/DeepAFx/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -283,20 +363,28 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/adobe-research/DeepAFx/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/adobe-research/DeepAFx/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/adobe-research/DeepAFx/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/adobe-research/DeepAFx/blob/main/README.md"
+          ]
         }
       },
       "relations": {
@@ -305,7 +393,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -328,7 +416,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "Custom/other; see repository terms",
@@ -389,7 +478,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -449,16 +539,29 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "automatic-mixing",
+          "effect-transfer",
+          "representation-learning",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "gain",
+          "equalization",
+          "compression",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/sai-soum/Diff-MST/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "CC-BY-NC-SA-4.0",
         "zh": "CC-BY-NC-SA-4.0",
         "status": "identified",
         "spdx": "CC-BY-NC-SA-4.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/sai-soum/Diff-MST/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -468,20 +571,28 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-found",
+          "evidence": [
+            "https://github.com/sai-soum/Diff-MST/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/sai-soum/Diff-MST/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/sai-soum/Diff-MST/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/sai-soum/Diff-MST/blob/main/README.md"
+          ]
         }
       },
       "relations": {
@@ -490,7 +601,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -513,7 +624,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -524,9 +636,9 @@
       },
       "availability": {
         "source": {
-          "status": "linked",
+          "status": "not-found",
           "evidence": [
-            "https://github.com/zys711/Diff2Mix"
+            "https://github.com/zys711/Diff2Mix/blob/main/README.md"
           ]
         },
         "checkpoint": {
@@ -552,10 +664,10 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
-          "label": "source",
+          "label": "project",
           "url": "https://github.com/zys711/Diff2Mix"
         },
         {
@@ -578,7 +690,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "BSD",
@@ -637,16 +750,32 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-control",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "gain",
+          "equalization",
+          "compression",
+          "distortion",
+          "reverberation",
+          "delay",
+          "modulation",
+          "stereo",
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ytsrt66589/diffFx-pytorch/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/ytsrt66589/diffFx-pytorch/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -656,16 +785,22 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-applicable",
+          "evidence": [
+            "https://github.com/ytsrt66589/diffFx-pytorch/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ytsrt66589/diffFx-pytorch/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ytsrt66589/diffFx-pytorch/blob/main/README.md"
+          ]
         },
         "dataset": {
           "status": "not-reviewed",
@@ -678,7 +813,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -701,7 +836,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -764,7 +900,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -824,7 +961,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -883,16 +1021,27 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "parameter-estimation",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "gain",
+          "equalization",
+          "delay",
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/gdalsanto/flamo/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "MIT",
         "zh": "MIT",
         "status": "identified",
         "spdx": "MIT",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/gdalsanto/flamo/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -902,20 +1051,28 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-applicable",
+          "evidence": [
+            "https://github.com/gdalsanto/flamo/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gdalsanto/flamo/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gdalsanto/flamo/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gdalsanto/flamo/blob/main/README.md"
+          ]
         }
       },
       "relations": {
@@ -924,7 +1081,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -948,16 +1105,23 @@
         "representation"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "representation-learning"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/README.md"
+        ]
       },
       "license": {
-        "en": "Custom/other; see repository terms",
-        "zh": "自定义或其他条款；请查看仓库",
-        "status": "custom",
-        "spdx": null,
-        "evidenceUrl": null
+        "en": "CC-BY-NC-4.0",
+        "zh": "CC-BY-NC-4.0",
+        "status": "identified",
+        "spdx": "CC-BY-NC-4.0",
+        "evidenceUrl": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -967,20 +1131,28 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/yytung/fxencoder-plusplus"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "restricted",
+          "evidence": [
+            "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/README.md"
+          ]
         }
       },
       "relations": {
@@ -989,11 +1161,15 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
           "url": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/yytung/fxencoder-plusplus"
         }
       ]
     },
@@ -1010,7 +1186,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -1071,7 +1248,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "BSD",
@@ -1131,16 +1309,23 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "differentiable-processing"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/sh-lee97/grafx/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/sh-lee97/grafx/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -1150,8 +1335,10 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-applicable",
+          "evidence": [
+            "https://github.com/sh-lee97/grafx/blob/main/README.md"
+          ]
         },
         "inference": {
           "status": "not-reviewed",
@@ -1172,7 +1359,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -1195,7 +1382,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -1261,7 +1449,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -1322,7 +1511,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "Apache-2.0",
@@ -1384,7 +1574,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -1449,7 +1640,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -1510,7 +1702,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "CC-BY-NC-SA-4.0",
@@ -1570,7 +1763,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -1629,7 +1823,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -1689,16 +1884,26 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-modeling",
+          "evaluation",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "distortion",
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/mcomunita/nablafx/blob/master/README.md"
+        ]
       },
       "license": {
         "en": "MIT",
         "zh": "MIT",
         "status": "identified",
         "spdx": "MIT",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/mcomunita/nablafx/blob/master/LICENSE"
       },
       "availability": {
         "source": {
@@ -1708,20 +1913,29 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mcomunita/nablafx/blob/master/README.md",
+            "https://github.com/mcomunita/nablafx/tree/master/weights"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mcomunita/nablafx/blob/master/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mcomunita/nablafx/blob/master/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mcomunita/nablafx/blob/master/README.md"
+          ]
         }
       },
       "relations": {
@@ -1731,7 +1945,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -1752,7 +1966,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -1812,16 +2027,32 @@
         "evaluation"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-transfer",
+          "representation-learning",
+          "parameter-estimation",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "equalization",
+          "compression",
+          "distortion",
+          "reverberation",
+          "delay",
+          "stereo",
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/README.md"
+        ]
       },
       "license": {
-        "en": "MIT",
-        "zh": "MIT",
-        "status": "identified",
-        "spdx": "MIT",
-        "evidenceUrl": null
+        "en": "MIT source; checkpoint CC-BY-NC-SA-4.0",
+        "zh": "源码 MIT；权重 CC-BY-NC-SA-4.0",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -1837,16 +2068,24 @@
           ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/README.md",
+            "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/docs/training.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-found",
+          "evidence": [
+            "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/README.md",
+            "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/docs/data-format.md"
+          ]
         }
       },
       "relations": {
@@ -1855,7 +2094,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -1882,16 +2121,29 @@
         "audio-effects"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-removal",
+          "effect-modeling"
+        ],
+        "effects": [
+          "compression",
+          "distortion",
+          "reverberation",
+          "delay",
+          "modulation",
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/mhrice/RemFx/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/mhrice/RemFx/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -1901,20 +2153,29 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "linked",
+          "evidence": [
+            "https://zenodo.org/record/8218621"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mhrice/RemFx/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mhrice/RemFx/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mhrice/RemFx/blob/main/README.md",
+            "https://zenodo.org/record/8187288"
+          ]
         }
       },
       "relations": {
@@ -1923,7 +2184,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -1932,6 +2193,10 @@
         {
           "label": "project",
           "url": "https://csteinmetz1.github.io/RemFX/"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://zenodo.org/record/8218621"
         }
       ]
     },
@@ -1949,7 +2214,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -2011,16 +2277,29 @@
         "mastering"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "mastering",
+          "effect-control"
+        ],
+        "effects": [
+          "equalization",
+          "compression",
+          "distortion",
+          "reverberation",
+          "stereo",
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/AMAAI-Lab/SonicMaster/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/AMAAI-Lab/SonicMaster/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -2030,20 +2309,30 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/amaai-lab/SonicMaster/tree/main"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/AMAAI-Lab/SonicMaster/blob/main/README.md",
+            "https://huggingface.co/spaces/amaai-lab/SonicMaster"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/AMAAI-Lab/SonicMaster/blob/main/README.md"
+          ]
         },
         "dataset": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/AMAAI-Lab/SonicMaster/blob/main/README.md",
+            "https://huggingface.co/datasets/amaai-lab/SonicMasterDataset"
+          ]
         }
       },
       "relations": {
@@ -2052,11 +2341,15 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
           "url": "https://github.com/AMAAI-Lab/SonicMaster"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/amaai-lab/SonicMaster/tree/main"
         }
       ]
     },
@@ -2073,16 +2366,26 @@
         "differentiable-processing"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed"
+        "tasks": [
+          "effect-transfer",
+          "representation-learning",
+          "parameter-estimation",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/csteinmetz1/st-ito/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache-2.0",
         "zh": "Apache-2.0",
         "status": "identified",
         "spdx": "Apache-2.0",
-        "evidenceUrl": null
+        "evidenceUrl": "https://github.com/csteinmetz1/st-ito/blob/main/LICENSE"
       },
       "availability": {
         "source": {
@@ -2092,16 +2395,22 @@
           ]
         },
         "checkpoint": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/st-ito/blob/main/README.md"
+          ]
         },
         "inference": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "documented",
+          "evidence": [
+            "https://github.com/csteinmetz1/st-ito/blob/main/README.md"
+          ]
         },
         "training": {
-          "status": "not-reviewed",
-          "evidence": []
+          "status": "not-found",
+          "evidence": [
+            "https://github.com/csteinmetz1/st-ito/blob/main/README.md"
+          ]
         },
         "dataset": {
           "status": "not-reviewed",
@@ -2114,7 +2423,7 @@
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-26",
       "links": [
         {
           "label": "source",
@@ -2136,7 +2445,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "No license file verified",
@@ -2197,7 +2507,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -2256,7 +2567,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",
@@ -2315,7 +2627,8 @@
       "taxonomy": {
         "tasks": [],
         "effects": [],
-        "reviewStatus": "not-reviewed"
+        "reviewStatus": "not-reviewed",
+        "evidence": []
       },
       "license": {
         "en": "MIT",

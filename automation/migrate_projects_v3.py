@@ -125,6 +125,7 @@ def upgrade_document(project_data: dict[str, object], paper_data: dict[str, obje
                     "tasks": [],
                     "effects": [],
                     "reviewStatus": "not-reviewed",
+                    "evidence": [],
                 },
                 "license": license_metadata(project["license"]),
                 "availability": availability_from_links(links),

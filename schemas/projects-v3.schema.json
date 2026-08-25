@@ -100,7 +100,7 @@
     "taxonomy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["tasks", "effects", "reviewStatus"],
+      "required": ["tasks", "effects", "reviewStatus", "evidence"],
       "properties": {
         "tasks": {
           "type": "array",
@@ -118,6 +118,13 @@
         },
         "reviewStatus": {
           "enum": ["not-reviewed", "reviewed"]
+        },
+        "evidence": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/httpsUrl"
+          }
         }
       }
     },

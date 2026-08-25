@@ -59,6 +59,7 @@ class ProjectSchemaMigrationTests(unittest.TestCase):
 
     def test_upgrade_records_only_link_evidence(self):
         project = migrate_projects_v3.upgrade_document(self.v2, self.papers)["projects"][0]
+        self.assertEqual(project["taxonomy"], {"tasks": [], "effects": [], "reviewStatus": "not-reviewed", "evidence": []})
         self.assertEqual(project["availability"]["source"]["status"], "linked")
         self.assertEqual(project["availability"]["checkpoint"]["status"], "linked")
         self.assertEqual(project["availability"]["inference"], {"status": "not-reviewed", "evidence": []})
@@ -102,6 +103,20 @@ class ProjectSchemaMigrationTests(unittest.TestCase):
             path = Path(directory) / "projects.json"
             path.write_text(json.dumps(migrated), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "requires evidence"):
+                validate_data.validate_projects(path, {"example-paper"}, self.paper_resource_urls)
+
+    def test_validator_rejects_taxonomy_without_evidence(self):
+        migrated = migrate_projects_v3.upgrade_document(self.v2, self.papers)
+        migrated["projects"][0]["taxonomy"] = {
+            "tasks": ["effect-modeling"],
+            "effects": ["distortion"],
+            "reviewStatus": "reviewed",
+            "evidence": [],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "projects.json"
+            path.write_text(json.dumps(migrated), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "reviewed taxonomy requires evidence"):
                 validate_data.validate_projects(path, {"example-paper"}, self.paper_resource_urls)
 
     def test_validator_rejects_unknown_paper_relation(self):

@@ -126,16 +126,24 @@ def canonical_resource_url(url: str) -> str:
 
 def validate_project_taxonomy(value: object, context: str) -> None:
     require(isinstance(value, dict), f"{context} must be an object")
-    require(set(value) == {"tasks", "effects", "reviewStatus"}, f"{context} has invalid fields")
+    require(set(value) == {"tasks", "effects", "reviewStatus", "evidence"}, f"{context} has invalid fields")
     tasks = value.get("tasks")
     effects = value.get("effects")
+    evidence = value.get("evidence")
     require(isinstance(tasks, list) and len(tasks) == len(set(tasks)), f"{context}.tasks is invalid")
     require(set(tasks).issubset(ALLOWED_PROJECT_TASKS), f"{context}.tasks contains unknown values")
     require(isinstance(effects, list) and len(effects) == len(set(effects)), f"{context}.effects is invalid")
     require(set(effects).issubset(ALLOWED_EFFECTS), f"{context}.effects contains unknown values")
+    require(isinstance(evidence, list) and len(evidence) == len(set(evidence)), f"{context}.evidence is invalid")
+    for index, url in enumerate(evidence):
+        validate_https_url(url, f"{context}.evidence[{index}]")
     require(value.get("reviewStatus") in {"not-reviewed", "reviewed"}, f"{context}.reviewStatus is invalid")
     if value["reviewStatus"] == "not-reviewed":
         require(not tasks and not effects, f"{context} cannot contain unreviewed taxonomy claims")
+        require(not evidence, f"{context} cannot attach evidence before review")
+    else:
+        require(tasks or effects, f"{context} reviewed taxonomy requires at least one tag")
+        require(evidence, f"{context} reviewed taxonomy requires evidence")
 
 
 def validate_project_license(value: object, context: str) -> None:
