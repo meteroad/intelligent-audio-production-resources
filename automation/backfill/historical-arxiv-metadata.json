@@ -1,0 +1,1513 @@
+{
+  "papers": [
+    {
+      "sourceId": "arxiv:2608.10573",
+      "title": "Beyond Dry References: Learning Relative Audio Effects Representations via Contrastive Distance Learning",
+      "authors": [
+        "Xinlu Liu",
+        "Huibin Lin",
+        "Weixing Wei",
+        "Zhenhai Yan"
+      ],
+      "abstract": "Audio effects (Fx) representation learning plays a key role in intelligent music production, including automatic mixing and Fx style transfer. Existing methods typically rely on dry or nearly dry references for effect modeling, yet truly unprocessed audio is rarely available in practice, as real recordings inevitably reflect the microphone, room acoustics, and preceding signal processing. Instead of pursuing absolute effect encodings, we argue that the relative effect distance between audio signals is more meaningful for real-world music production. Motivated by this, we propose RelFx, a contrastive learning framework that learns relative effect transformations from general audio collections without requiring dry references during representation training. Our approach uses a dual-branch Siamese encoder equipped with cross-attention and differential gating fusion to infer the shared effect transformation from a reference clip and an effect-processed, content-related clip. We further propose an antisymmetric fusion variant for bidirectional effect encoding, such that swapping the input order directly produces a nearly sign-reversed embedding, a property not explored in earlier work. Moreover, our dry-reference-free formulation eliminates the reliance on dry multitrack datasets and enables training on effect-bearing audio. Experiments on Fx style transfer demonstrate state-of-the-art performance under the standard Fx-Encoder++ MUSDB18 evaluation protocol, consistently outperforming existing approaches across all four instrument categories.",
+      "published": "2026-08-11T07:00:35Z",
+      "updated": "2026-08-11T07:00:35Z",
+      "paperUrl": "https://arxiv.org/abs/2608.10573",
+      "doi": null,
+      "journalReference": null,
+      "comment": "8 pages (6 pages of main text), 3 figures, 3 tables. Accepted at the 27th International Society for Music Information Retrieval Conference (ISMIR 2026). Project page: https://relative-fx.github.io",
+      "publicationVenue": "ISMIR 2026",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2608.05513",
+      "title": "EG-VAE: A Unified Framework for Electric Guitar Tone Transfer and Removal",
+      "authors": [
+        "Yen-Tung Yeh",
+        "Yun-Ning",
+        "Hung",
+        "Yi-Hsuan Yang"
+      ],
+      "abstract": "Electric guitar tone transfer (EGTT) and tone removal (EGTR) are two fundamental tasks in guitar tone modeling: EGTT replaces a recording's tone with that of a reference, while EGTR recovers the dry direct-input (DI) signal from a wet, processed recording. Despite their highly related nature, prior work has addressed them independently, and both works have yet to achieve satisfactory results. In this paper, we propose EG-VAE, a unified framework that jointly models EGTT and EGTR by disentangling frame-level content and global tone representations from wet recordings with a variational autoencoder. EGTT is achieved by recombining a source's content with a reference's tone, while EGTR is attained by a novel tone masking objective that enforces content-tone disentanglement during training and realizes the removal procedure at inference. To improve transfer to tones unseen in training, a second training stage shapes a smooth tone space through variational sampling and audio-effects augmentation. Experimental results from both objective and subjective evaluations demonstrate that EG-VAE outperforms task-specific baselines on transfer and removal. Demos are available at https://guitar-tone-demo.vercel.app/.",
+      "published": "2026-08-06T01:28:34Z",
+      "updated": "2026-08-06T01:28:34Z",
+      "paperUrl": "https://arxiv.org/abs/2608.05513",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2608.05506",
+      "title": "Rethinking Automatic Music Mixing as Sequential Stem Blending",
+      "authors": [
+        "Yen-Tung Yeh",
+        "Chung-Jui Chan",
+        "Yun-Ning",
+        "Hung",
+        "Yi-Hsuan Yang"
+      ],
+      "abstract": "Automatic music mixing, the task of automatically combining individual audio tracks into a cohesive mixture, is typically addressed by parallelized architectures that process all input tracks in a single pass. In this work, inspired by how human mix engineers process stems one at a time, we propose a paradigm shift and ask whether automatic music mixing can be reformulated as a sequential stem blending task, where each stem is blended into a growing submix. Specifically, we train a latent flow matching model conditioned on the submix context, enabling sequential processing of an arbitrary number of input tracks. To train the model, we introduce a degradation-based data synthesis strategy that simulates realistic stem blending scenarios from existing multitrack and source separation datasets. Experimental results on both stem blending and automatic music mixing benchmarks demonstrate the effectiveness of the proposed approach. We provide audio examples on the accompanying demo page\\footnote{https://sequential-mixing-demo.vercel.app/}.",
+      "published": "2026-08-06T01:16:18Z",
+      "updated": "2026-08-06T01:16:18Z",
+      "paperUrl": "https://arxiv.org/abs/2608.05506",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2608.05442",
+      "title": "Diff2Mix: Controllable Music Mixing via Diffusion Models and Differentiable Audio Effects",
+      "authors": [
+        "Yisu Zong",
+        "Jinjie Shi",
+        "Joshua Reiss"
+      ],
+      "abstract": "Automatic music mixing aims to combine multitrack recordings into a balanced and coherent musical piece. Because the content of different songs and the subjective preferences of mixing engineers jointly shape the final outcome, a practical system should deliver well-balanced mixes while allowing for controllable stylistic variation. However, most existing methods treat automatic mixing and mixing style control as separate tasks, making it difficult for a single system to produce high-quality mixes while remaining editable and style-aware. To address this limitation, this paper presents Diff2Mix, a generative automatic mixing system based on diffusion models and a differentiable mixing console. This system offers two levels of optional user control: a reference audio enables overall production style control, and the differentiable mixing console provides explicit audio effects parameters for interpretability and fine-grained optimization. We demonstrate our system's competitive performance through both objective and subjective evaluations in terms of mixing quality and control ability. We provide code and audio samples at our project page https://zys711.github.io/Diff2Mix .",
+      "published": "2026-08-05T22:21:06Z",
+      "updated": "2026-08-05T22:21:06Z",
+      "paperUrl": "https://arxiv.org/abs/2608.05442",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ISMIR 2026",
+      "publicationVenue": "ISMIR 2026",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2608.00667",
+      "title": "Band-Count Dense Modal Estimation with Fixed-Frequency Differentiable Resonator Refinement",
+      "authors": [
+        "Minhui Lu",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Task B of the 1st DAFx Parameter Estimation Challenge requires estimating the frequencies, decay rates, gains, and number of modes in a dense plate-reverb impulse response. Weak and overlapping modes make sparse peak detection prone to severe undercounting. We train an ExtraTrees regressor on simulator-generated data to predict mode counts in four frequency bands. These counts define dense frequency grids, after which a differentiable all-pole resonator model refines decay and gain while keeping frequency fixed. On two separate synthetic validation sets, the system reduces a local challenge-style error by about 66% relative to the official default peak-picking baseline. The improvement is mainly associated with lower mode-count mismatch, while decay and gain remain the largest error sources. These findings support separating modal-density estimation from continuous parameter fitting.",
+      "published": "2026-08-01T13:42:31Z",
+      "updated": "2026-08-01T13:42:31Z",
+      "paperUrl": "https://arxiv.org/abs/2608.00667",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted as a challenge paper at the 29th International Conference on Digital Audio Effects (DAFx 2026), Cambridge, MA, USA, September, 2026",
+      "publicationVenue": "DAFx 2026",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2608.00656",
+      "title": "Simulation-Based Plate-Reverb Parameter Estimation from a Single Impulse Response",
+      "authors": [
+        "Minhui Lu",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "We present a simulation-trained, non-iterative estimator for Task A of the 1st DAFx Parameter Estimation Challenge. Each unnormalized plate-reverb impulse response is summarized by amplitude, spectral, and decay descriptors, and an ensemble of tree regressors estimates the six target parameters in one pass. Across two independent synthetic validation sets, the normalized models outperform the training-set mean and an earlier raw-regression baseline. On a shared set, the final ensemble also outperforms a single run of the official default PSO at substantially lower inference cost. Since the official labels are hidden, parameter accuracy is measured on simulator-matched data, and the released responses support only audio-side consistency checks. The estimator returns point estimates without uncertainty.",
+      "published": "2026-08-01T13:20:04Z",
+      "updated": "2026-08-01T13:20:04Z",
+      "paperUrl": "https://arxiv.org/abs/2608.00656",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted as a challenge paper at the 29th International Conference on Digital Audio Effects, Cambridge, MA, USA, 2026",
+      "publicationVenue": "DAFx 2026",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2607.19645",
+      "title": "Black-Box Optimization for Identifying and Inverting Audio Dynamic Range Control Effects",
+      "authors": [
+        "Haoran Sun",
+        "Dominique Fourer",
+        "Hichem Maaref"
+      ],
+      "abstract": "Dynamic Range Compression (DRC) is a widely used nonlinear audio effect whose parameters are often unknown, making blind estimation and inversion challenging. In this work, we formulate DRC parameter estimation as a black-box optimization problem in a perceptually motivated feature space. Given an observed signal and a reference representation, we estimate the parameters that minimize the distance between feature descriptors of the reconstructed and reference signals. Unlike gradient-based approaches, the proposed method does not require differentiability of the DRC model or the feature extraction pipeline, enabling the use of nonlinear and histogram-based descriptors. Experimental results demonstrate that the proposed method achieves competitive performance in blind parameter estimation and dry signal recovery, outperforming or matching state-of-the-art models in terms of reconstruction quality.",
+      "published": "2026-07-22T00:54:31Z",
+      "updated": "2026-07-22T00:54:31Z",
+      "paperUrl": "https://arxiv.org/abs/2607.19645",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2606.22005",
+      "title": "InstructFX2FX: A Multi-Turn Text-to-Effect System for Sequential Audio Effect Refinement",
+      "authors": [
+        "Song-Ze Yu",
+        "Milan Liessens Dujardin",
+        "Yuxuan Cai",
+        "Wantong Zhang",
+        "Brian Cruz",
+        "Jeremy Wagner",
+        "Carmine-Emanuele Cella"
+      ],
+      "abstract": "We present InstructFX2FX, a system for sequential audio effect refinement through multi-turn natural-language instructions. Existing text-to-effect systems are largely single-shot, mapping one textual descriptor to one preset. Real audio engineering is instead sequential: engineers refine an existing effect chain through successive instructions. This poses a stateful problem that single-shot systems do not address: given the current effect parameters state and a new instruction, update the sound while preserving what earlier instructions already achieved. InstructFX2FX addresses this with a hybrid architecture that divides labor between a language model and CLAP-guided optimization. The LLM serves as a high-level planner that selects effects and proposes the initial parameter state, motivated by recent evidence that LLMs can outperform CLAP-based optimization for single-turn text-to-effect mapping; CLAP-guided optimization then refines the existing parameter state, providing a more stable and robust refinement mechanism than LLM reprompting. In the demo, attendees drive a dry recording through successive natural-language instructions: after each turn, they choose how strongly the effect is applied, then issue the next instruction based on what still differs from the sound they intend. In a preliminary evaluation on SocialFX-derived descriptor pairs, CLAP-guided refinement achieves lower DSP-feature MMD than an LLM+LLM initialize-then-reprompt baseline on 9 of 10 pairs. Trajectory analysis further shows that, for differentiable effects, optimization tends to gradually move the audio toward the new target while retaining the effects of the previous instruction, highlighting the potential for gradual refinement.",
+      "published": "2026-06-20T12:06:13Z",
+      "updated": "2026-07-04T08:18:16Z",
+      "paperUrl": "https://arxiv.org/abs/2606.22005",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to DAFx26. Audio demos and source code: https://instructfx2fx.vaclis.net/",
+      "publicationVenue": "DAFx 2026",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2601.04867",
+      "title": "Gradient-based Optimisation of Modulation Effects",
+      "authors": [
+        "Alistair Carson",
+        "Alec Wright",
+        "Stefan Bilbao"
+      ],
+      "abstract": "Modulation effects such as phasers, flangers and chorus effects are heavily used in conjunction with the electric guitar. Machine learning based emulation of analog modulation units has been investigated in recent years, but most methods have either been limited to one class of effect or suffer from a high computational cost or latency compared to canonical digital implementations. Here, we build on previous work and present a framework for modelling flanger, chorus and phaser effects based on differentiable digital signal processing. The model is trained in the time-frequency domain, but at inference operates in the time-domain, requiring zero latency. We investigate the challenges associated with gradient-based optimisation of such effects, and show that low-frequency weighting of loss functions avoids convergence to local minima when learning delay times. We show that when trained against analog effects units, sound output from the model is in some cases perceptually indistinguishable from the reference, but challenges still remain for effects with long delay times and feedback.",
+      "published": "2026-01-08T12:04:41Z",
+      "updated": "2026-08-03T14:35:10Z",
+      "paperUrl": "https://arxiv.org/abs/2601.04867",
+      "doi": "10.17743/jaes.2026.0273",
+      "journalReference": null,
+      "comment": "Published in the Journal Audio Engineering Society (JAES). Original submission Dec. 2025. Revised and accepted March 2026",
+      "publicationVenue": "JAES",
+      "venueEvidence": "doi",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2512.01559",
+      "title": "LLM2Fx-Tools: Tool Calling For Music Post-Production",
+      "authors": [
+        "Seungheon Doh",
+        "Junghyun Koo",
+        "Marco A. Martínez-Ramírez",
+        "Woosung Choi",
+        "Wei-Hsiang Liao",
+        "Qiyu Wu",
+        "Juhan Nam",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "This paper introduces LLM2Fx-Tools, a multimodal tool-calling framework that generates executable sequences of audio effects (Fx-chain) for music post-production. LLM2Fx-Tools uses a large language model (LLM) to understand audio inputs, select audio effects types, determine their order, and estimate parameters, guided by chain-of-thought (CoT) planning. We also present LP-Fx, a new instruction-following dataset with structured CoT annotations and tool calls for audio effects modules. Experiments show that LLM2Fx-Tools can infer an Fx-chain and its parameters from pairs of unprocessed and processed audio, enabled by autoregressive sequence modeling, tool calling, and CoT reasoning. We further validate the system in a style transfer setting, where audio effects information is transferred from a reference source and applied to new content. Finally, LLM-as-a-judge evaluation demonstrates that our approach generates appropriate CoT reasoning and responses for music production queries. To our knowledge, this is the first work to apply LLM-based tool calling to audio effects modules, enabling interpretable and controllable music production.",
+      "published": "2025-12-01T11:30:21Z",
+      "updated": "2026-01-28T21:36:23Z",
+      "paperUrl": "https://arxiv.org/abs/2512.01559",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ICLR 2026",
+      "publicationVenue": "ICLR 2026",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2511.20380",
+      "title": "Differentiable Attenuation Filters for Feedback Delay Networks",
+      "authors": [
+        "Ilias Ibnyahya",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "We introduce a novel method for designing attenuation filters in digital audio reverberation systems based on Feedback Delay Networks (FDNs). Our approach uses Second Order Sections (SOS) of Infinite Impulse Response (IIR) filters arranged as parametric equalizers (PEQ), enabling fine control over frequency-dependent reverberation decay. Unlike traditional graphic equalizer designs, which require numerous filters per delay line, we propose a scalable solution where the number of filters can be adjusted. The frequency, gain, and quality factor (Q) parameters are shared parameters across delay lines and only the gain is adjusted based on delay length. This design not only reduces the number of optimization parameters, but also remains fully differentiable and compatible with gradient-based learning frameworks. Leveraging principles of analog filter design, our method allows for efficient and accurate filter fitting using supervised learning. Our method delivers a flexible and differentiable design, achieving state-of-the-art performance while significantly reducing computational cost.",
+      "published": "2025-11-25T15:01:55Z",
+      "updated": "2025-11-25T15:01:55Z",
+      "paperUrl": "https://arxiv.org/abs/2511.20380",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.LG",
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2511.08040",
+      "title": "Automatic Music Mixing using a Generative Model of Effect Embeddings",
+      "authors": [
+        "Eloi Moliner",
+        "Marco A. Martínez-Ramírez",
+        "Junghyun Koo",
+        "Wei-Hsiang Liao",
+        "Kin Wai Cheuk",
+        "Joan Serrà",
+        "Vesa Välimäki",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Music mixing involves combining individual tracks into a cohesive mixture, a task characterized by subjectivity where multiple valid solutions exist for the same input. Existing automatic mixing systems treat this task as a deterministic regression problem, thus ignoring this multiplicity of solutions. Here we introduce MEGAMI (Multitrack Embedding Generative Auto MIxing), a generative framework that models the conditional distribution of professional mixes given unprocessed tracks. MEGAMI uses a track-agnostic effects processor conditioned on per-track generated embeddings, handles arbitrary unlabeled tracks through a permutation-equivariant architecture, and enables training on both dry and wet recordings via domain adaptation. Our objective evaluation using distributional metrics shows consistent improvements over existing methods, while listening tests indicate performances approaching human-level quality across diverse musical genres.",
+      "published": "2025-11-11T09:43:58Z",
+      "updated": "2025-11-11T09:43:58Z",
+      "paperUrl": "https://arxiv.org/abs/2511.08040",
+      "doi": null,
+      "journalReference": null,
+      "comment": "submitted to IEEE ICASSP 2026",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2509.15948",
+      "title": "Reverse Engineering of Music Mixing Graphs with Differentiable Processors and Iterative Pruning",
+      "authors": [
+        "Sungho Lee",
+        "Marco Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Stefan Uhlich",
+        "Giorgio Fabbro",
+        "Kyogu Lee",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Reverse engineering of music mixes aims to uncover how dry source signals are processed and combined to produce a final mix. We extend the prior works to reflect the compositional nature of mixing and search for a graph of audio processors. First, we construct a mixing console, applying all available processors to every track and subgroup. With differentiable processor implementations, we optimize their parameters with gradient descent. Then, we repeat the process of removing negligible processors and fine-tuning the remaining ones. This way, the quality of the full mixing console can be preserved while removing approximately two-thirds of the processors. The proposed method can be used not only to analyze individual music mixes but also to collect large-scale graph data that can be used for downstream tasks, e.g., automatic mixing. Especially for the latter purpose, efficient implementation of the search is crucial. To this end, we present an efficient batch-processing method that computes multiple processors in parallel. We also exploit the \"dry/wet\" parameter of the processors to accelerate the search. Extensive quantitative and qualitative analyses are conducted to evaluate the proposed method's performance, behavior, and computational cost.",
+      "published": "2025-09-19T12:55:58Z",
+      "updated": "2025-09-19T12:55:58Z",
+      "paperUrl": "https://arxiv.org/abs/2509.15948",
+      "doi": null,
+      "journalReference": null,
+      "comment": "JAES, extension of arxiv.org/abs/2408.03204 and arxiv.org/abs/2406.01049",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2508.03448",
+      "title": "SonicMaster: Towards Controllable All-in-One Music Restoration and Mastering",
+      "authors": [
+        "Jan Melechovsky",
+        "Ambuj Mehrish",
+        "Abhinaba Roy",
+        "Dorien Herremans"
+      ],
+      "abstract": "Music recordings often suffer from audio quality issues such as excessive reverberation, distortion, clipping, tonal imbalances, and a narrowed stereo image, especially when created in non-professional settings without specialized equipment or expertise. These problems are typically corrected using separate specialized tools and manual adjustments. In this paper, we introduce SonicMaster, the first unified generative model for music restoration and mastering that addresses a broad spectrum of audio artifacts with text-based control. SonicMaster is conditioned on natural language instructions to apply targeted enhancements, or can operate in an automatic mode for general restoration. To train this model, we construct the SonicMaster dataset, a large dataset of paired degraded and high-quality tracks by simulating common degradation types with nineteen degradation functions belonging to five enhancements groups: equalization, dynamics, reverb, amplitude, and stereo. Our approach leverages a flow-matching generative training paradigm to learn an audio transformation that maps degraded inputs to their cleaned, mastered versions guided by text prompts. Objective audio quality metrics demonstrate that SonicMaster significantly improves sound quality across all artifact categories. Furthermore, subjective listening tests confirm that listeners prefer SonicMaster's enhanced outputs over other baselines.",
+      "published": "2025-08-05T13:49:04Z",
+      "updated": "2025-12-27T19:25:03Z",
+      "paperUrl": "https://arxiv.org/abs/2508.03448",
+      "doi": null,
+      "journalReference": "Proceedings of ICML, 2026, Seoul, South Korea",
+      "comment": null,
+      "publicationVenue": "ICML 2026",
+      "venueEvidence": "journalReference",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2507.02273",
+      "title": "Fx-Encoder++: Extracting Instrument-Wise Audio Effects Representations from Mixtures",
+      "authors": [
+        "Yen-Tung Yeh",
+        "Junghyun Koo",
+        "Marco A. Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Yi-Hsuan Yang",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "General-purpose audio representations have proven effective across diverse music information retrieval applications, yet their utility in intelligent music production remains limited by insufficient understanding of audio effects (Fx). Although previous approaches have emphasized audio effects analysis at the mixture level, this focus falls short for tasks demanding instrument-wise audio effects understanding, such as automatic mixing. In this work, we present Fx-Encoder++, a novel model designed to extract instrument-wise audio effects representations from music mixtures. Our approach leverages a contrastive learning framework and introduces an \"extractor\" mechanism that, when provided with instrument queries (audio or text), transforms mixture-level audio effects embeddings into instrument-wise audio effects embeddings. We evaluated our model across retrieval and audio effects parameter matching tasks, testing its performance across a diverse range of instruments. The results demonstrate that Fx-Encoder++ outperforms previous approaches at mixture level and show a novel ability to extract effects representation instrument-wise, addressing a critical capability gap in intelligent music production systems.",
+      "published": "2025-07-03T03:27:11Z",
+      "updated": "2025-07-03T03:27:11Z",
+      "paperUrl": "https://arxiv.org/abs/2507.02273",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ISMIR 2025",
+      "publicationVenue": "ISMIR 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2506.16889",
+      "title": "ITO-Master: Inference-Time Optimization for Audio Effects Modeling of Music Mastering Processors",
+      "authors": [
+        "Junghyun Koo",
+        "Marco A. Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Giorgio Fabbro",
+        "Michele Mancusi",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Music mastering style transfer aims to model and apply the mastering characteristics of a reference track to a target track, simulating the professional mastering process. However, existing methods apply fixed processing based on a reference track, limiting users' ability to fine-tune the results to match their artistic intent. In this paper, we introduce the ITO-Master framework, a reference-based mastering style transfer system that integrates Inference-Time Optimization (ITO) to enable finer user control over the mastering process. By optimizing the reference embedding during inference, our approach allows users to refine the output dynamically, making micro-level adjustments to achieve more precise mastering results. We explore both black-box and white-box methods for modeling mastering processors and demonstrate that ITO improves mastering performance across different styles. Through objective evaluation, subjective listening tests, and qualitative analysis using text-based conditioning with CLAP embeddings, we validate that ITO enhances mastering style similarity while offering increased adaptability. Our framework provides an effective and user-controllable solution for mastering style transfer, allowing users to refine their results beyond the initial style transfer.",
+      "published": "2025-06-20T10:21:56Z",
+      "updated": "2025-07-03T03:36:09Z",
+      "paperUrl": "https://arxiv.org/abs/2506.16889",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ISMIR 2025",
+      "publicationVenue": "ISMIR 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2505.11315",
+      "title": "Improving Inference-Time Optimisation for Vocal Effects Style Transfer with a Gaussian Prior",
+      "authors": [
+        "Chin-Yun Yu",
+        "Marco A. Martínez-Ramírez",
+        "Junghyun Koo",
+        "Wei-Hsiang Liao",
+        "Yuki Mitsufuji",
+        "György Fazekas"
+      ],
+      "abstract": "Style Transfer with Inference-Time Optimisation (ST-ITO) is a recent approach for transferring the applied effects of a reference audio to an audio track. It optimises the effect parameters to minimise the distance between the style embeddings of the processed audio and the reference. However, this method treats all possible configurations equally and relies solely on the embedding space, which can result in unrealistic configurations or biased outcomes. We address this pitfall by introducing a Gaussian prior derived from the DiffVox vocal preset dataset over the parameter space. The resulting optimisation is equivalent to maximum-a-posteriori estimation. Evaluations on vocal effects transfer on the MedleyDB dataset show significant improvements across metrics compared to baselines, including a blind audio effects estimator, nearest-neighbour approaches, and uncalibrated ST-ITO. The proposed calibration reduces the parameter mean squared error by up to 33% and more closely matches the reference style. Subjective evaluations with 16 participants confirm the superiority of our method in limited data regimes. This work demonstrates how incorporating prior knowledge at inference time enhances audio effects transfer, paving the way for more effective and realistic audio processing systems.",
+      "published": "2025-05-16T14:40:31Z",
+      "updated": "2025-10-17T00:41:58Z",
+      "paperUrl": "https://arxiv.org/abs/2505.11315",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Published at WASPAA 2025",
+      "publicationVenue": "WASPAA 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2504.14735",
+      "title": "DiffVox: A Differentiable Model for Capturing and Analysing Vocal Effects Distributions",
+      "authors": [
+        "Chin-Yun Yu",
+        "Marco A. Martínez-Ramírez",
+        "Junghyun Koo",
+        "Ben Hayes",
+        "Wei-Hsiang Liao",
+        "György Fazekas",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "This study introduces a novel and interpretable model, DiffVox, for matching vocal effects in music production. DiffVox, short for ``Differentiable Vocal Fx\", integrates parametric equalisation, dynamic range control, delay, and reverb with efficient differentiable implementations to enable gradient-based optimisation for parameter estimation. Vocal presets are retrieved from two datasets, comprising 70 tracks from MedleyDB and 365 tracks from a private collection. Analysis of parameter correlations reveals strong relationships between effects and parameters, such as the high-pass and low-shelf filters often working together to shape the low end, and the delay time correlating with the intensity of the delayed signals. Principal component analysis reveals connections to McAdams' timbre dimensions, where the most crucial component modulates the perceived spaciousness while the secondary components influence spectral brightness. Statistical testing confirms the non-Gaussian nature of the parameter distribution, highlighting the complexity of the vocal effects space. These initial findings on the parameter distributions set the foundation for future research in vocal effects modelling and automatic mixing. Our source code and datasets are accessible at https://github.com/SonyResearch/diffvox.",
+      "published": "2025-04-20T20:52:58Z",
+      "updated": "2025-08-17T11:24:41Z",
+      "paperUrl": "https://arxiv.org/abs/2504.14735",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted at DAFx 2025",
+      "publicationVenue": "DAFx 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2502.14405",
+      "title": "Differentiable Black-box and Gray-box Modeling of Nonlinear Audio Effects",
+      "authors": [
+        "Marco Comunità",
+        "Christian J. Steinmetz",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Audio effects are extensively used at every stage of audio and music content creation. The majority of differentiable audio effects modeling approaches fall into the black-box or gray-box paradigms; and most models have been proposed and applied to nonlinear effects like guitar amplifiers, overdrive, distortion, fuzz and compressor. Although a plethora of architectures have been introduced for the task at hand there is still lack of understanding on the state of the art, since most publications experiment with one type of nonlinear audio effect and a very small number of devices. In this work we aim to shed light on the audio effects modeling landscape by comparing black-box and gray-box architectures on a large number of nonlinear audio effects, identifying the most suitable for a wide range of devices. In the process, we also: introduce time-varying gray-box models and propose models for compressor, distortion and fuzz, publish a large dataset for audio effects research - ToneTwist AFx https://github.com/mcomunita/tonetwist-afx-dataset - that is also the first open to community contributions, evaluate models on a variety of metrics and conduct extensive subjective evaluation. Code https://github.com/mcomunita/nablafx and supplementary material https://github.com/mcomunita/nnlinafx-supp-material are also available.",
+      "published": "2025-02-20T09:43:16Z",
+      "updated": "2025-02-20T09:43:16Z",
+      "paperUrl": "https://arxiv.org/abs/2502.14405",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2502.11668",
+      "title": "NablAFx: A Framework for Differentiable Black-box and Gray-box Modeling of Audio Effects",
+      "authors": [
+        "Marco Comunità",
+        "Christian J. Steinmetz",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "We present NablAFx, an open-source framework developed to support research in differentiable black-box and gray-box modeling of audio effects. Built in PyTorch, NablAFx offers a versatile ecosystem to configure, train, evaluate, and compare various architectural approaches. It includes classes to manage model architectures, datasets, and training, along with features to compute and log losses, metrics and media, and plotting functions to facilitate detailed analysis. It incorporates implementations of established black-box architectures and conditioning methods, as well as differentiable DSP blocks and controllers, enabling the creation of both parametric and non-parametric gray-box signal chains. The code is accessible at https://github.com/mcomunita/nablafx.",
+      "published": "2025-02-17T10:56:32Z",
+      "updated": "2025-02-25T11:47:11Z",
+      "paperUrl": "https://arxiv.org/abs/2502.11668",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2411.14972",
+      "title": "Open-Amp: Synthetic Data Framework for Audio Effect Foundation Models",
+      "authors": [
+        "Alec Wright",
+        "Alistair Carson",
+        "Lauri Juvela"
+      ],
+      "abstract": "This paper introduces Open-Amp, a synthetic data framework for generating large-scale and diverse audio effects data. Audio effects are relevant to many musical audio processing and Music Information Retrieval (MIR) tasks, such as modelling of analog audio effects, automatic mixing, tone matching and transcription. Existing audio effects datasets are limited in scope, usually including relatively few audio effects processors and a limited amount of input audio signals. Our proposed framework overcomes these issues, by crowdsourcing neural network emulations of guitar amplifiers and effects, created by users of open-source audio effects emulation software. This allows users of Open-Amp complete control over the input signals to be processed by the effects models, as well as providing high-quality emulations of hundreds of devices. Open-Amp can render audio online during training, allowing great flexibility in data augmentation. Our experiments show that using Open-Amp to train a guitar effects encoder achieves new state-of-the-art results on multiple guitar effects classification tasks. Furthermore, we train a one-to-many guitar effects model using Open-Amp, and use it to emulate unseen analog effects via manipulation of its learned latent space, indicating transferability to analog guitar effects data.",
+      "published": "2024-11-22T14:27:59Z",
+      "updated": "2024-11-22T14:27:59Z",
+      "paperUrl": "https://arxiv.org/abs/2411.14972",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2410.21233",
+      "title": "ST-ITO: Controlling Audio Effects for Style Transfer with Inference-Time Optimization",
+      "authors": [
+        "Christian J. Steinmetz",
+        "Shubhr Singh",
+        "Marco Comunità",
+        "Ilias Ibnyahya",
+        "Shanxin Yuan",
+        "Emmanouil Benetos",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Audio production style transfer is the task of processing an input to impart stylistic elements from a reference recording. Existing approaches often train a neural network to estimate control parameters for a set of audio effects. However, these approaches are limited in that they can only control a fixed set of effects, where the effects must be differentiable or otherwise employ specialized training techniques. In this work, we introduce ST-ITO, Style Transfer with Inference-Time Optimization, an approach that instead searches the parameter space of an audio effect chain at inference. This method enables control of arbitrary audio effect chains, including unseen and non-differentiable effects. Our approach employs a learned metric of audio production style, which we train through a simple and scalable self-supervised pretraining strategy, along with a gradient-free optimizer. Due to the limited existing evaluation methods for audio production style transfer, we introduce a multi-part benchmark to evaluate audio production style metrics and style transfer systems. This evaluation demonstrates that our audio representation better captures attributes related to audio production and enables expressive style transfer via control of arbitrary audio effects.",
+      "published": "2024-10-28T17:24:37Z",
+      "updated": "2024-10-28T17:24:37Z",
+      "paperUrl": "https://arxiv.org/abs/2410.21233",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ISMIR 2024. Code available https://github.com/csteinmetz1/st-ito",
+      "publicationVenue": "ISMIR 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2409.18847",
+      "title": "Text2FX: Harnessing CLAP Embeddings for Text-Guided Audio Effects",
+      "authors": [
+        "Annie Chu",
+        "Patrick O'Reilly",
+        "Julia Barnett",
+        "Bryan Pardo"
+      ],
+      "abstract": "This work introduces Text2FX, a method that leverages CLAP embeddings and differentiable digital signal processing to control audio effects, such as equalization and reverberation, using open-vocabulary natural language prompts (e.g., \"make this sound in-your-face and bold\"). Text2FX operates without retraining any models, relying instead on single-instance optimization within the existing embedding space, thus enabling a flexible, scalable approach to open-vocabulary sound transformations through interpretable and disentangled FX manipulation. We show that CLAP encodes valuable information for controlling audio effects and propose two optimization approaches using CLAP to map text to audio effect parameters. While we demonstrate with CLAP, this approach is applicable to any shared text-audio embedding space. Similarly, while we demonstrate with equalization and reverberation, any differentiable audio effect may be controlled. We conduct a listener study with diverse text prompts and source audio to evaluate the quality and alignment of these methods with human perception. Demos and code are available at anniejchu.github.io/text2fx.",
+      "published": "2024-09-27T15:43:53Z",
+      "updated": "2025-02-20T17:06:05Z",
+      "paperUrl": "https://arxiv.org/abs/2409.18847",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ICASSP 2025. Source code and audio examples: https://anniejchu.github.io/text2fx/",
+      "publicationVenue": "ICASSP 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2409.08723",
+      "title": "FLAMO: An Open-Source Library for Frequency-Domain Differentiable Audio Processing",
+      "authors": [
+        "Gloria Dal Santo",
+        "Gian Marco De Bortoli",
+        "Karolina Prawda",
+        "Sebastian J. Schlecht",
+        "Vesa Välimäki"
+      ],
+      "abstract": "We present FLAMO, a Frequency-sampling Library for Audio-Module Optimization designed to implement and optimize differentiable linear time-invariant audio systems. The library is open-source and built on the frequency-sampling filter design method, allowing for the creation of differentiable modules that can be used stand-alone or within the computation graph of neural networks, simplifying the development of differentiable audio systems. It includes predefined filtering modules and auxiliary classes for constructing, training, and logging the optimized systems, all accessible through an intuitive interface. Practical application of these modules is demonstrated through two case studies: the optimization of an artificial reverberator and an active acoustics system for improved response coloration.",
+      "published": "2024-09-13T11:19:51Z",
+      "updated": "2025-04-14T06:13:22Z",
+      "paperUrl": "https://arxiv.org/abs/2409.08723",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2408.03204",
+      "title": "GRAFX: An Open-Source Library for Audio Processing Graphs in PyTorch",
+      "authors": [
+        "Sungho Lee",
+        "Marco Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Stefan Uhlich",
+        "Giorgio Fabbro",
+        "Kyogu Lee",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "We present GRAFX, an open-source library designed for handling audio processing graphs in PyTorch. Along with various library functionalities, we describe technical details on the efficient parallel computation of input graphs, signals, and processor parameters in GPU. Then, we show its example use under a music mixing scenario, where parameters of every differentiable processor in a large graph are optimized via gradient descent. The code is available at https://github.com/sh-lee97/grafx.",
+      "published": "2024-08-06T14:03:06Z",
+      "updated": "2024-08-06T14:03:06Z",
+      "paperUrl": "https://arxiv.org/abs/2408.03204",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to DAFx 2024 demo",
+      "publicationVenue": "DAFx 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2407.16691",
+      "title": "Automatic Equalization for Individual Instrument Tracks Using Convolutional Neural Networks",
+      "authors": [
+        "Florian Mockenhaupt",
+        "Joscha Simon Rieber",
+        "Shahan Nercessian"
+      ],
+      "abstract": "We propose a novel approach for the automatic equalization of individual musical instrument tracks. Our method begins by identifying the instrument present within a source recording in order to choose its corresponding ideal spectrum as a target. Next, the spectral difference between the recording and the target is calculated, and accordingly, an equalizer matching model is used to predict settings for a parametric equalizer. To this end, we build upon a differentiable parametric equalizer matching neural network, demonstrating improvements relative to previously established state-of-the-art. Unlike past approaches, we show how our system naturally allows real-world audio data to be leveraged during the training of our matching model, effectively generating suitably produced training targets in an automated manner mirroring conditions at inference time. Consequently, we illustrate how fine-tuning our matching model on such examples considerably improves parametric equalizer matching performance in real-world scenarios, decreasing mean absolute error by 24% relative to methods relying solely on random parameter sampling techniques as a self-supervised learning strategy. We perform listening tests, and demonstrate that our proposed automatic equalization solution subjectively enhances the tonal characteristics for recordings of common instrument types.",
+      "published": "2024-07-23T17:55:25Z",
+      "updated": "2024-07-23T17:55:25Z",
+      "paperUrl": "https://arxiv.org/abs/2407.16691",
+      "doi": null,
+      "journalReference": null,
+      "comment": "8 pages, 9 figures. Accepted to the 27th International Conference on Digital Audio Effects (DAFx24)",
+      "publicationVenue": "DAFx 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2407.10646",
+      "title": "Towards zero-shot amplifier modeling: One-to-many amplifier modeling via tone embedding control",
+      "authors": [
+        "Yu-Hua Chen",
+        "Yen-Tung Yeh",
+        "Yuan-Chiao Cheng",
+        "Jui-Te Wu",
+        "Yu-Hsiang Ho",
+        "Jyh-Shing Roger Jang",
+        "Yi-Hsuan Yang"
+      ],
+      "abstract": "Replicating analog device circuits through neural audio effect modeling has garnered increasing interest in recent years. Existing work has predominantly focused on a one-to-one emulation strategy, modeling specific devices individually. In this paper, we tackle the less-explored scenario of one-to-many emulation, utilizing conditioning mechanisms to emulate multiple guitar amplifiers through a single neural model. For condition representation, we use contrastive learning to build a tone embedding encoder that extracts style-related features of various amplifiers, leveraging a dataset of comprehensive amplifier settings. Targeting zero-shot application scenarios, we also examine various strategies for tone embedding representation, evaluating referenced tone embedding against two retrieval-based embedding methods for amplifiers unseen in the training time. Our findings showcase the efficacy and potential of the proposed methods in achieving versatile one-to-many amplifier modeling, contributing a foundational step towards zero-shot audio modeling applications.",
+      "published": "2024-07-15T12:04:56Z",
+      "updated": "2024-07-15T12:04:56Z",
+      "paperUrl": "https://arxiv.org/abs/2407.10646",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ISMIR 2024",
+      "publicationVenue": "ISMIR 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2407.08889",
+      "title": "Diff-MST: Differentiable Mixing Style Transfer",
+      "authors": [
+        "Soumya Sai Vanka",
+        "Christian Steinmetz",
+        "Jean-Baptiste Rolland",
+        "Joshua Reiss",
+        "George Fazekas"
+      ],
+      "abstract": "Mixing style transfer automates the generation of a multitrack mix for a given set of tracks by inferring production attributes from a reference song. However, existing systems for mixing style transfer are limited in that they often operate only on a fixed number of tracks, introduce artifacts, and produce mixes in an end-to-end fashion, without grounding in traditional audio effects, prohibiting interpretability and controllability. To overcome these challenges, we introduce Diff-MST, a framework comprising a differentiable mixing console, a transformer controller, and an audio production style loss function. By inputting raw tracks and a reference song, our model estimates control parameters for audio effects within a differentiable mixing console, producing high-quality mixes and enabling post-hoc adjustments. Moreover, our architecture supports an arbitrary number of input tracks without source labelling, enabling real-world applications. We evaluate our model's performance against robust baselines and showcase the effectiveness of our approach, architectural design, tailored audio production style loss, and innovative training methodology for the given task.",
+      "published": "2024-07-11T23:06:47Z",
+      "updated": "2024-07-11T23:06:47Z",
+      "paperUrl": "https://arxiv.org/abs/2407.08889",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to be published at the Proceedings of the 25th International Society for Music Information Retrieval Conference 2024",
+      "publicationVenue": "ISMIR 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2406.01049",
+      "title": "Searching For Music Mixing Graphs: A Pruning Approach",
+      "authors": [
+        "Sungho Lee",
+        "Marco A. Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Stefan Uhlich",
+        "Giorgio Fabbro",
+        "Kyogu Lee",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Music mixing is compositional -- experts combine multiple audio processors to achieve a cohesive mix from dry source tracks. We propose a method to reverse engineer this process from the input and output audio. First, we create a mixing console that applies all available processors to every chain. Then, after the initial console parameter optimization, we alternate between removing redundant processors and fine-tuning. We achieve this through differentiable implementation of both processors and pruning. Consequently, we find a sparse mixing graph that achieves nearly identical matching quality of the full mixing console. We apply this procedure to dry-mix pairs from various datasets and collect graphs that also can be used to train neural networks for music mixing applications.",
+      "published": "2024-06-03T06:56:34Z",
+      "updated": "2024-08-06T14:13:15Z",
+      "paperUrl": "https://arxiv.org/abs/2406.01049",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to DAFx 2024; demo page: https://sh-lee97.github.io/grafx-prune",
+      "publicationVenue": "DAFx 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2404.07970",
+      "title": "Differentiable All-pole Filters for Time-varying Audio Systems",
+      "authors": [
+        "Chin-Yun Yu",
+        "Christopher Mitcheltree",
+        "Alistair Carson",
+        "Stefan Bilbao",
+        "Joshua D. Reiss",
+        "György Fazekas"
+      ],
+      "abstract": "Infinite impulse response filters are an essential building block of many time-varying audio systems, such as audio effects and synthesisers. However, their recursive structure impedes end-to-end training of these systems using automatic differentiation. Although non-recursive filter approximations like frequency sampling and frame-based processing have been proposed and widely used in previous works, they cannot accurately reflect the gradient of the original system. We alleviate this difficulty by re-expressing a time-varying all-pole filter to backpropagate the gradients through itself, so the filter implementation is not bound to the technical limitations of automatic differentiation frameworks. This implementation can be employed within audio systems containing filters with poles for efficient gradient evaluation. We demonstrate its training efficiency and expressive capabilities for modelling real-world dynamic audio systems on a phaser, time-varying subtractive synthesiser, and compressor. We make our code and audio samples available and provide the trained audio effect and synth models in a VST plugin at https://diffapf.github.io/web/.",
+      "published": "2024-04-11T17:55:05Z",
+      "updated": "2024-10-19T01:25:13Z",
+      "paperUrl": "https://arxiv.org/abs/2404.07970",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Published at DAFx 2024",
+      "publicationVenue": "DAFx 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2404.00082",
+      "title": "Data-Driven Room Acoustic Modeling Via Differentiable Feedback Delay Networks With Learnable Delay Lines",
+      "authors": [
+        "Alessandro Ilic Mezza",
+        "Riccardo Giampiccolo",
+        "Enzo De Sena",
+        "Alberto Bernardini"
+      ],
+      "abstract": "Over the past few decades, extensive research has been devoted to the design of artificial reverberation algorithms aimed at emulating the room acoustics of physical environments. Despite significant advancements, automatic parameter tuning of delay-network models remains an open challenge. We introduce a novel method for finding the parameters of a Feedback Delay Network (FDN) such that its output renders target attributes of a measured room impulse response. The proposed approach involves the implementation of a differentiable FDN with trainable delay lines, which, for the first time, allows us to simultaneously learn each and every delay-network parameter via backpropagation. The iterative optimization process seeks to minimize a perceptually-motivated time-domain loss function incorporating differentiable terms accounting for energy decay and echo density. Through experimental validation, we show that the proposed method yields time-invariant frequency-independent FDNs capable of closely matching the desired acoustical characteristics, and outperforms existing methods based on genetic algorithms and analytical FDN design.",
+      "published": "2024-03-29T10:48:32Z",
+      "updated": "2024-10-08T09:28:23Z",
+      "paperUrl": "https://arxiv.org/abs/2404.00082",
+      "doi": "10.1186/s13636-024-00371-5",
+      "journalReference": "J Audio Speech and Music Process., vol. 2024, no. 1, pp. 1-20 (51), 2024",
+      "comment": null,
+      "publicationVenue": "EURASIP Journal on Audio, Speech, and Music Processing 2024",
+      "venueEvidence": "journalReference",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2403.16331",
+      "title": "Modeling Analog Dynamic Range Compressors using Deep Learning and State-space Models",
+      "authors": [
+        "Hanzhi Yin",
+        "Gang Cheng",
+        "Christian J. Steinmetz",
+        "Ruibin Yuan",
+        "Richard M. Stern",
+        "Roger B. Dannenberg"
+      ],
+      "abstract": "We describe a novel approach for developing realistic digital models of dynamic range compressors for digital audio production by analyzing their analog prototypes. While realistic digital dynamic compressors are potentially useful for many applications, the design process is challenging because the compressors operate nonlinearly over long time scales. Our approach is based on the structured state space sequence model (S4), as implementing the state-space model (SSM) has proven to be efficient at learning long-range dependencies and is promising for modeling dynamic range compressors. We present in this paper a deep learning model with S4 layers to model the Teletronix LA-2A analog dynamic range compressor. The model is causal, executes efficiently in real time, and achieves roughly the same quality as previous deep-learning models but with fewer parameters.",
+      "published": "2024-03-24T23:50:15Z",
+      "updated": "2024-03-24T23:50:15Z",
+      "paperUrl": "https://arxiv.org/abs/2403.16331",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2403.08559",
+      "title": "End-to-End Amp Modeling: From Data to Controllable Guitar Amplifier Models",
+      "authors": [
+        "Lauri Juvela",
+        "Eero-Pekka Damskägg",
+        "Aleksi Peussa",
+        "Jaakko Mäkinen",
+        "Thomas Sherson",
+        "Stylianos I. Mimilakis",
+        "Athanasios Gotsopoulos"
+      ],
+      "abstract": "This paper describes a data-driven approach to creating real-time neural network models of guitar amplifiers, recreating the amplifiers' sonic response to arbitrary inputs at the full range of controls present on the physical device. While the focus on the paper is on the data collection pipeline, we demonstrate the effectiveness of this conditioned black-box approach by training an LSTM model to the task, and comparing its performance to an offline white-box SPICE circuit simulation. Our listening test results demonstrate that the neural amplifier modeling approach can match the subjective performance of a high-quality SPICE model, all while using an automated, non-intrusive data collection process, and an end-to-end trainable, real-time feasible neural network model.",
+      "published": "2024-03-13T14:10:10Z",
+      "updated": "2024-03-13T14:10:10Z",
+      "paperUrl": "https://arxiv.org/abs/2403.08559",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Presented at ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "publicationVenue": "ICASSP 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2402.11216",
+      "title": "Optimizing tiny colorless feedback delay networks",
+      "authors": [
+        "Gloria Dal Santo",
+        "Karolina Prawda",
+        "Sebastian J. Schlecht",
+        "Vesa Välimäki"
+      ],
+      "abstract": "A common bane of artificial reverberation algorithms is spectral coloration in the synthesized sound, typically manifesting as metallic ringing, leading to a degradation in the perceived sound quality. In delay network methods, coloration is more pronounced when fewer delay lines are used. This paper presents an optimization framework in which a tiny differentiable feedback delay network, with as few as four delay lines, is used to learn a set of parameters to iteratively reduce coloration. The parameters under optimization include the feedback matrix, as well as the input and output gains. The optimization objective is twofold: to maximize spectral flatness through a spectral loss while maintaining temporal density by penalizing sparseness in the parameter values. A favorable narrow distribution of modal excitation is achieved while maintaining the desired impulse response density. In a subjective assessment, the new method proves effective in reducing perceptual coloration of late reverberation. Compared to the author's previous work, which serves as the baseline and utilizes a sparsity loss in the time domain, the proposed method achieves computational savings while maintaining performance. The effectiveness of this work is demonstrated through two application scenarios where smooth-sounding synthetic room impulse responses are obtained via the introduction of attenuation filters and an optimizable scattering feedback matrix.",
+      "published": "2024-02-17T07:52:21Z",
+      "updated": "2025-12-18T07:32:59Z",
+      "paperUrl": "https://arxiv.org/abs/2402.11216",
+      "doi": "10.1186/s13636-025-00401-w",
+      "journalReference": "Eurasip Journal on Audio, Speech, and Music Processing 2025",
+      "comment": null,
+      "publicationVenue": "EURASIP Journal on Audio, Speech, and Music Processing 2025",
+      "venueEvidence": "journalReference",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2310.11781",
+      "title": "Blind estimation of audio effects using an auto-encoder approach and differentiable digital signal processing",
+      "authors": [
+        "Côme Peladeau",
+        "Geoffroy Peeters"
+      ],
+      "abstract": "Blind Estimation of Audio Effects (BE-AFX) aims at estimating the Audio Effects (AFXs) applied to an original, unprocessed audio sample solely based on the processed audio sample. To train such a system traditional approaches optimize a loss between ground truth and estimated AFX parameters. This involves knowing the exact implementation of the AFXs used for the process. In this work, we propose an alternative solution that eliminates the requirement for knowing this implementation. Instead, we introduce an auto-encoder approach, which optimizes an audio quality metric. We explore, suggest, and compare various implementations of commonly used mastering AFXs, using differential signal processing or neural approximations. Our findings demonstrate that our auto-encoder approach yields superior estimates of the audio quality produced by a chain of AFXs, compared to the traditional parameter-based approach, even if the latter provides a more accurate parameter estimation.",
+      "published": "2023-10-18T08:20:54Z",
+      "updated": "2024-02-09T18:40:26Z",
+      "paperUrl": "https://arxiv.org/abs/2310.11781",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2310.11364",
+      "title": "High-Fidelity Noise Reduction with Differentiable Signal Processing",
+      "authors": [
+        "Christian J. Steinmetz",
+        "Thomas Walther",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Noise reduction techniques based on deep learning have demonstrated impressive performance in enhancing the overall quality of recorded speech. While these approaches are highly performant, their application in audio engineering can be limited due to a number of factors. These include operation only on speech without support for music, lack of real-time capability, lack of interpretable control parameters, operation at lower sample rates, and a tendency to introduce artifacts. On the other hand, signal processing-based noise reduction algorithms offer fine-grained control and operation on a broad range of content, however, they often require manual operation to achieve the best results. To address the limitations of both approaches, in this work we introduce a method that leverages a signal processing-based denoiser that when combined with a neural network controller, enables fully automatic and high-fidelity noise reduction on both speech and music signals. We evaluate our proposed method with objective metrics and a perceptual listening test. Our evaluation reveals that speech enhancement models can be extended to music, however training the model to remove only stationary noise is critical. Furthermore, our proposed approach achieves performance on par with the deep learning models, while being significantly more efficient and introducing fewer artifacts in some cases. Listening examples are available online at https://tape.it/research/denoiser .",
+      "published": "2023-10-17T16:02:07Z",
+      "updated": "2023-10-17T16:02:07Z",
+      "paperUrl": "https://arxiv.org/abs/2310.11364",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted for publication at the 155th Convention of the Audio Engineering Society",
+      "publicationVenue": "AES Convention",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2308.16177",
+      "title": "General Purpose Audio Effect Removal",
+      "authors": [
+        "Matthew Rice",
+        "Christian J. Steinmetz",
+        "George Fazekas",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Although the design and application of audio effects is well understood, the inverse problem of removing these effects is significantly more challenging and far less studied. Recently, deep learning has been applied to audio effect removal; however, existing approaches have focused on narrow formulations considering only one effect or source type at a time. In realistic scenarios, multiple effects are applied with varying source content. This motivates a more general task, which we refer to as general purpose audio effect removal. We developed a dataset for this task using five audio effects across four different sources and used it to train and evaluate a set of existing architectures. We found that no single model performed optimally on all effect types and sources. To address this, we introduced RemFX, an approach designed to mirror the compositionality of applied effects. We first trained a set of the best-performing effect-specific removal models and then leveraged an audio effect classification model to dynamically construct a graph of our models at inference. We found our approach to outperform single model baselines, although examples with many effects present remain challenging.",
+      "published": "2023-08-30T17:55:28Z",
+      "updated": "2023-08-30T17:55:28Z",
+      "paperUrl": "https://arxiv.org/abs/2308.16177",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Preprint. Accepted to IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA) 2023",
+      "publicationVenue": "WASPAA 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2308.15422",
+      "title": "A Review of Differentiable Digital Signal Processing for Music & Speech Synthesis",
+      "authors": [
+        "Ben Hayes",
+        "Jordie Shier",
+        "György Fazekas",
+        "Andrew McPherson",
+        "Charalampos Saitis"
+      ],
+      "abstract": "The term \"differentiable digital signal processing\" describes a family of techniques in which loss function gradients are backpropagated through digital signal processors, facilitating their integration into neural networks. This article surveys the literature on differentiable audio signal processing, focusing on its use in music & speech synthesis. We catalogue applications to tasks including music performance rendering, sound matching, and voice transformation, discussing the motivations for and implications of the use of this methodology. This is accompanied by an overview of digital signal processing operations that have been implemented differentiably. Finally, we highlight open challenges, including optimisation pathologies, robustness to real-world conditions, and design trade-offs, and discuss directions for future research.",
+      "published": "2023-08-29T16:29:06Z",
+      "updated": "2023-08-29T16:29:06Z",
+      "paperUrl": "https://arxiv.org/abs/2308.15422",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Under review for Frontiers in Signal Processing",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2306.01332",
+      "title": "Differentiable Grey-box Modelling of Phaser Effects using Frame-based Spectral Processing",
+      "authors": [
+        "Alistair Carson",
+        "Cassia Valentini-Botinhao",
+        "Simon King",
+        "Stefan Bilbao"
+      ],
+      "abstract": "Machine learning approaches to modelling analog audio effects have seen intensive investigation in recent years, particularly in the context of non-linear time-invariant effects such as guitar amplifiers. For modulation effects such as phasers, however, new challenges emerge due to the presence of the low-frequency oscillator which controls the slowly time-varying nature of the effect. Existing approaches have either required foreknowledge of this control signal, or have been non-causal in implementation. This work presents a differentiable digital signal processing approach to modelling phaser effects in which the underlying control signal and time-varying spectral response of the effect are jointly learned. The proposed model processes audio in short frames to implement a time-varying filter in the frequency domain, with a transfer function based on typical analog phaser circuit topology. We show that the model can be trained to emulate an analog reference device, while retaining interpretable and adjustable parameters. The frame duration is an important hyper-parameter of the proposed model, so an investigation was carried out into its effect on model accuracy. The optimal frame length depends on both the rate and transient decay-time of the target effect, but the frame length can be altered at inference time without a significant change in accuracy.",
+      "published": "2023-06-02T07:53:41Z",
+      "updated": "2023-06-02T07:53:41Z",
+      "paperUrl": "https://arxiv.org/abs/2306.01332",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted for publication in Proc. DAFx23, Copenhagen, Denmark, September 2023",
+      "publicationVenue": "DAFx 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2306.00860",
+      "title": "Differentiable Allpass Filters for Phase Response Estimation and Automatic Signal Alignment",
+      "authors": [
+        "Anders R. Bargum",
+        "Stefania Serafin",
+        "Cumhur Erkut",
+        "Julian D. Parker"
+      ],
+      "abstract": "Virtual analog (VA) audio effects are increasingly based on neural networks and deep learning frameworks. Due to the underlying black-box methodology, a successful model will learn to approximate the data it is presented, including potential errors such as latency and audio dropouts as well as non-linear characteristics and frequency-dependent phase shifts produced by the hardware. The latter is of particular interest as the learned phase-response might cause unwanted audible artifacts when the effect is used for creative processing techniques such as dry-wet mixing or parallel compression. To overcome these artifacts we propose differentiable signal processing tools and deep optimization structures for automatically tuning all-pass filters to predict the phase response of different VA simulations, and align processed signals that are out of phase. The approaches are assessed using objective metrics while listening tests evaluate their ability to enhance the quality of parallel path processing techniques. Ultimately, an over-parameterized, BiasNet-based, all-pass model is proposed for the optimization problem under consideration, resulting in models that can estimate all-pass filter coefficients to align a dry signal with its affected, wet, equivalent.",
+      "published": "2023-06-01T16:19:18Z",
+      "updated": "2023-06-02T12:05:39Z",
+      "paperUrl": "https://arxiv.org/abs/2306.00860",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Collaboration done while interning/employed at Native Instruments. Accepted for publication in Proc. DAFX'23, Copenhagen, Denmark, September 2023. Sound examples at https://abargum.github.io v2: 10 pages, LaTeX; figures resized, pdf optimized",
+      "publicationVenue": "DAFx 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2303.08610",
+      "title": "Blind Estimation of Audio Processing Graph",
+      "authors": [
+        "Sungho Lee",
+        "Jaehyun Park",
+        "Seungryeol Paik",
+        "Kyogu Lee"
+      ],
+      "abstract": "Musicians and audio engineers sculpt and transform their sounds by connecting multiple processors, forming an audio processing graph. However, most deep-learning methods overlook this real-world practice and assume fixed graph settings. To bridge this gap, we develop a system that reconstructs the entire graph from a given reference audio. We first generate a realistic graph-reference pair dataset and train a simple blind estimation system composed of a convolutional reference encoder and a transformer-based graph decoder. We apply our model to singing voice effects and drum mixing estimation tasks. Evaluation results show that our method can reconstruct complex signal routings, including multi-band processing and sidechaining.",
+      "published": "2023-03-15T13:31:56Z",
+      "updated": "2023-05-08T00:48:32Z",
+      "paperUrl": "https://arxiv.org/abs/2303.08610",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ICASSP 2023",
+      "publicationVenue": "ICASSP 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2211.02247",
+      "title": "Music Mixing Style Transfer: A Contrastive Learning Approach to Disentangle Audio Effects",
+      "authors": [
+        "Junghyun Koo",
+        "Marco A. Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Stefan Uhlich",
+        "Kyogu Lee",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "We propose an end-to-end music mixing style transfer system that converts the mixing style of an input multitrack to that of a reference song. This is achieved with an encoder pre-trained with a contrastive objective to extract only audio effects related information from a reference music recording. All our models are trained in a self-supervised manner from an already-processed wet multitrack dataset with an effective data preprocessing method that alleviates the data scarcity of obtaining unprocessed dry data. We analyze the proposed encoder for the disentanglement capability of audio effects and also validate its performance for mixing style transfer through both objective and subjective evaluations. From the results, we show the proposed system not only converts the mixing style of multitrack audio close to a reference but is also robust with mixture-wise style transfer upon using a music source separation model.",
+      "published": "2022-11-04T03:45:17Z",
+      "updated": "2023-04-11T07:53:14Z",
+      "paperUrl": "https://arxiv.org/abs/2211.02247",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2208.11428",
+      "title": "Automatic music mixing with deep learning and out-of-domain data",
+      "authors": [
+        "Marco A. Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Giorgio Fabbro",
+        "Stefan Uhlich",
+        "Chihiro Nagashima",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Music mixing traditionally involves recording instruments in the form of clean, individual tracks and blending them into a final mixture using audio effects and expert knowledge (e.g., a mixing engineer). The automation of music production tasks has become an emerging field in recent years, where rule-based methods and machine learning approaches have been explored. Nevertheless, the lack of dry or clean instrument recordings limits the performance of such models, which is still far from professional human-made mixes. We explore whether we can use out-of-domain data such as wet or processed multitrack music recordings and repurpose it to train supervised deep learning models that can bridge the current gap in automatic mixing quality. To achieve this we propose a novel data preprocessing method that allows the models to perform automatic music mixing. We also redesigned a listening test method for evaluating music mixing systems. We validate our results through such subjective tests using highly experienced mixing engineers as participants.",
+      "published": "2022-08-24T10:50:22Z",
+      "updated": "2022-08-29T04:56:01Z",
+      "paperUrl": "https://arxiv.org/abs/2208.11428",
+      "doi": null,
+      "journalReference": null,
+      "comment": "23rd International Society for Music Information Retrieval Conference (ISMIR), December, 2022. Source code, demo and audio examples: https://marco-martinez-sony.github.io/FxNorm-automix/ - added acknowledgements",
+      "publicationVenue": "ISMIR 2022",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2207.08759",
+      "title": "Style Transfer of Audio Effects with Differentiable Signal Processing",
+      "authors": [
+        "Christian J. Steinmetz",
+        "Nicholas J. Bryan",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "We present a framework that can impose the audio effects and production style from one recording to another by example with the goal of simplifying the audio production process. We train a deep neural network to analyze an input recording and a style reference recording, and predict the control parameters of audio effects used to render the output. In contrast to past work, we integrate audio effects as differentiable operators in our framework, perform backpropagation through audio effects, and optimize end-to-end using an audio-domain loss. We use a self-supervised training strategy enabling automatic control of audio effects without the use of any labeled or paired training data. We survey a range of existing and new approaches for differentiable signal processing, showing how each can be integrated into our framework while discussing their trade-offs. We evaluate our approach on both speech and music tasks, demonstrating that our approach generalizes both to unseen recordings and even to sample rates different than those seen during training. Our approach produces convincing production style transfer results with the ability to transform input recordings to produced recordings, yielding audio effect control parameters that enable interpretability and user interaction.",
+      "published": "2022-07-18T17:06:19Z",
+      "updated": "2022-07-18T17:06:19Z",
+      "paperUrl": "https://arxiv.org/abs/2207.08759",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Preprint. To appear in the Journal of the Audio Engineering Society",
+      "publicationVenue": "JAES",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2202.08520",
+      "title": "End-to-end Music Remastering System Using Self-supervised and Adversarial Training",
+      "authors": [
+        "Junghyun Koo",
+        "Seungryeol Paik",
+        "Kyogu Lee"
+      ],
+      "abstract": "Mastering is an essential step in music production, but it is also a challenging task that has to go through the hands of experienced audio engineers, where they adjust tone, space, and volume of a song. Remastering follows the same technical process, in which the context lies in mastering a song for the times. As these tasks have high entry barriers, we aim to lower the barriers by proposing an end-to-end music remastering system that transforms the mastering style of input audio to that of the target. The system is trained in a self-supervised manner, in which released pop songs were used for training. We also anticipated the model to generate realistic audio reflecting the reference's mastering style by applying a pre-trained encoder and a projection discriminator. We validate our results with quantitative metrics and a subjective listening test and show that the model generated samples of mastering style similar to the target.",
+      "published": "2022-02-17T08:50:12Z",
+      "updated": "2022-02-17T08:50:12Z",
+      "paperUrl": "https://arxiv.org/abs/2202.08520",
+      "doi": null,
+      "journalReference": null,
+      "comment": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) 2022",
+      "publicationVenue": "ICASSP 2022",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2202.01664",
+      "title": "Distortion Audio Effects: Learning How to Recover the Clean Signal",
+      "authors": [
+        "Johannes Imort",
+        "Giorgio Fabbro",
+        "Marco A. Martínez Ramírez",
+        "Stefan Uhlich",
+        "Yuichiro Koyama",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Given the recent advances in music source separation and automatic mixing, removing audio effects in music tracks is a meaningful step toward developing an automated remixing system. This paper focuses on removing distortion audio effects applied to guitar tracks in music production. We explore whether effect removal can be solved by neural networks designed for source separation and audio effect modeling. Our approach proves particularly effective for effects that mix the processed and clean signals. The models achieve better quality and significantly faster inference compared to state-of-the-art solutions based on sparse optimization. We demonstrate that the models are suitable not only for declipping but also for other types of distortion effects. By discussing the results, we stress the usefulness of multiple evaluation metrics to assess different aspects of reconstruction in distortion effect removal.",
+      "published": "2022-02-03T16:26:29Z",
+      "updated": "2022-09-13T11:23:27Z",
+      "paperUrl": "https://arxiv.org/abs/2202.01664",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Audio examples available at https://joimort.github.io/distortionremoval/",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2110.06525",
+      "title": "Automatic DJ Transitions with Differentiable Audio Effects and Generative Adversarial Networks",
+      "authors": [
+        "Bo-Yu Chen",
+        "Wei-Han Hsu",
+        "Wei-Hsiang Liao",
+        "Marco A. Martínez Ramírez",
+        "Yuki Mitsufuji",
+        "Yi-Hsuan Yang"
+      ],
+      "abstract": "A central task of a Disc Jockey (DJ) is to create a mixset of mu-sic with seamless transitions between adjacent tracks. In this paper, we explore a data-driven approach that uses a generative adversarial network to create the song transition by learning from real-world DJ mixes. In particular, the generator of the model uses two differentiable digital signal processing components, an equalizer (EQ) and a fader, to mix two tracks selected by a data generation pipeline. The generator has to set the parameters of the EQs and fader in such away that the resulting mix resembles real mixes created by humanDJ, as judged by the discriminator counterpart. Result of a listening test shows that the model can achieve competitive results compared with a number of baselines.",
+      "published": "2021-10-13T06:25:52Z",
+      "updated": "2022-02-17T15:26:28Z",
+      "paperUrl": "https://arxiv.org/abs/2110.06525",
+      "doi": null,
+      "journalReference": null,
+      "comment": "To be published at ICASSP 2022",
+      "publicationVenue": "ICASSP 2022",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2110.03691",
+      "title": "Direct design of biquad filter cascades with deep learning by sampling random polynomials",
+      "authors": [
+        "Joseph T. Colonel",
+        "Christian J. Steinmetz",
+        "Marcus Michelen",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Designing infinite impulse response filters to match an arbitrary magnitude response requires specialized techniques. Methods like modified Yule-Walker are relatively efficient, but may not be sufficiently accurate in matching high order responses. On the other hand, iterative optimization techniques often enable superior performance, but come at the cost of longer run-times and are sensitive to initial conditions, requiring manual tuning. In this work, we address some of these limitations by learning a direct mapping from the target magnitude response to the filter coefficient space with a neural network trained on millions of random filters. We demonstrate our approach enables both fast and accurate estimation of filter coefficients given a desired response. We investigate training with different families of random filters, and find training with a variety of filter families enables better generalization when estimating real-world filters, using head-related transfer functions and guitar cabinets as case studies. We compare our method against existing methods including modified Yule-Walker and gradient descent and show our approach is, on average, both faster and more accurate.",
+      "published": "2021-10-07T17:58:08Z",
+      "updated": "2022-02-16T12:03:52Z",
+      "paperUrl": "https://arxiv.org/abs/2110.03691",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ICASSP 2022",
+      "publicationVenue": "ICASSP 2022",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.SP",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2105.13940",
+      "title": "Differentiable Artificial Reverberation",
+      "authors": [
+        "Sungho Lee",
+        "Hyeong-Seok Choi",
+        "Kyogu Lee"
+      ],
+      "abstract": "Artificial reverberation (AR) models play a central role in various audio applications. Therefore, estimating the AR model parameters (ARPs) of a reference reverberation is a crucial task. Although a few recent deep-learning-based approaches have shown promising performance, their non-end-to-end training scheme prevents them from fully exploiting the potential of deep neural networks. This motivates the introduction of differentiable artificial reverberation (DAR) models, allowing loss gradients to be back-propagated end-to-end. However, implementing the AR models with their difference equations \"as is\" in the deep learning framework severely bottlenecks the training speed when executed with a parallel processor like GPU due to their infinite impulse response (IIR) components. We tackle this problem by replacing the IIR filters with finite impulse response (FIR) approximations with the frequency-sampling method. Using this technique, we implement three DAR models -- differentiable Filtered Velvet Noise (FVN), Advanced Filtered Velvet Noise (AFVN), and Delay Network (DN). For each AR model, we train its ARP estimation networks for analysis-synthesis (RIR-to-ARP) and blind estimation (reverberant-speech-to-ARP) task in an end-to-end manner with its DAR model counterpart. Experiment results show that the proposed method achieves consistent performance improvement over the non-end-to-end approaches in both objective metrics and subjective listening test results.",
+      "published": "2021-05-28T16:02:14Z",
+      "updated": "2022-07-20T11:45:30Z",
+      "paperUrl": "https://arxiv.org/abs/2105.13940",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to TASLP",
+      "publicationVenue": "IEEE/ACM TASLP",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2105.04752",
+      "title": "Differentiable Signal Processing With Black-Box Audio Effects",
+      "authors": [
+        "Marco A. Martínez Ramírez",
+        "Oliver Wang",
+        "Paris Smaragdis",
+        "Nicholas J. Bryan"
+      ],
+      "abstract": "We present a data-driven approach to automate audio signal processing by incorporating stateful third-party, audio effects as layers within a deep neural network. We then train a deep encoder to analyze input audio and control effect parameters to perform the desired signal manipulation, requiring only input-target paired audio data as supervision. To train our network with non-differentiable black-box effects layers, we use a fast, parallel stochastic gradient approximation scheme within a standard auto differentiation graph, yielding efficient end-to-end backpropagation. We demonstrate the power of our approach with three separate automatic audio production applications: tube amplifier emulation, automatic removal of breaths and pops from voice recordings, and automatic music mastering. We validate our results with a subjective listening test, showing our approach not only can enable new automatic audio effects tasks, but can yield results comparable to a specialized, state-of-the-art commercial solution for music mastering.",
+      "published": "2021-05-11T02:20:22Z",
+      "updated": "2021-05-11T02:20:22Z",
+      "paperUrl": "https://arxiv.org/abs/2105.04752",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Presented at the IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), June 2021. Source code, demo and audio examples: https://mchijmma.github.io/DeepAFx/",
+      "publicationVenue": "ICASSP 2021",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2103.08709",
+      "title": "Lightweight and interpretable neural modeling of an audio distortion effect using hyperconditioned differentiable biquads",
+      "authors": [
+        "Shahan Nercessian",
+        "Andy Sarroff",
+        "Kurt James Werner"
+      ],
+      "abstract": "In this work, we propose using differentiable cascaded biquads to model an audio distortion effect. We extend trainable infinite impulse response (IIR) filters to the hyperconditioned case, in which a transformation is learned to directly map external parameters of the distortion effect to its internal filter and gain parameters, along with activations necessary to ensure filter stability. We propose a novel, efficient training scheme of IIR filters by means of a Fourier transform. Our models have significantly fewer parameters and reduced complexity relative to more traditional black-box neural audio effect modeling methodologies using finite impulse response filters. Our smallest, best-performing model adequately models a BOSS MT-2 pedal at 44.1 kHz, using a total of 40 biquads and only 210 parameters. Its model parameters are interpretable, can be related back to the original analog audio circuit, and can even be intuitively altered by machine learning non-specialists after model training. Quantitative and qualitative results illustrate the effectiveness of the proposed method.",
+      "published": "2021-03-15T20:46:31Z",
+      "updated": "2021-03-15T20:46:31Z",
+      "paperUrl": "https://arxiv.org/abs/2103.08709",
+      "doi": null,
+      "journalReference": null,
+      "comment": "5 pages, 4 figures. To be published in IEEE International Conference on Acoustics, Speech, & Signal Processing (ICASSP) 2021",
+      "publicationVenue": "ICASSP 2021",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2012.03216",
+      "title": "Guitar Effects Recognition and Parameter Estimation with Convolutional Neural Networks",
+      "authors": [
+        "Marco Comunità",
+        "Dan Stowell",
+        "Joshua D. Reiss"
+      ],
+      "abstract": "Despite the popularity of guitar effects, there is very little existing research on classification and parameter estimation of specific plugins or effect units from guitar recordings. In this paper, convolutional neural networks were used for classification and parameter estimation for 13 overdrive, distortion and fuzz guitar effects. A novel dataset of processed electric guitar samples was assembled, with four sub-datasets consisting of monophonic or polyphonic samples and discrete or continuous settings values, for a total of about 250 hours of processed samples. Results were compared for networks trained and tested on the same or on a different sub-dataset. We found that discrete datasets could lead to equally high performance as continuous ones, whilst being easier to design, analyse and modify. Classification accuracy was above 80\\%, with confusion matrices reflecting similarities in the effects timbre and circuits design. With parameter values between 0.0 and 1.0, the mean absolute error is in most cases below 0.05, while the root mean square error is below 0.1 in all cases but one.",
+      "published": "2020-12-06T08:46:18Z",
+      "updated": "2020-12-06T08:46:18Z",
+      "paperUrl": "https://arxiv.org/abs/2012.03216",
+      "doi": "10.17743/jaes.2021.0019",
+      "journalReference": "JAES Volume 69 Issue 7/8 pp. 594-604; July 2021",
+      "comment": null,
+      "publicationVenue": "JAES 2021",
+      "venueEvidence": "journalReference",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2010.10291",
+      "title": "Automatic multitrack mixing with a differentiable mixing console of neural audio effects",
+      "authors": [
+        "Christian J. Steinmetz",
+        "Jordi Pons",
+        "Santiago Pascual",
+        "Joan Serrà"
+      ],
+      "abstract": "Applications of deep learning to automatic multitrack mixing are largely unexplored. This is partly due to the limited available data, coupled with the fact that such data is relatively unstructured and variable. To address these challenges, we propose a domain-inspired model with a strong inductive bias for the mixing task. We achieve this with the application of pre-trained sub-networks and weight sharing, as well as with a sum/difference stereo loss function. The proposed model can be trained with a limited number of examples, is permutation invariant with respect to the input ordering, and places no limit on the number of input sources. Furthermore, it produces human-readable mixing parameters, allowing users to manually adjust or refine the generated mix. Results from a perceptual evaluation involving audio engineers indicate that our approach generates mixes that outperform baseline approaches. To the best of our knowledge, this work demonstrates the first approach in learning multitrack mixing conventions from real-world data at the waveform level, without knowledge of the underlying mixing parameters.",
+      "published": "2020-10-20T14:04:22Z",
+      "updated": "2020-10-20T14:04:22Z",
+      "paperUrl": "https://arxiv.org/abs/2010.10291",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2001.04643",
+      "title": "DDSP: Differentiable Digital Signal Processing",
+      "authors": [
+        "Jesse Engel",
+        "Lamtharn Hantrakul",
+        "Chenjie Gu",
+        "Adam Roberts"
+      ],
+      "abstract": "Most generative models of audio directly generate samples in one of two domains: time or frequency. While sufficient to express any signal, these representations are inefficient, as they do not utilize existing knowledge of how sound is generated and perceived. A third approach (vocoders/synthesizers) successfully incorporates strong domain knowledge of signal processing and perception, but has been less actively researched due to limited expressivity and difficulty integrating with modern auto-differentiation-based machine learning methods. In this paper, we introduce the Differentiable Digital Signal Processing (DDSP) library, which enables direct integration of classic signal processing elements with deep learning methods. Focusing on audio synthesis, we achieve high-fidelity generation without the need for large autoregressive models or adversarial losses, demonstrating that DDSP enables utilizing strong inductive biases without losing the expressive power of neural networks. Further, we show that combining interpretable modules permits manipulation of each separate model component, with applications such as independent control of pitch and loudness, realistic extrapolation to pitches not seen during training, blind dereverberation of room acoustics, transfer of extracted room acoustics to new environments, and transformation of timbre between disparate sources. In short, DDSP enables an interpretable and modular approach to generative modeling, without sacrificing the benefits of deep learning. The library is publicly available at https://github.com/magenta/ddsp and we welcome further contributions from the community and domain experts.",
+      "published": "2020-01-14T06:49:37Z",
+      "updated": "2020-01-14T06:49:37Z",
+      "paperUrl": "https://arxiv.org/abs/2001.04643",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS",
+        "eess.SP",
+        "stat.ML"
+      ],
+      "matchedQueries": [
+        "historical-backfill"
+      ]
+    }
+  ]
+}

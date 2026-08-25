@@ -1,0 +1,47 @@
+{
+  "lookbackDays": 45,
+  "maxResultsPerQuery": 40,
+  "maxCandidates": 80,
+  "queries": [
+    {
+      "name": "automatic-mixing",
+      "query": "(all:\"automatic mixing\" OR all:\"music mixing\" OR all:\"neural mixing\") AND (cat:eess.AS OR cat:cs.SD)"
+    },
+    {
+      "name": "audio-effects",
+      "query": "(all:\"audio effect\" OR all:\"audio effects\") AND (all:modeling OR all:estimation OR all:control OR all:transfer OR all:neural OR all:differentiable)"
+    },
+    {
+      "name": "effect-parameter-estimation",
+      "query": "(all:\"effect parameter\" OR all:\"processor parameter\" OR all:\"audio parameter matching\") AND (cat:eess.AS OR cat:cs.SD)"
+    },
+    {
+      "name": "production-style-transfer",
+      "query": "(all:\"production style transfer\" OR all:\"mixing style transfer\" OR all:\"audio effects style transfer\")"
+    },
+    {
+      "name": "effect-representation",
+      "query": "(all:\"audio effect representation\" OR all:\"audio effects representation\" OR all:\"production style representation\")"
+    },
+    {
+      "name": "mastering",
+      "query": "all:\"audio mastering\" OR all:\"automatic mastering\" OR all:\"neural mastering\""
+    },
+    {
+      "name": "differentiable-production",
+      "query": "(all:\"differentiable audio\" OR all:\"differentiable DSP\" OR all:\"differentiable digital signal processing\") AND (all:effect OR all:mixing OR all:mastering OR all:production OR all:filter OR all:compressor OR all:reverberation)"
+    },
+    {
+      "name": "audio-processing-graphs",
+      "query": "(all:\"audio processing graph\" OR all:\"music mixing graph\" OR all:\"differentiable mixing console\")"
+    },
+    {
+      "name": "effect-removal-inversion",
+      "query": "(all:\"audio effect removal\" OR all:\"audio effects removal\" OR all:\"effect inversion\") AND (cat:eess.AS OR cat:cs.SD)"
+    },
+    {
+      "name": "production-tool-control",
+      "query": "(all:\"music post-production\" OR all:\"audio post-production\") AND (all:tool OR all:agent OR all:language OR all:control)"
+    }
+  ]
+}

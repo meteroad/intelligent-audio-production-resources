@@ -1,0 +1,232 @@
+{
+  "projects": [
+    {
+      "fullName": "a-carson/ddsp-phaser",
+      "url": "https://github.com/a-carson/ddsp-phaser",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "adobe-research/DeepAFx",
+      "url": "https://github.com/adobe-research/DeepAFx",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/adobe-research/DeepAFx/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "adobe-research/DeepAFx-ST",
+      "url": "https://github.com/adobe-research/DeepAFx-ST",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/adobe-research/DeepAFx-ST/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "Alec-Wright/GreyBoxDRC",
+      "url": "https://github.com/Alec-Wright/GreyBoxDRC",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "Alec-Wright/OpenAmp",
+      "url": "https://github.com/Alec-Wright/OpenAmp",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "AMAAI-Lab/SonicMaster",
+      "url": "https://github.com/AMAAI-Lab/SonicMaster",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/AMAAI-Lab/SonicMaster/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "anniejchu/text2fx",
+      "url": "https://github.com/anniejchu/text2fx",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "ChenPaulYu/DJtransGAN",
+      "url": "https://github.com/ChenPaulYu/DJtransGAN",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/ChenPaulYu/DJtransGAN/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "csteinmetz1/automix-toolkit",
+      "url": "https://github.com/csteinmetz1/automix-toolkit",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/csteinmetz1/automix-toolkit/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "csteinmetz1/dasp-pytorch",
+      "url": "https://github.com/csteinmetz1/dasp-pytorch",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/csteinmetz1/dasp-pytorch/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "csteinmetz1/IIRNet",
+      "url": "https://github.com/csteinmetz1/IIRNet",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/csteinmetz1/IIRNet/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "csteinmetz1/st-ito",
+      "url": "https://github.com/csteinmetz1/st-ito",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/csteinmetz1/st-ito/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "DiffAPF/torchcomp",
+      "url": "https://github.com/DiffAPF/torchcomp",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/DiffAPF/torchcomp/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "DiffAPF/torchlpc",
+      "url": "https://github.com/DiffAPF/torchlpc",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/DiffAPF/torchlpc/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "f90/Mix-Wave-U-Net",
+      "url": "https://github.com/f90/Mix-Wave-U-Net",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/f90/Mix-Wave-U-Net/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "gdalsanto/diff-fdn-colorless",
+      "url": "https://github.com/gdalsanto/diff-fdn-colorless",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/gdalsanto/diff-fdn-colorless/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "gdalsanto/flamo",
+      "url": "https://github.com/gdalsanto/flamo",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/gdalsanto/flamo/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "int0thewind/s4-dynamic-range-compressor",
+      "url": "https://github.com/int0thewind/s4-dynamic-range-compressor",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/int0thewind/s4-dynamic-range-compressor/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "jatinchowdhury18/differentiable-wdfs",
+      "url": "https://github.com/jatinchowdhury18/differentiable-wdfs",
+      "license": "BSD",
+      "licenseUrl": "https://github.com/jatinchowdhury18/differentiable-wdfs/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "jhtonyKoo/e2e_music_remastering_system",
+      "url": "https://github.com/jhtonyKoo/e2e_music_remastering_system",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/jhtonyKoo/e2e_music_remastering_system/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "jhtonyKoo/music_mixing_style_transfer",
+      "url": "https://github.com/jhtonyKoo/music_mixing_style_transfer",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/jhtonyKoo/music_mixing_style_transfer/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "magenta/ddsp",
+      "url": "https://github.com/magenta/ddsp",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/magenta/ddsp/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "mcomunita/gfx_classifier",
+      "url": "https://github.com/mcomunita/gfx_classifier",
+      "license": "BSD",
+      "licenseUrl": "https://github.com/mcomunita/gfx_classifier/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "mcomunita/nablafx",
+      "url": "https://github.com/mcomunita/nablafx",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/mcomunita/nablafx/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "mcomunita/tonetwist-afx-dataset",
+      "url": "https://github.com/mcomunita/tonetwist-afx-dataset",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/mcomunita/tonetwist-afx-dataset/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "mhrice/RemFx",
+      "url": "https://github.com/mhrice/RemFx",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/mhrice/RemFx/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "sai-soum/Diff-MST",
+      "url": "https://github.com/sai-soum/Diff-MST",
+      "license": "CC-BY-NC-SA-4.0",
+      "licenseUrl": "https://github.com/sai-soum/Diff-MST/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "sh-lee97/grafx",
+      "url": "https://github.com/sh-lee97/grafx",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/sh-lee97/grafx/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "sh-lee97/grafx-prune",
+      "url": "https://github.com/sh-lee97/grafx-prune",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "sony/FxNorm-automix",
+      "url": "https://github.com/sony/FxNorm-automix",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/sony/FxNorm-automix/blob/HEAD/LICENSE.md"
+    },
+    {
+      "fullName": "SonyResearch/diffvox",
+      "url": "https://github.com/SonyResearch/diffvox",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/SonyResearch/diffvox/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "SonyResearch/Fx-Encoder_PlusPlus",
+      "url": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "SonyResearch/LLM2Fx",
+      "url": "https://github.com/SonyResearch/LLM2Fx",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "SonyResearch/MEGAMI",
+      "url": "https://github.com/SonyResearch/MEGAMI",
+      "license": "CC-BY-NC-SA-4.0",
+      "licenseUrl": "https://github.com/SonyResearch/MEGAMI/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "TMEGalaxyAudioEffect/relfx-ismir2026-release",
+      "url": "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "vaclisinc/InstructFX2FX",
+      "url": "https://github.com/vaclisinc/InstructFX2FX",
+      "license": null,
+      "licenseUrl": null
+    },
+    {
+      "fullName": "ytsrt66589/diffFx-pytorch",
+      "url": "https://github.com/ytsrt66589/diffFx-pytorch",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/ytsrt66589/diffFx-pytorch/blob/HEAD/LICENSE"
+    },
+    {
+      "fullName": "zys711/Diff2Mix",
+      "url": "https://github.com/zys711/Diff2Mix",
+      "license": null,
+      "licenseUrl": null
+    }
+  ]
+}

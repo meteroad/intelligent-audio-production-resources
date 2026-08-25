@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-25",
+  "resources": [
+    {
+      "id": "automatic-mixing-papers",
+      "name": "AutomaticMixingPapers",
+      "kind": "bibliography",
+      "areas": ["mixing", "evaluation"],
+      "description": {
+        "en": "A long-running bibliography of automatic multitrack mixing papers, datasets, and associated code.",
+        "zh": "持续维护的自动多轨混音论文、数据集及相关代码书目。"
+      },
+      "links": [
+        {"label": "project", "url": "https://csteinmetz1.github.io/AutomaticMixingPapers/"},
+        {"label": "source", "url": "https://github.com/csteinmetz1/AutomaticMixingPapers"}
+      ],
+      "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "afx-research",
+      "name": "AFX-Research",
+      "kind": "bibliography",
+      "areas": ["audio-effects", "differentiable-processing", "evaluation"],
+      "description": {
+        "en": "A searchable literature collection covering audio-effects modeling, estimation, removal, circuit emulation, and differentiable methods.",
+        "zh": "可检索的音效研究文献库，覆盖建模、估计、去除、电路仿真与可微方法。"
+      },
+      "links": [
+        {"label": "project", "url": "https://mcomunita.github.io/afx-research"},
+        {"label": "source", "url": "https://github.com/mcomunita/AFX-Research"}
+      ],
+      "lastVerified": "2026-08-25"
+    }
+  ]
+}

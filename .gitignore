@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+_site/
+automation/candidates.json
+automation/reviewed-papers.json
+.DS_Store

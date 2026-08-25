@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intelligent Audio Production | Xinlu Liu</title>
+    <meta name="description" content="A structured index of open resources and recent research for intelligent audio effects, mixing, mastering, and evaluation.">
+    <meta property="og:title" content="Intelligent Audio Production">
+    <meta property="og:description" content="An open research landscape for intelligent audio effects and music production.">
+    <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production/">
+    <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production/assets/social-preview.jpg">
+    <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production/">
+    <link rel="stylesheet" href="styles.css?v=20260825-6">
+    <script src="app.js?v=20260825-6" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="home-link" href="https://meteroad.github.io/">Xinlu Liu</a>
+      <div class="header-actions">
+        <nav aria-label="Primary navigation" data-i18n-aria-label="nav.label">
+          <a href="#scope" data-i18n="nav.scope">Scope</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#resources" data-i18n="nav.resources">Resources</a>
+          <a href="#papers" data-i18n="nav.papers">Papers</a>
+          <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+        </nav>
+        <a class="repository-link" href="https://github.com/meteroad/intelligent-audio-production" target="_blank" rel="noreferrer" data-i18n="nav.github">GitHub</a>
+        <div class="language-switch" role="group" aria-label="Language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow" data-i18n="intro.eyebrow">Open research index</p>
+        <h1 id="page-title" data-i18n="intro.title">Intelligent Audio Production</h1>
+        <p class="lead" data-i18n="intro.lead">A structured index of open-source projects, models, datasets, and recent research for intelligent audio effects and music production.</p>
+        <ul class="scope-summary" aria-label="Current scope" data-i18n-aria-label="intro.scopeLabel">
+          <li data-i18n="area.audio-effects">Audio effects</li>
+          <li data-i18n="area.differentiable-processing">Differentiable processing</li>
+          <li data-i18n="area.representation">Representation</li>
+          <li data-i18n="area.mixing">Mixing</li>
+          <li data-i18n="area.mastering">Mastering</li>
+          <li data-i18n="area.evaluation">Evaluation</li>
+        </ul>
+      </section>
+
+      <section id="scope" aria-labelledby="scope-title">
+        <div class="section-heading">
+          <h2 id="scope-title" data-i18n="scope.title">Field map</h2>
+          <p data-i18n="scope.description">The index follows production tasks rather than publication year. Each area collects implementations, pretrained models, datasets, and evaluation resources where available.</p>
+        </div>
+        <div class="field-map">
+          <article data-field-area="audio-effects">
+            <a class="field-map-link" href="#papers" data-paper-area="audio-effects">
+              <h3 data-i18n="area.audio-effects">Audio effects</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.audioEffects">Modeling, estimation, control, and transfer of EQ, dynamics, distortion, reverberation, and other processors.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
+          </article>
+          <article data-field-area="differentiable-processing">
+            <a class="field-map-link" href="#papers" data-paper-area="differentiable-processing">
+              <h3 data-i18n="area.differentiable-processing">Differentiable processing</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.differentiableProcessing">Differentiable DSP, audio-effect chains, processing graphs, and optimization tools for production tasks.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
+          </article>
+          <article data-field-area="representation">
+            <a class="field-map-link" href="#papers" data-paper-area="representation">
+              <h3 data-i18n="area.representation">Representation</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.representation">Embeddings and descriptors that capture effect transformations, production style, and perceptual attributes.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
+          </article>
+          <article data-field-area="mixing">
+            <a class="field-map-link" href="#papers" data-paper-area="mixing">
+              <h3 data-i18n="area.mixing">Mixing</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.mixing">Automatic, reference-guided, and controllable systems for balancing and processing multitrack music.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
+          </article>
+          <article data-field-area="mastering">
+            <a class="field-map-link" href="#papers" data-paper-area="mastering">
+              <h3 data-i18n="area.mastering">Mastering</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.mastering">Systems for loudness, dynamics, tonal balance, reference matching, and final-stage production.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
+          </article>
+          <article data-field-area="evaluation">
+            <a class="field-map-link" href="#papers" data-paper-area="evaluation">
+              <h3 data-i18n="area.evaluation">Evaluation</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.evaluation">Benchmarks, listening-test protocols, production metrics, and reproducibility tools.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
+          </article>
+          <article class="future-area" data-field-area="spatial-audio">
+            <div class="title-line"><h3 data-i18n="area.spatial-audio">Spatial audio</h3><span data-i18n="common.later">Later</span></div>
+            <div class="field-copy">
+              <p data-i18n="scope.spatialAudio">Spatial mixing, positioning, rendering, and immersive production will be incorporated as the index expands.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title" data-i18n="projects.title">Project index</h2>
+          <p data-i18n="projects.description">Entries distinguish source availability, checkpoints, licenses, and reproducibility. Projects are added after their public resources have been checked.</p>
+        </div>
+
+        <div class="index-controls">
+          <label>
+            <span data-i18n="controls.search">Search</span>
+            <input id="project-search" type="search" placeholder="Project or task" data-i18n-placeholder="projects.searchPlaceholder" autocomplete="off">
+          </label>
+          <label>
+            <span data-i18n="controls.area">Area</span>
+            <select id="project-area-filter" data-i18n-aria-label="projects.areaFilter">
+              <option value="all" data-i18n="controls.allAreas">All areas</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="projects.columnProject">Project</th>
+                <th scope="col" data-i18n="projects.columnArea">Area</th>
+                <th scope="col" data-i18n="projects.columnAvailable">Available</th>
+                <th scope="col" data-i18n="projects.columnLicense">License</th>
+                <th scope="col" data-i18n="projects.columnVerified">Verified</th>
+              </tr>
+            </thead>
+            <tbody id="project-rows">
+              <tr><td colspan="5" class="loading" data-i18n="projects.loading">Loading verified projects...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="project-count" class="project-count" aria-live="polite"></p>
+        <div class="upcoming-project">
+          <div><span data-i18n="common.inDevelopment">In development</span><strong>MixBench</strong></div>
+          <p data-i18n="projects.mixbench">A reproducible evaluation framework for automatic music mixing. The repository link will be added when the project is publicly available.</p>
+        </div>
+        <noscript><p class="notice">JavaScript is required to render the project index.</p></noscript>
+      </section>
+
+      <section id="resources" aria-labelledby="resources-title">
+        <div class="section-heading">
+          <h2 id="resources-title" data-i18n="resources.title">Reference resources</h2>
+          <p data-i18n="resources.description">Bibliographies and field guides are listed separately from runnable implementations.</p>
+        </div>
+        <div id="resource-list" class="resource-list">
+          <p class="loading" data-i18n="resources.loading">Loading reference resources...</p>
+        </div>
+      </section>
+
+      <section id="papers" aria-labelledby="papers-title">
+        <div class="section-heading">
+          <h2 id="papers-title" data-i18n="papers.title">Paper index</h2>
+          <p data-i18n="papers.description">Papers are collected across the field, with links and concise summaries available in each entry.</p>
+        </div>
+
+        <div class="agent-note">
+          <span data-i18n="papers.agentLabel">AI paper scout</span>
+          <p data-i18n="papers.agentDescription">A scheduled workflow checks new papers weekly. Candidate metadata is validated before a website update is proposed.</p>
+        </div>
+
+        <div class="index-controls paper-controls">
+          <label>
+            <span data-i18n="controls.search">Search</span>
+            <input id="paper-search" type="search" placeholder="Title, author, or topic" data-i18n-placeholder="papers.searchPlaceholder" autocomplete="off">
+          </label>
+          <label>
+            <span data-i18n="controls.area">Area</span>
+            <select id="paper-area-filter" data-i18n-aria-label="papers.areaFilter">
+              <option value="all" data-i18n="controls.allAreas">All areas</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="paper-list" class="paper-list">
+          <p class="loading" data-i18n="papers.loading">Loading papers...</p>
+        </div>
+        <p id="paper-count" class="project-count" aria-live="polite"></p>
+      </section>
+
+      <section id="roadmap" aria-labelledby="roadmap-title">
+        <div class="section-heading">
+          <h2 id="roadmap-title" data-i18n="roadmap.title">Roadmap</h2>
+          <p data-i18n="roadmap.description">This first version establishes the scope and data structure. The catalogue grows through direct verification rather than unreviewed bulk collection.</p>
+        </div>
+        <ol class="roadmap-list">
+          <li><span data-i18n="common.now">Now</span><strong data-i18n="roadmap.nowTitle">Build the verified landscape</strong><p data-i18n="roadmap.nowText">Audio effects, representations, mixing, mastering, datasets, and evaluation.</p></li>
+          <li><span data-i18n="common.next">Next</span><strong data-i18n="roadmap.nextTitle">Add reproducibility details</strong><p data-i18n="roadmap.nextText">Environment, inference path, checkpoints, datasets, and known limitations.</p></li>
+          <li><span data-i18n="common.later">Later</span><strong data-i18n="roadmap.laterTitle">Expand the production space</strong><p data-i18n="roadmap.laterText">Spatial audio and other production-oriented tasks.</p></li>
+        </ol>
+      </section>
+    </main>
+
+    <dialog id="paper-dialog" class="paper-dialog" aria-label="Paper details" data-i18n-aria-label="papers.dialogLabel">
+      <div class="paper-dialog-shell">
+        <header class="paper-dialog-header">
+          <p data-i18n="papers.dialogLabel">Paper details</p>
+          <button id="paper-dialog-close" class="dialog-close" type="button" aria-label="Close paper details" data-i18n-aria-label="papers.closeDetails">&times;</button>
+        </header>
+        <div id="paper-dialog-content" class="paper-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <footer>
+      <p><span data-i18n="footer.maintained">Maintained by</span> <a href="https://meteroad.github.io/">Xinlu Liu</a>.</p>
+      <p data-i18n="footer.note">A living resource for the audio research community.</p>
+    </footer>
+  </body>
+</html>

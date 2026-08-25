@@ -1,0 +1,30 @@
+name: Validate index
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "app.js"
+      - "styles.css"
+      - "assets/**"
+      - "data/**"
+      - "automation/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Validate data and automation
+        run: |
+          python3 automation/validate_data.py
+          python3 -m unittest discover -s automation/tests -v
+          node --check app.js
+          git diff --check

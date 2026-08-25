@@ -1,0 +1,162 @@
+name: Weekly paper scout
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      candidate_count: ${{ steps.count.outputs.candidate_count }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Discover recent arXiv candidates
+        run: python3 automation/discover_papers.py
+
+      - name: Read candidate count
+        id: count
+        run: echo "candidate_count=$(python3 -c 'import json; print(json.load(open("automation/candidates.json"))["candidateCount"])')" >> "$GITHUB_OUTPUT"
+
+      - name: Upload candidate evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-candidates
+          path: automation/candidates.json
+          if-no-files-found: error
+          retention-days: 14
+
+  curate:
+    needs: discover
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Download candidate evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: paper-candidates
+          path: automation
+
+      - name: Curate with DeepSeek
+        if: needs.discover.outputs.candidate_count != '0'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+        run: >-
+          python3 automation/curate_papers.py
+          --candidates automation/candidates.json
+          --prompt automation/prompts/curate-papers.txt
+          --output automation/reviewed-papers.json
+
+      - name: Create empty review when no candidates were found
+        if: needs.discover.outputs.candidate_count == '0'
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          generated = json.loads(Path("automation/candidates.json").read_text(encoding="utf-8"))["generatedAt"]
+          review = {"reviewedAt": generated[:10], "decisions": []}
+          Path("automation/reviewed-papers.json").write_text(
+              json.dumps(review, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Upload curated review
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-review
+          path: automation/reviewed-papers.json
+          if-no-files-found: error
+          retention-days: 14
+
+  propose:
+    needs: [discover, curate]
+    if: needs.discover.result == 'success' && needs.curate.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Download candidate evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: paper-candidates
+          path: automation
+
+      - name: Download curated review
+        uses: actions/download-artifact@v4
+        with:
+          name: paper-review
+          path: automation
+
+      - name: Merge high-confidence records
+        run: >-
+          python3 automation/merge_papers.py
+          --candidates automation/candidates.json
+          --review automation/reviewed-papers.json
+          --papers data/papers.json
+          --output data/papers.json
+
+      - name: Refresh formal publication metadata
+        env:
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+        run: >-
+          python3 automation/refresh_publication_metadata.py
+          --papers data/papers.json
+          --output data/papers.json
+
+      - name: Validate website data and tests
+        run: |
+          python3 automation/validate_data.py
+          python3 -m unittest discover -s automation/tests -v
+          node --check app.js
+
+      - name: Detect publishable changes
+        id: changes
+        run: |
+          if git diff --quiet -- data/papers.json; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create review pull request
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AUTO_MERGE: ${{ vars.PAPER_SCOUT_AUTO_MERGE }}
+        run: |
+          branch="automation/paper-scout-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/papers.json
+          git commit -m "Update recent intelligent audio papers"
+          git push origin "$branch"
+          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers are screened by the configured curation model. Titles and authors remain anchored to arXiv; DOI links and formal venues are refreshed from arXiv evidence with Semantic Scholar as a secondary bibliographic source before deterministic validation.")
+          if [ "$AUTO_MERGE" = "true" ]; then
+            gh pr merge --auto --squash "$pr_url"
+          fi

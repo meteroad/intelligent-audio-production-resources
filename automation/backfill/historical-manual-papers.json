@@ -1,0 +1,286 @@
+{
+  "papers": [
+    {
+      "id": "manual-neural-peq-dafx-2020",
+      "source": {"type": "manual", "id": "neural-peq-dafx-2020"},
+      "shortName": "Diff-PEQ",
+      "title": "Neural Parametric Equalizer Matching Using Differentiable Biquads",
+      "authors": ["Shahan Nercessian"],
+      "year": 2020,
+      "published": "2020-09-08",
+      "venue": "DAFx 2020",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Predicts parametric-equalizer settings with a neural network trained through differentiable biquad filters.",
+        "zh": "通过可微双二阶滤波器训练神经网络，以预测参数均衡器设置。"
+      },
+      "links": [{"label": "paper", "url": "https://www.dafx.de/paper-archive/2020/proceedings/papers/DAFx2020_paper_7.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-iir-dafx-2020",
+      "source": {"type": "manual", "id": "differentiable-iir-dafx-2020"},
+      "shortName": "Diff-IIR",
+      "title": "Differentiable IIR Filters for Machine Learning Applications",
+      "authors": ["Boris Kuznetsov", "Julian D. Parker", "Fabián Esqueda"],
+      "year": 2020,
+      "published": "2020-09-08",
+      "venue": "DAFx 2020",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Compares differentiable IIR topologies designed for inclusion in end-to-end machine-learning systems.",
+        "zh": "比较可嵌入端到端机器学习系统的多种可微 IIR 滤波器结构。"
+      },
+      "links": [{"label": "paper", "url": "https://www.dafx.de/paper-archive/2020/proceedings/papers/DAFx2020_paper_52.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-white-box-dafx-2021",
+      "source": {"type": "manual", "id": "differentiable-white-box-dafx-2021"},
+      "shortName": "Diff-WhiteBox",
+      "title": "Differentiable White-Box Virtual Analog Modeling",
+      "authors": ["Fabián Esqueda", "Boris Kuznetsov", "Julian D. Parker"],
+      "year": 2021,
+      "published": "2021-09-08",
+      "venue": "DAFx 2021",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Differentiates through explicit virtual-analog circuit models so physical parameters can be learned from audio.",
+        "zh": "对显式虚拟模拟电路模型求导，使物理参数能够从音频中学习。"
+      },
+      "links": [{"label": "paper", "url": "https://dafx.de/paper-archive/2021/proceedings/papers/DAFx20in21_paper_39.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-reverse-engineering-mix-jasa-2021",
+      "source": {"type": "manual", "id": "reverse-engineering-mix-jasa-2021"},
+      "shortName": "Mix Reverse Engineering",
+      "title": "Reverse Engineering of a Recording Mix with Differentiable Digital Signal Processing",
+      "authors": ["Joseph T. Colonel", "Joshua D. Reiss"],
+      "year": 2021,
+      "published": "2021-07-01",
+      "venue": "Journal of the Acoustical Society of America, 2021",
+      "areas": ["mixing", "audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Recovers a recording mix by optimizing the controls of a differentiable multitrack processing chain.",
+        "zh": "通过优化可微多轨处理链的控制参数，逆向恢复录音混音。"
+      },
+      "links": [
+        {"label": "doi", "url": "https://doi.org/10.1121/10.0005622"},
+        {"label": "project", "url": "https://jtcolonel.github.io/RevEng/"}
+      ],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-wdfs-smc-2022",
+      "source": {"type": "manual", "id": "differentiable-wdfs-smc-2022"},
+      "shortName": "Diff-WDF",
+      "title": "Emulating Diode Circuits with Differentiable Wave Digital Filters",
+      "authors": ["Jatin Chowdhury", "Christopher Johann Clarke"],
+      "year": 2022,
+      "published": "2022-06-07",
+      "venue": "SMC 2022",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Trains differentiable wave digital filters to emulate nonlinear diode circuits used in audio effects.",
+        "zh": "训练可微波数字滤波器，以模拟音频效果器中的非线性二极管电路。"
+      },
+      "links": [
+        {"label": "paper", "url": "https://zenodo.org/records/6566846"},
+        {"label": "source", "url": "https://github.com/jatinchowdhury18/differentiable-wdfs"}
+      ],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-drc-ballistics-aes-2022",
+      "source": {"type": "manual", "id": "differentiable-drc-ballistics-aes-2022"},
+      "shortName": "Diff-DRC Ballistics",
+      "title": "Approximating Ballistics in a Differentiable Dynamic Range Compressor",
+      "authors": ["Joseph T. Colonel", "Joshua D. Reiss"],
+      "year": 2022,
+      "published": "2022-10-01",
+      "venue": "AES 153rd Convention, 2022",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Develops a differentiable approximation to compressor attack and release ballistics for gradient-based parameter recovery.",
+        "zh": "构建压缩器起音与释放动态的可微近似，用于基于梯度的参数恢复。"
+      },
+      "links": [{"label": "paper", "url": "https://www.eecs.qmul.ac.uk/~josh/documents/2022/21915.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-waveshapers-aes-2022",
+      "source": {"type": "manual", "id": "differentiable-waveshapers-aes-2022"},
+      "shortName": "Diff-Waveshaper",
+      "title": "Reverse Engineering Memoryless Distortion Effects with Differentiable Waveshapers",
+      "authors": ["Joseph T. Colonel", "Marco Comunità", "Joshua D. Reiss"],
+      "year": 2022,
+      "published": "2022-10-01",
+      "venue": "AES 153rd Convention, 2022",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Estimates interpretable memoryless distortion curves by optimizing differentiable waveshaping models against target audio.",
+        "zh": "通过目标音频优化可微波形整形模型，估计可解释的无记忆失真曲线。"
+      },
+      "links": [{"label": "paper", "url": "https://jtcolonel.github.io/DistRevEng/"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-microdynamics-dafx-2022",
+      "source": {"type": "manual", "id": "microdynamics-dafx-2022"},
+      "shortName": "Diff-Microdynamics",
+      "title": "A Direct Microdynamics Adjusting Processor with Matching Paradigm and Differentiable Implementation",
+      "authors": ["Shahan Nercessian", "Russell McClellan", "Alexey Lukin"],
+      "year": 2022,
+      "published": "2022-09-06",
+      "venue": "DAFx 2022",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Introduces a differentiable processor for directly matching and adjusting short-term signal dynamics.",
+        "zh": "提出可微处理器，用于直接匹配与调整音频信号的短时动态。"
+      },
+      "links": [{"label": "paper", "url": "https://www.dafx.de/paper-archive/2022/papers/DAFx20in22_paper_21.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-grey-box-drc-dafx-2022",
+      "source": {"type": "manual", "id": "grey-box-drc-dafx-2022"},
+      "shortName": "GreyBoxDRC",
+      "title": "Grey-Box Modelling of Dynamic Range Compression",
+      "authors": ["Alec Wright", "Vesa Välimäki"],
+      "year": 2022,
+      "published": "2022-09-06",
+      "venue": "DAFx 2022",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Fits a lightweight, interpretable gray-box compressor model to measured dynamic-range-compression behavior.",
+        "zh": "使用轻量、可解释的灰盒压缩器模型拟合实测动态范围压缩行为。"
+      },
+      "links": [
+        {"label": "paper", "url": "https://www.dafx.de/paper-archive/2022/papers/DAFx20in22_paper_35.pdf"},
+        {"label": "source", "url": "https://github.com/Alec-Wright/GreyBoxDRC"}
+      ],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-moog-dafx-2023",
+      "source": {"type": "manual", "id": "differentiable-moog-dafx-2023"},
+      "shortName": "Diff-Moog",
+      "title": "A Differentiable Digital Moog Filter for Machine Learning Applications",
+      "authors": ["Etienne Gerat", "Purbaditya Bhattacharya", "Udo Zölzer"],
+      "year": 2023,
+      "published": "2023-09-04",
+      "venue": "DAFx 2023",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Derives parameter gradients for a digital Moog ladder filter so it can be embedded in machine-learning systems.",
+        "zh": "推导数字 Moog 梯形滤波器对控制参数的梯度，使其可嵌入机器学习系统。"
+      },
+      "links": [{"label": "paper", "url": "https://dafx.de/paper-archive/2023/DAFx23_paper_14.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-vocal-timbre-ddsp-dafx-2023",
+      "source": {"type": "manual", "id": "vocal-timbre-ddsp-dafx-2023"},
+      "shortName": "DDSP Vocal Timbre",
+      "title": "Vocal Timbre Effects with Differentiable Digital Signal Processing",
+      "authors": ["David Südholt", "Cumhur Erkut"],
+      "year": 2023,
+      "published": "2023-09-04",
+      "venue": "DAFx 2023",
+      "areas": ["audio-effects", "representation", "differentiable-processing"],
+      "summary": {
+        "en": "Explores differentiable harmonic-plus-noise synthesis and autoencoding as creative vocal-timbre effects.",
+        "zh": "探索可微谐波加噪声合成与自编码方法，用于创造性人声音色处理。"
+      },
+      "links": [{"label": "paper", "url": "https://www.dafx.de/paper-archive/2023/DAFx23_paper_29.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-ndmp-dafx-2025",
+      "source": {"type": "manual", "id": "ndmp-dafx-2025"},
+      "shortName": "NDMP",
+      "title": "Neural-Driven Multi-Band Processing for Automatic Equalization and Style Transfer",
+      "authors": ["Parakrant Sarkar", "PerMagnus Lindborg"],
+      "year": 2025,
+      "published": "2025-09-02",
+      "venue": "DAFx 2025",
+      "areas": ["audio-effects", "representation", "differentiable-processing"],
+      "summary": {
+        "en": "Combines a six-band parametric equalizer and per-band compression for automatic EQ and reference-guided style transfer.",
+        "zh": "结合六段参数均衡与分频带压缩，用于自动均衡和参考引导的风格迁移。"
+      },
+      "links": [{"label": "paper", "url": "https://dafx.de/paper-archive/2025/DAFx25_paper_81.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-diff-deq-eusipco-2025",
+      "source": {"type": "manual", "id": "diff-deq-eusipco-2025"},
+      "shortName": "Diff-DEQ",
+      "title": "Diff-DEQ: Differentiable Dynamic Equalization for Studio-Quality Speech Processing",
+      "authors": ["Parakrant Sarkar", "PerMagnus Lindborg"],
+      "year": 2025,
+      "published": "2025-09-08",
+      "venue": "EUSIPCO 2025",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Uses differentiable dynamic equalization to learn studio-style speech enhancement with interpretable controls.",
+        "zh": "利用可微动态均衡学习录音室风格的语音处理，并保留可解释控制。"
+      },
+      "links": [{"label": "paper", "url": "https://eurasip.org/Proceedings/Eusipco/Eusipco2025/pdfs/0000511.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-differentiable-sdn-dafx-2025",
+      "source": {"type": "manual", "id": "differentiable-sdn-dafx-2025"},
+      "shortName": "Diff-SDN",
+      "title": "Differentiable Scattering Delay Networks for Artificial Reverberation",
+      "authors": ["Alessandro Ilic Mezza", "Riccardo Giampiccolo", "Enzo De Sena", "Alberto Bernardini"],
+      "year": 2025,
+      "published": "2025-09-02",
+      "venue": "DAFx 2025",
+      "areas": ["audio-effects", "differentiable-processing"],
+      "summary": {
+        "en": "Optimizes scattering matrices and absorption filters in a differentiable delay network against room impulse responses.",
+        "zh": "依据房间冲激响应，优化可微散射延迟网络中的散射矩阵与吸声滤波器。"
+      },
+      "links": [{"label": "paper", "url": "https://dafx.de/paper-archive/2025/DAFx25_paper_51.pdf"}],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "manual-difffx-ismir-2025",
+      "source": {"type": "manual", "id": "difffx-ismir-2025"},
+      "shortName": "DiffFx",
+      "title": "DiffFx: A Toolkit for Differentiable Audio Effects Processors",
+      "authors": ["Yen-Tung Yeh", "Chung-Jui Chan", "Yi-Hsuan Yang"],
+      "year": 2025,
+      "published": "2025-09-21",
+      "venue": "ISMIR 2025 Late-Breaking Demo",
+      "areas": ["audio-effects", "mixing", "mastering", "differentiable-processing"],
+      "summary": {
+        "en": "Provides a PyTorch toolkit of interpretable differentiable processors for effects research, mixing, mastering, and parameter matching.",
+        "zh": "提供一组 PyTorch 可解释可微效果器，用于音效研究、混音、母带与参数匹配。"
+      },
+      "links": [
+        {"label": "paper", "url": "https://ismir2025program.ismir.net/lbd_422.html"},
+        {"label": "source", "url": "https://github.com/ytsrt66589/diffFx-pytorch"}
+      ],
+      "lastVerified": "2026-08-25",
+      "curation": "manual"
+    }
+  ]
+}

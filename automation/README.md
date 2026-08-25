@@ -1,0 +1,36 @@
+# AI paper scout
+
+The paper scout follows a reviewable pipeline:
+
+1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API.
+2. DeepSeek classifies direct relevance and writes short English and Chinese summaries under the website taxonomy.
+3. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
+4. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.
+5. Only high-confidence new records and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request.
+6. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
+
+The active scope covers audio effects, differentiable production processing, effect and production representations, mixing, mastering, and task-specific evaluation. Spatial audio remains deferred. Bibliography repositories are maintained under `data/resources.json`; they are not treated as runnable projects.
+
+## Repository setup
+
+In GitHub, open **Settings → Secrets and variables → Actions**:
+
+- Add a repository secret named `DEEPSEEK_API_KEY`.
+- Optionally add `SEMANTIC_SCHOLAR_API_KEY` to increase the bibliographic refresh rate limit. The public batch API is used when this secret is absent.
+- Under **Actions → General → Workflow permissions**, allow read and write permissions and allow GitHub Actions to create pull requests.
+
+The workflow runs every Monday at 01:00 UTC (09:00 Asia/Shanghai) and can also be started manually from **Actions → Weekly paper scout → Run workflow**. The publication refresh runs even when no new candidate paper is found.
+
+For unattended publication after validation, add the repository variable `PAPER_SCOUT_AUTO_MERGE` with the value `true`. The safer default is to review and merge the generated pull request manually.
+
+Never commit an API key or place it in workflow-level environment variables.
+
+The curation step uses `deepseek-v4-flash` in non-thinking JSON mode. Set the optional repository or job environment variable `DEEPSEEK_MODEL` only when intentionally testing another compatible model.
+
+## Local checks
+
+```bash
+python3 automation/validate_data.py
+python3 -m unittest discover -s automation/tests -v
+node --check app.js
+```

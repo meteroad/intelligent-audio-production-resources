@@ -1,0 +1,924 @@
+{
+  "schemaVersion": 2,
+  "projects": [
+    {
+      "id": "csteinmetz1-automix-toolkit",
+      "name": "automix-toolkit",
+      "description": {
+        "en": "Training, inference, evaluation, datasets, and models for differentiable automatic mixing.",
+        "zh": "面向可微自动混音的训练、推理、评测、数据与模型工具。"
+      },
+      "areas": [
+        "mixing",
+        "audio-effects",
+        "evaluation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/csteinmetz1/automix-toolkit"
+        }
+      ]
+    },
+    {
+      "id": "csteinmetz1-dasp-pytorch",
+      "name": "dasp-pytorch",
+      "description": {
+        "en": "Differentiable gain, EQ, compression, distortion, reverb, and stereo processors in PyTorch.",
+        "zh": "PyTorch 实现的可微增益、均衡、压缩、失真、混响与立体声处理器。"
+      },
+      "areas": [
+        "audio-effects",
+        "mixing",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/csteinmetz1/dasp-pytorch"
+        }
+      ]
+    },
+    {
+      "id": "magenta-ddsp",
+      "name": "DDSP",
+      "description": {
+        "en": "Foundational differentiable signal-processing components and neural audio models.",
+        "zh": "基础性的可微信号处理组件与神经音频模型库。"
+      },
+      "areas": [
+        "representation",
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/magenta/ddsp"
+        }
+      ]
+    },
+    {
+      "id": "a-carson-ddsp-phaser",
+      "name": "DDSP Phaser",
+      "description": {
+        "en": "Differentiable gray-box modeling of analog phaser effects with learned modulation.",
+        "zh": "通过学习调制信号对模拟移相效果器进行可微灰盒建模。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/a-carson/ddsp-phaser"
+        },
+        {
+          "label": "project",
+          "url": "https://a-carson.github.io/ddsp-phaser/"
+        }
+      ]
+    },
+    {
+      "id": "adobe-research-deepafx",
+      "name": "DeepAFx",
+      "description": {
+        "en": "Differentiable proxy modeling and control of black-box audio effects.",
+        "zh": "用于黑盒音频效果建模与控制的可微代理框架。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Custom/other; see repository terms",
+        "zh": "自定义或其他条款；请查看仓库"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/adobe-research/DeepAFx"
+        }
+      ]
+    },
+    {
+      "id": "adobe-research-deepafx-st",
+      "name": "DeepAFx-ST",
+      "description": {
+        "en": "Reference-guided production-style transfer with differentiable audio effects.",
+        "zh": "使用可微分音频效果实现参考引导的制作风格迁移。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Custom/other; see repository terms",
+        "zh": "自定义或其他条款；请查看仓库"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/adobe-research/DeepAFx-ST"
+        }
+      ]
+    },
+    {
+      "id": "gdalsanto-diff-fdn-colorless",
+      "name": "Diff-FDN Colorless",
+      "description": {
+        "en": "Differentiable feedback-delay-network optimization for smooth artificial reverberation.",
+        "zh": "用于平滑人工混响的可微反馈延迟网络优化代码。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/gdalsanto/diff-fdn-colorless"
+        }
+      ]
+    },
+    {
+      "id": "sai-soum-diff-mst",
+      "name": "Diff-MST",
+      "description": {
+        "en": "Differentiable reference-based music-mixing style transfer.",
+        "zh": "基于参考音频的可微音乐混音风格迁移。"
+      },
+      "areas": [
+        "mixing",
+        "representation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "CC-BY-NC-SA-4.0",
+        "zh": "CC-BY-NC-SA-4.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/sai-soum/Diff-MST"
+        }
+      ]
+    },
+    {
+      "id": "zys711-diff2mix",
+      "name": "Diff2Mix",
+      "description": {
+        "en": "Controllable automatic music mixing with diffusion models and differentiable audio effects.",
+        "zh": "结合扩散模型与可微分音频效果的可控自动音乐混音。"
+      },
+      "areas": [
+        "mixing",
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/zys711/Diff2Mix"
+        },
+        {
+          "label": "project",
+          "url": "https://zys711.github.io/Diff2Mix"
+        }
+      ]
+    },
+    {
+      "id": "jatinchowdhury18-differentiable-wdfs",
+      "name": "Differentiable WDFs",
+      "description": {
+        "en": "Differentiable wave-digital-filter models for trainable audio circuits.",
+        "zh": "用于可训练音频电路的可微波数字滤波器模型。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "BSD",
+        "zh": "BSD"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/jatinchowdhury18/differentiable-wdfs"
+        }
+      ]
+    },
+    {
+      "id": "ytsrt66589-difffx-pytorch",
+      "name": "DiffFx",
+      "description": {
+        "en": "A PyTorch toolkit of differentiable audio-effects processors.",
+        "zh": "包含多种可微分音频效果处理器的 PyTorch 工具包。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ytsrt66589/diffFx-pytorch"
+        }
+      ]
+    },
+    {
+      "id": "sonyresearch-diffvox",
+      "name": "DiffVox",
+      "description": {
+        "en": "Differentiable vocal-effects distributions and inference-time style transfer.",
+        "zh": "可微分人声音效分布与推理时风格迁移。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/diffvox"
+        }
+      ]
+    },
+    {
+      "id": "chenpaulyu-djtransgan",
+      "name": "DJtransGAN",
+      "description": {
+        "en": "Automatic DJ transitions with a differentiable equalizer, fader, training code, and pretrained model.",
+        "zh": "包含可微均衡器、推子、训练代码与预训练模型的自动 DJ 转场系统。"
+      },
+      "areas": [
+        "mixing",
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ChenPaulYu/DJtransGAN"
+        }
+      ]
+    },
+    {
+      "id": "jhtonykoo-e2e-music-remastering-system",
+      "name": "E2E Music Remastering",
+      "description": {
+        "en": "Self-supervised and adversarial end-to-end music remastering.",
+        "zh": "采用自监督与对抗学习的端到端音乐再母带系统。"
+      },
+      "areas": [
+        "mastering"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/jhtonyKoo/e2e_music_remastering_system"
+        }
+      ]
+    },
+    {
+      "id": "gdalsanto-flamo",
+      "name": "FLAMO",
+      "description": {
+        "en": "Frequency-domain differentiable modules for constructing and optimizing audio systems.",
+        "zh": "用于构建与优化音频系统的频域可微处理模块库。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/gdalsanto/flamo"
+        },
+        {
+          "label": "project",
+          "url": "https://gdalsanto.github.io/flamo/"
+        }
+      ]
+    },
+    {
+      "id": "sonyresearch-fx-encoder-plusplus",
+      "name": "Fx-Encoder++",
+      "description": {
+        "en": "Instrument-wise audio-effects representations extracted from mixtures.",
+        "zh": "从混合音频中提取分乐器音效表征。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation"
+      ],
+      "license": {
+        "en": "Custom/other; see repository terms",
+        "zh": "自定义或其他条款；请查看仓库"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus"
+        }
+      ]
+    },
+    {
+      "id": "sony-fxnorm-automix",
+      "name": "FxNorm-Automix",
+      "description": {
+        "en": "Automatic music mixing trained with processed, out-of-domain audio.",
+        "zh": "使用域外已处理音频训练的自动音乐混音系统。"
+      },
+      "areas": [
+        "mixing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/sony/FxNorm-automix"
+        }
+      ]
+    },
+    {
+      "id": "mcomunita-gfx-classifier",
+      "name": "GFX Classifier",
+      "description": {
+        "en": "Guitar-effect recognition and parameter estimation models.",
+        "zh": "吉他效果识别与参数估计模型。"
+      },
+      "areas": [
+        "audio-effects",
+        "evaluation"
+      ],
+      "license": {
+        "en": "BSD",
+        "zh": "BSD"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/mcomunita/gfx_classifier"
+        }
+      ]
+    },
+    {
+      "id": "sh-lee97-grafx",
+      "name": "GRAFX",
+      "description": {
+        "en": "An open-source PyTorch library for differentiable audio processing graphs.",
+        "zh": "用于可微分音频处理图的开源 PyTorch 库。"
+      },
+      "areas": [
+        "audio-effects",
+        "mixing",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/sh-lee97/grafx"
+        }
+      ]
+    },
+    {
+      "id": "sh-lee97-grafx-prune",
+      "name": "GRAFX-Prune",
+      "description": {
+        "en": "Supplementary code and materials for searching and pruning music-mixing graphs.",
+        "zh": "音乐混音图搜索与剪枝的代码和补充材料。"
+      },
+      "areas": [
+        "mixing",
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/sh-lee97/grafx-prune"
+        },
+        {
+          "label": "project",
+          "url": "https://sh-lee97.github.io/grafx-prune/"
+        }
+      ]
+    },
+    {
+      "id": "alec-wright-greyboxdrc",
+      "name": "GreyBoxDRC",
+      "description": {
+        "en": "Lightweight and interpretable gray-box modeling of dynamic range compression.",
+        "zh": "轻量且可解释的动态范围压缩灰盒建模代码。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/Alec-Wright/GreyBoxDRC"
+        }
+      ]
+    },
+    {
+      "id": "csteinmetz1-iirnet",
+      "name": "IIRNet",
+      "description": {
+        "en": "Neural direct design of stable cascaded biquad filters.",
+        "zh": "用于稳定级联双二阶滤波器直接设计的神经网络。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/csteinmetz1/IIRNet"
+        }
+      ]
+    },
+    {
+      "id": "vaclisinc-instructfx2fx",
+      "name": "InstructFX2FX",
+      "description": {
+        "en": "Multi-turn text-guided refinement of persistent audio-effect chains.",
+        "zh": "通过多轮文本指令持续细化音效链及其参数。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/vaclisinc/InstructFX2FX"
+        },
+        {
+          "label": "project",
+          "url": "https://instructfx2fx.vaclis.net/"
+        }
+      ]
+    },
+    {
+      "id": "sonyresearch-llm2fx",
+      "name": "LLM2Fx-Tools",
+      "description": {
+        "en": "Tool calling for selecting and controlling music post-production processors.",
+        "zh": "通过工具调用选择并控制音乐后期制作处理器。"
+      },
+      "areas": [
+        "mixing",
+        "audio-effects"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/LLM2Fx"
+        }
+      ]
+    },
+    {
+      "id": "sonyresearch-megami",
+      "name": "MEGAMI",
+      "description": {
+        "en": "Generative effect embeddings for automatic music mixing.",
+        "zh": "面向自动音乐混音的生成式音效嵌入。"
+      },
+      "areas": [
+        "mixing",
+        "representation"
+      ],
+      "license": {
+        "en": "CC-BY-NC-SA-4.0",
+        "zh": "CC-BY-NC-SA-4.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/MEGAMI"
+        }
+      ]
+    },
+    {
+      "id": "f90-mix-wave-u-net",
+      "name": "Mix-Wave-U-Net",
+      "description": {
+        "en": "Wave-U-Net models and evaluation code for intelligent drum mixing.",
+        "zh": "用于智能鼓组混音的 Wave-U-Net 模型与评测代码。"
+      },
+      "areas": [
+        "mixing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/f90/Mix-Wave-U-Net"
+        }
+      ]
+    },
+    {
+      "id": "jhtonykoo-music-mixing-style-transfer",
+      "name": "Music Mixing Style Transfer",
+      "description": {
+        "en": "Contrastive effect representations for transferring music-mixing style.",
+        "zh": "用于音乐混音风格迁移的对比式音效表征。"
+      },
+      "areas": [
+        "mixing",
+        "representation"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/jhtonyKoo/music_mixing_style_transfer"
+        }
+      ]
+    },
+    {
+      "id": "mcomunita-nablafx",
+      "name": "NablAFx",
+      "description": {
+        "en": "A common framework for differentiable black-box and gray-box audio-effects modeling.",
+        "zh": "用于可微分黑盒与灰盒音频效果建模的统一框架。"
+      },
+      "areas": [
+        "audio-effects",
+        "evaluation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/mcomunita/nablafx"
+        }
+      ]
+    },
+    {
+      "id": "alec-wright-openamp",
+      "name": "Open-Amp",
+      "description": {
+        "en": "Synthetic data generation for broadly conditioned amplifier and effect models.",
+        "zh": "面向通用音箱与音效模型的合成数据生成框架。"
+      },
+      "areas": [
+        "audio-effects"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/Alec-Wright/OpenAmp"
+        }
+      ]
+    },
+    {
+      "id": "tmegalaxyaudioeffect-relfx-ismir2026-release",
+      "name": "RelFx",
+      "description": {
+        "en": "Relative audio-effects representations learned from processed audio pairs.",
+        "zh": "从成对已处理音频中学习相对音效表征。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "evaluation"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release"
+        },
+        {
+          "label": "project",
+          "url": "https://relative-fx.github.io"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/TMEGalaxyAudioEffect/relfx-ismir2026"
+        }
+      ]
+    },
+    {
+      "id": "mhrice-remfx",
+      "name": "RemFX",
+      "description": {
+        "en": "Models, datasets, and checkpoints for general-purpose audio-effect removal.",
+        "zh": "通用音效去除的模型、数据集与权重。"
+      },
+      "areas": [
+        "audio-effects"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/mhrice/RemFx"
+        },
+        {
+          "label": "project",
+          "url": "https://csteinmetz1.github.io/RemFX/"
+        }
+      ]
+    },
+    {
+      "id": "int0thewind-s4-dynamic-range-compressor",
+      "name": "S4-DRC",
+      "description": {
+        "en": "State-space neural modeling of analog dynamic range compressors.",
+        "zh": "使用状态空间神经网络建模模拟动态范围压缩器。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/int0thewind/s4-dynamic-range-compressor"
+        },
+        {
+          "label": "project",
+          "url": "https://int0thewind.github.io/s4drc/"
+        }
+      ]
+    },
+    {
+      "id": "amaai-lab-sonicmaster",
+      "name": "SonicMaster",
+      "description": {
+        "en": "Controllable all-in-one music restoration and mastering.",
+        "zh": "可控的一体化音乐修复与母带处理系统。"
+      },
+      "areas": [
+        "mastering"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/AMAAI-Lab/SonicMaster"
+        }
+      ]
+    },
+    {
+      "id": "csteinmetz1-st-ito",
+      "name": "ST-ITO",
+      "description": {
+        "en": "Inference-time optimization for reference-guided audio-effects style transfer.",
+        "zh": "面向参考引导音效风格迁移的推理时优化框架。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/csteinmetz1/st-ito"
+        }
+      ]
+    },
+    {
+      "id": "anniejchu-text2fx",
+      "name": "Text2FX",
+      "description": {
+        "en": "Text-guided audio-effects control using CLAP representations.",
+        "zh": "使用 CLAP 表征实现文本引导的音频效果控制。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation"
+      ],
+      "license": {
+        "en": "No license file verified",
+        "zh": "未核验到许可证文件"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/anniejchu/text2fx"
+        }
+      ]
+    },
+    {
+      "id": "mcomunita-tonetwist-afx-dataset",
+      "name": "ToneTwist AFx",
+      "description": {
+        "en": "A community-extensible dry/wet dataset for nonlinear audio-effects modeling.",
+        "zh": "面向非线性音频效果建模、可由社区扩展的干湿音频数据集。"
+      },
+      "areas": [
+        "audio-effects",
+        "evaluation"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/mcomunita/tonetwist-afx-dataset"
+        }
+      ]
+    },
+    {
+      "id": "diffapf-torchcomp",
+      "name": "TorchComp",
+      "description": {
+        "en": "A differentiable dynamic range compressor and expander for PyTorch.",
+        "zh": "面向 PyTorch 的可微动态范围压缩与扩展处理器。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/DiffAPF/torchcomp"
+        }
+      ]
+    },
+    {
+      "id": "diffapf-torchlpc",
+      "name": "TorchLPC",
+      "description": {
+        "en": "Fast differentiable time-varying all-pole filtering in PyTorch.",
+        "zh": "PyTorch 中快速、可微且支持时变系数的全极点滤波器。"
+      },
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "license": {
+        "en": "MIT",
+        "zh": "MIT"
+      },
+      "lastVerified": "2026-08-25",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/DiffAPF/torchlpc"
+        }
+      ]
+    }
+  ]
+}
