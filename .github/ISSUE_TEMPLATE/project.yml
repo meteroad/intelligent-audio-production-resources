@@ -1,0 +1,78 @@
+name: Add an open-source project
+description: Suggest a repository, model, dataset, benchmark, or production tool.
+title: "[Project]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Projects are checked for source availability, license evidence, checkpoints, datasets, and direct production relevance.
+
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      placeholder: Official project or repository name
+    validations:
+      required: true
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source repository
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: input
+    id: paper_url
+    attributes:
+      label: Associated paper or documentation
+      placeholder: https://...
+
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Relevant areas
+      multiple: true
+      options:
+        - Audio effects
+        - Differentiable processing
+        - Representation learning
+        - Mixing
+        - Mastering
+        - Evaluation
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: License evidence
+      description: Link directly to the project's license file when possible.
+      placeholder: https://github.com/owner/repository/blob/main/LICENSE
+
+  - type: textarea
+    id: availability
+    attributes:
+      label: Available resources
+      description: List verified model, checkpoint, dataset, demo, or documentation links.
+      placeholder: |
+        Checkpoint: https://...
+        Dataset: https://...
+        Demo: https://...
+
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Production relevance
+      description: Briefly describe what the project implements and why it belongs in this index.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Verification
+      options:
+        - label: I checked that the repository is publicly accessible and searched for an explicit license.
+          required: true

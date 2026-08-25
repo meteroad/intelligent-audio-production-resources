@@ -1,0 +1,82 @@
+name: Add a paper
+description: Suggest a paper for the intelligent audio production index.
+title: "[Paper]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the index. Please use primary publication links and provide enough evidence to verify the record.
+
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+      placeholder: Full title as published
+    validations:
+      required: true
+
+  - type: input
+    id: authors
+    attributes:
+      label: Authors
+      placeholder: Author names in publication order
+    validations:
+      required: true
+
+  - type: input
+    id: paper_url
+    attributes:
+      label: Primary paper URL
+      description: Prefer a DOI, publisher, conference, or arXiv page.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Formal venue
+      description: Leave blank if the work is only available as a preprint.
+      placeholder: ISMIR 2026
+
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Relevant areas
+      description: Select every area directly addressed by the paper.
+      multiple: true
+      options:
+        - Audio effects
+        - Differentiable processing
+        - Representation learning
+        - Mixing
+        - Mastering
+        - Evaluation
+    validations:
+      required: true
+
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Production relevance
+      description: Briefly explain the paper's direct contribution to intelligent audio production.
+    validations:
+      required: true
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: Associated open resources
+      description: List verified code, model, dataset, or project-page links, one per line.
+      placeholder: |
+        Code: https://...
+        Model: https://...
+        Dataset: https://...
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Verification
+      options:
+        - label: I searched the existing index and provided primary or official links where available.
+          required: true

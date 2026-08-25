@@ -1,0 +1,68 @@
+name: Correct existing information
+description: Report incorrect metadata, classification, availability, or a broken link.
+title: "[Correction]: "
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Entry name
+      placeholder: Paper, project, or resource name
+    validations:
+      required: true
+
+  - type: input
+    id: entry_url
+    attributes:
+      label: Index or source URL
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: correction_type
+    attributes:
+      label: Correction type
+      options:
+        - Broken or outdated link
+        - Title, authors, date, or venue
+        - Open-source or license status
+        - Checkpoint or dataset availability
+        - Task classification
+        - English or Chinese summary
+        - Duplicate or out-of-scope entry
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Current problem
+      description: Describe what is incorrect or no longer current.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed correction
+      description: State the replacement information as precisely as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Provide primary or official links that support the correction.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Verification
+      options:
+        - label: I checked the evidence and did not include private or confidential information.
+          required: true

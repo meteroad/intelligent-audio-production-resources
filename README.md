@@ -1,14 +1,22 @@
 # Intelligent Audio Production Resources
 
-A bilingual, research-oriented index of open projects and papers for intelligent audio effects and music production.
+A curated, bilingual research index covering audio effects, differentiable processing, representation learning, automatic mixing, mastering, and evaluation.
 
-- **Website:** https://meteroad.github.io/intelligent-audio-production-resources/
-- **Maintainer:** [Xinlu Liu](https://meteroad.github.io/)
-- **Current index:** 38 verified projects, 69 papers, and 2 reference resources
+[Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-## Scope
+**69 papers · 38 verified projects · 2 reference collections**
 
-The index currently covers:
+[![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
+
+## What You Can Find
+
+| Collection | Included information |
+| --- | --- |
+| Papers | Formal venues, paper and DOI links, concise English and Chinese summaries, and associated open resources |
+| Projects | Source availability, checkpoints, licenses, task areas, and last-verification dates |
+| Reference resources | Field bibliographies and research guides kept separate from runnable implementations |
+
+The index is organized by production task rather than publication year. It currently covers:
 
 - audio effects modeling, estimation, control, transfer, and removal;
 - differentiable DSP, effect chains, and processing graphs;
@@ -19,19 +27,33 @@ The index currently covers:
 
 Spatial audio is listed as a future extension rather than mixed into the current catalogue.
 
-## Use the index
+## Curation Principles
 
-Open the [website](https://meteroad.github.io/intelligent-audio-production-resources/) to browse by field, search projects and papers, and view verified paper, code, model, and DOI links. The interface is available in English and Chinese.
+- Paper titles, authors, dates, and links are anchored to primary publication sources where available.
+- Formal venues are shown only when publication evidence can be verified.
+- Project source, checkpoint, dataset, and license links are recorded separately rather than treating every public page as open source.
+- The weekly paper scout proposes reviewable changes; AI-screened candidates are never published directly.
+- Every public entry remains open to correction through a structured issue or pull request.
 
 ## Contribute
 
-Issues and pull requests are welcome for:
+The quickest route is to open a structured request:
 
-- missing papers, repositories, checkpoints, or datasets;
-- incorrect venues, links, licenses, or task labels;
-- concise corrections to English or Chinese summaries.
+- [Add a paper](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=paper.yml)
+- [Add an open-source project](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=project.yml)
+- [Correct metadata or report a broken link](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-Please include a primary paper or project URL and enough evidence to verify the requested change. New records must fit the production-oriented scope and pass `automation/validate_data.py`.
+Please include a primary paper or project URL and enough evidence to verify the requested change. See [CONTRIBUTING.md](CONTRIBUTING.md) before editing catalogue data directly.
+
+## Data
+
+The catalogue is available as version-controlled JSON:
+
+- [`data/papers.json`](data/papers.json)
+- [`data/projects.json`](data/projects.json)
+- [`data/resources.json`](data/resources.json)
+
+These files drive the public website and can also be used for research tooling or downstream analysis under the repository license.
 
 ## Automation
 
@@ -39,7 +61,7 @@ The weekly paper scout searches arXiv, screens candidates with a configured lang
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
 
-## Local preview
+## Local Preview
 
 ```bash
 python3 -m http.server 8000
