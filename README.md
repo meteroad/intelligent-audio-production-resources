@@ -13,7 +13,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 | Collection | Included information |
 | --- | --- |
 | Papers | Formal venues, paper and DOI links, concise English and Chinese summaries, and associated open resources |
-| Projects | Source availability, checkpoints, licenses, task areas, and last-verification dates |
+| Projects | Source, checkpoint, inference, training, dataset, license, taxonomy, related-paper evidence, and last-verification dates |
 | Reference resources | Field bibliographies and research guides kept separate from runnable implementations |
 
 The index is organized by production task rather than publication year. It currently covers:
@@ -31,7 +31,7 @@ Spatial audio is listed as a future extension rather than mixed into the current
 
 - Paper titles, authors, dates, and links are anchored to primary publication sources where available.
 - Formal venues are shown only when publication evidence can be verified.
-- Project source, checkpoint, dataset, and license links are recorded separately rather than treating every public page as open source.
+- Project source, checkpoint, dataset, taxonomy, and license claims are recorded with first-party repository or official-documentation evidence.
 - The weekly paper scout proposes reviewable changes; AI-screened candidates are never published directly.
 - Every public entry remains open to correction through a structured issue or pull request.
 
@@ -77,6 +77,12 @@ Run the checks with:
 python3 automation/validate_data.py
 python3 -m unittest discover -s automation/tests -v
 node --check app.js
+```
+
+Generate a deterministic URL review report without editing data:
+
+```bash
+python3 automation/check_links.py --output /tmp/link-check-report.json
 ```
 
 ## License

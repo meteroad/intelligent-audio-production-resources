@@ -35,6 +35,14 @@ python3 -m unittest discover -s automation/tests -v
 node --check app.js
 ```
 
+Build a review-only URL report with:
+
+```bash
+python3 automation/check_links.py --output /tmp/link-check-report.json
+```
+
+The checker reads public JSON files, distinguishes successful links, redirects, 401/403 access blocks, 429 rate limits, network failures/timeouts, and broken HTTP responses, and never edits catalogue data. The `Link check report` GitHub workflow can run weekly or manually and uploads the JSON report as an artifact.
+
 ## Project catalogue migration
 
 The project catalogue uses an evidence-oriented v3 schema. Upgrade a v2 catalogue with:
@@ -47,4 +55,4 @@ python3 automation/migrate_projects_v3.py \
   --papers data/papers.json
 ```
 
-The migration records existing source and checkpoint links as `linked`, matches paper relations only through identical canonical resource URLs, and leaves all unsupported capability claims as `not-reviewed`. It also supports a deterministic `downgrade` direction for compatibility checks. See [`DATA.md`](../DATA.md) for the complete interface contract.
+The migration records existing source and checkpoint links as `linked`, matches paper relations only through identical canonical resource URLs, and leaves all unsupported capability and taxonomy claims as `not-reviewed`. It also supports a deterministic `downgrade` direction for compatibility checks. See [`DATA.md`](../DATA.md) for the complete interface contract.
