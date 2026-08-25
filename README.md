@@ -55,6 +55,8 @@ The catalogue is available as version-controlled JSON:
 
 These files drive the public website and can also be used for research tooling or downstream analysis under the repository license.
 
+See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and migration guidance. The formal projects v3 contract is available at [`schemas/projects-v3.schema.json`](schemas/projects-v3.schema.json).
+
 ## Automation
 
 The weekly paper scout searches arXiv, screens candidates with a configured language model, refreshes formal venue and DOI metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates directly.

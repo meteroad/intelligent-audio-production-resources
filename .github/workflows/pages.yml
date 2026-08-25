@@ -31,7 +31,7 @@ jobs:
       - name: Stage static site
         run: |
           mkdir -p _site
-          cp -R index.html app.js styles.css assets data .nojekyll _site/
+          cp -R index.html app.js styles.css assets data schemas .nojekyll _site/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

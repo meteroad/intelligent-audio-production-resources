@@ -1,5 +1,6 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
+  "updatedAt": "2026-08-25",
   "projects": [
     {
       "id": "csteinmetz1-automix-toolkit",
@@ -14,9 +15,47 @@
         "evaluation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/csteinmetz1/automix-toolkit"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2010-10291"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -38,9 +77,45 @@
         "mixing",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/csteinmetz1/dasp-pytorch"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -62,9 +137,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/magenta/ddsp"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2001-04643"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -85,9 +198,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/a-carson/ddsp-phaser"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2306-01332"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -112,9 +263,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Custom/other; see repository terms",
-        "zh": "自定义或其他条款；请查看仓库"
+        "zh": "自定义或其他条款；请查看仓库",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/adobe-research/DeepAFx"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2105-04752"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -136,9 +325,47 @@
         "representation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Custom/other; see repository terms",
-        "zh": "自定义或其他条款；请查看仓库"
+        "zh": "自定义或其他条款；请查看仓库",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/adobe-research/DeepAFx-ST"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2207-08759"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -159,9 +386,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/gdalsanto/diff-fdn-colorless"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2402-11216"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -183,9 +448,47 @@
         "representation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "CC-BY-NC-SA-4.0",
-        "zh": "CC-BY-NC-SA-4.0"
+        "zh": "CC-BY-NC-SA-4.0",
+        "status": "identified",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/sai-soum/Diff-MST"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2407-08889"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -207,9 +510,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/zys711/Diff2Mix"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2608-05442"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -234,9 +575,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "BSD",
-        "zh": "BSD"
+        "zh": "BSD",
+        "status": "identified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/jatinchowdhury18/differentiable-wdfs"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "manual-differentiable-wdfs-smc-2022"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -257,9 +636,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ytsrt66589/diffFx-pytorch"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "manual-difffx-ismir-2025"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -281,9 +698,48 @@
         "representation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SonyResearch/diffvox"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2504-14735",
+          "arxiv-2505-11315"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -305,9 +761,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ChenPaulYu/DJtransGAN"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2110-06525"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -327,9 +821,47 @@
       "areas": [
         "mastering"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/jhtonyKoo/e2e_music_remastering_system"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2202-08520"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -350,9 +882,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/gdalsanto/flamo"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2409-08723"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -377,9 +947,47 @@
         "audio-effects",
         "representation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Custom/other; see repository terms",
-        "zh": "自定义或其他条款；请查看仓库"
+        "zh": "自定义或其他条款；请查看仓库",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SonyResearch/Fx-Encoder_PlusPlus"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2507-02273"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -399,9 +1007,47 @@
       "areas": [
         "mixing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/sony/FxNorm-automix"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2208-11428"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -422,9 +1068,47 @@
         "audio-effects",
         "evaluation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "BSD",
-        "zh": "BSD"
+        "zh": "BSD",
+        "status": "identified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/mcomunita/gfx_classifier"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2012-03216"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -446,9 +1130,47 @@
         "mixing",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/sh-lee97/grafx"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2408-03204"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -470,9 +1192,48 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/sh-lee97/grafx-prune"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2406-01049",
+          "arxiv-2509-15948"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -497,9 +1258,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/Alec-Wright/GreyBoxDRC"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "manual-grey-box-drc-dafx-2022"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -520,9 +1319,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/csteinmetz1/IIRNet"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2110-03691"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -544,9 +1381,47 @@
         "representation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/vaclisinc/InstructFX2FX"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2606-22005"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -571,9 +1446,47 @@
         "mixing",
         "audio-effects"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SonyResearch/LLM2Fx"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2512-01559"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -594,9 +1507,47 @@
         "mixing",
         "representation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "CC-BY-NC-SA-4.0",
-        "zh": "CC-BY-NC-SA-4.0"
+        "zh": "CC-BY-NC-SA-4.0",
+        "status": "identified",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SonyResearch/MEGAMI"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2511-08040"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -616,9 +1567,45 @@
       "areas": [
         "mixing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/f90/Mix-Wave-U-Net"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -639,9 +1626,47 @@
         "mixing",
         "representation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/jhtonyKoo/music_mixing_style_transfer"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2211-02247"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -663,9 +1688,48 @@
         "evaluation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/mcomunita/nablafx"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2502-11668",
+          "arxiv-2502-14405"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -685,9 +1749,47 @@
       "areas": [
         "audio-effects"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/Alec-Wright/OpenAmp"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2411-14972"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -709,9 +1811,49 @@
         "representation",
         "evaluation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/TMEGalaxyAudioEffect/relfx-ismir2026"
+          ]
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "relfx-ismir-2026"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -739,9 +1881,47 @@
       "areas": [
         "audio-effects"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/mhrice/RemFx"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2308-16177"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -766,9 +1946,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/int0thewind/s4-dynamic-range-compressor"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2403-16331"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -792,9 +2010,47 @@
       "areas": [
         "mastering"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/AMAAI-Lab/SonicMaster"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2508-03448"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -816,9 +2072,47 @@
         "representation",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "Apache-2.0",
-        "zh": "Apache-2.0"
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/csteinmetz1/st-ito"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2410-21233"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -839,9 +2133,47 @@
         "audio-effects",
         "representation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "No license file verified",
-        "zh": "未核验到许可证文件"
+        "zh": "未核验到许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/anniejchu/text2fx"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2409-18847"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -862,9 +2194,45 @@
         "audio-effects",
         "evaluation"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/mcomunita/tonetwist-afx-dataset"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -885,9 +2253,45 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/DiffAPF/torchcomp"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
       },
       "lastVerified": "2026-08-25",
       "links": [
@@ -908,9 +2312,47 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed"
+      },
       "license": {
         "en": "MIT",
-        "zh": "MIT"
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/DiffAPF/torchlpc"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2404-07970"
+        ],
+        "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-25",
       "links": [

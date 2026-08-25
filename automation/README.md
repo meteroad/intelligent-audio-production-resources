@@ -34,3 +34,17 @@ python3 automation/validate_data.py
 python3 -m unittest discover -s automation/tests -v
 node --check app.js
 ```
+
+## Project catalogue migration
+
+The project catalogue uses an evidence-oriented v3 schema. Upgrade a v2 catalogue with:
+
+```bash
+python3 automation/migrate_projects_v3.py \
+  --direction upgrade \
+  --input data/projects.json \
+  --output data/projects.json \
+  --papers data/papers.json
+```
+
+The migration records existing source and checkpoint links as `linked`, matches paper relations only through identical canonical resource URLs, and leaves all unsupported capability claims as `not-reviewed`. It also supports a deterministic `downgrade` direction for compatibility checks. See [`DATA.md`](../DATA.md) for the complete interface contract.

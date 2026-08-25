@@ -8,6 +8,7 @@ on:
       - "styles.css"
       - "assets/**"
       - "data/**"
+      - "schemas/**"
       - "automation/**"
       - ".github/workflows/**"
   workflow_dispatch:

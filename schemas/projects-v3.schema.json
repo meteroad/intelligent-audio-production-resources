@@ -1,0 +1,281 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://meteroad.github.io/intelligent-audio-production-resources/schemas/projects-v3.schema.json",
+  "title": "Intelligent Audio Production project catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "updatedAt", "projects"],
+  "properties": {
+    "schemaVersion": {
+      "const": 3
+    },
+    "updatedAt": {
+      "$ref": "#/$defs/date"
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/project"
+      }
+    }
+  },
+  "$defs": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "localized": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh"],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "area": {
+      "enum": [
+        "audio-effects",
+        "differentiable-processing",
+        "representation",
+        "mixing",
+        "mastering",
+        "evaluation",
+        "spatial-audio"
+      ]
+    },
+    "task": {
+      "enum": [
+        "effect-modeling",
+        "parameter-estimation",
+        "effect-control",
+        "effect-transfer",
+        "effect-removal",
+        "representation-learning",
+        "automatic-mixing",
+        "mastering",
+        "evaluation",
+        "differentiable-processing"
+      ]
+    },
+    "effect": {
+      "enum": [
+        "gain",
+        "equalization",
+        "compression",
+        "distortion",
+        "reverberation",
+        "delay",
+        "modulation",
+        "stereo",
+        "filtering",
+        "multi-effect",
+        "other"
+      ]
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": {
+          "enum": ["paper", "project", "source", "checkpoint", "doi"]
+        },
+        "url": {
+          "$ref": "#/$defs/httpsUrl"
+        }
+      }
+    },
+    "taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tasks", "effects", "reviewStatus"],
+      "properties": {
+        "tasks": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/task"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/effect"
+          }
+        },
+        "reviewStatus": {
+          "enum": ["not-reviewed", "reviewed"]
+        }
+      }
+    },
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh", "status", "spdx", "evidenceUrl"],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": ["identified", "custom", "not-verified"]
+        },
+        "spdx": {
+          "type": ["string", "null"]
+        },
+        "evidenceUrl": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/httpsUrl"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "availabilityEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidence"],
+      "properties": {
+        "status": {
+          "enum": [
+            "not-reviewed",
+            "linked",
+            "documented",
+            "tested",
+            "gated",
+            "restricted",
+            "not-found",
+            "not-applicable"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/httpsUrl"
+          }
+        }
+      }
+    },
+    "availability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "checkpoint", "inference", "training", "dataset"],
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/availabilityEntry"
+        },
+        "checkpoint": {
+          "$ref": "#/$defs/availabilityEntry"
+        },
+        "inference": {
+          "$ref": "#/$defs/availabilityEntry"
+        },
+        "training": {
+          "$ref": "#/$defs/availabilityEntry"
+        },
+        "dataset": {
+          "$ref": "#/$defs/availabilityEntry"
+        }
+      }
+    },
+    "relations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["paperIds", "reviewStatus"],
+      "properties": {
+        "paperIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reviewStatus": {
+          "enum": ["not-reviewed", "exact-link-match", "verified"]
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "areas",
+        "taxonomy",
+        "license",
+        "availability",
+        "relations",
+        "lastVerified",
+        "links"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "$ref": "#/$defs/localized"
+        },
+        "areas": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/area"
+          }
+        },
+        "taxonomy": {
+          "$ref": "#/$defs/taxonomy"
+        },
+        "license": {
+          "$ref": "#/$defs/license"
+        },
+        "availability": {
+          "$ref": "#/$defs/availability"
+        },
+        "relations": {
+          "$ref": "#/$defs/relations"
+        },
+        "lastVerified": {
+          "$ref": "#/$defs/date"
+        },
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/link"
+          }
+        }
+      }
+    }
+  }
+}
