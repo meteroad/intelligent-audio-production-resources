@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    "meta.title": "Intelligent Audio Production | Xinlu Liu",
+    "meta.title": "Intelligent Audio Production Resources | Xinlu Liu",
     "meta.description": "A structured index of open resources and recent research for intelligent audio effects, mixing, mastering, and evaluation.",
     "nav.label": "Primary navigation",
     "nav.scope": "Scope",
@@ -93,7 +93,7 @@ const translations = {
     "link.doi": "DOI"
   },
   zh: {
-    "meta.title": "智能音频制作 | 刘鑫璐",
+    "meta.title": "智能音频制作资源索引 | 刘鑫璐",
     "meta.description": "面向智能音效、混音、母带与评测的开放资源及近期研究索引。",
     "nav.label": "主导航",
     "nav.scope": "领域",

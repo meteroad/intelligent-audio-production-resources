@@ -19,7 +19,7 @@ from publication_metadata import resolve_publication_venue
 
 ATOM = "{http://www.w3.org/2005/Atom}"
 ARXIV = "{http://arxiv.org/schemas/atom}"
-USER_AGENT = "IntelligentAudioProductionPaperScout/1.0 (https://meteroad.github.io/intelligent-audio-production/)"
+USER_AGENT = "IntelligentAudioProductionPaperScout/1.0 (https://meteroad.github.io/intelligent-audio-production-resources/)"
 
 
 def compact_text(value: str | None) -> str:

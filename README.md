@@ -1,8 +1,8 @@
-# Intelligent Audio Production
+# Intelligent Audio Production Resources
 
 A bilingual, research-oriented index of open projects and papers for intelligent audio effects and music production.
 
-- **Website:** https://meteroad.github.io/intelligent-audio-production/
+- **Website:** https://meteroad.github.io/intelligent-audio-production-resources/
 - **Maintainer:** [Xinlu Liu](https://meteroad.github.io/)
 - **Current index:** 38 verified projects, 69 papers, and 2 reference resources
 
@@ -21,7 +21,7 @@ Spatial audio is listed as a future extension rather than mixed into the current
 
 ## Use the index
 
-Open the [website](https://meteroad.github.io/intelligent-audio-production/) to browse by field, search projects and papers, and view verified paper, code, model, and DOI links. The interface is available in English and Chinese.
+Open the [website](https://meteroad.github.io/intelligent-audio-production-resources/) to browse by field, search projects and papers, and view verified paper, code, model, and DOI links. The interface is available in English and Chinese.
 
 ## Contribute
 
