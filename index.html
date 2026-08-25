@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production-resources/">
     <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production-resources/assets/social-preview.jpg">
     <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production-resources/">
-    <link rel="stylesheet" href="styles.css?v=20260825-6">
-    <script src="app.js?v=20260825-6" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260826-1">
+    <script src="app.js?v=20260826-1" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -122,7 +122,7 @@
           <p data-i18n="projects.description">Entries distinguish source availability, checkpoints, licenses, and reproducibility. Projects are added after their public resources have been checked.</p>
         </div>
 
-        <div class="index-controls">
+        <div class="index-controls project-controls">
           <label>
             <span data-i18n="controls.search">Search</span>
             <input id="project-search" type="search" placeholder="Project or task" data-i18n-placeholder="projects.searchPlaceholder" autocomplete="off">
@@ -133,6 +133,37 @@
               <option value="all" data-i18n="controls.allAreas">All areas</option>
             </select>
           </label>
+          <label>
+            <span data-i18n="controls.license">License</span>
+            <select id="project-license-filter" data-i18n-aria-label="projects.licenseFilter">
+              <option value="all" data-i18n="controls.allLicenses">All licenses</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="controls.capability">Capability</span>
+            <select id="project-capability-filter" data-i18n-aria-label="projects.capabilityFilter">
+              <option value="all" data-i18n="controls.allCapabilities">All capabilities</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="controls.status">Status</span>
+            <select id="project-status-filter" data-i18n-aria-label="projects.statusFilter">
+              <option value="all" data-i18n="controls.allStatuses">All statuses</option>
+            </select>
+          </label>
+          <label id="project-task-control" hidden>
+            <span data-i18n="controls.task">Task</span>
+            <select id="project-task-filter" data-i18n-aria-label="projects.taskFilter">
+              <option value="all" data-i18n="controls.allTasks">All tasks</option>
+            </select>
+          </label>
+          <label id="project-effect-control" hidden>
+            <span data-i18n="controls.effect">Effect</span>
+            <select id="project-effect-filter" data-i18n-aria-label="projects.effectFilter">
+              <option value="all" data-i18n="controls.allEffects">All effects</option>
+            </select>
+          </label>
+          <button id="project-filter-reset" class="filter-reset" type="button" data-i18n="controls.reset">Reset</button>
         </div>
 
         <div class="table-wrap">
@@ -219,6 +250,16 @@
           <button id="paper-dialog-close" class="dialog-close" type="button" aria-label="Close paper details" data-i18n-aria-label="papers.closeDetails">&times;</button>
         </header>
         <div id="paper-dialog-content" class="paper-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <dialog id="project-dialog" class="paper-dialog project-dialog" aria-label="Project details" data-i18n-aria-label="projects.dialogLabel">
+      <div class="paper-dialog-shell">
+        <header class="paper-dialog-header">
+          <p data-i18n="projects.dialogLabel">Project details</p>
+          <button id="project-dialog-close" class="dialog-close" type="button" aria-label="Close project details" data-i18n-aria-label="projects.closeDetails">&times;</button>
+        </header>
+        <div id="project-dialog-content" class="paper-dialog-content"></div>
       </div>
     </dialog>
 

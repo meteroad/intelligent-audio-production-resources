@@ -36,6 +36,28 @@ const translations = {
     "projects.loading": "Loading verified projects...",
     "projects.empty": "No verified projects match this filter.",
     "projects.loadError": "The project index could not be loaded.",
+    "projects.openDetails": "View project details",
+    "projects.dialogLabel": "Project details",
+    "projects.closeDetails": "Close project details",
+    "projects.licenseFilter": "Filter projects by license status",
+    "projects.capabilityFilter": "Filter projects by availability capability",
+    "projects.statusFilter": "Filter projects by availability status",
+    "projects.taskFilter": "Filter projects by reviewed task",
+    "projects.effectFilter": "Filter projects by reviewed effect",
+    "projects.relatedPapersLabel": "Related papers",
+    "projects.noRelatedPapers": "No related paper has been verified.",
+    "projects.licenseLabel": "License",
+    "projects.licenseStatusLabel": "License status",
+    "projects.spdxLabel": "SPDX",
+    "projects.evidenceLabel": "Evidence",
+    "projects.noEvidence": "No evidence URL recorded.",
+    "projects.availabilityLabel": "Availability",
+    "projects.taxonomyLabel": "Taxonomy",
+    "projects.tasksLabel": "Tasks",
+    "projects.effectsLabel": "Effects",
+    "projects.noReviewedTaxonomy": "No reviewed taxonomy tags.",
+    "projects.linksLabel": "Project links",
+    "projects.verifiedLabel": "Verified",
     "projects.mixbench": "A reproducible evaluation framework for automatic music mixing. The repository link will be added when the project is publicly available.",
     "resources.title": "Reference resources",
     "resources.description": "Bibliographies and field guides are listed separately from runnable implementations.",
@@ -65,6 +87,17 @@ const translations = {
     "controls.search": "Search",
     "controls.area": "Area",
     "controls.allAreas": "All areas",
+    "controls.license": "License",
+    "controls.allLicenses": "All licenses",
+    "controls.capability": "Capability",
+    "controls.allCapabilities": "All capabilities",
+    "controls.status": "Status",
+    "controls.allStatuses": "All statuses",
+    "controls.task": "Task",
+    "controls.allTasks": "All tasks",
+    "controls.effect": "Effect",
+    "controls.allEffects": "All effects",
+    "controls.reset": "Reset",
     "common.inDevelopment": "In development",
     "common.now": "Now",
     "common.next": "Next",
@@ -90,7 +123,44 @@ const translations = {
     "link.project": "Project",
     "link.source": "Source",
     "link.checkpoint": "Checkpoint",
-    "link.doi": "DOI"
+    "link.doi": "DOI",
+    "license.status.identified": "Identified",
+    "license.status.custom": "Custom",
+    "license.status.not-verified": "Not verified",
+    "availability.source": "Source",
+    "availability.checkpoint": "Checkpoint",
+    "availability.inference": "Inference",
+    "availability.training": "Training",
+    "availability.dataset": "Dataset",
+    "availability.status.not-reviewed": "Not reviewed",
+    "availability.status.linked": "Linked",
+    "availability.status.documented": "Documented",
+    "availability.status.tested": "Tested",
+    "availability.status.gated": "Gated",
+    "availability.status.restricted": "Restricted",
+    "availability.status.not-found": "Not found",
+    "availability.status.not-applicable": "Not applicable",
+    "task.effect-modeling": "Effect modeling",
+    "task.parameter-estimation": "Parameter estimation",
+    "task.effect-control": "Effect control",
+    "task.effect-transfer": "Effect transfer",
+    "task.effect-removal": "Effect removal",
+    "task.representation-learning": "Representation learning",
+    "task.automatic-mixing": "Automatic mixing",
+    "task.mastering": "Mastering",
+    "task.evaluation": "Evaluation",
+    "task.differentiable-processing": "Differentiable processing",
+    "effect.gain": "Gain",
+    "effect.equalization": "EQ",
+    "effect.compression": "Compression",
+    "effect.distortion": "Distortion",
+    "effect.reverberation": "Reverb",
+    "effect.delay": "Delay",
+    "effect.modulation": "Modulation",
+    "effect.stereo": "Stereo",
+    "effect.filtering": "Filtering",
+    "effect.multi-effect": "Multi-effect",
+    "effect.other": "Other"
   },
   zh: {
     "meta.title": "智能音频制作资源索引 | 刘鑫璐",
@@ -129,6 +199,28 @@ const translations = {
     "projects.loading": "正在加载已核验项目……",
     "projects.empty": "没有符合当前筛选条件的项目。",
     "projects.loadError": "项目索引加载失败。",
+    "projects.openDetails": "查看项目详情",
+    "projects.dialogLabel": "项目详情",
+    "projects.closeDetails": "关闭项目详情",
+    "projects.licenseFilter": "按许可证状态筛选项目",
+    "projects.capabilityFilter": "按可用能力筛选项目",
+    "projects.statusFilter": "按可用状态筛选项目",
+    "projects.taskFilter": "按已核验任务筛选项目",
+    "projects.effectFilter": "按已核验效果筛选项目",
+    "projects.relatedPapersLabel": "关联论文",
+    "projects.noRelatedPapers": "暂未核验到关联论文。",
+    "projects.licenseLabel": "许可证",
+    "projects.licenseStatusLabel": "许可证状态",
+    "projects.spdxLabel": "SPDX",
+    "projects.evidenceLabel": "证据",
+    "projects.noEvidence": "未记录证据链接。",
+    "projects.availabilityLabel": "可用性",
+    "projects.taxonomyLabel": "分类",
+    "projects.tasksLabel": "任务",
+    "projects.effectsLabel": "效果",
+    "projects.noReviewedTaxonomy": "暂无已核验分类标签。",
+    "projects.linksLabel": "项目链接",
+    "projects.verifiedLabel": "核验时间",
     "projects.mixbench": "面向自动音乐混音的可复现评测框架；项目公开后将在此补充仓库链接。",
     "resources.title": "参考资料",
     "resources.description": "书目与领域导航和可运行实现分开列出，避免混淆。",
@@ -158,6 +250,17 @@ const translations = {
     "controls.search": "搜索",
     "controls.area": "领域",
     "controls.allAreas": "全部领域",
+    "controls.license": "许可证",
+    "controls.allLicenses": "全部许可证",
+    "controls.capability": "能力",
+    "controls.allCapabilities": "全部能力",
+    "controls.status": "状态",
+    "controls.allStatuses": "全部状态",
+    "controls.task": "任务",
+    "controls.allTasks": "全部任务",
+    "controls.effect": "效果",
+    "controls.allEffects": "全部效果",
+    "controls.reset": "重置",
     "common.inDevelopment": "开发中",
     "common.now": "当前",
     "common.next": "下一步",
@@ -183,7 +286,44 @@ const translations = {
     "link.project": "项目主页",
     "link.source": "源码",
     "link.checkpoint": "模型权重",
-    "link.doi": "DOI"
+    "link.doi": "DOI",
+    "license.status.identified": "已识别",
+    "license.status.custom": "自定义",
+    "license.status.not-verified": "未核验",
+    "availability.source": "源码",
+    "availability.checkpoint": "权重",
+    "availability.inference": "推理",
+    "availability.training": "训练",
+    "availability.dataset": "数据集",
+    "availability.status.not-reviewed": "未核验",
+    "availability.status.linked": "已链接",
+    "availability.status.documented": "有文档",
+    "availability.status.tested": "已测试",
+    "availability.status.gated": "需申请",
+    "availability.status.restricted": "受限",
+    "availability.status.not-found": "未找到",
+    "availability.status.not-applicable": "不适用",
+    "task.effect-modeling": "效果建模",
+    "task.parameter-estimation": "参数估计",
+    "task.effect-control": "效果控制",
+    "task.effect-transfer": "效果迁移",
+    "task.effect-removal": "效果去除",
+    "task.representation-learning": "表征学习",
+    "task.automatic-mixing": "自动混音",
+    "task.mastering": "母带",
+    "task.evaluation": "评测",
+    "task.differentiable-processing": "可微分处理",
+    "effect.gain": "增益",
+    "effect.equalization": "均衡",
+    "effect.compression": "压缩",
+    "effect.distortion": "失真",
+    "effect.reverberation": "混响",
+    "effect.delay": "延迟",
+    "effect.modulation": "调制",
+    "effect.stereo": "立体声",
+    "effect.filtering": "滤波",
+    "effect.multi-effect": "多效果",
+    "effect.other": "其他"
   }
 };
 
@@ -192,6 +332,7 @@ const state = {
   projects: [],
   resources: [],
   papers: [],
+  activeProjectId: null,
   activePaperId: null
 };
 
@@ -199,6 +340,14 @@ const elements = {
   projectRows: document.querySelector("#project-rows"),
   projectSearch: document.querySelector("#project-search"),
   projectArea: document.querySelector("#project-area-filter"),
+  projectLicense: document.querySelector("#project-license-filter"),
+  projectCapability: document.querySelector("#project-capability-filter"),
+  projectStatus: document.querySelector("#project-status-filter"),
+  projectTask: document.querySelector("#project-task-filter"),
+  projectEffect: document.querySelector("#project-effect-filter"),
+  projectTaskControl: document.querySelector("#project-task-control"),
+  projectEffectControl: document.querySelector("#project-effect-control"),
+  projectFilterReset: document.querySelector("#project-filter-reset"),
   projectCount: document.querySelector("#project-count"),
   resourceList: document.querySelector("#resource-list"),
   paperList: document.querySelector("#paper-list"),
@@ -206,10 +355,17 @@ const elements = {
   paperArea: document.querySelector("#paper-area-filter"),
   paperCount: document.querySelector("#paper-count"),
   fieldPaperLinks: document.querySelectorAll(".field-map-link"),
+  projectDialog: document.querySelector("#project-dialog"),
+  projectDialogClose: document.querySelector("#project-dialog-close"),
+  projectDialogContent: document.querySelector("#project-dialog-content"),
   paperDialog: document.querySelector("#paper-dialog"),
   paperDialogClose: document.querySelector("#paper-dialog-close"),
   paperDialogContent: document.querySelector("#paper-dialog-content")
 };
+
+const availabilityCapabilities = ["source", "checkpoint", "inference", "training", "dataset"];
+const availabilityStatuses = ["linked", "documented", "tested", "gated", "restricted", "not-found", "not-applicable", "not-reviewed"];
+const licenseStatuses = ["identified", "custom", "not-verified"];
 
 function getInitialLanguage() {
   try {
@@ -247,7 +403,8 @@ function isArxivLink(item) {
 
 function linkLabel(item) {
   if (item.label === "paper" && isArxivLink(item)) return "arXiv";
-  return t(`link.${item.label}`);
+  const translated = t(`link.${item.label}`);
+  return translated === `link.${item.label}` ? item.label : translated;
 }
 
 function createLinkList(links, className = "") {
@@ -288,6 +445,47 @@ function populateAreaFilter(select, items) {
   select.value = areas.includes(selected) ? selected : "all";
 }
 
+function populateSelect(select, values, allLabelKey, labelForValue) {
+  const selected = select.value || "all";
+  select.replaceChildren();
+  const all = document.createElement("option");
+  all.value = "all";
+  all.textContent = t(allLabelKey);
+  select.append(all);
+  values.forEach((value) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = labelForValue(value);
+    select.append(option);
+  });
+  select.value = values.includes(selected) ? selected : "all";
+}
+
+function reviewedTaxonomyValues(field) {
+  return [...new Set(
+    state.projects
+      .filter((project) => project.taxonomy?.reviewStatus === "reviewed")
+      .flatMap((project) => project.taxonomy?.[field] ?? [])
+  )].sort((a, b) => t(`${field === "tasks" ? "task" : "effect"}.${a}`).localeCompare(
+    t(`${field === "tasks" ? "task" : "effect"}.${b}`),
+    state.language
+  ));
+}
+
+function populateProjectFilters() {
+  populateAreaFilter(elements.projectArea, state.projects);
+  populateSelect(elements.projectLicense, licenseStatuses, "controls.allLicenses", (status) => t(`license.status.${status}`));
+  populateSelect(elements.projectCapability, availabilityCapabilities, "controls.allCapabilities", (capability) => t(`availability.${capability}`));
+  populateSelect(elements.projectStatus, availabilityStatuses, "controls.allStatuses", (status) => t(`availability.status.${status}`));
+
+  const taskValues = reviewedTaxonomyValues("tasks");
+  const effectValues = reviewedTaxonomyValues("effects");
+  elements.projectTaskControl.hidden = taskValues.length === 0;
+  elements.projectEffectControl.hidden = effectValues.length === 0;
+  populateSelect(elements.projectTask, taskValues, "controls.allTasks", (task) => t(`task.${task}`));
+  populateSelect(elements.projectEffect, effectValues, "controls.allEffects", (effect) => t(`effect.${effect}`));
+}
+
 function updateFieldPaperLinks() {
   elements.fieldPaperLinks.forEach((link) => {
     const area = link.dataset.paperArea;
@@ -312,10 +510,18 @@ function showPapersForArea(area) {
 function createProjectRow(project) {
   const row = document.createElement("tr");
   const projectCell = document.createElement("td");
-  projectCell.append(
+  const button = document.createElement("button");
+  button.className = "project-open";
+  button.type = "button";
+  button.setAttribute("aria-haspopup", "dialog");
+  button.setAttribute("aria-controls", "project-dialog");
+  button.setAttribute("aria-label", `${t("projects.openDetails")}: ${project.name}`);
+  button.addEventListener("click", () => openProjectDialog(project));
+  button.append(
     createTextElement("span", "project-name", project.name),
     createTextElement("span", "project-description", localized(project.description))
   );
+  projectCell.append(button);
 
   const areaCell = document.createElement("td");
   areaCell.append(createTagList(project.areas));
@@ -335,12 +541,46 @@ function createProjectRow(project) {
 function renderProjects() {
   const query = elements.projectSearch.value.trim().toLocaleLowerCase(state.language);
   const selectedArea = elements.projectArea.value;
+  const selectedLicense = elements.projectLicense.value;
+  const selectedCapability = elements.projectCapability.value;
+  const selectedStatus = elements.projectStatus.value;
+  const selectedTask = elements.projectTask.value;
+  const selectedEffect = elements.projectEffect.value;
   const filtered = state.projects.filter((project) => {
     const matchesArea = selectedArea === "all" || project.areas.includes(selectedArea);
-    const searchable = [project.name, project.description.en, project.description.zh, ...project.areas.map((area) => t(`area.${area}`))]
+    const matchesLicense = selectedLicense === "all" || project.license.status === selectedLicense;
+    const availabilityEntries = availabilityCapabilities.map((capability) => [capability, project.availability[capability]]);
+    const matchesCapability = selectedCapability === "all"
+      || (
+        project.availability[selectedCapability]
+        && (
+          selectedStatus === "all"
+            ? project.availability[selectedCapability].status !== "not-reviewed"
+            : project.availability[selectedCapability].status === selectedStatus
+        )
+      );
+    const matchesStatus = selectedStatus === "all"
+      || (
+        selectedCapability === "all"
+          ? availabilityEntries.some(([, entry]) => entry.status === selectedStatus)
+          : matchesCapability
+      );
+    const matchesTask = selectedTask === "all" || project.taxonomy?.tasks?.includes(selectedTask);
+    const matchesEffect = selectedEffect === "all" || project.taxonomy?.effects?.includes(selectedEffect);
+    const searchable = [
+      project.name,
+      project.description.en,
+      project.description.zh,
+      localized(project.license),
+      t(`license.status.${project.license.status}`),
+      ...project.areas.map((area) => t(`area.${area}`)),
+      ...(project.taxonomy?.tasks ?? []).map((task) => t(`task.${task}`)),
+      ...(project.taxonomy?.effects ?? []).map((effect) => t(`effect.${effect}`)),
+      ...availabilityEntries.flatMap(([capability, entry]) => [t(`availability.${capability}`), t(`availability.status.${entry.status}`)])
+    ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && searchable.includes(query);
+    return matchesArea && matchesLicense && matchesCapability && matchesStatus && matchesTask && matchesEffect && searchable.includes(query);
   });
 
   elements.projectRows.replaceChildren();
@@ -357,6 +597,156 @@ function renderProjects() {
   elements.projectCount.textContent = state.language === "zh"
     ? `显示 ${filtered.length} / ${state.projects.length} 个已核验项目`
     : `${filtered.length} of ${state.projects.length} verified ${state.projects.length === 1 ? "project" : "projects"}`;
+}
+
+function createEvidenceLinks(urls) {
+  if (!urls?.length) return createTextElement("p", "dialog-empty", t("projects.noEvidence"));
+  const links = urls.map((url, index) => ({
+    label: `${t("projects.evidenceLabel")} ${index + 1}`,
+    url
+  }));
+  return createLinkList(links, "paper-dialog-links");
+}
+
+function createLabeledValue(label, value) {
+  const item = document.createElement("div");
+  item.className = "project-fact";
+  item.append(
+    createTextElement("dt", "", label),
+    createTextElement("dd", "", value)
+  );
+  return item;
+}
+
+function createTokenList(values, prefix, emptyText) {
+  if (!values.length) return createTextElement("p", "dialog-empty", emptyText);
+  const list = document.createElement("div");
+  list.className = "tag-list";
+  values.forEach((value) => list.append(createTextElement("span", "tag", t(`${prefix}.${value}`))));
+  return list;
+}
+
+function appendProjectDialogSection(container, title, body) {
+  const section = document.createElement("section");
+  section.className = "paper-dialog-section";
+  section.append(createTextElement("h3", "", title), body);
+  container.append(section);
+}
+
+function createRelatedPapers(project) {
+  const related = project.relations.paperIds
+    .map((paperId) => state.papers.find((paper) => paper.id === paperId))
+    .filter(Boolean);
+  if (!related.length) return createTextElement("p", "dialog-empty", t("projects.noRelatedPapers"));
+  const list = document.createElement("div");
+  list.className = "related-paper-list";
+  related.forEach((paper) => {
+    const paperLink = paper.links.find((link) => link.label === "paper" || link.label === "doi") ?? paper.links[0];
+    const link = document.createElement("a");
+    link.href = paperLink.url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = paper.title;
+    list.append(link);
+  });
+  return list;
+}
+
+function createLicenseDetails(project) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "project-detail-stack";
+  const facts = document.createElement("dl");
+  facts.className = "project-facts";
+  facts.append(
+    createLabeledValue(t("projects.licenseLabel"), localized(project.license)),
+    createLabeledValue(t("projects.licenseStatusLabel"), t(`license.status.${project.license.status}`)),
+    createLabeledValue(t("projects.spdxLabel"), project.license.spdx ?? "—")
+  );
+  wrapper.append(facts, createEvidenceLinks(project.license.evidenceUrl ? [project.license.evidenceUrl] : []));
+  return wrapper;
+}
+
+function createAvailabilityDetails(project) {
+  const list = document.createElement("div");
+  list.className = "availability-list";
+  availabilityCapabilities.forEach((capability) => {
+    const entry = project.availability[capability];
+    const item = document.createElement("div");
+    item.className = "availability-item";
+    const heading = document.createElement("div");
+    heading.className = "availability-heading";
+    heading.append(
+      createTextElement("strong", "", t(`availability.${capability}`)),
+      createTextElement("span", `availability-status status-${entry.status}`, t(`availability.status.${entry.status}`))
+    );
+    item.append(heading, createEvidenceLinks(entry.evidence));
+    list.append(item);
+  });
+  return list;
+}
+
+function createTaxonomyDetails(project) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "project-detail-stack";
+  if (project.taxonomy.reviewStatus !== "reviewed") {
+    wrapper.append(createTextElement("p", "dialog-empty", t("projects.noReviewedTaxonomy")));
+    return wrapper;
+  }
+  const groups = document.createElement("div");
+  groups.className = "taxonomy-groups";
+  const tasks = document.createElement("div");
+  tasks.append(
+    createTextElement("h4", "", t("projects.tasksLabel")),
+    createTokenList(project.taxonomy.tasks, "task", t("projects.noReviewedTaxonomy"))
+  );
+  const effects = document.createElement("div");
+  effects.append(
+    createTextElement("h4", "", t("projects.effectsLabel")),
+    createTokenList(project.taxonomy.effects, "effect", t("projects.noReviewedTaxonomy"))
+  );
+  groups.append(tasks, effects);
+  wrapper.append(groups, createEvidenceLinks(project.taxonomy.evidence));
+  return wrapper;
+}
+
+function renderProjectDialog(project) {
+  const heading = document.createElement("div");
+  heading.className = "paper-dialog-heading";
+  heading.append(
+    createTextElement("h2", "", project.name),
+    createTextElement("p", "paper-dialog-summary", localized(project.description)),
+    createTagList(project.areas)
+  );
+
+  const facts = document.createElement("dl");
+  facts.className = "project-facts";
+  facts.append(createLabeledValue(t("projects.verifiedLabel"), project.lastVerified));
+
+  elements.projectDialogContent.replaceChildren(heading, facts);
+  appendProjectDialogSection(elements.projectDialogContent, t("projects.relatedPapersLabel"), createRelatedPapers(project));
+  appendProjectDialogSection(elements.projectDialogContent, t("projects.licenseLabel"), createLicenseDetails(project));
+  appendProjectDialogSection(elements.projectDialogContent, t("projects.availabilityLabel"), createAvailabilityDetails(project));
+  appendProjectDialogSection(elements.projectDialogContent, t("projects.taxonomyLabel"), createTaxonomyDetails(project));
+  appendProjectDialogSection(elements.projectDialogContent, t("projects.linksLabel"), createLinkList(project.links, "paper-dialog-links"));
+}
+
+function openProjectDialog(project) {
+  state.activeProjectId = project.id;
+  renderProjectDialog(project);
+  if (typeof elements.projectDialog.showModal === "function") {
+    if (!elements.projectDialog.open) elements.projectDialog.showModal();
+  } else {
+    elements.projectDialog.setAttribute("open", "");
+  }
+}
+
+function closeProjectDialog() {
+  if (typeof elements.projectDialog.close === "function") {
+    elements.projectDialog.close();
+  } else {
+    elements.projectDialog.removeAttribute("open");
+    state.activeProjectId = null;
+  }
 }
 
 function createResourceEntry(resource) {
@@ -529,7 +919,7 @@ function applyTranslations() {
   document.querySelectorAll("[data-language]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.language === state.language));
   });
-  populateAreaFilter(elements.projectArea, state.projects);
+  populateProjectFilters();
   populateAreaFilter(elements.paperArea, state.papers);
   updateFieldPaperLinks();
   if (state.projects.length) renderProjects();
@@ -538,6 +928,10 @@ function applyTranslations() {
   if (elements.paperDialog.open && state.activePaperId) {
     const activePaper = state.papers.find((paper) => paper.id === state.activePaperId);
     if (activePaper) renderPaperDialog(activePaper);
+  }
+  if (elements.projectDialog.open && state.activeProjectId) {
+    const activeProject = state.projects.find((project) => project.id === state.activeProjectId);
+    if (activeProject) renderProjectDialog(activeProject);
   }
 }
 
@@ -587,6 +981,21 @@ document.querySelectorAll("[data-language]").forEach((button) => {
 });
 elements.projectSearch.addEventListener("input", renderProjects);
 elements.projectArea.addEventListener("change", renderProjects);
+elements.projectLicense.addEventListener("change", renderProjects);
+elements.projectCapability.addEventListener("change", renderProjects);
+elements.projectStatus.addEventListener("change", renderProjects);
+elements.projectTask.addEventListener("change", renderProjects);
+elements.projectEffect.addEventListener("change", renderProjects);
+elements.projectFilterReset.addEventListener("click", () => {
+  elements.projectSearch.value = "";
+  elements.projectArea.value = "all";
+  elements.projectLicense.value = "all";
+  elements.projectCapability.value = "all";
+  elements.projectStatus.value = "all";
+  elements.projectTask.value = "all";
+  elements.projectEffect.value = "all";
+  renderProjects();
+});
 elements.paperSearch.addEventListener("input", renderPapers);
 elements.paperArea.addEventListener("change", renderPapers);
 elements.fieldPaperLinks.forEach((link) => {
@@ -594,6 +1003,13 @@ elements.fieldPaperLinks.forEach((link) => {
     event.preventDefault();
     showPapersForArea(link.dataset.paperArea);
   });
+});
+elements.projectDialogClose.addEventListener("click", closeProjectDialog);
+elements.projectDialog.addEventListener("click", (event) => {
+  if (event.target === elements.projectDialog) closeProjectDialog();
+});
+elements.projectDialog.addEventListener("close", () => {
+  state.activeProjectId = null;
 });
 elements.paperDialogClose.addEventListener("click", closePaperDialog);
 elements.paperDialog.addEventListener("click", (event) => {
