@@ -4,7 +4,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 
 [Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-**69 papers · 38 verified projects · 12 datasets · 2 reference collections**
+**71 papers · 40 verified projects · 12 datasets · 2 reference collections**
 
 [![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
 
@@ -65,6 +65,27 @@ See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and 
 The weekly paper scout searches arXiv, screens candidates with a configured language model, refreshes formal venue and DOI metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates directly.
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
+
+## TODO
+
+### Coverage
+
+- [x] Establish a bilingual index for papers, projects, datasets, and reference collections.
+- [x] Link datasets to verified papers and open-source projects that use them.
+- [ ] Audit historical coverage across effect modeling, parameter estimation, representation learning, mixing, and mastering.
+- [ ] Add spatial-audio production tasks after defining a focused taxonomy and inclusion policy.
+
+### Reproducibility and quality
+
+- [ ] Verify installation, inference, training, and checkpoint paths for high-impact repositories.
+- [ ] Add structured benchmark metadata for comparing tasks, datasets, metrics, and reported results.
+- [ ] Expand automated checks for formal venues, licenses, stale repositories, and broken links.
+
+### Maintenance and access
+
+- [x] Run a weekly paper scout that opens reviewable pull requests instead of publishing automatically.
+- [ ] Add a lightweight contributor review process for recurring community submissions.
+- [ ] Publish versioned catalogue snapshots and document a stable downstream data interface.
 
 ## Local Preview
 

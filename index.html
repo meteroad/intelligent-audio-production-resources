@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production-resources/">
     <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production-resources/assets/social-preview.jpg">
     <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production-resources/">
-    <link rel="stylesheet" href="styles.css?v=20260826-2">
-    <script src="app.js?v=20260826-2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260826-3">
+    <script src="app.js?v=20260826-3" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -23,7 +23,6 @@
           <a href="#datasets" data-i18n="nav.datasets">Datasets</a>
           <a href="#resources" data-i18n="nav.resources">Resources</a>
           <a href="#papers" data-i18n="nav.papers">Papers</a>
-          <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
         </nav>
         <a class="repository-link" href="https://github.com/meteroad/intelligent-audio-production-resources" target="_blank" rel="noreferrer" data-i18n="nav.github">GitHub</a>
         <div class="language-switch" role="group" aria-label="Language">
@@ -46,6 +45,11 @@
           <li data-i18n="area.mastering">Mastering</li>
           <li data-i18n="area.evaluation">Evaluation</li>
         </ul>
+        <div class="intro-actions">
+          <a class="action-link action-link-primary" href="https://github.com/meteroad/intelligent-audio-production-resources" target="_blank" rel="noreferrer" data-i18n="community.starAction">Star on GitHub</a>
+          <a class="action-link" href="https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose" target="_blank" rel="noreferrer" data-i18n="community.contributeAction">Contribute a resource</a>
+        </div>
+        <p class="community-note" data-i18n="community.followNote">If this index is useful, please star or watch the GitHub repository to follow future updates.</p>
       </section>
 
       <section id="scope" aria-labelledby="scope-title">
@@ -290,16 +294,17 @@
         <p id="paper-count" class="project-count" aria-live="polite"></p>
       </section>
 
-      <section id="roadmap" aria-labelledby="roadmap-title">
+      <section id="contribute" class="community-callout" aria-labelledby="contribute-title">
         <div class="section-heading">
-          <h2 id="roadmap-title" data-i18n="roadmap.title">Roadmap</h2>
-          <p data-i18n="roadmap.description">This first version establishes the scope and data structure. The catalogue grows through direct verification rather than unreviewed bulk collection.</p>
+          <h2 id="contribute-title" data-i18n="community.title">Help improve the index</h2>
+          <div class="community-callout-copy">
+            <p data-i18n="community.description">Submit missing papers, projects, datasets, or corrections through GitHub. Contributions are reviewed before they enter the public index.</p>
+            <div class="community-callout-actions">
+              <a href="https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose" target="_blank" rel="noreferrer" data-i18n="community.contributeAction">Contribute a resource</a>
+              <a href="https://github.com/meteroad/intelligent-audio-production-resources" target="_blank" rel="noreferrer" data-i18n="community.starAction">Star on GitHub</a>
+            </div>
+          </div>
         </div>
-        <ol class="roadmap-list">
-          <li><span data-i18n="common.now">Now</span><strong data-i18n="roadmap.nowTitle">Build the verified landscape</strong><p data-i18n="roadmap.nowText">Audio effects, representations, mixing, mastering, datasets, and evaluation.</p></li>
-          <li><span data-i18n="common.next">Next</span><strong data-i18n="roadmap.nextTitle">Add reproducibility details</strong><p data-i18n="roadmap.nextText">Environment, inference path, checkpoints, datasets, and known limitations.</p></li>
-          <li><span data-i18n="common.later">Later</span><strong data-i18n="roadmap.laterTitle">Expand the production space</strong><p data-i18n="roadmap.laterText">Spatial audio and other production-oriented tasks.</p></li>
-        </ol>
       </section>
     </main>
 

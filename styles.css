@@ -65,10 +65,27 @@ nav {
 }
 
 .repository-link {
-  color: var(--text);
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border: 1px solid var(--text);
+  background: var(--text);
+  color: var(--bg);
   font-size: 14px;
   font-weight: 650;
   white-space: nowrap;
+}
+
+.repository-link:hover {
+  background: var(--bg);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.repository-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .language-switch {
@@ -172,6 +189,52 @@ h1 {
   height: 6px;
   margin: 0 8px 2px 0;
   background: var(--accent);
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-link {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 15px;
+  border: 1px solid var(--text);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.action-link-primary {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.action-link:hover {
+  background: var(--soft);
+  text-decoration: none;
+}
+
+.action-link-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.action-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.community-note {
+  max-width: 700px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .section-heading {
@@ -967,36 +1030,30 @@ td {
   font-size: 14px;
 }
 
-.roadmap-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--line);
+.community-callout {
+  padding: 38px 0;
 }
 
-.roadmap-list li {
+.community-callout .section-heading {
+  margin-bottom: 0;
+}
+
+.community-callout-copy {
   display: grid;
-  grid-template-columns: 100px 230px minmax(0, 1fr);
-  gap: 28px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line);
+  gap: 14px;
 }
 
-.roadmap-list span {
-  color: var(--accent);
-  font-size: 12px;
-  font-weight: 650;
-  text-transform: uppercase;
-}
-
-.roadmap-list strong {
-  font-size: 15px;
-}
-
-.roadmap-list p {
+.community-callout-copy p {
   margin: 0;
   color: var(--muted);
+}
+
+.community-callout-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
   font-size: 14px;
+  font-weight: 650;
 }
 
 footer {
@@ -1054,8 +1111,7 @@ footer p {
   .dataset-controls,
   .upcoming-project,
   .agent-note,
-  .resource-entry,
-  .roadmap-list li {
+  .resource-entry {
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -1106,10 +1162,6 @@ footer p {
   .dataset-relation-item {
     grid-template-columns: 1fr;
     gap: 4px;
-  }
-
-  .roadmap-list li {
-    padding: 18px 0;
   }
 
   footer {
