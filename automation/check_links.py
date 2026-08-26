@@ -18,6 +18,7 @@ from urllib.request import HTTPRedirectHandler, Request, build_opener
 DEFAULT_DATA_FILES = (
     Path("data/projects.json"),
     Path("data/papers.json"),
+    Path("data/datasets.json"),
     Path("data/resources.json"),
 )
 SUCCESS = "success"

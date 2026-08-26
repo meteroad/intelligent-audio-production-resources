@@ -6,8 +6,10 @@ The website is backed by versioned static JSON. No API key or server-side API is
 
 - Papers: <https://meteroad.github.io/intelligent-audio-production-resources/data/papers.json>
 - Projects: <https://meteroad.github.io/intelligent-audio-production-resources/data/projects.json>
+- Datasets: <https://meteroad.github.io/intelligent-audio-production-resources/data/datasets.json>
 - Reference resources: <https://meteroad.github.io/intelligent-audio-production-resources/data/resources.json>
 - Projects v3 schema: <https://meteroad.github.io/intelligent-audio-production-resources/schemas/projects-v3.schema.json>
+- Datasets v1 schema: <https://meteroad.github.io/intelligent-audio-production-resources/schemas/datasets-v1.schema.json>
 
 Consumers should inspect the top-level `schemaVersion` before processing a catalogue. Additive fields may be introduced within a schema version. A breaking field or semantic change requires a new schema version and a migration path.
 
@@ -68,11 +70,25 @@ Reviewed taxonomy entries use:
 
 Only `paperIds` are stored on projects. Paper-to-project links should be derived at read time to avoid maintaining the same relation in two places.
 
+## Datasets v1
+
+Each dataset record separates factual dataset metadata from usage relations:
+
+- `taxonomy`: reviewed task, effect, and content-type tags plus first-party evidence;
+- `access`: the current access mode and an official URL supporting that status;
+- `license`: the data license or terms, kept distinct from licenses for accompanying software;
+- `relations`: paper and project IDs that use the dataset, with an evidence URL on every relation;
+- `scale`: a concise bilingual description of the public collection's size or composition.
+
+Access statuses are `direct-download`, `request`, `registration`, `restricted`, `unavailable`, and `not-reviewed`. Every reviewed status requires an HTTPS evidence URL. Identified and custom data licenses also require direct evidence; an unknown license remains `not-verified` and must not inherit a repository's software license.
+
+Dataset relations are stored only in `datasets.json`; paper-to-dataset and project-to-dataset views are derived at read time. Each referenced ID must exist in the paper or project catalogue, relation IDs must be unique within a dataset, and every relation must cite primary paper text, an official repository, or official documentation that demonstrates use.
+
 ## Website behavior
 
-The project table supports compound filtering by text, area, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The reset button clears all project filters.
+The project table supports compound filtering by text, area, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. Reset buttons clear their respective filters.
 
-Each project row contains a keyboard-focusable details button. The details dialog shows related papers, license metadata and evidence, source/checkpoint/inference/training/dataset status and evidence, taxonomy tags and evidence, project links, and the verification date. Interface labels are localized in English and Chinese.
+Each project and dataset row contains a keyboard-focusable details button. Dataset details show access and license evidence, taxonomy, official links, and evidence-backed paper/project usage relations. Dataset, paper, and project dialogs expose the relation in both directions while keeping one canonical data record. Interface labels are localized in English and Chinese.
 
 ## Link checks
 

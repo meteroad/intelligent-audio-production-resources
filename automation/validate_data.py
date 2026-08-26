@@ -20,6 +20,7 @@ ALLOWED_AREAS = {
     "spatial-audio",
 }
 ALLOWED_LINK_LABELS = {"paper", "project", "source", "checkpoint", "doi"}
+ALLOWED_DATASET_LINK_LABELS = {"dataset", "paper", "project", "source", "doi"}
 ALLOWED_RESOURCE_KINDS = {"bibliography"}
 ALLOWED_PROJECT_TASKS = {
     "effect-modeling",
@@ -46,6 +47,27 @@ ALLOWED_EFFECTS = {
     "multi-effect",
     "other",
 }
+ALLOWED_DATASET_CONTENT_TYPES = {
+    "multitrack",
+    "stems",
+    "dry-audio",
+    "processed-audio",
+    "dry-wet-pairs",
+    "effect-parameters",
+    "impulse-responses",
+    "reference-mixes",
+    "annotations",
+    "text-prompts",
+    "synthetic-audio",
+}
+DATASET_ACCESS_STATUSES = {
+    "direct-download",
+    "request",
+    "registration",
+    "restricted",
+    "unavailable",
+    "not-reviewed",
+}
 AVAILABILITY_CAPABILITIES = {"source", "checkpoint", "inference", "training", "dataset"}
 AVAILABILITY_STATUSES = {
     "not-reviewed",
@@ -69,6 +91,19 @@ PROJECT_V3_FIELDS = {
     "taxonomy",
     "license",
     "availability",
+    "relations",
+    "lastVerified",
+    "links",
+}
+DATASET_V1_FIELDS = {
+    "id",
+    "name",
+    "description",
+    "scale",
+    "areas",
+    "taxonomy",
+    "access",
+    "license",
     "relations",
     "lastVerified",
     "links",
@@ -98,6 +133,18 @@ def validate_links(links: object, context: str) -> None:
         require(link.get("label") in ALLOWED_LINK_LABELS, f"{context}[{index}] has an unknown label")
         parsed = urlparse(link.get("url", ""))
         require(parsed.scheme == "https" and parsed.netloc, f"{context}[{index}] must use a valid HTTPS URL")
+
+
+def validate_dataset_links(links: object, context: str) -> None:
+    require(isinstance(links, list) and links, f"{context} must have at least one link")
+    seen = set()
+    for index, link in enumerate(links):
+        require(isinstance(link, dict) and set(link) == {"label", "url"}, f"{context}[{index}] has invalid fields")
+        require(link.get("label") in ALLOWED_DATASET_LINK_LABELS, f"{context}[{index}] has an unknown label")
+        validate_https_url(link.get("url"), f"{context}[{index}].url")
+        key = (link["label"], link["url"])
+        require(key not in seen, f"{context} contains duplicate links")
+        seen.add(key)
 
 
 def validate_date(value: object, context: str) -> None:
@@ -311,11 +358,105 @@ def validate_resources(path: Path) -> int:
     return len(resources)
 
 
+def validate_dataset_taxonomy(value: object, context: str) -> None:
+    require(isinstance(value, dict), f"{context} must be an object")
+    require(set(value) == {"tasks", "effects", "contentTypes", "evidence"}, f"{context} has invalid fields")
+    tasks = value.get("tasks")
+    effects = value.get("effects")
+    content_types = value.get("contentTypes")
+    evidence = value.get("evidence")
+    require(isinstance(tasks, list) and tasks, f"{context}.tasks must not be empty")
+    require(len(tasks) == len(set(tasks)), f"{context}.tasks contains duplicates")
+    require(set(tasks).issubset(ALLOWED_PROJECT_TASKS), f"{context}.tasks contains unknown values")
+    require(isinstance(effects, list), f"{context}.effects must be a list")
+    require(len(effects) == len(set(effects)), f"{context}.effects contains duplicates")
+    require(set(effects).issubset(ALLOWED_EFFECTS), f"{context}.effects contains unknown values")
+    require(isinstance(content_types, list) and content_types, f"{context}.contentTypes must not be empty")
+    require(len(content_types) == len(set(content_types)), f"{context}.contentTypes contains duplicates")
+    require(
+        set(content_types).issubset(ALLOWED_DATASET_CONTENT_TYPES),
+        f"{context}.contentTypes contains unknown values",
+    )
+    require(isinstance(evidence, list) and evidence, f"{context}.evidence must not be empty")
+    require(len(evidence) == len(set(evidence)), f"{context}.evidence contains duplicates")
+    for index, url in enumerate(evidence):
+        validate_https_url(url, f"{context}.evidence[{index}]")
+
+
+def validate_dataset_access(value: object, context: str) -> None:
+    require(isinstance(value, dict) and set(value) == {"status", "evidenceUrl"}, f"{context} has invalid fields")
+    status = value.get("status")
+    evidence_url = value.get("evidenceUrl")
+    require(status in DATASET_ACCESS_STATUSES, f"{context}.status is invalid")
+    if status == "not-reviewed":
+        require(evidence_url is None, f"{context}.evidenceUrl must be null before review")
+    else:
+        validate_https_url(evidence_url, f"{context}.evidenceUrl")
+
+
+def validate_dataset_license(value: object, context: str) -> None:
+    validate_project_license(value, context)
+    if value["status"] in {"identified", "custom"}:
+        require(value["evidenceUrl"] is not None, f"{context}.evidenceUrl is required")
+
+
+def validate_dataset_relations(
+    value: object,
+    paper_ids: set[str],
+    project_ids: set[str],
+    context: str,
+) -> None:
+    require(isinstance(value, dict) and set(value) == {"papers", "projects"}, f"{context} has invalid fields")
+    for relation_type, known_ids in (("papers", paper_ids), ("projects", project_ids)):
+        relations = value.get(relation_type)
+        require(isinstance(relations, list), f"{context}.{relation_type} must be a list")
+        ids = []
+        for index, relation in enumerate(relations):
+            relation_context = f"{context}.{relation_type}[{index}]"
+            require(
+                isinstance(relation, dict) and set(relation) == {"id", "evidenceUrl"},
+                f"{relation_context} has invalid fields",
+            )
+            relation_id = relation.get("id")
+            require(isinstance(relation_id, str) and relation_id, f"{relation_context}.id is invalid")
+            require(relation_id in known_ids, f"{relation_context}.id is unknown")
+            validate_https_url(relation.get("evidenceUrl"), f"{relation_context}.evidenceUrl")
+            ids.append(relation_id)
+        require(len(ids) == len(set(ids)), f"{context}.{relation_type} contains duplicate relations")
+
+
+def validate_datasets(path: Path, paper_ids: set[str], project_ids: set[str]) -> int:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    require(set(data) == {"schemaVersion", "updatedAt", "datasets"}, "datasets.json has invalid top-level fields")
+    require(data.get("schemaVersion") == 1, "datasets.json schemaVersion must be 1")
+    validate_date(data.get("updatedAt"), "datasets.json.updatedAt")
+    datasets = data.get("datasets")
+    require(isinstance(datasets, list), "datasets must be a list")
+    ids = set()
+    for dataset in datasets:
+        dataset_id = dataset.get("id")
+        require(isinstance(dataset_id, str) and dataset_id not in ids, f"duplicate or invalid dataset id: {dataset_id}")
+        ids.add(dataset_id)
+        require(set(dataset) == DATASET_V1_FIELDS, f"{dataset_id} has invalid fields")
+        require(isinstance(dataset.get("name"), str) and dataset["name"].strip(), f"{dataset_id}.name is required")
+        validate_localized(dataset.get("description"), f"{dataset_id}.description")
+        validate_localized(dataset.get("scale"), f"{dataset_id}.scale")
+        validate_areas(dataset.get("areas"), f"{dataset_id}.areas")
+        validate_dataset_taxonomy(dataset.get("taxonomy"), f"{dataset_id}.taxonomy")
+        validate_dataset_access(dataset.get("access"), f"{dataset_id}.access")
+        validate_dataset_license(dataset.get("license"), f"{dataset_id}.license")
+        validate_dataset_relations(dataset.get("relations"), paper_ids, project_ids, f"{dataset_id}.relations")
+        validate_date(dataset.get("lastVerified"), f"{dataset_id}.lastVerified")
+        validate_dataset_links(dataset.get("links"), f"{dataset_id}.links")
+    return len(datasets)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--projects", type=Path, default=Path("data/projects.json"))
     parser.add_argument("--papers", type=Path, default=Path("data/papers.json"))
     parser.add_argument("--resources", type=Path, default=Path("data/resources.json"))
+    parser.add_argument("--datasets", type=Path, default=Path("data/datasets.json"))
     args = parser.parse_args()
     paper_count = validate_papers(args.papers)
     paper_data = json.loads(args.papers.read_text(encoding="utf-8"))
@@ -329,8 +470,14 @@ def main() -> None:
         for paper in paper_data["papers"]
     }
     project_count = validate_projects(args.projects, paper_ids, paper_resource_urls)
+    project_data = json.loads(args.projects.read_text(encoding="utf-8"))
+    project_ids = {project["id"] for project in project_data["projects"]}
+    dataset_count = validate_datasets(args.datasets, paper_ids, project_ids)
     resource_count = validate_resources(args.resources)
-    print(f"Validated {project_count} projects, {paper_count} papers, and {resource_count} reference resources.")
+    print(
+        f"Validated {project_count} projects, {paper_count} papers, "
+        f"{dataset_count} datasets, and {resource_count} reference resources."
+    )
 
 
 if __name__ == "__main__":

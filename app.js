@@ -5,6 +5,7 @@ const translations = {
     "nav.label": "Primary navigation",
     "nav.scope": "Scope",
     "nav.projects": "Projects",
+    "nav.datasets": "Datasets",
     "nav.resources": "Resources",
     "nav.papers": "Papers",
     "nav.roadmap": "Roadmap",
@@ -59,6 +60,40 @@ const translations = {
     "projects.linksLabel": "Project links",
     "projects.verifiedLabel": "Verified",
     "projects.mixbench": "A reproducible evaluation framework for automatic music mixing. The repository link will be added when the project is publicly available.",
+    "datasets.title": "Dataset index",
+    "datasets.description": "Common datasets for intelligent audio production, with access terms, data licenses, and verified links to papers and projects that use them.",
+    "datasets.searchPlaceholder": "Dataset, task, or content",
+    "datasets.areaFilter": "Filter datasets by area",
+    "datasets.taskFilter": "Filter datasets by task",
+    "datasets.contentFilter": "Filter datasets by content type",
+    "datasets.accessFilter": "Filter datasets by access type",
+    "datasets.columnDataset": "Dataset",
+    "datasets.columnArea": "Area",
+    "datasets.columnContent": "Content",
+    "datasets.columnAccess": "Access",
+    "datasets.columnUsedBy": "Used by",
+    "datasets.columnVerified": "Verified",
+    "datasets.loading": "Loading verified datasets...",
+    "datasets.empty": "No datasets match this filter.",
+    "datasets.loadError": "The dataset index could not be loaded.",
+    "datasets.openDetails": "View dataset details",
+    "datasets.dialogLabel": "Dataset details",
+    "datasets.closeDetails": "Close dataset details",
+    "datasets.scaleLabel": "Scale",
+    "datasets.accessLabel": "Access",
+    "datasets.licenseLabel": "Data license",
+    "datasets.taxonomyLabel": "Tasks and contents",
+    "datasets.contentTypesLabel": "Content types",
+    "datasets.relatedPapersLabel": "Papers using this dataset",
+    "datasets.relatedProjectsLabel": "Projects using this dataset",
+    "datasets.usedDatasetsLabel": "Datasets used",
+    "datasets.noRelatedPapers": "No paper usage has been verified yet.",
+    "datasets.noRelatedProjects": "No project usage has been verified yet.",
+    "datasets.noRelatedDatasets": "No dataset usage has been verified yet.",
+    "datasets.linksLabel": "Dataset links",
+    "datasets.verifiedLabel": "Verified",
+    "datasets.paperCount": "papers",
+    "datasets.projectCount": "projects",
     "resources.title": "Reference resources",
     "resources.description": "Bibliographies and field guides are listed separately from runnable implementations.",
     "resources.kind.bibliography": "Bibliography",
@@ -97,6 +132,10 @@ const translations = {
     "controls.allTasks": "All tasks",
     "controls.effect": "Effect",
     "controls.allEffects": "All effects",
+    "controls.content": "Content",
+    "controls.allContentTypes": "All content types",
+    "controls.access": "Access",
+    "controls.allAccessTypes": "All access types",
     "controls.reset": "Reset",
     "common.inDevelopment": "In development",
     "common.now": "Now",
@@ -124,6 +163,7 @@ const translations = {
     "link.source": "Source",
     "link.checkpoint": "Checkpoint",
     "link.doi": "DOI",
+    "link.dataset": "Dataset",
     "license.status.identified": "Identified",
     "license.status.custom": "Custom",
     "license.status.not-verified": "Not verified",
@@ -140,6 +180,23 @@ const translations = {
     "availability.status.restricted": "Restricted",
     "availability.status.not-found": "Not found",
     "availability.status.not-applicable": "Not applicable",
+    "dataset.access.direct-download": "Direct download",
+    "dataset.access.request": "Request access",
+    "dataset.access.registration": "Registration",
+    "dataset.access.restricted": "Restricted",
+    "dataset.access.unavailable": "Unavailable",
+    "dataset.access.not-reviewed": "Not reviewed",
+    "content.multitrack": "Multitrack",
+    "content.stems": "Stems",
+    "content.dry-audio": "Dry audio",
+    "content.processed-audio": "Processed audio",
+    "content.dry-wet-pairs": "Dry/wet pairs",
+    "content.effect-parameters": "Effect parameters",
+    "content.impulse-responses": "Impulse responses",
+    "content.reference-mixes": "Reference mixes",
+    "content.annotations": "Annotations",
+    "content.text-prompts": "Text prompts",
+    "content.synthetic-audio": "Synthetic audio",
     "task.effect-modeling": "Effect modeling",
     "task.parameter-estimation": "Parameter estimation",
     "task.effect-control": "Effect control",
@@ -168,6 +225,7 @@ const translations = {
     "nav.label": "主导航",
     "nav.scope": "领域",
     "nav.projects": "项目",
+    "nav.datasets": "数据集",
     "nav.resources": "参考资料",
     "nav.papers": "论文",
     "nav.roadmap": "路线图",
@@ -222,6 +280,40 @@ const translations = {
     "projects.linksLabel": "项目链接",
     "projects.verifiedLabel": "核验时间",
     "projects.mixbench": "面向自动音乐混音的可复现评测框架；项目公开后将在此补充仓库链接。",
+    "datasets.title": "数据集索引",
+    "datasets.description": "汇总智能音频制作常用数据集，并记录访问方式、数据许可证，以及已核验的使用论文和项目。",
+    "datasets.searchPlaceholder": "搜索数据集、任务或内容",
+    "datasets.areaFilter": "按领域筛选数据集",
+    "datasets.taskFilter": "按任务筛选数据集",
+    "datasets.contentFilter": "按内容类型筛选数据集",
+    "datasets.accessFilter": "按访问方式筛选数据集",
+    "datasets.columnDataset": "数据集",
+    "datasets.columnArea": "领域",
+    "datasets.columnContent": "内容",
+    "datasets.columnAccess": "访问方式",
+    "datasets.columnUsedBy": "使用情况",
+    "datasets.columnVerified": "核验时间",
+    "datasets.loading": "正在加载已核验数据集……",
+    "datasets.empty": "没有符合当前筛选条件的数据集。",
+    "datasets.loadError": "数据集索引加载失败。",
+    "datasets.openDetails": "查看数据集详情",
+    "datasets.dialogLabel": "数据集详情",
+    "datasets.closeDetails": "关闭数据集详情",
+    "datasets.scaleLabel": "规模",
+    "datasets.accessLabel": "访问方式",
+    "datasets.licenseLabel": "数据许可证",
+    "datasets.taxonomyLabel": "任务与内容",
+    "datasets.contentTypesLabel": "内容类型",
+    "datasets.relatedPapersLabel": "使用该数据集的论文",
+    "datasets.relatedProjectsLabel": "使用该数据集的项目",
+    "datasets.usedDatasetsLabel": "使用的数据集",
+    "datasets.noRelatedPapers": "暂未核验到论文使用关系。",
+    "datasets.noRelatedProjects": "暂未核验到项目使用关系。",
+    "datasets.noRelatedDatasets": "暂未核验到数据集使用关系。",
+    "datasets.linksLabel": "数据集链接",
+    "datasets.verifiedLabel": "核验时间",
+    "datasets.paperCount": "篇论文",
+    "datasets.projectCount": "个项目",
     "resources.title": "参考资料",
     "resources.description": "书目与领域导航和可运行实现分开列出，避免混淆。",
     "resources.kind.bibliography": "论文书目",
@@ -260,6 +352,10 @@ const translations = {
     "controls.allTasks": "全部任务",
     "controls.effect": "效果",
     "controls.allEffects": "全部效果",
+    "controls.content": "内容",
+    "controls.allContentTypes": "全部内容类型",
+    "controls.access": "访问方式",
+    "controls.allAccessTypes": "全部访问方式",
     "controls.reset": "重置",
     "common.inDevelopment": "开发中",
     "common.now": "当前",
@@ -287,6 +383,7 @@ const translations = {
     "link.source": "源码",
     "link.checkpoint": "模型权重",
     "link.doi": "DOI",
+    "link.dataset": "数据集",
     "license.status.identified": "已识别",
     "license.status.custom": "自定义",
     "license.status.not-verified": "未核验",
@@ -303,6 +400,23 @@ const translations = {
     "availability.status.restricted": "受限",
     "availability.status.not-found": "未找到",
     "availability.status.not-applicable": "不适用",
+    "dataset.access.direct-download": "直接下载",
+    "dataset.access.request": "申请访问",
+    "dataset.access.registration": "注册访问",
+    "dataset.access.restricted": "受限",
+    "dataset.access.unavailable": "不可用",
+    "dataset.access.not-reviewed": "未核验",
+    "content.multitrack": "多轨音频",
+    "content.stems": "分轨",
+    "content.dry-audio": "干声音频",
+    "content.processed-audio": "已处理音频",
+    "content.dry-wet-pairs": "干湿音频对",
+    "content.effect-parameters": "音效参数",
+    "content.impulse-responses": "脉冲响应",
+    "content.reference-mixes": "参考混音",
+    "content.annotations": "标注",
+    "content.text-prompts": "文本提示",
+    "content.synthetic-audio": "合成音频",
     "task.effect-modeling": "效果建模",
     "task.parameter-estimation": "参数估计",
     "task.effect-control": "效果控制",
@@ -330,9 +444,11 @@ const translations = {
 const state = {
   language: getInitialLanguage(),
   projects: [],
+  datasets: [],
   resources: [],
   papers: [],
   activeProjectId: null,
+  activeDatasetId: null,
   activePaperId: null
 };
 
@@ -349,6 +465,14 @@ const elements = {
   projectEffectControl: document.querySelector("#project-effect-control"),
   projectFilterReset: document.querySelector("#project-filter-reset"),
   projectCount: document.querySelector("#project-count"),
+  datasetRows: document.querySelector("#dataset-rows"),
+  datasetSearch: document.querySelector("#dataset-search"),
+  datasetArea: document.querySelector("#dataset-area-filter"),
+  datasetTask: document.querySelector("#dataset-task-filter"),
+  datasetContent: document.querySelector("#dataset-content-filter"),
+  datasetAccess: document.querySelector("#dataset-access-filter"),
+  datasetFilterReset: document.querySelector("#dataset-filter-reset"),
+  datasetCount: document.querySelector("#dataset-count"),
   resourceList: document.querySelector("#resource-list"),
   paperList: document.querySelector("#paper-list"),
   paperSearch: document.querySelector("#paper-search"),
@@ -358,6 +482,9 @@ const elements = {
   projectDialog: document.querySelector("#project-dialog"),
   projectDialogClose: document.querySelector("#project-dialog-close"),
   projectDialogContent: document.querySelector("#project-dialog-content"),
+  datasetDialog: document.querySelector("#dataset-dialog"),
+  datasetDialogClose: document.querySelector("#dataset-dialog-close"),
+  datasetDialogContent: document.querySelector("#dataset-dialog-content"),
   paperDialog: document.querySelector("#paper-dialog"),
   paperDialogClose: document.querySelector("#paper-dialog-close"),
   paperDialogContent: document.querySelector("#paper-dialog-content")
@@ -365,6 +492,7 @@ const elements = {
 
 const availabilityCapabilities = ["source", "checkpoint", "inference", "training", "dataset"];
 const availabilityStatuses = ["linked", "documented", "tested", "gated", "restricted", "not-found", "not-applicable", "not-reviewed"];
+const datasetAccessStatuses = ["direct-download", "request", "registration", "restricted", "unavailable", "not-reviewed"];
 
 function getInitialLanguage() {
   try {
@@ -515,6 +643,30 @@ function populateProjectFilters() {
   elements.projectEffectControl.hidden = effectValues.length === 0;
   populateSelect(elements.projectTask, taskValues, "controls.allTasks", (task) => t(`task.${task}`));
   populateSelect(elements.projectEffect, effectValues, "controls.allEffects", (effect) => t(`effect.${effect}`));
+}
+
+function datasetTaxonomyValues(field) {
+  const prefix = field === "tasks" ? "task" : "content";
+  return [...new Set(state.datasets.flatMap((dataset) => dataset.taxonomy[field]))]
+    .sort((left, right) => t(`${prefix}.${left}`).localeCompare(t(`${prefix}.${right}`), state.language));
+}
+
+function populateDatasetFilters() {
+  populateAreaFilter(elements.datasetArea, state.datasets);
+  populateSelect(elements.datasetTask, datasetTaxonomyValues("tasks"), "controls.allTasks", (task) => t(`task.${task}`));
+  populateSelect(
+    elements.datasetContent,
+    datasetTaxonomyValues("contentTypes"),
+    "controls.allContentTypes",
+    (contentType) => t(`content.${contentType}`)
+  );
+  const availableStatuses = datasetAccessStatuses.filter((status) => state.datasets.some((dataset) => dataset.access.status === status));
+  populateSelect(
+    elements.datasetAccess,
+    availableStatuses,
+    "controls.allAccessTypes",
+    (status) => t(`dataset.access.${status}`)
+  );
 }
 
 function updateFieldPaperLinks() {
@@ -755,6 +907,11 @@ function renderProjectDialog(project) {
 
   elements.projectDialogContent.replaceChildren(heading, facts);
   appendProjectDialogSection(elements.projectDialogContent, t("projects.relatedPapersLabel"), createRelatedPapers(project));
+  appendProjectDialogSection(
+    elements.projectDialogContent,
+    t("datasets.usedDatasetsLabel"),
+    createRelatedDatasets(project.id, "projects")
+  );
   appendProjectDialogSection(elements.projectDialogContent, t("projects.licenseLabel"), createLicenseDetails(project));
   appendProjectDialogSection(elements.projectDialogContent, t("projects.availabilityLabel"), createAvailabilityDetails(project));
   appendProjectDialogSection(elements.projectDialogContent, t("projects.taxonomyLabel"), createTaxonomyDetails(project));
@@ -777,6 +934,252 @@ function closeProjectDialog() {
   } else {
     elements.projectDialog.removeAttribute("open");
     state.activeProjectId = null;
+  }
+}
+
+function datasetUsageLabel(dataset) {
+  const paperCount = dataset.relations.papers.length;
+  const projectCount = dataset.relations.projects.length;
+  if (state.language === "zh") {
+    return `${paperCount} ${t("datasets.paperCount")} · ${projectCount} ${t("datasets.projectCount")}`;
+  }
+  return `${paperCount} ${paperCount === 1 ? "paper" : t("datasets.paperCount")} · ${projectCount} ${projectCount === 1 ? "project" : t("datasets.projectCount")}`;
+}
+
+function createDatasetRow(dataset) {
+  const row = document.createElement("tr");
+  const datasetCell = document.createElement("td");
+  const button = document.createElement("button");
+  button.className = "project-open";
+  button.type = "button";
+  button.setAttribute("aria-haspopup", "dialog");
+  button.setAttribute("aria-controls", "dataset-dialog");
+  button.setAttribute("aria-label", `${t("datasets.openDetails")}: ${dataset.name}`);
+  button.addEventListener("click", () => openDatasetDialog(dataset));
+  button.append(
+    createTextElement("span", "project-name", dataset.name),
+    createTextElement("span", "project-description", localized(dataset.description))
+  );
+  datasetCell.append(button);
+
+  const areaCell = document.createElement("td");
+  areaCell.append(createTagList(dataset.areas));
+  const contentCell = document.createElement("td");
+  contentCell.append(createTokenList(dataset.taxonomy.contentTypes, "content", ""));
+  const accessCell = document.createElement("td");
+  accessCell.append(createTextElement(
+    "span",
+    `availability-status status-${dataset.access.status}`,
+    t(`dataset.access.${dataset.access.status}`)
+  ));
+
+  row.append(
+    datasetCell,
+    areaCell,
+    contentCell,
+    accessCell,
+    createTextElement("td", "dataset-usage", datasetUsageLabel(dataset)),
+    createTextElement("td", "", dataset.lastVerified)
+  );
+  return row;
+}
+
+function renderDatasets() {
+  const query = elements.datasetSearch.value.trim().toLocaleLowerCase(state.language);
+  const selectedArea = elements.datasetArea.value;
+  const selectedTask = elements.datasetTask.value;
+  const selectedContent = elements.datasetContent.value;
+  const selectedAccess = elements.datasetAccess.value;
+  const filtered = state.datasets.filter((dataset) => {
+    const matchesArea = selectedArea === "all" || dataset.areas.includes(selectedArea);
+    const matchesTask = selectedTask === "all" || dataset.taxonomy.tasks.includes(selectedTask);
+    const matchesContent = selectedContent === "all" || dataset.taxonomy.contentTypes.includes(selectedContent);
+    const matchesAccess = selectedAccess === "all" || dataset.access.status === selectedAccess;
+    const searchable = [
+      dataset.name,
+      dataset.description.en,
+      dataset.description.zh,
+      dataset.scale.en,
+      dataset.scale.zh,
+      dataset.license.en,
+      dataset.license.zh,
+      t(`dataset.access.${dataset.access.status}`),
+      ...dataset.areas.map((area) => t(`area.${area}`)),
+      ...dataset.taxonomy.tasks.map((task) => t(`task.${task}`)),
+      ...dataset.taxonomy.effects.map((effect) => t(`effect.${effect}`)),
+      ...dataset.taxonomy.contentTypes.map((contentType) => t(`content.${contentType}`))
+    ].join(" ").toLocaleLowerCase(state.language);
+    return matchesArea && matchesTask && matchesContent && matchesAccess && searchable.includes(query);
+  });
+
+  elements.datasetRows.replaceChildren();
+  if (!filtered.length) {
+    const row = document.createElement("tr");
+    const cell = createTextElement("td", "empty", t("datasets.empty"));
+    cell.colSpan = 6;
+    row.append(cell);
+    elements.datasetRows.append(row);
+  } else {
+    filtered.forEach((dataset) => elements.datasetRows.append(createDatasetRow(dataset)));
+  }
+
+  elements.datasetCount.textContent = state.language === "zh"
+    ? `显示 ${filtered.length} / ${state.datasets.length} 个已核验数据集`
+    : `${filtered.length} of ${state.datasets.length} verified ${state.datasets.length === 1 ? "dataset" : "datasets"}`;
+}
+
+function createDatasetRelationList(relations, type) {
+  if (!relations.length) {
+    return createTextElement(
+      "p",
+      "dialog-empty",
+      t(type === "papers" ? "datasets.noRelatedPapers" : "datasets.noRelatedProjects")
+    );
+  }
+  const list = document.createElement("div");
+  list.className = "dataset-relation-list";
+  relations.forEach((relation) => {
+    const record = type === "papers"
+      ? state.papers.find((paper) => paper.id === relation.id)
+      : state.projects.find((project) => project.id === relation.id);
+    if (!record) return;
+    const row = document.createElement("div");
+    row.className = "dataset-relation-item";
+    const openButton = document.createElement("button");
+    openButton.type = "button";
+    openButton.className = "dataset-relation-open";
+    openButton.textContent = type === "papers" ? record.title : record.name;
+    openButton.addEventListener("click", () => {
+      closeDatasetDialog();
+      if (type === "papers") openPaperDialog(record);
+      else openProjectDialog(record);
+    });
+    const evidence = document.createElement("a");
+    evidence.href = relation.evidenceUrl;
+    evidence.target = "_blank";
+    evidence.rel = "noreferrer";
+    evidence.textContent = t("projects.evidenceLabel");
+    row.append(openButton, evidence);
+    list.append(row);
+  });
+  return list;
+}
+
+function createRelatedDatasets(recordId, type) {
+  const related = state.datasets
+    .map((dataset) => ({
+      dataset,
+      relation: dataset.relations[type].find((item) => item.id === recordId)
+    }))
+    .filter((item) => item.relation);
+  if (!related.length) return createTextElement("p", "dialog-empty", t("datasets.noRelatedDatasets"));
+
+  const list = document.createElement("div");
+  list.className = "dataset-relation-list";
+  related.forEach(({ dataset, relation }) => {
+    const row = document.createElement("div");
+    row.className = "dataset-relation-item";
+    const openButton = document.createElement("button");
+    openButton.type = "button";
+    openButton.className = "dataset-relation-open";
+    openButton.textContent = dataset.name;
+    openButton.addEventListener("click", () => {
+      if (type === "papers") closePaperDialog();
+      else closeProjectDialog();
+      openDatasetDialog(dataset);
+    });
+    const evidence = document.createElement("a");
+    evidence.href = relation.evidenceUrl;
+    evidence.target = "_blank";
+    evidence.rel = "noreferrer";
+    evidence.textContent = t("projects.evidenceLabel");
+    row.append(openButton, evidence);
+    list.append(row);
+  });
+  return list;
+}
+
+function createDatasetTaxonomy(dataset) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "project-detail-stack";
+  const groups = document.createElement("div");
+  groups.className = "taxonomy-groups dataset-taxonomy-groups";
+  const tasks = document.createElement("div");
+  tasks.append(
+    createTextElement("h4", "", t("projects.tasksLabel")),
+    createTokenList(dataset.taxonomy.tasks, "task", "")
+  );
+  const effects = document.createElement("div");
+  effects.append(
+    createTextElement("h4", "", t("projects.effectsLabel")),
+    createTokenList(dataset.taxonomy.effects, "effect", "—")
+  );
+  const contents = document.createElement("div");
+  contents.append(
+    createTextElement("h4", "", t("datasets.contentTypesLabel")),
+    createTokenList(dataset.taxonomy.contentTypes, "content", "")
+  );
+  groups.append(tasks, effects, contents);
+  wrapper.append(groups, createEvidenceLinks(dataset.taxonomy.evidence));
+  return wrapper;
+}
+
+function renderDatasetDialog(dataset) {
+  const heading = document.createElement("div");
+  heading.className = "paper-dialog-heading";
+  heading.append(
+    createTextElement("h2", "", dataset.name),
+    createTextElement("p", "paper-dialog-summary", localized(dataset.description)),
+    createTagList(dataset.areas)
+  );
+
+  const facts = document.createElement("dl");
+  facts.className = "project-facts dataset-facts";
+  facts.append(
+    createLabeledValue(t("datasets.scaleLabel"), localized(dataset.scale)),
+    createLabeledValue(t("datasets.accessLabel"), t(`dataset.access.${dataset.access.status}`)),
+    createLabeledValue(t("datasets.licenseLabel"), localized(dataset.license)),
+    createLabeledValue(t("datasets.verifiedLabel"), dataset.lastVerified)
+  );
+
+  elements.datasetDialogContent.replaceChildren(heading, facts);
+  appendProjectDialogSection(
+    elements.datasetDialogContent,
+    t("datasets.relatedPapersLabel"),
+    createDatasetRelationList(dataset.relations.papers, "papers")
+  );
+  appendProjectDialogSection(
+    elements.datasetDialogContent,
+    t("datasets.relatedProjectsLabel"),
+    createDatasetRelationList(dataset.relations.projects, "projects")
+  );
+  appendProjectDialogSection(elements.datasetDialogContent, t("datasets.taxonomyLabel"), createDatasetTaxonomy(dataset));
+
+  const evidence = [...new Set([dataset.access.evidenceUrl, dataset.license.evidenceUrl].filter(Boolean))];
+  appendProjectDialogSection(elements.datasetDialogContent, t("projects.evidenceLabel"), createEvidenceLinks(evidence));
+  appendProjectDialogSection(
+    elements.datasetDialogContent,
+    t("datasets.linksLabel"),
+    createLinkList(dataset.links, "paper-dialog-links")
+  );
+}
+
+function openDatasetDialog(dataset) {
+  state.activeDatasetId = dataset.id;
+  renderDatasetDialog(dataset);
+  if (typeof elements.datasetDialog.showModal === "function") {
+    if (!elements.datasetDialog.open) elements.datasetDialog.showModal();
+  } else {
+    elements.datasetDialog.setAttribute("open", "");
+  }
+}
+
+function closeDatasetDialog() {
+  if (typeof elements.datasetDialog.close === "function") {
+    elements.datasetDialog.close();
+  } else {
+    elements.datasetDialog.removeAttribute("open");
+    state.activeDatasetId = null;
   }
 }
 
@@ -886,6 +1289,11 @@ function renderPaperDialog(paper) {
   );
 
   elements.paperDialogContent.replaceChildren(heading, summarySection);
+  appendProjectDialogSection(
+    elements.paperDialogContent,
+    t("datasets.usedDatasetsLabel"),
+    createRelatedDatasets(paper.id, "papers")
+  );
   appendDialogSection(elements.paperDialogContent, t("papers.paperLinksLabel"), paperLinks, t("papers.noPaperLink"));
   appendDialogSection(elements.paperDialogContent, t("papers.openResourcesLabel"), openResourceLinks, t("papers.noOpenResources"));
 }
@@ -951,9 +1359,11 @@ function applyTranslations() {
     button.setAttribute("aria-pressed", String(button.dataset.language === state.language));
   });
   populateProjectFilters();
+  populateDatasetFilters();
   populateAreaFilter(elements.paperArea, state.papers);
   updateFieldPaperLinks();
   if (state.projects.length) renderProjects();
+  if (state.datasets.length) renderDatasets();
   if (state.resources.length) renderResources();
   if (state.papers.length) renderPapers();
   if (elements.paperDialog.open && state.activePaperId) {
@@ -963,6 +1373,10 @@ function applyTranslations() {
   if (elements.projectDialog.open && state.activeProjectId) {
     const activeProject = state.projects.find((project) => project.id === state.activeProjectId);
     if (activeProject) renderProjectDialog(activeProject);
+  }
+  if (elements.datasetDialog.open && state.activeDatasetId) {
+    const activeDataset = state.datasets.find((dataset) => dataset.id === state.activeDatasetId);
+    if (activeDataset) renderDatasetDialog(activeDataset);
   }
 }
 
@@ -978,18 +1392,21 @@ function setLanguage(language) {
 
 async function loadData() {
   try {
-    const [projectsResponse, resourcesResponse, papersResponse] = await Promise.all([
+    const [projectsResponse, datasetsResponse, resourcesResponse, papersResponse] = await Promise.all([
       fetch("data/projects.json", { cache: "no-store" }),
+      fetch("data/datasets.json", { cache: "no-store" }),
       fetch("data/resources.json", { cache: "no-store" }),
       fetch("data/papers.json", { cache: "no-store" })
     ]);
-    if (!projectsResponse.ok || !resourcesResponse.ok || !papersResponse.ok) throw new Error("Data request failed");
-    const [projectData, resourceData, paperData] = await Promise.all([
+    if (!projectsResponse.ok || !datasetsResponse.ok || !resourcesResponse.ok || !papersResponse.ok) throw new Error("Data request failed");
+    const [projectData, datasetData, resourceData, paperData] = await Promise.all([
       projectsResponse.json(),
+      datasetsResponse.json(),
       resourcesResponse.json(),
       papersResponse.json()
     ]);
     state.projects = projectData.projects;
+    state.datasets = datasetData.datasets;
     state.resources = resourceData.resources;
     state.papers = paperData.papers;
     applyTranslations();
@@ -1000,9 +1417,16 @@ async function loadData() {
     projectError.colSpan = 5;
     row.append(projectError);
     elements.projectRows.append(row);
+    elements.datasetRows.replaceChildren();
+    const datasetRow = document.createElement("tr");
+    const datasetError = createTextElement("td", "empty", t("datasets.loadError"));
+    datasetError.colSpan = 6;
+    datasetRow.append(datasetError);
+    elements.datasetRows.append(datasetRow);
     elements.resourceList.replaceChildren(createTextElement("p", "empty", t("resources.loadError")));
     elements.paperList.replaceChildren(createTextElement("p", "empty", t("papers.loadError")));
     elements.projectCount.textContent = "";
+    elements.datasetCount.textContent = "";
     elements.paperCount.textContent = "";
   }
 }
@@ -1027,6 +1451,19 @@ elements.projectFilterReset.addEventListener("click", () => {
   elements.projectEffect.value = "all";
   renderProjects();
 });
+elements.datasetSearch.addEventListener("input", renderDatasets);
+elements.datasetArea.addEventListener("change", renderDatasets);
+elements.datasetTask.addEventListener("change", renderDatasets);
+elements.datasetContent.addEventListener("change", renderDatasets);
+elements.datasetAccess.addEventListener("change", renderDatasets);
+elements.datasetFilterReset.addEventListener("click", () => {
+  elements.datasetSearch.value = "";
+  elements.datasetArea.value = "all";
+  elements.datasetTask.value = "all";
+  elements.datasetContent.value = "all";
+  elements.datasetAccess.value = "all";
+  renderDatasets();
+});
 elements.paperSearch.addEventListener("input", renderPapers);
 elements.paperArea.addEventListener("change", renderPapers);
 elements.fieldPaperLinks.forEach((link) => {
@@ -1041,6 +1478,13 @@ elements.projectDialog.addEventListener("click", (event) => {
 });
 elements.projectDialog.addEventListener("close", () => {
   state.activeProjectId = null;
+});
+elements.datasetDialogClose.addEventListener("click", closeDatasetDialog);
+elements.datasetDialog.addEventListener("click", (event) => {
+  if (event.target === elements.datasetDialog) closeDatasetDialog();
+});
+elements.datasetDialog.addEventListener("close", () => {
+  state.activeDatasetId = null;
 });
 elements.paperDialogClose.addEventListener("click", closePaperDialog);
 elements.paperDialog.addEventListener("click", (event) => {

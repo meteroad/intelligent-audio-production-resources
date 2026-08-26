@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-26",
+  "datasets": [
+    {
+      "id": "musdb18",
+      "name": "MUSDB18",
+      "description": {
+        "en": "A standard music-source dataset with stereo mixtures and isolated drums, bass, vocals, and other stems.",
+        "zh": "包含立体声混合音频及鼓、贝斯、人声和其他声部独立音轨的标准音乐数据集。"
+      },
+      "scale": {
+        "en": "150 full-length songs: 100 training and 50 test tracks at 44.1 kHz.",
+        "zh": "150 首完整歌曲：训练集 100 首、测试集 50 首，采样率 44.1 kHz。"
+      },
+      "areas": ["mixing", "audio-effects", "representation", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "representation-learning", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems"],
+        "evidence": ["https://zenodo.org/records/1117372"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://zenodo.org/records/1117372"
+      },
+      "license": {
+        "en": "Educational use only; underlying tracks have mixed terms",
+        "zh": "仅限教育用途；底层曲目适用不同条款",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://zenodo.org/records/1117372"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2507-02273", "evidenceUrl": "https://arxiv.org/abs/2507.02273"},
+          {"id": "relfx-ismir-2026", "evidenceUrl": "https://arxiv.org/abs/2608.10573"}
+        ],
+        "projects": [
+          {"id": "sonyresearch-fx-encoder-plusplus", "evidenceUrl": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/README.md"},
+          {"id": "tmegalaxyaudioeffect-relfx-ismir2026-release", "evidenceUrl": "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://zenodo.org/records/1117372"},
+        {"label": "doi", "url": "https://doi.org/10.5281/zenodo.1117372"}
+      ]
+    },
+    {
+      "id": "moisesdb",
+      "name": "MoisesDB",
+      "description": {
+        "en": "A source-separation dataset with mixtures, stems beyond the conventional four-source setup, and track metadata.",
+        "zh": "提供混合音频、超出传统四声部设置的分轨及曲目元数据的音乐源分离数据集。"
+      },
+      "scale": {
+        "en": "Multitrack songs with hierarchical source and stem metadata at 44.1 kHz.",
+        "zh": "包含层级化声源与分轨元数据的 44.1 kHz 多轨歌曲。"
+      },
+      "areas": ["mixing", "audio-effects", "representation", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "representation-learning", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems", "annotations"],
+        "evidence": ["https://github.com/moises-ai/moises-db/blob/main/README.md"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://github.com/moises-ai/moises-db/blob/main/README.md"
+      },
+      "license": {
+        "en": "CC-BY-NC-SA-4.0 (dataset)",
+        "zh": "CC-BY-NC-SA-4.0（数据集）",
+        "status": "identified",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "evidenceUrl": "https://github.com/moises-ai/moises-db/blob/main/README.md"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2507-02273", "evidenceUrl": "https://arxiv.org/abs/2507.02273"},
+          {"id": "relfx-ismir-2026", "evidenceUrl": "https://arxiv.org/abs/2608.10573"}
+        ],
+        "projects": [
+          {"id": "sonyresearch-fx-encoder-plusplus", "evidenceUrl": "https://github.com/SonyResearch/Fx-Encoder_PlusPlus/blob/main/README.md"},
+          {"id": "tmegalaxyaudioeffect-relfx-ismir2026-release", "evidenceUrl": "https://github.com/TMEGalaxyAudioEffect/relfx-ismir2026-release/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://github.com/moises-ai/moises-db"},
+        {"label": "paper", "url": "https://arxiv.org/abs/2307.15913"},
+        {"label": "source", "url": "https://github.com/moises-ai/moises-db"}
+      ]
+    },
+    {
+      "id": "medleydb",
+      "name": "MedleyDB",
+      "description": {
+        "en": "A multitrack music dataset with instrument stems, mixtures, and aligned melody, instrument, and metadata annotations.",
+        "zh": "包含乐器分轨、混合音频，以及对齐旋律、乐器和元数据标注的多轨音乐数据集。"
+      },
+      "scale": {
+        "en": "MedleyDB and MedleyDB 2.0 provide full-song multitracks across diverse genres and instrumentations.",
+        "zh": "MedleyDB 与 MedleyDB 2.0 提供跨多种曲风和配器的完整歌曲多轨音频。"
+      },
+      "areas": ["mixing", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems", "reference-mixes", "annotations"],
+        "evidence": ["https://medleydb.weebly.com/downloads.html"]
+      },
+      "access": {
+        "status": "request",
+        "evidenceUrl": "https://medleydb.weebly.com/downloads.html"
+      },
+      "license": {
+        "en": "CC-BY-NC-SA-4.0",
+        "zh": "CC-BY-NC-SA-4.0",
+        "status": "identified",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "evidenceUrl": "https://medleydb.weebly.com/downloads.html"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2010-10291", "evidenceUrl": "https://arxiv.org/abs/2010.10291"},
+          {"id": "arxiv-2407-08889", "evidenceUrl": "https://arxiv.org/abs/2407.08889"}
+        ],
+        "projects": [
+          {"id": "csteinmetz1-automix-toolkit", "evidenceUrl": "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"},
+          {"id": "sai-soum-diff-mst", "evidenceUrl": "https://github.com/sai-soum/Diff-MST/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://medleydb.weebly.com/downloads.html"},
+        {"label": "source", "url": "https://github.com/marl/medleydb"}
+      ]
+    },
+    {
+      "id": "cambridge-multitrack-library",
+      "name": "Mixing Secrets Multitrack Library",
+      "description": {
+        "en": "A large collection of downloadable multitrack sessions maintained by Cambridge Music Technology for mixing practice and education.",
+        "zh": "由 Cambridge Music Technology 维护、用于混音练习和教学的大型可下载多轨工程集合。"
+      },
+      "scale": {
+        "en": "Hundreds of full multitrack sessions spanning many genres and recording setups.",
+        "zh": "包含数百个覆盖多种曲风和录音配置的完整多轨工程。"
+      },
+      "areas": ["mixing", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems", "reference-mixes"],
+        "evidence": ["https://www.cambridge-mt.com/ms/mtk/"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://www.cambridge-mt.com/ms/mtk/"
+      },
+      "license": {
+        "en": "Contributor-specific terms; AI training requires permission",
+        "zh": "适用贡献者特定条款；用于 AI 训练需另行取得许可",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://www.cambridge-mt.com/ms3/mtk-faq/"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2407-08889", "evidenceUrl": "https://arxiv.org/abs/2407.08889"}
+        ],
+        "projects": [
+          {"id": "sai-soum-diff-mst", "evidenceUrl": "https://github.com/sai-soum/Diff-MST/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://www.cambridge-mt.com/ms/mtk/"},
+        {"label": "project", "url": "https://www.cambridge-mt.com/ms3/mtk-faq/"}
+      ]
+    },
+    {
+      "id": "guitarset",
+      "name": "GuitarSet",
+      "description": {
+        "en": "High-quality acoustic-guitar recordings with hexaphonic audio and time-aligned musical annotations.",
+        "zh": "提供高质量原声吉他录音、六声道拾音音频和时间对齐音乐标注的数据集。"
+      },
+      "scale": {
+        "en": "7.5 GB of audio and annotations, including individual-string recordings and rich performance labels.",
+        "zh": "约 7.5 GB 音频与标注，包含独立琴弦录音和丰富演奏标签。"
+      },
+      "areas": ["audio-effects", "differentiable-processing", "evaluation"],
+      "taxonomy": {
+        "tasks": ["effect-modeling", "differentiable-processing", "evaluation"],
+        "effects": [],
+        "contentTypes": ["dry-audio", "multitrack", "annotations"],
+        "evidence": ["https://zenodo.org/records/1422265"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://zenodo.org/records/1422265"
+      },
+      "license": {
+        "en": "Dataset license not explicitly shown on the current record",
+        "zh": "当前数据记录未明确显示数据集许可证",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2308-16177", "evidenceUrl": "https://arxiv.org/abs/2308.16177"}
+        ],
+        "projects": [
+          {"id": "csteinmetz1-dasp-pytorch", "evidenceUrl": "https://github.com/csteinmetz1/dasp-pytorch/blob/main/README.md"},
+          {"id": "mhrice-remfx", "evidenceUrl": "https://github.com/mhrice/RemFx/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://zenodo.org/records/1422265"},
+        {"label": "doi", "url": "https://doi.org/10.5281/zenodo.1422265"},
+        {"label": "source", "url": "https://github.com/marl/GuitarSet"}
+      ]
+    },
+    {
+      "id": "tonetwist-afx",
+      "name": "ToneTwist AFx Dataset",
+      "description": {
+        "en": "A community-extensible collection of aligned dry/wet recordings for nonlinear and parametric audio-effect modeling.",
+        "zh": "面向非线性及参数化音效建模、可由社区持续扩展的对齐干湿音频集合。"
+      },
+      "scale": {
+        "en": "Analog and digital processors with train/test recordings and control settings where available.",
+        "zh": "覆盖模拟与数字处理器，并在可用时提供训练/测试录音和控制参数。"
+      },
+      "areas": ["audio-effects", "differentiable-processing", "evaluation"],
+      "taxonomy": {
+        "tasks": ["effect-modeling", "parameter-estimation", "differentiable-processing", "evaluation"],
+        "effects": ["compression", "distortion", "reverberation", "multi-effect"],
+        "contentTypes": ["dry-wet-pairs", "effect-parameters"],
+        "evidence": ["https://github.com/mcomunita/tonetwist-afx-dataset/blob/main/README.md"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://github.com/mcomunita/tonetwist-afx-dataset/blob/main/README.md"
+      },
+      "license": {
+        "en": "Per-record terms; repository code and index are MIT",
+        "zh": "各数据记录适用各自条款；仓库代码与索引为 MIT",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/mcomunita/tonetwist-afx-dataset/blob/main/README.md"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2502-11668", "evidenceUrl": "https://arxiv.org/abs/2502.11668"},
+          {"id": "arxiv-2502-14405", "evidenceUrl": "https://arxiv.org/abs/2502.14405"}
+        ],
+        "projects": [
+          {"id": "mcomunita-nablafx", "evidenceUrl": "https://github.com/mcomunita/nablafx/blob/master/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://github.com/mcomunita/tonetwist-afx-dataset"},
+        {"label": "source", "url": "https://github.com/mcomunita/tonetwist-afx-dataset"}
+      ]
+    },
+    {
+      "id": "remfx-evaluation-datasets",
+      "name": "RemFX Evaluation Datasets",
+      "description": {
+        "en": "Paired processed and target audio for evaluating removal of chorus, delay, distortion, compression, and reverb.",
+        "zh": "用于评测合唱、延迟、失真、压缩和混响移除效果的已处理音频与目标音频对。"
+      },
+      "scale": {
+        "en": "Evaluation sets span four source types and examples containing zero to five effects.",
+        "zh": "评测集覆盖四类音源，并包含应用零至五种效果的样本。"
+      },
+      "areas": ["audio-effects", "evaluation"],
+      "taxonomy": {
+        "tasks": ["effect-removal", "evaluation"],
+        "effects": ["compression", "distortion", "reverberation", "delay", "modulation", "multi-effect"],
+        "contentTypes": ["dry-wet-pairs", "annotations"],
+        "evidence": ["https://github.com/mhrice/RemFx/blob/main/README.md"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://zenodo.org/records/8187288"
+      },
+      "license": {
+        "en": "Dataset license not verified",
+        "zh": "数据集许可证尚未核验",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2308-16177", "evidenceUrl": "https://arxiv.org/abs/2308.16177"}
+        ],
+        "projects": [
+          {"id": "mhrice-remfx", "evidenceUrl": "https://github.com/mhrice/RemFx/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://zenodo.org/records/8187288"},
+        {"label": "doi", "url": "https://doi.org/10.5281/zenodo.8187288"},
+        {"label": "source", "url": "https://github.com/mhrice/RemFx"}
+      ]
+    },
+    {
+      "id": "sonicmaster-dataset",
+      "name": "SonicMaster Dataset",
+      "description": {
+        "en": "Paired degraded and high-quality music with metadata and text prompts for controllable restoration and mastering.",
+        "zh": "面向可控音乐修复与母带处理的退化/高质量音频对，并提供元数据和文本提示。"
+      },
+      "scale": {
+        "en": "Approximately 166,000 paired rows at 44.1 kHz in the current public dataset repository.",
+        "zh": "当前公开数据仓库约含 16.6 万条 44.1 kHz 配对记录。"
+      },
+      "areas": ["audio-effects", "mastering", "evaluation"],
+      "taxonomy": {
+        "tasks": ["effect-control", "mastering", "evaluation"],
+        "effects": ["gain", "equalization", "compression", "reverberation", "stereo", "multi-effect"],
+        "contentTypes": ["dry-wet-pairs", "annotations", "text-prompts", "synthetic-audio"],
+        "evidence": ["https://huggingface.co/datasets/amaai-lab/SonicMasterDataset"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://huggingface.co/datasets/amaai-lab/SonicMasterDataset"
+      },
+      "license": {
+        "en": "CC-BY-2.0",
+        "zh": "CC-BY-2.0",
+        "status": "identified",
+        "spdx": "CC-BY-2.0",
+        "evidenceUrl": "https://huggingface.co/datasets/amaai-lab/SonicMasterDataset"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2508-03448", "evidenceUrl": "https://arxiv.org/abs/2508.03448"}
+        ],
+        "projects": [
+          {"id": "amaai-lab-sonicmaster", "evidenceUrl": "https://github.com/AMAAI-Lab/SonicMaster/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://huggingface.co/datasets/amaai-lab/SonicMasterDataset"},
+        {"label": "source", "url": "https://github.com/AMAAI-Lab/SonicMaster"},
+        {"label": "paper", "url": "https://arxiv.org/abs/2508.03448"}
+      ]
+    },
+    {
+      "id": "slakh2100",
+      "name": "Slakh2100",
+      "description": {
+        "en": "A synthetic dataset of multitrack audio, mixtures, and aligned MIDI rendered with sample-based virtual instruments.",
+        "zh": "使用采样式虚拟乐器渲染的合成多轨音频、混合音频及对齐 MIDI 数据集。"
+      },
+      "scale": {
+        "en": "2,100 songs, 145 hours, 4-48 tracks per song, and 34 instrument categories.",
+        "zh": "2,100 首歌曲、145 小时音频，每首 4 至 48 轨，共 34 类乐器。"
+      },
+      "areas": ["mixing", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems", "annotations", "synthetic-audio"],
+        "evidence": ["https://github.com/ethman/Slakh/blob/master/README.md"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://github.com/ethman/Slakh/blob/master/README.md"
+      },
+      "license": {
+        "en": "CC-BY-4.0",
+        "zh": "CC-BY-4.0",
+        "status": "identified",
+        "spdx": "CC-BY-4.0",
+        "evidenceUrl": "https://github.com/ethman/Slakh/blob/master/README.md"
+      },
+      "relations": {
+        "papers": [],
+        "projects": []
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://zenodo.org/records/4599666"},
+        {"label": "project", "url": "https://github.com/ethman/Slakh"},
+        {"label": "source", "url": "https://github.com/ethman/slakh-utils"}
+      ]
+    },
+    {
+      "id": "openair",
+      "name": "OpenAIR",
+      "description": {
+        "en": "An open library of acoustic impulse responses from real and modeled spaces, including spatial formats and metadata.",
+        "zh": "收录真实及建模空间声学脉冲响应的开放资源库，包含空间音频格式和相关元数据。"
+      },
+      "scale": {
+        "en": "Downloadable impulse-response collections in mono, stereo, B-format, 5.1, and other available formats.",
+        "zh": "提供单声道、立体声、B-format、5.1 及其他可用格式的脉冲响应集合。"
+      },
+      "areas": ["audio-effects", "spatial-audio"],
+      "taxonomy": {
+        "tasks": ["effect-modeling", "evaluation"],
+        "effects": ["reverberation"],
+        "contentTypes": ["impulse-responses", "annotations"],
+        "evidence": ["https://www.openair.hosted.york.ac.uk/?page_id=2"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://webfiles.york.ac.uk/OPENAIR/IRs/"
+      },
+      "license": {
+        "en": "Per-record Creative Commons or reserved-rights terms",
+        "zh": "各记录分别适用 Creative Commons 或保留权利条款",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://www.openair.hosted.york.ac.uk/?page_id=2"
+      },
+      "relations": {
+        "papers": [],
+        "projects": []
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://www.openair.hosted.york.ac.uk/"},
+        {"label": "project", "url": "https://www.york.ac.uk/physics-engineering-technology/research/communication-technologies/projects/open-acoustic-impulse-response-library/"}
+      ]
+    },
+    {
+      "id": "dsd100",
+      "name": "DSD100",
+      "description": {
+        "en": "A music-source dataset with stereo mixtures and isolated drums, bass, vocals, and other stems.",
+        "zh": "包含立体声混合音频及鼓、贝斯、人声和其他独立分轨的音乐源数据集。"
+      },
+      "scale": {
+        "en": "100 full-length songs: 50 training and 50 test tracks at 44.1 kHz.",
+        "zh": "100 首完整歌曲：训练集与测试集各 50 首，采样率 44.1 kHz。"
+      },
+      "areas": ["mixing", "audio-effects", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "effect-removal", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems"],
+        "evidence": ["https://sigsep.github.io/datasets/dsd100.html"]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://sigsep.github.io/datasets/dsd100.html"
+      },
+      "license": {
+        "en": "Rights follow the original Mixing Secrets multitracks",
+        "zh": "使用权利遵循原始 Mixing Secrets 多轨素材条款",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://sigsep.github.io/datasets/dsd100.html"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2010-10291", "evidenceUrl": "https://arxiv.org/abs/2010.10291"},
+          {"id": "arxiv-2308-16177", "evidenceUrl": "https://arxiv.org/abs/2308.16177"}
+        ],
+        "projects": [
+          {"id": "csteinmetz1-automix-toolkit", "evidenceUrl": "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"},
+          {"id": "mhrice-remfx", "evidenceUrl": "https://github.com/mhrice/RemFx/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://sigsep.github.io/datasets/dsd100.html"}
+      ]
+    },
+    {
+      "id": "enst-drums",
+      "name": "ENST-Drums",
+      "description": {
+        "en": "A multichannel, audiovisual, and fully annotated database of professional drum performances.",
+        "zh": "包含专业鼓手演奏的多通道音频、视频及完整标注的鼓组数据库。"
+      },
+      "scale": {
+        "en": "About 75 minutes per drummer for three drummers, recorded over eight audio channels and two camera angles.",
+        "zh": "三位鼓手每人约 75 分钟素材，使用八路音频和两个机位录制。"
+      },
+      "areas": ["mixing", "evaluation"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "evaluation"],
+        "effects": [],
+        "contentTypes": ["multitrack", "stems", "annotations"],
+        "evidence": ["https://perso.telecom-paristech.fr/grichard/ENST-drums/"]
+      },
+      "access": {
+        "status": "restricted",
+        "evidenceUrl": "https://perso.telecom-paristech.fr/grichard/ENST-drums/"
+      },
+      "license": {
+        "en": "Research-only user license; commercial use prohibited",
+        "zh": "仅限研究用途的用户许可；禁止商业使用",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://perso.telecom-paristech.fr/grichard/ENST-drums/ENST_Drums_License.pdf"
+      },
+      "relations": {
+        "papers": [
+          {"id": "arxiv-2010-10291", "evidenceUrl": "https://arxiv.org/abs/2010.10291"}
+        ],
+        "projects": [
+          {"id": "csteinmetz1-automix-toolkit", "evidenceUrl": "https://github.com/csteinmetz1/automix-toolkit/blob/main/README.md"}
+        ]
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {"label": "dataset", "url": "https://perso.telecom-paristech.fr/grichard/ENST-drums/"},
+        {"label": "paper", "url": "https://ismir2006.ismir.net/PAPERS/ISMIR0627_Paper.pdf"}
+      ]
+    }
+  ]
+}

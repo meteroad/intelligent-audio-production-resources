@@ -14,13 +14,14 @@ Use one of the structured forms for the fastest review:
 
 - [Add a paper](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=paper.yml)
 - [Add an open-source project](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=project.yml)
+- [Add a dataset](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=dataset.yml)
 - [Correct an entry](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
 Include primary evidence whenever possible: a publisher or conference page, DOI, arXiv record, official project page, source repository, model card, dataset page, or license file.
 
 ## Submit a Pull Request
 
-Direct catalogue changes should preserve the existing JSON schema and keep English and Chinese summaries concise and factual. Do not infer a formal venue from a submission statement or label a project open source without checking its license.
+Direct catalogue changes should preserve the existing JSON schema and keep English and Chinese summaries concise and factual. Do not infer a formal venue from a submission statement, label a project open source without checking its license, or reuse a software license as the license for its associated audio data.
 
 Before opening a pull request, run:
 

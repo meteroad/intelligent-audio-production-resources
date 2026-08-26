@@ -9,7 +9,7 @@ The paper scout follows a reviewable pipeline:
 5. Only high-confidence new records and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request.
 6. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
 
-The active scope covers audio effects, differentiable production processing, effect and production representations, mixing, mastering, and task-specific evaluation. Spatial audio remains deferred. Bibliography repositories are maintained under `data/resources.json`; they are not treated as runnable projects.
+The active scope covers audio effects, differentiable production processing, effect and production representations, mixing, mastering, and task-specific evaluation. Spatial audio remains deferred. Bibliography repositories are maintained under `data/resources.json`; they are not treated as runnable projects. Dataset records and their paper/project usage relations are maintained under `data/datasets.json` and pass deterministic cross-reference validation, but the paper scout does not infer dataset usage automatically.
 
 ## Repository setup
 

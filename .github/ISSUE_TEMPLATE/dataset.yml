@@ -1,0 +1,81 @@
+name: Add a dataset
+description: Suggest an audio dataset used in intelligent audio production research.
+title: "[Dataset]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dataset entries distinguish data terms from accompanying software licenses. Please link primary or first-party evidence.
+
+  - type: input
+    id: name
+    attributes:
+      label: Dataset name
+      placeholder: Official dataset name
+    validations:
+      required: true
+
+  - type: input
+    id: dataset_url
+    attributes:
+      label: Official dataset page
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Relevant areas
+      multiple: true
+      options:
+        - Audio effects
+        - Differentiable processing
+        - Representation learning
+        - Mixing
+        - Mastering
+        - Evaluation
+        - Spatial audio
+    validations:
+      required: true
+
+  - type: input
+    id: access
+    attributes:
+      label: Access evidence
+      description: Link to the download, request, registration, or restriction information.
+      placeholder: https://...
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: Data license evidence
+      description: Link to terms for the audio data, not only a software repository license.
+      placeholder: https://...
+
+  - type: textarea
+    id: contents
+    attributes:
+      label: Contents and scale
+      description: Briefly list audio types, annotations, effects, and public size.
+    validations:
+      required: true
+
+  - type: textarea
+    id: usage
+    attributes:
+      label: Papers and projects using the dataset
+      description: Add one paper or project per line with evidence that it uses this dataset.
+      placeholder: |
+        Paper: https://...
+        Project: https://...
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Verification
+      options:
+        - label: I checked the official dataset page and did not assume the data uses the accompanying code license.
+          required: true

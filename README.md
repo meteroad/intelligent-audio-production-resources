@@ -4,7 +4,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 
 [Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-**69 papers · 38 verified projects · 2 reference collections**
+**69 papers · 38 verified projects · 12 datasets · 2 reference collections**
 
 [![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
 
@@ -14,6 +14,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 | --- | --- |
 | Papers | Formal venues, paper and DOI links, concise English and Chinese summaries, and associated open resources |
 | Projects | Source, checkpoint, inference, training, dataset, license, taxonomy, related-paper evidence, and last-verification dates |
+| Datasets | Contents, access conditions, data licenses, scale, and evidence-backed links to papers and projects that use each dataset |
 | Reference resources | Field bibliographies and research guides kept separate from runnable implementations |
 
 The index is organized by production task rather than publication year. It currently covers:
@@ -41,6 +42,7 @@ The quickest route is to open a structured request:
 
 - [Add a paper](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=paper.yml)
 - [Add an open-source project](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=project.yml)
+- [Add a dataset](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=dataset.yml)
 - [Correct metadata or report a broken link](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
 Please include a primary paper or project URL and enough evidence to verify the requested change. See [CONTRIBUTING.md](CONTRIBUTING.md) before editing catalogue data directly.
@@ -51,11 +53,12 @@ The catalogue is available as version-controlled JSON:
 
 - [`data/papers.json`](data/papers.json)
 - [`data/projects.json`](data/projects.json)
+- [`data/datasets.json`](data/datasets.json)
 - [`data/resources.json`](data/resources.json)
 
 These files drive the public website and can also be used for research tooling or downstream analysis under the repository license.
 
-See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and migration guidance. The formal projects v3 contract is available at [`schemas/projects-v3.schema.json`](schemas/projects-v3.schema.json).
+See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and migration guidance. Formal contracts are available for [projects v3](schemas/projects-v3.schema.json) and [datasets v1](schemas/datasets-v1.schema.json).
 
 ## Automation
 

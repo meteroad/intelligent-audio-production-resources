@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production-resources/">
     <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production-resources/assets/social-preview.jpg">
     <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production-resources/">
-    <link rel="stylesheet" href="styles.css?v=20260826-1">
-    <script src="app.js?v=20260826-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260826-2">
+    <script src="app.js?v=20260826-2" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -20,6 +20,7 @@
         <nav aria-label="Primary navigation" data-i18n-aria-label="nav.label">
           <a href="#scope" data-i18n="nav.scope">Scope</a>
           <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#datasets" data-i18n="nav.datasets">Datasets</a>
           <a href="#resources" data-i18n="nav.resources">Resources</a>
           <a href="#papers" data-i18n="nav.papers">Papers</a>
           <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
@@ -190,6 +191,65 @@
         <noscript><p class="notice">JavaScript is required to render the project index.</p></noscript>
       </section>
 
+      <section id="datasets" aria-labelledby="datasets-title">
+        <div class="section-heading">
+          <h2 id="datasets-title" data-i18n="datasets.title">Dataset index</h2>
+          <p data-i18n="datasets.description">Common datasets for intelligent audio production, with access terms, data licenses, and verified links to papers and projects that use them.</p>
+        </div>
+
+        <div class="index-controls dataset-controls">
+          <label>
+            <span data-i18n="controls.search">Search</span>
+            <input id="dataset-search" type="search" placeholder="Dataset, task, or content" data-i18n-placeholder="datasets.searchPlaceholder" autocomplete="off">
+          </label>
+          <label>
+            <span data-i18n="controls.area">Area</span>
+            <select id="dataset-area-filter" data-i18n-aria-label="datasets.areaFilter">
+              <option value="all" data-i18n="controls.allAreas">All areas</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="controls.task">Task</span>
+            <select id="dataset-task-filter" data-i18n-aria-label="datasets.taskFilter">
+              <option value="all" data-i18n="controls.allTasks">All tasks</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="controls.content">Content</span>
+            <select id="dataset-content-filter" data-i18n-aria-label="datasets.contentFilter">
+              <option value="all" data-i18n="controls.allContentTypes">All content types</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="controls.access">Access</span>
+            <select id="dataset-access-filter" data-i18n-aria-label="datasets.accessFilter">
+              <option value="all" data-i18n="controls.allAccessTypes">All access types</option>
+            </select>
+          </label>
+          <button id="dataset-filter-reset" class="filter-reset" type="button" data-i18n="controls.reset">Reset</button>
+        </div>
+
+        <div class="table-wrap">
+          <table class="dataset-table">
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="datasets.columnDataset">Dataset</th>
+                <th scope="col" data-i18n="datasets.columnArea">Area</th>
+                <th scope="col" data-i18n="datasets.columnContent">Content</th>
+                <th scope="col" data-i18n="datasets.columnAccess">Access</th>
+                <th scope="col" data-i18n="datasets.columnUsedBy">Used by</th>
+                <th scope="col" data-i18n="datasets.columnVerified">Verified</th>
+              </tr>
+            </thead>
+            <tbody id="dataset-rows">
+              <tr><td colspan="6" class="loading" data-i18n="datasets.loading">Loading verified datasets...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="dataset-count" class="project-count" aria-live="polite"></p>
+        <noscript><p class="notice">JavaScript is required to render the dataset index.</p></noscript>
+      </section>
+
       <section id="resources" aria-labelledby="resources-title">
         <div class="section-heading">
           <h2 id="resources-title" data-i18n="resources.title">Reference resources</h2>
@@ -260,6 +320,16 @@
           <button id="project-dialog-close" class="dialog-close" type="button" aria-label="Close project details" data-i18n-aria-label="projects.closeDetails">&times;</button>
         </header>
         <div id="project-dialog-content" class="paper-dialog-content"></div>
+      </div>
+    </dialog>
+
+    <dialog id="dataset-dialog" class="paper-dialog project-dialog" aria-label="Dataset details" data-i18n-aria-label="datasets.dialogLabel">
+      <div class="paper-dialog-shell">
+        <header class="paper-dialog-header">
+          <p data-i18n="datasets.dialogLabel">Dataset details</p>
+          <button id="dataset-dialog-close" class="dialog-close" type="button" aria-label="Close dataset details" data-i18n-aria-label="datasets.closeDetails">&times;</button>
+        </header>
+        <div id="dataset-dialog-content" class="paper-dialog-content"></div>
       </div>
     </dialog>
 
