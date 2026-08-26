@@ -49,6 +49,8 @@ const translations = {
     "projects.statusFilter": "Filter projects by availability status",
     "projects.taskFilter": "Filter projects by reviewed task",
     "projects.effectFilter": "Filter projects by reviewed effect",
+    "projects.controlApproachFilter": "Filter projects by linked control approach",
+    "projects.controlApproachesLabel": "Control approaches",
     "projects.relatedPapersLabel": "Related papers",
     "projects.noRelatedPapers": "No related paper has been verified.",
     "projects.licenseLabel": "License",
@@ -109,6 +111,7 @@ const translations = {
     "papers.agentDescription": "A scheduled workflow checks new papers weekly. Candidate metadata is validated before a website update is proposed.",
     "papers.searchPlaceholder": "Title, author, or topic",
     "papers.areaFilter": "Filter papers by area",
+    "papers.controlApproachFilter": "Filter papers by control approach",
     "papers.loading": "Loading papers...",
     "papers.empty": "No papers match this filter.",
     "papers.loadError": "The paper index could not be loaded.",
@@ -123,6 +126,7 @@ const translations = {
     "papers.noOpenResources": "No public implementation or model has been verified.",
     "papers.shortNameLabel": "Index name",
     "papers.openSourceAvailable": "Source available",
+    "papers.controlApproachesLabel": "Control approach",
     "controls.search": "Search",
     "controls.area": "Area",
     "controls.allAreas": "All areas",
@@ -140,7 +144,17 @@ const translations = {
     "controls.allContentTypes": "All content types",
     "controls.access": "Access",
     "controls.allAccessTypes": "All access types",
+    "controls.controlApproach": "Control approach",
+    "controls.allControlApproaches": "All approaches",
     "controls.reset": "Reset",
+    "pagination.projectsLabel": "Project pages",
+    "pagination.datasetsLabel": "Dataset pages",
+    "pagination.papersLabel": "Paper pages",
+    "pagination.previous": "Previous page",
+    "pagination.next": "Next page",
+    "control.gradient-based-optimization": "Differentiable optimization",
+    "control.derivative-free-optimization": "Derivative-free optimization",
+    "control.direct-prediction": "Direct prediction",
     "common.inDevelopment": "In development",
     "common.later": "Later",
     "community.title": "Help improve the index",
@@ -268,6 +282,8 @@ const translations = {
     "projects.statusFilter": "按可用状态筛选项目",
     "projects.taskFilter": "按已核验任务筛选项目",
     "projects.effectFilter": "按已核验效果筛选项目",
+    "projects.controlApproachFilter": "按关联论文的参数获取方式筛选项目",
+    "projects.controlApproachesLabel": "参数获取方式",
     "projects.relatedPapersLabel": "关联论文",
     "projects.noRelatedPapers": "暂未核验到关联论文。",
     "projects.licenseLabel": "许可证",
@@ -328,6 +344,7 @@ const translations = {
     "papers.agentDescription": "定时工作流每周检查新论文，并在提出网站更新前核验候选论文的元数据。",
     "papers.searchPlaceholder": "搜索标题、作者或主题",
     "papers.areaFilter": "按领域筛选论文",
+    "papers.controlApproachFilter": "按参数获取方式筛选论文",
     "papers.loading": "正在加载论文……",
     "papers.empty": "没有符合当前筛选条件的论文。",
     "papers.loadError": "论文索引加载失败。",
@@ -342,6 +359,7 @@ const translations = {
     "papers.noOpenResources": "暂未核验到公开实现或模型。",
     "papers.shortNameLabel": "索引简称",
     "papers.openSourceAvailable": "已有源码",
+    "papers.controlApproachesLabel": "参数获取方式",
     "controls.search": "搜索",
     "controls.area": "领域",
     "controls.allAreas": "全部领域",
@@ -359,7 +377,17 @@ const translations = {
     "controls.allContentTypes": "全部内容类型",
     "controls.access": "访问方式",
     "controls.allAccessTypes": "全部访问方式",
+    "controls.controlApproach": "参数获取方式",
+    "controls.allControlApproaches": "全部方式",
     "controls.reset": "重置",
+    "pagination.projectsLabel": "项目分页",
+    "pagination.datasetsLabel": "数据集分页",
+    "pagination.papersLabel": "论文分页",
+    "pagination.previous": "上一页",
+    "pagination.next": "下一页",
+    "control.gradient-based-optimization": "可微分优化",
+    "control.derivative-free-optimization": "非可微分优化",
+    "control.direct-prediction": "直接预测（非迭代）",
     "common.inDevelopment": "开发中",
     "common.later": "后续",
     "community.title": "参与共建",
@@ -446,6 +474,11 @@ const state = {
   resources: [],
   papers: [],
   loaded: false,
+  pages: {
+    projects: 1,
+    datasets: 1,
+    papers: 1
+  },
   activeProjectId: null,
   activeDatasetId: null,
   activePaperId: null
@@ -455,6 +488,7 @@ const elements = {
   projectRows: document.querySelector("#project-rows"),
   projectSearch: document.querySelector("#project-search"),
   projectArea: document.querySelector("#project-area-filter"),
+  projectControl: document.querySelector("#project-control-filter"),
   projectLicense: document.querySelector("#project-license-filter"),
   projectCapability: document.querySelector("#project-capability-filter"),
   projectStatus: document.querySelector("#project-status-filter"),
@@ -464,6 +498,10 @@ const elements = {
   projectEffectControl: document.querySelector("#project-effect-control"),
   projectFilterReset: document.querySelector("#project-filter-reset"),
   projectCount: document.querySelector("#project-count"),
+  projectPagination: document.querySelector("#project-pagination"),
+  projectPrevious: document.querySelector("#project-previous"),
+  projectPage: document.querySelector("#project-page"),
+  projectNext: document.querySelector("#project-next"),
   datasetRows: document.querySelector("#dataset-rows"),
   datasetSearch: document.querySelector("#dataset-search"),
   datasetArea: document.querySelector("#dataset-area-filter"),
@@ -472,11 +510,20 @@ const elements = {
   datasetAccess: document.querySelector("#dataset-access-filter"),
   datasetFilterReset: document.querySelector("#dataset-filter-reset"),
   datasetCount: document.querySelector("#dataset-count"),
+  datasetPagination: document.querySelector("#dataset-pagination"),
+  datasetPrevious: document.querySelector("#dataset-previous"),
+  datasetPage: document.querySelector("#dataset-page"),
+  datasetNext: document.querySelector("#dataset-next"),
   resourceList: document.querySelector("#resource-list"),
   paperList: document.querySelector("#paper-list"),
   paperSearch: document.querySelector("#paper-search"),
   paperArea: document.querySelector("#paper-area-filter"),
+  paperControl: document.querySelector("#paper-control-filter"),
   paperCount: document.querySelector("#paper-count"),
+  paperPagination: document.querySelector("#paper-pagination"),
+  paperPrevious: document.querySelector("#paper-previous"),
+  paperPage: document.querySelector("#paper-page"),
+  paperNext: document.querySelector("#paper-next"),
   heroProjectCount: document.querySelector("#hero-project-count"),
   heroDatasetCount: document.querySelector("#hero-dataset-count"),
   heroPaperCount: document.querySelector("#hero-paper-count"),
@@ -495,6 +542,8 @@ const elements = {
 const availabilityCapabilities = ["source", "checkpoint", "inference", "training", "dataset"];
 const availabilityStatuses = ["linked", "documented", "tested", "gated", "restricted", "not-found", "not-applicable", "not-reviewed"];
 const datasetAccessStatuses = ["direct-download", "request", "registration", "restricted", "unavailable", "not-reviewed"];
+const controlApproaches = ["gradient-based-optimization", "derivative-free-optimization", "direct-prediction"];
+const PAGE_SIZE = 10;
 
 function getInitialLanguage() {
   try {
@@ -555,6 +604,82 @@ function createTagList(areas, tagName = "div") {
   list.className = "tag-list";
   areas.forEach((area) => list.append(createTextElement("span", "tag", t(`area.${area}`))));
   return list;
+}
+
+function paperControlApproaches(paper) {
+  return Array.isArray(paper.controlApproaches) ? paper.controlApproaches : [];
+}
+
+function projectControlApproaches(project) {
+  const values = project.relations.paperIds.flatMap((paperId) => {
+    const paper = state.papers.find((item) => item.id === paperId);
+    return paper ? paperControlApproaches(paper) : [];
+  });
+  return [...new Set(values)];
+}
+
+function createControlApproachList(values, tagName = "div") {
+  const list = document.createElement(tagName);
+  list.className = "tag-list control-approach-list";
+  values.forEach((value) => list.append(createTextElement("span", "tag control-tag", t(`control.${value}`))));
+  return list;
+}
+
+function paginate(items, collection) {
+  const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
+  state.pages[collection] = Math.min(Math.max(state.pages[collection], 1), totalPages);
+  const startIndex = (state.pages[collection] - 1) * PAGE_SIZE;
+  return {
+    items: items.slice(startIndex, startIndex + PAGE_SIZE),
+    start: items.length ? startIndex + 1 : 0,
+    end: Math.min(startIndex + PAGE_SIZE, items.length),
+    page: state.pages[collection],
+    totalPages
+  };
+}
+
+function updatePagination(collection, pagination) {
+  const refs = {
+    projects: [elements.projectPagination, elements.projectPrevious, elements.projectPage, elements.projectNext],
+    datasets: [elements.datasetPagination, elements.datasetPrevious, elements.datasetPage, elements.datasetNext],
+    papers: [elements.paperPagination, elements.paperPrevious, elements.paperPage, elements.paperNext]
+  }[collection];
+  const [container, previous, status, next] = refs;
+  container.hidden = pagination.totalPages <= 1;
+  previous.disabled = pagination.page <= 1;
+  next.disabled = pagination.page >= pagination.totalPages;
+  status.textContent = state.language === "zh"
+    ? `第 ${pagination.page} / ${pagination.totalPages} 页`
+    : `Page ${pagination.page} of ${pagination.totalPages}`;
+}
+
+function updateResultCount(element, collection, pagination, filteredCount, totalCount) {
+  const nouns = {
+    projects: ["project", "projects", "个项目"],
+    datasets: ["dataset", "datasets", "个数据集"],
+    papers: ["paper", "papers", "篇论文"]
+  }[collection];
+  if (state.language === "zh") {
+    element.textContent = filteredCount === totalCount
+      ? `显示 ${pagination.start}-${pagination.end}，共 ${totalCount} ${nouns[2]}`
+      : `显示 ${pagination.start}-${pagination.end}，筛选结果 ${filteredCount} ${nouns[2]}（总计 ${totalCount}）`;
+    return;
+  }
+  const noun = filteredCount === 1 ? nouns[0] : nouns[1];
+  element.textContent = filteredCount === totalCount
+    ? `Showing ${pagination.start}-${pagination.end} of ${totalCount} ${noun}`
+    : `Showing ${pagination.start}-${pagination.end} of ${filteredCount} matching ${noun} (${totalCount} total)`;
+}
+
+function resetPageAndRender(collection, render) {
+  state.pages[collection] = 1;
+  render();
+}
+
+function changePage(collection, delta, render) {
+  state.pages[collection] += delta;
+  render();
+  document.querySelector(`#${collection}`).scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function populateAreaFilter(select, items) {
@@ -635,6 +760,15 @@ function reviewedTaxonomyValues(field) {
 
 function populateProjectFilters() {
   populateAreaFilter(elements.projectArea, state.projects);
+  const projectApproaches = controlApproaches.filter((approach) => (
+    state.projects.some((project) => projectControlApproaches(project).includes(approach))
+  ));
+  populateSelect(
+    elements.projectControl,
+    projectApproaches,
+    "controls.allControlApproaches",
+    (approach) => t(`control.${approach}`)
+  );
   populateProjectLicenseFilter();
   populateSelect(elements.projectCapability, availabilityCapabilities, "controls.allCapabilities", (capability) => t(`availability.${capability}`));
   populateSelect(elements.projectStatus, availabilityStatuses, "controls.allStatuses", (status) => t(`availability.status.${status}`));
@@ -701,6 +835,8 @@ function showPapersForArea(area) {
   if (!state.papers.some((paper) => paper.areas.includes(area))) return;
   elements.paperSearch.value = "";
   elements.paperArea.value = area;
+  elements.paperControl.value = "all";
+  state.pages.papers = 1;
   renderPapers();
   document.querySelector("#papers").scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -739,13 +875,16 @@ function createProjectRow(project) {
 function renderProjects() {
   const query = elements.projectSearch.value.trim().toLocaleLowerCase(state.language);
   const selectedArea = elements.projectArea.value;
+  const selectedControl = elements.projectControl.value;
   const selectedLicense = elements.projectLicense.value;
   const selectedCapability = elements.projectCapability.value;
   const selectedStatus = elements.projectStatus.value;
   const selectedTask = elements.projectTask.value;
   const selectedEffect = elements.projectEffect.value;
   const filtered = state.projects.filter((project) => {
+    const approaches = projectControlApproaches(project);
     const matchesArea = selectedArea === "all" || project.areas.includes(selectedArea);
+    const matchesControl = selectedControl === "all" || approaches.includes(selectedControl);
     const matchesLicense = selectedLicense === "all" || projectLicenseFilterValue(project) === selectedLicense;
     const availabilityEntries = availabilityCapabilities.map((capability) => [capability, project.availability[capability]]);
     const matchesCapability = selectedCapability === "all"
@@ -774,12 +913,14 @@ function renderProjects() {
       ...project.areas.map((area) => t(`area.${area}`)),
       ...(project.taxonomy?.tasks ?? []).map((task) => t(`task.${task}`)),
       ...(project.taxonomy?.effects ?? []).map((effect) => t(`effect.${effect}`)),
+      ...approaches.map((approach) => t(`control.${approach}`)),
       ...availabilityEntries.flatMap(([capability, entry]) => [t(`availability.${capability}`), t(`availability.status.${entry.status}`)])
     ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && matchesLicense && matchesCapability && matchesStatus && matchesTask && matchesEffect && searchable.includes(query);
+    return matchesArea && matchesControl && matchesLicense && matchesCapability && matchesStatus && matchesTask && matchesEffect && searchable.includes(query);
   });
+  const pagination = paginate(filtered, "projects");
 
   elements.projectRows.replaceChildren();
   if (filtered.length === 0) {
@@ -789,12 +930,10 @@ function renderProjects() {
     row.append(cell);
     elements.projectRows.append(row);
   } else {
-    filtered.forEach((project) => elements.projectRows.append(createProjectRow(project)));
+    pagination.items.forEach((project) => elements.projectRows.append(createProjectRow(project)));
   }
-
-  elements.projectCount.textContent = state.language === "zh"
-    ? `显示 ${filtered.length} / ${state.projects.length} 个已核验项目`
-    : `${filtered.length} of ${state.projects.length} verified ${state.projects.length === 1 ? "project" : "projects"}`;
+  updateResultCount(elements.projectCount, "projects", pagination, filtered.length, state.projects.length);
+  updatePagination("projects", pagination);
 }
 
 function createEvidenceLinks(urls) {
@@ -921,6 +1060,14 @@ function renderProjectDialog(project) {
   facts.append(createLabeledValue(t("projects.verifiedLabel"), project.lastVerified));
 
   elements.projectDialogContent.replaceChildren(heading, facts);
+  const approaches = projectControlApproaches(project);
+  if (approaches.length) {
+    appendProjectDialogSection(
+      elements.projectDialogContent,
+      t("projects.controlApproachesLabel"),
+      createControlApproachList(approaches)
+    );
+  }
   appendProjectDialogSection(elements.projectDialogContent, t("projects.relatedPapersLabel"), createRelatedPapers(project));
   appendProjectDialogSection(
     elements.projectDialogContent,
@@ -1026,6 +1173,7 @@ function renderDatasets() {
     ].join(" ").toLocaleLowerCase(state.language);
     return matchesArea && matchesTask && matchesContent && matchesAccess && searchable.includes(query);
   });
+  const pagination = paginate(filtered, "datasets");
 
   elements.datasetRows.replaceChildren();
   if (!filtered.length) {
@@ -1035,12 +1183,10 @@ function renderDatasets() {
     row.append(cell);
     elements.datasetRows.append(row);
   } else {
-    filtered.forEach((dataset) => elements.datasetRows.append(createDatasetRow(dataset)));
+    pagination.items.forEach((dataset) => elements.datasetRows.append(createDatasetRow(dataset)));
   }
-
-  elements.datasetCount.textContent = state.language === "zh"
-    ? `显示 ${filtered.length} / ${state.datasets.length} 个已核验数据集`
-    : `${filtered.length} of ${state.datasets.length} verified ${state.datasets.length === 1 ? "dataset" : "datasets"}`;
+  updateResultCount(elements.datasetCount, "datasets", pagination, filtered.length, state.datasets.length);
+  updatePagination("datasets", pagination);
 }
 
 function createDatasetRelationList(relations, type) {
@@ -1253,6 +1399,9 @@ function createPaperEntry(paper) {
   const details = document.createElement("span");
   details.className = "paper-details";
   details.append(createTagList(paper.areas, "span"));
+  if (paperControlApproaches(paper).length) {
+    details.append(createControlApproachList(paperControlApproaches(paper), "span"));
+  }
   if (paper.curation === "agent") {
     details.append(createTextElement("span", "agent-badge", t("papers.automated")));
   }
@@ -1304,6 +1453,13 @@ function renderPaperDialog(paper) {
   );
 
   elements.paperDialogContent.replaceChildren(heading, summarySection);
+  if (paperControlApproaches(paper).length) {
+    appendProjectDialogSection(
+      elements.paperDialogContent,
+      t("papers.controlApproachesLabel"),
+      createControlApproachList(paperControlApproaches(paper))
+    );
+  }
   appendProjectDialogSection(
     elements.paperDialogContent,
     t("datasets.usedDatasetsLabel"),
@@ -1335,23 +1491,34 @@ function closePaperDialog() {
 function renderPapers() {
   const query = elements.paperSearch.value.trim().toLocaleLowerCase(state.language);
   const selectedArea = elements.paperArea.value;
+  const selectedControl = elements.paperControl.value;
   const filtered = state.papers.filter((paper) => {
     const matchesArea = selectedArea === "all" || paper.areas.includes(selectedArea);
-    const searchable = [paper.shortName ?? "", paper.title, paper.authors.join(" "), paper.summary.en, paper.summary.zh, ...paper.areas.map((area) => t(`area.${area}`))]
+    const approaches = paperControlApproaches(paper);
+    const matchesControl = selectedControl === "all" || approaches.includes(selectedControl);
+    const searchable = [
+      paper.shortName ?? "",
+      paper.title,
+      paper.authors.join(" "),
+      paper.summary.en,
+      paper.summary.zh,
+      ...paper.areas.map((area) => t(`area.${area}`)),
+      ...approaches.map((approach) => t(`control.${approach}`))
+    ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && searchable.includes(query);
+    return matchesArea && matchesControl && searchable.includes(query);
   });
+  const pagination = paginate(filtered, "papers");
 
   elements.paperList.replaceChildren();
   if (filtered.length === 0) {
     elements.paperList.append(createTextElement("p", "empty", t("papers.empty")));
   } else {
-    filtered.forEach((paper) => elements.paperList.append(createPaperEntry(paper)));
+    pagination.items.forEach((paper) => elements.paperList.append(createPaperEntry(paper)));
   }
-  elements.paperCount.textContent = state.language === "zh"
-    ? `显示 ${filtered.length} / ${state.papers.length} 篇论文`
-    : `${filtered.length} of ${state.papers.length} ${state.papers.length === 1 ? "paper" : "papers"}`;
+  updateResultCount(elements.paperCount, "papers", pagination, filtered.length, state.papers.length);
+  updatePagination("papers", pagination);
 }
 
 function applyTranslations() {
@@ -1376,6 +1543,12 @@ function applyTranslations() {
   populateProjectFilters();
   populateDatasetFilters();
   populateAreaFilter(elements.paperArea, state.papers);
+  populateSelect(
+    elements.paperControl,
+    controlApproaches.filter((approach) => state.papers.some((paper) => paperControlApproaches(paper).includes(approach))),
+    "controls.allControlApproaches",
+    (approach) => t(`control.${approach}`)
+  );
   updateCatalogueStats();
   updateFieldPaperLinks();
   if (state.projects.length) renderProjects();
@@ -1445,44 +1618,56 @@ async function loadData() {
     elements.projectCount.textContent = "";
     elements.datasetCount.textContent = "";
     elements.paperCount.textContent = "";
+    elements.projectPagination.hidden = true;
+    elements.datasetPagination.hidden = true;
+    elements.paperPagination.hidden = true;
   }
 }
 
 document.querySelectorAll("[data-language]").forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
-elements.projectSearch.addEventListener("input", renderProjects);
-elements.projectArea.addEventListener("change", renderProjects);
-elements.projectLicense.addEventListener("change", renderProjects);
-elements.projectCapability.addEventListener("change", renderProjects);
-elements.projectStatus.addEventListener("change", renderProjects);
-elements.projectTask.addEventListener("change", renderProjects);
-elements.projectEffect.addEventListener("change", renderProjects);
+elements.projectSearch.addEventListener("input", () => resetPageAndRender("projects", renderProjects));
+elements.projectArea.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectControl.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectLicense.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectCapability.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectStatus.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectTask.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectEffect.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
 elements.projectFilterReset.addEventListener("click", () => {
   elements.projectSearch.value = "";
   elements.projectArea.value = "all";
+  elements.projectControl.value = "all";
   elements.projectLicense.value = "all";
   elements.projectCapability.value = "all";
   elements.projectStatus.value = "all";
   elements.projectTask.value = "all";
   elements.projectEffect.value = "all";
-  renderProjects();
+  resetPageAndRender("projects", renderProjects);
 });
-elements.datasetSearch.addEventListener("input", renderDatasets);
-elements.datasetArea.addEventListener("change", renderDatasets);
-elements.datasetTask.addEventListener("change", renderDatasets);
-elements.datasetContent.addEventListener("change", renderDatasets);
-elements.datasetAccess.addEventListener("change", renderDatasets);
+elements.datasetSearch.addEventListener("input", () => resetPageAndRender("datasets", renderDatasets));
+elements.datasetArea.addEventListener("change", () => resetPageAndRender("datasets", renderDatasets));
+elements.datasetTask.addEventListener("change", () => resetPageAndRender("datasets", renderDatasets));
+elements.datasetContent.addEventListener("change", () => resetPageAndRender("datasets", renderDatasets));
+elements.datasetAccess.addEventListener("change", () => resetPageAndRender("datasets", renderDatasets));
 elements.datasetFilterReset.addEventListener("click", () => {
   elements.datasetSearch.value = "";
   elements.datasetArea.value = "all";
   elements.datasetTask.value = "all";
   elements.datasetContent.value = "all";
   elements.datasetAccess.value = "all";
-  renderDatasets();
+  resetPageAndRender("datasets", renderDatasets);
 });
-elements.paperSearch.addEventListener("input", renderPapers);
-elements.paperArea.addEventListener("change", renderPapers);
+elements.paperSearch.addEventListener("input", () => resetPageAndRender("papers", renderPapers));
+elements.paperArea.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.paperControl.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.projectPrevious.addEventListener("click", () => changePage("projects", -1, renderProjects));
+elements.projectNext.addEventListener("click", () => changePage("projects", 1, renderProjects));
+elements.datasetPrevious.addEventListener("click", () => changePage("datasets", -1, renderDatasets));
+elements.datasetNext.addEventListener("click", () => changePage("datasets", 1, renderDatasets));
+elements.paperPrevious.addEventListener("click", () => changePage("papers", -1, renderPapers));
+elements.paperNext.addEventListener("click", () => changePage("papers", 1, renderPapers));
 elements.fieldPaperLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();

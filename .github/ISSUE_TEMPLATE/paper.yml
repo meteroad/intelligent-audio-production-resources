@@ -63,6 +63,17 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: control_approaches
+    attributes:
+      label: Production-control approach
+      description: Select only approaches used to obtain controls at inference or target-matching time. Ordinary model training does not count as differentiable optimization.
+      multiple: true
+      options:
+        - Differentiable optimization
+        - Derivative-free optimization
+        - Direct prediction (non-iterative)
+
   - type: textarea
     id: resources
     attributes:

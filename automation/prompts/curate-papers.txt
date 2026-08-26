@@ -19,10 +19,15 @@ For every candidate:
    Assign "differentiable-processing" only when differentiability of DSP, an effect chain, or a processing graph is a substantive method contribution; ordinary neural-network training alone is insufficient.
    Assign "representation" only when the representation explicitly captures audio effects, production style, processor transformations, or perceptual production attributes; generic audio embeddings do not qualify.
    Assign "evaluation" only when the paper's primary contribution is a benchmark, metric, listening-test protocol, or reproducibility tool; do not assign it merely because a method reports experiments.
-4. Use confidence "high" only when the title and abstract clearly support the decision.
-5. For included papers, write one factual English sentence and one natural Chinese sentence summarizing only claims supported by the abstract.
-6. For excluded papers, return an empty areas array and empty en/zh summary strings, then briefly explain the exclusion in reason.
-7. Do not infer or write a publication venue. Venue information is resolved separately from arXiv journal references, DOI metadata, or explicit acceptance comments.
+4. Classify how effect or production-control parameters are obtained at inference or target-matching time using only these controlApproaches identifiers:
+   - "gradient-based-optimization": target-specific parameters are iteratively optimized with gradients through an explicit processor or processing graph;
+   - "derivative-free-optimization": target-specific parameters are found with black-box, evolutionary, population-based, or other optimization that does not require gradients;
+   - "direct-prediction": a trained model predicts parameters or a processing graph without target-specific iterative optimization.
+   Return an empty array when this classification is not applicable or not explicit. Ordinary neural-network training is not gradient-based optimization under this definition. Multiple identifiers are allowed only when the paper substantively combines the approaches.
+5. Use confidence "high" only when the title and abstract clearly support the decision.
+6. For included papers, write one factual English sentence and one natural Chinese sentence summarizing only claims supported by the abstract.
+7. For excluded papers, return empty areas and controlApproaches arrays and empty en/zh summary strings, then briefly explain the exclusion in reason.
+8. Do not infer or write a publication venue. Venue information is resolved separately from arXiv journal references, DOI metadata, or explicit acceptance comments.
 
 Return one JSON object and no surrounding prose. It must follow this exact shape and include one decision for every candidate:
 {
@@ -33,6 +38,7 @@ Return one JSON object and no surrounding prose. It must follow this exact shape
       "decision": "include",
       "confidence": "high",
       "areas": ["audio-effects"],
+      "controlApproaches": ["direct-prediction"],
       "summary": {
         "en": "One factual sentence.",
         "zh": "一句忠于摘要的中文概述。"

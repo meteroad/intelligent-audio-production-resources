@@ -55,6 +55,7 @@ def build_record(
             metadata.get("publicationVenue") or metadata.get("journalReference") or "arXiv",
         ),
         "areas": list(dict.fromkeys([*curation["areas"], *method_areas])),
+        "controlApproaches": curation.get("controlApproaches", []),
         "summary": curation["summary"],
         "links": links,
         "lastVerified": verified_at,

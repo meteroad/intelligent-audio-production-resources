@@ -19,6 +19,11 @@ ALLOWED_AREAS = {
     "evaluation",
     "spatial-audio",
 }
+ALLOWED_CONTROL_APPROACHES = {
+    "gradient-based-optimization",
+    "derivative-free-optimization",
+    "direct-prediction",
+}
 
 
 def load_json(path: Path) -> dict:
@@ -41,6 +46,13 @@ def validate_decision(decision: dict, candidate_ids: set[str]) -> None:
     if decision.get("decision") == "include":
         if not areas or len(areas) != len(set(areas)) or not set(areas).issubset(ALLOWED_AREAS):
             raise ValueError(f"Invalid areas for {source_id}: {areas}")
+        control_approaches = decision.get("controlApproaches", [])
+        if (
+            not isinstance(control_approaches, list)
+            or len(control_approaches) != len(set(control_approaches))
+            or not set(control_approaches).issubset(ALLOWED_CONTROL_APPROACHES)
+        ):
+            raise ValueError(f"Invalid control approaches for {source_id}: {control_approaches}")
         summary = decision.get("summary", {})
         for language in ("en", "zh"):
             value = summary.get(language, "").strip()
@@ -96,6 +108,7 @@ def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -
                 "published": published,
                 "venue": candidate.get("publicationVenue") or candidate.get("journalReference") or "arXiv",
                 "areas": decision["areas"],
+                "controlApproaches": decision["controlApproaches"],
                 "summary": decision["summary"],
                 "links": links,
                 "lastVerified": verified_date,

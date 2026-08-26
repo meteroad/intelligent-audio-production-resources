@@ -47,6 +47,11 @@ ALLOWED_EFFECTS = {
     "multi-effect",
     "other",
 }
+ALLOWED_CONTROL_APPROACHES = {
+    "gradient-based-optimization",
+    "derivative-free-optimization",
+    "direct-prediction",
+}
 ALLOWED_DATASET_CONTENT_TYPES = {
     "multitrack",
     "stems",
@@ -328,6 +333,13 @@ def validate_papers(path: Path) -> int:
         require(isinstance(paper.get("published"), str) and paper["published"], f"{paper_id}.published is required")
         require(isinstance(paper.get("venue"), str) and paper["venue"], f"{paper_id}.venue is required")
         validate_areas(paper.get("areas"), f"{paper_id}.areas")
+        control_approaches = paper.get("controlApproaches")
+        require(isinstance(control_approaches, list), f"{paper_id}.controlApproaches must be a list")
+        require(len(control_approaches) == len(set(control_approaches)), f"{paper_id}.controlApproaches contains duplicates")
+        require(
+            set(control_approaches).issubset(ALLOWED_CONTROL_APPROACHES),
+            f"{paper_id}.controlApproaches contains unknown values",
+        )
         validate_localized(paper.get("summary"), f"{paper_id}.summary")
         validate_links(paper.get("links"), f"{paper_id}.links")
         require(

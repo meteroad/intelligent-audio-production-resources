@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production-resources/">
     <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production-resources/assets/social-preview.jpg">
     <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production-resources/">
-    <link rel="stylesheet" href="styles.css?v=20260826-4">
-    <script src="app.js?v=20260826-5" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260826-6">
+    <script src="app.js?v=20260826-6" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -144,6 +144,12 @@
             </select>
           </label>
           <label>
+            <span data-i18n="controls.controlApproach">Control approach</span>
+            <select id="project-control-filter" data-i18n-aria-label="projects.controlApproachFilter">
+              <option value="all" data-i18n="controls.allControlApproaches">All approaches</option>
+            </select>
+          </label>
+          <label>
             <span data-i18n="controls.license">License</span>
             <select id="project-license-filter" data-i18n-aria-label="projects.licenseFilter">
               <option value="all" data-i18n="controls.allLicenses">All licenses</option>
@@ -192,7 +198,14 @@
             </tbody>
           </table>
         </div>
-        <p id="project-count" class="project-count" aria-live="polite"></p>
+        <div class="index-footer">
+          <p id="project-count" class="project-count" aria-live="polite"></p>
+          <nav id="project-pagination" class="pagination" aria-label="Project pages" data-i18n-aria-label="pagination.projectsLabel" hidden>
+            <button id="project-previous" class="pagination-button" type="button" aria-label="Previous page" data-i18n-aria-label="pagination.previous">&larr;</button>
+            <span id="project-page" class="pagination-status" aria-live="polite"></span>
+            <button id="project-next" class="pagination-button" type="button" aria-label="Next page" data-i18n-aria-label="pagination.next">&rarr;</button>
+          </nav>
+        </div>
         <div class="upcoming-project">
           <div><span data-i18n="common.inDevelopment">In development</span><strong>MixBench</strong></div>
           <p data-i18n="projects.mixbench">A reproducible evaluation framework for automatic music mixing. The repository link will be added when the project is publicly available.</p>
@@ -255,7 +268,14 @@
             </tbody>
           </table>
         </div>
-        <p id="dataset-count" class="project-count" aria-live="polite"></p>
+        <div class="index-footer">
+          <p id="dataset-count" class="project-count" aria-live="polite"></p>
+          <nav id="dataset-pagination" class="pagination" aria-label="Dataset pages" data-i18n-aria-label="pagination.datasetsLabel" hidden>
+            <button id="dataset-previous" class="pagination-button" type="button" aria-label="Previous page" data-i18n-aria-label="pagination.previous">&larr;</button>
+            <span id="dataset-page" class="pagination-status" aria-live="polite"></span>
+            <button id="dataset-next" class="pagination-button" type="button" aria-label="Next page" data-i18n-aria-label="pagination.next">&rarr;</button>
+          </nav>
+        </div>
         <noscript><p class="notice">JavaScript is required to render the dataset index.</p></noscript>
       </section>
 
@@ -291,12 +311,25 @@
               <option value="all" data-i18n="controls.allAreas">All areas</option>
             </select>
           </label>
+          <label>
+            <span data-i18n="controls.controlApproach">Control approach</span>
+            <select id="paper-control-filter" data-i18n-aria-label="papers.controlApproachFilter">
+              <option value="all" data-i18n="controls.allControlApproaches">All approaches</option>
+            </select>
+          </label>
         </div>
 
         <div id="paper-list" class="paper-list">
           <p class="loading" data-i18n="papers.loading">Loading papers...</p>
         </div>
-        <p id="paper-count" class="project-count" aria-live="polite"></p>
+        <div class="index-footer">
+          <p id="paper-count" class="project-count" aria-live="polite"></p>
+          <nav id="paper-pagination" class="pagination" aria-label="Paper pages" data-i18n-aria-label="pagination.papersLabel" hidden>
+            <button id="paper-previous" class="pagination-button" type="button" aria-label="Previous page" data-i18n-aria-label="pagination.previous">&larr;</button>
+            <span id="paper-page" class="pagination-status" aria-live="polite"></span>
+            <button id="paper-next" class="pagination-button" type="button" aria-label="Next page" data-i18n-aria-label="pagination.next">&rarr;</button>
+          </nav>
+        </div>
       </section>
 
       <section id="contribute" class="community-callout" aria-labelledby="contribute-title">

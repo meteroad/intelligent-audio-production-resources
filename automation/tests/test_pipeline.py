@@ -92,6 +92,7 @@ class CurationTests(unittest.TestCase):
                     "decision": "exclude",
                     "confidence": "high",
                     "areas": ["audio-effects"],
+                    "controlApproaches": ["direct-prediction"],
                     "summary": {"en": "Ignored summary", "zh": "忽略的摘要"},
                     "reason": "Not directly relevant.",
                 }
@@ -100,7 +101,31 @@ class CurationTests(unittest.TestCase):
         validated = curate_papers.validate_review(review, candidates)
         self.assertEqual(validated["reviewedAt"], "2026-08-25")
         self.assertEqual(validated["decisions"][0]["areas"], [])
+        self.assertEqual(validated["decisions"][0]["controlApproaches"], [])
         self.assertEqual(validated["decisions"][0]["summary"], {"en": "", "zh": ""})
+
+    def test_review_rejects_unknown_control_approach(self):
+        candidate = discover_papers.parse_feed(ARXIV_FEED, "audio-effects")[0]
+        candidates = {"generatedAt": "2026-08-25T10:00:00", "candidates": [candidate]}
+        review = {
+            "reviewedAt": "model-generated-value-is-ignored",
+            "decisions": [
+                {
+                    "sourceId": "arxiv:2608.12345",
+                    "decision": "include",
+                    "confidence": "high",
+                    "areas": ["audio-effects"],
+                    "controlApproaches": ["ordinary-training"],
+                    "summary": {
+                        "en": "Introduces a neural audio effect intended for music production workflows.",
+                        "zh": "提出一种面向音乐制作流程的神经音频效果器。",
+                    },
+                    "reason": "The abstract states a direct production contribution.",
+                }
+            ],
+        }
+        with self.assertRaisesRegex(ValueError, "Invalid control approaches"):
+            curate_papers.validate_review(review, candidates)
 
 
 class PublicationMetadataTests(unittest.TestCase):
@@ -207,6 +232,7 @@ class MergeTests(unittest.TestCase):
                     "decision": "include",
                     "confidence": "high",
                     "areas": ["audio-effects"],
+                    "controlApproaches": ["direct-prediction"],
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
                         "zh": "提出一种面向音乐制作流程的神经音频效果器。",
@@ -221,6 +247,7 @@ class MergeTests(unittest.TestCase):
         self.assertEqual(merged["papers"][0]["title"], candidate["title"])
         self.assertEqual(merged["papers"][0]["authors"], candidate["authors"])
         self.assertEqual(merged["papers"][0]["curation"], "agent")
+        self.assertEqual(merged["papers"][0]["controlApproaches"], ["direct-prediction"])
         self.assertEqual(merged["papers"][0]["venue"], "ISMIR 2026")
         self.assertEqual(merged["papers"][0]["links"][1]["url"], "https://doi.org/10.1234/example")
 
@@ -236,6 +263,7 @@ class MergeTests(unittest.TestCase):
                             "decision": "exclude",
                             "confidence": "high",
                             "areas": [],
+                            "controlApproaches": [],
                             "summary": {"en": "", "zh": ""},
                             "reason": "Not relevant.",
                         }
@@ -253,6 +281,7 @@ class MergeTests(unittest.TestCase):
                     "decision": "include",
                     "confidence": "high",
                     "areas": ["audio-effects", "audio-effects"],
+                    "controlApproaches": [],
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
                         "zh": "提出一种面向音乐制作流程的神经音频效果器。",

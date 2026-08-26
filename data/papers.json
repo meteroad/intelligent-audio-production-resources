@@ -24,6 +24,7 @@
         "representation",
         "evaluation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Learns relative audio-effects representations from processed example pairs and evaluates them in retrieval and effect transfer.",
         "zh": "从成对的已处理音频示例中学习相对音效表征，并评估其在检索与音效迁移中的应用。"
@@ -69,6 +70,7 @@
         "audio-effects",
         "representation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Unifies electric-guitar tone transfer and tone removal by disentangling content and tone in a variational autoencoder.",
         "zh": "通过变分自编码器解耦内容与音色，统一电吉他音色迁移和音色去除。"
@@ -105,6 +107,9 @@
       "venue": "arXiv",
       "areas": [
         "mixing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Reformulates automatic music mixing as sequentially blending each stem into a growing submix.",
@@ -143,6 +148,9 @@
         "mixing",
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Combines diffusion models with differentiable audio effects for controllable automatic music mixing.",
@@ -184,6 +192,10 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization",
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Estimates dense plate-reverb modes by combining band-wise count prediction with differentiable resonator refinement.",
         "zh": "结合分频带模态数量预测与可微谐振器细化，估计密集的板式混响模态。"
@@ -214,6 +226,9 @@
       "venue": "DAFx 2026",
       "areas": [
         "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Estimates plate-reverb parameters from one impulse response using simulation-trained tree regressors.",
@@ -246,6 +261,9 @@
       "venue": "arXiv",
       "areas": [
         "audio-effects"
+      ],
+      "controlApproaches": [
+        "derivative-free-optimization"
       ],
       "summary": {
         "en": "Identifies and inverts dynamic range compression through black-box optimization in a perceptual feature space.",
@@ -284,6 +302,9 @@
         "audio-effects",
         "representation",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Edits persistent audio-effect chains through multi-turn natural-language instructions and differentiable processing.",
@@ -325,6 +346,9 @@
       "areas": [
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Uses gradient-based optimization to estimate controls for time-varying modulation effects from target audio.",
@@ -368,6 +392,9 @@
         "mixing",
         "audio-effects"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Uses large-language-model tool calling to select and control audio processors for music post-production.",
         "zh": "利用大语言模型的工具调用能力，为音乐后期制作选择并控制音频处理器。"
@@ -408,6 +435,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Designs differentiable parametric attenuation filters for frequency-dependent decay control in feedback delay networks.",
         "zh": "为反馈延迟网络设计可微参数化衰减滤波器，以控制频率相关的混响衰减。"
@@ -450,6 +478,7 @@
         "mixing",
         "representation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Generates effect embeddings for automatic music mixing, providing a learned distribution over production choices.",
         "zh": "为自动音乐混音生成音效嵌入，学习制作选择的分布。"
@@ -493,6 +522,9 @@
         "mastering",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Provides a PyTorch toolkit of interpretable differentiable processors for effects research, mixing, mastering, and parameter matching.",
         "zh": "提供一组 PyTorch 可解释可微效果器，用于音效研究、混音、母带与参数匹配。"
@@ -535,6 +567,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Extends differentiable reverse engineering of recording mixes by pruning and refining audio processing graphs.",
         "zh": "通过剪枝与细化音频处理图，扩展录音混音的可微逆向工程方法。"
@@ -575,6 +610,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Uses differentiable dynamic equalization to learn studio-style speech enhancement with interpretable controls.",
         "zh": "利用可微动态均衡学习录音室风格的语音处理，并保留可解释控制。"
@@ -607,6 +645,9 @@
         "audio-effects",
         "representation",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Combines a six-band parametric equalizer and per-band compression for automatic EQ and reference-guided style transfer.",
@@ -642,6 +683,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Optimizes scattering matrices and absorption filters in a differentiable delay network against room impulse responses.",
         "zh": "依据房间冲激响应，优化可微散射延迟网络中的散射矩阵与吸声滤波器。"
@@ -675,6 +719,7 @@
       "areas": [
         "mastering"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Combines controllable music restoration and mastering in a single all-in-one generative system.",
         "zh": "在统一生成系统中结合可控音乐修复与母带处理。"
@@ -719,6 +764,7 @@
         "audio-effects",
         "representation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Extracts instrument-wise audio-effects representations directly from mixtures for retrieval and style transfer.",
         "zh": "直接从混合音频中提取分乐器音效表征，用于检索与风格迁移。"
@@ -764,6 +810,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Applies inference-time optimization to match music mastering processors with a differentiable effects chain.",
         "zh": "通过推理时优化调整可微分效果链，以匹配音乐母带处理器。"
@@ -808,6 +857,9 @@
         "audio-effects",
         "representation",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Adds a learned Gaussian prior to inference-time optimization for more reliable vocal-effects style transfer.",
@@ -855,6 +907,7 @@
         "representation",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Uses a differentiable vocal-effects model to capture and analyze distributions of professional production settings.",
         "zh": "使用可微分人声效果模型捕捉并分析专业制作参数的分布。"
@@ -893,6 +946,7 @@
         "evaluation",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Systematically compares differentiable black-box and gray-box approaches for modeling nonlinear audio effects.",
         "zh": "系统比较用于非线性音频效果建模的可微分黑盒与灰盒方法。"
@@ -935,6 +989,7 @@
         "evaluation",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Provides NablAFx, a common framework for developing and comparing differentiable black-box and gray-box audio-effect models.",
         "zh": "提供 NablAFx 统一框架，用于开发和比较可微分黑盒与灰盒音频效果模型。"
@@ -975,6 +1030,7 @@
       "areas": [
         "audio-effects"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Builds a synthetic-data framework for training broadly conditioned audio-effect and amplifier models.",
         "zh": "构建合成数据框架，用于训练具有广泛条件控制能力的音效与音箱模型。"
@@ -1021,6 +1077,9 @@
         "representation",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Performs reference-based effects style transfer by optimizing a differentiable processor chain at inference time.",
         "zh": "在推理阶段优化可微分处理器链，实现参考引导的音效风格迁移。"
@@ -1064,6 +1123,9 @@
         "representation",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Uses CLAP embeddings to translate text descriptions into controls for audio effects processing.",
         "zh": "利用 CLAP 嵌入将文本描述转换为音频效果处理控制。"
@@ -1106,6 +1168,9 @@
       "areas": [
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Provides frequency-domain differentiable audio modules for constructing and optimizing filters, reverberators, and processing systems.",
@@ -1156,6 +1221,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Introduces GRAFX, an open-source PyTorch library for constructing and optimizing differentiable audio processing graphs.",
         "zh": "提出开源 PyTorch 库 GRAFX，用于构建和优化可微分音频处理图。"
@@ -1196,6 +1264,9 @@
       "areas": [
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Predicts equalization settings for individual instrument tracks with convolutional neural networks.",
@@ -1238,6 +1309,7 @@
         "audio-effects",
         "representation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Conditions a one-to-many neural amplifier model on tone embeddings to support zero-shot amplifier modeling.",
         "zh": "利用音色嵌入控制一对多神经音箱模型，以支持零样本音箱建模。"
@@ -1277,6 +1349,9 @@
         "mixing",
         "representation",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Uses a differentiable mixing console to transfer the production style of a reference mix to multitrack audio.",
@@ -1323,6 +1398,9 @@
         "mixing",
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Searches and prunes differentiable music-mixing graphs to recover compact audio processing chains.",
@@ -1372,6 +1450,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Derives efficient gradients for time-varying all-pole filters and applies them to phasers, synthesis, and dynamic range compression.",
         "zh": "推导时变全极点滤波器的高效梯度，并应用于移相器、合成器和动态范围压缩。"
@@ -1418,6 +1497,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Makes feedback-delay-network delay lengths learnable through differentiable approximations for data-driven reverberator design.",
         "zh": "通过可微近似学习反馈延迟网络的延迟长度，用于数据驱动的混响器设计。"
@@ -1457,6 +1539,7 @@
       "areas": [
         "audio-effects"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Models analog dynamic range compressors with deep learning and state-space architectures that capture temporal behavior.",
         "zh": "使用深度学习与状态空间架构建模模拟动态范围压缩器的时序行为。"
@@ -1505,6 +1588,7 @@
       "areas": [
         "audio-effects"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Provides an end-to-end workflow for building controllable neural guitar amplifier models from recorded data.",
         "zh": "提供从录制数据构建可控神经吉他音箱模型的端到端流程。"
@@ -1542,6 +1626,9 @@
       "areas": [
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Optimizes feedback delay networks with differentiable frequency-domain processing to produce smooth, colorless reverberation.",
@@ -1583,6 +1670,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Combines an autoencoder with differentiable DSP to estimate audio effects and their controls without known settings.",
         "zh": "结合自编码器与可微 DSP，在未知设置的情况下估计音频效果及其控制参数。"
@@ -1620,6 +1710,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Combines a differentiable signal model with neural estimation for high-fidelity broadband audio denoising.",
         "zh": "结合可微信号模型与神经估计，实现高保真宽带音频降噪。"
@@ -1661,6 +1752,7 @@
         "representation",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Explores differentiable harmonic-plus-noise synthesis and autoencoding as creative vocal-timbre effects.",
         "zh": "探索可微谐波加噪声合成与自编码方法，用于创造性人声音色处理。"
@@ -1694,6 +1786,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Derives parameter gradients for a digital Moog ladder filter so it can be embedded in machine-learning systems.",
         "zh": "推导数字 Moog 梯形滤波器对控制参数的梯度，使其可嵌入机器学习系统。"
@@ -1727,6 +1820,7 @@
       "areas": [
         "audio-effects"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Introduces RemFX, a general-purpose system for removing multiple audio effects from processed signals.",
         "zh": "提出通用音效去除系统 RemFX，用于从已处理信号中移除多种音频效果。"
@@ -1776,6 +1870,7 @@
         "evaluation",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Reviews differentiable digital signal processing for audio synthesis, effects, and music-production applications.",
         "zh": "综述可微分数字信号处理在音频合成、音效与音乐制作中的应用。"
@@ -1814,6 +1909,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Builds an interpretable differentiable gray-box phaser whose modulation and filter behavior are learned from audio.",
         "zh": "构建可解释的可微灰盒移相器，从音频中学习调制信号与滤波行为。"
@@ -1860,6 +1956,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Optimizes a differentiable allpass filter to align phase between related audio signals while preserving magnitude response.",
         "zh": "通过优化可微全通滤波器，在保持幅度响应的同时对齐相关音频信号的相位。"
@@ -1901,6 +2000,9 @@
       "areas": [
         "mixing",
         "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Blindly estimates the structure and processing choices of an audio production graph from rendered audio.",
@@ -1946,6 +2048,7 @@
         "mixing",
         "representation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Learns contrastive representations that separate production effects from content for music mixing style transfer.",
         "zh": "通过对比学习分离制作效果与内容表征，用于音乐混音风格迁移。"
@@ -1987,6 +2090,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Estimates interpretable memoryless distortion curves by optimizing differentiable waveshaping models against target audio.",
         "zh": "通过目标音频优化可微波形整形模型，估计可解释的无记忆失真曲线。"
@@ -2018,6 +2124,9 @@
       "areas": [
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Develops a differentiable approximation to compressor attack and release ballistics for gradient-based parameter recovery.",
@@ -2052,6 +2161,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Introduces a differentiable processor for directly matching and adjusting short-term signal dynamics.",
         "zh": "提出可微处理器，用于直接匹配与调整音频信号的短时动态。"
@@ -2084,6 +2196,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Fits a lightweight, interpretable gray-box compressor model to measured dynamic-range-compression behavior.",
         "zh": "使用轻量、可解释的灰盒压缩器模型拟合实测动态范围压缩行为。"
@@ -2122,6 +2235,9 @@
       "venue": "ISMIR 2022",
       "areas": [
         "mixing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Develops automatic music mixing with deep learning while using out-of-domain processed audio for training.",
@@ -2165,6 +2281,9 @@
         "representation",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Transfers production style from reference audio by controlling a chain of differentiable audio effects.",
         "zh": "通过控制可微分音频效果链，将参考音频中的制作风格迁移到目标音频。"
@@ -2205,6 +2324,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Trains differentiable wave digital filters to emulate nonlinear diode circuits used in audio effects.",
         "zh": "训练可微波数字滤波器，以模拟音频效果器中的非线性二极管电路。"
@@ -2241,6 +2361,7 @@
       "areas": [
         "mastering"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Presents an end-to-end music remastering system trained with self-supervised and adversarial objectives.",
         "zh": "提出采用自监督与对抗学习目标训练的端到端音乐再母带系统。"
@@ -2284,6 +2405,7 @@
       "areas": [
         "audio-effects"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Studies neural recovery of clean audio from signals processed by nonlinear distortion effects.",
         "zh": "研究如何利用神经网络从经过非线性失真效果处理的信号中恢复干净音频。"
@@ -2324,6 +2446,9 @@
         "mixing",
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Generates automatic DJ transitions with differentiable equalizer and fader modules inside an adversarial model.",
@@ -2367,6 +2492,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Trains a neural model to design stable cascaded biquad filters directly from desired frequency responses.",
         "zh": "训练神经模型根据目标频率响应直接设计稳定的级联双二阶滤波器。"
@@ -2408,6 +2536,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Differentiates through explicit virtual-analog circuit models so physical parameters can be learned from audio.",
         "zh": "对显式虚拟模拟电路模型求导，使物理参数能够从音频中学习。"
@@ -2440,6 +2571,9 @@
         "mixing",
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Recovers a recording mix by optimizing the controls of a differentiable multitrack processing chain.",
@@ -2477,6 +2611,9 @@
       "areas": [
         "audio-effects",
         "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
       ],
       "summary": {
         "en": "Formulates artificial reverberation as differentiable signal processing and optimizes reverberator parameters from data.",
@@ -2520,6 +2657,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
       "summary": {
         "en": "Learns differentiable proxy models for black-box audio effects so their parameters can be optimized with gradients.",
         "zh": "为黑盒音频效果器学习可微代理模型，使效果参数能够通过梯度进行优化。"
@@ -2561,6 +2701,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Uses differentiable biquad filters inside a neural model to emulate nonlinear distortion with an interpretable filtering stage.",
         "zh": "在神经模型中使用可微双二阶滤波器，以带有可解释滤波阶段的结构模拟非线性失真。"
@@ -2597,6 +2738,9 @@
       "areas": [
         "audio-effects",
         "evaluation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
       ],
       "summary": {
         "en": "Uses convolutional neural networks to recognize guitar effects and estimate their parameter settings from audio.",
@@ -2642,6 +2786,9 @@
         "evaluation",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Introduces an end-to-end automatic mixing system built around a differentiable console of neural audio effects.",
         "zh": "提出由神经音频效果器构成的可微分混音台，用于端到端自动多轨混音。"
@@ -2681,6 +2828,9 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
       "summary": {
         "en": "Predicts parametric-equalizer settings with a neural network trained through differentiable biquad filters.",
         "zh": "通过可微双二阶滤波器训练神经网络，以预测参数均衡器设置。"
@@ -2714,6 +2864,7 @@
         "audio-effects",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Compares differentiable IIR topologies designed for inclusion in end-to-end machine-learning systems.",
         "zh": "比较可嵌入端到端机器学习系统的多种可微 IIR 滤波器结构。"
@@ -2749,6 +2900,7 @@
         "representation",
         "differentiable-processing"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Introduces differentiable digital signal processing modules that combine interpretable DSP structure with neural-network training.",
         "zh": "提出可微分数字信号处理模块，将可解释的 DSP 结构与神经网络训练结合。"
@@ -2787,6 +2939,7 @@
         "mixing",
         "evaluation"
       ],
+      "controlApproaches": [],
       "summary": {
         "en": "Introduces Slakh2100 and benchmarks its synthetic multitracks and stems for data-intensive music source separation.",
         "zh": "提出 Slakh2100，并通过基准实验评估其合成多轨与分轨数据在数据密集型音乐源分离中的作用。"
@@ -2823,6 +2976,9 @@
         "audio-effects",
         "spatial-audio",
         "evaluation"
+      ],
+      "controlApproaches": [
+        "derivative-free-optimization"
       ],
       "summary": {
         "en": "Fits a feedback delay network to target room impulse responses with feature extraction and genetic optimization, evaluated using OpenAIR responses.",

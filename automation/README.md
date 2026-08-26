@@ -3,7 +3,7 @@
 The paper scout follows a reviewable pipeline:
 
 1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API.
-2. DeepSeek classifies direct relevance and writes short English and Chinese summaries under the website taxonomy.
+2. DeepSeek classifies direct relevance, production-control approaches, and short English and Chinese summaries under the website taxonomy.
 3. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
 4. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.
 5. Only high-confidence new records and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request.

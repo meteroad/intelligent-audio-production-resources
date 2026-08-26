@@ -13,6 +13,18 @@ The website is backed by versioned static JSON. No API key or server-side API is
 
 Consumers should inspect the top-level `schemaVersion` before processing a catalogue. Additive fields may be introduced within a schema version. A breaking field or semantic change requires a new schema version and a migration path.
 
+## Papers v1
+
+Paper records include a `controlApproaches` array when the method obtains effect or production-control parameters at inference or target-matching time:
+
+| Identifier | Meaning |
+| --- | --- |
+| `gradient-based-optimization` | Target-specific iterative optimization through a differentiable processor or processing graph. |
+| `derivative-free-optimization` | Target-specific black-box, evolutionary, population-based, or other derivative-free search. |
+| `direct-prediction` | A trained model predicts controls or a processing graph without target-specific iterative optimization. |
+
+A paper may combine approaches, for example direct prediction followed by differentiable refinement. Ordinary gradient-based model training alone does not qualify as `gradient-based-optimization`. An empty array means that no listed approach applies or that the available evidence is not sufficiently clear.
+
 ## Projects v3
 
 Each project retains the existing bilingual description, areas, links, license label, and verification date. Version 3 adds four evidence-oriented sections:
@@ -86,7 +98,7 @@ Dataset relations are stored only in `datasets.json`; paper-to-dataset and proje
 
 ## Website behavior
 
-The project table supports compound filtering by text, area, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. Reset buttons clear their respective filters.
+The project table supports compound filtering by text, area, linked control approach, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, and control-approach filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
 
 Each project and dataset row contains a keyboard-focusable details button. Dataset details show access and license evidence, taxonomy, official links, and evidence-backed paper/project usage relations. Dataset, paper, and project dialogs expose the relation in both directions while keeping one canonical data record. Interface labels are localized in English and Chinese.
 

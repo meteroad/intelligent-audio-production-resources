@@ -374,13 +374,17 @@ h2 {
 }
 
 .project-controls {
-  grid-template-columns: minmax(220px, 1.4fr) repeat(4, minmax(140px, 1fr)) auto;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(5, minmax(120px, 1fr));
   align-items: end;
 }
 
 .dataset-controls {
   grid-template-columns: minmax(220px, 1.4fr) repeat(4, minmax(130px, 1fr)) auto;
   align-items: end;
+}
+
+.paper-controls {
+  grid-template-columns: minmax(240px, 1fr) repeat(2, minmax(180px, 220px));
 }
 
 .index-controls label {
@@ -514,6 +518,12 @@ td {
   white-space: nowrap;
 }
 
+.control-tag {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+}
+
 .link-list a {
   font-size: 12px;
   white-space: nowrap;
@@ -534,7 +544,62 @@ td {
 }
 
 .project-count {
-  margin: 10px 0 0;
+  margin: 0;
+}
+
+.index-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  min-height: 38px;
+  margin-top: 10px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.pagination[hidden] {
+  display: none;
+}
+
+.pagination-button {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.pagination-button:hover:not(:disabled) {
+  border-color: var(--text);
+}
+
+.pagination-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.pagination-button:disabled {
+  color: var(--line);
+  cursor: default;
+}
+
+.pagination-status {
+  min-width: 98px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
 }
 
 .dataset-usage {

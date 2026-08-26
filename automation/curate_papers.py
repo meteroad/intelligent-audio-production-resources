@@ -14,9 +14,14 @@ from pathlib import Path
 
 API_URL = "https://api.deepseek.com/chat/completions"
 DEFAULT_MODEL = "deepseek-v4-flash"
-EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "summary", "reason"}
+EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "controlApproaches", "summary", "reason"}
 ALLOWED_DECISIONS = {"include", "exclude"}
 ALLOWED_CONFIDENCE = {"high", "medium", "low"}
+ALLOWED_CONTROL_APPROACHES = {
+    "gradient-based-optimization",
+    "derivative-free-optimization",
+    "direct-prediction",
+}
 
 
 def load_json(path: Path) -> dict:
@@ -108,6 +113,13 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             raise ValueError(f"Invalid confidence for {source_id}")
         if not isinstance(decision.get("areas"), list):
             raise ValueError(f"Invalid areas for {source_id}")
+        control_approaches = decision.get("controlApproaches")
+        if (
+            not isinstance(control_approaches, list)
+            or len(control_approaches) != len(set(control_approaches))
+            or not set(control_approaches).issubset(ALLOWED_CONTROL_APPROACHES)
+        ):
+            raise ValueError(f"Invalid control approaches for {source_id}")
         summary = decision.get("summary")
         if not isinstance(summary, dict) or set(summary) != {"en", "zh"}:
             raise ValueError(f"Invalid summary for {source_id}")
@@ -117,6 +129,7 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             raise ValueError(f"Invalid reason for {source_id}")
         if decision["decision"] == "exclude":
             decision["areas"] = []
+            decision["controlApproaches"] = []
             decision["summary"] = {"en": "", "zh": ""}
 
     if seen_ids != candidate_ids:
