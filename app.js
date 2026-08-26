@@ -12,6 +12,10 @@ const translations = {
     "intro.eyebrow": "Open research index",
     "intro.title": "Intelligent Audio Production",
     "intro.lead": "A structured index of open-source projects, models, datasets, and recent research for intelligent audio effects and music production.",
+    "intro.statsLabel": "Catalogue coverage",
+    "intro.projectsLabel": "Projects",
+    "intro.datasetsLabel": "Datasets",
+    "intro.papersLabel": "Papers",
     "intro.scopeLabel": "Current scope",
     "intro.imageAlt": "A waveform illustrating intelligent audio production",
     "scope.title": "Field map",
@@ -23,6 +27,7 @@ const translations = {
     "scope.mastering": "Systems for loudness, dynamics, tonal balance, reference matching, and final-stage production.",
     "scope.evaluation": "Benchmarks, listening-test protocols, production metrics, and reproducibility tools.",
     "scope.spatialAudio": "Spatial mixing, positioning, rendering, and immersive production will be incorporated as the index expands.",
+    "scope.viewPapers": "View papers",
     "scope.noPapers": "No papers indexed yet",
     "projects.title": "Project index",
     "projects.description": "Entries distinguish source availability, checkpoints, licenses, and reproducibility. Projects are added after their public resources have been checked.",
@@ -226,6 +231,10 @@ const translations = {
     "intro.eyebrow": "开放研究索引",
     "intro.title": "智能音频制作",
     "intro.lead": "汇总智能音效与音乐制作领域的开源项目、模型、数据集、评测资源及近期研究。",
+    "intro.statsLabel": "索引收录规模",
+    "intro.projectsLabel": "个项目",
+    "intro.datasetsLabel": "个数据集",
+    "intro.papersLabel": "篇论文",
     "intro.scopeLabel": "当前范围",
     "intro.imageAlt": "用于说明智能音频制作的音频波形",
     "scope.title": "领域地图",
@@ -237,6 +246,7 @@ const translations = {
     "scope.mastering": "响度、动态、音色平衡、参考匹配与终端制作系统。",
     "scope.evaluation": "基准、听音实验流程、制作指标与可复现工具。",
     "scope.spatialAudio": "后续将逐步加入空间混音、声像定位、渲染与沉浸式制作。",
+    "scope.viewPapers": "查看论文",
     "scope.noPapers": "暂未收录论文",
     "projects.title": "项目索引",
     "projects.description": "条目分别记录源码、权重、许可证与可复现情况；只有公开资源经过核验后才会加入。",
@@ -435,6 +445,7 @@ const state = {
   datasets: [],
   resources: [],
   papers: [],
+  loaded: false,
   activeProjectId: null,
   activeDatasetId: null,
   activePaperId: null
@@ -466,6 +477,9 @@ const elements = {
   paperSearch: document.querySelector("#paper-search"),
   paperArea: document.querySelector("#paper-area-filter"),
   paperCount: document.querySelector("#paper-count"),
+  heroProjectCount: document.querySelector("#hero-project-count"),
+  heroDatasetCount: document.querySelector("#hero-dataset-count"),
+  heroPaperCount: document.querySelector("#hero-paper-count"),
   fieldPaperLinks: document.querySelectorAll(".field-map-link"),
   projectDialog: document.querySelector("#project-dialog"),
   projectDialogClose: document.querySelector("#project-dialog-close"),
@@ -660,14 +674,27 @@ function populateDatasetFilters() {
 function updateFieldPaperLinks() {
   elements.fieldPaperLinks.forEach((link) => {
     const area = link.dataset.paperArea;
-    const count = state.papers.filter((paper) => paper.areas.includes(area)).length;
     const areaName = t(`area.${area}`);
+    if (!state.loaded) {
+      const label = t("scope.viewPapers");
+      link.querySelector(".field-paper-count").textContent = label;
+      link.setAttribute("aria-label", `${label}: ${areaName}`);
+      return;
+    }
+    const count = state.papers.filter((paper) => paper.areas.includes(area)).length;
     const label = state.language === "zh"
       ? `查看 ${count} 篇论文`
       : `View ${count} ${count === 1 ? "paper" : "papers"}`;
     link.querySelector(".field-paper-count").textContent = label;
     link.setAttribute("aria-label", `${label}: ${areaName}`);
   });
+}
+
+function updateCatalogueStats() {
+  if (!state.loaded) return;
+  elements.heroProjectCount.textContent = state.projects.length;
+  elements.heroDatasetCount.textContent = state.datasets.length;
+  elements.heroPaperCount.textContent = state.papers.length;
 }
 
 function showPapersForArea(area) {
@@ -1349,6 +1376,7 @@ function applyTranslations() {
   populateProjectFilters();
   populateDatasetFilters();
   populateAreaFilter(elements.paperArea, state.papers);
+  updateCatalogueStats();
   updateFieldPaperLinks();
   if (state.projects.length) renderProjects();
   if (state.datasets.length) renderDatasets();
@@ -1397,6 +1425,7 @@ async function loadData() {
     state.datasets = datasetData.datasets;
     state.resources = resourceData.resources;
     state.papers = paperData.papers;
+    state.loaded = true;
     applyTranslations();
   } catch (_) {
     elements.projectRows.replaceChildren();

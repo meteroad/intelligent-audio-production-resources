@@ -636,9 +636,9 @@
       },
       "availability": {
         "source": {
-          "status": "not-found",
+          "status": "linked",
           "evidence": [
-            "https://github.com/zys711/Diff2Mix/blob/main/README.md"
+            "https://github.com/zys711/Diff2Mix"
           ]
         },
         "checkpoint": {
@@ -667,7 +667,7 @@
       "lastVerified": "2026-08-26",
       "links": [
         {
-          "label": "project",
+          "label": "source",
           "url": "https://github.com/zys711/Diff2Mix"
         },
         {
