@@ -23,6 +23,14 @@ Include primary evidence whenever possible: a publisher or conference page, DOI,
 
 Direct catalogue changes should preserve the existing JSON schema and keep English and Chinese summaries concise and factual. Do not infer a formal venue from a submission statement, label a project open source without checking its license, or reuse a software license as the license for its associated audio data.
 
+Preview website changes through a local HTTP server so the browser can load the JSON catalogue:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then open `http://localhost:8000/`.
+
 Before opening a pull request, run:
 
 ```bash
@@ -30,6 +38,12 @@ python3 automation/validate_data.py
 python3 -m unittest discover -s automation/tests -v
 node --check app.js
 git diff --check
+```
+
+For a deterministic URL review report that does not edit catalogue data, run:
+
+```bash
+python3 automation/check_links.py --output /tmp/link-check-report.json
 ```
 
 The maintainers may adjust wording, taxonomy, identifiers, or links so records remain consistent across the index.

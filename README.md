@@ -87,28 +87,6 @@ See [automation/README.md](automation/README.md) for configuration and review ru
 - [ ] Add a lightweight contributor review process for recurring community submissions.
 - [ ] Publish versioned catalogue snapshots and document a stable downstream data interface.
 
-## Local Preview
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000/`.
-
-Run the checks with:
-
-```bash
-python3 automation/validate_data.py
-python3 -m unittest discover -s automation/tests -v
-node --check app.js
-```
-
-Generate a deterministic URL review report without editing data:
-
-```bash
-python3 automation/check_links.py --output /tmp/link-check-report.json
-```
-
 ## License
 
 The site code, automation, and original catalogue content in this repository are released under the [MIT License](LICENSE). Linked papers, codebases, models, datasets, and trademarks remain subject to their respective owners' terms.
