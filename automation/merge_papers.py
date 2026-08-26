@@ -24,6 +24,7 @@ ALLOWED_CONTROL_APPROACHES = {
     "derivative-free-optimization",
     "direct-prediction",
 }
+ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
 
 
 def load_json(path: Path) -> dict:
@@ -53,6 +54,13 @@ def validate_decision(decision: dict, candidate_ids: set[str]) -> None:
             or not set(control_approaches).issubset(ALLOWED_CONTROL_APPROACHES)
         ):
             raise ValueError(f"Invalid control approaches for {source_id}: {control_approaches}")
+        track_scopes = decision.get("trackScopes", [])
+        if (
+            not isinstance(track_scopes, list)
+            or len(track_scopes) != len(set(track_scopes))
+            or not set(track_scopes).issubset(ALLOWED_TRACK_SCOPES)
+        ):
+            raise ValueError(f"Invalid track scopes for {source_id}: {track_scopes}")
         summary = decision.get("summary", {})
         for language in ("en", "zh"):
             value = summary.get(language, "").strip()
@@ -109,6 +117,7 @@ def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -
                 "venue": candidate.get("publicationVenue") or candidate.get("journalReference") or "arXiv",
                 "areas": decision["areas"],
                 "controlApproaches": decision["controlApproaches"],
+                "trackScopes": decision["trackScopes"],
                 "summary": decision["summary"],
                 "links": links,
                 "lastVerified": verified_date,

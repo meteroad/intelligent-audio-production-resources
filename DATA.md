@@ -25,6 +25,15 @@ Paper records include a `controlApproaches` array when the method obtains effect
 
 A paper may combine approaches, for example direct prediction followed by differentiable refinement. Ordinary gradient-based model training alone does not qualify as `gradient-based-optimization`. An empty array means that no listed approach applies or that the available evidence is not sufficiently clear.
 
+Paper records also include a `trackScopes` array:
+
+| Identifier | Meaning |
+| --- | --- |
+| `single-track` | The method processes, models, estimates, or controls one audio stream at a time. The stream may be an isolated stem, completed mix, or mastered stereo signal. |
+| `multitrack` | The method jointly consumes or processes multiple separately available tracks or stems. |
+
+A mixing-related method is not automatically `multitrack`: the paper must explicitly use separately available tracks or stems. Both identifiers may be present when both operating modes are supported; an empty array means the scope is not applicable or not sufficiently clear.
+
 ## Projects v3
 
 Each project retains the existing bilingual description, areas, links, license label, and verification date. Version 3 adds four evidence-oriented sections:
@@ -98,7 +107,7 @@ Dataset relations are stored only in `datasets.json`; paper-to-dataset and proje
 
 ## Website behavior
 
-The project table supports compound filtering by text, area, linked control approach, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, and control-approach filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
+The project table supports compound filtering by text, area, linked control approach, linked track scope, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, control-approach, and track-scope filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
 
 Each project and dataset row contains a keyboard-focusable details button. Dataset details show access and license evidence, taxonomy, official links, and evidence-backed paper/project usage relations. Dataset, paper, and project dialogs expose the relation in both directions while keeping one canonical data record. Interface labels are localized in English and Chinese.
 

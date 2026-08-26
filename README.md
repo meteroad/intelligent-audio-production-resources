@@ -12,7 +12,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 
 | Collection | Included information |
 | --- | --- |
-| Papers | Formal venues, paper and DOI links, concise English and Chinese summaries, control approaches, and associated open resources |
+| Papers | Formal venues, paper and DOI links, bilingual summaries, control approaches, track scopes, and associated open resources |
 | Projects | Source, checkpoint, inference, training, dataset, license, taxonomy, related-paper evidence, and last-verification dates |
 | Datasets | Contents, access conditions, data licenses, scale, and evidence-backed links to papers and projects that use each dataset |
 | Reference resources | Field bibliographies and research guides kept separate from runnable implementations |

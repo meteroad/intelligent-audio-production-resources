@@ -74,6 +74,16 @@ body:
         - Derivative-free optimization
         - Direct prediction (non-iterative)
 
+  - type: dropdown
+    id: track_scopes
+    attributes:
+      label: Audio-input track scope
+      description: Select multitrack only when the method jointly uses separately available tracks or stems.
+      multiple: true
+      options:
+        - Single-track / single-stream
+        - Multitrack
+
   - type: textarea
     id: resources
     attributes:

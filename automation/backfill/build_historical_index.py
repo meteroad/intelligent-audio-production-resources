@@ -56,6 +56,7 @@ def build_record(
         ),
         "areas": list(dict.fromkeys([*curation["areas"], *method_areas])),
         "controlApproaches": curation.get("controlApproaches", []),
+        "trackScopes": curation.get("trackScopes", []),
         "summary": curation["summary"],
         "links": links,
         "lastVerified": verified_at,

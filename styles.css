@@ -384,7 +384,7 @@ h2 {
 }
 
 .paper-controls {
-  grid-template-columns: minmax(240px, 1fr) repeat(2, minmax(180px, 220px));
+  grid-template-columns: minmax(240px, 1fr) repeat(3, minmax(160px, 200px));
 }
 
 .index-controls label {
@@ -521,6 +521,12 @@ td {
 .control-tag {
   border: 1px solid var(--line);
   background: var(--bg);
+  color: var(--text);
+}
+
+.track-tag {
+  border: 1px solid var(--line);
+  background: var(--soft);
   color: var(--text);
 }
 

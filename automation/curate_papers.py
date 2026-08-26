@@ -14,7 +14,7 @@ from pathlib import Path
 
 API_URL = "https://api.deepseek.com/chat/completions"
 DEFAULT_MODEL = "deepseek-v4-flash"
-EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "controlApproaches", "summary", "reason"}
+EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "controlApproaches", "trackScopes", "summary", "reason"}
 ALLOWED_DECISIONS = {"include", "exclude"}
 ALLOWED_CONFIDENCE = {"high", "medium", "low"}
 ALLOWED_CONTROL_APPROACHES = {
@@ -22,6 +22,7 @@ ALLOWED_CONTROL_APPROACHES = {
     "derivative-free-optimization",
     "direct-prediction",
 }
+ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
 
 
 def load_json(path: Path) -> dict:
@@ -120,6 +121,13 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             or not set(control_approaches).issubset(ALLOWED_CONTROL_APPROACHES)
         ):
             raise ValueError(f"Invalid control approaches for {source_id}")
+        track_scopes = decision.get("trackScopes")
+        if (
+            not isinstance(track_scopes, list)
+            or len(track_scopes) != len(set(track_scopes))
+            or not set(track_scopes).issubset(ALLOWED_TRACK_SCOPES)
+        ):
+            raise ValueError(f"Invalid track scopes for {source_id}")
         summary = decision.get("summary")
         if not isinstance(summary, dict) or set(summary) != {"en", "zh"}:
             raise ValueError(f"Invalid summary for {source_id}")
@@ -130,6 +138,7 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
         if decision["decision"] == "exclude":
             decision["areas"] = []
             decision["controlApproaches"] = []
+            decision["trackScopes"] = []
             decision["summary"] = {"en": "", "zh": ""}
 
     if seen_ids != candidate_ids:

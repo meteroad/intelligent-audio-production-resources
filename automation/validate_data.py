@@ -52,6 +52,7 @@ ALLOWED_CONTROL_APPROACHES = {
     "derivative-free-optimization",
     "direct-prediction",
 }
+ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
 ALLOWED_DATASET_CONTENT_TYPES = {
     "multitrack",
     "stems",
@@ -340,6 +341,10 @@ def validate_papers(path: Path) -> int:
             set(control_approaches).issubset(ALLOWED_CONTROL_APPROACHES),
             f"{paper_id}.controlApproaches contains unknown values",
         )
+        track_scopes = paper.get("trackScopes")
+        require(isinstance(track_scopes, list), f"{paper_id}.trackScopes must be a list")
+        require(len(track_scopes) == len(set(track_scopes)), f"{paper_id}.trackScopes contains duplicates")
+        require(set(track_scopes).issubset(ALLOWED_TRACK_SCOPES), f"{paper_id}.trackScopes contains unknown values")
         validate_localized(paper.get("summary"), f"{paper_id}.summary")
         validate_links(paper.get("links"), f"{paper_id}.links")
         require(

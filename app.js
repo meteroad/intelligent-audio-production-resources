@@ -51,6 +51,8 @@ const translations = {
     "projects.effectFilter": "Filter projects by reviewed effect",
     "projects.controlApproachFilter": "Filter projects by linked control approach",
     "projects.controlApproachesLabel": "Control approaches",
+    "projects.trackScopeFilter": "Filter projects by linked track scope",
+    "projects.trackScopesLabel": "Track scope",
     "projects.relatedPapersLabel": "Related papers",
     "projects.noRelatedPapers": "No related paper has been verified.",
     "projects.licenseLabel": "License",
@@ -112,6 +114,7 @@ const translations = {
     "papers.searchPlaceholder": "Title, author, or topic",
     "papers.areaFilter": "Filter papers by area",
     "papers.controlApproachFilter": "Filter papers by control approach",
+    "papers.trackScopeFilter": "Filter papers by track scope",
     "papers.loading": "Loading papers...",
     "papers.empty": "No papers match this filter.",
     "papers.loadError": "The paper index could not be loaded.",
@@ -127,6 +130,7 @@ const translations = {
     "papers.shortNameLabel": "Index name",
     "papers.openSourceAvailable": "Source available",
     "papers.controlApproachesLabel": "Control approach",
+    "papers.trackScopesLabel": "Track scope",
     "controls.search": "Search",
     "controls.area": "Area",
     "controls.allAreas": "All areas",
@@ -146,6 +150,8 @@ const translations = {
     "controls.allAccessTypes": "All access types",
     "controls.controlApproach": "Control approach",
     "controls.allControlApproaches": "All approaches",
+    "controls.trackScope": "Track scope",
+    "controls.allTrackScopes": "All track scopes",
     "controls.reset": "Reset",
     "pagination.projectsLabel": "Project pages",
     "pagination.datasetsLabel": "Dataset pages",
@@ -155,6 +161,8 @@ const translations = {
     "control.gradient-based-optimization": "Differentiable optimization",
     "control.derivative-free-optimization": "Derivative-free optimization",
     "control.direct-prediction": "Direct prediction",
+    "track.single-track": "Single-track",
+    "track.multitrack": "Multitrack",
     "common.inDevelopment": "In development",
     "common.later": "Later",
     "community.title": "Help improve the index",
@@ -284,6 +292,8 @@ const translations = {
     "projects.effectFilter": "按已核验效果筛选项目",
     "projects.controlApproachFilter": "按关联论文的参数获取方式筛选项目",
     "projects.controlApproachesLabel": "参数获取方式",
+    "projects.trackScopeFilter": "按关联论文的轨道范围筛选项目",
+    "projects.trackScopesLabel": "轨道范围",
     "projects.relatedPapersLabel": "关联论文",
     "projects.noRelatedPapers": "暂未核验到关联论文。",
     "projects.licenseLabel": "许可证",
@@ -345,6 +355,7 @@ const translations = {
     "papers.searchPlaceholder": "搜索标题、作者或主题",
     "papers.areaFilter": "按领域筛选论文",
     "papers.controlApproachFilter": "按参数获取方式筛选论文",
+    "papers.trackScopeFilter": "按轨道范围筛选论文",
     "papers.loading": "正在加载论文……",
     "papers.empty": "没有符合当前筛选条件的论文。",
     "papers.loadError": "论文索引加载失败。",
@@ -360,6 +371,7 @@ const translations = {
     "papers.shortNameLabel": "索引简称",
     "papers.openSourceAvailable": "已有源码",
     "papers.controlApproachesLabel": "参数获取方式",
+    "papers.trackScopesLabel": "轨道范围",
     "controls.search": "搜索",
     "controls.area": "领域",
     "controls.allAreas": "全部领域",
@@ -379,6 +391,8 @@ const translations = {
     "controls.allAccessTypes": "全部访问方式",
     "controls.controlApproach": "参数获取方式",
     "controls.allControlApproaches": "全部方式",
+    "controls.trackScope": "轨道范围",
+    "controls.allTrackScopes": "全部轨道范围",
     "controls.reset": "重置",
     "pagination.projectsLabel": "项目分页",
     "pagination.datasetsLabel": "数据集分页",
@@ -388,6 +402,8 @@ const translations = {
     "control.gradient-based-optimization": "可微分优化",
     "control.derivative-free-optimization": "非可微分优化",
     "control.direct-prediction": "直接预测（非迭代）",
+    "track.single-track": "单轨",
+    "track.multitrack": "多轨",
     "common.inDevelopment": "开发中",
     "common.later": "后续",
     "community.title": "参与共建",
@@ -489,6 +505,7 @@ const elements = {
   projectSearch: document.querySelector("#project-search"),
   projectArea: document.querySelector("#project-area-filter"),
   projectControl: document.querySelector("#project-control-filter"),
+  projectTrack: document.querySelector("#project-track-filter"),
   projectLicense: document.querySelector("#project-license-filter"),
   projectCapability: document.querySelector("#project-capability-filter"),
   projectStatus: document.querySelector("#project-status-filter"),
@@ -519,6 +536,7 @@ const elements = {
   paperSearch: document.querySelector("#paper-search"),
   paperArea: document.querySelector("#paper-area-filter"),
   paperControl: document.querySelector("#paper-control-filter"),
+  paperTrack: document.querySelector("#paper-track-filter"),
   paperCount: document.querySelector("#paper-count"),
   paperPagination: document.querySelector("#paper-pagination"),
   paperPrevious: document.querySelector("#paper-previous"),
@@ -543,6 +561,7 @@ const availabilityCapabilities = ["source", "checkpoint", "inference", "training
 const availabilityStatuses = ["linked", "documented", "tested", "gated", "restricted", "not-found", "not-applicable", "not-reviewed"];
 const datasetAccessStatuses = ["direct-download", "request", "registration", "restricted", "unavailable", "not-reviewed"];
 const controlApproaches = ["gradient-based-optimization", "derivative-free-optimization", "direct-prediction"];
+const trackScopes = ["single-track", "multitrack"];
 const PAGE_SIZE = 10;
 
 function getInitialLanguage() {
@@ -622,6 +641,25 @@ function createControlApproachList(values, tagName = "div") {
   const list = document.createElement(tagName);
   list.className = "tag-list control-approach-list";
   values.forEach((value) => list.append(createTextElement("span", "tag control-tag", t(`control.${value}`))));
+  return list;
+}
+
+function paperTrackScopes(paper) {
+  return Array.isArray(paper.trackScopes) ? paper.trackScopes : [];
+}
+
+function projectTrackScopes(project) {
+  const values = project.relations.paperIds.flatMap((paperId) => {
+    const paper = state.papers.find((item) => item.id === paperId);
+    return paper ? paperTrackScopes(paper) : [];
+  });
+  return [...new Set(values)];
+}
+
+function createTrackScopeList(values, tagName = "div") {
+  const list = document.createElement(tagName);
+  list.className = "tag-list track-scope-list";
+  values.forEach((value) => list.append(createTextElement("span", "tag track-tag", t(`track.${value}`))));
   return list;
 }
 
@@ -769,6 +807,15 @@ function populateProjectFilters() {
     "controls.allControlApproaches",
     (approach) => t(`control.${approach}`)
   );
+  const availableTrackScopes = trackScopes.filter((scope) => (
+    state.projects.some((project) => projectTrackScopes(project).includes(scope))
+  ));
+  populateSelect(
+    elements.projectTrack,
+    availableTrackScopes,
+    "controls.allTrackScopes",
+    (scope) => t(`track.${scope}`)
+  );
   populateProjectLicenseFilter();
   populateSelect(elements.projectCapability, availabilityCapabilities, "controls.allCapabilities", (capability) => t(`availability.${capability}`));
   populateSelect(elements.projectStatus, availabilityStatuses, "controls.allStatuses", (status) => t(`availability.status.${status}`));
@@ -836,6 +883,7 @@ function showPapersForArea(area) {
   elements.paperSearch.value = "";
   elements.paperArea.value = area;
   elements.paperControl.value = "all";
+  elements.paperTrack.value = "all";
   state.pages.papers = 1;
   renderPapers();
   document.querySelector("#papers").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -876,6 +924,7 @@ function renderProjects() {
   const query = elements.projectSearch.value.trim().toLocaleLowerCase(state.language);
   const selectedArea = elements.projectArea.value;
   const selectedControl = elements.projectControl.value;
+  const selectedTrack = elements.projectTrack.value;
   const selectedLicense = elements.projectLicense.value;
   const selectedCapability = elements.projectCapability.value;
   const selectedStatus = elements.projectStatus.value;
@@ -883,8 +932,10 @@ function renderProjects() {
   const selectedEffect = elements.projectEffect.value;
   const filtered = state.projects.filter((project) => {
     const approaches = projectControlApproaches(project);
+    const scopes = projectTrackScopes(project);
     const matchesArea = selectedArea === "all" || project.areas.includes(selectedArea);
     const matchesControl = selectedControl === "all" || approaches.includes(selectedControl);
+    const matchesTrack = selectedTrack === "all" || scopes.includes(selectedTrack);
     const matchesLicense = selectedLicense === "all" || projectLicenseFilterValue(project) === selectedLicense;
     const availabilityEntries = availabilityCapabilities.map((capability) => [capability, project.availability[capability]]);
     const matchesCapability = selectedCapability === "all"
@@ -914,11 +965,12 @@ function renderProjects() {
       ...(project.taxonomy?.tasks ?? []).map((task) => t(`task.${task}`)),
       ...(project.taxonomy?.effects ?? []).map((effect) => t(`effect.${effect}`)),
       ...approaches.map((approach) => t(`control.${approach}`)),
+      ...scopes.map((scope) => t(`track.${scope}`)),
       ...availabilityEntries.flatMap(([capability, entry]) => [t(`availability.${capability}`), t(`availability.status.${entry.status}`)])
     ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && matchesControl && matchesLicense && matchesCapability && matchesStatus && matchesTask && matchesEffect && searchable.includes(query);
+    return matchesArea && matchesControl && matchesTrack && matchesLicense && matchesCapability && matchesStatus && matchesTask && matchesEffect && searchable.includes(query);
   });
   const pagination = paginate(filtered, "projects");
 
@@ -1066,6 +1118,14 @@ function renderProjectDialog(project) {
       elements.projectDialogContent,
       t("projects.controlApproachesLabel"),
       createControlApproachList(approaches)
+    );
+  }
+  const scopes = projectTrackScopes(project);
+  if (scopes.length) {
+    appendProjectDialogSection(
+      elements.projectDialogContent,
+      t("projects.trackScopesLabel"),
+      createTrackScopeList(scopes)
     );
   }
   appendProjectDialogSection(elements.projectDialogContent, t("projects.relatedPapersLabel"), createRelatedPapers(project));
@@ -1402,6 +1462,9 @@ function createPaperEntry(paper) {
   if (paperControlApproaches(paper).length) {
     details.append(createControlApproachList(paperControlApproaches(paper), "span"));
   }
+  if (paperTrackScopes(paper).length) {
+    details.append(createTrackScopeList(paperTrackScopes(paper), "span"));
+  }
   if (paper.curation === "agent") {
     details.append(createTextElement("span", "agent-badge", t("papers.automated")));
   }
@@ -1460,6 +1523,13 @@ function renderPaperDialog(paper) {
       createControlApproachList(paperControlApproaches(paper))
     );
   }
+  if (paperTrackScopes(paper).length) {
+    appendProjectDialogSection(
+      elements.paperDialogContent,
+      t("papers.trackScopesLabel"),
+      createTrackScopeList(paperTrackScopes(paper))
+    );
+  }
   appendProjectDialogSection(
     elements.paperDialogContent,
     t("datasets.usedDatasetsLabel"),
@@ -1492,10 +1562,13 @@ function renderPapers() {
   const query = elements.paperSearch.value.trim().toLocaleLowerCase(state.language);
   const selectedArea = elements.paperArea.value;
   const selectedControl = elements.paperControl.value;
+  const selectedTrack = elements.paperTrack.value;
   const filtered = state.papers.filter((paper) => {
     const matchesArea = selectedArea === "all" || paper.areas.includes(selectedArea);
     const approaches = paperControlApproaches(paper);
+    const scopes = paperTrackScopes(paper);
     const matchesControl = selectedControl === "all" || approaches.includes(selectedControl);
+    const matchesTrack = selectedTrack === "all" || scopes.includes(selectedTrack);
     const searchable = [
       paper.shortName ?? "",
       paper.title,
@@ -1503,11 +1576,12 @@ function renderPapers() {
       paper.summary.en,
       paper.summary.zh,
       ...paper.areas.map((area) => t(`area.${area}`)),
-      ...approaches.map((approach) => t(`control.${approach}`))
+      ...approaches.map((approach) => t(`control.${approach}`)),
+      ...scopes.map((scope) => t(`track.${scope}`))
     ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && matchesControl && searchable.includes(query);
+    return matchesArea && matchesControl && matchesTrack && searchable.includes(query);
   });
   const pagination = paginate(filtered, "papers");
 
@@ -1548,6 +1622,12 @@ function applyTranslations() {
     controlApproaches.filter((approach) => state.papers.some((paper) => paperControlApproaches(paper).includes(approach))),
     "controls.allControlApproaches",
     (approach) => t(`control.${approach}`)
+  );
+  populateSelect(
+    elements.paperTrack,
+    trackScopes.filter((scope) => state.papers.some((paper) => paperTrackScopes(paper).includes(scope))),
+    "controls.allTrackScopes",
+    (scope) => t(`track.${scope}`)
   );
   updateCatalogueStats();
   updateFieldPaperLinks();
@@ -1630,6 +1710,7 @@ document.querySelectorAll("[data-language]").forEach((button) => {
 elements.projectSearch.addEventListener("input", () => resetPageAndRender("projects", renderProjects));
 elements.projectArea.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
 elements.projectControl.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
+elements.projectTrack.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
 elements.projectLicense.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
 elements.projectCapability.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
 elements.projectStatus.addEventListener("change", () => resetPageAndRender("projects", renderProjects));
@@ -1639,6 +1720,7 @@ elements.projectFilterReset.addEventListener("click", () => {
   elements.projectSearch.value = "";
   elements.projectArea.value = "all";
   elements.projectControl.value = "all";
+  elements.projectTrack.value = "all";
   elements.projectLicense.value = "all";
   elements.projectCapability.value = "all";
   elements.projectStatus.value = "all";
@@ -1662,6 +1744,7 @@ elements.datasetFilterReset.addEventListener("click", () => {
 elements.paperSearch.addEventListener("input", () => resetPageAndRender("papers", renderPapers));
 elements.paperArea.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.paperControl.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.paperTrack.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.projectPrevious.addEventListener("click", () => changePage("projects", -1, renderProjects));
 elements.projectNext.addEventListener("click", () => changePage("projects", 1, renderProjects));
 elements.datasetPrevious.addEventListener("click", () => changePage("datasets", -1, renderDatasets));
