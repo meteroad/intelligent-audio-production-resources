@@ -2674,6 +2674,158 @@
           "url": "https://github.com/DiffAPF/torchlpc"
         }
       ]
+    },
+    {
+      "id": "ethman-slakh",
+      "name": "Slakh",
+      "description": {
+        "en": "Official Slakh2100 dataset site, rendering code, support tools, examples, and source-separation benchmarks.",
+        "zh": "Slakh2100 官方数据集网站，提供渲染代码、配套工具、示例及音乐源分离基准。"
+      },
+      "areas": [
+        "mixing",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "automatic-mixing",
+          "evaluation"
+        ],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ethman/Slakh/blob/master/README.md"
+        ]
+      },
+      "license": {
+        "en": "Source-code license not verified; Slakh2100 data is CC-BY-4.0",
+        "zh": "源码许可证未核验；Slakh2100 数据采用 CC-BY-4.0",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ethman/Slakh"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ethman/Slakh/blob/master/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-1909-08494"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ethman/Slakh"
+        },
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1909.08494"
+        }
+      ]
+    },
+    {
+      "id": "ilias-audio-matchreverb",
+      "name": "MatchReverb",
+      "description": {
+        "en": "Code for matching OpenAIR room impulse responses with a feedback delay network using a genetic algorithm.",
+        "zh": "使用遗传算法和反馈延迟网络匹配 OpenAIR 房间脉冲响应的实现。"
+      },
+      "areas": [
+        "audio-effects",
+        "spatial-audio",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-modeling",
+          "parameter-estimation",
+          "evaluation"
+        ],
+        "effects": [
+          "reverberation"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license found",
+        "zh": "未发现仓库许可证",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ilias-audio/MatchReverb"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "aes-2022-matchreverb"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ilias-audio/MatchReverb"
+        },
+        {
+          "label": "paper",
+          "url": "https://www.aes.org/e-lib/browse.cfm?elib=21917"
+        }
+      ]
     }
   ]
 }

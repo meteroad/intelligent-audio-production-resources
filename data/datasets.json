@@ -388,8 +388,12 @@
         "evidenceUrl": "https://github.com/ethman/Slakh/blob/master/README.md"
       },
       "relations": {
-        "papers": [],
-        "projects": []
+        "papers": [
+          {"id": "arxiv-1909-08494", "evidenceUrl": "https://arxiv.org/abs/1909.08494"}
+        ],
+        "projects": [
+          {"id": "ethman-slakh", "evidenceUrl": "https://github.com/ethman/Slakh/blob/master/README.md"}
+        ]
       },
       "lastVerified": "2026-08-26",
       "links": [
@@ -428,8 +432,12 @@
         "evidenceUrl": "https://www.openair.hosted.york.ac.uk/?page_id=2"
       },
       "relations": {
-        "papers": [],
-        "projects": []
+        "papers": [
+          {"id": "aes-2022-matchreverb", "evidenceUrl": "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"}
+        ],
+        "projects": [
+          {"id": "ilias-audio-matchreverb", "evidenceUrl": "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"}
+        ]
       },
       "lastVerified": "2026-08-26",
       "links": [

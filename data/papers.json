@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-26",
   "papers": [
     {
       "id": "relfx-ismir-2026",
@@ -2764,6 +2764,81 @@
         }
       ],
       "lastVerified": "2026-08-25",
+      "curation": "manual"
+    },
+    {
+      "id": "arxiv-1909-08494",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:1909.08494"
+      },
+      "shortName": "Slakh",
+      "title": "Cutting Music Source Separation Some Slakh: A Dataset to Study the Impact of Training Data Quality and Quantity",
+      "authors": [
+        "Ethan Manilow",
+        "Gordon Wichern",
+        "Prem Seetharaman",
+        "Jonathan Le Roux"
+      ],
+      "year": 2019,
+      "published": "2019-09-18",
+      "venue": "WASPAA 2019",
+      "areas": [
+        "mixing",
+        "evaluation"
+      ],
+      "summary": {
+        "en": "Introduces Slakh2100 and benchmarks its synthetic multitracks and stems for data-intensive music source separation.",
+        "zh": "提出 Slakh2100，并通过基准实验评估其合成多轨与分轨数据在数据密集型音乐源分离中的作用。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1909.08494"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/ethman/Slakh"
+        }
+      ],
+      "lastVerified": "2026-08-26",
+      "curation": "manual"
+    },
+    {
+      "id": "aes-2022-matchreverb",
+      "source": {
+        "type": "manual",
+        "id": "aes:21917"
+      },
+      "shortName": "MatchReverb",
+      "title": "A Method for Matching Room Impulse Responses with Feedback Delay Networks",
+      "authors": [
+        "Ilias Ibnyahya",
+        "Joshua D. Reiss"
+      ],
+      "year": 2022,
+      "published": "2022-10-19",
+      "venue": "AES 153rd Convention, 2022",
+      "areas": [
+        "audio-effects",
+        "spatial-audio",
+        "evaluation"
+      ],
+      "summary": {
+        "en": "Fits a feedback delay network to target room impulse responses with feature extraction and genetic optimization, evaluated using OpenAIR responses.",
+        "zh": "结合特征提取与遗传优化，使反馈延迟网络匹配目标房间脉冲响应，并使用 OpenAIR 响应进行评估。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://www.aes.org/e-lib/browse.cfm?elib=21917"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/ilias-audio/MatchReverb"
+        }
+      ],
+      "lastVerified": "2026-08-26",
       "curation": "manual"
     }
   ]
