@@ -1168,6 +1168,18 @@ footer p {
   margin: 0;
 }
 
+.footer-meta {
+  display: grid;
+  justify-items: end;
+  gap: 4px;
+  text-align: right;
+}
+
+.footer-powered {
+  font-size: 11px;
+  opacity: 0.78;
+}
+
 @media (max-width: 720px) {
   .site-header,
   main,
@@ -1265,6 +1277,11 @@ footer p {
 
   footer {
     flex-direction: column;
+  }
+
+  .footer-meta {
+    justify-items: start;
+    text-align: left;
   }
 }
 
