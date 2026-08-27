@@ -384,7 +384,7 @@ h2 {
 }
 
 .paper-controls {
-  grid-template-columns: minmax(240px, 1fr) repeat(3, minmax(160px, 200px));
+  grid-template-columns: minmax(220px, 1fr) repeat(4, minmax(145px, 180px));
 }
 
 .index-controls label {
@@ -715,6 +715,25 @@ td {
   font-size: 14px;
 }
 
+.recognition-note {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  margin: -12px 0 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.recognition-note p {
+  margin: 0;
+}
+
+.recognition-note a {
+  flex: 0 0 auto;
+  font-weight: 600;
+}
+
 .paper-list {
   border-top: 1px solid var(--text);
 }
@@ -816,6 +835,32 @@ td {
   font-size: 10px;
   font-weight: 650;
   text-transform: uppercase;
+}
+
+.recognition-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.recognition-badge {
+  padding: 2px 7px;
+  border: 1px solid;
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.ai-highlight-badge {
+  border-color: #91aed3;
+  background: #f2f7fd;
+  color: #245b93;
+}
+
+.high-impact-badge {
+  border-color: #c3ad78;
+  background: #fbf8ef;
+  color: #755d23;
 }
 
 .paper-open-label {
@@ -945,6 +990,38 @@ td {
 .dialog-empty {
   margin: 0;
   font-size: 14px;
+}
+
+.recognition-details {
+  display: grid;
+  gap: 18px;
+}
+
+.recognition-detail {
+  display: grid;
+  justify-items: start;
+  gap: 7px;
+}
+
+.recognition-detail + .recognition-detail {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.recognition-detail-label,
+.recognition-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.recognition-detail-label {
+  font-weight: 650;
+}
+
+.recognition-detail a {
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .dialog-empty {
@@ -1230,6 +1307,12 @@ footer p {
   .paper-heading {
     grid-template-columns: 1fr;
     gap: 7px;
+  }
+
+  .recognition-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
   }
 
   .paper-meta {

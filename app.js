@@ -115,6 +115,7 @@ const translations = {
     "papers.areaFilter": "Filter papers by area",
     "papers.controlApproachFilter": "Filter papers by control approach",
     "papers.trackScopeFilter": "Filter papers by track scope",
+    "papers.recognitionFilter": "Filter papers by recognition",
     "papers.loading": "Loading papers...",
     "papers.empty": "No papers match this filter.",
     "papers.loadError": "The paper index could not be loaded.",
@@ -131,6 +132,18 @@ const translations = {
     "papers.openSourceAvailable": "Source available",
     "papers.controlApproachesLabel": "Control approach",
     "papers.trackScopesLabel": "Track scope",
+    "controls.recognition": "Recognition",
+    "controls.allRecognition": "All recognition",
+    "recognition.aiHighlight": "AI Highlight",
+    "recognition.highImpact": "High Impact",
+    "recognition.note": "AI Highlight is a rubric-based model assessment, not peer review. High Impact uses year-normalized Semantic Scholar citations; current-year papers are not ranked.",
+    "recognition.methodology": "Methodology",
+    "recognition.detailsLabel": "Recognition details",
+    "recognition.aiRationaleLabel": "AI assessment",
+    "recognition.impactLabel": "Citation impact",
+    "recognition.tooRecent": "This paper is too recent for year-normalized citation ranking.",
+    "recognition.notAssessed": "Citation impact was not assessed because no exact arXiv or DOI match was available.",
+    "recognition.semanticScholar": "View on Semantic Scholar",
     "controls.search": "Search",
     "controls.area": "Area",
     "controls.allAreas": "All areas",
@@ -357,6 +370,7 @@ const translations = {
     "papers.areaFilter": "按领域筛选论文",
     "papers.controlApproachFilter": "按参数获取方式筛选论文",
     "papers.trackScopeFilter": "按轨道范围筛选论文",
+    "papers.recognitionFilter": "按精选与影响力筛选论文",
     "papers.loading": "正在加载论文……",
     "papers.empty": "没有符合当前筛选条件的论文。",
     "papers.loadError": "论文索引加载失败。",
@@ -373,6 +387,18 @@ const translations = {
     "papers.openSourceAvailable": "已有源码",
     "papers.controlApproachesLabel": "参数获取方式",
     "papers.trackScopesLabel": "轨道范围",
+    "controls.recognition": "精选与影响力",
+    "controls.allRecognition": "全部标记",
+    "recognition.aiHighlight": "AI 精选",
+    "recognition.highImpact": "高影响力",
+    "recognition.note": "AI 精选是基于公开规则的模型评估，不代表同行评审；高影响力依据 Semantic Scholar 引用量进行同年份归一化，当年论文暂不排名。",
+    "recognition.methodology": "查看方法",
+    "recognition.detailsLabel": "精选与影响力",
+    "recognition.aiRationaleLabel": "AI 评估",
+    "recognition.impactLabel": "引用影响力",
+    "recognition.tooRecent": "该论文发表时间较近，暂不参与同年份引用排名。",
+    "recognition.notAssessed": "未找到可精确匹配的 arXiv 或 DOI 标识，因此未评估引用影响力。",
+    "recognition.semanticScholar": "前往 Semantic Scholar",
     "controls.search": "搜索",
     "controls.area": "领域",
     "controls.allAreas": "全部领域",
@@ -539,6 +565,7 @@ const elements = {
   paperArea: document.querySelector("#paper-area-filter"),
   paperControl: document.querySelector("#paper-control-filter"),
   paperTrack: document.querySelector("#paper-track-filter"),
+  paperRecognition: document.querySelector("#paper-recognition-filter"),
   paperCount: document.querySelector("#paper-count"),
   paperPagination: document.querySelector("#paper-pagination"),
   paperPrevious: document.querySelector("#paper-previous"),
@@ -663,6 +690,24 @@ function createTrackScopeList(values, tagName = "div") {
   list.className = "tag-list track-scope-list";
   values.forEach((value) => list.append(createTextElement("span", "tag track-tag", t(`track.${value}`))));
   return list;
+}
+
+function createRecognitionBadges(paper, tagName = "span") {
+  const list = document.createElement(tagName);
+  list.className = "recognition-badges";
+  if (paper.aiAssessment?.rating === "highlighted") {
+    list.append(createTextElement("span", "recognition-badge ai-highlight-badge", t("recognition.aiHighlight")));
+  }
+  if (paper.impact?.status === "high-impact") {
+    list.append(createTextElement("span", "recognition-badge high-impact-badge", t("recognition.highImpact")));
+  }
+  return list;
+}
+
+function matchesRecognition(paper, recognition) {
+  if (recognition === "ai-highlight") return paper.aiAssessment?.rating === "highlighted";
+  if (recognition === "high-impact") return paper.impact?.status === "high-impact";
+  return true;
 }
 
 function paginate(items, collection) {
@@ -886,6 +931,7 @@ function showPapersForArea(area) {
   elements.paperArea.value = area;
   elements.paperControl.value = "all";
   elements.paperTrack.value = "all";
+  elements.paperRecognition.value = "all";
   state.pages.papers = 1;
   renderPapers();
   document.querySelector("#papers").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1467,6 +1513,8 @@ function createPaperEntry(paper) {
   if (paperTrackScopes(paper).length) {
     details.append(createTrackScopeList(paperTrackScopes(paper), "span"));
   }
+  const recognitionBadges = createRecognitionBadges(paper);
+  if (recognitionBadges.childElementCount) details.append(recognitionBadges);
   if (paper.curation === "agent") {
     details.append(createTextElement("span", "agent-badge", t("papers.automated")));
   }
@@ -1532,6 +1580,67 @@ function renderPaperDialog(paper) {
       createTrackScopeList(paperTrackScopes(paper))
     );
   }
+  const recognitionSection = document.createElement("section");
+  recognitionSection.className = "paper-dialog-section recognition-details";
+  recognitionSection.append(createTextElement("h3", "", t("recognition.detailsLabel")));
+  if (paper.aiAssessment?.rating === "highlighted") {
+    const assessment = document.createElement("div");
+    assessment.className = "recognition-detail";
+    assessment.append(
+      createRecognitionBadges({aiAssessment: paper.aiAssessment, impact: {status: "standard"}}, "div"),
+      createTextElement("p", "recognition-detail-label", t("recognition.aiRationaleLabel")),
+      createTextElement("p", "paper-dialog-summary", localized(paper.aiAssessment.rationale)),
+      createTextElement(
+        "p",
+        "recognition-meta",
+        state.language === "zh"
+          ? `评估模型：${paper.aiAssessment.assessor} · 规则版本 ${paper.aiAssessment.rubricVersion} · ${paper.aiAssessment.assessedAt}`
+          : `Assessed by ${paper.aiAssessment.assessor} · rubric ${paper.aiAssessment.rubricVersion} · ${paper.aiAssessment.assessedAt}`
+      )
+    );
+    recognitionSection.append(assessment);
+  }
+  const impact = paper.impact;
+  const impactDetail = document.createElement("div");
+  impactDetail.className = "recognition-detail";
+  impactDetail.append(createTextElement("p", "recognition-detail-label", t("recognition.impactLabel")));
+  if (impact?.status === "high-impact" || impact?.status === "standard") {
+    if (impact.status === "high-impact") {
+      impactDetail.prepend(createRecognitionBadges({aiAssessment: {rating: "standard"}, impact}, "div"));
+    }
+    impactDetail.append(
+      createTextElement(
+        "p",
+        "paper-dialog-summary",
+        state.language === "zh"
+          ? `${impact.citationCount} 次引用 · ${impact.influentialCitationCount} 次高影响引用 · ${paper.year} 年收录论文中第 ${impact.yearRank}/${impact.cohortSize} 名`
+          : `${impact.citationCount} citations · ${impact.influentialCitationCount} influential · rank ${impact.yearRank}/${impact.cohortSize} among indexed ${paper.year} papers`
+      ),
+      createTextElement(
+        "p",
+        "recognition-meta",
+        state.language === "zh" ? `数据更新：${impact.measuredAt}` : `Measured ${impact.measuredAt}`
+      )
+    );
+    if (impact.sourceUrl) {
+      const source = document.createElement("a");
+      source.href = impact.sourceUrl;
+      source.target = "_blank";
+      source.rel = "noreferrer";
+      source.textContent = t("recognition.semanticScholar");
+      impactDetail.append(source);
+    }
+  } else {
+    impactDetail.append(
+      createTextElement(
+        "p",
+        "dialog-empty",
+        t(impact?.status === "too-recent" ? "recognition.tooRecent" : "recognition.notAssessed")
+      )
+    );
+  }
+  recognitionSection.append(impactDetail);
+  elements.paperDialogContent.append(recognitionSection);
   appendProjectDialogSection(
     elements.paperDialogContent,
     t("datasets.usedDatasetsLabel"),
@@ -1565,12 +1674,14 @@ function renderPapers() {
   const selectedArea = elements.paperArea.value;
   const selectedControl = elements.paperControl.value;
   const selectedTrack = elements.paperTrack.value;
+  const selectedRecognition = elements.paperRecognition.value;
   const filtered = state.papers.filter((paper) => {
     const matchesArea = selectedArea === "all" || paper.areas.includes(selectedArea);
     const approaches = paperControlApproaches(paper);
     const scopes = paperTrackScopes(paper);
     const matchesControl = selectedControl === "all" || approaches.includes(selectedControl);
     const matchesTrack = selectedTrack === "all" || scopes.includes(selectedTrack);
+    const matchesRecognitionFilter = matchesRecognition(paper, selectedRecognition);
     const searchable = [
       paper.shortName ?? "",
       paper.title,
@@ -1579,11 +1690,13 @@ function renderPapers() {
       paper.summary.zh,
       ...paper.areas.map((area) => t(`area.${area}`)),
       ...approaches.map((approach) => t(`control.${approach}`)),
-      ...scopes.map((scope) => t(`track.${scope}`))
+      ...scopes.map((scope) => t(`track.${scope}`)),
+      ...(paper.aiAssessment?.rating === "highlighted" ? [t("recognition.aiHighlight")] : []),
+      ...(paper.impact?.status === "high-impact" ? [t("recognition.highImpact")] : [])
     ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && matchesControl && matchesTrack && searchable.includes(query);
+    return matchesArea && matchesControl && matchesTrack && matchesRecognitionFilter && searchable.includes(query);
   });
   const pagination = paginate(filtered, "papers");
 
@@ -1747,6 +1860,7 @@ elements.paperSearch.addEventListener("input", () => resetPageAndRender("papers"
 elements.paperArea.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.paperControl.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.paperTrack.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.paperRecognition.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.projectPrevious.addEventListener("click", () => changePage("projects", -1, renderProjects));
 elements.projectNext.addEventListener("click", () => changePage("projects", 1, renderProjects));
 elements.datasetPrevious.addEventListener("click", () => changePage("datasets", -1, renderDatasets));

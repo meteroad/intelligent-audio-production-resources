@@ -53,6 +53,8 @@ ALLOWED_CONTROL_APPROACHES = {
     "direct-prediction",
 }
 ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
+AI_ASSESSMENT_RATINGS = {"highlighted", "standard"}
+IMPACT_STATUSES = {"high-impact", "standard", "too-recent", "not-assessed"}
 ALLOWED_DATASET_CONTENT_TYPES = {
     "multitrack",
     "stems",
@@ -125,6 +127,62 @@ def validate_localized(value: object, context: str) -> None:
     require(isinstance(value, dict), f"{context} must be an object")
     for language in ("en", "zh"):
         require(isinstance(value.get(language), str) and value[language].strip(), f"{context}.{language} is required")
+
+
+def validate_ai_assessment(value: object, context: str) -> None:
+    require(isinstance(value, dict), f"{context} must be an object")
+    require(
+        set(value) == {"rating", "rationale", "assessor", "rubricVersion", "assessedAt"},
+        f"{context} has invalid fields",
+    )
+    require(value.get("rating") in AI_ASSESSMENT_RATINGS, f"{context}.rating is invalid")
+    rationale = value.get("rationale")
+    require(isinstance(rationale, dict) and set(rationale) == {"en", "zh"}, f"{context}.rationale is invalid")
+    require(all(isinstance(rationale.get(language), str) for language in ("en", "zh")), f"{context}.rationale is invalid")
+    if value["rating"] == "highlighted":
+        for language in ("en", "zh"):
+            require(20 <= len(rationale[language].strip()) <= 500, f"{context}.rationale.{language} is invalid")
+    else:
+        require(not rationale["en"].strip() and not rationale["zh"].strip(), f"{context}.rationale must be empty")
+    require(value.get("assessor") in {"Codex", "DeepSeek"}, f"{context}.assessor is invalid")
+    require(value.get("rubricVersion") == "1.0", f"{context}.rubricVersion is invalid")
+    validate_date(value.get("assessedAt"), f"{context}.assessedAt")
+
+
+def validate_impact(value: object, context: str) -> None:
+    require(isinstance(value, dict), f"{context} must be an object")
+    require(
+        set(value)
+        == {
+            "status",
+            "citationCount",
+            "influentialCitationCount",
+            "yearRank",
+            "cohortSize",
+            "sourceUrl",
+            "measuredAt",
+            "methodVersion",
+        },
+        f"{context} has invalid fields",
+    )
+    require(value.get("status") in IMPACT_STATUSES, f"{context}.status is invalid")
+    for field in ("citationCount", "influentialCitationCount", "yearRank", "cohortSize"):
+        number = value.get(field)
+        require(number is None or isinstance(number, int) and number >= 0, f"{context}.{field} is invalid")
+    source_url = value.get("sourceUrl")
+    require(source_url is None or isinstance(source_url, str), f"{context}.sourceUrl is invalid")
+    if source_url is not None:
+        validate_https_url(source_url, f"{context}.sourceUrl")
+    measured_at = value.get("measuredAt")
+    require(measured_at is None or isinstance(measured_at, str), f"{context}.measuredAt is invalid")
+    if measured_at is not None:
+        validate_date(measured_at, f"{context}.measuredAt")
+    require(value.get("methodVersion") == "semantic-scholar-year-cohort-v1", f"{context}.methodVersion is invalid")
+    if value["status"] in {"high-impact", "standard"}:
+        require(value["citationCount"] is not None, f"{context}.citationCount is required")
+        require(value["yearRank"] is not None and value["yearRank"] >= 1, f"{context}.yearRank is required")
+        require(value["cohortSize"] is not None and value["cohortSize"] >= 1, f"{context}.cohortSize is required")
+        require(value["sourceUrl"] is not None and value["measuredAt"] is not None, f"{context} evidence is required")
 
 
 def validate_areas(areas: object, context: str) -> None:
@@ -345,6 +403,8 @@ def validate_papers(path: Path) -> int:
         require(isinstance(track_scopes, list), f"{paper_id}.trackScopes must be a list")
         require(len(track_scopes) == len(set(track_scopes)), f"{paper_id}.trackScopes contains duplicates")
         require(set(track_scopes).issubset(ALLOWED_TRACK_SCOPES), f"{paper_id}.trackScopes contains unknown values")
+        validate_ai_assessment(paper.get("aiAssessment"), f"{paper_id}.aiAssessment")
+        validate_impact(paper.get("impact"), f"{paper_id}.impact")
         validate_localized(paper.get("summary"), f"{paper_id}.summary")
         validate_links(paper.get("links"), f"{paper_id}.links")
         require(

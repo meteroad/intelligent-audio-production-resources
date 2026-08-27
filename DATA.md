@@ -34,6 +34,16 @@ Paper records also include a `trackScopes` array:
 
 A mixing-related method is not automatically `multitrack`: the paper must explicitly use separately available tracks or stems. Both identifiers may be present when both operating modes are supported; an empty array means the scope is not applicable or not sufficiently clear.
 
+### Recognition metadata
+
+Paper recognition uses two independent signals. Neither is an aggregate score or a ranking of research quality.
+
+`aiAssessment` records a conservative editorial assessment made from public paper metadata. `highlighted` is assigned only when the available evidence supports all four rubric dimensions: a meaningful contribution, coherent methodology, substantive empirical validation, and practical or reproducibility value. `standard` is the default and is not a negative judgment. Only highlighted records carry a public bilingual rationale. `assessor`, `rubricVersion`, and `assessedAt` make each assessment traceable. AI Highlight is not peer review.
+
+`impact` records citation metadata obtained through an exact arXiv or DOI lookup in Semantic Scholar. For each publication year before the current year, `high-impact` means that the paper is in the top `ceil(20%)` of citation counts among exactly matched papers from that year in this index, including ties, and has at least five citations. `yearRank` and `cohortSize` expose the comparison cohort. Current-year papers are `too-recent`; papers without an exact identifier match are `not-assessed`. Citation metadata is refreshed when it is at least 28 days old and every automated change remains subject to pull-request review.
+
+The method is intentionally scoped to this catalogue. `high-impact` does not claim a field-wide percentile, citation counts are time-dependent, and citation impact is not a substitute for technical assessment. GitHub stars are not used as a scholarly impact signal.
+
 ## Projects v3
 
 Each project retains the existing bilingual description, areas, links, license label, and verification date. Version 3 adds four evidence-oriented sections:
@@ -107,7 +117,7 @@ Dataset relations are stored only in `datasets.json`; paper-to-dataset and proje
 
 ## Website behavior
 
-The project table supports compound filtering by text, area, linked control approach, linked track scope, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, control-approach, and track-scope filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
+The project table supports compound filtering by text, area, linked control approach, linked track scope, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, control-approach, track-scope, AI Highlight, and High Impact filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
 
 Each project and dataset row contains a keyboard-focusable details button. Dataset details show access and license evidence, taxonomy, official links, and evidence-backed paper/project usage relations. Dataset, paper, and project dialogs expose the relation in both directions while keeping one canonical data record. Interface labels are localized in English and Chinese.
 

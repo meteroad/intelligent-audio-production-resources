@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-27",
   "papers": [
     {
       "id": "relfx-ismir-2026",
@@ -51,7 +51,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Introduces relative audio-effect representations without requiring dry references, with a bidirectional design and extensive retrieval and style-transfer evaluation.",
+          "zh": "提出无需干声参考的相对音效表征，并通过双向设计及较完整的检索与风格迁移实验进行验证。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2608-05513",
@@ -92,7 +112,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "agent"
+      "curation": "agent",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/98a9518fb8f38ff4055e2c070f2b4c66a403c6d0",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2608-05506",
@@ -135,7 +175,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "agent"
+      "curation": "agent",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/62e7443fcfd795795d401d2b4dd6d5883a35c20c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2608-05442",
@@ -183,7 +243,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "agent"
+      "curation": "agent",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Combines generative control with differentiable audio effects to provide a coherent and controllable approach to multitrack music mixing.",
+          "zh": "将生成式控制与可微分音效结合，为多轨音乐混音提供了完整且可控的方法。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/3ffc7ad8797b5a074d9d3a60e23f9a713f5693b7",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2608-00667",
@@ -222,7 +302,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "agent"
+      "curation": "agent",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/6224bba1bec4a595031ff2d5ead2ac321f007fd7",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2608-00656",
@@ -259,7 +359,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "agent"
+      "curation": "agent",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/d5fec3e3fc7229432c80f9f33e18ca479102ef98",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2607-19645",
@@ -297,7 +417,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "agent"
+      "curation": "agent",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/76c1687bdd24023c389ac24532e82351efb60c17",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2606-22005",
@@ -349,7 +489,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/5f7daaa29669d4222b8333952673c2931ebcad57",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2601-04867",
@@ -392,7 +552,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/c7fb925d034127124f5a159d2e79432eb6fefebb",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2512-01559",
@@ -444,7 +624,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 9,
+        "influentialCitationCount": 0,
+        "yearRank": 4,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/95de1f0022c638d99f7a5efee51bfef549d1ef1b",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2511-20380",
@@ -484,7 +684,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/cd63e97b41adeae7901083ad2974243195060b9c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2511-08040",
@@ -534,7 +754,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Models a conditional distribution over professional multitrack mixes while supporting arbitrary unlabeled tracks and both objective and listening-test evaluation.",
+          "zh": "对专业多轨混音的条件分布进行建模，可处理任意未标注轨道，并同时提供客观评价与听感实验。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 5,
+        "influentialCitationCount": 2,
+        "yearRank": 5,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/04f0069c0a9c0169f76a98f64eda33f2998a2080",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-difffx-ismir-2025",
@@ -579,7 +819,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2509-15948",
@@ -631,7 +891,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "yearRank": 7,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/d5512c886fc2d6cd69cf4d0cbfc8a46d2419895e",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-diff-deq-eusipco-2025",
@@ -669,7 +949,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-ndmp-dafx-2025",
@@ -708,7 +1008,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-sdn-dafx-2025",
@@ -748,7 +1068,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2508-03448",
@@ -793,7 +1133,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 11,
+        "influentialCitationCount": 1,
+        "yearRank": 2,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/68fcad1ebcc5787a75e6d5ab4d7eb6beebbf9945",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2507-02273",
@@ -841,7 +1201,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Extracts instrument-wise effect representations directly from mixtures and validates them on retrieval and style-transfer tasks.",
+          "zh": "直接从混合音频中提取分乐器音效表征，并在检索与风格迁移任务上进行验证。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 13,
+        "influentialCitationCount": 1,
+        "yearRank": 1,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/3efa251891e186f3015f3396e55d8af3517dd55a",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2506-16889",
@@ -892,7 +1272,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "yearRank": 7,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/9829f5a588503e1531f9e434f2f786982ded8178",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2505-11315",
@@ -943,7 +1343,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "yearRank": 7,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/0fa94ae7961867bc7cbeb7179717df21a6b82b2f",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2504-14735",
@@ -989,7 +1409,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 5,
+        "influentialCitationCount": 0,
+        "yearRank": 5,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/ad041a4fbdb334599603f161fd37d2b22cd3f0af",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2502-14405",
@@ -1035,7 +1475,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 11,
+        "influentialCitationCount": 2,
+        "yearRank": 2,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/a3ee4346326461e88e744669f8e0df44630b3f30",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2502-11668",
@@ -1081,7 +1541,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Provides a reusable unified framework for differentiable black-box and gray-box modeling across multiple audio-effect families.",
+          "zh": "为多类音频效果器的可微分黑盒与灰盒建模提供了可复用的统一框架。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "yearRank": 7,
+        "cohortSize": 11,
+        "sourceUrl": "https://www.semanticscholar.org/paper/50dd299ba5c775743e956c5e125ce0324abf4d7b",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2411-14972",
@@ -1125,7 +1605,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Provides a scalable synthetic-data framework with broad device coverage and transfer experiments for audio-effect foundation modeling.",
+          "zh": "面向音效基础模型提供可扩展的合成数据框架，并覆盖多种设备及迁移实验。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 5,
+        "influentialCitationCount": 0,
+        "yearRank": 13,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/fde001780947b52d23f87072f2c2f60eb0f042c9",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2410-21233",
@@ -1177,7 +1677,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Connects learned style embeddings to interpretable differentiable processor control through inference-time optimization without parameter labels.",
+          "zh": "通过推理时优化将学习到的风格表征连接到可解释的可微分效果器控制，且无需参数标签。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 27,
+        "influentialCitationCount": 5,
+        "yearRank": 1,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/18446eb3348f6601d108315f01e7c60c88e4fa23",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2409-18847",
@@ -1226,7 +1746,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 19,
+        "influentialCitationCount": 1,
+        "yearRank": 3,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/a97b19f498d2b69d64fdab4f4e5f729db17a0e02",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2409-08723",
@@ -1279,7 +1819,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Offers a reusable frequency-domain differentiable processing library spanning filters, reverberation, and system optimization.",
+          "zh": "提供可复用的频域可微分处理库，覆盖滤波、混响与系统优化等任务。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 10,
+        "influentialCitationCount": 0,
+        "yearRank": 9,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/bff7da8ac59d49a0595d0cebe799fae26fca11a0",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2408-03204",
@@ -1331,7 +1891,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Introduces an open-source graph-level differentiable audio-processing library for flexible production-chain construction and optimization.",
+          "zh": "提供开源的图级可微分音频处理库，支持灵活构建和优化制作处理链。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 9,
+        "influentialCitationCount": 0,
+        "yearRank": 10,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/7ed36286e5031430054e2fe7c6954f1ba9016287",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2407-16691",
@@ -1374,7 +1954,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "yearRank": 14,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/95c2b03e298b74801bcffb61081f1a07ea492555",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2407-10646",
@@ -1419,7 +2019,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 14,
+        "influentialCitationCount": 2,
+        "yearRank": 7,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/0547245687a15f472b1c9d759eaedf7d2b2b963c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2407-08889",
@@ -1469,7 +2089,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Demonstrates end-to-end reference mixing-style transfer with an interpretable differentiable console and broad experimental evaluation.",
+          "zh": "利用可解释的可微分调音台实现端到端参考混音风格迁移，并开展较全面的实验评价。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 21,
+        "influentialCitationCount": 1,
+        "yearRank": 2,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/c69db516ebe81d9c7050587fb28e99bd38a41569",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2406-01049",
@@ -1525,7 +2165,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 11,
+        "influentialCitationCount": 0,
+        "yearRank": 8,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/d48273dc852207454a298c0054b38effd09b5d9c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2404-07970",
@@ -1577,7 +2237,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 19,
+        "influentialCitationCount": 0,
+        "yearRank": 3,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/2a3ca2ea61f0a20a9ede746c8a9533dcaeece063",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2404-00082",
@@ -1621,7 +2301,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 16,
+        "influentialCitationCount": 2,
+        "yearRank": 5,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/9ee2c1f37d6c934adf1dbe2bafd5794f923aedb8",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2403-16331",
@@ -1672,7 +2372,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/c70fef3d235ffedeaab2b2a6a2bfa2abfd59019e",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2403-08559",
@@ -1716,7 +2436,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 15,
+        "influentialCitationCount": 0,
+        "yearRank": 6,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/5ee00a39651c39eac59ff92db9f12c99cfc108e2",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2402-11216",
@@ -1764,7 +2504,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/448241a365485e15ba303bd13ed5ab8341c05ba7",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2310-11781",
@@ -1806,7 +2566,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 14,
+        "influentialCitationCount": 2,
+        "yearRank": 4,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/ef0623c780654afc012d637204d1cc1ea8335fb2",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2310-11364",
@@ -1851,7 +2631,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "yearRank": 6,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/51b3f509cb0266645e13436efe67cb2fed9ed279",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-vocal-timbre-ddsp-dafx-2023",
@@ -1888,7 +2688,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-moog-dafx-2023",
@@ -1925,7 +2745,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2308-16177",
@@ -1974,7 +2814,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 22,
+        "influentialCitationCount": 4,
+        "yearRank": 2,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/8c25234ee479eeea370d33a83533ba73384b82f9",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2308-15422",
@@ -2017,7 +2877,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 53,
+        "influentialCitationCount": 4,
+        "yearRank": 1,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/e08467f2e3dbca0aab191dfc46f9800bd9fc1c62",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2306-01332",
@@ -2067,7 +2947,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 13,
+        "influentialCitationCount": 1,
+        "yearRank": 5,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/89ffb176ff1802c9f742926cab474a3e7bddadd8",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2306-00860",
@@ -2115,7 +3015,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": 7,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/e193b95b2428f4054982265b781c8252eb16a08c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2303-08610",
@@ -2163,7 +3083,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 18,
+        "influentialCitationCount": 2,
+        "yearRank": 3,
+        "cohortSize": 7,
+        "sourceUrl": "https://www.semanticscholar.org/paper/333cf970eac8ae940eedaccb9124e1b78a17b57d",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2211-02247",
@@ -2212,7 +3152,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Combines contrastive production-effect representations with multitrack and mixture-wise transfer in a unified mixing-style framework.",
+          "zh": "在统一的混音风格框架中结合制作音效对比表征、多轨迁移与混合音频迁移。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 39,
+        "influentialCitationCount": 3,
+        "yearRank": 3,
+        "cohortSize": 5,
+        "sourceUrl": "https://www.semanticscholar.org/paper/ba258ff1190e48059f2e2da68f4ec1026a12b63f",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-waveshapers-aes-2022",
@@ -2251,7 +3211,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-drc-ballistics-aes-2022",
@@ -2289,7 +3269,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-microdynamics-dafx-2022",
@@ -2328,7 +3328,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-grey-box-drc-dafx-2022",
@@ -2368,7 +3388,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2208-11428",
@@ -2417,7 +3457,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 49,
+        "influentialCitationCount": 1,
+        "yearRank": 2,
+        "cohortSize": 5,
+        "sourceUrl": "https://www.semanticscholar.org/paper/923c55abf7e5141c511b052e186961a14009c0f1",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2207-08759",
@@ -2465,7 +3525,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Establishes self-supervised audio-effect style transfer through differentiable processors while retaining interpretable effect controls.",
+          "zh": "通过可微分效果器实现自监督音效风格迁移，同时保留可解释的效果控制。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 73,
+        "influentialCitationCount": 9,
+        "yearRank": 1,
+        "cohortSize": 5,
+        "sourceUrl": "https://www.semanticscholar.org/paper/c0bd83aaf15f086275d1c29fd1f829799ffc3192",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-wdfs-smc-2022",
@@ -2505,7 +3585,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2202-08520",
@@ -2549,7 +3649,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 16,
+        "influentialCitationCount": 1,
+        "yearRank": 4,
+        "cohortSize": 5,
+        "sourceUrl": "https://www.semanticscholar.org/paper/180c86f42f4a98f7b0eb0b396302010f3bbd8e9b",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2202-01664",
@@ -2592,7 +3712,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 16,
+        "influentialCitationCount": 1,
+        "yearRank": 4,
+        "cohortSize": 5,
+        "sourceUrl": "https://www.semanticscholar.org/paper/997d7e31cfa56afe242eabb472c85e460927387f",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2110-06525",
@@ -2643,7 +3783,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 13,
+        "influentialCitationCount": 1,
+        "yearRank": 6,
+        "cohortSize": 6,
+        "sourceUrl": "https://www.semanticscholar.org/paper/21a2c21fd922323819eb87a4ce75b9e36d6269e6",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2110-03691",
@@ -2691,7 +3851,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 26,
+        "influentialCitationCount": 0,
+        "yearRank": 4,
+        "cohortSize": 6,
+        "sourceUrl": "https://www.semanticscholar.org/paper/96d43160c5cc2313f97e18067633812644f83a21",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-white-box-dafx-2021",
@@ -2730,7 +3910,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-reverse-engineering-mix-jasa-2021",
@@ -2773,7 +3973,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 21,
+        "influentialCitationCount": 0,
+        "yearRank": 5,
+        "cohortSize": 6,
+        "sourceUrl": "https://www.semanticscholar.org/paper/70a2eb398ba5b4b624cb2dc5f96a6b835e9a397a",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2105-13940",
@@ -2820,7 +4040,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 41,
+        "influentialCitationCount": 6,
+        "yearRank": 1,
+        "cohortSize": 6,
+        "sourceUrl": "https://www.semanticscholar.org/paper/df43c5c2a589eda1e2eabf9172a1c648c8feddb7",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2105-04752",
@@ -2868,7 +4108,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Makes black-box audio effects trainable through differentiable proxy and gradient-approximation strategies across practical production applications.",
+          "zh": "通过可微分代理与梯度近似使黑盒音效可训练，并覆盖多种实际音频制作应用。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 41,
+        "influentialCitationCount": 4,
+        "yearRank": 1,
+        "cohortSize": 6,
+        "sourceUrl": "https://www.semanticscholar.org/paper/a3ce75ccbd335a3a98d74e65a138daa9443fa232",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2103-08709",
@@ -2909,7 +4169,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 34,
+        "influentialCitationCount": 5,
+        "yearRank": 3,
+        "cohortSize": 6,
+        "sourceUrl": "https://www.semanticscholar.org/paper/c6244b07f129146c579fe09846b5ab8f4f769e17",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2012-03216",
@@ -2956,7 +4236,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 21,
+        "influentialCitationCount": 3,
+        "yearRank": 3,
+        "cohortSize": 3,
+        "sourceUrl": "https://www.semanticscholar.org/paper/6cf011f63ab51862d24de7781ad61877ae5ffb93",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2010-10291",
@@ -3006,7 +4306,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Presents an early end-to-end automatic multitrack mixing system built around a differentiable mixing console.",
+          "zh": "较早提出以可微分调音台为核心的端到端自动多轨混音系统。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 75,
+        "influentialCitationCount": 2,
+        "yearRank": 2,
+        "cohortSize": 3,
+        "sourceUrl": "https://www.semanticscholar.org/paper/20a1b599f0967415e26e26d6115af8900547bce9",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-neural-peq-dafx-2020",
@@ -3043,7 +4363,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "manual-differentiable-iir-dafx-2020",
@@ -3080,7 +4420,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-2001-04643",
@@ -3123,7 +4483,27 @@
         }
       ],
       "lastVerified": "2026-08-25",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Establishes a foundational framework that integrates interpretable digital signal-processing modules with deep learning and supports broad downstream use.",
+          "zh": "建立将可解释数字信号处理模块与深度学习结合的基础框架，并支持广泛的后续应用。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 510,
+        "influentialCitationCount": 78,
+        "yearRank": 1,
+        "cohortSize": 3,
+        "sourceUrl": "https://www.semanticscholar.org/paper/468aa95cfdf66da9fc3dc6a1b9042a52a6ec99c6",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "arxiv-1909-08494",
@@ -3165,7 +4545,27 @@
         }
       ],
       "lastVerified": "2026-08-26",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 194,
+        "influentialCitationCount": 13,
+        "yearRank": 1,
+        "cohortSize": 1,
+        "sourceUrl": "https://www.semanticscholar.org/paper/6235de880364a1c4dedd6b446a7dd55f925a95fb",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     },
     {
       "id": "aes-2022-matchreverb",
@@ -3208,7 +4608,27 @@
         }
       ],
       "lastVerified": "2026-08-26",
-      "curation": "manual"
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
     }
   ]
 }

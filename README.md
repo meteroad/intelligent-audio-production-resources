@@ -33,7 +33,8 @@ Spatial audio is listed as a future extension rather than mixed into the current
 - Paper titles, authors, dates, and links are anchored to primary publication sources where available.
 - Formal venues are shown only when publication evidence can be verified.
 - Project source, checkpoint, dataset, taxonomy, and license claims are recorded with first-party repository or official-documentation evidence.
-- The weekly paper scout proposes reviewable changes; AI-screened candidates are never published directly.
+- The weekly paper scout proposes reviewable changes; AI-screened candidates and AI Highlight assessments are never published directly.
+- AI Highlight and year-normalized citation impact remain separate, documented signals rather than a combined score.
 - Every public entry remains open to correction through a structured issue or pull request.
 
 ## Contribute
@@ -62,7 +63,7 @@ See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and 
 
 ## Automation
 
-The weekly paper scout searches arXiv, screens candidates with a configured language model, refreshes formal venue and DOI metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates directly.
+The weekly paper scout searches arXiv, screens candidates with a configured language model, proposes conservative AI Highlight assessments, refreshes formal venue, DOI, and citation metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates directly.
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
 

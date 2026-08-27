@@ -2,6 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
+from datetime import date
 from pathlib import Path
 
 
@@ -12,6 +13,7 @@ import discover_papers  # noqa: E402
 import curate_papers  # noqa: E402
 import merge_papers  # noqa: E402
 import publication_metadata  # noqa: E402
+import refresh_impact  # noqa: E402
 import refresh_publication_metadata  # noqa: E402
 
 
@@ -94,6 +96,13 @@ class CurationTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["single-track"],
+                    "aiAssessment": {
+                        "rating": "highlighted",
+                        "rationale": {
+                            "en": "A rationale that will be cleared for an excluded candidate.",
+                            "zh": "这是一条会在候选论文被排除后清空的评价依据。",
+                        },
+                    },
                     "summary": {"en": "Ignored summary", "zh": "忽略的摘要"},
                     "reason": "Not directly relevant.",
                 }
@@ -104,6 +113,10 @@ class CurationTests(unittest.TestCase):
         self.assertEqual(validated["decisions"][0]["areas"], [])
         self.assertEqual(validated["decisions"][0]["controlApproaches"], [])
         self.assertEqual(validated["decisions"][0]["trackScopes"], [])
+        self.assertEqual(
+            validated["decisions"][0]["aiAssessment"],
+            {"rating": "standard", "rationale": {"en": "", "zh": ""}},
+        )
         self.assertEqual(validated["decisions"][0]["summary"], {"en": "", "zh": ""})
 
     def test_review_rejects_unknown_control_approach(self):
@@ -119,6 +132,7 @@ class CurationTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["ordinary-training"],
                     "trackScopes": ["single-track"],
+                    "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
                         "zh": "提出一种面向音乐制作流程的神经音频效果器。",
@@ -143,6 +157,7 @@ class CurationTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["stereo"],
+                    "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
                         "zh": "提出一种面向音乐制作流程的神经音频效果器。",
@@ -261,6 +276,13 @@ class MergeTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["single-track"],
+                    "aiAssessment": {
+                        "rating": "highlighted",
+                        "rationale": {
+                            "en": "The method combines a clear contribution with substantive validation and practical value.",
+                            "zh": "该方法兼具明确贡献、充分验证与实际使用价值。",
+                        },
+                    },
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
                         "zh": "提出一种面向音乐制作流程的神经音频效果器。",
@@ -277,6 +299,8 @@ class MergeTests(unittest.TestCase):
         self.assertEqual(merged["papers"][0]["curation"], "agent")
         self.assertEqual(merged["papers"][0]["controlApproaches"], ["direct-prediction"])
         self.assertEqual(merged["papers"][0]["trackScopes"], ["single-track"])
+        self.assertEqual(merged["papers"][0]["aiAssessment"]["rating"], "highlighted")
+        self.assertEqual(merged["papers"][0]["impact"]["status"], "not-assessed")
         self.assertEqual(merged["papers"][0]["venue"], "ISMIR 2026")
         self.assertEqual(merged["papers"][0]["links"][1]["url"], "https://doi.org/10.1234/example")
 
@@ -294,6 +318,7 @@ class MergeTests(unittest.TestCase):
                             "areas": [],
                             "controlApproaches": [],
                             "trackScopes": [],
+                            "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                             "summary": {"en": "", "zh": ""},
                             "reason": "Not relevant.",
                         }
@@ -313,6 +338,7 @@ class MergeTests(unittest.TestCase):
                     "areas": ["audio-effects", "audio-effects"],
                     "controlApproaches": [],
                     "trackScopes": ["single-track"],
+                    "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
                         "zh": "提出一种面向音乐制作流程的神经音频效果器。",
@@ -365,6 +391,64 @@ class PublicationRefreshTests(unittest.TestCase):
         self.assertEqual(refreshed["papers"][0]["venue"], "ISMIR 2026")
         self.assertEqual(refreshed["papers"][0]["links"][-1]["label"], "doi")
         self.assertEqual(refreshed["updatedAt"], "2026-08-25")
+
+
+class ImpactRefreshTests(unittest.TestCase):
+    def test_identifier_prefers_arxiv_and_supports_doi(self):
+        self.assertEqual(
+            refresh_impact.paper_identifier({"source": {"type": "arxiv", "id": "arxiv:2401.12345"}}),
+            "ARXIV:2401.12345",
+        )
+        self.assertEqual(
+            refresh_impact.paper_identifier(
+                {
+                    "source": {"type": "manual", "id": "manual"},
+                    "links": [{"label": "doi", "url": "https://doi.org/10.1234%2Fexample"}],
+                }
+            ),
+            "DOI:10.1234/example",
+        )
+
+    def test_year_cohort_marks_top_twenty_percent_with_minimum(self):
+        papers = {
+            "schemaVersion": 1,
+            "updatedAt": "2026-08-01",
+            "papers": [
+                {"id": f"paper-{index}", "year": 2024, "source": {"type": "arxiv", "id": f"arxiv:2401.0000{index}"}}
+                for index in range(1, 6)
+            ],
+        }
+        records = {
+            f"ARXIV:2401.0000{index}": {
+                "paperId": str(index),
+                "citationCount": citations,
+                "influentialCitationCount": index,
+                "url": f"https://www.semanticscholar.org/paper/{index}",
+            }
+            for index, citations in enumerate([20, 10, 5, 3, 1], start=1)
+        }
+        refreshed, changed = refresh_impact.refresh_records(papers, records, "2026-08-27")
+        self.assertEqual(changed, 5)
+        self.assertEqual(refreshed["papers"][0]["impact"]["status"], "high-impact")
+        self.assertEqual(refreshed["papers"][1]["impact"]["status"], "standard")
+        self.assertEqual(refreshed["papers"][0]["impact"]["yearRank"], 1)
+        self.assertEqual(refreshed["papers"][0]["impact"]["cohortSize"], 5)
+
+    def test_current_year_is_too_recent_and_missing_record_is_not_assessed(self):
+        papers = {
+            "papers": [
+                {"id": "new", "year": 2026, "source": {"type": "arxiv", "id": "arxiv:2601.00001"}},
+                {"id": "old", "year": 2020, "source": {"type": "manual", "id": "manual"}, "links": []},
+            ]
+        }
+        refreshed, _ = refresh_impact.refresh_records(papers, {}, "2026-08-27")
+        self.assertEqual(refreshed["papers"][0]["impact"]["status"], "too-recent")
+        self.assertEqual(refreshed["papers"][1]["impact"]["status"], "not-assessed")
+
+    def test_refresh_is_requested_only_when_measurement_is_old(self):
+        papers = {"papers": [{"impact": {"measuredAt": "2026-08-10"}}]}
+        self.assertFalse(refresh_impact.impact_is_stale(papers, date(2026, 8, 27), 28))
+        self.assertTrue(refresh_impact.impact_is_stale(papers, date(2026, 9, 7), 28))
 
 
 if __name__ == "__main__":

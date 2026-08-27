@@ -10,8 +10,8 @@
     <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production-resources/">
     <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production-resources/assets/social-preview.jpg">
     <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production-resources/">
-    <link rel="stylesheet" href="styles.css?v=20260827-1">
-    <script src="app.js?v=20260827-1" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260827-2">
+    <script src="app.js?v=20260827-2" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -305,6 +305,10 @@
           <span data-i18n="papers.agentLabel">AI paper scout</span>
           <p data-i18n="papers.agentDescription">A scheduled workflow checks new papers weekly. Candidate metadata is validated before a website update is proposed.</p>
         </div>
+        <div class="recognition-note">
+          <p data-i18n="recognition.note">AI Highlight is a rubric-based model assessment, not peer review. High Impact uses year-normalized Semantic Scholar citations; current-year papers are not ranked.</p>
+          <a href="https://github.com/meteroad/intelligent-audio-production-resources/blob/main/DATA.md#recognition-metadata" target="_blank" rel="noreferrer" data-i18n="recognition.methodology">Methodology</a>
+        </div>
 
         <div class="index-controls paper-controls">
           <label>
@@ -327,6 +331,14 @@
             <span data-i18n="controls.trackScope">Track scope</span>
             <select id="paper-track-filter" data-i18n-aria-label="papers.trackScopeFilter">
               <option value="all" data-i18n="controls.allTrackScopes">All track scopes</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="controls.recognition">Recognition</span>
+            <select id="paper-recognition-filter" data-i18n-aria-label="papers.recognitionFilter">
+              <option value="all" data-i18n="controls.allRecognition">All recognition</option>
+              <option value="ai-highlight" data-i18n="recognition.aiHighlight">AI Highlight</option>
+              <option value="high-impact" data-i18n="recognition.highImpact">High Impact</option>
             </select>
           </label>
         </div>

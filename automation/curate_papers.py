@@ -14,7 +14,7 @@ from pathlib import Path
 
 API_URL = "https://api.deepseek.com/chat/completions"
 DEFAULT_MODEL = "deepseek-v4-flash"
-EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "controlApproaches", "trackScopes", "summary", "reason"}
+EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "controlApproaches", "trackScopes", "aiAssessment", "summary", "reason"}
 ALLOWED_DECISIONS = {"include", "exclude"}
 ALLOWED_CONFIDENCE = {"high", "medium", "low"}
 ALLOWED_CONTROL_APPROACHES = {
@@ -135,11 +135,25 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             raise ValueError(f"Invalid summary text for {source_id}")
         if not isinstance(decision.get("reason"), str):
             raise ValueError(f"Invalid reason for {source_id}")
+        assessment = decision.get("aiAssessment")
+        if not isinstance(assessment, dict) or set(assessment) != {"rating", "rationale"}:
+            raise ValueError(f"Invalid AI assessment for {source_id}")
+        if assessment.get("rating") not in {"highlighted", "standard"}:
+            raise ValueError(f"Invalid AI assessment rating for {source_id}")
+        rationale = assessment.get("rationale")
+        if not isinstance(rationale, dict) or set(rationale) != {"en", "zh"}:
+            raise ValueError(f"Invalid AI assessment rationale for {source_id}")
+        if assessment["rating"] == "highlighted":
+            if not all(isinstance(rationale[key], str) and 20 <= len(rationale[key].strip()) <= 500 for key in ("en", "zh")):
+                raise ValueError(f"Invalid highlighted rationale for {source_id}")
+        elif not all(isinstance(rationale[key], str) and not rationale[key].strip() for key in ("en", "zh")):
+            raise ValueError(f"Standard AI assessment rationale must be empty for {source_id}")
         if decision["decision"] == "exclude":
             decision["areas"] = []
             decision["controlApproaches"] = []
             decision["trackScopes"] = []
             decision["summary"] = {"en": "", "zh": ""}
+            decision["aiAssessment"] = {"rating": "standard", "rationale": {"en": "", "zh": ""}}
 
     if seen_ids != candidate_ids:
         missing = sorted(candidate_ids - seen_ids)

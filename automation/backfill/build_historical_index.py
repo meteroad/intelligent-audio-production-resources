@@ -18,6 +18,29 @@ MANUAL_PAPERS_PATH = BACKFILL_DIR / "historical-manual-papers.json"
 PAPERS_PATH = REPOSITORY_ROOT / "data/papers.json"
 
 
+def default_ai_assessment(verified_at: str) -> dict:
+    return {
+        "rating": "standard",
+        "rationale": {"en": "", "zh": ""},
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": verified_at,
+    }
+
+
+def default_impact() -> dict:
+    return {
+        "status": "not-assessed",
+        "citationCount": None,
+        "influentialCitationCount": None,
+        "yearRank": None,
+        "cohortSize": None,
+        "sourceUrl": None,
+        "measuredAt": None,
+        "methodVersion": "semantic-scholar-year-cohort-v1",
+    }
+
+
 def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -82,6 +105,13 @@ def main() -> None:
     if set(metadata) != set(short_names):
         raise ValueError("Every historical paper must have one index short name")
 
+    current = load_json(PAPERS_PATH)
+    current_by_source = {
+        paper.get("source", {}).get("id"): paper
+        for paper in current["papers"]
+        if paper.get("source", {}).get("id")
+    }
+    current_by_title = {normalized_title(paper["title"]): paper for paper in current["papers"]}
     records = [
         build_record(
             metadata[arxiv_id],
@@ -94,9 +124,18 @@ def main() -> None:
     ]
     manual_records = load_json(MANUAL_PAPERS_PATH)["papers"]
     records.extend(manual_records)
+    for record in records:
+        previous = current_by_source.get(record.get("source", {}).get("id")) or current_by_title.get(
+            normalized_title(record["title"])
+        )
+        record["aiAssessment"] = (
+            previous.get("aiAssessment", default_ai_assessment(curation_data["verifiedAt"]))
+            if previous
+            else default_ai_assessment(curation_data["verifiedAt"])
+        )
+        record["impact"] = previous.get("impact", default_impact()) if previous else default_impact()
     built_sources = {record["source"]["id"] for record in records}
     built_titles = {normalized_title(record["title"]) for record in records}
-    current = load_json(PAPERS_PATH)
     preserved = [
         paper
         for paper in current["papers"]

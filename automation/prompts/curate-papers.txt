@@ -31,7 +31,8 @@ For every candidate:
 6. Use confidence "high" only when the title and abstract clearly support the decision.
 7. For included papers, write one factual English sentence and one natural Chinese sentence summarizing only claims supported by the abstract.
 8. For excluded papers, return empty areas, controlApproaches, and trackScopes arrays and empty en/zh summary strings, then briefly explain the exclusion in reason.
-9. Do not infer or write a publication venue. Venue information is resolved separately from arXiv journal references, DOI metadata, or explicit acceptance comments.
+9. Assess included papers with the separate AI Highlight rubric. Use "highlighted" conservatively only when the abstract supports all four dimensions: a meaningful contribution, coherent methodology, substantive empirical validation, and practical or reproducibility value. This is an editorial AI assessment, not peer review and not an impact score. Otherwise use "standard". For highlighted papers, provide one concise factual rationale in English and Chinese; for standard papers, return empty rationale strings.
+10. Do not infer or write a publication venue. Venue information is resolved separately from arXiv journal references, DOI metadata, or explicit acceptance comments.
 
 Return one JSON object and no surrounding prose. It must follow this exact shape and include one decision for every candidate:
 {
@@ -44,6 +45,13 @@ Return one JSON object and no surrounding prose. It must follow this exact shape
       "areas": ["audio-effects"],
       "controlApproaches": ["direct-prediction"],
       "trackScopes": ["single-track"],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        }
+      },
       "summary": {
         "en": "One factual sentence.",
         "zh": "一句忠于摘要的中文概述。"

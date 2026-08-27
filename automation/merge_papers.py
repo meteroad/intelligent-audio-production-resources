@@ -66,6 +66,17 @@ def validate_decision(decision: dict, candidate_ids: set[str]) -> None:
             value = summary.get(language, "").strip()
             if not 20 <= len(value) <= 500:
                 raise ValueError(f"Invalid {language} summary length for {source_id}")
+        assessment = decision.get("aiAssessment", {})
+        if assessment.get("rating") not in {"highlighted", "standard"}:
+            raise ValueError(f"Invalid AI assessment for {source_id}")
+        rationale = assessment.get("rationale", {})
+        if set(rationale) != {"en", "zh"}:
+            raise ValueError(f"Invalid AI assessment rationale for {source_id}")
+        if assessment["rating"] == "highlighted":
+            if not all(20 <= len(rationale[language].strip()) <= 500 for language in ("en", "zh")):
+                raise ValueError(f"Invalid highlighted rationale for {source_id}")
+        elif any(rationale[language].strip() for language in ("en", "zh")):
+            raise ValueError(f"Standard AI assessment rationale must be empty for {source_id}")
 
 
 def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -> tuple[dict, int]:
@@ -118,6 +129,23 @@ def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -
                 "areas": decision["areas"],
                 "controlApproaches": decision["controlApproaches"],
                 "trackScopes": decision["trackScopes"],
+                "aiAssessment": {
+                    "rating": decision["aiAssessment"]["rating"],
+                    "rationale": decision["aiAssessment"]["rationale"],
+                    "assessor": "DeepSeek",
+                    "rubricVersion": "1.0",
+                    "assessedAt": review_data.get("reviewedAt", verified_date),
+                },
+                "impact": {
+                    "status": "not-assessed",
+                    "citationCount": None,
+                    "influentialCitationCount": None,
+                    "yearRank": None,
+                    "cohortSize": None,
+                    "sourceUrl": None,
+                    "measuredAt": None,
+                    "methodVersion": "semantic-scholar-year-cohort-v1",
+                },
                 "summary": decision["summary"],
                 "links": links,
                 "lastVerified": verified_date,

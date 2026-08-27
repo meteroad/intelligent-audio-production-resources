@@ -128,6 +128,14 @@ jobs:
           --papers data/papers.json
           --output data/papers.json
 
+      - name: Refresh citation impact
+        env:
+          SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+        run: >-
+          python3 automation/refresh_impact.py
+          --papers data/papers.json
+          --output data/papers.json
+
       - name: Validate website data and tests
         run: |
           python3 automation/validate_data.py
@@ -156,7 +164,7 @@ jobs:
           git add data/papers.json
           git commit -m "Update recent intelligent audio papers"
           git push origin "$branch"
-          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers are screened by the configured curation model. Titles and authors remain anchored to arXiv; DOI links and formal venues are refreshed from arXiv evidence with Semantic Scholar as a secondary bibliographic source before deterministic validation.")
+          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers and AI Highlight assessments are proposed by the configured curation model for human review. Titles and authors remain anchored to arXiv; DOI links, formal venues, and year-normalized Semantic Scholar citation metadata are refreshed before deterministic validation.")
           if [ "$AUTO_MERGE" = "true" ]; then
             gh pr merge --auto --squash "$pr_url"
           fi
