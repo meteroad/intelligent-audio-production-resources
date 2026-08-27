@@ -1,0 +1,228 @@
+{
+  "projects": [
+    {
+      "fullName": "AaronZ345/ISDrama",
+      "url": "https://github.com/AaronZ345/ISDrama",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "Katarina-Poole/Spatial-Audio-Metrics",
+      "url": "https://github.com/Katarina-Poole/Spatial-Audio-Metrics",
+      "license": "GPL",
+      "licenseUrl": "https://github.com/Katarina-Poole/Spatial-Audio-Metrics/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "PeiwenSun2000/Both-Ears-Wide-Open",
+      "url": "https://github.com/PeiwenSun2000/Both-Ears-Wide-Open",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "SheldonTsui/PseudoBinaural_CVPR2021",
+      "url": "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "SheldonTsui/SepStereo_ECCV2020",
+      "url": "https://github.com/SheldonTsui/SepStereo_ECCV2020",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/SheldonTsui/SepStereo_ECCV2020/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "SonyResearch/CCStereo",
+      "url": "https://github.com/SonyResearch/CCStereo",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/SonyResearch/CCStereo/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "apple/ml-spatial-librispeech",
+      "url": "https://github.com/apple/ml-spatial-librispeech",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/apple/ml-spatial-librispeech/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection",
+      "url": "https://github.com/ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "ebu/bear",
+      "url": "https://github.com/ebu/bear",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/ebu/bear/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "ebu/ear-production-suite",
+      "url": "https://github.com/ebu/ear-production-suite",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "facebookresearch/2.5D-Visual-Sound",
+      "url": "https://github.com/facebookresearch/2.5D-Visual-Sound",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/facebookresearch/2.5D-Visual-Sound/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "facebookresearch/BinauralSpeechSynthesis",
+      "url": "https://github.com/facebookresearch/BinauralSpeechSynthesis",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/facebookresearch/BinauralSpeechSynthesis/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "feima1024/PINN-for-HRTF-upsampling",
+      "url": "https://github.com/feima1024/PINN-for-HRTF-upsampling",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "ikets/HRTFInterpAE_public",
+      "url": "https://github.com/ikets/HRTFInterpAE_public",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/ikets/HRTFInterpAE_public/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "jaeyeonkim99/visage",
+      "url": "https://github.com/jaeyeonkim99/visage",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/jaeyeonkim99/visage/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "jin-woo-lee/hrtf-interpolation",
+      "url": "https://github.com/jin-woo-lee/hrtf-interpolation",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "jin-woo-lee/nfs-binaural",
+      "url": "https://github.com/jin-woo-lee/nfs-binaural",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/jin-woo-lee/nfs-binaural/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "kronihias/ambix",
+      "url": "https://github.com/kronihias/ambix",
+      "license": "GPL",
+      "licenseUrl": "https://github.com/kronihias/ambix/blob/HEAD/COPYING",
+      "spdx": null
+    },
+    {
+      "fullName": "leomccormack/SPARTA",
+      "url": "https://github.com/leomccormack/SPARTA",
+      "license": "GPL",
+      "licenseUrl": "https://github.com/leomccormack/SPARTA/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "leomccormack/Spatial_Audio_Framework",
+      "url": "https://github.com/leomccormack/Spatial_Audio_Framework",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/leomccormack/Spatial_Audio_Framework/blob/HEAD/LICENSE.md",
+      "spdx": null
+    },
+    {
+      "fullName": "liangsusan-git/AV-NeRF",
+      "url": "https://github.com/liangsusan-git/AV-NeRF",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "liuhuadai/OmniAudio",
+      "url": "https://github.com/liuhuadai/OmniAudio",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "merlresearch/neural-IIR-field",
+      "url": "https://github.com/merlresearch/neural-IIR-field",
+      "license": "AGPL",
+      "licenseUrl": "https://github.com/merlresearch/neural-IIR-field/blob/HEAD/LICENSE.md",
+      "spdx": null
+    },
+    {
+      "fullName": "microsoft/NeuralSpeech",
+      "url": "https://github.com/microsoft/NeuralSpeech",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/microsoft/NeuralSpeech/blob/HEAD/LICENSE.txt",
+      "spdx": null
+    },
+    {
+      "fullName": "omeaningless/binaural-audio-generation",
+      "url": "https://github.com/omeaningless/binaural-audio-generation",
+      "license": null,
+      "licenseUrl": null,
+      "spdx": null
+    },
+    {
+      "fullName": "pedro-morgado/spatialaudiogen",
+      "url": "https://github.com/pedro-morgado/spatialaudiogen",
+      "license": "BSD",
+      "licenseUrl": "https://github.com/pedro-morgado/spatialaudiogen/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "see2sound/see2sound",
+      "url": "https://github.com/see2sound/see2sound",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/see2sound/see2sound/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "sh01k/MeshRIR",
+      "url": "https://github.com/sh01k/MeshRIR",
+      "license": "Custom/other",
+      "licenseUrl": "https://github.com/sh01k/MeshRIR/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "tu-studio/IEMPluginSuite",
+      "url": "https://github.com/tu-studio/IEMPluginSuite",
+      "license": "GPL",
+      "licenseUrl": "https://github.com/tu-studio/IEMPluginSuite/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "videolabs/libspatialaudio",
+      "url": "https://github.com/videolabs/libspatialaudio",
+      "license": "LGPL",
+      "licenseUrl": "https://github.com/videolabs/libspatialaudio/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "yongyizang/ambisonizer",
+      "url": "https://github.com/yongyizang/ambisonizer",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/yongyizang/ambisonizer/blob/HEAD/LICENSE",
+      "spdx": null
+    },
+    {
+      "fullName": "yzyouzhang/HRTF_field",
+      "url": "https://github.com/yzyouzhang/HRTF_field",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/yzyouzhang/HRTF_field/blob/HEAD/LICENSE",
+      "spdx": null
+    }
+  ]
+}

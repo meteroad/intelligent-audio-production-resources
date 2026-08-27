@@ -54,7 +54,12 @@
         "automatic-mixing",
         "mastering",
         "evaluation",
-        "differentiable-processing"
+        "differentiable-processing",
+        "spatial-generation",
+        "spatial-mixing",
+        "spatial-rendering",
+        "hrtf-personalization",
+        "spatial-evaluation"
       ]
     },
     "effect": {
@@ -84,7 +89,12 @@
         "reference-mixes",
         "annotations",
         "text-prompts",
-        "synthetic-audio"
+        "synthetic-audio",
+        "binaural-audio",
+        "ambisonics",
+        "hrtf",
+        "spatial-metadata",
+        "video"
       ]
     },
     "taxonomy": {

@@ -24,6 +24,13 @@ class LandingStatsTests(unittest.TestCase):
             self.assertIsNotNone(match, f"missing static count: {element_id}")
             self.assertEqual(int(match.group(1)), count, f"stale static count: {element_id}")
 
+    def test_spatial_field_map_links_to_filtered_papers(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertRegex(
+            html,
+            r'<a class="field-map-link" href="#papers" data-paper-area="spatial-audio">',
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

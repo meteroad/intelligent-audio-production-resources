@@ -4,9 +4,9 @@ Contributions that improve the accuracy, coverage, or usability of the index are
 
 ## What Belongs in the Index
 
-A submission should make a direct contribution to intelligent audio production, including audio effects, differentiable processing, production representations, mixing, mastering, or task-specific evaluation.
+A submission should make a direct contribution to intelligent audio production, including audio effects, differentiable processing, production representations, mixing, mastering, production-facing spatial audio, or task-specific evaluation.
 
-Generic speech enhancement, audio generation, source separation, room acoustics, and spatial localization are out of scope unless the work makes a direct production or audio-effects contribution.
+Generic speech enhancement, audio generation, source separation, room acoustics, and spatial localization are out of scope unless the work makes a direct production, audio-effects, or spatial-rendering contribution.
 
 ## Submit Through an Issue
 

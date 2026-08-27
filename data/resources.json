@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-25",
+  "updatedAt": "2026-08-27",
   "resources": [
     {
       "id": "automatic-mixing-papers",
@@ -31,6 +31,30 @@
         {"label": "source", "url": "https://github.com/mcomunita/AFX-Research"}
       ],
       "lastVerified": "2026-08-25"
+    },
+    {
+      "id": "asaudio",
+      "name": "ASAudio",
+      "kind": "bibliography",
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "description": {
+        "en": "A survey and linked bibliography covering spatial-audio representations, generation, understanding, datasets, and evaluation metrics.",
+        "zh": "覆盖空间音频表征、生成、理解、数据集与评测指标的综述及链接书目。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2508.10924"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/dieKarotte/ASAudio"
+        }
+      ],
+      "lastVerified": "2026-08-27"
     }
   ]
 }

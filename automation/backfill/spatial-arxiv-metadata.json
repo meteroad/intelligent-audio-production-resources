@@ -1,0 +1,1225 @@
+{
+  "papers": [
+    {
+      "sourceId": "arxiv:2601.12950",
+      "title": "ImmersiveFlow: Stereo-to-7.1.4 spatial audio generation with flow matching",
+      "authors": [
+        "Zining Liang",
+        "Runbang Wang",
+        "Xuzhou Ye",
+        "Qiuqiang Kong"
+      ],
+      "abstract": "Immersive spatial audio has become increasingly critical for applications ranging from AR/VR to home entertainment and automotive sound systems. However, existing generative methods remain constrained to low-dimensional formats such as binaural audio and First-Order Ambisonics (FOA). Binaural rendering is inherently limited to headphone playback, while FOA suffers from spatial aliasing and insufficient resolution for high-frequency. To overcome these limitations, we introduce ImmersiveFlow, the first end-to-end generative framework that directly synthesizes discrete 7.1.4 format spatial audio from stereo input. ImmersiveFlow leverages Flow Matching to learn trajectories from stereo inputs to multichannel spatial features within a pretrained VAE latent space. At inference, the Flow Matching model predicted latent features are decoded by the VAE and converted into the final 7.1.4 waveform. Comprehensive objective and subjective evaluations demonstrate that our method produces perceptually rich sound fields and enhanced externalization, significantly outperforming traditional upmixing techniques. Code implementations and audio samples are provided at: https://github.com/violet-audio/ImmersiveFlow.",
+      "published": "2026-01-19T10:56:11Z",
+      "updated": "2026-01-19T10:56:11Z",
+      "paperUrl": "https://arxiv.org/abs/2601.12950",
+      "doi": null,
+      "journalReference": null,
+      "comment": "5 pages, 3 figures, 2 tables",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2507.07318",
+      "title": "Generating Moving 3D Soundscapes with Latent Diffusion Models",
+      "authors": [
+        "Christian Templin",
+        "Yanda Zhu",
+        "Hao Wang"
+      ],
+      "abstract": "Spatial audio has become central to immersive applications such as VR/AR, cinema, and music. Existing generative audio models are largely limited to mono or stereo formats and cannot capture the full 3D localization cues available in first-order Ambisonics (FOA). Recent FOA models extend text-to-audio generation but remain restricted to static sources. In this work, we introduce SonicMotion, the first end-to-end latent diffusion framework capable of generating FOA audio with explicit control over moving sound sources. SonicMotion is implemented in two variations: 1) a descriptive model conditioned on natural language prompts, and 2) a parametric model conditioned on both text and spatial trajectory parameters for higher precision. To support training and evaluation, we construct a new dataset of over one million simulated FOA caption pairs that include both static and dynamic sources with annotated azimuth, elevation, and motion attributes. Experiments show that SonicMotion achieves state-of-the-art semantic alignment and perceptual quality comparable to leading text-to-audio systems, while uniquely attaining low spatial localization error.",
+      "published": "2025-07-09T22:31:06Z",
+      "updated": "2025-09-19T13:59:48Z",
+      "paperUrl": "https://arxiv.org/abs/2507.07318",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2507.05053",
+      "title": "The Extended SONICOM HRTF Dataset and Spatial Audio Metrics Toolbox",
+      "authors": [
+        "Katarina C. Poole",
+        "Julie Meyer",
+        "Vincent Martin",
+        "Rapolas Daugintis",
+        "Nils Marggraf-Turley",
+        "Jack Webb",
+        "Ludovic Pirard",
+        "Nicola La Magna",
+        "Oliver Turvey",
+        "Lorenzo Picinali"
+      ],
+      "abstract": "Headphone-based spatial audio uses head-related transfer functions (HRTFs) to simulate real-world acoustic environments. HRTFs are unique to everyone, due to personal morphology, shaping how sound waves interact with the body before reaching the eardrums. Here we present the extended SONICOM HRTF dataset which expands on the previous version released in 2023. The total number of measured subjects has now been increased to 300, with demographic information for a subset of the participants, providing context for the dataset's population and relevance. The dataset incorporates synthesised HRTFs for 200 of the 300 subjects, generated using Mesh2HRTF, alongside pre-processed 3D scans of the head and ears, optimised for HRTF synthesis. This rich dataset facilitates rapid and iterative optimisation of HRTF synthesis algorithms, allowing the automatic generation of large data. The optimised scans enable seamless morphological modifications, providing insights into how anatomical changes impact HRTFs, and the larger sample size enhances the effectiveness of machine learning approaches. To support analysis, we also introduce the Spatial Audio Metrics (SAM) Toolbox, a Python package designed for efficient analysis and visualisation of HRTF data, offering customisable tools for advanced research. Together, the extended dataset and toolbox offer a comprehensive resource for advancing personalised spatial audio research and development.",
+      "published": "2025-07-07T14:38:24Z",
+      "updated": "2025-12-01T12:40:06Z",
+      "paperUrl": "https://arxiv.org/abs/2507.05053",
+      "doi": null,
+      "journalReference": null,
+      "comment": "For dataset: https://www.axdesign.co.uk/tools-and-devices/sonicom-hrtf-dataset. For toolbox: https://github.com/Katarina-Poole/Spatial-Audio-Metrics. Conference: Forum Acusticum 2025 V2: Fixed clickable links in pdf",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2506.12199",
+      "title": "ViSAGe: Video-to-Spatial Audio Generation",
+      "authors": [
+        "Jaeyeon Kim",
+        "Heeseung Yun",
+        "Gunhee Kim"
+      ],
+      "abstract": "Spatial audio is essential for enhancing the immersiveness of audio-visual experiences, yet its production typically demands complex recording systems and specialized expertise. In this work, we address a novel problem of generating first-order ambisonics, a widely used spatial audio format, directly from silent videos. To support this task, we introduce YT-Ambigen, a dataset comprising 102K 5-second YouTube video clips paired with corresponding first-order ambisonics. We also propose new evaluation metrics to assess the spatial aspect of generated audio based on audio energy maps and saliency metrics. Furthermore, we present Video-to-Spatial Audio Generation (ViSAGe), an end-to-end framework that generates first-order ambisonics from silent video frames by leveraging CLIP visual features, autoregressive neural audio codec modeling with both directional and visual guidance. Experimental results demonstrate that ViSAGe produces plausible and coherent first-order ambisonics, outperforming two-stage approaches consisting of video-to-audio generation and audio spatialization. Qualitative examples further illustrate that ViSAGe generates temporally aligned high-quality spatial audio that adapts to viewpoint changes.",
+      "published": "2025-06-13T19:57:42Z",
+      "updated": "2025-06-13T19:57:42Z",
+      "paperUrl": "https://arxiv.org/abs/2506.12199",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ICLR 2025. Project page: https://jaeyeonkim99.github.io/visage/",
+      "publicationVenue": "ICLR 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2504.20630",
+      "title": "ISDrama: Immersive Spatial Drama Generation through Multimodal Prompting",
+      "authors": [
+        "Yu Zhang",
+        "Wenxiang Guo",
+        "Changhao Pan",
+        "Zhiyuan Zhu",
+        "Tao Jin",
+        "Zhou Zhao"
+      ],
+      "abstract": "Multimodal immersive spatial drama generation focuses on creating continuous multi-speaker binaural speech with dramatic prosody based on multimodal prompts, with potential applications in AR, VR, and others. This task requires simultaneous modeling of spatial information and dramatic prosody based on multimodal inputs, with high data collection costs. To the best of our knowledge, our work is the first attempt to address these challenges. We construct MRSDrama, the first multimodal recorded spatial drama dataset, containing binaural drama audios, scripts, videos, geometric poses, and textual prompts. Then, we propose ISDrama, the first immersive spatial drama generation model through multimodal prompting. ISDrama comprises these primary components: 1) Multimodal Pose Encoder, based on contrastive learning, considering the Doppler effect caused by moving speakers to extract unified pose information from multimodal prompts. 2) Immersive Drama Transformer, a flow-based mamba-transformer model that generates high-quality drama, incorporating Drama-MOE to select proper experts for enhanced prosody and pose control. We also design a context-consistent classifier-free guidance strategy to coherently generate complete drama. Experimental results show that ISDrama outperforms baseline models on objective and subjective metrics. The demos are available at https://aaronz345.github.io/ISDramaDemo. We provide the dataset and the evaluation code at https://huggingface.co/datasets/AaronZ345/MRSDrama and https://github.com/AaronZ345/ISDrama.",
+      "published": "2025-04-29T10:56:44Z",
+      "updated": "2025-07-29T16:39:59Z",
+      "paperUrl": "https://arxiv.org/abs/2504.20630",
+      "doi": "10.1145/3746027.3755014",
+      "journalReference": "MM '2025: Proceedings of the 33rd ACM International Conference on Multimedia Pages 9618 - 9627",
+      "comment": "Accepted by ACM Multimedia 2025",
+      "publicationVenue": "ACM MM 2025",
+      "venueEvidence": "journalReference",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2504.14906",
+      "title": "OmniAudio: Generating Spatial Audio from 360-Degree Video",
+      "authors": [
+        "Huadai Liu",
+        "Tianyi Luo",
+        "Kaicheng Luo",
+        "Qikai Jiang",
+        "Peiwen Sun",
+        "Jialei Wang",
+        "Rongjie Huang",
+        "Qian Chen",
+        "Wen Wang",
+        "Xiangtai Li",
+        "Shiliang Zhang",
+        "Zhijie Yan",
+        "Zhou Zhao",
+        "Wei Xue"
+      ],
+      "abstract": "Traditional video-to-audio generation techniques primarily focus on perspective video and non-spatial audio, often missing the spatial cues necessary for accurately representing sound sources in 3D environments. To address this limitation, we introduce a novel task, 360V2SA, to generate spatial audio from 360-degree videos, specifically producing First-order Ambisonics (FOA) audio - a standard format for representing 3D spatial audio that captures sound directionality and enables realistic 3D audio reproduction. We first create Sphere360, a novel dataset tailored for this task that is curated from real-world data. We also design an efficient semi-automated pipeline for collecting and cleaning paired video-audio data. To generate spatial audio from 360-degree video, we propose a novel framework OmniAudio, which leverages self-supervised pre-training using both spatial audio data (in FOA format) and large-scale non-spatial data. Furthermore, OmniAudio features a dual-branch framework that utilizes both panoramic and perspective video inputs to capture comprehensive local and global information from 360-degree videos. Experimental results demonstrate that OmniAudio achieves state-of-the-art performance across both objective and subjective metrics on Sphere360. Code and datasets are available at https://github.com/liuhuadai/OmniAudio. The project website is available at https://OmniAudio-360V2SA.github.io.",
+      "published": "2025-04-21T07:21:28Z",
+      "updated": "2025-06-03T03:27:47Z",
+      "paperUrl": "https://arxiv.org/abs/2504.14906",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ICML 2025",
+      "publicationVenue": "ICML 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2502.18952",
+      "title": "DualSpec: Text-to-spatial-audio Generation via Dual-Spectrogram Guided Diffusion Model",
+      "authors": [
+        "Lei Zhao",
+        "Sizhou Chen",
+        "Linfeng Feng",
+        "Jichao Zhang",
+        "Xiao-Lei Zhang",
+        "Chi Zhang",
+        "Xuelong Li"
+      ],
+      "abstract": "Text-to-audio (TTA), which generates audio signals from textual descriptions, has received huge attention in recent years. However, recent works focused on text to monaural audio only. As we know, spatial audio provides more immersive auditory experience than monaural audio, e.g. in virtual reality. To address this issue, we propose a text-to-spatial-audio (TTSA) generation framework named DualSpec. Specifically, it first trains variational autoencoders (VAEs) for extracting the latent acoustic representations from sound event audio. Then, given text that describes sound events and event directions, the proposed method uses the encoder of a pretrained large language model to transform the text into text features. Finally, it trains a diffusion model from the latent acoustic representations and text features for the spatial audio generation. In the inference stage, only the text description is needed to generate spatial audio. Particularly, to improve the synthesis quality and azimuth accuracy of the spatial sound events simultaneously, we propose to use two kinds of acoustic features. One is the Mel spectrograms which is good for improving the synthesis quality, and the other is the short-time Fourier transform spectrograms which is good at improving the azimuth accuracy. We provide a pipeline of constructing spatial audio dataset with text prompts, for the training of the VAEs and diffusion model. We also introduce new spatial-aware evaluation metrics to quantify the azimuth errors of the generated spatial audio recordings. Experimental results demonstrate that the proposed method can generate spatial audio with high directional and event consistency.",
+      "published": "2025-02-26T09:01:59Z",
+      "updated": "2025-06-05T18:44:26Z",
+      "paperUrl": "https://arxiv.org/abs/2502.18952",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2501.02786",
+      "title": "CCStereo: Audio-Visual Contextual and Contrastive Learning for Binaural Audio Generation",
+      "authors": [
+        "Yuanhong Chen",
+        "Kazuki Shimada",
+        "Christian Simon",
+        "Yukara Ikemiya",
+        "Takashi Shibuya",
+        "Yuki Mitsufuji"
+      ],
+      "abstract": "Binaural audio generation (BAG) aims to convert monaural audio to stereo audio using visual prompts, requiring a deep understanding of spatial and semantic information. However, current models risk overfitting to room environments and lose fine-grained spatial details. In this paper, we propose a new audio-visual binaural generation model incorporating an audio-visual conditional normalisation layer that dynamically aligns the mean and variance of the target difference audio features using visual context, along with a new contrastive learning method to enhance spatial sensitivity by mining negative samples from shuffled visual features. We also introduce a cost-efficient way to utilise test-time augmentation in video data to enhance performance. Our approach achieves state-of-the-art generation accuracy on the FAIR-Play and MUSIC-Stereo benchmarks.",
+      "published": "2025-01-06T06:04:21Z",
+      "updated": "2025-08-06T09:02:56Z",
+      "paperUrl": "https://arxiv.org/abs/2501.02786",
+      "doi": "10.1145/3746027.3754919",
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2410.14945",
+      "title": "ImmerseDiffusion: A Generative Spatial Audio Latent Diffusion Model",
+      "authors": [
+        "Mojtaba Heydari",
+        "Mehrez Souden",
+        "Bruno Conejo",
+        "Joshua Atkins"
+      ],
+      "abstract": "We introduce ImmerseDiffusion, an end-to-end generative audio model that produces 3D immersive soundscapes conditioned on the spatial, temporal, and environmental conditions of sound objects. ImmerseDiffusion is trained to generate first-order ambisonics (FOA) audio, which is a conventional spatial audio format comprising four channels that can be rendered to multichannel spatial output. The proposed generative system is composed of a spatial audio codec that maps FOA audio to latent components, a latent diffusion model trained based on various user input types, namely, text prompts, spatial, temporal and environmental acoustic parameters, and optionally a spatial audio and text encoder trained in a Contrastive Language and Audio Pretraining (CLAP) style. We propose metrics to evaluate the quality and spatial adherence of the generated spatial audio. Finally, we assess the model performance in terms of generation quality and spatial conformance, comparing the two proposed modes: ``descriptive\", which uses spatial text prompts) and ``parametric\", which uses non-spatial text prompts and spatial parameters. Our evaluations demonstrate promising results that are consistent with the user conditions and reflect reliable spatial fidelity.",
+      "published": "2024-10-19T02:28:53Z",
+      "updated": "2025-02-07T19:26:14Z",
+      "paperUrl": "https://arxiv.org/abs/2410.14945",
+      "doi": null,
+      "journalReference": null,
+      "comment": "ICASSP 2025 - IEEE International Conference on Acoustics, Speech, and Signal Processing, 2025",
+      "publicationVenue": "ICASSP 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.ET",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2410.11299",
+      "title": "Diff-SAGe: End-to-End Spatial Audio Generation Using Diffusion Models",
+      "authors": [
+        "Saksham Singh Kushwaha",
+        "Jianbo Ma",
+        "Mark R. P. Thomas",
+        "Yapeng Tian",
+        "Avery Bruni"
+      ],
+      "abstract": "Spatial audio is a crucial component in creating immersive experiences. Traditional simulation-based approaches to generate spatial audio rely on expertise, have limited scalability, and assume independence between semantic and spatial information. To address these issues, we explore end-to-end spatial audio generation. We introduce and formulate a new task of generating first-order Ambisonics (FOA) given a sound category and sound source spatial location. We propose Diff-SAGe, an end-to-end, flow-based diffusion-transformer model for this task. Diff-SAGe utilizes a complex spectrogram representation for FOA, preserving the phase information crucial for accurate spatial cues. Additionally, a multi-conditional encoder integrates the input conditions into a unified representation, guiding the generation of FOA waveforms from noise. Through extensive evaluations on two datasets, we demonstrate that our method consistently outperforms traditional simulation-based baselines across both objective and subjective metrics.",
+      "published": "2024-10-15T05:37:22Z",
+      "updated": "2024-10-15T05:37:22Z",
+      "paperUrl": "https://arxiv.org/abs/2410.11299",
+      "doi": "10.1109/ICASSP49660.2025.10888882",
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2410.10676",
+      "title": "Both Ears Wide Open: Towards Language-Driven Spatial Audio Generation",
+      "authors": [
+        "Peiwen Sun",
+        "Sitong Cheng",
+        "Xiangtai Li",
+        "Zhen Ye",
+        "Huadai Liu",
+        "Honggang Zhang",
+        "Wei Xue",
+        "Yike Guo"
+      ],
+      "abstract": "Recently, diffusion models have achieved great success in mono-channel audio generation. However, when it comes to stereo audio generation, the soundscapes often have a complex scene of multiple objects and directions. Controlling stereo audio with spatial contexts remains challenging due to high data costs and unstable generative models. To the best of our knowledge, this work represents the first attempt to address these issues. We first construct a large-scale, simulation-based, and GPT-assisted dataset, BEWO-1M, with abundant soundscapes and descriptions even including moving and multiple sources. Beyond text modality, we have also acquired a set of images and rationally paired stereo audios through retrieval to advance multimodal generation. Existing audio generation models tend to generate rather random and indistinct spatial audio. To provide accurate guidance for Latent Diffusion Models, we introduce the SpatialSonic model utilizing spatial-aware encoders and azimuth state matrices to reveal reasonable spatial guidance. By leveraging spatial guidance, our model not only achieves the objective of generating immersive and controllable spatial audio from text but also extends to other modalities as the pioneer attempt. Finally, under fair settings, we conduct subjective and objective evaluations on simulated and real-world data to compare our approach with prevailing methods. The results demonstrate the effectiveness of our method, highlighting its capability to generate spatial audio that adheres to physical rules.",
+      "published": "2024-10-14T16:18:29Z",
+      "updated": "2025-02-25T15:42:31Z",
+      "paperUrl": "https://arxiv.org/abs/2410.10676",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted by ICLR 2025",
+      "publicationVenue": "ICLR 2025",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2406.06612",
+      "title": "SEE-2-SOUND: Zero-Shot Spatial Environment-to-Spatial Sound",
+      "authors": [
+        "Rishit Dagli",
+        "Shivesh Prakash",
+        "Robert Wu",
+        "Houman Khosravani"
+      ],
+      "abstract": "Generating combined visual and auditory sensory experiences is critical for the consumption of immersive content. Recent advances in neural generative models have enabled the creation of high-resolution content across multiple modalities such as images, text, speech, and videos. Despite these successes, there remains a significant gap in the generation of high-quality spatial audio that complements generated visual content. Furthermore, current audio generation models excel in either generating natural audio or speech or music but fall short in integrating spatial audio cues necessary for immersive experiences. In this work, we introduce SEE-2-SOUND, a zero-shot approach that decomposes the task into (1) identifying visual regions of interest; (2) locating these elements in 3D space; (3) generating mono-audio for each; and (4) integrating them into spatial audio. Using our framework, we demonstrate compelling results for generating spatial audio for high-quality videos, images, and dynamic images from the internet, as well as media generated by learned approaches.",
+      "published": "2024-06-06T22:55:01Z",
+      "updated": "2025-07-07T17:42:19Z",
+      "paperUrl": "https://arxiv.org/abs/2406.06612",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Project Page: https://see2sound.github.io/",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2405.13428",
+      "title": "Ambisonizer: Neural Upmixing as Spherical Harmonics Generation",
+      "authors": [
+        "Yongyi Zang",
+        "Yifan Wang",
+        "Minglun Lee"
+      ],
+      "abstract": "Neural upmixing, the task of generating immersive music with an increased number of channels from fewer input channels, has been an active research area, with mono-to-stereo and stereo-to-surround upmixing treated as separate problems. In this paper, we propose a unified approach to neural upmixing by formulating it as spherical harmonics - more specifically, Ambisonic generation. We explicitly formulate mono upmixing as unconditional generation and stereo upmixing as conditional generation, where the stereo signals serve as conditions. We provide evidence that our proposed methodology, when decoded to stereo, matches a strong commercial stereo widener in subjective ratings. Overall, our work presents direct upmixing to Ambisonic format as a strong and promising approach to neural upmixing. A discussion on limitations is also provided.",
+      "published": "2024-05-22T08:16:24Z",
+      "updated": "2024-05-22T08:16:24Z",
+      "paperUrl": "https://arxiv.org/abs/2405.13428",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Under review",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2404.15107",
+      "title": "MIMOSA: Human-AI Co-Creation of Computational Spatial Audio Effects on Videos",
+      "authors": [
+        "Zheng Ning",
+        "Zheng Zhang",
+        "Jerrick Ban",
+        "Kaiwen Jiang",
+        "Ruohong Gan",
+        "Yapeng Tian",
+        "Toby Jia-Jun Li"
+      ],
+      "abstract": "Spatial audio offers more immersive video consumption experiences to viewers; however, creating and editing spatial audio often expensive and requires specialized equipment and skills, posing a high barrier for amateur video creators. We present MIMOSA, a human-AI co-creation tool that enables amateur users to computationally generate and manipulate spatial audio effects. For a video with only monaural or stereo audio, MIMOSA automatically grounds each sound source to the corresponding sounding object in the visual scene and enables users to further validate and fix the errors in the locations of sounding objects. Users can also augment the spatial audio effect by flexibly manipulating the sounding source positions and creatively customizing the audio effect. The design of MIMOSA exemplifies a human-AI collaboration approach that, instead of utilizing state-of art end-to-end \"black-box\" ML models, uses a multistep pipeline that aligns its interpretable intermediate results with the user's workflow. A lab user study with 15 participants demonstrates MIMOSA's usability, usefulness, expressiveness, and capability in creating immersive spatial audio effects in collaboration with users.",
+      "published": "2024-04-23T15:01:36Z",
+      "updated": "2024-04-23T15:01:36Z",
+      "paperUrl": "https://arxiv.org/abs/2404.15107",
+      "doi": "10.1145/3635636.3656189",
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.HC",
+      "categories": [
+        "cs.HC",
+        "cs.MM"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2402.17907",
+      "title": "NIIRF: Neural IIR Filter Field for HRTF Upsampling and Personalization",
+      "authors": [
+        "Yoshiki Masuyama",
+        "Gordon Wichern",
+        "François G. Germain",
+        "Zexu Pan",
+        "Sameer Khurana",
+        "Chiori Hori",
+        "Jonathan Le Roux"
+      ],
+      "abstract": "Head-related transfer functions (HRTFs) are important for immersive audio, and their spatial interpolation has been studied to upsample finite measurements. Recently, neural fields (NFs) which map from sound source direction to HRTF have gained attention. Existing NF-based methods focused on estimating the magnitude of the HRTF from a given sound source direction, and the magnitude is converted to a finite impulse response (FIR) filter. We propose the neural infinite impulse response filter field (NIIRF) method that instead estimates the coefficients of cascaded IIR filters. IIR filters mimic the modal nature of HRTFs, thus needing fewer coefficients to approximate them well compared to FIR filters. We find that our method can match the performance of existing NF-based methods on multiple datasets, even outperforming them when measurements are sparse. We also explore approaches to personalize the NF to a subject and experimentally find low-rank adaptation to be effective.",
+      "published": "2024-02-27T21:48:41Z",
+      "updated": "2024-02-27T21:48:41Z",
+      "paperUrl": "https://arxiv.org/abs/2402.17907",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ICASSP 2024",
+      "publicationVenue": "ICASSP 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2311.07630",
+      "title": "Cross-modal Generative Model for Visual-Guided Binaural Stereo Generation",
+      "authors": [
+        "Zhaojian Li",
+        "Bin Zhao",
+        "Yuan Yuan"
+      ],
+      "abstract": "Binaural stereo audio is recorded by imitating the way the human ear receives sound, which provides people with an immersive listening experience. Existing approaches leverage autoencoders and directly exploit visual spatial information to synthesize binaural stereo, resulting in a limited representation of visual guidance. For the first time, we propose a visually guided generative adversarial approach for generating binaural stereo audio from mono audio. Specifically, we develop a Stereo Audio Generation Model (SAGM), which utilizes shared spatio-temporal visual information to guide the generator and the discriminator to work separately. The shared visual information is updated alternately in the generative adversarial stage, allowing the generator and discriminator to deliver their respective guided knowledge while visually sharing. The proposed method learns bidirectional complementary visual information, which facilitates the expression of visual guidance in generation. In addition, spatial perception is a crucial attribute of binaural stereo audio, and thus the evaluation of stereo spatial perception is essential. However, previous metrics failed to measure the spatial perception of audio. To this end, a metric to measure the spatial perception of audio is proposed for the first time. The proposed metric is capable of measuring the magnitude and direction of spatial perception in the temporal dimension. Further, considering its function, it is feasible to utilize it instead of demanding user studies to some extent. The proposed method achieves state-of-the-art performance on 2 datasets and 5 evaluation metrics. Qualitative experiments and user studies demonstrate that the method generates space-realistic stereo audio.",
+      "published": "2023-11-13T09:53:14Z",
+      "updated": "2023-11-13T09:53:14Z",
+      "paperUrl": "https://arxiv.org/abs/2311.07630",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2310.13430",
+      "title": "HRTF Interpolation using a Spherical Neural Process Meta-Learner",
+      "authors": [
+        "Etienne Thuillier",
+        "Craig Jin",
+        "Vesa Välimäki"
+      ],
+      "abstract": "Several individualization methods have recently been proposed to estimate a subject's Head-Related Transfer Function (HRTF) using convenient input modalities such as anthropometric measurements or pinnae photographs. There exists a need for adaptively correcting the estimation error committed by such methods using a few data point samples from the subject's HRTF, acquired using acoustic measurements or perceptual feedback. To this end, we introduce a Convolutional Conditional Neural Process meta-learner specialized in HRTF error interpolation. In particular, the model includes a Spherical Convolutional Neural Network component to accommodate the spherical geometry of HRTF data. It also exploits potential symmetries between the HRTF's left and right channels about the median axis. In this work, we evaluate the proposed model's performance purely on time-aligned spectrum interpolation grounds under a simplified setup where a generic population-mean HRTF forms the initial estimates prior to corrections instead of individualized ones. The trained model achieves up to 3 dB relative error reduction compared to state-of-the-art interpolation methods despite being trained using only 85 subjects. This improvement translates up to nearly a halving of the data point count required to achieve comparable accuracy, in particular from 50 to 28 points to reach an average of -20 dB relative error per interpolated feature. Moreover, we show that the trained model provides well-calibrated uncertainty estimates. Accordingly, such estimates can inform the sequential decision problem of acquiring as few correcting HRTF data points as needed to meet a desired level of HRTF individualization accuracy.",
+      "published": "2023-10-20T11:41:54Z",
+      "updated": "2023-10-20T11:41:54Z",
+      "paperUrl": "https://arxiv.org/abs/2310.13430",
+      "doi": null,
+      "journalReference": null,
+      "comment": "12 pages. 11 figures. Submitted for publication in IEEE/ACM Transactions on Audio, Speech and Language Processing (T-ASL)",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2309.08290",
+      "title": "Head-Related Transfer Function Interpolation with a Spherical CNN",
+      "authors": [
+        "Xingyu Chen",
+        "Fei Ma",
+        "Yile Zhang",
+        "Amy Bastine",
+        "Prasanga N. Samarasinghe"
+      ],
+      "abstract": "Head-related transfer functions (HRTFs) are crucial for spatial soundfield reproduction in virtual reality applications. However, obtaining personalized, high-resolution HRTFs is a time-consuming and costly task. Recently, deep learning-based methods showed promise in interpolating high-resolution HRTFs from sparse measurements. Some of these methods treat HRTF interpolation as an image super-resolution task, which neglects spatial acoustic features. This paper proposes a spherical convolutional neural network method for HRTF interpolation. The proposed method realizes the convolution process by decomposing and reconstructing HRTF through the Spherical Harmonics (SHs). The SHs, an orthogonal function set defined on a sphere, allow the convolution layers to effectively capture the spatial features of HRTFs, which are sampled on a sphere. Simulation results demonstrate the effectiveness of the proposed method in achieving accurate interpolation from sparse measurements, outperforming the SH method and learning-based methods.",
+      "published": "2023-09-15T10:11:37Z",
+      "updated": "2023-09-15T10:11:37Z",
+      "paperUrl": "https://arxiv.org/abs/2309.08290",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2308.09514",
+      "title": "Spatial LibriSpeech: An Augmented Dataset for Spatial Audio Learning",
+      "authors": [
+        "Miguel Sarabia",
+        "Elena Menyaylenko",
+        "Alessandro Toso",
+        "Skyler Seto",
+        "Zakaria Aldeneh",
+        "Shadi Pirhosseinloo",
+        "Luca Zappella",
+        "Barry-John Theobald",
+        "Nicholas Apostoloff",
+        "Jonathan Sheaffer"
+      ],
+      "abstract": "We present Spatial LibriSpeech, a spatial audio dataset with over 650 hours of 19-channel audio, first-order ambisonics, and optional distractor noise. Spatial LibriSpeech is designed for machine learning model training, and it includes labels for source position, speaking direction, room acoustics and geometry. Spatial LibriSpeech is generated by augmenting LibriSpeech samples with 200k+ simulated acoustic conditions across 8k+ synthetic rooms. To demonstrate the utility of our dataset, we train models on four spatial audio tasks, resulting in a median absolute error of 6.60° on 3D source localization, 0.43m on distance, 90.66ms on T30, and 2.74dB on DRR estimation. We show that the same models generalize well to widely-used evaluation datasets, e.g., obtaining a median absolute error of 12.43° on 3D source localization on TUT Sound Events 2018, and 157.32ms on T30 estimation on ACE Challenge.",
+      "published": "2023-08-18T12:45:32Z",
+      "updated": "2023-08-18T12:45:32Z",
+      "paperUrl": "https://arxiv.org/abs/2308.09514",
+      "doi": "10.21437/Interspeech.2023-2117",
+      "journalReference": "Proceedings of INTERSPEECH (2023), pp. 3724-3728",
+      "comment": null,
+      "publicationVenue": "INTERSPEECH 2023",
+      "venueEvidence": "journalReference",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2307.14650",
+      "title": "Spatial Upsampling of Head-Related Transfer Functions Using a Physics-Informed Neural Network",
+      "authors": [
+        "Fei Ma",
+        "Thushara D. Abhayapala",
+        "Prasanga N. Samarasinghe",
+        "Xingyu Chen"
+      ],
+      "abstract": "Head-related transfer function (HRTF) capture the information that a person uses to localize sound sources in space, and thus is crucial for creating personalized virtual acoustic experiences. However, practical HRTF measurement systems may only measure a person's HRTFs sparsely, and this necessitates HRTF upsampling. This paper proposes a physics-informed neural network (PINN) method for HRTF upsampling. The PINN exploits the Helmholtz equation, the governing equation of acoustic wave propagation, for regularizing the upsampling process. This helps the generation of physically valid upsamplings which generalize beyond the measured HRTF. Furthermore, the size (width and depth) of the PINN is set according to the Helmholtz equation and its solutions, the spherical harmonics (SHs). This makes the PINN have an appropriate level of expressive power and thus does not suffer from the over-fitting problem. Since the PINN is designed independent of any specific HRTF dataset, it offers more generalizability compared to pure data-driven methods. Numerical experiments confirm the better performance of the PINN method for HRTF upsampling in both interpolation and extrapolation scenarios in comparison with the SH method and the HRTF field method.",
+      "published": "2023-07-27T06:55:10Z",
+      "updated": "2023-12-10T08:57:49Z",
+      "paperUrl": "https://arxiv.org/abs/2307.14650",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2306.05812",
+      "title": "HRTF upsampling with a generative adversarial network using a gnomonic equiangular projection",
+      "authors": [
+        "Aidan O. T. Hogg",
+        "Mads Jenkins",
+        "He Liu",
+        "Isaac Squires",
+        "Samuel J. Cooper",
+        "Lorenzo Picinali"
+      ],
+      "abstract": "An individualised head-related transfer function (HRTF) is very important for creating realistic virtual reality (VR) and augmented reality (AR) environments. However, acoustically measuring high-quality HRTFs requires expensive equipment and an acoustic lab setting. To overcome these limitations and to make this measurement more efficient HRTF upsampling has been exploited in the past where a high-resolution HRTF is created from a low-resolution one. This paper demonstrates how generative adversarial networks (GANs) can be applied to HRTF upsampling. We propose a novel approach that transforms the HRTF data for direct use with a convolutional super-resolution generative adversarial network (SRGAN). This new approach is benchmarked against three baselines: barycentric upsampling, spherical harmonic (SH) upsampling and an HRTF selection approach. Experimental results show that the proposed method outperforms all three baselines in terms of log-spectral distortion (LSD) and localisation performance using perceptual models when the input HRTF is sparse (less than 20 measured positions).",
+      "published": "2023-06-09T11:05:09Z",
+      "updated": "2024-02-27T13:40:40Z",
+      "paperUrl": "https://arxiv.org/abs/2306.05812",
+      "doi": null,
+      "journalReference": null,
+      "comment": "15 pages, 9 figures, Preprint (Accepted to IEEE/ACM Transactions on Audio, Speech, and Language Processing on the 15 Feb 2024)",
+      "publicationVenue": "IEEE/ACM TASLP 2024",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.CV",
+        "cs.HC",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2302.02088",
+      "title": "AV-NeRF: Learning Neural Fields for Real-World Audio-Visual Scene Synthesis",
+      "authors": [
+        "Susan Liang",
+        "Chao Huang",
+        "Yapeng Tian",
+        "Anurag Kumar",
+        "Chenliang Xu"
+      ],
+      "abstract": "Can machines recording an audio-visual scene produce realistic, matching audio-visual experiences at novel positions and novel view directions? We answer it by studying a new task -- real-world audio-visual scene synthesis -- and a first-of-its-kind NeRF-based approach for multimodal learning. Concretely, given a video recording of an audio-visual scene, the task is to synthesize new videos with spatial audios along arbitrary novel camera trajectories in that scene. We propose an acoustic-aware audio generation module that integrates prior knowledge of audio propagation into NeRF, in which we implicitly associate audio generation with the 3D geometry and material properties of a visual environment. Furthermore, we present a coordinate transformation module that expresses a view direction relative to the sound source, enabling the model to learn sound source-centric acoustic fields. To facilitate the study of this new task, we collect a high-quality Real-World Audio-Visual Scene (RWAVS) dataset. We demonstrate the advantages of our method on this real-world dataset and the simulation-based SoundSpaces dataset.",
+      "published": "2023-02-04T04:17:19Z",
+      "updated": "2023-10-16T15:11:01Z",
+      "paperUrl": "https://arxiv.org/abs/2302.02088",
+      "doi": null,
+      "journalReference": null,
+      "comment": "NeurIPS 2023",
+      "publicationVenue": "NeurIPS 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2302.02809",
+      "title": "Listen2Scene: Interactive material-aware binaural sound propagation for reconstructed 3D scenes",
+      "authors": [
+        "Anton Ratnarajah",
+        "Dinesh Manocha"
+      ],
+      "abstract": "We present an end-to-end binaural audio rendering approach (Listen2Scene) for virtual reality (VR) and augmented reality (AR) applications. We propose a novel neural-network-based binaural sound propagation method to generate acoustic effects for indoor 3D models of real environments. Any clean audio or dry audio can be convolved with the generated acoustic effects to render audio corresponding to the real environment. We propose a graph neural network that uses both the material and the topology information of the 3D scenes and generates a scene latent vector. Moreover, we use a conditional generative adversarial network (CGAN) to generate acoustic effects from the scene latent vector. Our network can handle holes or other artifacts in the reconstructed 3D mesh model. We present an efficient cost function for the generator network to incorporate spatial audio effects. Given the source and the listener position, our learning-based binaural sound propagation approach can generate an acoustic effect in 0.1 milliseconds on an NVIDIA GeForce RTX 2080 Ti GPU. We have evaluated the accuracy of our approach with binaural acoustic effects generated using an interactive geometric sound propagation algorithm and captured real acoustic effects / real-world recordings. We also performed a perceptual evaluation and observed that the audio rendered by our approach is more plausible than audio rendered using prior learning-based and geometric-based sound propagation algorithms. We quantitatively evaluated the accuracy of our approach using statistical acoustic parameters, and energy decay curves. The demo videos, code and dataset are available online (https://anton-jeran.github.io/Listen2Scene/).",
+      "published": "2023-02-02T04:09:23Z",
+      "updated": "2024-02-01T13:51:42Z",
+      "paperUrl": "https://arxiv.org/abs/2302.02809",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to IEEE VR 2024. Project page: https://anton-jeran.github.io/Listen2Scene/",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2212.07000",
+      "title": "DopplerBAS: Binaural Audio Synthesis Addressing Doppler Effect",
+      "authors": [
+        "Jinglin Liu",
+        "Zhenhui Ye",
+        "Qian Chen",
+        "Siqi Zheng",
+        "Wen Wang",
+        "Qinglin Zhang",
+        "Zhou Zhao"
+      ],
+      "abstract": "Recently, binaural audio synthesis (BAS) has emerged as a promising research field for its applications in augmented and virtual realities. Binaural audio helps users orient themselves and establish immersion by providing the brain with interaural time differences reflecting spatial information. However, existing BAS methods are limited in terms of phase estimation, which is crucial for spatial hearing. In this paper, we propose the \\textbf{DopplerBAS} method to explicitly address the Doppler effect of the moving sound source. Specifically, we calculate the radial relative velocity of the moving speaker in spherical coordinates, which further guides the synthesis of binaural audio. This simple method introduces no additional hyper-parameters and does not modify the loss functions, and is plug-and-play: it scales well to different types of backbones. DopperBAS distinctly improves the representative WarpNet and BinauralGrad backbones in the phase error metric and reaches a new state of the art (SOTA): 0.780 (versus the current SOTA 0.807). Experiments and ablation studies demonstrate the effectiveness of our method.",
+      "published": "2022-12-14T03:18:21Z",
+      "updated": "2023-06-01T07:35:11Z",
+      "paperUrl": "https://arxiv.org/abs/2212.07000",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to ACL 2023 short paper; key words: binaural audio, stereophonic sound",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2211.02301",
+      "title": "Binaural Rendering of Ambisonic Signals by Neural Networks",
+      "authors": [
+        "Yin Zhu",
+        "Qiuqiang Kong",
+        "Junjie Shi",
+        "Shilei Liu",
+        "Xuzhou Ye",
+        "Ju-chiang Wang",
+        "Junping Zhang"
+      ],
+      "abstract": "Binaural rendering of ambisonic signals is of broad interest to virtual reality and immersive media. Conventional methods often require manually measured Head-Related Transfer Functions (HRTFs). To address this issue, we collect a paired ambisonic-binaural dataset and propose a deep learning framework in an end-to-end manner. Experimental results show that neural networks outperform the conventional method in objective metrics and achieve comparable subjective metrics. To validate the proposed framework, we experimentally explore different settings of the input features, model structures, output features, and loss functions. Our proposed system achieves an SDR of 7.32 and MOSs of 3.83, 3.58, 3.87, 3.58 in quality, timbre, localization, and immersion dimensions.",
+      "published": "2022-11-04T07:57:37Z",
+      "updated": "2022-11-04T07:57:37Z",
+      "paperUrl": "https://arxiv.org/abs/2211.02301",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2211.00878",
+      "title": "Neural Fourier Shift for Binaural Speech Rendering",
+      "authors": [
+        "Jin Woo Lee",
+        "Kyogu Lee"
+      ],
+      "abstract": "We present a neural network for rendering binaural speech from given monaural audio, position, and orientation of the source. Most of the previous works have focused on synthesizing binaural speeches by conditioning the positions and orientations in the feature space of convolutional neural networks. These synthesis approaches are powerful in estimating the target binaural speeches even for in-the-wild data but are difficult to generalize for rendering the audio from out-of-distribution domains. To alleviate this, we propose Neural Fourier Shift (NFS), a novel network architecture that enables binaural speech rendering in the Fourier space. Specifically, utilizing a geometric time delay based on the distance between the source and the receiver, NFS is trained to predict the delays and scales of various early reflections. NFS is efficient in both memory and computational cost, is interpretable, and operates independently of the source domain by its design. Experimental results show that NFS performs comparable to the previous studies on the benchmark dataset, even with its 25 times lighter memory and 6 times fewer calculations.",
+      "published": "2022-11-02T04:55:09Z",
+      "updated": "2023-05-01T10:57:50Z",
+      "paperUrl": "https://arxiv.org/abs/2211.00878",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted by ICASSP 2023",
+      "publicationVenue": "ICASSP 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.AI",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2210.15196",
+      "title": "HRTF Field: Unifying Measured HRTF Magnitude Representation with Neural Fields",
+      "authors": [
+        "You Zhang",
+        "Yuxiang Wang",
+        "Zhiyao Duan"
+      ],
+      "abstract": "Head-related transfer functions (HRTFs) are a set of functions describing the spatial filtering effect of the outer ear (i.e., torso, head, and pinnae) onto sound sources at different azimuth and elevation angles. They are widely used in spatial audio rendering. While the azimuth and elevation angles are intrinsically continuous, measured HRTFs in existing datasets employ different spatial sampling schemes, making it difficult to model HRTFs across datasets. In this work, we propose to use neural fields, a differentiable representation of functions through neural networks, to model HRTFs with arbitrary spatial sampling schemes. Such representation is unified across datasets with different spatial sampling schemes. HRTFs for arbitrary azimuth and elevation angles can be derived from this representation. We further introduce a generative model named HRTF field to learn the latent space of the HRTF neural fields across subjects. We demonstrate promising performance on HRTF interpolation and generation tasks and point out potential future work.",
+      "published": "2022-10-27T06:05:20Z",
+      "updated": "2023-02-23T16:34:19Z",
+      "paperUrl": "https://arxiv.org/abs/2210.15196",
+      "doi": null,
+      "journalReference": null,
+      "comment": "5 pages, accepted by ICASSP 2023",
+      "publicationVenue": "ICASSP 2023",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.GR",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2207.10967",
+      "title": "Head-Related Transfer Function Interpolation from Spatially Sparse Measurements Using Autoencoder with Source Position Conditioning",
+      "authors": [
+        "Yuki Ito",
+        "Tomohiko Nakamura",
+        "Shoichi Koyama",
+        "Hiroshi Saruwatari"
+      ],
+      "abstract": "We propose a method of head-related transfer function (HRTF) interpolation from sparsely measured HRTFs using an autoencoder with source position conditioning. The proposed method is drawn from an analogy between an HRTF interpolation method based on regularized linear regression (RLR) and an autoencoder. Through this analogy, we found the key feature of the RLR-based method that HRTFs are decomposed into source-position-dependent and source-position-independent factors. On the basis of this finding, we design the encoder and decoder so that their weights and biases are generated from source positions. Furthermore, we introduce an aggregation module that reduces the dependence of latent variables on source position for obtaining a source-position-independent representation of each subject. Numerical experiments show that the proposed method can work well for unseen subjects and achieve an interpolation performance with only one-eighth measurements comparable to that of the RLR-based method.",
+      "published": "2022-07-22T09:24:58Z",
+      "updated": "2022-07-22T09:24:58Z",
+      "paperUrl": "https://arxiv.org/abs/2207.10967",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to International Workshop on Acoustic Signal Enhancement (IWAENC) 2022",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2207.03697",
+      "title": "End-to-End Binaural Speech Synthesis",
+      "authors": [
+        "Wen Chin Huang",
+        "Dejan Markovic",
+        "Alexander Richard",
+        "Israel Dejene Gebru",
+        "Anjali Menon"
+      ],
+      "abstract": "In this work, we present an end-to-end binaural speech synthesis system that combines a low-bitrate audio codec with a powerful binaural decoder that is capable of accurate speech binauralization while faithfully reconstructing environmental factors like ambient noise or reverb. The network is a modified vector-quantized variational autoencoder, trained with several carefully designed objectives, including an adversarial loss. We evaluate the proposed system on an internal binaural dataset with objective metrics and a perceptual study. Results show that the proposed approach matches the ground truth data more closely than previous methods. In particular, we demonstrate the capability of the adversarial loss in capturing environment effects needed to create an authentic auditory scene.",
+      "published": "2022-07-08T05:18:36Z",
+      "updated": "2022-07-08T05:18:36Z",
+      "paperUrl": "https://arxiv.org/abs/2207.03697",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to INTERSPEECH 2022. Demo link: https://unilight.github.io/Publication-Demos/publications/e2e-binaural-synthesis",
+      "publicationVenue": "INTERSPEECH 2022",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2205.14807",
+      "title": "BinauralGrad: A Two-Stage Conditional Diffusion Probabilistic Model for Binaural Audio Synthesis",
+      "authors": [
+        "Yichong Leng",
+        "Zehua Chen",
+        "Junliang Guo",
+        "Haohe Liu",
+        "Jiawei Chen",
+        "Xu Tan",
+        "Danilo Mandic",
+        "Lei He",
+        "Xiang-Yang Li",
+        "Tao Qin",
+        "Sheng Zhao",
+        "Tie-Yan Liu"
+      ],
+      "abstract": "Binaural audio plays a significant role in constructing immersive augmented and virtual realities. As it is expensive to record binaural audio from the real world, synthesizing them from mono audio has attracted increasing attention. This synthesis process involves not only the basic physical warping of the mono audio, but also room reverberations and head/ear related filtrations, which, however, are difficult to accurately simulate in traditional digital signal processing. In this paper, we formulate the synthesis process from a different perspective by decomposing the binaural audio into a common part that shared by the left and right channels as well as a specific part that differs in each channel. Accordingly, we propose BinauralGrad, a novel two-stage framework equipped with diffusion models to synthesize them respectively. Specifically, in the first stage, the common information of the binaural audio is generated with a single-channel diffusion model conditioned on the mono audio, based on which the binaural audio is generated by a two-channel diffusion model in the second stage. Combining this novel perspective of two-stage synthesis with advanced generative models (i.e., the diffusion models),the proposed BinauralGrad is able to generate accurate and high-fidelity binaural audio samples. Experiment results show that on a benchmark dataset, BinauralGrad outperforms the existing baselines by a large margin in terms of both object and subject evaluation metrics (Wave L2: 0.128 vs. 0.157, MOS: 3.80 vs. 3.61). The generated audio samples (https://speechresearch.github.io/binauralgrad) and code (https://github.com/microsoft/NeuralSpeech/tree/master/BinauralGrad) are available online.",
+      "published": "2022-05-30T02:09:26Z",
+      "updated": "2022-11-29T09:02:01Z",
+      "paperUrl": "https://arxiv.org/abs/2205.14807",
+      "doi": null,
+      "journalReference": null,
+      "comment": "NeurIPS 2022 camera version",
+      "publicationVenue": "NeurIPS 2022",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.LG",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2204.02637",
+      "title": "Global HRTF Interpolation via Learned Affine Transformation of Hyper-conditioned Features",
+      "authors": [
+        "Jin Woo Lee",
+        "Sungho Lee",
+        "Kyogu Lee"
+      ],
+      "abstract": "Estimating Head-Related Transfer Functions (HRTFs) of arbitrary source points is essential in immersive binaural audio rendering. Computing each individual's HRTFs is challenging, as traditional approaches require expensive time and computational resources, while modern data-driven approaches are data-hungry. Especially for the data-driven approaches, existing HRTF datasets differ in spatial sampling distributions of source positions, posing a major problem when generalizing the method across multiple datasets. To alleviate this, we propose a deep learning method based on a novel conditioning architecture. The proposed method can predict an HRTF of any position by interpolating the HRTFs of known distributions. Experimental results show that the proposed architecture improves the model's generalizability across datasets with various coordinate systems. Additional demonstrations show that the model robustly reconstructs the target HRTFs from the spatially downsampled HRTFs in both quantitative and perceptual measures.",
+      "published": "2022-04-06T07:42:15Z",
+      "updated": "2022-11-03T05:32:05Z",
+      "paperUrl": "https://arxiv.org/abs/2204.02637",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Submitted to ICASSP 2023",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2203.12053",
+      "title": "Upmixing via style transfer: a variational autoencoder for disentangling spatial images and musical content",
+      "authors": [
+        "Haici Yang",
+        "Sanna Wager",
+        "Spencer Russell",
+        "Mike Luo",
+        "Minje Kim",
+        "Wontak Kim"
+      ],
+      "abstract": "In the stereo-to-multichannel upmixing problem for music, one of the main tasks is to set the directionality of the instrument sources in the multichannel rendering results. In this paper, we propose a modified variational autoencoder model that learns a latent space to describe the spatial images in multichannel music. We seek to disentangle the spatial images and music content, so the learned latent variables are invariant to the music. At test time, we use the latent variables to control the panning of sources. We propose two upmixing use cases: transferring the spatial images from one song to another and blind panning based on the generative model. We report objective and subjective evaluation results to empirically show that our model captures spatial images separately from music content and achieves transfer-based interactive panning.",
+      "published": "2022-03-22T21:25:18Z",
+      "updated": "2022-03-22T21:25:18Z",
+      "paperUrl": "https://arxiv.org/abs/2203.12053",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2111.11882",
+      "title": "Dataset of Spatial Room Impulse Responses in a Variable Acoustics Room for Six Degrees-of-Freedom Rendering and Analysis",
+      "authors": [
+        "Thomas McKenzie",
+        "Leo McCormack",
+        "Christoph Hold"
+      ],
+      "abstract": "Room acoustics measurements are used in many areas of audio research, from physical acoustics modelling and speech enhancement to virtual reality applications. This paper documents the technical specifications and choices made in the measurement of a dataset of spatial room impulse responses (SRIRs) in a variable acoustics room. Two spherical microphone arrays are used: the mh Acoustics Eigenmike em32 and the Zylia ZM-1, capable of up to fourth- and third-order Ambisonic capture, respectively. The dataset consists of three source and seven receiver positions, repeated with five configurations of the room's acoustics with varying levels of reverberation. Possible applications of the dataset include six degrees-of-freedom (6DoF) analysis and rendering, SRIR interpolation methods, and spatial dereverberation techniques.",
+      "published": "2021-11-23T13:51:17Z",
+      "updated": "2021-11-23T13:51:17Z",
+      "paperUrl": "https://arxiv.org/abs/2111.11882",
+      "doi": null,
+      "journalReference": null,
+      "comment": "3 pages, 3 figures, 2 tables",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS",
+        "eess.SP"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2111.10882",
+      "title": "Geometry-Aware Multi-Task Learning for Binaural Audio Generation from Video",
+      "authors": [
+        "Rishabh Garg",
+        "Ruohan Gao",
+        "Kristen Grauman"
+      ],
+      "abstract": "Binaural audio provides human listeners with an immersive spatial sound experience, but most existing videos lack binaural audio recordings. We propose an audio spatialization method that draws on visual information in videos to convert their monaural (single-channel) audio to binaural audio. Whereas existing approaches leverage visual features extracted directly from video frames, our approach explicitly disentangles the geometric cues present in the visual stream to guide the learning process. In particular, we develop a multi-task framework that learns geometry-aware features for binaural audio generation by accounting for the underlying room impulse response, the visual stream's coherence with the sound source(s) positions, and the consistency in geometry of the sounding objects over time. Furthermore, we introduce a new large video dataset with realistic binaural audio simulated for real-world scanned environments. On two datasets, we demonstrate the efficacy of our method, which achieves state-of-the-art results.",
+      "published": "2021-11-21T19:26:45Z",
+      "updated": "2021-11-21T19:26:45Z",
+      "paperUrl": "https://arxiv.org/abs/2111.10882",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Published in BMVC 2021, project page: http://vision.cs.utexas.edu/projects/geometry-aware-binaural/",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2111.08046",
+      "title": "Beyond Mono to Binaural: Generating Binaural Audio from Mono Audio with Depth and Cross Modal Attention",
+      "authors": [
+        "Kranti Kumar Parida",
+        "Siddharth Srivastava",
+        "Gaurav Sharma"
+      ],
+      "abstract": "Binaural audio gives the listener an immersive experience and can enhance augmented and virtual reality. However, recording binaural audio requires specialized setup with a dummy human head having microphones in left and right ears. Such a recording setup is difficult to build and setup, therefore mono audio has become the preferred choice in common devices. To obtain the same impact as binaural audio, recent efforts have been directed towards lifting mono audio to binaural audio conditioned on the visual input from the scene. Such approaches have not used an important cue for the task: the distance of different sound producing objects from the microphones. In this work, we argue that depth map of the scene can act as a proxy for inducing distance information of different objects in the scene, for the task of audio binauralization. We propose a novel encoder-decoder architecture with a hierarchical attention mechanism to encode image, depth and audio feature jointly. We design the network on top of state-of-the-art transformer networks for image and depth representation. We show empirically that the proposed method outperforms state-of-the-art methods comfortably for two challenging public datasets FAIR-Play and MUSIC-Stereo. We also demonstrate with qualitative results that the method is able to focus on the right information required for the task. The project details are available at \\url{https://krantiparida.github.io/projects/bmonobinaural.html}",
+      "published": "2021-11-15T19:07:39Z",
+      "updated": "2021-11-15T19:07:39Z",
+      "paperUrl": "https://arxiv.org/abs/2111.08046",
+      "doi": null,
+      "journalReference": null,
+      "comment": "To appear in WACV 2022. arXiv admin note: text overlap with arXiv:2108.04906",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2109.00748",
+      "title": "Binaural Audio Generation via Multi-task Learning",
+      "authors": [
+        "Sijia Li",
+        "Shiguang Liu",
+        "Dinesh Manocha"
+      ],
+      "abstract": "We present a learning-based approach for generating binaural audio from mono audio using multi-task learning. Our formulation leverages additional information from two related tasks: the binaural audio generation task and the flipped audio classification task. Our learning model extracts spatialization features from the visual and audio input, predicts the left and right audio channels, and judges whether the left and right channels are flipped. First, we extract visual features using ResNet from the video frames. Next, we perform binaural audio generation and flipped audio classification using separate subnetworks based on visual features. Our learning method optimizes the overall loss based on the weighted sum of the losses of the two tasks. We train and evaluate our model on the FAIR-Play dataset and the YouTube-ASMR dataset. We perform quantitative and qualitative evaluations to demonstrate the benefits of our approach over prior techniques.",
+      "published": "2021-09-02T07:04:56Z",
+      "updated": "2021-09-02T07:04:56Z",
+      "paperUrl": "https://arxiv.org/abs/2109.00748",
+      "doi": null,
+      "journalReference": null,
+      "comment": null,
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2106.10801",
+      "title": "MeshRIR: A Dataset of Room Impulse Responses on Meshed Grid Points For Evaluating Sound Field Analysis and Synthesis Methods",
+      "authors": [
+        "Shoichi Koyama",
+        "Tomoya Nishida",
+        "Keisuke Kimura",
+        "Takumi Abe",
+        "Natsuki Ueno",
+        "Jesper Brunnström"
+      ],
+      "abstract": "A new impulse response (IR) dataset called \"MeshRIR\" is introduced. Currently available datasets usually include IRs at an array of microphones from several source positions under various room conditions, which are basically designed for evaluating speech enhancement and distant speech recognition methods. On the other hand, methods of estimating or controlling spatial sound fields have been extensively investigated in recent years; however, the current IR datasets are not applicable to validating and comparing these methods because of the low spatial resolution of measurement points. MeshRIR consists of IRs measured at positions obtained by finely discretizing a spatial region. Two subdatasets are currently available: one consists of IRs in a three-dimensional cuboidal region from a single source, and the other consists of IRs in a two-dimensional square region from an array of 32 sources. Therefore, MeshRIR is suitable for evaluating sound field analysis and synthesis methods. This dataset is freely available at https://sh01k.github.io/MeshRIR/ with some codes of sample applications.",
+      "published": "2021-06-21T01:35:14Z",
+      "updated": "2021-07-23T16:01:01Z",
+      "paperUrl": "https://arxiv.org/abs/2106.10801",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted to IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA) 2021",
+      "publicationVenue": "WASPAA 2021",
+      "venueEvidence": "comment",
+      "primaryCategory": "eess.AS",
+      "categories": [
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2105.00708",
+      "title": "Exploiting Audio-Visual Consistency with Partial Supervision for Spatial Audio Generation",
+      "authors": [
+        "Yan-Bo Lin",
+        "Yu-Chiang Frank Wang"
+      ],
+      "abstract": "Human perceives rich auditory experience with distinct sound heard by ears. Videos recorded with binaural audio particular simulate how human receives ambient sound. However, a large number of videos are with monaural audio only, which would degrade the user experience due to the lack of ambient information. To address this issue, we propose an audio spatialization framework to convert a monaural video into a binaural one exploiting the relationship across audio and visual components. By preserving the left-right consistency in both audio and visual modalities, our learning strategy can be viewed as a self-supervised learning technique, and alleviates the dependency on a large amount of video data with ground truth binaural audio data during training. Experiments on benchmark datasets confirm the effectiveness of our proposed framework in both semi-supervised and fully supervised scenarios, with ablation studies and visualization further support the use of our model for audio spatialization.",
+      "published": "2021-05-03T09:34:11Z",
+      "updated": "2021-05-03T09:34:11Z",
+      "paperUrl": "https://arxiv.org/abs/2105.00708",
+      "doi": null,
+      "journalReference": null,
+      "comment": "AAAI'21",
+      "publicationVenue": "AAAI 2021",
+      "venueEvidence": "comment",
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.CV",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2104.06162",
+      "title": "Visually Informed Binaural Audio Generation without Binaural Audios",
+      "authors": [
+        "Xudong Xu",
+        "Hang Zhou",
+        "Ziwei Liu",
+        "Bo Dai",
+        "Xiaogang Wang",
+        "Dahua Lin"
+      ],
+      "abstract": "Stereophonic audio, especially binaural audio, plays an essential role in immersive viewing environments. Recent research has explored generating visually guided stereophonic audios supervised by multi-channel audio collections. However, due to the requirement of professional recording devices, existing datasets are limited in scale and variety, which impedes the generalization of supervised methods in real-world scenarios. In this work, we propose PseudoBinaural, an effective pipeline that is free of binaural recordings. The key insight is to carefully build pseudo visual-stereo pairs with mono data for training. Specifically, we leverage spherical harmonic decomposition and head-related impulse response (HRIR) to identify the relationship between spatial locations and received binaural audios. Then in the visual modality, corresponding visual cues of the mono data are manually placed at sound source positions to form the pairs. Compared to fully-supervised paradigms, our binaural-recording-free pipeline shows great stability in cross-dataset evaluation and achieves comparable performance under subjective preference. Moreover, combined with binaural recordings, our method is able to further boost the performance of binaural audio generation under supervised settings.",
+      "published": "2021-04-13T13:07:33Z",
+      "updated": "2021-04-13T13:07:33Z",
+      "paperUrl": "https://arxiv.org/abs/2104.06162",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Accepted by CVPR 2021. Code, models, and demo video are available on our webpage: \\<https://sheldontsui.github.io/projects/PseudoBinaural>",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.CV",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:2007.09902",
+      "title": "Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation",
+      "authors": [
+        "Hang Zhou",
+        "Xudong Xu",
+        "Dahua Lin",
+        "Xiaogang Wang",
+        "Ziwei Liu"
+      ],
+      "abstract": "Stereophonic audio is an indispensable ingredient to enhance human auditory experience. Recent research has explored the usage of visual information as guidance to generate binaural or ambisonic audio from mono ones with stereo supervision. However, this fully supervised paradigm suffers from an inherent drawback: the recording of stereophonic audio usually requires delicate devices that are expensive for wide accessibility. To overcome this challenge, we propose to leverage the vastly available mono data to facilitate the generation of stereophonic audio. Our key observation is that the task of visually indicated audio separation also maps independent audios to their corresponding visual positions, which shares a similar objective with stereophonic audio generation. We integrate both stereo generation and source separation into a unified framework, Sep-Stereo, by considering source separation as a particular type of audio spatialization. Specifically, a novel associative pyramid network architecture is carefully designed for audio-visual feature fusion. Extensive experiments demonstrate that our framework can improve the stereophonic audio generation results while performing accurate sound separation with a shared backbone.",
+      "published": "2020-07-20T06:20:26Z",
+      "updated": "2020-07-20T06:20:26Z",
+      "paperUrl": "https://arxiv.org/abs/2007.09902",
+      "doi": null,
+      "journalReference": null,
+      "comment": "To appear in Proceedings of the European Conference on Computer Vision (ECCV), 2020. Code, models, and video results are available on our webpage: https://hangz-nju-cuhk.github.io/projects/Sep-Stereo",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:1812.04204",
+      "title": "2.5D Visual Sound",
+      "authors": [
+        "Ruohan Gao",
+        "Kristen Grauman"
+      ],
+      "abstract": "Binaural audio provides a listener with 3D sound sensation, allowing a rich perceptual experience of the scene. However, binaural recordings are scarcely available and require nontrivial expertise and equipment to obtain. We propose to convert common monaural audio into binaural audio by leveraging video. The key idea is that visual frames reveal significant spatial cues that, while explicitly lacking in the accompanying single-channel audio, are strongly linked to it. Our multi-modal approach recovers this link from unlabeled video. We devise a deep convolutional neural network that learns to decode the monaural (single-channel) soundtrack into its binaural counterpart by injecting visual information about object and scene configurations. We call the resulting output 2.5D visual sound---the visual stream helps \"lift\" the flat single channel audio into spatialized sound. In addition to sound generation, we show the self-supervised representation learned by our network benefits audio-visual source separation. Our video results: http://vision.cs.utexas.edu/projects/2.5D_visual_sound/",
+      "published": "2018-12-11T03:23:10Z",
+      "updated": "2019-04-09T16:11:53Z",
+      "paperUrl": "https://arxiv.org/abs/1812.04204",
+      "doi": null,
+      "journalReference": null,
+      "comment": "Published in CVPR 2019, project page: http://vision.cs.utexas.edu/projects/2.5D_visual_sound/",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    },
+    {
+      "sourceId": "arxiv:1809.02587",
+      "title": "Self-Supervised Generation of Spatial Audio for 360 Video",
+      "authors": [
+        "Pedro Morgado",
+        "Nuno Vasconcelos",
+        "Timothy Langlois",
+        "Oliver Wang"
+      ],
+      "abstract": "We introduce an approach to convert mono audio recorded by a 360 video camera into spatial audio, a representation of the distribution of sound over the full viewing sphere. Spatial audio is an important component of immersive 360 video viewing, but spatial audio microphones are still rare in current 360 video production. Our system consists of end-to-end trainable neural networks that separate individual sound sources and localize them on the viewing sphere, conditioned on multi-modal analysis of audio and 360 video frames. We introduce several datasets, including one filmed ourselves, and one collected in-the-wild from YouTube, consisting of 360 videos uploaded with spatial audio. During training, ground-truth spatial audio serves as self-supervision and a mixed down mono track forms the input to our network. Using our approach, we show that it is possible to infer the spatial location of sound sources based only on 360 video and a mono audio track.",
+      "published": "2018-09-07T17:25:59Z",
+      "updated": "2018-09-07T17:25:59Z",
+      "paperUrl": "https://arxiv.org/abs/1809.02587",
+      "doi": null,
+      "journalReference": null,
+      "comment": "To appear in NIPS 2018",
+      "publicationVenue": null,
+      "venueEvidence": null,
+      "primaryCategory": "cs.SD",
+      "categories": [
+        "cs.CV",
+        "cs.LG",
+        "cs.MM",
+        "cs.SD",
+        "eess.AS"
+      ],
+      "matchedQueries": [
+        "spatial-production-backfill"
+      ]
+    }
+  ]
+}

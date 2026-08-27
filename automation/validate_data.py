@@ -33,6 +33,11 @@ ALLOWED_PROJECT_TASKS = {
     "mastering",
     "evaluation",
     "differentiable-processing",
+    "spatial-generation",
+    "spatial-mixing",
+    "spatial-rendering",
+    "hrtf-personalization",
+    "spatial-evaluation",
 }
 ALLOWED_EFFECTS = {
     "gain",
@@ -67,6 +72,11 @@ ALLOWED_DATASET_CONTENT_TYPES = {
     "annotations",
     "text-prompts",
     "synthetic-audio",
+    "binaural-audio",
+    "ambisonics",
+    "hrtf",
+    "spatial-metadata",
+    "video",
 }
 DATASET_ACCESS_STATUSES = {
     "direct-download",

@@ -1,10 +1,10 @@
 # Intelligent Audio Production Resources
 
-A curated, bilingual research index covering audio effects, differentiable processing, representation learning, automatic mixing, mastering, and evaluation.
+A curated, bilingual research index covering audio effects, differentiable processing, representation learning, automatic mixing, mastering, spatial audio, and evaluation.
 
 [Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-**71 papers · 40 verified projects · 12 datasets · 2 reference collections**
+**114 papers · 72 verified projects · 23 datasets · 3 reference collections**
 
 [![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
 
@@ -24,9 +24,8 @@ The index is organized by production task rather than publication year. It curre
 - effect and production-style representation learning;
 - automatic, reference-guided, and controllable mixing;
 - mastering and remastering;
-- benchmarks, metrics, datasets, and reproducibility tools.
-
-Spatial audio is listed as a future extension rather than mixed into the current catalogue.
+- benchmarks, metrics, datasets, and reproducibility tools;
+- intelligent spatial generation, upmixing, rendering, HRTF personalization, and production evaluation.
 
 ## Curation Principles
 
@@ -74,7 +73,7 @@ See [automation/README.md](automation/README.md) for configuration and review ru
 - [x] Establish a bilingual index for papers, projects, datasets, and reference collections.
 - [x] Link datasets to verified papers and open-source projects that use them.
 - [ ] Audit historical coverage across effect modeling, parameter estimation, representation learning, mixing, and mastering.
-- [ ] Add spatial-audio production tasks after defining a focused taxonomy and inclusion policy.
+- [x] Add a focused spatial-audio production taxonomy and initial evidence-backed catalogue.
 
 ### Reproducibility and quality
 

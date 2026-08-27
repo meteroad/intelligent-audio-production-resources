@@ -512,6 +512,66 @@
       }
     },
     {
+      "id": "arxiv-2601-12950",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2601.12950"
+      },
+      "shortName": "ImmersiveFlow",
+      "title": "ImmersiveFlow: Stereo-to-7.1.4 spatial audio generation with flow matching",
+      "authors": [
+        "Zining Liang",
+        "Runbang Wang",
+        "Xuzhou Ye",
+        "Qiuqiang Kong"
+      ],
+      "year": 2026,
+      "published": "2026-01-19",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio",
+        "mixing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Uses flow matching to upmix stereo audio directly into a 7.1.4 immersive loudspeaker format.",
+        "zh": "使用流匹配将立体声音频直接上混为 7.1.4 沉浸式扬声器格式。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2601.12950"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/806bf0edc6c0cd9689f9e01c4d9ec49b9f987d88",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
       "id": "arxiv-2601-04867",
       "source": {
         "type": "arxiv",
@@ -639,8 +699,8 @@
         "status": "standard",
         "citationCount": 9,
         "influentialCitationCount": 0,
-        "yearRank": 4,
-        "cohortSize": 11,
+        "yearRank": 7,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/95de1f0022c638d99f7a5efee51bfef549d1ef1b",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -699,8 +759,8 @@
         "status": "standard",
         "citationCount": 1,
         "influentialCitationCount": 0,
-        "yearRank": 11,
-        "cohortSize": 11,
+        "yearRank": 17,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/cd63e97b41adeae7901083ad2974243195060b9c",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -769,8 +829,8 @@
         "status": "standard",
         "citationCount": 5,
         "influentialCitationCount": 2,
-        "yearRank": 5,
-        "cohortSize": 11,
+        "yearRank": 10,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/04f0069c0a9c0169f76a98f64eda33f2998a2080",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -906,8 +966,8 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 7,
-        "cohortSize": 11,
+        "yearRank": 13,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/d5512c886fc2d6cd69cf4d0cbfc8a46d2419895e",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1145,12 +1205,142 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "high-impact",
+        "status": "standard",
         "citationCount": 11,
         "influentialCitationCount": 1,
-        "yearRank": 2,
-        "cohortSize": 11,
+        "yearRank": 5,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/68fcad1ebcc5787a75e6d5ab4d7eb6beebbf9945",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2507-07318",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2507.07318"
+      },
+      "shortName": "SonicMotion",
+      "title": "Generating Moving 3D Soundscapes with Latent Diffusion Models",
+      "authors": [
+        "Christian Templin",
+        "Yanda Zhu",
+        "Hao Wang"
+      ],
+      "year": 2025,
+      "published": "2025-07-09",
+      "venue": "ICASSP 2026",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates moving three-dimensional first-order Ambisonic soundscapes with a latent diffusion model.",
+        "zh": "使用潜空间扩散模型生成具有运动轨迹的三维一阶 Ambisonics 声景。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2507.07318"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/icassp55912.2026.11461767"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 1,
+        "influentialCitationCount": 0,
+        "yearRank": 17,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/e3cd9558ab4f172bc35f6b2f7fa9903194596f42",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2507-05053",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2507.05053"
+      },
+      "shortName": "Extended SONICOM",
+      "title": "The Extended SONICOM HRTF Dataset and Spatial Audio Metrics Toolbox",
+      "authors": [
+        "Katarina C. Poole",
+        "Julie Meyer",
+        "Vincent Martin",
+        "Rapolas Daugintis",
+        "Nils Marggraf-Turley",
+        "Jack Webb",
+        "Ludovic Pirard",
+        "Nicola La Magna",
+        "Oliver Turvey",
+        "Lorenzo Picinali"
+      ],
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "Proceedings of the 11th Convention of the European Acoustics Association Forum Acusticum / EuroNoise 2025 2025",
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "summary": {
+        "en": "Extends the SONICOM resource to 300 measured subjects with synthesized HRTFs, head scans, and a spatial-audio metrics toolbox.",
+        "zh": "将 SONICOM 扩展至 300 名测量对象，并提供合成 HRTF、头部扫描及空间音频指标工具箱。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2507.05053"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/Katarina-Poole/Spatial-Audio-Metrics"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2507.05053"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Substantially expands public personalized-HRTF data and pairs it with an open metrics toolbox for reproducible analysis and evaluation.",
+          "zh": "显著扩展公开个体化 HRTF 数据，并提供开放指标工具箱以支持可复现分析与评测。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 5,
+        "influentialCitationCount": 0,
+        "yearRank": 10,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/4f32ed2e32dbbd3b9c6f9cb85a21f946a6a4cb2f",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -1216,8 +1406,8 @@
         "status": "high-impact",
         "citationCount": 13,
         "influentialCitationCount": 1,
-        "yearRank": 1,
-        "cohortSize": 11,
+        "yearRank": 4,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/3efa251891e186f3015f3396e55d8af3517dd55a",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1287,9 +1477,73 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 7,
-        "cohortSize": 11,
+        "yearRank": 13,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/9829f5a588503e1531f9e434f2f786982ded8178",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2506-12199",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2506.12199"
+      },
+      "shortName": "ViSAGe",
+      "title": "ViSAGe: Video-to-Spatial Audio Generation",
+      "authors": [
+        "Jaeyeon Kim",
+        "Heeseung Yun",
+        "Gunhee Kim"
+      ],
+      "year": 2025,
+      "published": "2025-06-13",
+      "venue": "ICLR 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates first-order Ambisonics from silent video using visual features, directional conditioning, and autoregressive audio tokens.",
+        "zh": "利用视觉特征、方向条件和自回归音频 token，从静音视频生成一阶 Ambisonics。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2506.12199"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/jaeyeonkim99/visage"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2506.12199"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Introduces direct video-to-Ambisonics generation together with a sizable dataset, spatial metrics, checkpoints, and reproducible code.",
+          "zh": "提出直接从视频生成 Ambisonics，并配套发布大规模数据集、空间指标、权重与可复现代码。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 20,
+        "influentialCitationCount": 6,
+        "yearRank": 2,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/c1b4249cd3f5c1bd73f655c91cf686d57bbeca19",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -1358,9 +1612,151 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 7,
-        "cohortSize": 11,
+        "yearRank": 13,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/0fa94ae7961867bc7cbeb7179717df21a6b82b2f",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2504-20630",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2504.20630"
+      },
+      "shortName": "ISDrama",
+      "title": "ISDrama: Immersive Spatial Drama Generation through Multimodal Prompting",
+      "authors": [
+        "Yu Zhang",
+        "Wenxiang Guo",
+        "Changhao Pan",
+        "Zhiyuan Zhu",
+        "Tao Jin",
+        "Zhou Zhao"
+      ],
+      "year": 2025,
+      "published": "2025-04-29",
+      "venue": "ACM MM 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates continuous multi-speaker binaural drama with spatial placement and expressive prosody from multimodal prompts.",
+        "zh": "根据多模态提示生成具有空间布局和表现力韵律的连续多说话人双耳剧集。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2504.20630"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1145/3746027.3755014"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/AaronZ345/ISDrama"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 14,
+        "influentialCitationCount": 0,
+        "yearRank": 3,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/0ce9fb5ca7a8afdd291994b35c820663bfa38c56",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2504-14906",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2504.14906"
+      },
+      "shortName": "OmniAudio",
+      "title": "OmniAudio: Generating Spatial Audio from 360-Degree Video",
+      "authors": [
+        "Huadai Liu",
+        "Tianyi Luo",
+        "Kaicheng Luo",
+        "Qikai Jiang",
+        "Peiwen Sun",
+        "Jialei Wang",
+        "Rongjie Huang",
+        "Qian Chen",
+        "Wen Wang",
+        "Xiangtai Li",
+        "Shiliang Zhang",
+        "Zhijie Yan",
+        "Zhou Zhao",
+        "Wei Xue"
+      ],
+      "year": 2025,
+      "published": "2025-04-21",
+      "venue": "ICML 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates spatial audio from 360-degree video while modeling sound-source direction and visual context.",
+        "zh": "从 360 度视频生成空间音频，同时建模声源方向与视觉上下文。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2504.14906"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/liuhuadai/OmniAudio"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2504.14906"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Addresses 360-video spatial-audio generation with an integrated method, broad empirical comparisons, and an official implementation.",
+          "zh": "以完整方法解决 360 度视频空间音频生成，进行了广泛实验比较，并提供官方实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 25,
+        "influentialCitationCount": 6,
+        "yearRank": 1,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/cb58ca914bea212ba18fe5fa6064875e33938d6e",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -1424,9 +1820,73 @@
         "status": "standard",
         "citationCount": 5,
         "influentialCitationCount": 0,
-        "yearRank": 5,
-        "cohortSize": 11,
+        "yearRank": 10,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/ad041a4fbdb334599603f161fd37d2b22cd3f0af",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2502-18952",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2502.18952"
+      },
+      "shortName": "DualSpec",
+      "title": "DualSpec: Text-to-spatial-audio Generation via Dual-Spectrogram Guided Diffusion Model",
+      "authors": [
+        "Lei Zhao",
+        "Sizhou Chen",
+        "Linfeng Feng",
+        "Jichao Zhang",
+        "Xiao-Lei Zhang",
+        "Chi Zhang",
+        "Xuelong Li"
+      ],
+      "year": 2025,
+      "published": "2025-02-26",
+      "venue": "IEEE transactions on multimedia 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates spatial audio from text with diffusion guided jointly by magnitude and spatial spectrogram representations.",
+        "zh": "通过幅度与空间频谱图联合引导的扩散模型，根据文本生成空间音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2502.18952"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/TMM.2026.3673480"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 6,
+        "influentialCitationCount": 1,
+        "yearRank": 9,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/852614a147f3010d51dfffccc506408bb70614f8",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -1487,11 +1947,11 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "high-impact",
+        "status": "standard",
         "citationCount": 11,
         "influentialCitationCount": 2,
-        "yearRank": 2,
-        "cohortSize": 11,
+        "yearRank": 5,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/a3ee4346326461e88e744669f8e0df44630b3f30",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1556,9 +2016,79 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 7,
-        "cohortSize": 11,
+        "yearRank": 13,
+        "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/50dd299ba5c775743e956c5e125ce0324abf4d7b",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2501-02786",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2501.02786"
+      },
+      "shortName": "CCStereo",
+      "title": "CCStereo: Audio-Visual Contextual and Contrastive Learning for Binaural Audio Generation",
+      "authors": [
+        "Yuanhong Chen",
+        "Kazuki Shimada",
+        "Christian Simon",
+        "Yukara Ikemiya",
+        "Takashi Shibuya",
+        "Yuki Mitsufuji"
+      ],
+      "year": 2025,
+      "published": "2025-01-06",
+      "venue": "ACM MM 2025",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Uses contextual and contrastive audio-visual learning to improve fine-grained mono-to-binaural generation across environments.",
+        "zh": "利用上下文与对比式音视频学习，提升跨环境的细粒度单声道到双耳音频生成。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2501.02786"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1145/3746027.3754919"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/CCStereo"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "yearRank": 8,
+        "cohortSize": 18,
+        "sourceUrl": "https://www.semanticscholar.org/paper/93a449a553655a81157d472f157ca6c142a07483",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -1620,8 +2150,8 @@
         "status": "standard",
         "citationCount": 5,
         "influentialCitationCount": 0,
-        "yearRank": 13,
-        "cohortSize": 14,
+        "yearRank": 19,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/fde001780947b52d23f87072f2c2f60eb0f042c9",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1692,9 +2222,201 @@
         "status": "high-impact",
         "citationCount": 27,
         "influentialCitationCount": 5,
-        "yearRank": 1,
-        "cohortSize": 14,
+        "yearRank": 2,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/18446eb3348f6601d108315f01e7c60c88e4fa23",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2410-14945",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2410.14945"
+      },
+      "shortName": "ImmerseDiffusion",
+      "title": "ImmerseDiffusion: A Generative Spatial Audio Latent Diffusion Model",
+      "authors": [
+        "Mojtaba Heydari",
+        "Mehrez Souden",
+        "Bruno Conejo",
+        "Joshua Atkins"
+      ],
+      "year": 2024,
+      "published": "2024-10-19",
+      "venue": "ICASSP 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates first-order Ambisonic soundscapes conditioned on sound-object position, timing, and environmental context.",
+        "zh": "根据声对象的位置、时间与环境条件生成一阶 Ambisonics 声景。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2410.14945"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP49660.2025.10889311"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 23,
+        "influentialCitationCount": 4,
+        "yearRank": 4,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/fab83bd8947fced1b57072cc40b094d4598cc490",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2410-11299",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2410.11299"
+      },
+      "shortName": "Diff-SAGe",
+      "title": "Diff-SAGe: End-to-End Spatial Audio Generation Using Diffusion Models",
+      "authors": [
+        "Saksham Singh Kushwaha",
+        "Jianbo Ma",
+        "Mark R. P. Thomas",
+        "Yapeng Tian",
+        "Avery Bruni"
+      ],
+      "year": 2024,
+      "published": "2024-10-15",
+      "venue": "ICASSP 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Uses an end-to-end diffusion model to jointly generate semantic audio content and spatial information.",
+        "zh": "使用端到端扩散模型联合生成音频语义内容与空间信息。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2410.11299"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP49660.2025.10888882"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 12,
+        "influentialCitationCount": 2,
+        "yearRank": 13,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/783e630e65837e1304ff5db9223da1dfc5d5abad",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2410-10676",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2410.10676"
+      },
+      "shortName": "BEWO",
+      "title": "Both Ears Wide Open: Towards Language-Driven Spatial Audio Generation",
+      "authors": [
+        "Peiwen Sun",
+        "Sitong Cheng",
+        "Xiangtai Li",
+        "Zhen Ye",
+        "Huadai Liu",
+        "Honggang Zhang",
+        "Wei Xue",
+        "Yike Guo"
+      ],
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "ICLR 2025",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates multi-object binaural soundscapes from language prompts with explicit temporal and spatial control.",
+        "zh": "根据语言提示生成多声源双耳声景，并提供显式的时间与空间控制。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2410.10676"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/PeiwenSun2000/Both-Ears-Wide-Open"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2410.10676"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Adds language-driven spatial control to generative audio and releases a large dataset, checkpoints, inference code, and evaluation tools.",
+          "zh": "为生成式音频引入语言驱动的空间控制，并公开大规模数据集、权重、推理代码与评测工具。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 35,
+        "influentialCitationCount": 2,
+        "yearRank": 1,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/cba6d8c2b97049f7a9d7f2100945140c655d22cc",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -1758,11 +2480,11 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "high-impact",
+        "status": "standard",
         "citationCount": 19,
         "influentialCitationCount": 1,
-        "yearRank": 3,
-        "cohortSize": 14,
+        "yearRank": 6,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/a97b19f498d2b69d64fdab4f4e5f729db17a0e02",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1834,8 +2556,8 @@
         "status": "standard",
         "citationCount": 10,
         "influentialCitationCount": 0,
-        "yearRank": 9,
-        "cohortSize": 14,
+        "yearRank": 15,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/bff7da8ac59d49a0595d0cebe799fae26fca11a0",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1906,8 +2628,8 @@
         "status": "standard",
         "citationCount": 9,
         "influentialCitationCount": 0,
-        "yearRank": 10,
-        "cohortSize": 14,
+        "yearRank": 16,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/7ed36286e5031430054e2fe7c6954f1ba9016287",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -1969,8 +2691,8 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 14,
-        "cohortSize": 14,
+        "yearRank": 20,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/95c2b03e298b74801bcffb61081f1a07ea492555",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2034,8 +2756,8 @@
         "status": "standard",
         "citationCount": 14,
         "influentialCitationCount": 2,
-        "yearRank": 7,
-        "cohortSize": 14,
+        "yearRank": 11,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/0547245687a15f472b1c9d759eaedf7d2b2b963c",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2104,9 +2826,74 @@
         "status": "high-impact",
         "citationCount": 21,
         "influentialCitationCount": 1,
-        "yearRank": 2,
-        "cohortSize": 14,
+        "yearRank": 5,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/c69db516ebe81d9c7050587fb28e99bd38a41569",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2406-06612",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2406.06612"
+      },
+      "shortName": "SEE-2-SOUND",
+      "title": "SEE-2-SOUND: Zero-Shot Spatial Environment-to-Spatial Sound",
+      "authors": [
+        "Rishit Dagli",
+        "Shivesh Prakash",
+        "Robert Wu",
+        "Houman Khosravani"
+      ],
+      "year": 2024,
+      "published": "2024-06-06",
+      "venue": "SIGGRAPH Posters 2024",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Generates spatial sound for visual environments in a zero-shot pipeline that combines scene understanding, audio generation, and spatialization.",
+        "zh": "通过结合场景理解、音频生成和空间化的零样本流程，为视觉环境生成空间声音。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2406.06612"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/see2sound/see2sound"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1145/3721250.3742965"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 19,
+        "influentialCitationCount": 8,
+        "yearRank": 6,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/6f346dba69901865d4d2bed97ca628e00ed18e6f",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -2180,9 +2967,143 @@
         "status": "standard",
         "citationCount": 11,
         "influentialCitationCount": 0,
-        "yearRank": 8,
-        "cohortSize": 14,
+        "yearRank": 14,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/d48273dc852207454a298c0054b38effd09b5d9c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2405-13428",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2405.13428"
+      },
+      "shortName": "Ambisonizer",
+      "title": "Ambisonizer: Neural Upmixing as Spherical Harmonics Generation",
+      "authors": [
+        "Yongyi Zang",
+        "Yifan Wang",
+        "Minglun Lee"
+      ],
+      "year": 2024,
+      "published": "2024-05-22",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio",
+        "mixing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Formulates neural upmixing as spherical-harmonic generation to map lower-channel audio into Ambisonics.",
+        "zh": "将神经上混建模为球谐函数生成，把较少声道的音频映射为 Ambisonics。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2405.13428"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/yongyizang/ambisonizer"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2405.13428"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Unifies neural upmixing through spherical-harmonic generation, evaluates the formulation across channel settings, and releases the implementation.",
+          "zh": "以球谐生成统一神经上混，在多种声道设置下验证方法，并公开实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 1,
+        "yearRank": 20,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/7eeabc7a6e380a082524f102ade441e67dcf16ba",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2404-15107",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2404.15107"
+      },
+      "shortName": "MIMOSA",
+      "title": "MIMOSA: Human-AI Co-Creation of Computational Spatial Audio Effects on Videos",
+      "authors": [
+        "Zheng Ning",
+        "Zheng Zhang",
+        "Jerrick Ban",
+        "Kaiwen Jiang",
+        "Ruohong Gan",
+        "Yapeng Tian",
+        "Toby Jia-Jun Li"
+      ],
+      "year": 2024,
+      "published": "2024-04-23",
+      "venue": "Creativity & Cognition 2024",
+      "areas": [
+        "spatial-audio",
+        "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Provides a human-AI co-creation interface that helps video creators author and edit computational spatial audio effects.",
+        "zh": "提供人机共创界面，帮助视频创作者设计和编辑计算式空间音频效果。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2404.15107"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1145/3635636.3656189"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 14,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/0862fe90dd915f9e51a5f99c35401ec2e96031d2",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -2249,11 +3170,11 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "high-impact",
+        "status": "standard",
         "citationCount": 19,
         "influentialCitationCount": 0,
-        "yearRank": 3,
-        "cohortSize": 14,
+        "yearRank": 6,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/2a3ca2ea61f0a20a9ede746c8a9533dcaeece063",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2316,8 +3237,8 @@
         "status": "standard",
         "citationCount": 16,
         "influentialCitationCount": 2,
-        "yearRank": 5,
-        "cohortSize": 14,
+        "yearRank": 9,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/9ee2c1f37d6c934adf1dbe2bafd5794f923aedb8",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2387,8 +3308,8 @@
         "status": "standard",
         "citationCount": 8,
         "influentialCitationCount": 0,
-        "yearRank": 11,
-        "cohortSize": 14,
+        "yearRank": 17,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/c70fef3d235ffedeaab2b2a6a2bfa2abfd59019e",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2451,9 +3372,78 @@
         "status": "standard",
         "citationCount": 15,
         "influentialCitationCount": 0,
-        "yearRank": 6,
-        "cohortSize": 14,
+        "yearRank": 10,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/5ee00a39651c39eac59ff92db9f12c99cfc108e2",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2402-17907",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2402.17907"
+      },
+      "shortName": "NIIRF",
+      "title": "NIIRF: Neural IIR Filter Field for HRTF Upsampling and Personalization",
+      "authors": [
+        "Yoshiki Masuyama",
+        "Gordon Wichern",
+        "François G. Germain",
+        "Zexu Pan",
+        "Sameer Khurana",
+        "Chiori Hori",
+        "Jonathan Le Roux"
+      ],
+      "year": 2024,
+      "published": "2024-02-27",
+      "venue": "ICASSP 2024",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Models HRTFs as a direction-conditioned field of stable neural IIR filters for upsampling and personalization.",
+        "zh": "将 HRTF 建模为方向条件下的稳定神经 IIR 滤波器场，用于上采样与个性化。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2402.17907"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/merlresearch/neural-IIR-field"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP48485.2024.10448477"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Combines neural fields with stable IIR filters for a technically coherent HRTF model, with substantive evaluation and released code.",
+          "zh": "将神经场与稳定 IIR 滤波器结合形成完整 HRTF 模型，并提供充分实验与开源代码。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 25,
+        "influentialCitationCount": 3,
+        "yearRank": 3,
+        "cohortSize": 21,
+        "sourceUrl": "https://www.semanticscholar.org/paper/20c5f73c359e01ca76f6a3b5a6d0503d45c8805f",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -2519,9 +3509,132 @@
         "status": "standard",
         "citationCount": 8,
         "influentialCitationCount": 0,
-        "yearRank": 11,
-        "cohortSize": 14,
+        "yearRank": 17,
+        "cohortSize": 21,
         "sourceUrl": "https://www.semanticscholar.org/paper/448241a365485e15ba303bd13ed5ab8341c05ba7",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2311-07630",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2311.07630"
+      },
+      "shortName": "CMG-Binaural",
+      "title": "Cross-modal Generative Model for Visual-Guided Binaural Stereo Generation",
+      "authors": [
+        "Zhaojian Li",
+        "Bin Zhao",
+        "Yuan Yuan"
+      ],
+      "year": 2023,
+      "published": "2023-11-13",
+      "venue": "Knowledge-Based Systems 2023",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Generates binaural stereo from mono audio with a cross-modal generative model conditioned on visual spatial information.",
+        "zh": "通过以视觉空间信息为条件的跨模态生成模型，将单声道音频转换为双耳立体声。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2311.07630"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2311.07630"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 11,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/000acd90982199ab8cd776ce14ae73d4ab636b5c",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2310-13430",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2310.13430"
+      },
+      "shortName": "SNP HRTF",
+      "title": "HRTF Interpolation using a Spherical Neural Process Meta-Learner",
+      "authors": [
+        "Etienne Thuillier",
+        "Craig Jin",
+        "Vesa Välimäki"
+      ],
+      "year": 2023,
+      "published": "2023-10-20",
+      "venue": "IEEE/ACM TASLP 2023",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Uses a spherical neural-process meta-learner to adapt HRTF interpolation from sparse subject-specific measurements.",
+        "zh": "使用球面神经过程元学习器，根据稀疏的个体测量自适应 HRTF 插值。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2310.13430"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/TASLP.2024.3361377"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 14,
+        "influentialCitationCount": 1,
+        "yearRank": 8,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/3869e4eb612fa4518be0010afdb7a70ae5018f0d",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -2581,8 +3694,8 @@
         "status": "standard",
         "citationCount": 14,
         "influentialCitationCount": 2,
-        "yearRank": 4,
-        "cohortSize": 7,
+        "yearRank": 8,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/ef0623c780654afc012d637204d1cc1ea8335fb2",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2646,9 +3759,72 @@
         "status": "standard",
         "citationCount": 7,
         "influentialCitationCount": 0,
-        "yearRank": 6,
-        "cohortSize": 7,
+        "yearRank": 13,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/51b3f509cb0266645e13436efe67cb2fed9ed279",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2309-08290",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2309.08290"
+      },
+      "shortName": "Spherical CNN HRTF",
+      "title": "Head-Related Transfer Function Interpolation with a Spherical CNN",
+      "authors": [
+        "Xingyu Chen",
+        "Fei Ma",
+        "Yile Zhang",
+        "Amy Bastine",
+        "Prasanga N. Samarasinghe"
+      ],
+      "year": 2023,
+      "published": "2023-09-15",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Interpolates personalized HRTFs on the sphere with a spherical convolutional neural network.",
+        "zh": "使用球面卷积神经网络在球面上插值个体化 HRTF。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2309.08290"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2309.08290"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": 14,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/5718fab79876efe81cb9f0845a708375339c19cb",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -2826,11 +4002,11 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "high-impact",
+        "status": "standard",
         "citationCount": 22,
         "influentialCitationCount": 4,
-        "yearRank": 2,
-        "cohortSize": 7,
+        "yearRank": 4,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/8c25234ee479eeea370d33a83533ba73384b82f9",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -2892,9 +4068,209 @@
         "status": "high-impact",
         "citationCount": 53,
         "influentialCitationCount": 4,
-        "yearRank": 1,
-        "cohortSize": 7,
+        "yearRank": 2,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/e08467f2e3dbca0aab191dfc46f9800bd9fc1c62",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2308-09514",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2308.09514"
+      },
+      "shortName": "Spatial LibriSpeech",
+      "title": "Spatial LibriSpeech: An Augmented Dataset for Spatial Audio Learning",
+      "authors": [
+        "Miguel Sarabia",
+        "Elena Menyaylenko",
+        "Alessandro Toso",
+        "Skyler Seto",
+        "Zakaria Aldeneh",
+        "Shadi Pirhosseinloo",
+        "Luca Zappella",
+        "Barry-John Theobald",
+        "Nicholas Apostoloff",
+        "Jonathan Sheaffer"
+      ],
+      "year": 2023,
+      "published": "2023-08-18",
+      "venue": "INTERSPEECH 2023",
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "summary": {
+        "en": "Introduces a 650-hour synthetic first-order Ambisonic speech dataset with source, room, and geometry labels for spatial-audio learning.",
+        "zh": "提出 650 小时的一阶 Ambisonics 合成语音数据集，包含声源、房间与几何标注，用于空间音频学习。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2308.09514"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.21437/Interspeech.2023-2117"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/apple/ml-spatial-librispeech"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Provides a large, richly annotated Ambisonic corpus with a transparent generation process and direct public access for reproducible research.",
+          "zh": "提供大规模、丰富标注的 Ambisonics 语料，生成流程透明且可直接获取，支持可复现研究。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 15,
+        "influentialCitationCount": 6,
+        "yearRank": 7,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/8e5d66e802084898fc628685a3b8d8cc331b2276",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2307-14650",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2307.14650"
+      },
+      "shortName": "HRTF-PINN",
+      "title": "Spatial Upsampling of Head-Related Transfer Functions Using a Physics-Informed Neural Network",
+      "authors": [
+        "Fei Ma",
+        "Thushara D. Abhayapala",
+        "Prasanga N. Samarasinghe",
+        "Xingyu Chen"
+      ],
+      "year": 2023,
+      "published": "2023-07-27",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Uses a physics-informed neural network to spatially upsample sparse HRTF measurements.",
+        "zh": "使用物理信息神经网络对稀疏 HRTF 测量进行空间上采样。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2307.14650"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/feima1024/PINN-for-HRTF-upsampling"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 11,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/5fe5af5e3629d9a9f1e485a8907b4280d7d42ad9",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2306-05812",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2306.05812"
+      },
+      "shortName": "HRTF-GAN",
+      "title": "HRTF upsampling with a generative adversarial network using a gnomonic equiangular projection",
+      "authors": [
+        "Aidan O. T. Hogg",
+        "Mads Jenkins",
+        "He Liu",
+        "Isaac Squires",
+        "Samuel J. Cooper",
+        "Lorenzo Picinali"
+      ],
+      "year": 2023,
+      "published": "2023-06-09",
+      "venue": "IEEE/ACM TASLP 2024",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Upsamples sparse individualized HRTFs with a GAN operating on a gnomonic equiangular projection.",
+        "zh": "使用作用于球心等角投影的生成对抗网络，对稀疏个体化 HRTF 进行上采样。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2306.05812"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/TASLP.2024.3375635"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 46,
+        "influentialCitationCount": 5,
+        "yearRank": 3,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/8689ffcf9128e363ea6b9f2d94a53dcd0f5ed837",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -2962,8 +4338,8 @@
         "status": "standard",
         "citationCount": 13,
         "influentialCitationCount": 1,
-        "yearRank": 5,
-        "cohortSize": 7,
+        "yearRank": 10,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/89ffb176ff1802c9f742926cab474a3e7bddadd8",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -3030,8 +4406,8 @@
         "status": "standard",
         "citationCount": 0,
         "influentialCitationCount": 0,
-        "yearRank": 7,
-        "cohortSize": 7,
+        "yearRank": 14,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/e193b95b2428f4054982265b781c8252eb16a08c",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -3098,9 +4474,274 @@
         "status": "standard",
         "citationCount": 18,
         "influentialCitationCount": 2,
-        "yearRank": 3,
-        "cohortSize": 7,
+        "yearRank": 6,
+        "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/333cf970eac8ae940eedaccb9124e1b78a17b57d",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2302-02088",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2302.02088"
+      },
+      "shortName": "AV-NeRF",
+      "title": "AV-NeRF: Learning Neural Fields for Real-World Audio-Visual Scene Synthesis",
+      "authors": [
+        "Susan Liang",
+        "Chao Huang",
+        "Yapeng Tian",
+        "Anurag Kumar",
+        "Chenliang Xu"
+      ],
+      "year": 2023,
+      "published": "2023-02-04",
+      "venue": "NeurIPS 2023",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Learns an audio-visual neural field that synthesizes matching views and spatial audio at novel listener positions and directions.",
+        "zh": "学习音视频神经场，在新的听者位置和朝向合成匹配的画面与空间音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2302.02088"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/liangsusan-git/AV-NeRF"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2302.02088"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Defines novel-position audio-visual scene synthesis, develops a unified neural-field method, and releases code and supporting resources.",
+          "zh": "定义新位置音视频场景合成任务，提出统一神经场方法，并公开代码和配套资源。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 73,
+        "influentialCitationCount": 12,
+        "yearRank": 1,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/241ea8d37afe19f13c435516279abf13568549c6",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2302-02809",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2302.02809"
+      },
+      "shortName": "Listen2Scene",
+      "title": "Listen2Scene: Interactive material-aware binaural sound propagation for reconstructed 3D scenes",
+      "authors": [
+        "Anton Ratnarajah",
+        "Dinesh Manocha"
+      ],
+      "year": 2023,
+      "published": "2023-02-02",
+      "venue": "IEEE Conference on Virtual Reality and 3D User Interfaces 2024",
+      "areas": [
+        "spatial-audio",
+        "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Generates interactive binaural sound propagation for reconstructed indoor scenes using geometry and material information.",
+        "zh": "利用重建室内场景的几何与材质信息，生成可交互的双耳声传播效果。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2302.02809"
+        },
+        {
+          "label": "project",
+          "url": "https://anton-jeran.github.io/Listen2Scene/"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/VR58804.2024.00048"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 21,
+        "influentialCitationCount": 2,
+        "yearRank": 5,
+        "cohortSize": 15,
+        "sourceUrl": "https://www.semanticscholar.org/paper/30bd42c1ea5d41d4976a3011d7f6d98d2f423169",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2212-07000",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2212.07000"
+      },
+      "shortName": "DopplerBAS",
+      "title": "DopplerBAS: Binaural Audio Synthesis Addressing Doppler Effect",
+      "authors": [
+        "Jinglin Liu",
+        "Zhenhui Ye",
+        "Qian Chen",
+        "Siqi Zheng",
+        "Wen Wang",
+        "Qinglin Zhang",
+        "Zhou Zhao"
+      ],
+      "year": 2022,
+      "published": "2022-12-14",
+      "venue": "Annual Meeting of the Association for Computational Linguistics 2023",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Adds motion-aware Doppler modeling to binaural audio synthesis for moving sound sources.",
+        "zh": "在双耳音频合成中加入面向运动声源的多普勒效应建模。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2212.07000"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.18653/v1/2023.findings-acl.753"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 7,
+        "influentialCitationCount": 0,
+        "yearRank": 12,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/36a2e88b3909e8bd7da321f9c1155b5e88a15a2a",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2211-02301",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2211.02301"
+      },
+      "shortName": "Neural A2B",
+      "title": "Binaural Rendering of Ambisonic Signals by Neural Networks",
+      "authors": [
+        "Yin Zhu",
+        "Qiuqiang Kong",
+        "Junjie Shi",
+        "Shilei Liu",
+        "Xuzhou Ye",
+        "Ju-chiang Wang",
+        "Junping Zhang"
+      ],
+      "year": 2022,
+      "published": "2022-11-04",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Learns binaural rendering of Ambisonic signals from paired Ambisonic and binaural recordings as an alternative to explicit HRTFs.",
+        "zh": "从成对的 Ambisonics 与双耳录音中学习双耳渲染，作为显式 HRTF 方法的替代方案。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2211.02301"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2211.02301"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 4,
+        "influentialCitationCount": 0,
+        "yearRank": 14,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/d4395faf405376b24b935e8aa09868b019d09cfc",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -3167,9 +4808,202 @@
         "status": "standard",
         "citationCount": 39,
         "influentialCitationCount": 3,
-        "yearRank": 3,
-        "cohortSize": 5,
+        "yearRank": 4,
+        "cohortSize": 14,
         "sourceUrl": "https://www.semanticscholar.org/paper/ba258ff1190e48059f2e2da68f4ec1026a12b63f",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2211-00878",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2211.00878"
+      },
+      "shortName": "NFS",
+      "title": "Neural Fourier Shift for Binaural Speech Rendering",
+      "authors": [
+        "Jin Woo Lee",
+        "Kyogu Lee"
+      ],
+      "year": 2022,
+      "published": "2022-11-02",
+      "venue": "ICASSP 2023",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Renders binaural speech from mono audio and source pose using a neural Fourier-domain shifting operation.",
+        "zh": "利用神经傅里叶域移位操作，根据单声道音频和声源姿态渲染双耳语音。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2211.00878"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/jin-woo-lee/nfs-binaural"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP49357.2023.10095685"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 20,
+        "influentialCitationCount": 2,
+        "yearRank": 7,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/e37c7ac2b6727f6834f62610e695cea51bfafcb5",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2210-15196",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2210.15196"
+      },
+      "shortName": "HRTF Field",
+      "title": "HRTF Field: Unifying Measured HRTF Magnitude Representation with Neural Fields",
+      "authors": [
+        "You Zhang",
+        "Yuxiang Wang",
+        "Zhiyao Duan"
+      ],
+      "year": 2022,
+      "published": "2022-10-27",
+      "venue": "ICASSP 2023",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Represents measured HRTF magnitudes as a continuous neural field over source direction for compact interpolation.",
+        "zh": "将测得的 HRTF 幅度表示为关于声源方向的连续神经场，用于紧凑插值。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2210.15196"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/yzyouzhang/HRTF_field"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP49357.2023.10095801"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 29,
+        "influentialCitationCount": 8,
+        "yearRank": 5,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/bad626961d1c904f80779362e7bc4661a7773c3e",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "aes-2022-matchreverb",
+      "source": {
+        "type": "manual",
+        "id": "aes:21917"
+      },
+      "shortName": "MatchReverb",
+      "title": "A Method for Matching Room Impulse Responses with Feedback Delay Networks",
+      "authors": [
+        "Ilias Ibnyahya",
+        "Joshua D. Reiss"
+      ],
+      "year": 2022,
+      "published": "2022-10-19",
+      "venue": "AES 153rd Convention, 2022",
+      "areas": [
+        "audio-effects",
+        "spatial-audio",
+        "evaluation"
+      ],
+      "controlApproaches": [
+        "derivative-free-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Fits a feedback delay network to target room impulse responses with feature extraction and genetic optimization, evaluated using OpenAIR responses.",
+        "zh": "结合特征提取与遗传优化，使反馈延迟网络匹配目标房间脉冲响应，并使用 OpenAIR 响应进行评估。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://www.aes.org/e-lib/browse.cfm?elib=21917"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/ilias-audio/MatchReverb"
+        }
+      ],
+      "lastVerified": "2026-08-26",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -3469,12 +5303,78 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "standard",
+        "status": "high-impact",
         "citationCount": 49,
         "influentialCitationCount": 1,
-        "yearRank": 2,
-        "cohortSize": 5,
+        "yearRank": 3,
+        "cohortSize": 14,
         "sourceUrl": "https://www.semanticscholar.org/paper/923c55abf7e5141c511b052e186961a14009c0f1",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2207-10967",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2207.10967"
+      },
+      "shortName": "HRTF Autoencoder",
+      "title": "Head-Related Transfer Function Interpolation from Spatially Sparse Measurements Using Autoencoder with Source Position Conditioning",
+      "authors": [
+        "Yuki Ito",
+        "Tomohiko Nakamura",
+        "Shoichi Koyama",
+        "Hiroshi Saruwatari"
+      ],
+      "year": 2022,
+      "published": "2022-07-22",
+      "venue": "International Workshop on Acoustic Signal Enhancement 2022",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Interpolates HRTFs from sparse measurements using an autoencoder conditioned on source position.",
+        "zh": "使用以声源位置为条件的自编码器，从稀疏测量结果插值 HRTF。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2207.10967"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/ikets/HRTFInterpAE_public"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/IWAENC53105.2022.9914751"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 26,
+        "influentialCitationCount": 3,
+        "yearRank": 6,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/6375347d7f0b07e8d7cba71382621ce718b0bb09",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -3540,9 +5440,73 @@
         "status": "high-impact",
         "citationCount": 73,
         "influentialCitationCount": 9,
-        "yearRank": 1,
-        "cohortSize": 5,
+        "yearRank": 2,
+        "cohortSize": 14,
         "sourceUrl": "https://www.semanticscholar.org/paper/c0bd83aaf15f086275d1c29fd1f829799ffc3192",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2207-03697",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2207.03697"
+      },
+      "shortName": "E2E Binaural TTS",
+      "title": "End-to-End Binaural Speech Synthesis",
+      "authors": [
+        "Wen Chin Huang",
+        "Dejan Markovic",
+        "Alexander Richard",
+        "Israel Dejene Gebru",
+        "Anjali Menon"
+      ],
+      "year": 2022,
+      "published": "2022-07-08",
+      "venue": "INTERSPEECH 2022",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Combines a neural audio codec and binaural decoder for end-to-end speech binauralization with environmental reconstruction.",
+        "zh": "结合神经音频编码器与双耳解码器，实现包含环境重建的端到端语音双耳化。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2207.03697"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2207.03697"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 15,
+        "influentialCitationCount": 0,
+        "yearRank": 11,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/166cd4d54cfdb6e1fb577697d28a8946d79fc6f8",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -3608,6 +5572,213 @@
       }
     },
     {
+      "id": "arxiv-2205-14807",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2205.14807"
+      },
+      "shortName": "BinauralGrad",
+      "title": "BinauralGrad: A Two-Stage Conditional Diffusion Probabilistic Model for Binaural Audio Synthesis",
+      "authors": [
+        "Yichong Leng",
+        "Zehua Chen",
+        "Junliang Guo",
+        "Haohe Liu",
+        "Jiawei Chen",
+        "Xu Tan",
+        "Danilo Mandic",
+        "Lei He",
+        "Xiang-Yang Li",
+        "Tao Qin",
+        "Sheng Zhao",
+        "Tie-Yan Liu"
+      ],
+      "year": 2022,
+      "published": "2022-05-30",
+      "venue": "NeurIPS 2022",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Synthesizes binaural audio from mono input and source trajectories with a two-stage conditional diffusion model.",
+        "zh": "使用两阶段条件扩散模型，根据单声道输入和声源轨迹合成双耳音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2205.14807"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/microsoft/NeuralSpeech/tree/master/BinauralGrad"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2205.14807"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Introduces a coherent two-stage diffusion formulation for binaural synthesis, validates spatial fidelity, and provides an official implementation.",
+          "zh": "提出完整的两阶段双耳合成扩散框架，验证空间保真度，并提供官方实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 84,
+        "influentialCitationCount": 7,
+        "yearRank": 1,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/99ad33f57c270a6563eeffccc178247f4c2b9f33",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2204-02637",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2204.02637"
+      },
+      "shortName": "Global HRTF",
+      "title": "Global HRTF Interpolation via Learned Affine Transformation of Hyper-conditioned Features",
+      "authors": [
+        "Jin Woo Lee",
+        "Sungho Lee",
+        "Kyogu Lee"
+      ],
+      "year": 2022,
+      "published": "2022-04-06",
+      "venue": "ICASSP 2023",
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "summary": {
+        "en": "Interpolates individualized HRTFs at arbitrary source positions with learned affine transformations of direction-conditioned features.",
+        "zh": "通过对方向条件特征进行学习式仿射变换，插值任意声源位置的个体化 HRTF。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2204.02637"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/jin-woo-lee/hrtf-interpolation"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP49357.2023.10096144"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 20,
+        "influentialCitationCount": 2,
+        "yearRank": 7,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/81699b99471d31024e4f888554567d28b4eb3322",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2203-12053",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2203.12053"
+      },
+      "shortName": "VAE Upmixing",
+      "title": "Upmixing via style transfer: a variational autoencoder for disentangling spatial images and musical content",
+      "authors": [
+        "Haici Yang",
+        "Sanna Wager",
+        "Spencer Russell",
+        "Mike Luo",
+        "Minje Kim",
+        "Wontak Kim"
+      ],
+      "year": 2022,
+      "published": "2022-03-22",
+      "venue": "ICASSP",
+      "areas": [
+        "spatial-audio",
+        "mixing",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Uses a variational autoencoder to separate musical content from spatial image and transfer directionality for stereo-to-multichannel music upmixing.",
+        "zh": "使用变分自编码器解耦音乐内容与空间声像，并迁移方向性以实现立体声到多声道音乐上混。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2203.12053"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2203.12053"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 5,
+        "influentialCitationCount": 2,
+        "yearRank": 13,
+        "cohortSize": 14,
+        "sourceUrl": "https://www.semanticscholar.org/paper/347c2c79b120f38604273997f8c70d2b641884ff",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
       "id": "arxiv-2202-08520",
       "source": {
         "type": "arxiv",
@@ -3664,8 +5835,8 @@
         "status": "standard",
         "citationCount": 16,
         "influentialCitationCount": 1,
-        "yearRank": 4,
-        "cohortSize": 5,
+        "yearRank": 9,
+        "cohortSize": 14,
         "sourceUrl": "https://www.semanticscholar.org/paper/180c86f42f4a98f7b0eb0b396302010f3bbd8e9b",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -3727,9 +5898,188 @@
         "status": "standard",
         "citationCount": 16,
         "influentialCitationCount": 1,
-        "yearRank": 4,
-        "cohortSize": 5,
+        "yearRank": 9,
+        "cohortSize": 14,
         "sourceUrl": "https://www.semanticscholar.org/paper/997d7e31cfa56afe242eabb472c85e460927387f",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2111-11882",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2111.11882"
+      },
+      "shortName": "6DoF SRIR",
+      "title": "Dataset of Spatial Room Impulse Responses in a Variable Acoustics Room for Six Degrees-of-Freedom Rendering and Analysis",
+      "authors": [
+        "Thomas McKenzie",
+        "Leo McCormack",
+        "Christoph Hold"
+      ],
+      "year": 2021,
+      "published": "2021-11-23",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "summary": {
+        "en": "Documents a multi-position, variable-acoustics spatial room impulse response dataset for six-degrees-of-freedom rendering and analysis.",
+        "zh": "记录一个多位置、可变声学条件的空间房间脉冲响应数据集，用于六自由度渲染与分析。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2111.11882"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 24,
+        "influentialCitationCount": 2,
+        "yearRank": 10,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/820f2529152c88fa4bbcc0c9369d69e2505d131a",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2111-10882",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2111.10882"
+      },
+      "shortName": "Geometry-Aware BAG",
+      "title": "Geometry-Aware Multi-Task Learning for Binaural Audio Generation from Video",
+      "authors": [
+        "Rishabh Garg",
+        "Ruohan Gao",
+        "Kristen Grauman"
+      ],
+      "year": 2021,
+      "published": "2021-11-21",
+      "venue": "British Machine Vision Conference",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Uses geometry-aware auxiliary tasks and visual information to spatialize monaural video audio into binaural output.",
+        "zh": "利用几何感知辅助任务和视觉信息，将单声道视频音频空间化为双耳输出。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2111.10882"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.26153/TSW/14434"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 34,
+        "influentialCitationCount": 0,
+        "yearRank": 6,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/379d090ba62669ecabd1857f8599b9d46830e8e6",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2111-08046",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2111.08046"
+      },
+      "shortName": "Mono2Binaural",
+      "title": "Beyond Mono to Binaural: Generating Binaural Audio from Mono Audio with Depth and Cross Modal Attention",
+      "authors": [
+        "Kranti Kumar Parida",
+        "Siddharth Srivastava",
+        "Gaurav Sharma"
+      ],
+      "year": 2021,
+      "published": "2021-11-15",
+      "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision 2022",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Conditions mono-to-binaural generation on visual depth and cross-modal attention to recover spatial cues from video.",
+        "zh": "利用视觉深度和跨模态注意力约束单声道到双耳音频生成，以恢复视频中的空间线索。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2111.08046"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/WACV51458.2022.00221"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 35,
+        "influentialCitationCount": 1,
+        "yearRank": 5,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/88bf3acddc10d9901a089d4e01ae3f5acd20b479",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -3798,8 +6148,8 @@
         "status": "standard",
         "citationCount": 13,
         "influentialCitationCount": 1,
-        "yearRank": 6,
-        "cohortSize": 6,
+        "yearRank": 13,
+        "cohortSize": 13,
         "sourceUrl": "https://www.semanticscholar.org/paper/21a2c21fd922323819eb87a4ce75b9e36d6269e6",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -3866,8 +6216,8 @@
         "status": "standard",
         "citationCount": 26,
         "influentialCitationCount": 0,
-        "yearRank": 4,
-        "cohortSize": 6,
+        "yearRank": 8,
+        "cohortSize": 13,
         "sourceUrl": "https://www.semanticscholar.org/paper/96d43160c5cc2313f97e18067633812644f83a21",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -3933,6 +6283,72 @@
       }
     },
     {
+      "id": "arxiv-2109-00748",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2109.00748"
+      },
+      "shortName": "Binaural MTL",
+      "title": "Binaural Audio Generation via Multi-task Learning",
+      "authors": [
+        "Sijia Li",
+        "Shiguang Liu",
+        "Dinesh Manocha"
+      ],
+      "year": 2021,
+      "published": "2021-09-02",
+      "venue": "ACM Transactions on Graphics 2021",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Combines binaural generation with auxiliary flipped-audio classification in a multi-task model for mono-to-binaural conversion.",
+        "zh": "在多任务模型中结合双耳生成与翻转音频分类，用于单声道到双耳音频的转换。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2109.00748"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/omeaningless/binaural-audio-generation"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1145/3478513.3480560"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 17,
+        "influentialCitationCount": 0,
+        "yearRank": 12,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/293876cefc418caf9726c9e058bd8f761a1baa23",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
       "id": "manual-reverse-engineering-mix-jasa-2021",
       "source": {
         "type": "manual",
@@ -3988,9 +6404,75 @@
         "status": "standard",
         "citationCount": 21,
         "influentialCitationCount": 0,
-        "yearRank": 5,
-        "cohortSize": 6,
+        "yearRank": 11,
+        "cohortSize": 13,
         "sourceUrl": "https://www.semanticscholar.org/paper/70a2eb398ba5b4b624cb2dc5f96a6b835e9a397a",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2106-10801",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2106.10801"
+      },
+      "shortName": "MeshRIR",
+      "title": "MeshRIR: A Dataset of Room Impulse Responses on Meshed Grid Points For Evaluating Sound Field Analysis and Synthesis Methods",
+      "authors": [
+        "Shoichi Koyama",
+        "Tomoya Nishida",
+        "Keisuke Kimura",
+        "Takumi Abe",
+        "Natsuki Ueno",
+        "Jesper Brunnström"
+      ],
+      "year": 2021,
+      "published": "2021-06-21",
+      "venue": "WASPAA 2021",
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "summary": {
+        "en": "Introduces densely measured room impulse responses on meshed grids for evaluating sound-field analysis, interpolation, and synthesis.",
+        "zh": "提供网格点上的密集房间脉冲响应测量，用于评估声场分析、插值与合成方法。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2106.10801"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/sh01k/MeshRIR"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/WASPAA52581.2021.9632672"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 60,
+        "influentialCitationCount": 3,
+        "yearRank": 2,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/30a5c6223d0a9433991c1f7f80134f1f0b21c2a3",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -4055,8 +6537,8 @@
         "status": "high-impact",
         "citationCount": 41,
         "influentialCitationCount": 6,
-        "yearRank": 1,
-        "cohortSize": 6,
+        "yearRank": 3,
+        "cohortSize": 13,
         "sourceUrl": "https://www.semanticscholar.org/paper/df43c5c2a589eda1e2eabf9172a1c648c8feddb7",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -4123,9 +6605,205 @@
         "status": "high-impact",
         "citationCount": 41,
         "influentialCitationCount": 4,
-        "yearRank": 1,
-        "cohortSize": 6,
+        "yearRank": 3,
+        "cohortSize": 13,
         "sourceUrl": "https://www.semanticscholar.org/paper/a3ce75ccbd335a3a98d74e65a138daa9443fa232",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "openreview-binaural-speech-synthesis",
+      "source": {
+        "type": "manual",
+        "id": "openreview:uAX8q61EVRu"
+      },
+      "shortName": "BinauralSpeech",
+      "title": "Neural Synthesis of Binaural Speech from Mono Audio",
+      "authors": [
+        "Alexander Richard",
+        "Dejan Markovic",
+        "Israel D. Gebru",
+        "Steven Krenn",
+        "Gladstone Butler",
+        "Fernando de la Torre",
+        "Yaser Sheikh"
+      ],
+      "year": 2021,
+      "published": "2021-05-03",
+      "venue": "ICLR 2021",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Renders binaural speech from mono audio and tracked source-listener geometry with a neural sound renderer.",
+        "zh": "使用神经声音渲染器，根据单声道音频及跟踪的声源与听者几何信息生成双耳语音。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://openreview.net/forum?id=uAX8q61EVRu"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/facebookresearch/BinauralSpeechSynthesis"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2105-00708",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2105.00708"
+      },
+      "shortName": "AV-Consistency",
+      "title": "Exploiting Audio-Visual Consistency with Partial Supervision for Spatial Audio Generation",
+      "authors": [
+        "Yan-Bo Lin",
+        "Yu-Chiang Frank Wang"
+      ],
+      "year": 2021,
+      "published": "2021-05-03",
+      "venue": "AAAI 2021",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Uses audio-visual consistency and partially supervised binaural data to spatialize monaural video audio.",
+        "zh": "利用音视频一致性和部分双耳监督数据，将单声道视频音频空间化。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2105.00708"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1609/aaai.v35i3.16302"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 26,
+        "influentialCitationCount": 0,
+        "yearRank": 8,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/0bcab67058596c6ca5dc5d691c9e1004457063e3",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-2104-06162",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2104.06162"
+      },
+      "shortName": "PseudoBinaural",
+      "title": "Visually Informed Binaural Audio Generation without Binaural Audios",
+      "authors": [
+        "Xudong Xu",
+        "Hang Zhou",
+        "Ziwei Liu",
+        "Bo Dai",
+        "Xiaogang Wang",
+        "Dahua Lin"
+      ],
+      "year": 2021,
+      "published": "2021-04-13",
+      "venue": "Computer Vision and Pattern Recognition 2021",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Learns visually guided binaural generation without requiring real binaural recordings by constructing pseudo-binaural supervision.",
+        "zh": "通过构造伪双耳监督，在不依赖真实双耳录音的情况下学习视觉引导的双耳音频生成。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2104.06162"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/CVPR46437.2021.01523"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "high-impact",
+        "citationCount": 79,
+        "influentialCitationCount": 10,
+        "yearRank": 1,
+        "cohortSize": 13,
+        "sourceUrl": "https://www.semanticscholar.org/paper/06a48439d4eab9d73f440c1db57fa67bf023f030",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
@@ -4184,8 +6862,8 @@
         "status": "standard",
         "citationCount": 34,
         "influentialCitationCount": 5,
-        "yearRank": 3,
-        "cohortSize": 6,
+        "yearRank": 6,
+        "cohortSize": 13,
         "sourceUrl": "https://www.semanticscholar.org/paper/c6244b07f129146c579fe09846b5ab8f4f769e17",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -4251,8 +6929,8 @@
         "status": "standard",
         "citationCount": 21,
         "influentialCitationCount": 3,
-        "yearRank": 3,
-        "cohortSize": 3,
+        "yearRank": 4,
+        "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/6cf011f63ab51862d24de7781ad61877ae5ffb93",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -4321,8 +6999,8 @@
         "status": "standard",
         "citationCount": 75,
         "influentialCitationCount": 2,
-        "yearRank": 2,
-        "cohortSize": 3,
+        "yearRank": 3,
+        "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/20a1b599f0967415e26e26d6115af8900547bce9",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -4443,6 +7121,74 @@
       }
     },
     {
+      "id": "arxiv-2007-09902",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2007.09902"
+      },
+      "shortName": "Sep-Stereo",
+      "title": "Sep-Stereo: Visually Guided Stereophonic Audio Generation by Associating Source Separation",
+      "authors": [
+        "Hang Zhou",
+        "Xudong Xu",
+        "Dahua Lin",
+        "Xiaogang Wang",
+        "Ziwei Liu"
+      ],
+      "year": 2020,
+      "published": "2020-07-20",
+      "venue": "European Conference on Computer Vision 2020",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Generates stereophonic audio from mono video by coupling visual guidance with source separation under self-supervision.",
+        "zh": "结合视觉引导与声源分离，以自监督方式从单声道视频生成立体声音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2007.09902"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/SheldonTsui/SepStereo_ECCV2020"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1007/978-3-030-58610-2_4"
+        }
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 102,
+        "influentialCitationCount": 18,
+        "yearRank": 2,
+        "cohortSize": 4,
+        "sourceUrl": "https://www.semanticscholar.org/paper/73aa926dad010a3f1bb89faa31241f97a89cc461",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
       "id": "arxiv-2001-04643",
       "source": {
         "type": "arxiv",
@@ -4499,7 +7245,7 @@
         "citationCount": 510,
         "influentialCitationCount": 78,
         "yearRank": 1,
-        "cohortSize": 3,
+        "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/468aa95cfdf66da9fc3dc6a1b9042a52a6ec99c6",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
@@ -4542,9 +7288,13 @@
         {
           "label": "source",
           "url": "https://github.com/ethman/Slakh"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/WASPAA.2019.8937170"
         }
       ],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "curation": "manual",
       "aiAssessment": {
         "rating": "standard",
@@ -4568,46 +7318,111 @@
       }
     },
     {
-      "id": "aes-2022-matchreverb",
+      "id": "arxiv-1812-04204",
       "source": {
-        "type": "manual",
-        "id": "aes:21917"
+        "type": "arxiv",
+        "id": "arxiv:1812.04204"
       },
-      "shortName": "MatchReverb",
-      "title": "A Method for Matching Room Impulse Responses with Feedback Delay Networks",
+      "shortName": "2.5D Visual Sound",
+      "title": "2.5D Visual Sound",
       "authors": [
-        "Ilias Ibnyahya",
-        "Joshua D. Reiss"
+        "Ruohan Gao",
+        "Kristen Grauman"
       ],
-      "year": 2022,
-      "published": "2022-10-19",
-      "venue": "AES 153rd Convention, 2022",
+      "year": 2018,
+      "published": "2018-12-11",
+      "venue": "Computer Vision and Pattern Recognition 2019",
       "areas": [
-        "audio-effects",
-        "spatial-audio",
-        "evaluation"
+        "spatial-audio"
       ],
       "controlApproaches": [
-        "derivative-free-optimization"
+        "direct-prediction"
       ],
       "trackScopes": [
         "single-track"
       ],
       "summary": {
-        "en": "Fits a feedback delay network to target room impulse responses with feature extraction and genetic optimization, evaluated using OpenAIR responses.",
-        "zh": "结合特征提取与遗传优化，使反馈延迟网络匹配目标房间脉冲响应，并使用 OpenAIR 响应进行评估。"
+        "en": "Uses visual scene information to convert monaural video audio into binaural sound and introduces the FAIR-Play dataset.",
+        "zh": "利用视频场景信息将单声道音频转换为双耳音频，并提出 FAIR-Play 数据集。"
       },
       "links": [
         {
           "label": "paper",
-          "url": "https://www.aes.org/e-lib/browse.cfm?elib=21917"
+          "url": "https://arxiv.org/abs/1812.04204"
         },
         {
           "label": "source",
-          "url": "https://github.com/ilias-audio/MatchReverb"
+          "url": "https://github.com/facebookresearch/2.5D-Visual-Sound"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/CVPR.2019.00041"
         }
       ],
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Establishes a clear visual-to-binaural task with substantive evaluation and releases both code and the FAIR-Play dataset.",
+          "zh": "建立清晰的视觉到双耳音频任务，进行了充分实验，并公开代码与 FAIR-Play 数据集。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-27"
+      },
+      "impact": {
+        "status": "standard",
+        "citationCount": 154,
+        "influentialCitationCount": 21,
+        "yearRank": 2,
+        "cohortSize": 2,
+        "sourceUrl": "https://www.semanticscholar.org/paper/b809837560cf11937ee857338eb1a7ccd2abc7b2",
+        "measuredAt": "2026-08-27",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      }
+    },
+    {
+      "id": "arxiv-1809-02587",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:1809.02587"
+      },
+      "shortName": "SpatialAudioGen",
+      "title": "Self-Supervised Generation of Spatial Audio for 360 Video",
+      "authors": [
+        "Pedro Morgado",
+        "Nuno Vasconcelos",
+        "Timothy Langlois",
+        "Oliver Wang"
+      ],
+      "year": 2018,
+      "published": "2018-09-07",
+      "venue": "Neural Information Processing Systems",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "summary": {
+        "en": "Learns to generate spatial audio for 360-degree video with self-supervision from large video collections.",
+        "zh": "利用大规模视频集合进行自监督学习，为 360 度视频生成空间音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1809.02587"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/pedro-morgado/spatialaudiogen"
+        }
+      ],
+      "lastVerified": "2026-08-27",
       "curation": "manual",
       "aiAssessment": {
         "rating": "standard",
@@ -4620,12 +7435,12 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "not-assessed",
-        "citationCount": null,
-        "influentialCitationCount": null,
-        "yearRank": null,
-        "cohortSize": null,
-        "sourceUrl": null,
+        "status": "high-impact",
+        "citationCount": 203,
+        "influentialCitationCount": 26,
+        "yearRank": 1,
+        "cohortSize": 2,
+        "sourceUrl": "https://www.semanticscholar.org/paper/029490920cd736e91d6c57f3cfb850adddcf2725",
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }

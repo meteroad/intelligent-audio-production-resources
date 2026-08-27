@@ -9,16 +9,18 @@ Include a paper only when its principal contribution directly concerns at least 
 - automatic or intelligent audio mastering;
 - evaluation methods or benchmarks specifically for audio effects, mixing, or mastering;
 - tool- or language-guided control of processors for music or audio post-production.
+- intelligent spatial-audio generation, upmixing, production, rendering, or HRTF personalization for immersive content.
 
-Exclude papers mainly about source separation, music generation, generic audio understanding, room acoustics, spatial localization, hearing, speech enhancement, or generic differentiable DSP unless the abstract clearly establishes a direct production or audio-effects contribution. Spatial audio is outside the current release scope. A neural network is not itself evidence of differentiable processing: gradients must pass through an explicit DSP operation, audio processor, effect chain, or processing graph.
+Exclude papers mainly about source separation, generic music generation, generic audio understanding, room acoustics, spatial localization/SELD, hearing, speech enhancement, or generic differentiable DSP unless the abstract clearly establishes a direct production, audio-effects, or spatial-rendering contribution. A neural network is not itself evidence of differentiable processing: gradients must pass through an explicit DSP operation, audio processor, effect chain, or processing graph.
 
 For every candidate:
 1. Copy sourceId exactly.
 2. Use decision "include" only for direct relevance; when uncertain, use "exclude".
-3. Use only these area identifiers: "audio-effects", "differentiable-processing", "representation", "mixing", "mastering", "evaluation".
+3. Use only these area identifiers: "audio-effects", "differentiable-processing", "representation", "mixing", "mastering", "evaluation", "spatial-audio".
    Assign "differentiable-processing" only when differentiability of DSP, an effect chain, or a processing graph is a substantive method contribution; ordinary neural-network training alone is insufficient.
    Assign "representation" only when the representation explicitly captures audio effects, production style, processor transformations, or perceptual production attributes; generic audio embeddings do not qualify.
    Assign "evaluation" only when the paper's primary contribution is a benchmark, metric, listening-test protocol, or reproducibility tool; do not assign it merely because a method reports experiments.
+   Assign "spatial-audio" only for work that directly generates, mixes, positions, renders, personalizes, or evaluates spatial audio for production or immersive content; localization-only and separation-only work does not qualify.
 4. Classify how effect or production-control parameters are obtained at inference or target-matching time using only these controlApproaches identifiers:
    - "gradient-based-optimization": target-specific parameters are iteratively optimized with gradients through an explicit processor or processing graph;
    - "derivative-free-optimization": target-specific parameters are found with black-box, evolutionary, population-based, or other optimization that does not require gradients;

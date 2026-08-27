@@ -42,6 +42,18 @@
     {
       "name": "production-tool-control",
       "query": "(all:\"music post-production\" OR all:\"audio post-production\") AND (all:tool OR all:agent OR all:language OR all:control)"
+    },
+    {
+      "name": "spatial-audio-generation",
+      "query": "(all:\"spatial audio generation\" OR all:\"binaural audio generation\" OR all:\"ambisonics generation\" OR all:\"neural upmixing\")"
+    },
+    {
+      "name": "spatial-production-rendering",
+      "query": "(all:\"spatial audio production\" OR all:\"spatial audio mixing\" OR all:\"binaural rendering\" OR all:\"ambisonic rendering\") AND (cat:eess.AS OR cat:cs.SD)"
+    },
+    {
+      "name": "hrtf-personalization",
+      "query": "(all:\"HRTF personalization\" OR all:\"HRTF interpolation\" OR all:\"HRTF upsampling\") AND (all:neural OR all:learning OR all:personalized)"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "papers": [
+    {
+      "id": "openreview-binaural-speech-synthesis",
+      "source": {"type": "manual", "id": "openreview:uAX8q61EVRu"},
+      "shortName": "BinauralSpeech",
+      "title": "Neural Synthesis of Binaural Speech from Mono Audio",
+      "authors": ["Alexander Richard", "Dejan Markovic", "Israel D. Gebru", "Steven Krenn", "Gladstone Butler", "Fernando de la Torre", "Yaser Sheikh"],
+      "year": 2021,
+      "published": "2021-05-03",
+      "venue": "ICLR 2021",
+      "areas": ["spatial-audio"],
+      "controlApproaches": ["direct-prediction"],
+      "trackScopes": ["single-track"],
+      "summary": {"en": "Renders binaural speech from mono audio and tracked source-listener geometry with a neural sound renderer.", "zh": "使用神经声音渲染器，根据单声道音频及跟踪的声源与听者几何信息生成双耳语音。"},
+      "links": [
+        {"label": "paper", "url": "https://openreview.net/forum?id=uAX8q61EVRu"},
+        {"label": "source", "url": "https://github.com/facebookresearch/BinauralSpeechSynthesis"}
+      ],
+      "lastVerified": "2026-08-27",
+      "curation": "manual",
+      "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}, "assessor": "Codex", "rubricVersion": "1.0", "assessedAt": "2026-08-27"},
+      "impact": {"status": "not-assessed", "citationCount": null, "influentialCitationCount": null, "yearRank": null, "cohortSize": null, "sourceUrl": null, "measuredAt": null, "methodVersion": "semantic-scholar-year-cohort-v1"}
+    }
+  ]
+}

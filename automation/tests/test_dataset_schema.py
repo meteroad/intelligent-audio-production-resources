@@ -60,6 +60,13 @@ class DatasetSchemaTests(unittest.TestCase):
     def test_validator_accepts_dataset_document(self):
         self.assertEqual(self.validate(self.document), 1)
 
+    def test_validator_accepts_spatial_taxonomy(self):
+        spatial = copy.deepcopy(self.document)
+        spatial["datasets"][0]["areas"] = ["spatial-audio"]
+        spatial["datasets"][0]["taxonomy"]["tasks"] = ["spatial-generation", "hrtf-personalization"]
+        spatial["datasets"][0]["taxonomy"]["contentTypes"] = ["binaural-audio", "hrtf"]
+        self.assertEqual(self.validate(spatial), 1)
+
     def test_validator_rejects_unknown_relation(self):
         invalid = copy.deepcopy(self.document)
         invalid["datasets"][0]["relations"]["projects"][0]["id"] = "missing-project"

@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Intelligent Audio Production Resources</title>
-    <meta name="description" content="A structured index of open resources and recent research for intelligent audio effects, mixing, mastering, and evaluation.">
+    <meta name="description" content="A structured index of open resources and recent research for intelligent audio effects, mixing, mastering, spatial audio, and evaluation.">
     <meta property="og:title" content="Intelligent Audio Production Resources">
-    <meta property="og:description" content="An open research landscape for intelligent audio effects and music production.">
+    <meta property="og:description" content="An open research landscape for intelligent audio effects, music production, and spatial audio.">
     <meta property="og:url" content="https://meteroad.github.io/intelligent-audio-production-resources/">
     <meta property="og:image" content="https://meteroad.github.io/intelligent-audio-production-resources/assets/social-preview.jpg">
     <link rel="canonical" href="https://meteroad.github.io/intelligent-audio-production-resources/">
     <link rel="stylesheet" href="styles.css?v=20260827-2">
-    <script src="app.js?v=20260827-2" defer></script>
+    <script src="app.js?v=20260827-3" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -38,9 +38,9 @@
         <h1 id="page-title" data-i18n="intro.title">Intelligent Audio Production</h1>
         <p class="lead" data-i18n="intro.lead">A structured index of open-source projects, models, datasets, and recent research for intelligent audio effects and music production.</p>
         <p class="catalogue-stats" aria-label="Catalogue coverage" data-i18n-aria-label="intro.statsLabel">
-          <span><strong id="hero-project-count">40</strong> <span data-i18n="intro.projectsLabel">Projects</span></span>
-          <span><strong id="hero-dataset-count">12</strong> <span data-i18n="intro.datasetsLabel">Datasets</span></span>
-          <span><strong id="hero-paper-count">71</strong> <span data-i18n="intro.papersLabel">Papers</span></span>
+          <span><strong id="hero-project-count">72</strong> <span data-i18n="intro.projectsLabel">Projects</span></span>
+          <span><strong id="hero-dataset-count">23</strong> <span data-i18n="intro.datasetsLabel">Datasets</span></span>
+          <span><strong id="hero-paper-count">114</strong> <span data-i18n="intro.papersLabel">Papers</span></span>
         </p>
         <ul class="scope-summary" aria-label="Current scope" data-i18n-aria-label="intro.scopeLabel">
           <li data-i18n="area.audio-effects">Audio effects</li>
@@ -117,11 +117,14 @@
               </div>
             </a>
           </article>
-          <article class="future-area" data-field-area="spatial-audio">
-            <div class="title-line"><h3 data-i18n="area.spatial-audio">Spatial audio</h3><span data-i18n="common.later">Later</span></div>
-            <div class="field-copy">
-              <p data-i18n="scope.spatialAudio">Spatial mixing, positioning, rendering, and immersive production will be incorporated as the index expands.</p>
-            </div>
+          <article data-field-area="spatial-audio">
+            <a class="field-map-link" href="#papers" data-paper-area="spatial-audio">
+              <h3 data-i18n="area.spatial-audio">Spatial audio</h3>
+              <div class="field-copy">
+                <p data-i18n="scope.spatialAudio">Intelligent generation, upmixing, positioning, rendering, HRTF personalization, and evaluation for immersive production.</p>
+                <span class="field-paper-count">View papers</span>
+              </div>
+            </a>
           </article>
         </div>
       </section>

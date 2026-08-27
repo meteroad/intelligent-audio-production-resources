@@ -1,7 +1,213 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-27",
   "projects": [
+    {
+      "id": "facebookresearch-2-5d-visual-sound",
+      "name": "2.5D Visual Sound",
+      "description": {
+        "en": "Training and evaluation code for visually guided mono-to-binaural generation and the FAIR-Play dataset.",
+        "zh": "视觉引导单声道到双耳音频生成及 FAIR-Play 数据集的训练与评测代码。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/facebookresearch/2.5D-Visual-Sound/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/facebookresearch/2.5D-Visual-Sound/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/facebookresearch/2.5D-Visual-Sound"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-1812-04204"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/facebookresearch/2.5D-Visual-Sound"
+        }
+      ]
+    },
+    {
+      "id": "yongyizang-ambisonizer",
+      "name": "Ambisonizer",
+      "description": {
+        "en": "Official implementation of neural upmixing from lower-channel audio to Ambisonics.",
+        "zh": "从较少声道音频神经上混至 Ambisonics 的官方实现。"
+      },
+      "areas": [
+        "spatial-audio",
+        "mixing"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation",
+          "spatial-mixing"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/yongyizang/ambisonizer/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/yongyizang/ambisonizer/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/yongyizang/ambisonizer"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2405-13428"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/yongyizang/ambisonizer"
+        }
+      ]
+    },
+    {
+      "id": "kronihias-ambix",
+      "name": "ambiX",
+      "description": {
+        "en": "Cross-platform Ambisonic plug-ins for digital audio workstations and standalone use.",
+        "zh": "用于数字音频工作站及独立运行的跨平台 Ambisonics 插件。"
+      },
+      "areas": [
+        "spatial-audio",
+        "mixing"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-mixing",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo",
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/kronihias/ambix/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU GPL terms; see repository license text",
+        "zh": "GNU GPL 条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/kronihias/ambix/blob/HEAD/COPYING"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/kronihias/ambix"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/kronihias/ambix/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/kronihias/ambix"
+        }
+      ]
+    },
     {
       "id": "csteinmetz1-automix-toolkit",
       "name": "automix-toolkit",
@@ -86,6 +292,481 @@
         {
           "label": "checkpoint",
           "url": "https://huggingface.co/csteinmetz1/automix-toolkit"
+        }
+      ]
+    },
+    {
+      "id": "liangsusan-git-av-nerf",
+      "name": "AV-NeRF",
+      "description": {
+        "en": "Code and data preparation for novel-position audio-visual scene synthesis with neural fields.",
+        "zh": "使用神经场在新位置合成音视频场景的代码与数据准备工具。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "reverberation",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/liangsusan-git/AV-NeRF/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/liangsusan-git/AV-NeRF"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2302-02088"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/liangsusan-git/AV-NeRF"
+        }
+      ]
+    },
+    {
+      "id": "ebu-bear",
+      "name": "BEAR",
+      "description": {
+        "en": "EBU binaural renderer for ADM object-, direct-speaker-, and Higher-Order Ambisonic content.",
+        "zh": "面向 ADM 对象、直接扬声器及高阶 Ambisonics 内容的 EBU 双耳渲染器。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo",
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ebu/bear/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/ebu/bear/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ebu/bear"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ebu/bear/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ebu/bear"
+        }
+      ]
+    },
+    {
+      "id": "omeaningless-binaural-audio-generation",
+      "name": "Binaural Audio Generation",
+      "description": {
+        "en": "Implementation of multi-task mono-to-binaural audio generation.",
+        "zh": "多任务单声道到双耳音频生成实现。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/omeaningless/binaural-audio-generation/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/omeaningless/binaural-audio-generation"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2109-00748"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/omeaningless/binaural-audio-generation"
+        }
+      ]
+    },
+    {
+      "id": "facebookresearch-binauralspeechsynthesis",
+      "name": "Binaural Speech Synthesis",
+      "description": {
+        "en": "Training, evaluation, pretrained models, and recorded data for neural mono-to-binaural speech rendering.",
+        "zh": "神经单声道到双耳语音渲染的训练、评测、预训练模型与录音数据。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/facebookresearch/BinauralSpeechSynthesis/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/facebookresearch/BinauralSpeechSynthesis/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/facebookresearch/BinauralSpeechSynthesis"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "openreview-binaural-speech-synthesis"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/facebookresearch/BinauralSpeechSynthesis"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-neuralspeech",
+      "name": "BinauralGrad",
+      "description": {
+        "en": "BinauralGrad implementation within NeuralSpeech for conditional diffusion-based binaural synthesis.",
+        "zh": "NeuralSpeech 中基于条件扩散的双耳音频合成 BinauralGrad 实现。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/microsoft/NeuralSpeech/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/microsoft/NeuralSpeech/blob/HEAD/LICENSE.txt"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/microsoft/NeuralSpeech/tree/master/BinauralGrad"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2205-14807"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/microsoft/NeuralSpeech/tree/master/BinauralGrad"
+        }
+      ]
+    },
+    {
+      "id": "peiwensun2000-both-ears-wide-open",
+      "name": "Both Ears Wide Open",
+      "description": {
+        "en": "Code and resources for language-driven binaural soundscape generation with spatial control.",
+        "zh": "具有空间控制的语言驱动双耳声景生成代码与资源。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/PeiwenSun2000/Both-Ears-Wide-Open"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/PeiwenSun2000/Both-Ears-Wide-Open"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2410-10676"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/PeiwenSun2000/Both-Ears-Wide-Open"
+        }
+      ]
+    },
+    {
+      "id": "sonyresearch-ccstereo",
+      "name": "CCStereo",
+      "description": {
+        "en": "Official implementation of contextual and contrastive audio-visual learning for binaural generation.",
+        "zh": "用于双耳生成的上下文与对比式音视频学习官方实现。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/SonyResearch/CCStereo/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/SonyResearch/CCStereo/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SonyResearch/CCStereo"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2501-02786"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/CCStereo"
         }
       ]
     },
@@ -1010,6 +1691,75 @@
       ]
     },
     {
+      "id": "ebu-ear-production-suite",
+      "name": "EAR Production Suite",
+      "description": {
+        "en": "EBU plug-ins and tools for authoring and monitoring ADM object-, scene-, and channel-based audio.",
+        "zh": "用于制作和监听 ADM 对象、场景及声道音频的 EBU 插件与工具。"
+      },
+      "areas": [
+        "spatial-audio",
+        "mixing"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-mixing",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ebu/ear-production-suite/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ebu/ear-production-suite"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ebu/ear-production-suite/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ebu/ear-production-suite"
+        }
+      ]
+    },
+    {
       "id": "gdalsanto-flamo",
       "name": "FLAMO",
       "description": {
@@ -1297,6 +2047,75 @@
       ]
     },
     {
+      "id": "jin-woo-lee-hrtf-interpolation",
+      "name": "Global HRTF Interpolation",
+      "description": {
+        "en": "Code for direction-conditioned global interpolation of personalized HRTFs.",
+        "zh": "面向个体化 HRTF 的方向条件全局插值代码。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "hrtf-personalization",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/jin-woo-lee/hrtf-interpolation/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/jin-woo-lee/hrtf-interpolation"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2204-02637"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/jin-woo-lee/hrtf-interpolation"
+        }
+      ]
+    },
+    {
       "id": "sh-lee97-grafx",
       "name": "GRAFX",
       "description": {
@@ -1498,6 +2317,286 @@
       ]
     },
     {
+      "id": "yzyouzhang-hrtf-field",
+      "name": "HRTF Field",
+      "description": {
+        "en": "Neural-field representation and interpolation code for measured HRTF magnitudes.",
+        "zh": "测量 HRTF 幅度的神经场表征与插值代码。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "hrtf-personalization",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/yzyouzhang/HRTF_field/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/yzyouzhang/HRTF_field/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/yzyouzhang/HRTF_field"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2210-15196"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/yzyouzhang/HRTF_field"
+        }
+      ]
+    },
+    {
+      "id": "ahogg-hrtf-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection",
+      "name": "HRTF GAN Upsampling",
+      "description": {
+        "en": "GAN-based HRTF upsampling implementation using a gnomonic equiangular projection.",
+        "zh": "基于球心等角投影和生成对抗网络的 HRTF 上采样实现。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "hrtf-personalization",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2306-05812"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ahogg/HRTF-upsampling-with-a-generative-adversarial-network-using-a-gnomonic-equiangular-projection"
+        }
+      ]
+    },
+    {
+      "id": "ikets-hrtfinterpae-public",
+      "name": "HRTFInterpAE",
+      "description": {
+        "en": "Autoencoder implementation for HRTF interpolation from sparse measurements with source-position conditioning.",
+        "zh": "使用声源位置条件从稀疏测量插值 HRTF 的自编码器实现。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "hrtf-personalization",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ikets/HRTFInterpAE_public/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/ikets/HRTFInterpAE_public/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ikets/HRTFInterpAE_public"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2207-10967"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ikets/HRTFInterpAE_public"
+        }
+      ]
+    },
+    {
+      "id": "tu-studio-iempluginsuite",
+      "name": "IEM Plug-in Suite",
+      "description": {
+        "en": "Open Ambisonic production plug-ins for encoding, reverberation, dynamics, rotation, visualization, and decoding.",
+        "zh": "面向 Ambisonics 制作的开放插件套件，涵盖编码、混响、动态、旋转、可视化与解码。"
+      },
+      "areas": [
+        "spatial-audio",
+        "mixing",
+        "audio-effects"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-mixing",
+          "spatial-rendering",
+          "effect-control"
+        ],
+        "effects": [
+          "reverberation",
+          "compression",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/tu-studio/IEMPluginSuite/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU GPL terms; see repository license text",
+        "zh": "GNU GPL 条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/tu-studio/IEMPluginSuite/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/tu-studio/IEMPluginSuite"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/tu-studio/IEMPluginSuite/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/tu-studio/IEMPluginSuite"
+        }
+      ]
+    },
+    {
       "id": "csteinmetz1-iirnet",
       "name": "IIRNet",
       "description": {
@@ -1627,6 +2726,141 @@
       ]
     },
     {
+      "id": "aaronz345-isdrama",
+      "name": "ISDrama",
+      "description": {
+        "en": "Code and models for multimodal generation of continuous multi-speaker binaural drama.",
+        "zh": "多模态连续多说话人双耳剧集生成的代码与模型。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/AaronZ345/ISDrama/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/AaronZ345/ISDrama"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2504-20630"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/AaronZ345/ISDrama"
+        }
+      ]
+    },
+    {
+      "id": "videolabs-libspatialaudio",
+      "name": "libspatialaudio",
+      "description": {
+        "en": "C++ library for Ambisonic encoding, rotation, decoding, binauralization, and object rendering.",
+        "zh": "提供 Ambisonics 编码、旋转、解码、双耳化与对象渲染的 C++ 库。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo",
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/videolabs/libspatialaudio/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "LGPL-2.1-or-later or commercial license",
+        "zh": "LGPL-2.1-or-later 或商业许可证",
+        "status": "identified",
+        "spdx": "LGPL-2.1-or-later",
+        "evidenceUrl": "https://github.com/videolabs/libspatialaudio/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/videolabs/libspatialaudio"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/videolabs/libspatialaudio/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/videolabs/libspatialaudio"
+        }
+      ]
+    },
+    {
       "id": "sonyresearch-llm2fx",
       "name": "LLM2Fx-Tools",
       "description": {
@@ -1689,6 +2923,85 @@
       ]
     },
     {
+      "id": "ilias-audio-matchreverb",
+      "name": "MatchReverb",
+      "description": {
+        "en": "Code for matching OpenAIR room impulse responses with a feedback delay network using a genetic algorithm.",
+        "zh": "使用遗传算法和反馈延迟网络匹配 OpenAIR 房间脉冲响应的实现。"
+      },
+      "areas": [
+        "audio-effects",
+        "spatial-audio",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-modeling",
+          "parameter-estimation",
+          "evaluation"
+        ],
+        "effects": [
+          "reverberation"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license found",
+        "zh": "未发现仓库许可证",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ilias-audio/MatchReverb"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "aes-2022-matchreverb"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ilias-audio/MatchReverb"
+        },
+        {
+          "label": "paper",
+          "url": "https://www.aes.org/e-lib/browse.cfm?elib=21917"
+        }
+      ]
+    },
+    {
       "id": "sonyresearch-megami",
       "name": "MEGAMI",
       "description": {
@@ -1747,6 +3060,75 @@
         {
           "label": "source",
           "url": "https://github.com/SonyResearch/MEGAMI"
+        }
+      ]
+    },
+    {
+      "id": "sh01k-meshrir",
+      "name": "MeshRIR",
+      "description": {
+        "en": "Dataset, baseline scripts, and evaluation resources for sound-field interpolation and synthesis on meshed grids.",
+        "zh": "面向网格声场插值与合成的数据、基线脚本及评测资源。"
+      },
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-rendering",
+          "spatial-evaluation"
+        ],
+        "effects": [
+          "reverberation"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/sh01k/MeshRIR/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/sh01k/MeshRIR/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/sh01k/MeshRIR"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2106-10801"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/sh01k/MeshRIR"
         }
       ]
     },
@@ -1954,6 +3336,211 @@
       ]
     },
     {
+      "id": "jin-woo-lee-nfs-binaural",
+      "name": "Neural Fourier Shift",
+      "description": {
+        "en": "Official implementation of position-conditioned binaural speech rendering in the Fourier domain.",
+        "zh": "傅里叶域位置条件双耳语音渲染的官方实现。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/jin-woo-lee/nfs-binaural/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/jin-woo-lee/nfs-binaural/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/jin-woo-lee/nfs-binaural"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2211-00878"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/jin-woo-lee/nfs-binaural"
+        }
+      ]
+    },
+    {
+      "id": "merlresearch-neural-iir-field",
+      "name": "NIIRF",
+      "description": {
+        "en": "Neural IIR filter fields for HRTF upsampling and personalization.",
+        "zh": "用于 HRTF 上采样与个性化的神经 IIR 滤波器场。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation",
+        "audio-effects"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "hrtf-personalization",
+          "spatial-rendering",
+          "effect-modeling"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/merlresearch/neural-IIR-field/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU AGPL terms; see repository license text",
+        "zh": "GNU AGPL 条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/merlresearch/neural-IIR-field/blob/HEAD/LICENSE.md"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/merlresearch/neural-IIR-field"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2402-17907"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/merlresearch/neural-IIR-field"
+        }
+      ]
+    },
+    {
+      "id": "liuhuadai-omniaudio",
+      "name": "OmniAudio",
+      "description": {
+        "en": "Official code and dataset tools for generating spatial audio from 360-degree video.",
+        "zh": "从 360 度视频生成空间音频的官方代码与数据工具。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/liuhuadai/OmniAudio/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/liuhuadai/OmniAudio"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2504-14906"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/liuhuadai/OmniAudio"
+        }
+      ]
+    },
+    {
       "id": "alec-wright-openamp",
       "name": "Open-Amp",
       "description": {
@@ -2011,6 +3598,142 @@
         {
           "label": "source",
           "url": "https://github.com/Alec-Wright/OpenAmp"
+        }
+      ]
+    },
+    {
+      "id": "feima1024-pinn-for-hrtf-upsampling",
+      "name": "PINN for HRTF Upsampling",
+      "description": {
+        "en": "Physics-informed neural network implementation for spatial HRTF upsampling.",
+        "zh": "用于 HRTF 空间上采样的物理信息神经网络实现。"
+      },
+      "areas": [
+        "spatial-audio",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "hrtf-personalization",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/feima1024/PINN-for-HRTF-upsampling/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/feima1024/PINN-for-HRTF-upsampling"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2307-14650"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/feima1024/PINN-for-HRTF-upsampling"
+        }
+      ]
+    },
+    {
+      "id": "sheldontsui-pseudobinaural-cvpr2021",
+      "name": "PseudoBinaural",
+      "description": {
+        "en": "Official code for visually informed binaural generation trained without real binaural recordings.",
+        "zh": "无需真实双耳录音训练的视觉引导双耳音频生成官方代码。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2104-06162"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SheldonTsui/PseudoBinaural_CVPR2021"
         }
       ]
     },
@@ -2267,6 +3990,215 @@
       ]
     },
     {
+      "id": "see2sound-see2sound",
+      "name": "SEE-2-SOUND",
+      "description": {
+        "en": "Zero-shot pipeline for generating and spatializing sound from visual environments.",
+        "zh": "根据视觉环境生成并空间化声音的零样本流程。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation",
+          "spatial-rendering"
+        ],
+        "effects": [
+          "stereo",
+          "reverberation"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/see2sound/see2sound/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/see2sound/see2sound/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/see2sound/see2sound"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2406-06612"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/see2sound/see2sound"
+        }
+      ]
+    },
+    {
+      "id": "sheldontsui-sepstereo-eccv2020",
+      "name": "Sep-Stereo",
+      "description": {
+        "en": "Official implementation of self-supervised stereophonic generation with visual source-separation cues.",
+        "zh": "结合视觉声源分离线索进行自监督立体声生成的官方实现。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/SheldonTsui/SepStereo_ECCV2020/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/SheldonTsui/SepStereo_ECCV2020/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/SheldonTsui/SepStereo_ECCV2020"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2007-09902"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/SheldonTsui/SepStereo_ECCV2020"
+        }
+      ]
+    },
+    {
+      "id": "ethman-slakh",
+      "name": "Slakh",
+      "description": {
+        "en": "Official Slakh2100 dataset site, rendering code, support tools, examples, and source-separation benchmarks.",
+        "zh": "Slakh2100 官方数据集网站，提供渲染代码、配套工具、示例及音乐源分离基准。"
+      },
+      "areas": [
+        "mixing",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "automatic-mixing",
+          "evaluation"
+        ],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ethman/Slakh/blob/master/README.md"
+        ]
+      },
+      "license": {
+        "en": "Source-code license not verified; Slakh2100 data is CC-BY-4.0",
+        "zh": "源码许可证未核验；Slakh2100 数据采用 CC-BY-4.0",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ethman/Slakh"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ethman/Slakh/blob/master/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-1909-08494"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-26",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ethman/Slakh"
+        },
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1909.08494"
+        }
+      ]
+    },
+    {
       "id": "amaai-lab-sonicmaster",
       "name": "SonicMaster",
       "description": {
@@ -2350,6 +4282,352 @@
         {
           "label": "checkpoint",
           "url": "https://huggingface.co/amaai-lab/SonicMaster/tree/main"
+        }
+      ]
+    },
+    {
+      "id": "leomccormack-sparta",
+      "name": "SPARTA",
+      "description": {
+        "en": "Open plug-in suite for producing, analyzing, and reproducing spatial sound scenes.",
+        "zh": "用于空间声场制作、分析与重放的开放插件套件。"
+      },
+      "areas": [
+        "spatial-audio",
+        "mixing",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-mixing",
+          "spatial-rendering",
+          "spatial-evaluation"
+        ],
+        "effects": [
+          "reverberation",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/leomccormack/SPARTA/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU GPL terms; see repository license text",
+        "zh": "GNU GPL 条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/leomccormack/SPARTA/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/leomccormack/SPARTA"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/leomccormack/SPARTA/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/leomccormack/SPARTA"
+        }
+      ]
+    },
+    {
+      "id": "leomccormack-spatial-audio-framework",
+      "name": "Spatial Audio Framework",
+      "description": {
+        "en": "Cross-platform C framework for spatial-audio processing and reproduction algorithms.",
+        "zh": "面向空间音频处理与重放算法的跨平台 C 框架。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-rendering",
+          "spatial-evaluation"
+        ],
+        "effects": [
+          "filtering",
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/leomccormack/Spatial_Audio_Framework/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/leomccormack/Spatial_Audio_Framework/blob/HEAD/LICENSE.md"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/leomccormack/Spatial_Audio_Framework"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/leomccormack/Spatial_Audio_Framework/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "not-reviewed"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/leomccormack/Spatial_Audio_Framework"
+        }
+      ]
+    },
+    {
+      "id": "katarina-poole-spatial-audio-metrics",
+      "name": "Spatial Audio Metrics",
+      "description": {
+        "en": "Python toolbox for analyzing HRTFs and spatial-audio perceptual experiments, released with the extended SONICOM resource.",
+        "zh": "用于分析 HRTF 与空间音频感知实验的 Python 工具箱，与扩展 SONICOM 资源一同发布。"
+      },
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-evaluation",
+          "hrtf-personalization"
+        ],
+        "effects": [
+          "filtering"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/Katarina-Poole/Spatial-Audio-Metrics/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU GPL terms; see repository license text",
+        "zh": "GNU GPL 条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/Katarina-Poole/Spatial-Audio-Metrics/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/Katarina-Poole/Spatial-Audio-Metrics"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2507-05053"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/Katarina-Poole/Spatial-Audio-Metrics"
+        }
+      ]
+    },
+    {
+      "id": "apple-ml-spatial-librispeech",
+      "name": "Spatial LibriSpeech",
+      "description": {
+        "en": "Official dataset schema, access instructions, and loading resources for the Spatial LibriSpeech corpus.",
+        "zh": "Spatial LibriSpeech 语料库的官方数据结构、获取说明与加载资源。"
+      },
+      "areas": [
+        "spatial-audio",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation",
+          "spatial-evaluation"
+        ],
+        "effects": [
+          "reverberation"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/apple/ml-spatial-librispeech/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Custom or non-standard terms; see repository license text",
+        "zh": "自定义或非标准条款；详见仓库许可证原文",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/apple/ml-spatial-librispeech/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/apple/ml-spatial-librispeech"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2308-09514"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/apple/ml-spatial-librispeech"
+        }
+      ]
+    },
+    {
+      "id": "pedro-morgado-spatialaudiogen",
+      "name": "SpatialAudioGen",
+      "description": {
+        "en": "Official code and dataset resources for self-supervised spatial-audio generation from 360-degree video.",
+        "zh": "从 360 度视频进行自监督空间音频生成的官方代码与数据资源。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "spatial-generation"
+        ],
+        "effects": [
+          "stereo"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/pedro-morgado/spatialaudiogen/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "BSD",
+        "zh": "BSD",
+        "status": "custom",
+        "spdx": null,
+        "evidenceUrl": "https://github.com/pedro-morgado/spatialaudiogen/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/pedro-morgado/spatialaudiogen"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-1809-02587"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-27",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/pedro-morgado/spatialaudiogen"
         }
       ]
     },
@@ -2676,154 +4954,69 @@
       ]
     },
     {
-      "id": "ethman-slakh",
-      "name": "Slakh",
+      "id": "jaeyeonkim99-visage",
+      "name": "ViSAGe",
       "description": {
-        "en": "Official Slakh2100 dataset site, rendering code, support tools, examples, and source-separation benchmarks.",
-        "zh": "Slakh2100 官方数据集网站，提供渲染代码、配套工具、示例及音乐源分离基准。"
+        "en": "Official implementation and YT-Ambigen resources for video-to-Ambisonics generation.",
+        "zh": "视频到 Ambisonics 生成的官方实现及 YT-Ambigen 资源。"
       },
       "areas": [
-        "mixing",
-        "evaluation"
+        "spatial-audio"
       ],
       "taxonomy": {
         "tasks": [
-          "automatic-mixing",
-          "evaluation"
-        ],
-        "effects": [],
-        "reviewStatus": "reviewed",
-        "evidence": [
-          "https://github.com/ethman/Slakh/blob/master/README.md"
-        ]
-      },
-      "license": {
-        "en": "Source-code license not verified; Slakh2100 data is CC-BY-4.0",
-        "zh": "源码许可证未核验；Slakh2100 数据采用 CC-BY-4.0",
-        "status": "not-verified",
-        "spdx": null,
-        "evidenceUrl": null
-      },
-      "availability": {
-        "source": {
-          "status": "linked",
-          "evidence": [
-            "https://github.com/ethman/Slakh"
-          ]
-        },
-        "checkpoint": {
-          "status": "not-applicable",
-          "evidence": []
-        },
-        "inference": {
-          "status": "not-applicable",
-          "evidence": []
-        },
-        "training": {
-          "status": "not-applicable",
-          "evidence": []
-        },
-        "dataset": {
-          "status": "documented",
-          "evidence": [
-            "https://github.com/ethman/Slakh/blob/master/README.md"
-          ]
-        }
-      },
-      "relations": {
-        "paperIds": [
-          "arxiv-1909-08494"
-        ],
-        "reviewStatus": "exact-link-match"
-      },
-      "lastVerified": "2026-08-26",
-      "links": [
-        {
-          "label": "source",
-          "url": "https://github.com/ethman/Slakh"
-        },
-        {
-          "label": "paper",
-          "url": "https://arxiv.org/abs/1909.08494"
-        }
-      ]
-    },
-    {
-      "id": "ilias-audio-matchreverb",
-      "name": "MatchReverb",
-      "description": {
-        "en": "Code for matching OpenAIR room impulse responses with a feedback delay network using a genetic algorithm.",
-        "zh": "使用遗传算法和反馈延迟网络匹配 OpenAIR 房间脉冲响应的实现。"
-      },
-      "areas": [
-        "audio-effects",
-        "spatial-audio",
-        "evaluation"
-      ],
-      "taxonomy": {
-        "tasks": [
-          "effect-modeling",
-          "parameter-estimation",
-          "evaluation"
+          "spatial-generation"
         ],
         "effects": [
-          "reverberation"
+          "stereo"
         ],
         "reviewStatus": "reviewed",
         "evidence": [
-          "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
+          "https://github.com/jaeyeonkim99/visage/blob/HEAD/README.md"
         ]
       },
       "license": {
-        "en": "No repository license found",
-        "zh": "未发现仓库许可证",
-        "status": "not-verified",
-        "spdx": null,
-        "evidenceUrl": null
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/jaeyeonkim99/visage/blob/HEAD/LICENSE"
       },
       "availability": {
         "source": {
           "status": "linked",
           "evidence": [
-            "https://github.com/ilias-audio/MatchReverb"
+            "https://github.com/jaeyeonkim99/visage"
           ]
         },
         "checkpoint": {
-          "status": "not-applicable",
+          "status": "not-reviewed",
           "evidence": []
         },
         "inference": {
-          "status": "documented",
-          "evidence": [
-            "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
-          ]
+          "status": "not-reviewed",
+          "evidence": []
         },
         "training": {
-          "status": "not-applicable",
+          "status": "not-reviewed",
           "evidence": []
         },
         "dataset": {
-          "status": "documented",
-          "evidence": [
-            "https://github.com/ilias-audio/MatchReverb/blob/main/README.md"
-          ]
+          "status": "not-reviewed",
+          "evidence": []
         }
       },
       "relations": {
         "paperIds": [
-          "aes-2022-matchreverb"
+          "arxiv-2506-12199"
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-08-27",
       "links": [
         {
           "label": "source",
-          "url": "https://github.com/ilias-audio/MatchReverb"
-        },
-        {
-          "label": "paper",
-          "url": "https://www.aes.org/e-lib/browse.cfm?elib=21917"
+          "url": "https://github.com/jaeyeonkim99/visage"
         }
       ]
     }

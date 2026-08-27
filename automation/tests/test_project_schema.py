@@ -93,6 +93,23 @@ class ProjectSchemaMigrationTests(unittest.TestCase):
                 1,
             )
 
+    def test_validator_accepts_spatial_taxonomy(self):
+        migrated = migrate_projects_v3.upgrade_document(self.v2, self.papers)
+        migrated["projects"][0]["areas"] = ["spatial-audio"]
+        migrated["projects"][0]["taxonomy"] = {
+            "tasks": ["spatial-rendering", "hrtf-personalization"],
+            "effects": ["filtering", "stereo"],
+            "reviewStatus": "reviewed",
+            "evidence": ["https://example.com/project"],
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "projects.json"
+            path.write_text(json.dumps(migrated), encoding="utf-8")
+            self.assertEqual(
+                validate_data.validate_projects(path, {"example-paper"}, self.paper_resource_urls),
+                1,
+            )
+
     def test_validator_rejects_claim_without_evidence(self):
         migrated = migrate_projects_v3.upgrade_document(self.v2, self.papers)
         migrated["projects"][0]["availability"]["training"] = {

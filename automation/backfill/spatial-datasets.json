@@ -1,0 +1,137 @@
+{
+  "verifiedAt": "2026-08-27",
+  "datasets": [
+    {
+      "id": "yt-all-rec-street",
+      "name": "YT-ALL & REC-STREET",
+      "description": {"en": "First-order Ambisonic video collections assembled for self-supervised spatial-audio generation from 360-degree video.", "zh": "为 360 度视频自监督空间音频生成整理的一阶 Ambisonics 视频集合。"},
+      "scale": {"en": "Approximately 116.5 hours of crawled and recorded 360-degree video audio.", "zh": "约 116.5 小时的网络采集及实录 360 度视频音频。"},
+      "tasks": ["spatial-generation"], "effects": ["stereo"], "contentTypes": ["ambisonics", "video", "spatial-metadata"],
+      "evidence": "https://pedro-morgado.github.io/spatialaudiogen/", "accessStatus": "direct-download",
+      "license": {"en": "Dataset license not verified", "zh": "数据集许可证未核验", "status": "not-verified", "spdx": null, "evidenceUrl": null},
+      "papers": [{"id": "arxiv-1809-02587", "evidenceUrl": "https://arxiv.org/abs/1809.02587"}],
+      "projects": [{"id": "pedro-morgado-spatialaudiogen", "evidenceUrl": "https://github.com/pedro-morgado/spatialaudiogen"}],
+      "links": [{"label": "dataset", "url": "https://pedro-morgado.github.io/spatialaudiogen/"}, {"label": "paper", "url": "https://arxiv.org/abs/1809.02587"}]
+    },
+    {
+      "id": "fair-play",
+      "name": "FAIR-Play",
+      "description": {"en": "Aligned music-room videos and binaural recordings collected for visually guided spatialization.", "zh": "为视觉引导空间化采集的音乐室视频与对齐双耳录音。"},
+      "scale": {"en": "1,871 aligned video and binaural clips, approximately 5.2 hours and 100 GB.", "zh": "1,871 组对齐视频与双耳音频片段，约 5.2 小时、100 GB。"},
+      "tasks": ["spatial-generation"], "effects": ["stereo"], "contentTypes": ["binaural-audio", "video", "annotations"],
+      "evidence": "https://github.com/facebookresearch/FAIR-Play/blob/main/README.md", "accessStatus": "direct-download",
+      "license": {"en": "CC-BY-4.0", "zh": "CC-BY-4.0", "status": "identified", "spdx": "CC-BY-4.0", "evidenceUrl": "https://github.com/facebookresearch/FAIR-Play/blob/main/LICENSE"},
+      "papers": [{"id": "arxiv-1812-04204", "evidenceUrl": "https://arxiv.org/abs/1812.04204"}],
+      "projects": [{"id": "facebookresearch-2-5d-visual-sound", "evidenceUrl": "https://github.com/facebookresearch/2.5D-Visual-Sound"}],
+      "links": [{"label": "dataset", "url": "https://github.com/facebookresearch/FAIR-Play"}, {"label": "paper", "url": "https://arxiv.org/abs/1812.04204"}]
+    },
+    {
+      "id": "binaural-speech-dataset",
+      "name": "Binaural Speech Synthesis Dataset",
+      "description": {"en": "Paired transmitter mono and receiver binaural recordings with tracked positions and orientations.", "zh": "包含发射端单声道、接收端双耳录音及跟踪位置和朝向的配对数据。"},
+      "scale": {"en": "About 2 hours of 48 kHz recordings covering eight training subjects plus held-out sequences.", "zh": "约 2 小时的 48 kHz 录音，覆盖 8 名训练对象及额外留出序列。"},
+      "tasks": ["spatial-generation", "spatial-rendering"], "effects": ["stereo"], "contentTypes": ["dry-audio", "binaural-audio", "spatial-metadata"],
+      "evidence": "https://github.com/facebookresearch/BinauralSpeechSynthesis/blob/main/README.md", "accessStatus": "direct-download",
+      "license": {"en": "Repository states CC-NC 4.0 International; exact standard identifier is not specified", "zh": "仓库声明为 CC-NC 4.0 International，但未给出准确的标准标识", "status": "custom", "spdx": null, "evidenceUrl": "https://github.com/facebookresearch/BinauralSpeechSynthesis/blob/main/LICENSE"},
+      "papers": [{"id": "openreview-binaural-speech-synthesis", "evidenceUrl": "https://openreview.net/forum?id=uAX8q61EVRu"}],
+      "projects": [{"id": "facebookresearch-binauralspeechsynthesis", "evidenceUrl": "https://github.com/facebookresearch/BinauralSpeechSynthesis/blob/main/README.md"}],
+      "links": [{"label": "dataset", "url": "https://github.com/facebookresearch/BinauralSpeechSynthesis/releases/tag/v1.0"}, {"label": "paper", "url": "https://openreview.net/forum?id=uAX8q61EVRu"}]
+    },
+    {
+      "id": "simbinaural",
+      "name": "SimBinaural",
+      "description": {"en": "Simulated and web-derived binaural video data with geometric supervision for visually guided audio spatialization.", "zh": "面向视觉引导音频空间化、带几何监督的仿真及网络双耳视频数据。"},
+      "scale": {"en": "Approximately 143 hours of binaural audio paired with video and geometric labels.", "zh": "约 143 小时双耳音频，并配有视频和几何标注。"},
+      "tasks": ["spatial-generation"], "effects": ["stereo"], "contentTypes": ["binaural-audio", "video", "synthetic-audio", "spatial-metadata"],
+      "evidence": "https://vision.cs.utexas.edu/projects/visually-guided-multitask-spatial/", "accessStatus": "direct-download",
+      "license": {"en": "Dataset license not verified", "zh": "数据集许可证未核验", "status": "not-verified", "spdx": null, "evidenceUrl": null},
+      "papers": [{"id": "arxiv-2111-10882", "evidenceUrl": "https://arxiv.org/abs/2111.10882"}],
+      "projects": [],
+      "links": [{"label": "dataset", "url": "https://vision.cs.utexas.edu/projects/visually-guided-multitask-spatial/#dataset"}, {"label": "paper", "url": "https://arxiv.org/abs/2111.10882"}]
+    },
+    {
+      "id": "meshrir",
+      "name": "MeshRIR",
+      "description": {"en": "Acoustic room impulse responses measured at finely meshed grid points for sound-field analysis and synthesis.", "zh": "在精细网格点测量的房间脉冲响应，用于声场分析与合成。"},
+      "scale": {"en": "Two collections: a 3D cuboidal receiver region and a 2D region measured from a 32-source array.", "zh": "包含两个集合：三维长方体接收区域，以及由 32 声源阵列测量的二维区域。"},
+      "tasks": ["spatial-rendering", "spatial-evaluation"], "effects": ["reverberation"], "contentTypes": ["impulse-responses", "spatial-metadata"],
+      "evidence": "https://github.com/sh01k/MeshRIR/blob/main/README.md", "accessStatus": "direct-download",
+      "license": {"en": "CC-BY-4.0", "zh": "CC-BY-4.0", "status": "identified", "spdx": "CC-BY-4.0", "evidenceUrl": "https://github.com/sh01k/MeshRIR/blob/main/LICENSE"},
+      "papers": [{"id": "arxiv-2106-10801", "evidenceUrl": "https://arxiv.org/abs/2106.10801"}],
+      "projects": [{"id": "sh01k-meshrir", "evidenceUrl": "https://github.com/sh01k/MeshRIR/blob/main/README.md"}],
+      "links": [{"label": "dataset", "url": "https://zenodo.org/doi/10.5281/zenodo.5002817"}, {"label": "paper", "url": "https://arxiv.org/abs/2106.10801"}, {"label": "doi", "url": "https://doi.org/10.5281/zenodo.5002817"}]
+    },
+    {
+      "id": "sixdof-srir",
+      "name": "6DoF Variable-Acoustics SRIR",
+      "description": {"en": "Spatial room impulse responses captured with spherical microphone arrays across source, receiver, and room-acoustics configurations.", "zh": "使用球形麦克风阵列，在不同声源、接收位置与房间声学配置下采集的空间房间脉冲响应。"},
+      "scale": {"en": "Three source positions, seven receiver positions, five acoustic configurations, and two spherical microphone arrays.", "zh": "3 个声源位置、7 个接收位置、5 种声学配置和 2 套球形麦克风阵列。"},
+      "tasks": ["spatial-rendering", "spatial-evaluation"], "effects": ["reverberation"], "contentTypes": ["impulse-responses", "ambisonics", "spatial-metadata"],
+      "evidence": "https://zenodo.org/records/6382405", "accessStatus": "direct-download",
+      "license": {"en": "Dataset license not verified", "zh": "数据集许可证未核验", "status": "not-verified", "spdx": null, "evidenceUrl": null},
+      "papers": [{"id": "arxiv-2111-11882", "evidenceUrl": "https://arxiv.org/abs/2111.11882"}],
+      "projects": [],
+      "links": [{"label": "dataset", "url": "https://zenodo.org/records/6382405"}, {"label": "paper", "url": "https://arxiv.org/abs/2111.11882"}]
+    },
+    {
+      "id": "spatial-librispeech",
+      "name": "Spatial LibriSpeech",
+      "description": {"en": "Synthetic first-order Ambisonic speech with source, room-acoustics, and geometry annotations.", "zh": "带声源、房间声学及几何标注的合成一阶 Ambisonics 语音。"},
+      "scale": {"en": "Over 650 hours generated from 200,000+ acoustic conditions across 8,000+ synthetic rooms.", "zh": "超过 650 小时，覆盖 8,000 多个合成房间和 20 万种以上声学条件。"},
+      "tasks": ["spatial-generation", "spatial-evaluation"], "effects": ["reverberation"], "contentTypes": ["ambisonics", "synthetic-audio", "annotations", "spatial-metadata"],
+      "evidence": "https://github.com/apple/ml-spatial-librispeech/blob/main/README.md", "accessStatus": "direct-download",
+      "license": {"en": "Apple dataset contributions are CC-BY-4.0; source datasets retain their own terms", "zh": "Apple 对数据集的贡献采用 CC-BY-4.0；原始数据仍适用各自条款", "status": "custom", "spdx": null, "evidenceUrl": "https://github.com/apple/ml-spatial-librispeech/blob/main/LICENSE"},
+      "papers": [{"id": "arxiv-2308-09514", "evidenceUrl": "https://arxiv.org/abs/2308.09514"}],
+      "projects": [{"id": "apple-ml-spatial-librispeech", "evidenceUrl": "https://github.com/apple/ml-spatial-librispeech/blob/main/README.md"}],
+      "links": [{"label": "dataset", "url": "https://github.com/apple/ml-spatial-librispeech"}, {"label": "paper", "url": "https://arxiv.org/abs/2308.09514"}, {"label": "doi", "url": "https://doi.org/10.21437/Interspeech.2023-2117"}]
+    },
+    {
+      "id": "yt-ambigen",
+      "name": "YT-Ambigen",
+      "description": {"en": "YouTube video clips paired with first-order Ambisonics and camera-direction metadata for video-to-spatial-audio generation.", "zh": "用于视频到空间音频生成的 YouTube 视频片段、一阶 Ambisonics 与相机方向元数据。"},
+      "scale": {"en": "102,000 five-second clips, approximately 142 hours.", "zh": "102,000 个五秒片段，约 142 小时。"},
+      "tasks": ["spatial-generation", "spatial-evaluation"], "effects": ["stereo"], "contentTypes": ["ambisonics", "video", "spatial-metadata"],
+      "evidence": "https://github.com/jaeyeonkim99/visage/blob/main/README.md", "accessStatus": "direct-download",
+      "license": {"en": "Dataset license not verified", "zh": "数据集许可证未核验", "status": "not-verified", "spdx": null, "evidenceUrl": null},
+      "papers": [{"id": "arxiv-2506-12199", "evidenceUrl": "https://arxiv.org/abs/2506.12199"}],
+      "projects": [{"id": "jaeyeonkim99-visage", "evidenceUrl": "https://github.com/jaeyeonkim99/visage/blob/main/README.md"}],
+      "links": [{"label": "dataset", "url": "https://github.com/jaeyeonkim99/visage/tree/main/utils"}, {"label": "paper", "url": "https://arxiv.org/abs/2506.12199"}]
+    },
+    {
+      "id": "bewo-1m",
+      "name": "BEWO-1M",
+      "description": {"en": "Large simulated binaural soundscape collection with text descriptions and explicit source-motion metadata.", "zh": "带文本描述和显式声源运动元数据的大规模仿真双耳声景集合。"},
+      "scale": {"en": "Over 1 million audio-text pairs and about 2,800 training hours, plus 17 validation hours.", "zh": "超过 100 万组音频文本对，约 2,800 小时训练音频及 17 小时验证音频。"},
+      "tasks": ["spatial-generation"], "effects": ["stereo", "reverberation"], "contentTypes": ["binaural-audio", "text-prompts", "synthetic-audio", "spatial-metadata"],
+      "evidence": "https://huggingface.co/datasets/spw2000/BEWO-1M", "accessStatus": "direct-download",
+      "license": {"en": "CC-BY-4.0 for the distributed metadata; underlying source audio retains its own terms", "zh": "发布的元数据采用 CC-BY-4.0；底层源音频仍适用各自条款", "status": "custom", "spdx": null, "evidenceUrl": "https://huggingface.co/datasets/spw2000/BEWO-1M"},
+      "papers": [{"id": "arxiv-2410-10676", "evidenceUrl": "https://arxiv.org/abs/2410.10676"}],
+      "projects": [{"id": "peiwensun2000-both-ears-wide-open", "evidenceUrl": "https://github.com/PeiwenSun2000/Both-Ears-Wide-Open/tree/main/datasets"}],
+      "links": [{"label": "dataset", "url": "https://huggingface.co/datasets/spw2000/BEWO-1M"}, {"label": "paper", "url": "https://arxiv.org/abs/2410.10676"}]
+    },
+    {
+      "id": "mrsdrama",
+      "name": "MRSDrama",
+      "description": {"en": "Recorded multimodal spatial drama with binaural audio, scripts, video, geometric poses, and textual prompts.", "zh": "包含双耳音频、剧本、视频、几何姿态和文本提示的实录多模态空间剧集。"},
+      "scale": {"en": "Approximately 98 hours and 46,700 indexed segments.", "zh": "约 98 小时，共 46,700 个索引片段。"},
+      "tasks": ["spatial-generation", "spatial-evaluation"], "effects": ["stereo"], "contentTypes": ["binaural-audio", "video", "text-prompts", "annotations", "spatial-metadata"],
+      "evidence": "https://huggingface.co/datasets/AaronZ345/MRSDrama", "accessStatus": "direct-download",
+      "license": {"en": "CC-BY-NC-SA-4.0", "zh": "CC-BY-NC-SA-4.0", "status": "identified", "spdx": "CC-BY-NC-SA-4.0", "evidenceUrl": "https://huggingface.co/datasets/AaronZ345/MRSDrama"},
+      "papers": [{"id": "arxiv-2504-20630", "evidenceUrl": "https://arxiv.org/abs/2504.20630"}],
+      "projects": [{"id": "aaronz345-isdrama", "evidenceUrl": "https://github.com/AaronZ345/ISDrama/blob/main/README.md"}],
+      "links": [{"label": "dataset", "url": "https://huggingface.co/datasets/AaronZ345/MRSDrama"}, {"label": "paper", "url": "https://arxiv.org/abs/2504.20630"}, {"label": "doi", "url": "https://doi.org/10.57967/hf/6012"}]
+    },
+    {
+      "id": "extended-sonicom-hrtf",
+      "name": "Extended SONICOM HRTF Dataset",
+      "description": {"en": "Measured and synthesized HRTFs with demographic information and processed head-and-ear scans for personalization research.", "zh": "面向个性化研究的测量与合成 HRTF，并提供人口统计信息及处理后的头耳扫描。"},
+      "scale": {"en": "The 2025 release documents 300 measured subjects and synthesized HRTFs for 200 subjects; the resource continues to expand.", "zh": "2025 版记录 300 名测量对象及 200 名对象的合成 HRTF，资源仍在持续扩展。"},
+      "tasks": ["hrtf-personalization", "spatial-rendering", "spatial-evaluation"], "effects": ["filtering"], "contentTypes": ["hrtf", "annotations", "spatial-metadata"],
+      "evidence": "https://www.sonicom.eu/the-new-and-extended-sonicom-hrtf-dataset/", "accessStatus": "direct-download",
+      "license": {"en": "MIT", "zh": "MIT", "status": "identified", "spdx": "MIT", "evidenceUrl": "https://arxiv.org/abs/2507.05053"},
+      "papers": [{"id": "arxiv-2507-05053", "evidenceUrl": "https://arxiv.org/abs/2507.05053"}],
+      "projects": [{"id": "katarina-poole-spatial-audio-metrics", "evidenceUrl": "https://github.com/Katarina-Poole/Spatial-Audio-Metrics"}],
+      "links": [{"label": "dataset", "url": "https://www.axdesign.co.uk/tools-and-devices/sonicom-hrtf-dataset"}, {"label": "paper", "url": "https://arxiv.org/abs/2507.05053"}]
+    }
+  ]
+}

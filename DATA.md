@@ -84,7 +84,7 @@ An `identified` status is metadata, not legal advice. `BSD` remains without an S
 
 Reviewed taxonomy entries use:
 
-- `tasks`: production or research capabilities such as automatic mixing, effect transfer, mastering, or differentiable processing;
+- `tasks`: production or research capabilities such as automatic mixing, effect transfer, mastering, differentiable processing, spatial generation, spatial mixing, spatial rendering, HRTF personalization, or spatial evaluation;
 - `effects`: processor families explicitly supported by the first-party project evidence;
 - `reviewStatus`: `reviewed` only when at least one task or effect tag is supported by evidence;
 - `evidence`: direct HTTPS evidence URLs for the reviewed taxonomy claim.
