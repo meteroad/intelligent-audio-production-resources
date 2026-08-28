@@ -613,38 +613,6 @@ td {
   white-space: nowrap;
 }
 
-.upcoming-project {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 48px;
-  margin-top: 34px;
-  padding: 18px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.upcoming-project div {
-  display: grid;
-  gap: 4px;
-}
-
-.upcoming-project span {
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 650;
-  text-transform: uppercase;
-}
-
-.upcoming-project strong {
-  font-size: 16px;
-}
-
-.upcoming-project p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .resource-list {
   border-top: 1px solid var(--text);
 }
@@ -1297,7 +1265,6 @@ footer p {
   .index-controls,
   .project-controls,
   .dataset-controls,
-  .upcoming-project,
   .agent-note,
   .resource-entry {
     grid-template-columns: 1fr;
