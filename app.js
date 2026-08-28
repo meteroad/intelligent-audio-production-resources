@@ -18,6 +18,14 @@ const translations = {
     "intro.papersLabel": "Papers",
     "intro.scopeLabel": "Current scope",
     "intro.imageAlt": "A waveform illustrating intelligent audio production",
+    "weekly.label": "Weekly update",
+    "weekly.paper": "paper",
+    "weekly.papers": "papers",
+    "weekly.project": "project",
+    "weekly.projects": "projects",
+    "weekly.dataset": "dataset",
+    "weekly.datasets": "datasets",
+    "weekly.openDetails": "View details",
     "scope.title": "Field map",
     "scope.description": "The index follows production tasks rather than publication year. Each area collects implementations, pretrained models, datasets, and evaluation resources where available.",
     "scope.audioEffects": "Modeling, estimation, control, and transfer of EQ, dynamics, distortion, reverberation, and other processors.",
@@ -281,6 +289,14 @@ const translations = {
     "intro.papersLabel": "篇论文",
     "intro.scopeLabel": "当前范围",
     "intro.imageAlt": "用于说明智能音频制作的音频波形",
+    "weekly.label": "每周更新",
+    "weekly.paper": "篇论文",
+    "weekly.papers": "篇论文",
+    "weekly.project": "个项目",
+    "weekly.projects": "个项目",
+    "weekly.dataset": "个数据集",
+    "weekly.datasets": "个数据集",
+    "weekly.openDetails": "查看详情",
     "scope.title": "领域地图",
     "scope.description": "索引按照制作任务而非发表年份组织；每个方向将收录可用的实现、预训练模型、数据集与评测资源。",
     "scope.audioEffects": "均衡、动态、失真、混响及其他处理器的建模、估计、控制与迁移。",
@@ -533,6 +549,7 @@ const state = {
   datasets: [],
   resources: [],
   papers: [],
+  weeklyUpdate: null,
   loaded: false,
   pages: {
     projects: 1,
@@ -590,6 +607,12 @@ const elements = {
   heroProjectCount: document.querySelector("#hero-project-count"),
   heroDatasetCount: document.querySelector("#hero-dataset-count"),
   heroPaperCount: document.querySelector("#hero-paper-count"),
+  weeklyUpdate: document.querySelector("#weekly-update"),
+  weeklyDate: document.querySelector("#weekly-date"),
+  weeklyCounts: document.querySelector("#weekly-counts"),
+  weeklyTitle: document.querySelector("#weekly-title"),
+  weeklySummary: document.querySelector("#weekly-summary"),
+  weeklyHighlights: document.querySelector("#weekly-highlights"),
   fieldPaperLinks: document.querySelectorAll(".field-map-link"),
   projectDialog: document.querySelector("#project-dialog"),
   projectDialogClose: document.querySelector("#project-dialog-close"),
@@ -626,6 +649,86 @@ function t(key) {
 function localized(value) {
   if (typeof value === "string") return value;
   return value?.[state.language] ?? value?.en ?? "";
+}
+
+function weeklyRecord(highlight) {
+  const collections = {
+    paper: state.papers,
+    project: state.projects,
+    dataset: state.datasets
+  };
+  return collections[highlight.type]?.find((item) => item.id === highlight.id) ?? null;
+}
+
+function weeklyRecordName(highlight, record) {
+  return highlight.type === "paper" ? record.title : record.name;
+}
+
+function formatWeeklyDate(value) {
+  const date = new Date(`${value}T00:00:00Z`);
+  return new Intl.DateTimeFormat(state.language === "zh" ? "zh-CN" : "en", {
+    year: "numeric",
+    month: state.language === "zh" ? "numeric" : "short",
+    day: "numeric",
+    timeZone: "UTC"
+  }).format(date);
+}
+
+function weeklyCountLabel(type, count) {
+  const key = count === 1 ? `weekly.${type}` : `weekly.${type}s`;
+  return state.language === "zh" ? `${count}${t(key)}` : `${count} ${t(key)}`;
+}
+
+function openWeeklyRecord(highlight, record) {
+  if (highlight.type === "paper") openPaperDialog(record);
+  if (highlight.type === "project") openProjectDialog(record);
+  if (highlight.type === "dataset") openDatasetDialog(record);
+}
+
+function renderWeeklyUpdate() {
+  const update = state.weeklyUpdate;
+  if (!update) {
+    elements.weeklyUpdate.hidden = true;
+    return;
+  }
+
+  elements.weeklyDate.dateTime = update.publishedAt;
+  elements.weeklyDate.textContent = formatWeeklyDate(update.publishedAt);
+  elements.weeklyCounts.textContent = ["papers", "projects", "datasets"]
+    .filter((type) => update.counts[type] > 0)
+    .map((type) => weeklyCountLabel(type.slice(0, -1), update.counts[type]))
+    .join(" · ");
+  elements.weeklyTitle.textContent = localized(update.headline);
+  elements.weeklySummary.textContent = localized(update.summary);
+  elements.weeklyHighlights.replaceChildren();
+
+  update.highlights.forEach((highlight) => {
+    const record = weeklyRecord(highlight);
+    if (!record) return;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "weekly-highlight";
+    button.setAttribute("aria-label", `${t("weekly.openDetails")}: ${weeklyRecordName(highlight, record)}`);
+    button.setAttribute("aria-haspopup", "dialog");
+    button.setAttribute("aria-controls", `${highlight.type}-dialog`);
+
+    const identity = document.createElement("span");
+    identity.className = "weekly-highlight-identity";
+    identity.append(
+      createTextElement("span", "weekly-highlight-type", t(`weekly.${highlight.type}`)),
+      createTextElement("strong", "", weeklyRecordName(highlight, record))
+    );
+    const detail = document.createElement("span");
+    detail.className = "weekly-highlight-detail";
+    detail.append(
+      createTextElement("span", "weekly-highlight-note", localized(highlight.note)),
+      createTextElement("span", "weekly-highlight-open", t("weekly.openDetails"))
+    );
+    button.append(identity, detail);
+    button.addEventListener("click", () => openWeeklyRecord(highlight, record));
+    elements.weeklyHighlights.append(button);
+  });
+  elements.weeklyUpdate.hidden = elements.weeklyHighlights.childElementCount === 0;
 }
 
 function createTextElement(tagName, className, text) {
@@ -1762,6 +1865,7 @@ function applyTranslations() {
   );
   updateCatalogueStats();
   updateFieldPaperLinks();
+  renderWeeklyUpdate();
   if (state.projects.length) renderProjects();
   if (state.datasets.length) renderDatasets();
   if (state.resources.length) renderResources();
@@ -1792,11 +1896,15 @@ function setLanguage(language) {
 
 async function loadData() {
   try {
-    const [projectsResponse, datasetsResponse, resourcesResponse, papersResponse] = await Promise.all([
+    const weeklyRequest = fetch("data/weekly-update.json", { cache: "no-store" })
+      .then((response) => response.ok ? response.json() : null)
+      .catch(() => null);
+    const [projectsResponse, datasetsResponse, resourcesResponse, papersResponse, weeklyData] = await Promise.all([
       fetch("data/projects.json", { cache: "no-store" }),
       fetch("data/datasets.json", { cache: "no-store" }),
       fetch("data/resources.json", { cache: "no-store" }),
-      fetch("data/papers.json", { cache: "no-store" })
+      fetch("data/papers.json", { cache: "no-store" }),
+      weeklyRequest
     ]);
     if (!projectsResponse.ok || !datasetsResponse.ok || !resourcesResponse.ok || !papersResponse.ok) throw new Error("Data request failed");
     const [projectData, datasetData, resourceData, paperData] = await Promise.all([
@@ -1809,6 +1917,7 @@ async function loadData() {
     state.datasets = datasetData.datasets;
     state.resources = resourceData.resources;
     state.papers = paperData.papers;
+    state.weeklyUpdate = weeklyData;
     state.loaded = true;
     applyTranslations();
   } catch (_) {

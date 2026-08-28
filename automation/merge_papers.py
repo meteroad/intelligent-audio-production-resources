@@ -162,20 +162,38 @@ def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -
     return papers_data, added
 
 
+def build_additions(candidates_data: dict, papers_data: dict, existing_ids: set[str]) -> dict:
+    added_records = [paper for paper in papers_data.get("papers", []) if paper["id"] not in existing_ids]
+    return {
+        "schemaVersion": 1,
+        "generatedAt": candidates_data.get("generatedAt", date.today().isoformat()),
+        "addedCount": len(added_records),
+        "papers": added_records,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--candidates", type=Path, required=True)
     parser.add_argument("--review", type=Path, required=True)
     parser.add_argument("--papers", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--added-output", type=Path)
     args = parser.parse_args()
 
+    candidates_data = load_json(args.candidates)
+    papers_data = load_json(args.papers)
+    existing_ids = {paper["id"] for paper in papers_data.get("papers", [])}
     merged, added = merge_records(
-        load_json(args.candidates),
+        candidates_data,
         load_json(args.review),
-        load_json(args.papers),
+        papers_data,
     )
     args.output.write_text(json.dumps(merged, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if args.added_output:
+        additions = build_additions(candidates_data, merged, existing_ids)
+        args.added_output.parent.mkdir(parents=True, exist_ok=True)
+        args.added_output.write_text(json.dumps(additions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Added {added} high-confidence papers.")
 
 

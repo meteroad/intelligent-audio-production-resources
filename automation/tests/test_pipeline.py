@@ -303,6 +303,13 @@ class MergeTests(unittest.TestCase):
         self.assertEqual(merged["papers"][0]["impact"]["status"], "not-assessed")
         self.assertEqual(merged["papers"][0]["venue"], "ISMIR 2026")
         self.assertEqual(merged["papers"][0]["links"][1]["url"], "https://doi.org/10.1234/example")
+        additions = merge_papers.build_additions(
+            {"generatedAt": "2026-08-25T10:00:00", **candidates},
+            merged,
+            set(),
+        )
+        self.assertEqual(additions["addedCount"], 1)
+        self.assertEqual(additions["papers"][0]["id"], "arxiv-2608-12345")
 
     def test_unknown_source_id_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "unknown sourceId"):

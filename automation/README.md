@@ -7,8 +7,9 @@ The paper scout follows a reviewable pipeline:
 3. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
 4. Citation counts are refreshed from exact arXiv or DOI matches when the stored measurement is at least 28 days old. High Impact is derived within each pre-current-year index cohort; current-year papers are not ranked.
 5. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.
-6. Only high-confidence new records and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request.
-7. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
+6. When papers are actually added, DeepSeek writes a short bilingual weekly overview and selects up to three highlights from those exact paper IDs. Deterministic validation rejects invented or stale references.
+7. Only high-confidence new records, the generated weekly overview, and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request. A week with no additions keeps the previous overview.
+8. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
 
 The active scope covers audio effects, differentiable production processing, effect and production representations, mixing, mastering, task-specific evaluation, and production-facing spatial audio. Spatial coverage is limited to generation, upmixing, mixing, rendering, HRTF personalization, and evaluation; localization-only and separation-only work remains out of scope. Bibliography repositories are maintained under `data/resources.json`; they are not treated as runnable projects. Dataset records and their paper/project usage relations are maintained under `data/datasets.json` and pass deterministic cross-reference validation, but the paper scout does not infer dataset usage automatically.
 

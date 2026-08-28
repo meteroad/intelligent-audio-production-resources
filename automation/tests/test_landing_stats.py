@@ -31,6 +31,12 @@ class LandingStatsTests(unittest.TestCase):
             r'<a class="field-map-link" href="#papers" data-paper-area="spatial-audio">',
         )
 
+    def test_weekly_update_appears_before_field_map(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertLess(html.index('id="weekly-update"'), html.index('id="scope"'))
+        weekly = json.loads((ROOT / "data" / "weekly-update.json").read_text(encoding="utf-8"))
+        self.assertGreaterEqual(len(weekly["highlights"]), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -126,6 +126,8 @@ DATASET_V1_FIELDS = {
     "lastVerified",
     "links",
 }
+WEEKLY_UPDATE_FIELDS = {"schemaVersion", "publishedAt", "counts", "headline", "summary", "highlights"}
+WEEKLY_HIGHLIGHT_FIELDS = {"type", "id", "note"}
 
 
 def require(condition: bool, message: str) -> None:
@@ -445,6 +447,45 @@ def validate_resources(path: Path) -> int:
     return len(resources)
 
 
+def validate_weekly_update(
+    path: Path,
+    paper_ids: set[str],
+    project_ids: set[str],
+    dataset_ids: set[str],
+) -> int:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    require(set(data) == WEEKLY_UPDATE_FIELDS, "weekly-update.json has invalid top-level fields")
+    require(data.get("schemaVersion") == 1, "weekly-update.json schemaVersion must be 1")
+    validate_date(data.get("publishedAt"), "weekly-update.json.publishedAt")
+    validate_localized(data.get("headline"), "weekly-update.json.headline")
+    validate_localized(data.get("summary"), "weekly-update.json.summary")
+
+    counts = data.get("counts")
+    require(isinstance(counts, dict) and set(counts) == {"papers", "projects", "datasets"}, "weekly-update.json.counts is invalid")
+    require(
+        all(isinstance(counts.get(key), int) and counts[key] >= 0 for key in ("papers", "projects", "datasets")),
+        "weekly-update.json.counts must contain non-negative integers",
+    )
+    require(sum(counts.values()) > 0, "weekly-update.json must describe at least one addition")
+
+    known_ids = {"paper": paper_ids, "project": project_ids, "dataset": dataset_ids}
+    highlights = data.get("highlights")
+    require(isinstance(highlights, list) and 1 <= len(highlights) <= 3, "weekly-update.json.highlights must contain 1 to 3 entries")
+    seen = set()
+    for index, highlight in enumerate(highlights):
+        context = f"weekly-update.json.highlights[{index}]"
+        require(isinstance(highlight, dict) and set(highlight) == WEEKLY_HIGHLIGHT_FIELDS, f"{context} has invalid fields")
+        resource_type = highlight.get("type")
+        resource_id = highlight.get("id")
+        require(resource_type in known_ids, f"{context}.type is invalid")
+        require(isinstance(resource_id, str) and resource_id in known_ids[resource_type], f"{context}.id is unknown")
+        require((resource_type, resource_id) not in seen, f"{context} is duplicated")
+        require(counts[f"{resource_type}s"] > 0, f"{context}.type conflicts with weekly counts")
+        validate_localized(highlight.get("note"), f"{context}.note")
+        seen.add((resource_type, resource_id))
+    return len(highlights)
+
+
 def validate_dataset_taxonomy(value: object, context: str) -> None:
     require(isinstance(value, dict), f"{context} must be an object")
     require(set(value) == {"tasks", "effects", "contentTypes", "evidence"}, f"{context} has invalid fields")
@@ -544,6 +585,7 @@ def main() -> None:
     parser.add_argument("--papers", type=Path, default=Path("data/papers.json"))
     parser.add_argument("--resources", type=Path, default=Path("data/resources.json"))
     parser.add_argument("--datasets", type=Path, default=Path("data/datasets.json"))
+    parser.add_argument("--weekly-update", type=Path, default=Path("data/weekly-update.json"))
     args = parser.parse_args()
     paper_count = validate_papers(args.papers)
     paper_data = json.loads(args.papers.read_text(encoding="utf-8"))
@@ -560,10 +602,14 @@ def main() -> None:
     project_data = json.loads(args.projects.read_text(encoding="utf-8"))
     project_ids = {project["id"] for project in project_data["projects"]}
     dataset_count = validate_datasets(args.datasets, paper_ids, project_ids)
+    dataset_data = json.loads(args.datasets.read_text(encoding="utf-8"))
+    dataset_ids = {dataset["id"] for dataset in dataset_data["datasets"]}
     resource_count = validate_resources(args.resources)
+    weekly_highlight_count = validate_weekly_update(args.weekly_update, paper_ids, project_ids, dataset_ids)
     print(
         f"Validated {project_count} projects, {paper_count} papers, "
-        f"{dataset_count} datasets, and {resource_count} reference resources."
+        f"{dataset_count} datasets, {resource_count} reference resources, "
+        f"and {weekly_highlight_count} weekly highlights."
     )
 
 

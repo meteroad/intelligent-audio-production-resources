@@ -265,6 +265,110 @@ h1 {
   font-size: 13px;
 }
 
+.weekly-update {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  padding: 38px 0;
+}
+
+.weekly-update[hidden] {
+  display: none;
+}
+
+.weekly-update-meta {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.weekly-update-label {
+  margin-bottom: 4px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.weekly-update-body h2 {
+  font-size: 22px;
+}
+
+.weekly-update-body > p {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.weekly-highlights {
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.weekly-highlight {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 24px;
+  padding: 15px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.weekly-highlight:hover {
+  background: var(--soft);
+}
+
+.weekly-highlight:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.weekly-highlight-identity,
+.weekly-highlight-detail {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 3px;
+}
+
+.weekly-highlight-type {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.weekly-highlight-identity strong {
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.weekly-highlight-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.weekly-highlight-open {
+  color: var(--link);
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.weekly-highlight-open::after {
+  content: "\2192";
+  margin-left: 6px;
+}
+
 .section-heading {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -1260,6 +1364,8 @@ footer p {
   }
 
   .section-heading,
+  .weekly-update,
+  .weekly-highlight,
   .field-map-link,
   .future-area,
   .index-controls,

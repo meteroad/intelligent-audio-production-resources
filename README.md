@@ -16,6 +16,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 | Projects | Source, checkpoint, inference, training, dataset, license, taxonomy, related-paper evidence, and last-verification dates |
 | Datasets | Contents, access conditions, data licenses, scale, and evidence-backed links to papers and projects that use each dataset |
 | Reference resources | Field bibliographies and research guides kept separate from runnable implementations |
+| Weekly update | A short bilingual overview and up to three linked highlights from the latest accepted catalogue update |
 
 The index is organized by production task rather than publication year. It currently covers:
 
@@ -32,7 +33,7 @@ The index is organized by production task rather than publication year. It curre
 - Paper titles, authors, dates, and links are anchored to primary publication sources where available.
 - Formal venues are shown only when publication evidence can be verified.
 - Project source, checkpoint, dataset, taxonomy, and license claims are recorded with first-party repository or official-documentation evidence.
-- The weekly paper scout proposes reviewable changes; AI-screened candidates and AI Highlight assessments are never published directly.
+- The weekly paper scout proposes reviewable changes, including a plain-language homepage summary; AI-screened candidates and generated copy are never published directly.
 - AI Highlight and year-normalized citation impact remain separate, documented signals rather than a combined score.
 - Every public entry remains open to correction through a structured issue or pull request.
 
@@ -55,14 +56,15 @@ The catalogue is available as version-controlled JSON:
 - [`data/projects.json`](data/projects.json)
 - [`data/datasets.json`](data/datasets.json)
 - [`data/resources.json`](data/resources.json)
+- [`data/weekly-update.json`](data/weekly-update.json)
 
 These files drive the public website and can also be used for research tooling or downstream analysis under the repository license.
 
-See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and migration guidance. Formal contracts are available for [projects v3](schemas/projects-v3.schema.json) and [datasets v1](schemas/datasets-v1.schema.json).
+See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and migration guidance. Formal contracts are available for [projects v3](schemas/projects-v3.schema.json), [datasets v1](schemas/datasets-v1.schema.json), and [weekly updates v1](schemas/weekly-update-v1.schema.json).
 
 ## Automation
 
-The weekly paper scout searches arXiv, screens candidates with a configured language model, proposes conservative AI Highlight assessments, refreshes formal venue, DOI, and citation metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates directly.
+The weekly paper scout searches arXiv, screens candidates with a configured language model, proposes conservative AI Highlight assessments, writes a concise bilingual update from the papers that actually pass the merge rules, refreshes formal venue, DOI, and citation metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates or generated summaries directly.
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
 

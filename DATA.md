@@ -8,8 +8,10 @@ The website is backed by versioned static JSON. No API key or server-side API is
 - Projects: <https://meteroad.github.io/intelligent-audio-production-resources/data/projects.json>
 - Datasets: <https://meteroad.github.io/intelligent-audio-production-resources/data/datasets.json>
 - Reference resources: <https://meteroad.github.io/intelligent-audio-production-resources/data/resources.json>
+- Latest weekly update: <https://meteroad.github.io/intelligent-audio-production-resources/data/weekly-update.json>
 - Projects v3 schema: <https://meteroad.github.io/intelligent-audio-production-resources/schemas/projects-v3.schema.json>
 - Datasets v1 schema: <https://meteroad.github.io/intelligent-audio-production-resources/schemas/datasets-v1.schema.json>
+- Weekly update v1 schema: <https://meteroad.github.io/intelligent-audio-production-resources/schemas/weekly-update-v1.schema.json>
 
 Consumers should inspect the top-level `schemaVersion` before processing a catalogue. Additive fields may be introduced within a schema version. A breaking field or semantic change requires a new schema version and a migration path.
 
@@ -115,9 +117,15 @@ Access statuses are `direct-download`, `request`, `registration`, `restricted`, 
 
 Dataset relations are stored only in `datasets.json`; paper-to-dataset and project-to-dataset views are derived at read time. Each referenced ID must exist in the paper or project catalogue, relation IDs must be unique within a dataset, and every relation must cite primary paper text, an official repository, or official documentation that demonstrates use.
 
+## Weekly update v1
+
+`weekly-update.json` contains the latest accepted homepage overview. `counts` records how many papers, projects, and datasets were added in that update; `headline` and `summary` contain the bilingual plain-language copy. `highlights` contains one to three typed IDs that must resolve to current catalogue records, plus a bilingual note. The website resolves names from the canonical paper, project, or dataset files rather than duplicating them in the update.
+
+The scheduled scout currently creates paper highlights because it automatically discovers papers. The format also supports project and dataset highlights for reviewed manual or future automated additions. If a scheduled run adds no records, it leaves the previous update unchanged.
+
 ## Website behavior
 
-The project table supports compound filtering by text, area, linked control approach, linked track scope, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, control-approach, track-scope, AI Highlight, and High Impact filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
+The homepage shows the latest weekly update immediately after the introduction. Its highlights open the canonical paper, project, or dataset details. The project table supports compound filtering by text, area, linked control approach, linked track scope, license identity (SPDX, reviewed custom terms, or unverified), availability capability, availability status, and reviewed taxonomy tags. Task and effect filters are shown only when reviewed taxonomy tags exist in the loaded data. The dataset table supports text, area, task, content-type, and access filtering. The paper index supports text, area, control-approach, track-scope, AI Highlight, and High Impact filtering. The three primary indexes paginate filtered results in groups of ten. Reset buttons clear their respective filters.
 
 Each project and dataset row contains a keyboard-focusable details button. Dataset details show access and license evidence, taxonomy, official links, and evidence-backed paper/project usage relations. Dataset, paper, and project dialogs expose the relation in both directions while keeping one canonical data record. Interface labels are localized in English and Chinese.
 

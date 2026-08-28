@@ -119,6 +119,22 @@ jobs:
           --review automation/reviewed-papers.json
           --papers data/papers.json
           --output data/papers.json
+          --added-output automation/added-papers.json
+
+      - name: Read added paper count
+        id: additions
+        run: echo "added_count=$(python3 -c 'import json; print(json.load(open("automation/added-papers.json"))["addedCount"])')" >> "$GITHUB_OUTPUT"
+
+      - name: Summarize weekly additions with DeepSeek
+        if: steps.additions.outputs.added_count != '0'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+        run: >-
+          python3 automation/summarize_weekly_update.py
+          --additions automation/added-papers.json
+          --prompt automation/prompts/summarize-weekly-update.txt
+          --output data/weekly-update.json
 
       - name: Refresh formal publication metadata
         env:
@@ -145,7 +161,7 @@ jobs:
       - name: Detect publishable changes
         id: changes
         run: |
-          if git diff --quiet -- data/papers.json; then
+          if git diff --quiet -- data/papers.json data/weekly-update.json; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
@@ -161,10 +177,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$branch"
-          git add data/papers.json
+          git add data/papers.json data/weekly-update.json
           git commit -m "Update recent intelligent audio papers"
           git push origin "$branch"
-          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers and AI Highlight assessments are proposed by the configured curation model for human review. Titles and authors remain anchored to arXiv; DOI links, formal venues, and year-normalized Semantic Scholar citation metadata are refreshed before deterministic validation.")
+          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers, AI Highlight assessments, and a plain-language bilingual homepage summary are proposed by the configured curation model for human review. Titles and authors remain anchored to arXiv; DOI links, formal venues, and year-normalized Semantic Scholar citation metadata are refreshed before deterministic validation.")
           if [ "$AUTO_MERGE" = "true" ]; then
             gh pr merge --auto --squash "$pr_url"
           fi

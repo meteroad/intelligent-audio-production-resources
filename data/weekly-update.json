@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-08-27",
+  "counts": {
+    "papers": 43,
+    "projects": 32,
+    "datasets": 11
+  },
+  "headline": {
+    "en": "Spatial audio is now part of the index",
+    "zh": "空间音频正式加入索引"
+  },
+  "summary": {
+    "en": "This update adds 43 papers, 32 open-source projects, and 11 datasets spanning binaural generation, Ambisonics production, HRTF personalization, and spatial evaluation. You can now move from a research topic to its code and data without searching across separate lists.",
+    "zh": "这次更新补充了 43 篇论文、32 个开源项目和 11 个数据集，覆盖双耳生成、Ambisonics 制作、HRTF 个性化和空间音频评测。现在从研究方向出发，就能顺着索引找到对应代码和数据，不用再分散搜索。"
+  },
+  "highlights": [
+    {
+      "type": "project",
+      "id": "tu-studio-iempluginsuite",
+      "note": {
+        "en": "IEM Plug-in Suite is a practical Ambisonics toolkit for encoding, rotating, visualizing, reverberating, and decoding spatial mixes.",
+        "zh": "IEM Plug-in Suite 是一套可以直接用于 Ambisonics 制作的插件，覆盖编码、旋转、可视化、混响和解码。"
+      }
+    },
+    {
+      "type": "project",
+      "id": "yongyizang-ambisonizer",
+      "note": {
+        "en": "Ambisonizer shows how neural upmixing can turn lower-channel audio into an Ambisonics representation.",
+        "zh": "Ambisonizer 展示了如何用神经网络把较少声道的音频上混成 Ambisonics 表征。"
+      }
+    },
+    {
+      "type": "dataset",
+      "id": "bewo-1m",
+      "note": {
+        "en": "BEWO-1M provides more than one million audio-text pairs with explicit source-motion information for spatial generation research.",
+        "zh": "BEWO-1M 提供超过一百万组音频文本对，并带有明确的声源运动信息，适合空间音频生成研究。"
+      }
+    }
+  ]
+}
