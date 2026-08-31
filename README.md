@@ -4,7 +4,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 
 [Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-**114 papers · 72 verified projects · 23 datasets · 3 reference collections**
+**119 papers · 73 verified projects · 23 datasets · 3 reference collections**
 
 [![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
 

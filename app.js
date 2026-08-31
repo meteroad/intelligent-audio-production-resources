@@ -133,10 +133,13 @@ const translations = {
     "papers.summaryLabel": "Summary",
     "papers.paperLinksLabel": "Paper",
     "papers.openResourcesLabel": "Open resources",
+    "papers.relatedProjectsLabel": "Related projects",
     "papers.noPaperLink": "No public paper link has been verified.",
     "papers.noOpenResources": "No public implementation or model has been verified.",
+    "papers.noRelatedProjects": "No related project has been verified.",
     "papers.shortNameLabel": "Index name",
     "papers.openSourceAvailable": "Source available",
+    "papers.projectPageAvailable": "Project page",
     "papers.controlApproachesLabel": "Control approach",
     "papers.trackScopesLabel": "Track scope",
     "controls.recognition": "Recognition",
@@ -404,10 +407,13 @@ const translations = {
     "papers.summaryLabel": "论文简介",
     "papers.paperLinksLabel": "论文链接",
     "papers.openResourcesLabel": "开源资源",
+    "papers.relatedProjectsLabel": "关联项目",
     "papers.noPaperLink": "暂未核验到公开论文链接。",
     "papers.noOpenResources": "暂未核验到公开实现或模型。",
+    "papers.noRelatedProjects": "暂未核验到关联项目。",
     "papers.shortNameLabel": "索引简称",
     "papers.openSourceAvailable": "已有源码",
+    "papers.projectPageAvailable": "项目页",
     "papers.controlApproachesLabel": "参数获取方式",
     "papers.trackScopesLabel": "轨道范围",
     "controls.recognition": "精选与影响力",
@@ -1208,6 +1214,23 @@ function createRelatedPapers(project) {
   return list;
 }
 
+function createRelatedProjects(paperId) {
+  const related = state.projects.filter((project) => project.relations.paperIds.includes(paperId));
+  if (!related.length) return createTextElement("p", "dialog-empty", t("papers.noRelatedProjects"));
+  const list = document.createElement("div");
+  list.className = "related-paper-list";
+  related.forEach((project) => {
+    const projectLink = project.links.find((link) => link.label === "source" || link.label === "project") ?? project.links[0];
+    const link = document.createElement("a");
+    link.href = projectLink.url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = project.name;
+    list.append(link);
+  });
+  return list;
+}
+
 function createLicenseDetails(project) {
   const wrapper = document.createElement("div");
   wrapper.className = "project-detail-stack";
@@ -1639,6 +1662,8 @@ function createPaperEntry(paper) {
   }
   if (paper.links.some((link) => link.label === "source")) {
     details.append(createTextElement("span", "source-badge", t("papers.openSourceAvailable")));
+  } else if (paper.links.some((link) => link.label === "project")) {
+    details.append(createTextElement("span", "project-badge", t("papers.projectPageAvailable")));
   }
   details.append(createTextElement("span", "paper-open-label", t("papers.openDetails")));
 
@@ -1760,6 +1785,11 @@ function renderPaperDialog(paper) {
   }
   recognitionSection.append(impactDetail);
   elements.paperDialogContent.append(recognitionSection);
+  appendProjectDialogSection(
+    elements.paperDialogContent,
+    t("papers.relatedProjectsLabel"),
+    createRelatedProjects(paper.id)
+  );
   appendProjectDialogSection(
     elements.paperDialogContent,
     t("datasets.usedDatasetsLabel"),

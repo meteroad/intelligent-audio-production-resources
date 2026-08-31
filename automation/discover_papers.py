@@ -26,6 +26,11 @@ def compact_text(value: str | None) -> str:
     return " ".join((value or "").split())
 
 
+def display_title(value: str | None) -> str:
+    title = compact_text(value)
+    return re.sub(r"\$?(\d+)\^\{?\\circ\}?\$?", r"\1°", title)
+
+
 def normalized_title(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.casefold())
 
@@ -66,7 +71,7 @@ def parse_feed(xml_text: str, query_name: str) -> list[dict]:
         papers.append(
             {
                 "sourceId": source_id,
-                "title": compact_text(entry.findtext(f"{ATOM}title")),
+                "title": display_title(entry.findtext(f"{ATOM}title")),
                 "authors": [author for author in authors if author],
                 "abstract": compact_text(entry.findtext(f"{ATOM}summary")),
                 "published": published,

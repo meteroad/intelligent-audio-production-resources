@@ -37,6 +37,12 @@ ARXIV_FEED = """<?xml version="1.0" encoding="UTF-8"?>
 
 
 class DiscoveryTests(unittest.TestCase):
+    def test_display_title_normalizes_degree_latex(self):
+        self.assertEqual(
+            discover_papers.display_title("Spatial audio for $360^\\circ$ video"),
+            "Spatial audio for 360° video",
+        )
+
     def test_parse_feed_normalizes_authoritative_metadata(self):
         papers = discover_papers.parse_feed(ARXIV_FEED, "audio-effects")
         self.assertEqual(len(papers), 1)
@@ -93,6 +99,7 @@ class CurationTests(unittest.TestCase):
                     "sourceId": "arxiv:2608.12345",
                     "decision": "exclude",
                     "confidence": "high",
+                    "shortName": "ExampleFX",
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["single-track"],
@@ -113,6 +120,7 @@ class CurationTests(unittest.TestCase):
         self.assertEqual(validated["decisions"][0]["areas"], [])
         self.assertEqual(validated["decisions"][0]["controlApproaches"], [])
         self.assertEqual(validated["decisions"][0]["trackScopes"], [])
+        self.assertIsNone(validated["decisions"][0]["shortName"])
         self.assertEqual(
             validated["decisions"][0]["aiAssessment"],
             {"rating": "standard", "rationale": {"en": "", "zh": ""}},
@@ -129,6 +137,7 @@ class CurationTests(unittest.TestCase):
                     "sourceId": "arxiv:2608.12345",
                     "decision": "include",
                     "confidence": "high",
+                    "shortName": None,
                     "areas": ["audio-effects"],
                     "controlApproaches": ["ordinary-training"],
                     "trackScopes": ["single-track"],
@@ -154,6 +163,7 @@ class CurationTests(unittest.TestCase):
                     "sourceId": "arxiv:2608.12345",
                     "decision": "include",
                     "confidence": "high",
+                    "shortName": None,
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["stereo"],
@@ -182,6 +192,16 @@ class PublicationMetadataTests(unittest.TestCase):
     def test_bare_arxiv_venue_comment_is_accepted(self):
         venue, evidence = publication_metadata.resolve_publication_venue(None, "ISMIR 2025")
         self.assertEqual(venue, "ISMIR 2025")
+        self.assertEqual(evidence, "comment")
+
+    def test_audio_workshop_comment_is_accepted(self):
+        venue, evidence = publication_metadata.resolve_publication_venue(None, "IWAENC 2026")
+        self.assertEqual(venue, "IWAENC 2026")
+        self.assertEqual(evidence, "comment")
+
+    def test_emnlp_acceptance_comment_is_accepted(self):
+        venue, evidence = publication_metadata.resolve_publication_venue(None, "Accepted at EMNLP 2026 Main")
+        self.assertEqual(venue, "EMNLP 2026")
         self.assertEqual(evidence, "comment")
 
     def test_bare_journal_target_is_not_treated_as_acceptance(self):
@@ -273,6 +293,7 @@ class MergeTests(unittest.TestCase):
                     "sourceId": "arxiv:2608.12345",
                     "decision": "include",
                     "confidence": "high",
+                    "shortName": "NeuralFX",
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["single-track"],
@@ -295,6 +316,7 @@ class MergeTests(unittest.TestCase):
         merged, added = merge_papers.merge_records(candidates, review, papers)
         self.assertEqual(added, 1)
         self.assertEqual(merged["papers"][0]["title"], candidate["title"])
+        self.assertEqual(merged["papers"][0]["shortName"], "NeuralFX")
         self.assertEqual(merged["papers"][0]["authors"], candidate["authors"])
         self.assertEqual(merged["papers"][0]["curation"], "agent")
         self.assertEqual(merged["papers"][0]["controlApproaches"], ["direct-prediction"])

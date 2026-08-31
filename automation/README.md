@@ -3,7 +3,7 @@
 The paper scout follows a reviewable pipeline:
 
 1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API.
-2. DeepSeek classifies direct relevance, production-control approaches, input track scope, short English and Chinese summaries, and a conservative AI Highlight assessment under the website taxonomy.
+2. DeepSeek classifies direct relevance, preserves an explicitly stated method short name when available, assigns production-control approaches and input track scope, writes short English and Chinese summaries, and makes a conservative AI Highlight assessment under the website taxonomy.
 3. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
 4. Citation counts are refreshed from exact arXiv or DOI matches when the stored measurement is at least 28 days old. High Impact is derived within each pre-current-year index cohort; current-year papers are not ranked.
 5. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.

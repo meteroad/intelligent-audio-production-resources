@@ -14,7 +14,18 @@ from pathlib import Path
 
 API_URL = "https://api.deepseek.com/chat/completions"
 DEFAULT_MODEL = "deepseek-v4-flash"
-EXPECTED_FIELDS = {"sourceId", "decision", "confidence", "areas", "controlApproaches", "trackScopes", "aiAssessment", "summary", "reason"}
+EXPECTED_FIELDS = {
+    "sourceId",
+    "decision",
+    "confidence",
+    "shortName",
+    "areas",
+    "controlApproaches",
+    "trackScopes",
+    "aiAssessment",
+    "summary",
+    "reason",
+}
 ALLOWED_DECISIONS = {"include", "exclude"}
 ALLOWED_CONFIDENCE = {"high", "medium", "low"}
 ALLOWED_CONTROL_APPROACHES = {
@@ -112,6 +123,11 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             raise ValueError(f"Invalid decision for {source_id}")
         if decision.get("confidence") not in ALLOWED_CONFIDENCE:
             raise ValueError(f"Invalid confidence for {source_id}")
+        short_name = decision.get("shortName")
+        if short_name is not None and (
+            not isinstance(short_name, str) or not 1 <= len(short_name.strip()) <= 40
+        ):
+            raise ValueError(f"Invalid short name for {source_id}")
         if not isinstance(decision.get("areas"), list):
             raise ValueError(f"Invalid areas for {source_id}")
         control_approaches = decision.get("controlApproaches")
@@ -149,6 +165,7 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
         elif not all(isinstance(rationale[key], str) and not rationale[key].strip() for key in ("en", "zh")):
             raise ValueError(f"Standard AI assessment rationale must be empty for {source_id}")
         if decision["decision"] == "exclude":
+            decision["shortName"] = None
             decision["areas"] = []
             decision["controlApproaches"] = []
             decision["trackScopes"] = []

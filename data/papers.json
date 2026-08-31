@@ -8,6 +8,7 @@
         "type": "arxiv",
         "id": "arxiv:2608.25404"
       },
+      "shortName": "CSAVocoder",
       "title": "CSAVocoder: A Causal Spatial Audio Vocoder Towards Real-Time Spatial Audio Generation",
       "authors": [
         "Zhiyuan Zhu",
@@ -20,19 +21,19 @@
       ],
       "year": 2026,
       "published": "2026-08-26",
-      "venue": "arXiv",
+      "venue": "EMNLP 2026",
       "areas": [
         "spatial-audio"
       ],
       "controlApproaches": [],
       "trackScopes": [],
       "aiAssessment": {
-        "rating": "standard",
+        "rating": "highlighted",
         "rationale": {
-          "en": "",
-          "zh": ""
+          "en": "CSAVocoder combines causal streaming spatial generation with explicit inter-channel supervision and reports large-scale objective, subjective, and real-time evaluations.",
+          "zh": "CSAVocoder 将因果流式空间音频生成与显式跨声道监督结合，并报告了大规模客观、主观及实时性能评测。"
         },
-        "assessor": "DeepSeek",
+        "assessor": "Codex",
         "rubricVersion": "1.0",
         "assessedAt": "2026-08-31"
       },
@@ -54,6 +55,10 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.25404"
+        },
+        {
+          "label": "project",
+          "url": "https://github.com/MM-Speech/CSAVocoder"
         }
       ],
       "lastVerified": "2026-08-31",
@@ -65,6 +70,7 @@
         "type": "arxiv",
         "id": "arxiv:2608.24726"
       },
+      "shortName": "Arbitrary Polygon Oscillator",
       "title": "Arbitrary Polygon Oscillator: Generalizing Polygonal Synthesis to Arbitrary Shapes, Morphing, and Three-Dimensional Polyhedra",
       "authors": [
         "Antonio Argentieri",
@@ -106,6 +112,10 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.24726"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
         }
       ],
       "lastVerified": "2026-08-31",
@@ -117,7 +127,8 @@
         "type": "arxiv",
         "id": "arxiv:2608.24579"
       },
-      "title": "Visually-Guided Spatial Audio Generation for $360^\\circ$ In-the-Wild Speech Scenes",
+      "shortName": "Localizer-Renderer",
+      "title": "Visually-Guided Spatial Audio Generation for 360° In-the-Wild Speech Scenes",
       "authors": [
         "Qingyu Luo",
         "Peng Zhang",
@@ -184,7 +195,7 @@
       ],
       "year": 2026,
       "published": "2026-08-14",
-      "venue": "arXiv",
+      "venue": "IWAENC 2026",
       "areas": [
         "spatial-audio"
       ],
@@ -666,6 +677,7 @@
         "type": "arxiv",
         "id": "arxiv:2607.19605"
       },
+      "shortName": "RIME",
       "title": "RIME: Enabling Large-Scale Agentic Music Post-Production",
       "authors": [
         "Noah Schaffer",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-08-31",
   "projects": [
     {
       "id": "facebookresearch-2-5d-visual-sound",
@@ -205,6 +205,74 @@
         {
           "label": "source",
           "url": "https://github.com/kronihias/ambix"
+        }
+      ]
+    },
+    {
+      "id": "antonioargentieri1-arbitrary-polygon-oscillator",
+      "name": "Arbitrary Polygon Oscillator",
+      "description": {
+        "en": "RNBO and Max implementations for arbitrary polygonal synthesis, unequal-vertex shape interpolation, and three-dimensional variants.",
+        "zh": "任意多边形合成、不等顶点形状插值及三维变体的 RNBO 与 Max 实现。"
+      },
+      "areas": [
+        "audio-effects"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-modeling"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator/tree/master/Shape_interpolation",
+          "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator/tree/master/3D"
+        ]
+      },
+      "license": {
+        "en": "PolyForm Noncommercial License 1.0.0",
+        "zh": "PolyForm 非商业许可证 1.0.0",
+        "status": "identified",
+        "spdx": "PolyForm-Noncommercial-1.0.0",
+        "evidenceUrl": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator/blob/master/3D/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2608-24726"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
         }
       ]
     },

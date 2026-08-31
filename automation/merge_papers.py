@@ -45,6 +45,11 @@ def validate_decision(decision: dict, candidate_ids: set[str]) -> None:
         raise ValueError(f"Agent returned an unknown sourceId: {source_id!r}")
     areas = decision.get("areas", [])
     if decision.get("decision") == "include":
+        short_name = decision.get("shortName")
+        if short_name is not None and (
+            not isinstance(short_name, str) or not 1 <= len(short_name.strip()) <= 40
+        ):
+            raise ValueError(f"Invalid short name for {source_id}: {short_name!r}")
         if not areas or len(areas) != len(set(areas)) or not set(areas).issubset(ALLOWED_AREAS):
             raise ValueError(f"Invalid areas for {source_id}: {areas}")
         control_approaches = decision.get("controlApproaches", [])
@@ -117,41 +122,43 @@ def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -
         if candidate.get("doi"):
             links.append({"label": "doi", "url": f"https://doi.org/{candidate['doi']}"})
         published = candidate["published"][:10]
-        papers_data["papers"].append(
-            {
-                "id": paper_id(source_id),
-                "source": {"type": "arxiv", "id": source_id},
-                "title": candidate["title"],
-                "authors": candidate["authors"],
-                "year": int(published[:4]),
-                "published": published,
-                "venue": candidate.get("publicationVenue") or candidate.get("journalReference") or "arXiv",
-                "areas": decision["areas"],
-                "controlApproaches": decision["controlApproaches"],
-                "trackScopes": decision["trackScopes"],
-                "aiAssessment": {
-                    "rating": decision["aiAssessment"]["rating"],
-                    "rationale": decision["aiAssessment"]["rationale"],
-                    "assessor": "DeepSeek",
-                    "rubricVersion": "1.0",
-                    "assessedAt": review_data.get("reviewedAt", verified_date),
-                },
-                "impact": {
-                    "status": "not-assessed",
-                    "citationCount": None,
-                    "influentialCitationCount": None,
-                    "yearRank": None,
-                    "cohortSize": None,
-                    "sourceUrl": None,
-                    "measuredAt": None,
-                    "methodVersion": "semantic-scholar-year-cohort-v1",
-                },
-                "summary": decision["summary"],
-                "links": links,
-                "lastVerified": verified_date,
-                "curation": "agent",
-            }
-        )
+        paper = {
+            "id": paper_id(source_id),
+            "source": {"type": "arxiv", "id": source_id},
+            "title": candidate["title"],
+            "authors": candidate["authors"],
+            "year": int(published[:4]),
+            "published": published,
+            "venue": candidate.get("publicationVenue") or candidate.get("journalReference") or "arXiv",
+            "areas": decision["areas"],
+            "controlApproaches": decision["controlApproaches"],
+            "trackScopes": decision["trackScopes"],
+            "aiAssessment": {
+                "rating": decision["aiAssessment"]["rating"],
+                "rationale": decision["aiAssessment"]["rationale"],
+                "assessor": "DeepSeek",
+                "rubricVersion": "1.0",
+                "assessedAt": review_data.get("reviewedAt", verified_date),
+            },
+            "impact": {
+                "status": "not-assessed",
+                "citationCount": None,
+                "influentialCitationCount": None,
+                "yearRank": None,
+                "cohortSize": None,
+                "sourceUrl": None,
+                "measuredAt": None,
+                "methodVersion": "semantic-scholar-year-cohort-v1",
+            },
+            "summary": decision["summary"],
+            "links": links,
+            "lastVerified": verified_date,
+            "curation": "agent",
+        }
+        short_name = decision.get("shortName")
+        if short_name:
+            paper["shortName"] = short_name.strip()
+        papers_data["papers"].append(paper)
         existing_sources.add(source_id)
         existing_titles.add(normalized_title(candidate["title"]))
         added += 1

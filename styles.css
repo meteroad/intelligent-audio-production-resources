@@ -909,6 +909,15 @@ td {
   text-transform: uppercase;
 }
 
+.project-badge {
+  padding: 2px 7px;
+  border: 1px solid #abc2db;
+  color: #245f96;
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
 .recognition-badges {
   display: inline-flex;
   flex-wrap: wrap;

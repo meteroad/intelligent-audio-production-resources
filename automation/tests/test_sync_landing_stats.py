@@ -31,6 +31,24 @@ class SyncLandingStatsTests(unittest.TestCase):
                 {"projects": 1, "datasets": 2, "papers": 3},
             )
 
+    def test_sync_readme_counts_updates_catalogue_line(self):
+        readme = "**1 papers · 2 verified projects · 3 datasets · 4 reference collections**"
+        updated = sync_landing_stats.sync_readme_counts(
+            readme,
+            {"projects": 73, "datasets": 23, "papers": 119, "resources": 3},
+        )
+        self.assertEqual(
+            updated,
+            "**119 papers · 73 verified projects · 23 datasets · 3 reference collections**",
+        )
+
+    def test_sync_readme_counts_rejects_missing_line(self):
+        with self.assertRaisesRegex(ValueError, "README.md"):
+            sync_landing_stats.sync_readme_counts(
+                "No catalogue counts here.",
+                {"projects": 1, "datasets": 2, "papers": 3, "resources": 4},
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -22,6 +22,8 @@ ACRONYM_NAMES = {
     "waspaa": "WASPAA",
     "eusipco": "EUSIPCO",
     "interspeech": "INTERSPEECH",
+    "iwaenc": "IWAENC",
+    "emnlp": "EMNLP",
     "icml": "ICML",
     "neurips": "NeurIPS",
     "iclr": "ICLR",
@@ -34,7 +36,7 @@ ACRONYM_NAMES = {
 }
 
 ACRONYM_PATTERN = re.compile(
-    r"\b(?P<name>ISMIR|ICASSP|DAFx|WASPAA|EUSIPCO|INTERSPEECH|ICML|NeurIPS|ICLR|AAAI|IJCAI|MMSP|MLSP|SMC|TASLP)"
+    r"\b(?P<name>ISMIR|ICASSP|DAFx|WASPAA|EUSIPCO|INTERSPEECH|IWAENC|EMNLP|ICML|NeurIPS|ICLR|AAAI|IJCAI|MMSP|MLSP|SMC|TASLP)"
     r"(?:\s*(?:conference|workshop))?\W*(?P<year>(?:20)?\d{2})?\b",
     re.IGNORECASE,
 )
@@ -46,6 +48,8 @@ FULL_CONFERENCE_PATTERNS = (
     (re.compile(r"international conference on digital audio effects", re.IGNORECASE), "DAFx"),
     (re.compile(r"workshop on applications of signal processing to audio and acoustics", re.IGNORECASE), "WASPAA"),
     (re.compile(r"european signal processing conference", re.IGNORECASE), "EUSIPCO"),
+    (re.compile(r"international workshop on acoustic signal enhancement", re.IGNORECASE), "IWAENC"),
+    (re.compile(r"conference on empirical methods in natural language processing", re.IGNORECASE), "EMNLP"),
     (re.compile(r"international conference on machine learning", re.IGNORECASE), "ICML"),
     (re.compile(r"international conference on learning representations", re.IGNORECASE), "ICLR"),
     (re.compile(r"conference on neural information processing systems", re.IGNORECASE), "NeurIPS"),
