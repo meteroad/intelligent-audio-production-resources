@@ -2,41 +2,41 @@
   "schemaVersion": 1,
   "publishedAt": "2026-08-31",
   "counts": {
-    "papers": 6,
-    "projects": 6,
+    "papers": 35,
+    "projects": 22,
     "datasets": 0
   },
   "headline": {
-    "en": "From musical scores to editable DAW projects",
-    "zh": "从乐谱表演到可编辑 DAW 工程"
+    "en": "A broader map from score to editable production",
+    "zh": "从乐谱到可编辑制作的完整链路"
   },
   "summary": {
-    "en": "This update adds six papers and their public implementations across editable performance rendering, production graphs, and DAW interaction. Together they connect score, expressive performance, synthesis, effect processing, and project-level editing instead of treating music production as a single generation step.",
-    "zh": "本次新增 6 篇论文及其公开实现，覆盖可编辑表演渲染、制作流程图和 DAW 交互。它们把乐谱、表现力演奏、声音合成、音效处理与工程级编辑串联起来，而不是把音乐制作简化为一次性生成。"
+    "en": "This historical expansion adds 35 papers and 22 public implementations. It follows the production chain from score-aware expressive performance and instrument rendering, through editable synthesizer programs and sound matching, to multitrack arrangement and DAW-integrated tools. Project pages and source repositories are kept distinct so readers can see what is actually reusable.",
+    "zh": "本次历史扩展新增 35 篇论文和 22 个公开实现，沿着乐谱驱动的表现力演奏与乐器渲染、可编辑合成器程序与音色匹配，一直整理到多轨编排和 DAW 集成工具。页面同时区分项目演示与真实源码，方便读者判断哪些内容可以直接复用。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2112-09312",
+      "id": "ismir-2019-virtuosonet",
       "note": {
-        "en": "MIDI-DDSP separates note, performance, and synthesis controls so musicians can edit each production stage independently.",
-        "zh": "MIDI-DDSP 将音符、演奏表现和声音合成拆成独立层级，让音乐人可以逐阶段编辑。"
+        "en": "VirtuosoNet is an influential early reference for turning structured scores into expressive, editable piano performances.",
+        "zh": "VirtuosoNet 是从结构化乐谱生成具有表现力且可编辑钢琴演奏的重要早期代表。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2507-10534",
+      "id": "arxiv-2608-03032",
       "note": {
-        "en": "WildFX uses a real DAW and plug-in ecosystem to build complex effect-graph data with sidechains, crossovers, and project metadata.",
-        "zh": "WildFX 借助真实 DAW 和插件生态生成复杂音效图数据，并支持侧链、分频与工程元数据。"
+        "en": "DDSynth-RL recovers editable synthesizer presets from target audio and publishes both code and model checkpoints.",
+        "zh": "DDSynth-RL 从目标音频恢复可编辑合成器预设，并同时公开代码和模型权重。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2608-18226",
+      "id": "arxiv-2506-23094",
       "note": {
-        "en": "SynAPSE represents synthesizer presets as signal-flow graphs and aligns them with audio in a shared embedding space.",
-        "zh": "SynAPSE 将合成器预设表示为信号流图，并与音频对齐到共享表征空间。"
+        "en": "TOMI organizes clips, sections, tracks, and transformations into full songs that can be rendered and edited inside REAPER.",
+        "zh": "TOMI 将片段、段落、轨道和变换组织成完整歌曲，并可在 REAPER 中继续渲染和编辑。"
       }
     }
   ]

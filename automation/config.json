@@ -48,12 +48,28 @@
       "query": "(all:\"expressive performance synthesis\" OR all:\"performance rendering\" OR all:\"score to audio\" OR all:\"MIDI to audio\") AND (all:music OR all:piano OR all:instrument)"
     },
     {
+      "name": "score-performance-control",
+      "query": "(all:\"expressive performance rendering\" OR all:\"score performance\" OR all:\"symbolic performance\") AND (all:control OR all:editable OR all:rendering OR all:synthesis)"
+    },
+    {
+      "name": "synthesizer-inversion",
+      "query": "(all:\"synthesizer inversion\" OR all:\"synthesizer parameter estimation\" OR all:\"synthesizer sound matching\" OR all:\"preset interpolation\")"
+    },
+    {
+      "name": "synthesizer-programming",
+      "query": "(all:\"synthesizer programming\" OR all:\"VST effect programming\" OR all:\"modular synthesizer program\") AND (all:audio OR all:music OR all:sound)"
+    },
+    {
       "name": "production-program-graph",
       "query": "(all:\"production program\" OR all:\"audio processing graph\" OR all:\"effect graph\" OR all:\"synthesizer graph\") AND (all:audio OR all:music OR all:synthesis)"
     },
     {
       "name": "daw-agent-interaction",
       "query": "(all:\"digital audio workstation\" OR all:DAW) AND (all:agent OR all:assistant OR all:interaction OR all:language OR all:editing)"
+    },
+    {
+      "name": "multitrack-production-assistant",
+      "query": "(all:\"music production assistant\" OR all:\"co-creative mixing\" OR all:\"multitrack arrangement\" OR all:\"full-song structure\") AND (all:audio OR all:music OR all:DAW)"
     },
     {
       "name": "spatial-audio-generation",

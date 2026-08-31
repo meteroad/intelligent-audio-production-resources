@@ -2999,20 +2999,32 @@
     },
     {
       "id": "sonyresearch-llm2fx",
-      "name": "LLM2Fx-Tools",
+      "name": "LLM2Fx",
       "description": {
-        "en": "Tool calling for selecting and controlling music post-production processors.",
-        "zh": "通过工具调用选择并控制音乐后期制作处理器。"
+        "en": "Language-to-audio-effect parameter prediction and tool calling for controllable post-production processors.",
+        "zh": "面向可控后期处理器的语言到音效参数预测与工具调用框架。"
       },
       "areas": [
+        "audio-effects",
         "mixing",
-        "audio-effects"
+        "production-program"
       ],
       "taxonomy": {
-        "tasks": [],
-        "effects": [],
-        "reviewStatus": "not-reviewed",
-        "evidence": []
+        "tasks": [
+          "parameter-estimation",
+          "effect-control",
+          "production-program",
+          "agentic-production"
+        ],
+        "effects": [
+          "equalization",
+          "reverberation",
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/SonyResearch/LLM2Fx/blob/HEAD/README.md"
+        ]
       },
       "license": {
         "en": "No license file verified",
@@ -3047,11 +3059,12 @@
       },
       "relations": {
         "paperIds": [
+          "arxiv-2505-20770",
           "arxiv-2512-01559"
         ],
         "reviewStatus": "exact-link-match"
       },
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-08-31",
       "links": [
         {
           "label": "source",
@@ -3302,20 +3315,53 @@
         "evidenceUrl": "https://github.com/magenta/midi-ddsp/blob/main/LICENSE"
       },
       "availability": {
-        "source": {"status": "linked", "evidence": ["https://github.com/magenta/midi-ddsp"]},
-        "checkpoint": {"status": "linked", "evidence": ["https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"]},
-        "inference": {"status": "documented", "evidence": ["https://github.com/magenta/midi-ddsp/blob/main/README.md"]},
-        "training": {"status": "documented", "evidence": ["https://github.com/magenta/midi-ddsp/blob/main/README.md"]},
-        "dataset": {"status": "documented", "evidence": ["https://github.com/magenta/midi-ddsp/blob/main/README.md"]}
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/magenta/midi-ddsp"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/midi-ddsp/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/midi-ddsp/blob/main/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/magenta/midi-ddsp/blob/main/README.md"
+          ]
+        }
       },
       "relations": {
-        "paperIds": ["arxiv-2112-09312"],
+        "paperIds": [
+          "arxiv-2112-09312"
+        ],
         "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-31",
       "links": [
-        {"label": "source", "url": "https://github.com/magenta/midi-ddsp"},
-        {"label": "checkpoint", "url": "https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"}
+        {
+          "label": "source",
+          "url": "https://github.com/magenta/midi-ddsp"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"
+        }
       ]
     },
     {
@@ -3325,12 +3371,19 @@
         "en": "Official expressive piano performance MIDI-to-audio implementation with training and inference recipes plus downloadable pretrained models.",
         "zh": "表情钢琴演奏 MIDI 到音频的官方实现，提供训练与推理流程以及可下载预训练模型。"
       },
-      "areas": ["symbolic-performance"],
+      "areas": [
+        "symbolic-performance"
+      ],
       "taxonomy": {
-        "tasks": ["symbolic-performance", "performance-rendering"],
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering"
+        ],
         "effects": [],
         "reviewStatus": "reviewed",
-        "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]
+        "evidence": [
+          "https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache License 2.0",
@@ -3340,20 +3393,53 @@
         "evidenceUrl": "https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/LICENSE"
       },
       "availability": {
-        "source": {"status": "linked", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE"]},
-        "checkpoint": {"status": "linked", "evidence": ["https://zenodo.org/records/15976272"]},
-        "inference": {"status": "documented", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]},
-        "training": {"status": "documented", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]},
-        "dataset": {"status": "documented", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]}
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/MIDI-VALLE"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://zenodo.org/records/15976272"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"
+          ]
+        }
       },
       "relations": {
-        "paperIds": ["arxiv-2507-08530"],
+        "paperIds": [
+          "arxiv-2507-08530"
+        ],
         "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-31",
       "links": [
-        {"label": "source", "url": "https://github.com/nii-yamagishilab/MIDI-VALLE"},
-        {"label": "checkpoint", "url": "https://zenodo.org/records/15976272"}
+        {
+          "label": "source",
+          "url": "https://github.com/nii-yamagishilab/MIDI-VALLE"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://zenodo.org/records/15976272"
+        }
       ]
     },
     {
@@ -4154,12 +4240,19 @@
         "en": "Official two-stage score-to-performance and performance-to-audio system with code, checkpoints, Colab inference, and evaluation tools.",
         "zh": "乐谱到演奏、演奏到音频两阶段系统的官方实现，提供代码、权重、Colab 推理和评测工具。"
       },
-      "areas": ["symbolic-performance"],
+      "areas": [
+        "symbolic-performance"
+      ],
       "taxonomy": {
-        "tasks": ["symbolic-performance", "performance-rendering"],
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering"
+        ],
         "effects": [],
         "reviewStatus": "reviewed",
-        "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]
+        "evidence": [
+          "https://github.com/tangjjbetsy/S2A/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "Apache License 2.0",
@@ -4169,20 +4262,53 @@
         "evidenceUrl": "https://github.com/tangjjbetsy/S2A/blob/main/LICENSE"
       },
       "availability": {
-        "source": {"status": "linked", "evidence": ["https://github.com/tangjjbetsy/S2A"]},
-        "checkpoint": {"status": "linked", "evidence": ["https://zenodo.org/records/15524693"]},
-        "inference": {"status": "documented", "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]},
-        "training": {"status": "documented", "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]},
-        "dataset": {"status": "documented", "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]}
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/tangjjbetsy/S2A"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://zenodo.org/records/15524693"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/tangjjbetsy/S2A/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/tangjjbetsy/S2A/blob/main/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/tangjjbetsy/S2A/blob/main/README.md"
+          ]
+        }
       },
       "relations": {
-        "paperIds": ["arxiv-2501-10222"],
+        "paperIds": [
+          "arxiv-2501-10222"
+        ],
         "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-31",
       "links": [
-        {"label": "source", "url": "https://github.com/tangjjbetsy/S2A"},
-        {"label": "checkpoint", "url": "https://zenodo.org/records/15524693"}
+        {
+          "label": "source",
+          "url": "https://github.com/tangjjbetsy/S2A"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://zenodo.org/records/15524693"
+        }
       ]
     },
     {
@@ -4978,12 +5104,24 @@
         "en": "Joint DX7 audio-preset embedding package with graph-based parameter encoders, an interactive demo, and pretrained Safetensors models.",
         "zh": "DX7 音频与预设共享表征工具，提供图参数编码器、交互演示和 Safetensors 预训练模型。"
       },
-      "areas": ["audio-effects", "representation", "production-program"],
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
       "taxonomy": {
-        "tasks": ["representation-learning", "production-program", "production-graph"],
-        "effects": ["other"],
+        "tasks": [
+          "representation-learning",
+          "production-program",
+          "production-graph"
+        ],
+        "effects": [
+          "other"
+        ],
         "reviewStatus": "reviewed",
-        "evidence": ["https://github.com/DBraun/SynAPSE/blob/main/README.md"]
+        "evidence": [
+          "https://github.com/DBraun/SynAPSE/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "MIT",
@@ -4993,20 +5131,49 @@
         "evidenceUrl": "https://github.com/DBraun/SynAPSE/blob/main/LICENSE"
       },
       "availability": {
-        "source": {"status": "linked", "evidence": ["https://github.com/DBraun/SynAPSE"]},
-        "checkpoint": {"status": "linked", "evidence": ["https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"]},
-        "inference": {"status": "documented", "evidence": ["https://github.com/DBraun/SynAPSE/blob/main/README.md"]},
-        "training": {"status": "not-found", "evidence": []},
-        "dataset": {"status": "not-reviewed", "evidence": []}
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/DBraun/SynAPSE"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/DBraun/SynAPSE/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
       },
       "relations": {
-        "paperIds": ["arxiv-2608-18226"],
+        "paperIds": [
+          "arxiv-2608-18226"
+        ],
         "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-31",
       "links": [
-        {"label": "source", "url": "https://github.com/DBraun/SynAPSE"},
-        {"label": "checkpoint", "url": "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"}
+        {
+          "label": "source",
+          "url": "https://github.com/DBraun/SynAPSE"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"
+        }
       ]
     },
     {
@@ -5327,12 +5494,24 @@
         "en": "Containerized REAPER pipeline for generating multitrack audio datasets with heterogeneous VST, VST3, LV2, or CLAP effect graphs and project metadata.",
         "zh": "基于 REAPER 的容器化多轨数据生成流程，支持异构 VST、VST3、LV2、CLAP 效果图与工程元数据。"
       },
-      "areas": ["audio-effects", "mixing", "production-program"],
+      "areas": [
+        "audio-effects",
+        "mixing",
+        "production-program"
+      ],
       "taxonomy": {
-        "tasks": ["automatic-mixing", "production-program", "production-graph"],
-        "effects": ["multi-effect"],
+        "tasks": [
+          "automatic-mixing",
+          "production-program",
+          "production-graph"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
         "reviewStatus": "reviewed",
-        "evidence": ["https://github.com/IsaacYQH/WildFX/blob/main/README.md"]
+        "evidence": [
+          "https://github.com/IsaacYQH/WildFX/blob/main/README.md"
+        ]
       },
       "license": {
         "en": "No repository license file verified",
@@ -5342,19 +5521,1757 @@
         "evidenceUrl": null
       },
       "availability": {
-        "source": {"status": "linked", "evidence": ["https://github.com/IsaacYQH/WildFX"]},
-        "checkpoint": {"status": "not-applicable", "evidence": []},
-        "inference": {"status": "not-applicable", "evidence": []},
-        "training": {"status": "not-applicable", "evidence": []},
-        "dataset": {"status": "documented", "evidence": ["https://github.com/IsaacYQH/WildFX/blob/main/README.md"]}
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/IsaacYQH/WildFX"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/IsaacYQH/WildFX/blob/main/README.md"
+          ]
+        }
       },
       "relations": {
-        "paperIds": ["arxiv-2507-10534"],
+        "paperIds": [
+          "arxiv-2507-10534"
+        ],
         "reviewStatus": "exact-link-match"
       },
       "lastVerified": "2026-08-31",
       "links": [
-        {"label": "source", "url": "https://github.com/IsaacYQH/WildFX"}
+        {
+          "label": "source",
+          "url": "https://github.com/IsaacYQH/WildFX"
+        }
+      ]
+    },
+    {
+      "id": "acids-ircam-after",
+      "name": "AFTER",
+      "description": {
+        "en": "Real-time audio/MIDI structure and timbre transfer system with Max, Pure Data, and Ableton Live integration.",
+        "zh": "集成 Max、Pure Data 与 Ableton Live 的实时音频/MIDI 结构和音色迁移系统。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "symbolic-performance",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-transfer",
+          "representation-learning",
+          "performance-rendering",
+          "daw-interaction"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/acids-ircam/AFTER/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Creative Commons Attribution-NonCommercial 4.0",
+        "zh": "Creative Commons Attribution-NonCommercial 4.0",
+        "status": "identified",
+        "spdx": "CC-BY-NC-4.0",
+        "evidenceUrl": "https://github.com/acids-ircam/AFTER/blob/HEAD/LICENSE.md"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/acids-ircam/AFTER"
+          ]
+        },
+        "checkpoint": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/AFTER/blob/HEAD/README.md"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/AFTER/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/AFTER/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/AFTER/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2408-00196"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/acids-ircam/AFTER"
+        }
+      ]
+    },
+    {
+      "id": "nilsdem-control-transfer-diffusion",
+      "name": "Control-Transfer Diffusion",
+      "description": {
+        "en": "Official ISMIR implementation for MIDI- or audio-controlled generation and one-shot timbre transfer, with training and pretrained models.",
+        "zh": "支持 MIDI 或音频控制生成及单样本音色迁移的 ISMIR 官方实现，提供训练与预训练模型。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-transfer",
+          "representation-learning",
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/NilsDem/control-transfer-diffusion/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/NilsDem/control-transfer-diffusion"
+          ]
+        },
+        "checkpoint": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/NilsDem/control-transfer-diffusion/blob/HEAD/README.md"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/NilsDem/control-transfer-diffusion/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/NilsDem/control-transfer-diffusion/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/NilsDem/control-transfer-diffusion/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2408-00196"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/NilsDem/control-transfer-diffusion"
+        }
+      ]
+    },
+    {
+      "id": "gudgud96-piano-synthesis",
+      "name": "Controllable Piano GM-VAE",
+      "description": {
+        "en": "Training and visualization code for articulation- and dynamics-controlled expressive piano audio synthesis.",
+        "zh": "以奏法和力度控制表现力钢琴音频合成的训练与可视化代码。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering",
+          "representation-learning"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/gudgud96/piano-synthesis/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/gudgud96/piano-synthesis"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gudgud96/piano-synthesis/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gudgud96/piano-synthesis/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gudgud96/piano-synthesis/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2006-09833"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/gudgud96/piano-synthesis"
+        }
+      ]
+    },
+    {
+      "id": "papayaresearch-ctag",
+      "name": "CTAG",
+      "description": {
+        "en": "Text-to-modular-synthesizer programming with evolutionary search and editable signal-flow graphs.",
+        "zh": "结合进化搜索和可编辑信号流图的文本到模块化合成器编程实现。"
+      },
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-control",
+          "production-program",
+          "production-graph"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/PapayaResearch/ctag/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/PapayaResearch/ctag/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/PapayaResearch/ctag"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/PapayaResearch/ctag/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/PapayaResearch/ctag/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2406-00294"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/PapayaResearch/ctag"
+        }
+      ]
+    },
+    {
+      "id": "dbraun-dawdreamer",
+      "name": "DawDreamer",
+      "description": {
+        "en": "Python framework for DAW-style plug-in graphs, automation, synthesis, and offline audio rendering.",
+        "zh": "用于 DAW 式插件图、自动化、合成与离线音频渲染的 Python 框架。"
+      },
+      "areas": [
+        "audio-effects",
+        "mixing",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-control",
+          "automatic-mixing",
+          "production-program",
+          "production-graph",
+          "daw-interaction"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/DBraun/DawDreamer/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU General Public License v3.0",
+        "zh": "GNU General Public License v3.0",
+        "status": "identified",
+        "spdx": "GPL-3.0-only",
+        "evidenceUrl": "https://github.com/DBraun/DawDreamer/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/DBraun/DawDreamer"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/DBraun/DawDreamer/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2111-09931"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/DBraun/DawDreamer"
+        }
+      ]
+    },
+    {
+      "id": "lrenault-ddsp-piano",
+      "name": "DDSP-Piano",
+      "description": {
+        "en": "Official differentiable polyphonic piano synthesizer with bundled weights, MIDI inference, training, and evaluation.",
+        "zh": "官方可微分复音钢琴合成器，包含权重、MIDI 推理、训练和评测。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "differentiable-processing"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "performance-rendering",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "reverberation",
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/lrenault/ddsp-piano/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/lrenault/ddsp-piano/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/lrenault/ddsp-piano"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/lrenault/ddsp-piano/tree/main/ddsp_piano/model_weights"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/lrenault/ddsp-piano/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/lrenault/ddsp-piano/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/lrenault/ddsp-piano/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "dafx-2022-ddsp-piano"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/lrenault/ddsp-piano"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/lrenault/ddsp-piano/tree/main/ddsp_piano/model_weights"
+        }
+      ]
+    },
+    {
+      "id": "ddsynth-rl-ddsynthrl",
+      "name": "DDSynth-RL",
+      "description": {
+        "en": "Discrete-diffusion synthesizer inversion with reinforcement learning, evaluation code, and public checkpoints.",
+        "zh": "结合强化学习的离散扩散合成器反演，提供评测代码和公开权重。"
+      },
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "parameter-estimation",
+          "effect-control",
+          "production-program"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/DDSynth-RL/DDSynthRL/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/DDSynth-RL/DDSynthRL/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/DDSynth-RL/DDSynthRL"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/MINNE-WU/DDSynth-RL"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/DDSynth-RL/DDSynthRL/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/DDSynth-RL/DDSynthRL/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/DDSynth-RL/DDSynthRL/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2608-03032"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/DDSynth-RL/DDSynthRL"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/MINNE-WU/DDSynth-RL"
+        }
+      ]
+    },
+    {
+      "id": "anusfoil-dexter",
+      "name": "DExter",
+      "description": {
+        "en": "Diffusion-based expressive performance rendering with global and local controls, training, and inference.",
+        "zh": "具有全局和局部控制、训练与推理流程的扩散式表现力演奏渲染实现。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/anusfoil/DExter/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/anusfoil/DExter/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/anusfoil/DExter"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/anusfoil/DExter/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/anusfoil/DExter/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/anusfoil/DExter/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2406-14850"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/anusfoil/DExter"
+        }
+      ]
+    },
+    {
+      "id": "acids-ircam-flow-synthesizer",
+      "name": "Flow Synthesizer",
+      "description": {
+        "en": "Normalizing-flow control across synthesizer families with data preparation, pretrained models, and interactive tools.",
+        "zh": "跨合成器族的归一化流控制系统，包含数据准备、预训练模型和交互工具。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "parameter-estimation",
+          "effect-control",
+          "representation-learning",
+          "production-program"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/acids-ircam/flow_synthesizer/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/acids-ircam/flow_synthesizer"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/acids-ircam/flow_synthesizer/tree/master/saved"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/flow_synthesizer/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/flow_synthesizer/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/acids-ircam/flow_synthesizer/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-1907-00971"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/acids-ircam/flow_synthesizer"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/acids-ircam/flow_synthesizer/tree/master/saved"
+        }
+      ]
+    },
+    {
+      "id": "mclemcrew-mixassist",
+      "name": "MixAssist",
+      "description": {
+        "en": "Audio-language data, evaluation, training scripts, and adapters for context-aware co-creative mixing assistance.",
+        "zh": "面向情境化协同混音助手的音频语言数据、评测、训练脚本和适配器。"
+      },
+      "areas": [
+        "mixing",
+        "representation",
+        "evaluation",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "automatic-mixing",
+          "representation-learning",
+          "evaluation",
+          "daw-interaction",
+          "agentic-production"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/mclemcrew/MixAssist/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/mclemcrew/MixAssist/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/mclemcrew/MixAssist"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/mclemcrew/Qwen2-Audio-MixAssist-LoRA"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mclemcrew/MixAssist/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mclemcrew/MixAssist/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/mclemcrew/MixAssist/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2507-06329"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/mclemcrew/MixAssist"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/mclemcrew/Qwen2-Audio-MixAssist-LoRA"
+        }
+      ]
+    },
+    {
+      "id": "nii-yamagishilab-midi-to-audio",
+      "name": "Neural MIDI-to-Audio",
+      "description": {
+        "en": "Reproducible neural MIDI-to-piano-audio systems with training, inference, evaluation, and pretrained models.",
+        "zh": "可复现的神经 MIDI 到钢琴音频系统，包含训练、推理、评测和预训练模型。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/nii-yamagishilab/midi-to-audio/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/nii-yamagishilab/midi-to-audio/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/midi-to-audio"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://zenodo.org/records/7439325"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/midi-to-audio/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/midi-to-audio/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/nii-yamagishilab/midi-to-audio/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2211-13868"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/nii-yamagishilab/midi-to-audio"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://zenodo.org/records/7439325"
+        }
+      ]
+    },
+    {
+      "id": "bwang514-performancenet",
+      "name": "PerformanceNet",
+      "description": {
+        "en": "Official score-to-audio piano synthesis implementation and data preparation tools.",
+        "zh": "乐谱到钢琴音频合成的官方实现及数据准备工具。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/bwang514/PerformanceNet/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/bwang514/PerformanceNet"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/bwang514/PerformanceNet/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/bwang514/PerformanceNet/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/bwang514/PerformanceNet/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-1811-04357"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/bwang514/PerformanceNet"
+        }
+      ]
+    },
+    {
+      "id": "yhj137-pianist-transformer",
+      "name": "Pianist Transformer",
+      "description": {
+        "en": "Self-supervised expressive-piano pretraining, rendering, checkpoints, and reproducible training recipes.",
+        "zh": "表现力钢琴自监督预训练、渲染、权重与可复现训练流程。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering",
+          "representation-learning"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/yhj137/PianistTransformer/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/yhj137/PianistTransformer/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/yhj137/PianistTransformer"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/collections/yhj137/pianist-transformer"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/yhj137/PianistTransformer/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/yhj137/PianistTransformer/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/yhj137/PianistTransformer/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2512-02652"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/yhj137/PianistTransformer"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/collections/yhj137/pianist-transformer"
+        }
+      ]
+    },
+    {
+      "id": "realfolkcode-pianokontext",
+      "name": "PianoKontext",
+      "description": {
+        "en": "Context-conditioned expressive piano rendering implementation with training scripts and evaluation tools.",
+        "zh": "包含训练脚本和评测工具的上下文条件表现力钢琴渲染实现。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/realfolkcode/pianokontext/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/realfolkcode/pianokontext"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/realfolkcode/pianokontext/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/realfolkcode/pianokontext/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/realfolkcode/pianokontext/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2606-12282"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/realfolkcode/pianokontext"
+        }
+      ]
+    },
+    {
+      "id": "ilya16-scoreperformer",
+      "name": "ScorePerformer",
+      "description": {
+        "en": "Fine-grained controllable expressive-piano performance rendering with training and inference code.",
+        "zh": "提供训练和推理代码的细粒度可控表现力钢琴演奏渲染系统。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/ilya16/scoreperformer/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0",
+        "zh": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0",
+        "status": "identified",
+        "spdx": "CC-BY-NC-SA-4.0",
+        "evidenceUrl": "https://github.com/ilya16/scoreperformer/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/ilya16/scoreperformer"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilya16/scoreperformer/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilya16/scoreperformer/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/ilya16/scoreperformer/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "ismir-2023-scoreperformer"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/ilya16/scoreperformer"
+        }
+      ]
+    },
+    {
+      "id": "rsy1026-sketching-piano-expression",
+      "name": "Sketching Piano Expression",
+      "description": {
+        "en": "Official implementation for extracting, editing, and transferring high-level piano expression sketches.",
+        "zh": "用于提取、编辑和迁移高层钢琴表情轮廓的官方实现。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/rsy1026/sketching_piano_expression/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/rsy1026/sketching_piano_expression"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/rsy1026/sketching_piano_expression/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/rsy1026/sketching_piano_expression/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/rsy1026/sketching_piano_expression/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2208-14867"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/rsy1026/sketching_piano_expression"
+        }
+      ]
+    },
+    {
+      "id": "sound2synth-sound2synth",
+      "name": "Sound2Synth",
+      "description": {
+        "en": "FM synthesizer parameter estimation and audio reconstruction code for interpretable sound matching.",
+        "zh": "用于可解释声音匹配的 FM 合成器参数估计和音频重建代码。"
+      },
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "parameter-estimation",
+          "effect-control",
+          "production-program"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/Sound2Synth/Sound2Synth/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/Sound2Synth/Sound2Synth"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/Sound2Synth/Sound2Synth/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/Sound2Synth/Sound2Synth/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/Sound2Synth/Sound2Synth/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2205-03043"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/Sound2Synth/Sound2Synth"
+        }
+      ]
+    },
+    {
+      "id": "g-roma-soundmatchensemble",
+      "name": "SoundMatchEnsemble",
+      "description": {
+        "en": "Synthesizer-ensemble sound matching implementation for expanding the reachable timbre space.",
+        "zh": "通过合成器集成扩大可达音色空间的声音匹配实现。"
+      },
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "parameter-estimation",
+          "effect-control",
+          "production-program"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/g-roma/SoundMatchEnsemble/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/g-roma/SoundMatchEnsemble"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/g-roma/SoundMatchEnsemble/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/g-roma/SoundMatchEnsemble/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "dafx-2024-synth-ensembles"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/g-roma/SoundMatchEnsemble"
+        }
+      ]
+    },
+    {
+      "id": "gwendal-lv-spinvae",
+      "name": "SPINVAE",
+      "description": {
+        "en": "Joint audio-preset representation learning for synthesizer preset interpolation, with training code and models.",
+        "zh": "用于合成器预设插值的音频与预设联合表征学习，提供训练代码和模型。"
+      },
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "representation-learning",
+          "effect-control",
+          "production-program"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/gwendal-lv/spinvae/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU Affero General Public License v3.0",
+        "zh": "GNU Affero General Public License v3.0",
+        "status": "identified",
+        "spdx": "AGPL-3.0-only",
+        "evidenceUrl": "https://github.com/gwendal-lv/spinvae/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/gwendal-lv/spinvae"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/gwendal-lv/spinvae/releases"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gwendal-lv/spinvae/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gwendal-lv/spinvae/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/gwendal-lv/spinvae/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "icassp-2023-spinvae"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/gwendal-lv/spinvae"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/gwendal-lv/spinvae/releases"
+        }
+      ]
+    },
+    {
+      "id": "heqi201255-tomi",
+      "name": "TOMI",
+      "description": {
+        "en": "REAPER-integrated language agent and benchmark for inspectable, editable music-production actions.",
+        "zh": "与 REAPER 集成的语言智能体和基准，用于可检查、可编辑的音乐制作操作。"
+      },
+      "areas": [
+        "production-program",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "evaluation",
+          "production-program",
+          "production-graph",
+          "daw-interaction",
+          "agentic-production"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/heqi201255/TOMI/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "GNU General Public License v3.0",
+        "zh": "GNU General Public License v3.0",
+        "status": "identified",
+        "spdx": "GPL-3.0-only",
+        "evidenceUrl": "https://github.com/heqi201255/TOMI/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/heqi201255/TOMI"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/heqi201255/TOMI/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/heqi201255/TOMI/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2506-23094"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/heqi201255/TOMI"
+        }
+      ]
+    },
+    {
+      "id": "user-tian-violet",
+      "name": "VIOLET",
+      "description": {
+        "en": "Technique- and dynamics-conditioned violin synthesis code with an accompanying public dataset.",
+        "zh": "带演奏技法和力度条件的小提琴合成代码及配套公开数据集。"
+      },
+      "areas": [
+        "symbolic-performance"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "performance-rendering"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/User-tian/VIOLET/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/User-tian/VIOLET/blob/HEAD/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/User-tian/VIOLET"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/User-tian/VIOLET/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/User-tian/VIOLET/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/User-tian/VIOLET/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2608-07944"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/User-tian/VIOLET"
+        }
+      ]
+    },
+    {
+      "id": "jdasam-virtuosonet",
+      "name": "VirtuosoNet",
+      "description": {
+        "en": "Hierarchical expressive-piano rendering code with graph score encoders, inference tools, and pretrained models.",
+        "zh": "包含图乐谱编码器、推理工具和预训练模型的层级式表现力钢琴渲染实现。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering",
+          "representation-learning"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/jdasam/virtuosoNet/blob/HEAD/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/jdasam/virtuosoNet"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/dasaem/virtuosonet"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/jdasam/virtuosoNet/blob/HEAD/README.md"
+          ]
+        },
+        "training": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/jdasam/virtuosoNet/blob/HEAD/README.md"
+          ]
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/jdasam/virtuosoNet/blob/HEAD/README.md"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "icml-2019-graph-score-performance",
+          "ismir-2019-virtuosonet"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/jdasam/virtuosoNet"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/dasaem/virtuosonet"
+        }
       ]
     }
   ]

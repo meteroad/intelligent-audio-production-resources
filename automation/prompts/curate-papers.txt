@@ -11,7 +11,8 @@ Include a paper only when its principal contribution directly concerns at least 
 - tool- or language-guided control of processors for music or audio post-production.
 - intelligent spatial-audio generation, upmixing, production, rendering, or HRTF personalization for immersive content.
 - symbolic-to-performance or performance-to-audio rendering with explicit, editable production stages;
-- structured production programs or signal-flow graphs, and state-aware interaction with digital audio workstations.
+- synthesizer inversion, preset estimation, sound matching, or synthesizer programming when the output is an editable parameter configuration or signal graph;
+- structured production programs or signal-flow graphs, state-aware interaction with digital audio workstations, and multitrack arrangement systems whose output remains editable in a production project.
 
 Exclude papers mainly about source separation, generic text-to-music or one-shot music generation, generic audio understanding, room acoustics, spatial localization/SELD, hearing, speech enhancement, or generic differentiable DSP unless the abstract clearly establishes a direct production, audio-effects, spatial-rendering, editable symbolic-performance, or DAW-interaction contribution. A neural network is not itself evidence of differentiable processing: gradients must pass through an explicit DSP operation, audio processor, effect chain, or processing graph.
 

@@ -8306,6 +8306,2884 @@
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2608-07944",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.07944"
+      },
+      "shortName": "VIOLET",
+      "title": "VIOLET: High-Fidelity Violin Synthesis with Techniques and Dynamics",
+      "authors": [
+        "Baotong Tian",
+        "Cynthia Lu",
+        "Vincent K. M. Cheung",
+        "Ting-Kang Wang",
+        "Jonathan Churchill",
+        "Zhiyao Duan"
+      ],
+      "year": 2026,
+      "published": "2026-08-08",
+      "venue": "ISMIR 2026",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "VIOLET extends controllable performance rendering beyond piano with explicit violin techniques, high-fidelity synthesis, and public code and dataset resources.",
+          "zh": "VIOLET 将可控演奏渲染扩展到钢琴之外，以明确小提琴技法实现高保真合成，并公开代码与数据资源。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "VIOLET synthesizes violin audio from symbolic control with explicit playing techniques and dynamics, supported by a newly released technique-rich dataset.",
+        "zh": "VIOLET 根据带有明确演奏技法与力度控制的符号输入合成小提琴音频，并发布技法丰富的新数据集。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.07944"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/User-tian/VIOLET"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/User-tian/VIOLET"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2608-03032",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.03032"
+      },
+      "shortName": "DDSynth-RL",
+      "title": "DDSynth-RL: Audio Synthesizer Inversion via Discrete Diffusion with Reinforcement Learning",
+      "authors": [
+        "Tristan Wu",
+        "Daniel Chin",
+        "Junan Zhang",
+        "Junyan Jiang",
+        "Yansen Jing",
+        "Gus Xia"
+      ],
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": "ISMIR 2026",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "DDSynth-RL introduces a technically distinct discrete-diffusion formulation for large preset spaces and releases code, evaluation tools, and checkpoints under explicit licenses.",
+          "zh": "DDSynth-RL 为大规模预设空间提出技术上独特的离散扩散方案，并在明确许可证下公开代码、评测工具和权重。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "DDSynth-RL treats synthesizer inversion as discrete diffusion over preset parameters and uses reinforcement learning to align generated presets with target audio.",
+        "zh": "DDSynth-RL 将合成器反演建模为预设参数上的离散扩散，并使用强化学习使生成预设与目标音频对齐。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.03032"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/DDSynth-RL/DDSynthRL"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/MINNE-WU/DDSynth-RL"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/DDSynth-RL/DDSynthRL"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2606-12282",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2606.12282"
+      },
+      "shortName": "PianoKontext",
+      "title": "PianoKontext: Expressive Performance Rendering from Deadpan Context",
+      "authors": [
+        "Dmitrii Gavrilev"
+      ],
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "ICML 2026 ML for Audio Workshop",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "PianoKontext renders expressive piano performance from deadpan symbolic context and explores how surrounding musical context guides local expression.",
+        "zh": "PianoKontext 从无表情的符号上下文渲染表现力钢琴演奏，并研究周边音乐语境如何引导局部表情。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2606.12282"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/realfolkcode/pianokontext"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/realfolkcode/pianokontext"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2605-02059",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2605.02059"
+      },
+      "shortName": "RenCon 2025",
+      "title": "RenCon 2025: Revival of the Expressive Performance Rendering Competition",
+      "authors": [
+        "Huan Zhang",
+        "Taegyun Kwon",
+        "Anders Friberg",
+        "Junyan Jiang",
+        "Hayeon Bang",
+        "Hyeyoon Cho",
+        "Gus Xia",
+        "Akira Maezawa",
+        "Simon Dixon",
+        "Dasaem Jeong"
+      ],
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "NIME 2026",
+      "areas": [
+        "symbolic-performance",
+        "evaluation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "RenCon 2025 revives the expressive performance rendering challenge with shared repertoire, submission rules, and human evaluation for comparing systems.",
+        "zh": "RenCon 2025 通过共享曲目、提交规则和人工评价重启表现力演奏渲染竞赛，为系统比较提供统一条件。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2605.02059"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": null
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2512-02652",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2512.02652"
+      },
+      "shortName": "Pianist Transformer",
+      "title": "Pianist Transformer: Towards Expressive Piano Performance Rendering via Scalable Self-Supervised Pre-Training",
+      "authors": [
+        "Hong-Jie You",
+        "Jie-Jing Shao",
+        "Xiao-Wen Yang",
+        "Lin-Han Jia",
+        "Lan-Zhe Guo",
+        "Yu-Feng Li"
+      ],
+      "year": 2026,
+      "published": "2025-12-02",
+      "venue": "ICML 2026",
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Pianist Transformer combines scalable self-supervised pretraining, strong rendering results, editable symbolic outputs, and a complete release with code, checkpoints, and training recipes.",
+          "zh": "Pianist Transformer 结合可扩展自监督预训练、强渲染结果和可编辑符号输出，并完整公开代码、权重与训练流程。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Pianist Transformer scales expressive performance rendering through self-supervised pretraining on symbolic piano data and supports downstream generation and editing tasks.",
+        "zh": "Pianist Transformer 通过大规模符号钢琴数据上的自监督预训练扩展表现力演奏渲染，并支持后续生成与编辑任务。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2512.02652"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/yhj137/PianistTransformer"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/collections/yhj137/pianist-transformer"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/yhj137/PianistTransformer"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2509-23878",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2509.23878"
+      },
+      "shortName": "JointPianist",
+      "title": "Disentangling Score Content and Performance Style for Joint Piano Rendering and Transcription",
+      "authors": [
+        "Wei Zeng",
+        "Junchuan Zhao",
+        "Ye Wang"
+      ],
+      "year": 2026,
+      "published": "2025-09-28",
+      "venue": "ICLR 2026",
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio",
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "JointPianist connects rendering and transcription through an explicit content-style factorization and reports strong bidirectional results with a public interactive project page.",
+          "zh": "JointPianist 通过显式内容与风格分解连接渲染和转录，在双向任务上取得强结果，并提供公开交互项目页。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "JointPianist disentangles score content from performance style in a shared framework that supports both expressive piano rendering and automatic transcription.",
+        "zh": "JointPianist 在统一框架中分离乐谱内容与演奏风格，同时支持表现力钢琴渲染和自动转录。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2509.23878"
+        },
+        {
+          "label": "project",
+          "url": "https://jointpianist.github.io/epr-apt/"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://jointpianist.github.io/epr-apt/"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2507-06329",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2507.06329"
+      },
+      "shortName": "MixAssist",
+      "title": "MixAssist: An Audio-Language Dataset for Co-Creative AI Assistance in Music Mixing",
+      "authors": [
+        "Michael Clemens",
+        "Ana Marasović"
+      ],
+      "year": 2025,
+      "published": "2025-07-08",
+      "venue": "COLM 2025",
+      "areas": [
+        "mixing",
+        "representation",
+        "evaluation",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "agentic-production",
+        "daw-interaction"
+      ],
+      "productionStages": [
+        "mix"
+      ],
+      "outputTypes": [
+        "edit"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "MixAssist defines a concrete co-creative mixing-assistance task, releases a purpose-built audio-language dataset, and provides evaluation, training, and adapter resources.",
+          "zh": "MixAssist 定义了具体的人机协同混音助手任务，公开专用音频语言数据集，并提供评测、训练和适配器资源。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "MixAssist pairs audio, mixing context, and natural-language feedback to train and evaluate assistants that suggest concrete, context-aware mix edits.",
+        "zh": "MixAssist 将音频、混音上下文和自然语言反馈配对，用于训练和评估能够提出具体情境化混音修改建议的助手。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2507.06329"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/mclemcrew/MixAssist"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/mclemcrew/MixAssist"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2506-23094",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2506.23094"
+      },
+      "shortName": "TOMI",
+      "title": "TOMI: Transforming and Organizing Music Ideas for Multi-Track Compositions with Full-Song Structure",
+      "authors": [
+        "Qi He",
+        "Gus Xia",
+        "Ziyu Wang"
+      ],
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "ISMIR 2025",
+      "areas": [
+        "production-program",
+        "evaluation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph",
+        "daw-interaction",
+        "agentic-production"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "synthesis",
+        "project"
+      ],
+      "outputTypes": [
+        "audio",
+        "graph",
+        "project"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "TOMI introduces a structured representation for full-song multitrack arrangement, demonstrates coherent long-form generation, and provides a working REAPER-integrated implementation.",
+          "zh": "TOMI 为完整歌曲的多轨编曲提出结构化表示，展示连贯长结构生成，并提供可运行的 REAPER 集成实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "TOMI represents full songs through clips, sections, tracks, and transformations, then uses an LLM and sample retrieval to construct editable multitrack arrangements inside REAPER.",
+        "zh": "TOMI 以片段、段落、轨道和变换表示完整歌曲，再通过 LLM 与素材检索在 REAPER 中构建可编辑多轨编曲。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2506.23094"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/heqi201255/TOMI"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/heqi201255/TOMI"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2505-20770",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2505.20770"
+      },
+      "shortName": "LLM2Fx",
+      "title": "Can Large Language Models Predict Audio Effects Parameters from Natural Language?",
+      "authors": [
+        "Seungheon Doh",
+        "Junghyun Koo",
+        "Marco A. Martínez-Ramírez",
+        "Wei-Hsiang Liao",
+        "Juhan Nam",
+        "Yuki Mitsufuji"
+      ],
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "WASPAA 2025",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "agentic-production"
+      ],
+      "productionStages": [
+        "track",
+        "mix"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "LLM2Fx establishes a direct language-to-effect-parameter task across real production processors and releases a reusable tool-calling framework for further evaluation.",
+          "zh": "LLM2Fx 在真实制作处理器上建立语言到效果参数的直接任务，并公开可复用工具调用框架支持后续评测。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "LLM2Fx evaluates whether language models can translate production instructions into executable audio-effect parameter settings across common processors.",
+        "zh": "LLM2Fx 评估语言模型能否将制作指令转化为常见音频处理器上可执行的效果参数设置。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2505.20770"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/SonyResearch/LLM2Fx"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/SonyResearch/LLM2Fx"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2502-07711",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2502.07711"
+      },
+      "shortName": "RenderBox",
+      "title": "RenderBox: Expressive Performance Rendering with Text Control",
+      "authors": [
+        "Huan Zhang",
+        "Akira Maezawa",
+        "Simon Dixon"
+      ],
+      "year": 2025,
+      "published": "2025-02-11",
+      "venue": "arXiv",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "RenderBox conditions expressive performance rendering on natural-language descriptions, connecting high-level musical intent to editable symbolic performance output.",
+        "zh": "RenderBox 使用自然语言描述作为表现力演奏渲染条件，将高层音乐意图连接到可编辑的符号演奏输出。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2502.07711"
+        },
+        {
+          "label": "project",
+          "url": "https://renderbox-page.vercel.app/"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://renderbox-page.vercel.app/"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2410-16785",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2410.16785"
+      },
+      "shortName": "CoSaRef",
+      "title": "Annotation-Free MIDI-to-Audio Synthesis via Concatenative Synthesis and Generative Refinement",
+      "authors": [
+        "Osamu Take",
+        "Taketo Akama"
+      ],
+      "year": 2024,
+      "published": "2024-10-22",
+      "venue": "arXiv",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "CoSaRef creates aligned MIDI-audio supervision through concatenative synthesis and then refines the result with a generative audio model, avoiding manually aligned recordings.",
+        "zh": "CoSaRef 先通过拼接合成构造 MIDI 与音频对齐监督，再使用生成模型细化音频，从而避免人工对齐录音。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2410.16785"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": null
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "dafx-2024-synth-ensembles",
+      "source": {
+        "type": "proceedings",
+        "id": "dafx-2024-paper-76"
+      },
+      "shortName": "Synth Ensembles",
+      "title": "Sound Matching Using Synthesizer Ensembles",
+      "authors": [
+        "Gerard Roma"
+      ],
+      "year": 2024,
+      "published": "2024-09-03",
+      "venue": "DAFx 2024",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "This work matches target sounds with ensembles of synthesizer instances, expanding the achievable timbre space beyond a single preset or instrument.",
+        "zh": "该工作使用多个合成器实例组成的集成来匹配目标声音，将可实现音色空间扩展到单一预设或乐器之外。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://www.dafx.de/paper-archive/2024/papers/DAFx24_paper_76.pdf"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/g-roma/SoundMatchEnsemble"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/g-roma/SoundMatchEnsemble"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2409-00856",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2409.00856"
+      },
+      "shortName": "LLM Audio Coding Benchmark",
+      "title": "Benchmarking LLM Code Generation for Audio Programming with Visual Dataflow Languages",
+      "authors": [
+        "William Zhang",
+        "Maria Leon",
+        "Ryan Xu",
+        "Adrian Cardenas",
+        "Amelia Wissink",
+        "Hanna Martin",
+        "Maya Srikanth",
+        "Kaya Dorogi",
+        "Christian Valadez",
+        "Pedro Perez",
+        "Citlalli Grijalva",
+        "Corey Zhang",
+        "Mark Santolucito"
+      ],
+      "year": 2024,
+      "published": "2024-09-01",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects",
+        "evaluation",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph",
+        "agentic-production"
+      ],
+      "productionStages": [
+        "synthesis",
+        "track"
+      ],
+      "outputTypes": [
+        "graph"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The benchmark evaluates whether language models can generate executable visual dataflow audio programs, testing both structural correctness and rendered behavior.",
+        "zh": "该基准评估语言模型能否生成可执行的可视化数据流音频程序，同时检验结构正确性和实际渲染行为。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2409.00856"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": null
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2408-00196",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2408.00196"
+      },
+      "shortName": "Control-Transfer Diffusion",
+      "title": "Combining audio control and style transfer using latent diffusion",
+      "authors": [
+        "Nils Demerlé",
+        "Philippe Esling",
+        "Guillaume Doras",
+        "David Genova"
+      ],
+      "year": 2024,
+      "published": "2024-07-31",
+      "venue": "ISMIR 2024",
+      "areas": [
+        "audio-effects",
+        "representation",
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis",
+        "track"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "The work unifies explicit MIDI or audio structure control with example-based timbre transfer, reports broad quantitative evaluation, and has both a reproducible research release and a real-time Ableton/Max implementation.",
+          "zh": "该工作统一 MIDI 或音频结构控制与示例音色迁移，进行了广泛量化评测，并同时提供可复现研究代码和 Ableton/Max 实时实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "A latent diffusion model separates time-varying musical structure from global timbre, supporting MIDI-to-audio rendering, audio-guided control, and one-shot timbre transfer.",
+        "zh": "该潜扩散模型分离时变音乐结构与全局音色，支持 MIDI 到音频渲染、音频引导控制和单样本音色迁移。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2408.00196"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/NilsDem/control-transfer-diffusion"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/acids-ircam/AFTER"
+        },
+        {
+          "label": "project",
+          "url": "https://nilsdem.github.io/control-transfer-diffusion/"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/NilsDem/control-transfer-diffusion"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2407-16643",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2407.16643"
+      },
+      "shortName": "Synth-AST",
+      "title": "Synthesizer Sound Matching Using Audio Spectrogram Transformers",
+      "authors": [
+        "Fred Bruford",
+        "Frederik Blang",
+        "Shahan Nercessian"
+      ],
+      "year": 2024,
+      "published": "2024-07-23",
+      "venue": "DAFx 2024",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The method adapts Audio Spectrogram Transformers to infer synthesizer parameters from target timbres and evaluates reconstruction across preset distributions.",
+        "zh": "该方法将音频频谱 Transformer 用于从目标音色推断合成器参数，并在不同预设分布上评估重建效果。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2407.16643"
+        },
+        {
+          "label": "project",
+          "url": "https://synth-ast-dafx.netlify.app"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://synth-ast-dafx.netlify.app"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2406-14850",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2406.14850"
+      },
+      "shortName": "DExter",
+      "title": "DExter: Learning and Controlling Performance Expression with Diffusion Models",
+      "authors": [
+        "Huan Zhang",
+        "Shreyan Chowdhury",
+        "Carlos Eduardo Cancino-Chacón",
+        "Jinhua Liang",
+        "Simon Dixon",
+        "Gerhard Widmer"
+      ],
+      "year": 2024,
+      "published": "2024-06-21",
+      "venue": "Applied Sciences 2024",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "DExter offers a coherent diffusion formulation for expressive performance, direct control over musical attributes, broad evaluation, and released training and inference code.",
+          "zh": "DExter 为表现力演奏提出完整扩散建模方案，支持音乐属性直接控制，并公开训练和推理代码及充分评测。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "DExter applies diffusion modeling to expressive piano performance and supports controllable generation through global and local performance descriptors.",
+        "zh": "DExter 将扩散模型用于表现力钢琴演奏，并通过全局和局部演奏描述符支持可控生成。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2406.14850"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/anusfoil/DExter"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/anusfoil/DExter"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2406-00294",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2406.00294"
+      },
+      "shortName": "CTAG",
+      "title": "Creative Text-to-Audio Generation via Synthesizer Programming",
+      "authors": [
+        "Manuel Cherep",
+        "Nikhil Singh",
+        "Jessica Shand"
+      ],
+      "year": 2024,
+      "published": "2024-06-01",
+      "venue": "ICML 2024",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "derivative-free-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "graph",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "CTAG links language, modular signal-flow programs, and evolutionary optimization in an explicitly editable generation process, with a public functional implementation.",
+          "zh": "CTAG 在明确可编辑的生成流程中连接语言、模块化信号流程序和进化优化，并公开可运行实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "CTAG converts text descriptions into modular synthesizer programs and improves them with evolutionary search, producing editable signal graphs rather than opaque audio alone.",
+        "zh": "CTAG 将文本描述转化为模块化合成器程序，并通过进化搜索优化，输出可编辑信号图而非仅生成不可解释音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2406.00294"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/PapayaResearch/ctag"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/PapayaResearch/ctag"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "ismir-2023-scoreperformer",
+      "source": {
+        "type": "proceedings",
+        "id": "ismir-2023-000069"
+      },
+      "shortName": "ScorePerformer",
+      "title": "ScorePerformer: Expressive Piano Performance Rendering with Fine-Grained Control",
+      "authors": [
+        "Ilya Borovik",
+        "Vladimir Viro"
+      ],
+      "year": 2023,
+      "published": "2023-11-05",
+      "venue": "ISMIR 2023",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "ScorePerformer combines competitive expressive rendering with unusually fine-grained editable controls and a public implementation under explicit research-oriented terms.",
+          "zh": "ScorePerformer 将有竞争力的表现力渲染与细粒度可编辑控制结合，并在明确的研究用途条款下公开实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "ScorePerformer uses a score-aware Transformer to render piano performances while exposing fine-grained timing, dynamics, and articulation controls.",
+        "zh": "ScorePerformer 使用乐谱感知 Transformer 渲染钢琴演奏，并提供细粒度时值、力度和奏法控制。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://archives.ismir.net/ismir2023/paper/000069.pdf"
+        },
+        {
+          "label": "doi",
+          "url": "https://zenodo.org/records/10265355"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/ilya16/scoreperformer"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/ilya16/scoreperformer"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "icassp-2023-spinvae",
+      "source": {
+        "type": "doi",
+        "id": "10.1109/ICASSP49357.2023.10096397"
+      },
+      "shortName": "SPINVAE",
+      "title": "Synthesizer Preset Interpolation Using Transformer Auto-Encoders",
+      "authors": [
+        "Gwendal Le Vaillant",
+        "Thierry Dutoit"
+      ],
+      "year": 2023,
+      "published": "2023-06-04",
+      "venue": "ICASSP 2023",
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "SPINVAE treats preset interpolation as a joint audio-parameter representation problem and provides a substantial open implementation with training code and downloadable models.",
+          "zh": "SPINVAE 将预设插值建模为音频与参数联合表征问题，并提供包含训练代码和可下载模型的完整开源实现。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "SPINVAE learns a structured latent space for synthesizer presets and audio, enabling interpolation between editable presets while retaining timbral continuity.",
+        "zh": "SPINVAE 学习合成器预设与音频的结构化潜空间，在保持音色连续性的同时实现可编辑预设间插值。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://doi.org/10.1109/ICASSP49357.2023.10096397"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/gwendal-lv/spinvae"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/gwendal-lv/spinvae/releases"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/gwendal-lv/spinvae"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2211-13868",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2211.13868"
+      },
+      "shortName": "MIDI-to-Audio TTS",
+      "title": "Can Knowledge of End-to-End Text-to-Speech Models Improve Neural MIDI-to-Audio Synthesis Systems?",
+      "authors": [
+        "Xuan Shi",
+        "Erica Cooper",
+        "Xin Wang",
+        "Junichi Yamagishi",
+        "Shrikanth Narayanan"
+      ],
+      "year": 2023,
+      "published": "2022-11-25",
+      "venue": "ICASSP 2023",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The study transfers architectures and training lessons from end-to-end speech synthesis to neural MIDI-to-piano-audio rendering and releases a reproducible implementation.",
+        "zh": "该研究将端到端语音合成的架构和训练经验迁移到 MIDI 到钢琴音频渲染，并公开可复现实现。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2211.13868"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/nii-yamagishilab/midi-to-audio"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/nii-yamagishilab/midi-to-audio"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "dafx-2022-ddsp-piano",
+      "source": {
+        "type": "proceedings",
+        "id": "dafx20in22-paper-48"
+      },
+      "shortName": "DDSP-Piano",
+      "title": "Differentiable Piano Model for MIDI-to-Audio Performance Synthesis",
+      "authors": [
+        "Lenny Renault",
+        "Rémi Mignot",
+        "Axel Roebel"
+      ],
+      "year": 2022,
+      "published": "2022-09-07",
+      "venue": "DAFx 2022",
+      "areas": [
+        "symbolic-performance",
+        "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "DDSP-Piano combines interpretable instrument-informed synthesis with polyphonic MIDI control, won the DAFx 2022 best-paper award, and provides code, weights, training, and evaluation tools.",
+          "zh": "DDSP-Piano 将可解释的乐器知识合成与复音 MIDI 控制结合，获得 DAFx 2022 最佳论文，并公开代码、权重、训练和评测工具。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "DDSP-Piano combines additive, subtractive, and reverberation components in a differentiable polyphonic synthesizer conditioned on MIDI notes, velocity, pedals, and piano identity.",
+        "zh": "DDSP-Piano 将加法、减法与混响组件组合为可微分复音合成器，并以 MIDI 音符、力度、踏板和钢琴身份为条件。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://www.dafx.de/paper-archive/2022/papers/DAFx20in22_paper_48.pdf"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.5281/zenodo.7092602"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/lrenault/ddsp-piano"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/lrenault/ddsp-piano/tree/main/ddsp_piano/model_weights"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/lrenault/ddsp-piano"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2208-14867",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2208.14867"
+      },
+      "shortName": "Sketching Expression",
+      "title": "Sketching the Expression: Flexible Rendering of Expressive Piano Performance with Self-Supervised Learning",
+      "authors": [
+        "Seungyeon Rhyu",
+        "Sarah Kim",
+        "Kyogu Lee"
+      ],
+      "year": 2022,
+      "published": "2022-08-31",
+      "venue": "ISMIR 2022",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The model learns interpretable expression sketches from performance data and lets users transfer or edit broad timing and dynamics contours during rendering.",
+        "zh": "该模型从演奏数据学习可解释的表情轮廓，使用户能够在渲染时迁移或编辑整体时值和力度走向。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2208.14867"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/rsy1026/sketching_piano_expression"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/rsy1026/sketching_piano_expression"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2205-03043",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2205.03043"
+      },
+      "shortName": "Sound2Synth",
+      "title": "Sound2Synth: Interpreting Sound via FM Synthesizer Parameters Estimation",
+      "authors": [
+        "Zui Chen",
+        "Yansen Jing",
+        "Shengcheng Yuan",
+        "Yifei Xu",
+        "Jian Wu",
+        "Hang Zhao"
+      ],
+      "year": 2022,
+      "published": "2022-05-06",
+      "venue": "IJCAI 2022",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Sound2Synth predicts interpretable FM synthesizer parameters from audio so that target timbres can be reconstructed and edited with a known signal generator.",
+        "zh": "Sound2Synth 从音频预测可解释的 FM 合成器参数，使目标音色能够由已知信号生成器重建并继续编辑。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2205.03043"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.24963/ijcai.2022/682"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/Sound2Synth/Sound2Synth"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/Sound2Synth/Sound2Synth"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2202-06034",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2202.06034"
+      },
+      "shortName": "Deep Performer",
+      "title": "Deep Performer: Score-to-Audio Music Performance Synthesis",
+      "authors": [
+        "Hao-Wen Dong",
+        "Cong Zhou",
+        "Taylor Berg-Kirkpatrick",
+        "Julian McAuley"
+      ],
+      "year": 2022,
+      "published": "2022-02-12",
+      "venue": "ICASSP 2022",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Deep Performer synthesizes expressive piano audio directly from a score-conditioned pianoroll using a convolutional generator and adversarial training.",
+        "zh": "Deep Performer 以乐谱条件钢琴卷帘为输入，通过卷积生成器和对抗训练直接合成具有表现力的钢琴音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2202.06034"
+        },
+        {
+          "label": "project",
+          "url": "https://github.com/salu133445/deepperformer"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/salu133445/deepperformer"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2111-09931",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2111.09931"
+      },
+      "shortName": "DawDreamer",
+      "title": "DawDreamer: Bridging the Gap Between Digital Audio Workstations and Python Interfaces",
+      "authors": [
+        "David Braun"
+      ],
+      "year": 2021,
+      "published": "2021-11-18",
+      "venue": "ISMIR 2021 Late-Breaking Demo",
+      "areas": [
+        "audio-effects",
+        "mixing",
+        "production-program"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph",
+        "daw-interaction"
+      ],
+      "productionStages": [
+        "track",
+        "mix",
+        "project"
+      ],
+      "outputTypes": [
+        "audio",
+        "graph",
+        "project"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "DawDreamer provides mature, practical infrastructure for programmable DAW graphs and plug-in automation, with a substantial open-source implementation used across later research pipelines.",
+          "zh": "DawDreamer 为可编程 DAW 图和插件自动化提供成熟实用基础设施，其完整开源实现已被后续多项研究流程采用。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "DawDreamer exposes DAW-style plug-in graphs, automation, synthesis, and offline rendering through Python, enabling reproducible programmatic production workflows.",
+        "zh": "DawDreamer 通过 Python 提供 DAW 式插件图、自动化、合成和离线渲染接口，使制作流程可以程序化复现。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2111.09931"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/DBraun/DawDreamer"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/DBraun/DawDreamer"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "dafx-2021-quality-diversity-synth",
+      "source": {
+        "type": "proceedings",
+        "id": "dafx-2021-quality-diversity-synth"
+      },
+      "shortName": "QD Sound Matching",
+      "title": "Quality Diversity for Synthesizer Sound Matching",
+      "authors": [
+        "Naotake Masuda",
+        "Daisuke Saito"
+      ],
+      "year": 2021,
+      "published": "2021-09-03",
+      "venue": "DAFx 2021",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "derivative-free-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The method uses quality-diversity search to return multiple perceptually similar but parametrically diverse synthesizer presets for one target sound.",
+        "zh": "该方法使用质量多样性搜索，为同一目标声音返回感知相似但参数配置多样的合成器预设。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://www.dafx.de/paper-archive/details/UR_KEeXEtkRfUcNkctdbVw"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": null
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2104-03876",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2104.03876"
+      },
+      "shortName": "SerumRNN",
+      "title": "SerumRNN: Step by Step Audio VST Effect Programming",
+      "authors": [
+        "Christopher Mitcheltree",
+        "Hideki Koike"
+      ],
+      "year": 2021,
+      "published": "2021-04-08",
+      "venue": "EvoMUSART 2021",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis",
+        "track"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "SerumRNN models synthesizer programming as a sequence of parameter edits, making the path from target sound to a reproducible preset explicit.",
+        "zh": "SerumRNN 将合成器编程建模为一系列参数编辑，使从目标声音到可复现预设的操作路径更加明确。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2104.03876"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1007/978-3-030-72914-1_15"
+        },
+        {
+          "label": "project",
+          "url": "https://bit.ly/serum_rnn"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://bit.ly/serum_rnn"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2102-03170",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2102.03170"
+      },
+      "shortName": "White-box VST",
+      "title": "White-box Audio VST Effect Programming",
+      "authors": [
+        "Christopher Mitcheltree",
+        "Hideki Koike"
+      ],
+      "year": 2020,
+      "published": "2021-02-05",
+      "venue": "NeurIPS 2020 ML for Creativity and Design Workshop",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis",
+        "track"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "This work predicts editable VST synthesizer parameters from target audio in a white-box setting and studies the effect of sequential parameter programming.",
+        "zh": "该工作在白盒设置下从目标音频预测可编辑 VST 合成器参数，并研究逐步参数编程的效果。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2102.03170"
+        },
+        {
+          "label": "project",
+          "url": "https://bit.ly/serum_rnn"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://bit.ly/serum_rnn"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2006-09833",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2006.09833"
+      },
+      "shortName": "Controllable Piano GM-VAE",
+      "title": "Generative Modelling for Controllable Audio Synthesis of Expressive Piano Performance",
+      "authors": [
+        "Hao Hao Tan",
+        "Yin-Jyun Luo",
+        "Dorien Herremans"
+      ],
+      "year": 2020,
+      "published": "2020-06-16",
+      "venue": "ICML 2020 ML4MD Workshop",
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "A Gaussian-mixture VAE renders piano audio from symbolic input while exposing time-varying articulation and dynamics controls for performance style morphing.",
+        "zh": "该高斯混合 VAE 从符号输入渲染钢琴音频，并通过时变奏法与力度控制实现演奏风格渐变。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2006.09833"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/gudgud96/piano-synthesis"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/gudgud96/piano-synthesis"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "ismir-2019-virtuosonet",
+      "source": {
+        "type": "proceedings",
+        "id": "ismir-2019-000112"
+      },
+      "shortName": "VirtuosoNet",
+      "title": "VirtuosoNet: A Hierarchical RNN-based System for Modeling Expressive Piano Performance",
+      "authors": [
+        "Dasaem Jeong",
+        "Taegyun Kwon",
+        "Yoojin Kim",
+        "Kyungu Lee",
+        "Juhan Nam"
+      ],
+      "year": 2019,
+      "published": "2019-11-04",
+      "venue": "ISMIR 2019",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "VirtuosoNet established a widely reused hierarchical baseline for expressive performance rendering and provides maintained inference code and pretrained models.",
+          "zh": "VirtuosoNet 建立了被广泛复用的层级式表现力演奏基线，并提供持续维护的推理代码和预训练模型。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "VirtuosoNet models note-, beat-, and measure-level score structure to generate expressive piano performances from symbolic scores.",
+        "zh": "VirtuosoNet 对音符、拍和小节层级的乐谱结构建模，从符号乐谱生成具有表现力的钢琴演奏。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://archives.ismir.net/ismir2019/paper/000112.pdf"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/jdasam/virtuosoNet"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/dasaem/virtuosonet"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/jdasam/virtuosoNet"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "ismir-2019-cvrnn-performance",
+      "source": {
+        "type": "proceedings",
+        "id": "ismir-2019-000105"
+      },
+      "shortName": "CVRNN-Performance",
+      "title": "Rendering Music Performance With Interpretation Variations Using Conditional Variational RNN",
+      "authors": [
+        "Akira Maezawa",
+        "Kazuhiko Yamamoto",
+        "Takuya Fujishima"
+      ],
+      "year": 2019,
+      "published": "2019-11-04",
+      "venue": "ISMIR 2019",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "A conditional variational recurrent model generates multiple plausible expressive interpretations of the same score instead of a single deterministic performance.",
+        "zh": "该条件变分循环模型为同一份乐谱生成多种合理的表现力诠释，而非单一确定性演奏。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://archives.ismir.net/ismir2019/paper/000105.pdf"
+        },
+        {
+          "label": "project",
+          "url": "https://sites.google.com/view/cvrnn-performance-render"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://sites.google.com/view/cvrnn-performance-render"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-1907-00971",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:1907.00971"
+      },
+      "shortName": "Flow Synthesizer",
+      "title": "Universal Audio Synthesizer Control with Normalizing Flows",
+      "authors": [
+        "Philippe Esling",
+        "Naotake Masuda",
+        "Adrien Bardet",
+        "Romeo Despres",
+        "Axel Chemla-Romeu-Santos"
+      ],
+      "year": 2019,
+      "published": "2019-07-01",
+      "venue": "DAFx 2019",
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Flow Synthesizer introduced a reusable probabilistic control space across heterogeneous synthesizers and released code, data preparation, pretrained models, and interactive demonstrations.",
+          "zh": "Flow Synthesizer 在异构合成器之间建立可复用概率控制空间，并公开代码、数据准备、预训练模型和交互演示。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "A normalizing-flow latent space maps audio descriptors to parameters across several synthesizer families, supporting interpolation and cross-instrument control.",
+        "zh": "该工作使用归一化流潜空间在多类合成器之间映射音频描述与参数，支持插值和跨乐器控制。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1907.00971"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/acids-ircam/flow_synthesizer"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/acids-ircam/flow_synthesizer"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "icml-2019-graph-score-performance",
+      "source": {
+        "type": "proceedings",
+        "id": "pmlr-v97-jeong19a"
+      },
+      "shortName": "VirtuosoNet-GNN",
+      "title": "Graph Neural Network for Music Score Data and Modeling Expressive Piano Performance",
+      "authors": [
+        "Dasaem Jeong",
+        "Taegyun Kwon",
+        "Yoojin Kim",
+        "Juhan Nam"
+      ],
+      "year": 2019,
+      "published": "2019-05-24",
+      "venue": "ICML 2019",
+      "areas": [
+        "symbolic-performance",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "This work represents music scores as graphs and predicts expressive piano timing, dynamics, and articulation from structured score context.",
+        "zh": "该工作将乐谱表示为图结构，并根据结构化乐谱上下文预测钢琴演奏的时值、力度和奏法。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://proceedings.mlr.press/v97/jeong19a.html"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/jdasam/virtuosoNet"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/jdasam/virtuosoNet"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-1812-06349",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:1812.06349"
+      },
+      "shortName": "InverSynth",
+      "title": "InverSynth: Deep Estimation of Synthesizer Parameter Configurations from Audio Signals",
+      "authors": [
+        "Oren Barkan",
+        "David Tsiris",
+        "Ori Katz",
+        "Noam Koenigstein"
+      ],
+      "year": 2019,
+      "published": "2018-12-15",
+      "venue": "IEEE/ACM TASLP",
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "InverSynth estimates synthesizer parameter configurations from target audio, framing sound matching as structured inverse control rather than waveform generation.",
+        "zh": "InverSynth 从目标音频估计合成器参数配置，将音色匹配表述为结构化逆向控制而非波形生成。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1812.06349"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": null
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-1811-04357",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:1811.04357"
+      },
+      "shortName": "PerformanceNet",
+      "title": "PerformanceNet: Score-to-Audio Music Generation with Multi-Band Convolutional Residual Network",
+      "authors": [
+        "Bryan Wang",
+        "Yi-Hsuan Yang"
+      ],
+      "year": 2019,
+      "published": "2018-11-11",
+      "venue": "AAAI 2019",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "PerformanceNet directly renders symbolic piano scores to audio with a multi-band convolutional residual network, jointly learning performance and synthesis characteristics.",
+        "zh": "PerformanceNet 使用多频带卷积残差网络将符号钢琴乐谱直接渲染为音频，同时学习演奏与合成特征。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/1811.04357"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/bwang514/PerformanceNet"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/bwang514/PerformanceNet"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
     }
   ]
 }
