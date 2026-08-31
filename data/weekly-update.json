@@ -1,42 +1,42 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-08-27",
+  "publishedAt": "2026-08-31",
   "counts": {
-    "papers": 43,
-    "projects": 32,
-    "datasets": 11
+    "papers": 5,
+    "projects": 0,
+    "datasets": 0
   },
   "headline": {
-    "en": "Spatial audio is now part of the index",
-    "zh": "空间音频正式加入索引"
+    "en": "Spatial audio advances, polygon synthesis, and agentic post-production",
+    "zh": "空间音频、多边形合成与智能后期制作新进展"
   },
   "summary": {
-    "en": "This update adds 43 papers, 32 open-source projects, and 11 datasets spanning binaural generation, Ambisonics production, HRTF personalization, and spatial evaluation. You can now move from a research topic to its code and data without searching across separate lists.",
-    "zh": "这次更新补充了 43 篇论文、32 个开源项目和 11 个数据集，覆盖双耳生成、Ambisonics 制作、HRTF 个性化和空间音频评测。现在从研究方向出发，就能顺着索引找到对应代码和数据，不用再分散搜索。"
+    "en": "This week's additions include three spatial audio systems (a causal vocoder, a visual-guided renderer, and an Ambisonics encoder), a generalized polygonal oscillator, and a framework for agentic music post-production. Practical value ranges from real-time spatial audio generation to robust room impulse response encoding and scalable editing data.",
+    "zh": "本周新增内容涵盖三个空间音频系统（因果声码器、视觉引导渲染器和 Ambisonics 编码器）、一个通用多边形振荡器以及一个智能音乐后期制作框架。实际价值包括实时空间音频生成、鲁棒的房间冲击响应编码和可扩展的编辑数据。"
   },
   "highlights": [
     {
-      "type": "project",
-      "id": "tu-studio-iempluginsuite",
+      "type": "paper",
+      "id": "arxiv-2608-25404",
       "note": {
-        "en": "IEM Plug-in Suite is a practical Ambisonics toolkit for encoding, rotating, visualizing, reverberating, and decoding spatial mixes.",
-        "zh": "IEM Plug-in Suite 是一套可以直接用于 Ambisonics 制作的插件，覆盖编码、旋转、可视化、混响和解码。"
+        "en": "CSAVocoder enables real-time spatial audio generation from mel-spectrograms with a causal GAN and spatial consistency discriminator.",
+        "zh": "CSAVocoder 利用因果 GAN 和空间一致性判别器实现从梅尔频谱图实时生成空间音频。"
       }
     },
     {
-      "type": "project",
-      "id": "yongyizang-ambisonizer",
+      "type": "paper",
+      "id": "arxiv-2608-24579",
       "note": {
-        "en": "Ambisonizer shows how neural upmixing can turn lower-channel audio into an Ambisonics representation.",
-        "zh": "Ambisonizer 展示了如何用神经网络把较少声道的音频上混成 Ambisonics 表征。"
+        "en": "Introduces YT-SPEECH dataset and a Localizer-Renderer framework for visually-guided spatial audio from 360-degree video and omnidirectional audio.",
+        "zh": "提出了 YT-SPEECH 数据集和定位器-渲染器框架，从360度视频和全向音频生成视觉引导的空间音频。"
       }
     },
     {
-      "type": "dataset",
-      "id": "bewo-1m",
+      "type": "paper",
+      "id": "arxiv-2607-19605",
       "note": {
-        "en": "BEWO-1M provides more than one million audio-text pairs with explicit source-motion information for spatial generation research.",
-        "zh": "BEWO-1M 提供超过一百万组音频文本对，并带有明确的声源运动信息，适合空间音频生成研究。"
+        "en": "RIME uses POEMS to generate paired edit-instruction data, enabling large-scale agentic music post-production and evaluation of multimodal LLMs.",
+        "zh": "RIME 利用 POEMS 生成配对编辑指令数据，支持大规模智能体音乐后期制作并评估多模态大语言模型。"
       }
     }
   ]
