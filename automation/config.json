@@ -21,7 +21,7 @@
     },
     {
       "name": "effect-representation",
-      "query": "(all:\"audio effect representation\" OR all:\"audio effects representation\" OR all:\"production style representation\")"
+      "query": "(all:\"audio effect representation\" OR all:\"audio effects representation\" OR all:\"production style representation\" OR all:\"DSP effects code\")"
     },
     {
       "name": "mastering",
@@ -42,6 +42,18 @@
     {
       "name": "production-tool-control",
       "query": "(all:\"music post-production\" OR all:\"audio post-production\") AND (all:tool OR all:agent OR all:language OR all:control)"
+    },
+    {
+      "name": "symbolic-performance-rendering",
+      "query": "(all:\"expressive performance synthesis\" OR all:\"performance rendering\" OR all:\"score to audio\" OR all:\"MIDI to audio\") AND (all:music OR all:piano OR all:instrument)"
+    },
+    {
+      "name": "production-program-graph",
+      "query": "(all:\"production program\" OR all:\"audio processing graph\" OR all:\"effect graph\" OR all:\"synthesizer graph\") AND (all:audio OR all:music OR all:synthesis)"
+    },
+    {
+      "name": "daw-agent-interaction",
+      "query": "(all:\"digital audio workstation\" OR all:DAW) AND (all:agent OR all:assistant OR all:interaction OR all:language OR all:editing)"
     },
     {
       "name": "spatial-audio-generation",

@@ -51,6 +51,9 @@ def paper():
         "areas": ["audio-effects"],
         "controlApproaches": [],
         "trackScopes": ["single-track"],
+        "topics": ["production-program"],
+        "productionStages": ["track"],
+        "outputTypes": ["parameter"],
         "aiAssessment": {
             "rating": "standard",
             "rationale": {"en": "", "zh": ""},
@@ -196,6 +199,7 @@ class ResourceMergeTests(unittest.TestCase):
         self.assertEqual(completed["resourceReview"]["status"], "source")
         self.assertIn({"label": "source", "url": "https://github.com/team/methodfx"}, completed["links"])
         self.assertEqual(projects["projects"][0]["relations"]["paperIds"], [record["id"]])
+        self.assertEqual(projects["projects"][0]["taxonomy"]["tasks"], ["production-program"])
         self.assertEqual(projects["projects"][0]["license"]["spdx"], "MIT")
         self.assertEqual(updated_additions["addedProjectCount"], 1)
         self.assertEqual(updated_additions["projects"][0]["id"], "team-methodfx")

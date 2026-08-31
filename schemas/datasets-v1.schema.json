@@ -40,7 +40,9 @@
         "mixing",
         "mastering",
         "evaluation",
-        "spatial-audio"
+        "spatial-audio",
+        "symbolic-performance",
+        "production-program"
       ]
     },
     "task": {
@@ -59,7 +61,13 @@
         "spatial-mixing",
         "spatial-rendering",
         "hrtf-personalization",
-        "spatial-evaluation"
+        "spatial-evaluation",
+        "symbolic-performance",
+        "performance-rendering",
+        "production-program",
+        "production-graph",
+        "daw-interaction",
+        "agentic-production"
       ]
     },
     "effect": {

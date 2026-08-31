@@ -24,12 +24,13 @@ class LandingStatsTests(unittest.TestCase):
             self.assertIsNotNone(match, f"missing static count: {element_id}")
             self.assertEqual(int(match.group(1)), count, f"stale static count: {element_id}")
 
-    def test_spatial_field_map_links_to_filtered_papers(self):
+    def test_field_map_links_to_filtered_papers(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertRegex(
-            html,
-            r'<a class="field-map-link" href="#papers" data-paper-area="spatial-audio">',
-        )
+        for area in ("spatial-audio", "symbolic-performance", "production-program"):
+            self.assertRegex(
+                html,
+                rf'<a class="field-map-link" href="#papers" data-paper-area="{area}">',
+            )
 
     def test_weekly_update_appears_before_field_map(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")

@@ -17,7 +17,7 @@ Consumers should inspect the top-level `schemaVersion` before processing a catal
 
 ## Papers v1
 
-New agent-curated records use `templateVersion: 1` as a completeness contract. These records always include a non-empty `shortName`, authoritative paper link, bilingual summary, area and method classifications, AI assessment, citation-impact state, and a completed GitHub resource review. `resourceReview.status` is `source`, `project-page`, or `not-found`; the last state means the automated evidence search completed without finding a repository that passed identity verification. A source match must also appear in the project catalogue, while a documentation-only repository remains a paper-level project-page link.
+New agent-curated records use `templateVersion: 1` as a completeness contract. These records always include a non-empty `shortName`, authoritative paper link, bilingual summary, area and method classifications, topic, production-stage and output-type arrays, AI assessment, citation-impact state, and a completed GitHub resource review. `resourceReview.status` is `source`, `project-page`, or `not-found`; the last state means the automated evidence search completed without finding a repository that passed identity verification. A source match must also appear in the project catalogue, while a documentation-only repository remains a paper-level project-page link.
 
 The resource scout fails the weekly job when GitHub search itself is unavailable. It therefore never converts an API failure into `not-found`, and incomplete resource checks cannot enter a review pull request.
 
@@ -39,6 +39,16 @@ Paper records also include a `trackScopes` array:
 | `multitrack` | The method jointly consumes or processes multiple separately available tracks or stems. |
 
 A mixing-related method is not automatically `multitrack`: the paper must explicitly use separately available tracks or stems. Both identifiers may be present when both operating modes are supported; an empty array means the scope is not applicable or not sufficiently clear.
+
+Paper records may additionally map an editable production chain through three arrays:
+
+| Field | Allowed identifiers |
+| --- | --- |
+| `topics` | `symbolic-performance`, `performance-rendering`, `production-program`, `production-graph`, `daw-interaction`, `agentic-production` |
+| `productionStages` | `score`, `performance`, `synthesis`, `track`, `mix`, `project` |
+| `outputTypes` | `audio`, `parameter`, `graph`, `edit`, `project` |
+
+These labels describe where a method operates and what editable artifact it produces. They are intentionally not applied to generic text-to-music systems without an explicit staged production or editing contribution. Empty arrays mean that the classification is not applicable or not supported by sufficient evidence.
 
 ### Recognition metadata
 
@@ -90,7 +100,7 @@ An `identified` status is metadata, not legal advice. `BSD` remains without an S
 
 Reviewed taxonomy entries use:
 
-- `tasks`: production or research capabilities such as automatic mixing, effect transfer, mastering, differentiable processing, spatial generation, spatial mixing, spatial rendering, HRTF personalization, or spatial evaluation;
+- `tasks`: production or research capabilities such as automatic mixing, effect transfer, mastering, differentiable processing, symbolic performance, performance rendering, production programs or graphs, DAW interaction, agentic production, spatial generation, spatial mixing, spatial rendering, HRTF personalization, or spatial evaluation;
 - `effects`: processor families explicitly supported by the first-party project evidence;
 - `reviewStatus`: `reviewed` only when at least one task or effect tag is supported by evidence;
 - `evidence`: direct HTTPS evidence URLs for the reviewed taxonomy claim.

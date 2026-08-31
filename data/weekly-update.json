@@ -2,41 +2,41 @@
   "schemaVersion": 1,
   "publishedAt": "2026-08-31",
   "counts": {
-    "papers": 5,
-    "projects": 1,
+    "papers": 6,
+    "projects": 6,
     "datasets": 0
   },
   "headline": {
-    "en": "Spatial audio advances, polygon synthesis, and agentic post-production",
-    "zh": "空间音频、多边形合成与智能后期制作新进展"
+    "en": "From musical scores to editable DAW projects",
+    "zh": "从乐谱表演到可编辑 DAW 工程"
   },
   "summary": {
-    "en": "This week's additions include five papers spanning spatial audio, polygon synthesis, and agentic post-production, plus one verified implementation for the arbitrary polygon oscillator. CSAVocoder also has a public project page, but no source code is available there yet.",
-    "zh": "本周新增 5 篇论文，涵盖空间音频、多边形合成与智能后期制作，并核验收录了任意多边形振荡器的开源实现。CSAVocoder 目前已有公开项目页，但其中尚未发布源码。"
+    "en": "This update adds six papers and their public implementations across editable performance rendering, production graphs, and DAW interaction. Together they connect score, expressive performance, synthesis, effect processing, and project-level editing instead of treating music production as a single generation step.",
+    "zh": "本次新增 6 篇论文及其公开实现，覆盖可编辑表演渲染、制作流程图和 DAW 交互。它们把乐谱、表现力演奏、声音合成、音效处理与工程级编辑串联起来，而不是把音乐制作简化为一次性生成。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2608-25404",
+      "id": "arxiv-2112-09312",
       "note": {
-        "en": "CSAVocoder enables real-time spatial audio generation from mel-spectrograms with a causal GAN and spatial consistency discriminator.",
-        "zh": "CSAVocoder 利用因果 GAN 和空间一致性判别器实现从梅尔频谱图实时生成空间音频。"
+        "en": "MIDI-DDSP separates note, performance, and synthesis controls so musicians can edit each production stage independently.",
+        "zh": "MIDI-DDSP 将音符、演奏表现和声音合成拆成独立层级，让音乐人可以逐阶段编辑。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2608-24579",
+      "id": "arxiv-2507-10534",
       "note": {
-        "en": "Introduces YT-SPEECH dataset and a Localizer-Renderer framework for visually-guided spatial audio from 360-degree video and omnidirectional audio.",
-        "zh": "提出了 YT-SPEECH 数据集和定位器-渲染器框架，从360度视频和全向音频生成视觉引导的空间音频。"
+        "en": "WildFX uses a real DAW and plug-in ecosystem to build complex effect-graph data with sidechains, crossovers, and project metadata.",
+        "zh": "WildFX 借助真实 DAW 和插件生态生成复杂音效图数据，并支持侧链、分频与工程元数据。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2607-19605",
+      "id": "arxiv-2608-18226",
       "note": {
-        "en": "RIME uses POEMS to generate paired edit-instruction data, enabling large-scale agentic music post-production and evaluation of multimodal LLMs.",
-        "zh": "RIME 利用 POEMS 生成配对编辑指令数据，支持大规模智能体音乐后期制作并评估多模态大语言模型。"
+        "en": "SynAPSE represents synthesizer presets as signal-flow graphs and aligns them with audio in a shared embedding space.",
+        "zh": "SynAPSE 将合成器预设表示为信号流图，并与音频对齐到共享表征空间。"
       }
     }
   ]

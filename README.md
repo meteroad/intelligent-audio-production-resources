@@ -1,10 +1,10 @@
 # Intelligent Audio Production Resources
 
-A curated, bilingual research index covering audio effects, differentiable processing, representation learning, automatic mixing, mastering, spatial audio, and evaluation.
+A curated, bilingual research index covering audio effects, differentiable processing, representation learning, staged performance rendering, production programs, automatic mixing, mastering, spatial audio, and evaluation.
 
 [Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-**119 papers · 73 verified projects · 23 datasets · 3 reference collections**
+**125 papers · 79 verified projects · 23 datasets · 3 reference collections**
 
 [![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
 
@@ -12,7 +12,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 
 | Collection | Included information |
 | --- | --- |
-| Papers | Formal venues, paper and DOI links, bilingual summaries, control approaches, track scopes, and associated open resources |
+| Papers | Formal venues, paper and DOI links, bilingual summaries, production stages, output types, method classifications, and associated open resources |
 | Projects | Source, checkpoint, inference, training, dataset, license, taxonomy, related-paper evidence, and last-verification dates |
 | Datasets | Contents, access conditions, data licenses, scale, and evidence-backed links to papers and projects that use each dataset |
 | Reference resources | Field bibliographies and research guides kept separate from runnable implementations |
@@ -23,6 +23,8 @@ The index is organized by production task rather than publication year. It curre
 - audio effects modeling, estimation, control, transfer, and removal;
 - differentiable DSP, effect chains, and processing graphs;
 - effect and production-style representation learning;
+- editable symbolic performance and performance-to-audio rendering;
+- production programs, processing graphs, DAW interaction, and agentic editing;
 - automatic, reference-guided, and controllable mixing;
 - mastering and remastering;
 - benchmarks, metrics, datasets, and reproducibility tools;
@@ -64,7 +66,7 @@ See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and 
 
 ## Automation
 
-The weekly paper scout searches arXiv, verifies related GitHub resources, screens candidates with a configured language model, and writes complete paper records with short names, bilingual summaries, classifications, AI assessments, publication metadata, and resource-review results. Verified source repositories create linked project records; documentation-only pages are kept distinct from source code. The workflow then refreshes DOI, venue, and citation metadata, writes a concise bilingual update, validates every relation, and opens a reviewable pull request. It does not publish unreviewed candidates or generated summaries directly.
+The weekly paper scout searches arXiv, verifies related GitHub resources, screens candidates with a configured language model, and writes complete paper records with short names, bilingual summaries, production stages, output types, classifications, AI assessments, publication metadata, and resource-review results. Verified source repositories create linked project records; documentation-only pages are kept distinct from source code. The workflow then refreshes DOI, venue, and citation metadata, writes a concise bilingual update, validates every relation, and opens a reviewable pull request. It does not publish unreviewed candidates or generated summaries directly.
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
 
@@ -76,6 +78,7 @@ See [automation/README.md](automation/README.md) for configuration and review ru
 - [x] Link datasets to verified papers and open-source projects that use them.
 - [ ] Audit historical coverage across effect modeling, parameter estimation, representation learning, mixing, and mastering.
 - [x] Add a focused spatial-audio production taxonomy and initial evidence-backed catalogue.
+- [ ] Recheck PEACE (joint DSP-effects code and audio embeddings) when a verifiable paper or preprint becomes public.
 
 ### Reproducibility and quality
 

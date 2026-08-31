@@ -923,6 +923,75 @@
       ]
     },
     {
+      "id": "soysaucewaso-dawzy",
+      "name": "DAWZY",
+      "description": {
+        "en": "Open REAPER assistant that turns natural-language requests into reversible, state-aware DAW edits through ReaScript and MCP tools.",
+        "zh": "通过 ReaScript 与 MCP 工具把自然语言请求转换为可撤销、可感知工程状态的 REAPER 编辑操作。"
+      },
+      "areas": [
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "production-program",
+          "daw-interaction",
+          "agentic-production"
+        ],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/soysaucewaso/DAWZY/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/soysaucewaso/DAWZY"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/soysaucewaso/DAWZY/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2512-03289"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/soysaucewaso/DAWZY"
+        }
+      ]
+    },
+    {
       "id": "magenta-ddsp",
       "name": "DDSP",
       "description": {
@@ -3201,6 +3270,93 @@
       ]
     },
     {
+      "id": "magenta-midi-ddsp",
+      "name": "MIDI-DDSP",
+      "description": {
+        "en": "Official implementation of the editable note-performance-synthesis hierarchy, with training code, command-line synthesis, demos, and pretrained weights.",
+        "zh": "可编辑音符、演奏、合成三层结构的官方实现，包含训练代码、命令行合成、演示和预训练权重。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "differentiable-processing"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "performance-rendering",
+          "differentiable-processing"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/magenta/midi-ddsp/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/magenta/midi-ddsp/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {"status": "linked", "evidence": ["https://github.com/magenta/midi-ddsp"]},
+        "checkpoint": {"status": "linked", "evidence": ["https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"]},
+        "inference": {"status": "documented", "evidence": ["https://github.com/magenta/midi-ddsp/blob/main/README.md"]},
+        "training": {"status": "documented", "evidence": ["https://github.com/magenta/midi-ddsp/blob/main/README.md"]},
+        "dataset": {"status": "documented", "evidence": ["https://github.com/magenta/midi-ddsp/blob/main/README.md"]}
+      },
+      "relations": {
+        "paperIds": ["arxiv-2112-09312"],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {"label": "source", "url": "https://github.com/magenta/midi-ddsp"},
+        {"label": "checkpoint", "url": "https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"}
+      ]
+    },
+    {
+      "id": "nii-yamagishilab-midi-valle",
+      "name": "MIDI-VALLE",
+      "description": {
+        "en": "Official expressive piano performance MIDI-to-audio implementation with training and inference recipes plus downloadable pretrained models.",
+        "zh": "表情钢琴演奏 MIDI 到音频的官方实现，提供训练与推理流程以及可下载预训练模型。"
+      },
+      "areas": ["symbolic-performance"],
+      "taxonomy": {
+        "tasks": ["symbolic-performance", "performance-rendering"],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {"status": "linked", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE"]},
+        "checkpoint": {"status": "linked", "evidence": ["https://zenodo.org/records/15976272"]},
+        "inference": {"status": "documented", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]},
+        "training": {"status": "documented", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]},
+        "dataset": {"status": "documented", "evidence": ["https://github.com/nii-yamagishilab/MIDI-VALLE/blob/main/README.md"]}
+      },
+      "relations": {
+        "paperIds": ["arxiv-2507-08530"],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {"label": "source", "url": "https://github.com/nii-yamagishilab/MIDI-VALLE"},
+        {"label": "checkpoint", "url": "https://zenodo.org/records/15976272"}
+      ]
+    },
+    {
       "id": "f90-mix-wave-u-net",
       "name": "Mix-Wave-U-Net",
       "description": {
@@ -3992,6 +4148,44 @@
       ]
     },
     {
+      "id": "tangjjbetsy-s2a",
+      "name": "S2A",
+      "description": {
+        "en": "Official two-stage score-to-performance and performance-to-audio system with code, checkpoints, Colab inference, and evaluation tools.",
+        "zh": "乐谱到演奏、演奏到音频两阶段系统的官方实现，提供代码、权重、Colab 推理和评测工具。"
+      },
+      "areas": ["symbolic-performance"],
+      "taxonomy": {
+        "tasks": ["symbolic-performance", "performance-rendering"],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/tangjjbetsy/S2A/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {"status": "linked", "evidence": ["https://github.com/tangjjbetsy/S2A"]},
+        "checkpoint": {"status": "linked", "evidence": ["https://zenodo.org/records/15524693"]},
+        "inference": {"status": "documented", "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]},
+        "training": {"status": "documented", "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]},
+        "dataset": {"status": "documented", "evidence": ["https://github.com/tangjjbetsy/S2A/blob/main/README.md"]}
+      },
+      "relations": {
+        "paperIds": ["arxiv-2501-10222"],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {"label": "source", "url": "https://github.com/tangjjbetsy/S2A"},
+        {"label": "checkpoint", "url": "https://zenodo.org/records/15524693"}
+      ]
+    },
+    {
       "id": "int0thewind-s4-dynamic-range-compressor",
       "name": "S4-DRC",
       "description": {
@@ -4778,6 +4972,44 @@
       ]
     },
     {
+      "id": "dbraun-synapse",
+      "name": "SynAPSE",
+      "description": {
+        "en": "Joint DX7 audio-preset embedding package with graph-based parameter encoders, an interactive demo, and pretrained Safetensors models.",
+        "zh": "DX7 音频与预设共享表征工具，提供图参数编码器、交互演示和 Safetensors 预训练模型。"
+      },
+      "areas": ["audio-effects", "representation", "production-program"],
+      "taxonomy": {
+        "tasks": ["representation-learning", "production-program", "production-graph"],
+        "effects": ["other"],
+        "reviewStatus": "reviewed",
+        "evidence": ["https://github.com/DBraun/SynAPSE/blob/main/README.md"]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/DBraun/SynAPSE/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {"status": "linked", "evidence": ["https://github.com/DBraun/SynAPSE"]},
+        "checkpoint": {"status": "linked", "evidence": ["https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"]},
+        "inference": {"status": "documented", "evidence": ["https://github.com/DBraun/SynAPSE/blob/main/README.md"]},
+        "training": {"status": "not-found", "evidence": []},
+        "dataset": {"status": "not-reviewed", "evidence": []}
+      },
+      "relations": {
+        "paperIds": ["arxiv-2608-18226"],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {"label": "source", "url": "https://github.com/DBraun/SynAPSE"},
+        {"label": "checkpoint", "url": "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"}
+      ]
+    },
+    {
       "id": "anniejchu-text2fx",
       "name": "Text2FX",
       "description": {
@@ -5086,6 +5318,43 @@
           "label": "source",
           "url": "https://github.com/jaeyeonkim99/visage"
         }
+      ]
+    },
+    {
+      "id": "isaacyqh-wildfx",
+      "name": "WildFX",
+      "description": {
+        "en": "Containerized REAPER pipeline for generating multitrack audio datasets with heterogeneous VST, VST3, LV2, or CLAP effect graphs and project metadata.",
+        "zh": "基于 REAPER 的容器化多轨数据生成流程，支持异构 VST、VST3、LV2、CLAP 效果图与工程元数据。"
+      },
+      "areas": ["audio-effects", "mixing", "production-program"],
+      "taxonomy": {
+        "tasks": ["automatic-mixing", "production-program", "production-graph"],
+        "effects": ["multi-effect"],
+        "reviewStatus": "reviewed",
+        "evidence": ["https://github.com/IsaacYQH/WildFX/blob/main/README.md"]
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {"status": "linked", "evidence": ["https://github.com/IsaacYQH/WildFX"]},
+        "checkpoint": {"status": "not-applicable", "evidence": []},
+        "inference": {"status": "not-applicable", "evidence": []},
+        "training": {"status": "not-applicable", "evidence": []},
+        "dataset": {"status": "documented", "evidence": ["https://github.com/IsaacYQH/WildFX/blob/main/README.md"]}
+      },
+      "relations": {
+        "paperIds": ["arxiv-2507-10534"],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-08-31",
+      "links": [
+        {"label": "source", "url": "https://github.com/IsaacYQH/WildFX"}
       ]
     }
   ]

@@ -103,6 +103,9 @@ class CurationTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["single-track"],
+                    "topics": [],
+                    "productionStages": [],
+                    "outputTypes": [],
                     "aiAssessment": {
                         "rating": "highlighted",
                         "rationale": {
@@ -120,6 +123,9 @@ class CurationTests(unittest.TestCase):
         self.assertEqual(validated["decisions"][0]["areas"], [])
         self.assertEqual(validated["decisions"][0]["controlApproaches"], [])
         self.assertEqual(validated["decisions"][0]["trackScopes"], [])
+        self.assertEqual(validated["decisions"][0]["topics"], [])
+        self.assertEqual(validated["decisions"][0]["productionStages"], [])
+        self.assertEqual(validated["decisions"][0]["outputTypes"], [])
         self.assertIsNone(validated["decisions"][0]["shortName"])
         self.assertEqual(
             validated["decisions"][0]["aiAssessment"],
@@ -141,6 +147,9 @@ class CurationTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["ordinary-training"],
                     "trackScopes": ["single-track"],
+                    "topics": [],
+                    "productionStages": [],
+                    "outputTypes": [],
                     "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
@@ -167,6 +176,9 @@ class CurationTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["stereo"],
+                    "topics": [],
+                    "productionStages": [],
+                    "outputTypes": [],
                     "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",
@@ -177,6 +189,35 @@ class CurationTests(unittest.TestCase):
             ],
         }
         with self.assertRaisesRegex(ValueError, "Invalid track scopes"):
+            curate_papers.validate_review(review, candidates)
+
+    def test_review_rejects_unknown_production_topic(self):
+        candidate = discover_papers.parse_feed(ARXIV_FEED, "audio-effects")[0]
+        candidates = {"generatedAt": "2026-08-25T10:00:00", "candidates": [candidate]}
+        review = {
+            "reviewedAt": "model-generated-value-is-ignored",
+            "decisions": [
+                {
+                    "sourceId": "arxiv:2608.12345",
+                    "decision": "include",
+                    "confidence": "high",
+                    "shortName": "Neural Audio Effect",
+                    "areas": ["audio-effects"],
+                    "controlApproaches": [],
+                    "trackScopes": ["single-track"],
+                    "topics": ["text-to-music"],
+                    "productionStages": ["track"],
+                    "outputTypes": ["audio"],
+                    "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
+                    "summary": {
+                        "en": "Introduces a neural audio effect intended for music production workflows.",
+                        "zh": "提出一种面向音乐制作流程的神经音频效果器。",
+                    },
+                    "reason": "The abstract states a direct production contribution.",
+                }
+            ],
+        }
+        with self.assertRaisesRegex(ValueError, "Invalid topics"):
             curate_papers.validate_review(review, candidates)
 
 
@@ -297,6 +338,9 @@ class MergeTests(unittest.TestCase):
                     "areas": ["audio-effects"],
                     "controlApproaches": ["direct-prediction"],
                     "trackScopes": ["single-track"],
+                    "topics": ["production-program", "daw-interaction"],
+                    "productionStages": ["track", "project"],
+                    "outputTypes": ["edit", "project"],
                     "aiAssessment": {
                         "rating": "highlighted",
                         "rationale": {
@@ -321,6 +365,9 @@ class MergeTests(unittest.TestCase):
         self.assertEqual(merged["papers"][0]["curation"], "agent")
         self.assertEqual(merged["papers"][0]["controlApproaches"], ["direct-prediction"])
         self.assertEqual(merged["papers"][0]["trackScopes"], ["single-track"])
+        self.assertEqual(merged["papers"][0]["topics"], ["production-program", "daw-interaction"])
+        self.assertEqual(merged["papers"][0]["productionStages"], ["track", "project"])
+        self.assertEqual(merged["papers"][0]["outputTypes"], ["edit", "project"])
         self.assertEqual(merged["papers"][0]["aiAssessment"]["rating"], "highlighted")
         self.assertEqual(merged["papers"][0]["impact"]["status"], "not-assessed")
         self.assertEqual(merged["papers"][0]["venue"], "ISMIR 2026")
@@ -347,6 +394,9 @@ class MergeTests(unittest.TestCase):
                             "areas": [],
                             "controlApproaches": [],
                             "trackScopes": [],
+                            "topics": [],
+                            "productionStages": [],
+                            "outputTypes": [],
                             "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                             "summary": {"en": "", "zh": ""},
                             "reason": "Not relevant.",
@@ -368,6 +418,9 @@ class MergeTests(unittest.TestCase):
                     "areas": ["audio-effects", "audio-effects"],
                     "controlApproaches": [],
                     "trackScopes": ["single-track"],
+                    "topics": [],
+                    "productionStages": [],
+                    "outputTypes": [],
                     "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
                     "summary": {
                         "en": "Introduces a neural audio effect intended for music production workflows.",

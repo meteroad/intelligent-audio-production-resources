@@ -69,10 +69,10 @@ def build_project(paper: dict, resource: dict, checked_at: str) -> dict:
         "description": project_description(paper),
         "areas": paper["areas"],
         "taxonomy": {
-            "tasks": [],
+            "tasks": paper.get("topics", []),
             "effects": [],
-            "reviewStatus": "not-reviewed",
-            "evidence": [],
+            "reviewStatus": "reviewed" if paper.get("topics") else "not-reviewed",
+            "evidence": [resource.get("readmeUrl") or source_url] if paper.get("topics") else [],
         },
         "license": resource["license"],
         "availability": {

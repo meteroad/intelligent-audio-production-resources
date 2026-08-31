@@ -22,6 +22,9 @@ EXPECTED_FIELDS = {
     "areas",
     "controlApproaches",
     "trackScopes",
+    "topics",
+    "productionStages",
+    "outputTypes",
     "aiAssessment",
     "summary",
     "reason",
@@ -34,6 +37,16 @@ ALLOWED_CONTROL_APPROACHES = {
     "direct-prediction",
 }
 ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
+ALLOWED_TOPICS = {
+    "symbolic-performance",
+    "performance-rendering",
+    "production-program",
+    "production-graph",
+    "daw-interaction",
+    "agentic-production",
+}
+ALLOWED_PRODUCTION_STAGES = {"score", "performance", "synthesis", "track", "mix", "project"}
+ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "edit", "project"}
 
 
 def load_json(path: Path) -> dict:
@@ -146,6 +159,27 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             or not set(track_scopes).issubset(ALLOWED_TRACK_SCOPES)
         ):
             raise ValueError(f"Invalid track scopes for {source_id}")
+        topics = decision.get("topics")
+        if (
+            not isinstance(topics, list)
+            or len(topics) != len(set(topics))
+            or not set(topics).issubset(ALLOWED_TOPICS)
+        ):
+            raise ValueError(f"Invalid topics for {source_id}")
+        production_stages = decision.get("productionStages")
+        if (
+            not isinstance(production_stages, list)
+            or len(production_stages) != len(set(production_stages))
+            or not set(production_stages).issubset(ALLOWED_PRODUCTION_STAGES)
+        ):
+            raise ValueError(f"Invalid production stages for {source_id}")
+        output_types = decision.get("outputTypes")
+        if (
+            not isinstance(output_types, list)
+            or len(output_types) != len(set(output_types))
+            or not set(output_types).issubset(ALLOWED_OUTPUT_TYPES)
+        ):
+            raise ValueError(f"Invalid output types for {source_id}")
         summary = decision.get("summary")
         if not isinstance(summary, dict) or set(summary) != {"en", "zh"}:
             raise ValueError(f"Invalid summary for {source_id}")
@@ -170,6 +204,9 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
             decision["areas"] = []
             decision["controlApproaches"] = []
             decision["trackScopes"] = []
+            decision["topics"] = []
+            decision["productionStages"] = []
+            decision["outputTypes"] = []
             decision["summary"] = {"en": "", "zh": ""}
             decision["aiAssessment"] = {"rating": "standard", "rationale": {"en": "", "zh": ""}}
 

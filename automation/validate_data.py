@@ -18,6 +18,8 @@ ALLOWED_AREAS = {
     "mastering",
     "evaluation",
     "spatial-audio",
+    "symbolic-performance",
+    "production-program",
 }
 ALLOWED_LINK_LABELS = {"paper", "project", "source", "checkpoint", "doi"}
 ALLOWED_DATASET_LINK_LABELS = {"dataset", "paper", "project", "source", "doi"}
@@ -38,6 +40,12 @@ ALLOWED_PROJECT_TASKS = {
     "spatial-rendering",
     "hrtf-personalization",
     "spatial-evaluation",
+    "symbolic-performance",
+    "performance-rendering",
+    "production-program",
+    "production-graph",
+    "daw-interaction",
+    "agentic-production",
 }
 ALLOWED_EFFECTS = {
     "gain",
@@ -58,9 +66,20 @@ ALLOWED_CONTROL_APPROACHES = {
     "direct-prediction",
 }
 ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
+ALLOWED_PAPER_TOPICS = {
+    "symbolic-performance",
+    "performance-rendering",
+    "production-program",
+    "production-graph",
+    "daw-interaction",
+    "agentic-production",
+}
+ALLOWED_PRODUCTION_STAGES = {"score", "performance", "synthesis", "track", "mix", "project"}
+ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "edit", "project"}
 AI_ASSESSMENT_RATINGS = {"highlighted", "standard"}
 IMPACT_STATUSES = {"high-impact", "standard", "too-recent", "not-assessed"}
 RESOURCE_REVIEW_STATUSES = {"source", "project-page", "not-found"}
+RESOURCE_REVIEW_PROVIDERS = {"github-search", "manual-web-review"}
 ALLOWED_DATASET_CONTENT_TYPES = {
     "multitrack",
     "stems",
@@ -416,6 +435,24 @@ def validate_papers(path: Path) -> int:
         require(isinstance(track_scopes, list), f"{paper_id}.trackScopes must be a list")
         require(len(track_scopes) == len(set(track_scopes)), f"{paper_id}.trackScopes contains duplicates")
         require(set(track_scopes).issubset(ALLOWED_TRACK_SCOPES), f"{paper_id}.trackScopes contains unknown values")
+        topics = paper.get("topics", [])
+        require(isinstance(topics, list), f"{paper_id}.topics must be a list")
+        require(len(topics) == len(set(topics)), f"{paper_id}.topics contains duplicates")
+        require(set(topics).issubset(ALLOWED_PAPER_TOPICS), f"{paper_id}.topics contains unknown values")
+        production_stages = paper.get("productionStages", [])
+        require(isinstance(production_stages, list), f"{paper_id}.productionStages must be a list")
+        require(
+            len(production_stages) == len(set(production_stages)),
+            f"{paper_id}.productionStages contains duplicates",
+        )
+        require(
+            set(production_stages).issubset(ALLOWED_PRODUCTION_STAGES),
+            f"{paper_id}.productionStages contains unknown values",
+        )
+        output_types = paper.get("outputTypes", [])
+        require(isinstance(output_types, list), f"{paper_id}.outputTypes must be a list")
+        require(len(output_types) == len(set(output_types)), f"{paper_id}.outputTypes contains duplicates")
+        require(set(output_types).issubset(ALLOWED_OUTPUT_TYPES), f"{paper_id}.outputTypes contains unknown values")
         validate_ai_assessment(paper.get("aiAssessment"), f"{paper_id}.aiAssessment")
         validate_impact(paper.get("impact"), f"{paper_id}.impact")
         validate_localized(paper.get("summary"), f"{paper_id}.summary")
@@ -429,6 +466,12 @@ def validate_papers(path: Path) -> int:
         template_version = paper.get("templateVersion")
         if template_version is not None:
             require(template_version == 1, f"{paper_id}.templateVersion is invalid")
+            require("topics" in paper, f"{paper_id}.topics is required by templateVersion 1")
+            require(
+                "productionStages" in paper,
+                f"{paper_id}.productionStages is required by templateVersion 1",
+            )
+            require("outputTypes" in paper, f"{paper_id}.outputTypes is required by templateVersion 1")
             require(paper.get("curation") == "agent", f"{paper_id} complete template requires agent curation")
             require(isinstance(short_name, str) and short_name.strip(), f"{paper_id} complete template requires shortName")
             review = paper.get("resourceReview")
@@ -440,7 +483,7 @@ def validate_papers(path: Path) -> int:
             status = review.get("status")
             require(status in RESOURCE_REVIEW_STATUSES, f"{paper_id}.resourceReview.status is invalid")
             validate_date(review.get("checkedAt"), f"{paper_id}.resourceReview.checkedAt")
-            require(review.get("provider") == "github-search", f"{paper_id}.resourceReview.provider is invalid")
+            require(review.get("provider") in RESOURCE_REVIEW_PROVIDERS, f"{paper_id}.resourceReview.provider is invalid")
             resource_url = review.get("url")
             if status == "not-found":
                 require(resource_url is None, f"{paper_id}.resourceReview.url must be null")

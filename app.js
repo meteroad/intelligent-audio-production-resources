@@ -1,7 +1,7 @@
 const translations = {
   en: {
     "meta.title": "Intelligent Audio Production Resources",
-    "meta.description": "A structured index of open resources and recent research for intelligent audio effects, mixing, mastering, spatial audio, and evaluation.",
+    "meta.description": "A structured index of open resources and recent research for intelligent audio effects, performance rendering, DAW interaction, mixing, mastering, spatial audio, and evaluation.",
     "nav.label": "Primary navigation",
     "nav.scope": "Scope",
     "nav.projects": "Projects",
@@ -35,6 +35,8 @@ const translations = {
     "scope.mastering": "Systems for loudness, dynamics, tonal balance, reference matching, and final-stage production.",
     "scope.evaluation": "Benchmarks, listening-test protocols, production metrics, and reproducibility tools.",
     "scope.spatialAudio": "Intelligent generation, upmixing, positioning, rendering, HRTF personalization, and evaluation for immersive production.",
+    "scope.symbolicPerformance": "Editable pipelines from symbolic scores to expressive performance and rendered audio.",
+    "scope.productionProgram": "Structured production programs, processing graphs, and state-aware interaction with digital audio workstations.",
     "scope.viewPapers": "View papers",
     "scope.noPapers": "No papers indexed yet",
     "projects.title": "Project index",
@@ -122,6 +124,9 @@ const translations = {
     "papers.areaFilter": "Filter papers by area",
     "papers.controlApproachFilter": "Filter papers by control approach",
     "papers.trackScopeFilter": "Filter papers by track scope",
+    "papers.topicFilter": "Filter papers by production topic",
+    "papers.productionStageFilter": "Filter papers by production stage",
+    "papers.outputTypeFilter": "Filter papers by output type",
     "papers.recognitionFilter": "Filter papers by recognition",
     "papers.loading": "Loading papers...",
     "papers.empty": "No papers match this filter.",
@@ -148,6 +153,9 @@ const translations = {
     "papers.resourceStatus.not-found": "No verified repository found",
     "papers.controlApproachesLabel": "Control approach",
     "papers.trackScopesLabel": "Track scope",
+    "papers.topicsLabel": "Production topics",
+    "papers.productionStagesLabel": "Production stages",
+    "papers.outputTypesLabel": "Output types",
     "controls.recognition": "Recognition",
     "controls.allRecognition": "All recognition",
     "recognition.aiHighlight": "AI Highlight",
@@ -182,6 +190,12 @@ const translations = {
     "controls.allControlApproaches": "All approaches",
     "controls.trackScope": "Track scope",
     "controls.allTrackScopes": "All track scopes",
+    "controls.topic": "Topic",
+    "controls.allTopics": "All topics",
+    "controls.productionStage": "Production stage",
+    "controls.allProductionStages": "All stages",
+    "controls.outputType": "Output type",
+    "controls.allOutputTypes": "All outputs",
     "controls.reset": "Reset",
     "pagination.projectsLabel": "Project pages",
     "pagination.datasetsLabel": "Dataset pages",
@@ -209,6 +223,25 @@ const translations = {
     "area.mastering": "Mastering",
     "area.evaluation": "Evaluation",
     "area.spatial-audio": "Spatial audio",
+    "area.symbolic-performance": "Symbolic / performance rendering",
+    "area.production-program": "Production program / DAW interaction",
+    "topic.symbolic-performance": "Symbolic performance",
+    "topic.performance-rendering": "Performance rendering",
+    "topic.production-program": "Production program",
+    "topic.production-graph": "Production graph",
+    "topic.daw-interaction": "DAW interaction",
+    "topic.agentic-production": "Agentic production",
+    "stage.score": "Score",
+    "stage.performance": "Performance",
+    "stage.synthesis": "Synthesis",
+    "stage.track": "Track",
+    "stage.mix": "Mix",
+    "stage.project": "Project",
+    "output.audio": "Audio",
+    "output.parameter": "Parameter",
+    "output.graph": "Graph",
+    "output.edit": "Edit",
+    "output.project": "Project",
     "link.paper": "Paper",
     "link.project": "Project",
     "link.source": "Source",
@@ -268,6 +301,12 @@ const translations = {
     "task.spatial-rendering": "Spatial rendering",
     "task.hrtf-personalization": "HRTF personalization",
     "task.spatial-evaluation": "Spatial evaluation",
+    "task.symbolic-performance": "Symbolic performance",
+    "task.performance-rendering": "Performance rendering",
+    "task.production-program": "Production program",
+    "task.production-graph": "Production graph",
+    "task.daw-interaction": "DAW interaction",
+    "task.agentic-production": "Agentic production",
     "effect.gain": "Gain",
     "effect.equalization": "EQ",
     "effect.compression": "Compression",
@@ -282,7 +321,7 @@ const translations = {
   },
   zh: {
     "meta.title": "智能音频制作资源索引",
-    "meta.description": "面向智能音效、混音、母带、空间音频与评测的开放资源及近期研究索引。",
+    "meta.description": "面向智能音效、演奏渲染、DAW 交互、混音、母带、空间音频与评测的开放资源及近期研究索引。",
     "nav.label": "主导航",
     "nav.scope": "领域",
     "nav.projects": "项目",
@@ -316,6 +355,8 @@ const translations = {
     "scope.mastering": "响度、动态、音色平衡、参考匹配与终端制作系统。",
     "scope.evaluation": "基准、听音实验流程、制作指标与可复现工具。",
     "scope.spatialAudio": "面向沉浸式制作的智能生成、上混、声像定位、渲染、HRTF 个性化与评测。",
+    "scope.symbolicPerformance": "从符号乐谱到表情演奏与音频渲染的可编辑分阶段流程。",
+    "scope.productionProgram": "结构化制作程序、处理图，以及能够感知状态的数字音频工作站交互。",
     "scope.viewPapers": "查看论文",
     "scope.noPapers": "暂未收录论文",
     "projects.title": "项目索引",
@@ -403,6 +444,9 @@ const translations = {
     "papers.areaFilter": "按领域筛选论文",
     "papers.controlApproachFilter": "按参数获取方式筛选论文",
     "papers.trackScopeFilter": "按轨道范围筛选论文",
+    "papers.topicFilter": "按制作主题筛选论文",
+    "papers.productionStageFilter": "按制作阶段筛选论文",
+    "papers.outputTypeFilter": "按输出类型筛选论文",
     "papers.recognitionFilter": "按精选与影响力筛选论文",
     "papers.loading": "正在加载论文……",
     "papers.empty": "没有符合当前筛选条件的论文。",
@@ -429,6 +473,9 @@ const translations = {
     "papers.resourceStatus.not-found": "已核验，未发现可信仓库",
     "papers.controlApproachesLabel": "参数获取方式",
     "papers.trackScopesLabel": "轨道范围",
+    "papers.topicsLabel": "制作主题",
+    "papers.productionStagesLabel": "制作阶段",
+    "papers.outputTypesLabel": "输出类型",
     "controls.recognition": "精选与影响力",
     "controls.allRecognition": "全部标记",
     "recognition.aiHighlight": "AI 精选",
@@ -463,6 +510,12 @@ const translations = {
     "controls.allControlApproaches": "全部方式",
     "controls.trackScope": "轨道范围",
     "controls.allTrackScopes": "全部轨道范围",
+    "controls.topic": "主题",
+    "controls.allTopics": "全部主题",
+    "controls.productionStage": "制作阶段",
+    "controls.allProductionStages": "全部阶段",
+    "controls.outputType": "输出类型",
+    "controls.allOutputTypes": "全部输出",
     "controls.reset": "重置",
     "pagination.projectsLabel": "项目分页",
     "pagination.datasetsLabel": "数据集分页",
@@ -490,6 +543,25 @@ const translations = {
     "area.mastering": "母带",
     "area.evaluation": "评测",
     "area.spatial-audio": "空间音频",
+    "area.symbolic-performance": "符号音乐与演奏渲染",
+    "area.production-program": "制作程序与 DAW 交互",
+    "topic.symbolic-performance": "符号演奏",
+    "topic.performance-rendering": "演奏渲染",
+    "topic.production-program": "制作程序",
+    "topic.production-graph": "制作图",
+    "topic.daw-interaction": "DAW 交互",
+    "topic.agentic-production": "智能体制作",
+    "stage.score": "乐谱",
+    "stage.performance": "演奏",
+    "stage.synthesis": "合成",
+    "stage.track": "轨道",
+    "stage.mix": "混音",
+    "stage.project": "工程",
+    "output.audio": "音频",
+    "output.parameter": "参数",
+    "output.graph": "图结构",
+    "output.edit": "编辑操作",
+    "output.project": "工程",
     "link.paper": "论文",
     "link.project": "项目主页",
     "link.source": "源码",
@@ -549,6 +621,12 @@ const translations = {
     "task.spatial-rendering": "空间渲染",
     "task.hrtf-personalization": "HRTF 个性化",
     "task.spatial-evaluation": "空间音频评测",
+    "task.symbolic-performance": "符号演奏",
+    "task.performance-rendering": "演奏渲染",
+    "task.production-program": "制作程序",
+    "task.production-graph": "制作图",
+    "task.daw-interaction": "DAW 交互",
+    "task.agentic-production": "智能体制作",
     "effect.gain": "增益",
     "effect.equalization": "均衡",
     "effect.compression": "压缩",
@@ -618,6 +696,9 @@ const elements = {
   paperArea: document.querySelector("#paper-area-filter"),
   paperControl: document.querySelector("#paper-control-filter"),
   paperTrack: document.querySelector("#paper-track-filter"),
+  paperTopic: document.querySelector("#paper-topic-filter"),
+  paperStage: document.querySelector("#paper-stage-filter"),
+  paperOutput: document.querySelector("#paper-output-filter"),
   paperRecognition: document.querySelector("#paper-recognition-filter"),
   paperCount: document.querySelector("#paper-count"),
   paperPagination: document.querySelector("#paper-pagination"),
@@ -650,6 +731,9 @@ const availabilityStatuses = ["linked", "documented", "tested", "gated", "restri
 const datasetAccessStatuses = ["direct-download", "request", "registration", "restricted", "unavailable", "not-reviewed"];
 const controlApproaches = ["gradient-based-optimization", "derivative-free-optimization", "direct-prediction"];
 const trackScopes = ["single-track", "multitrack"];
+const paperTopics = ["symbolic-performance", "performance-rendering", "production-program", "production-graph", "daw-interaction", "agentic-production"];
+const productionStages = ["score", "performance", "synthesis", "track", "mix", "project"];
+const outputTypes = ["audio", "parameter", "graph", "edit", "project"];
 const PAGE_SIZE = 10;
 
 function getInitialLanguage() {
@@ -828,6 +912,17 @@ function createTrackScopeList(values, tagName = "div") {
   const list = document.createElement(tagName);
   list.className = "tag-list track-scope-list";
   values.forEach((value) => list.append(createTextElement("span", "tag track-tag", t(`track.${value}`))));
+  return list;
+}
+
+function paperValues(paper, field) {
+  return Array.isArray(paper[field]) ? paper[field] : [];
+}
+
+function createPaperValueList(values, prefix, tagName = "div") {
+  const list = document.createElement(tagName);
+  list.className = "tag-list";
+  values.forEach((value) => list.append(createTextElement("span", "tag", t(`${prefix}.${value}`))));
   return list;
 }
 
@@ -1070,6 +1165,9 @@ function showPapersForArea(area) {
   elements.paperArea.value = area;
   elements.paperControl.value = "all";
   elements.paperTrack.value = "all";
+  elements.paperTopic.value = "all";
+  elements.paperStage.value = "all";
+  elements.paperOutput.value = "all";
   elements.paperRecognition.value = "all";
   state.pages.papers = 1;
   renderPapers();
@@ -1749,6 +1847,27 @@ function renderPaperDialog(paper) {
       createTrackScopeList(paperTrackScopes(paper))
     );
   }
+  if (paperValues(paper, "topics").length) {
+    appendProjectDialogSection(
+      elements.paperDialogContent,
+      t("papers.topicsLabel"),
+      createPaperValueList(paperValues(paper, "topics"), "topic")
+    );
+  }
+  if (paperValues(paper, "productionStages").length) {
+    appendProjectDialogSection(
+      elements.paperDialogContent,
+      t("papers.productionStagesLabel"),
+      createPaperValueList(paperValues(paper, "productionStages"), "stage")
+    );
+  }
+  if (paperValues(paper, "outputTypes").length) {
+    appendProjectDialogSection(
+      elements.paperDialogContent,
+      t("papers.outputTypesLabel"),
+      createPaperValueList(paperValues(paper, "outputTypes"), "output")
+    );
+  }
   const recognitionSection = document.createElement("section");
   recognitionSection.className = "paper-dialog-section recognition-details";
   recognitionSection.append(createTextElement("h3", "", t("recognition.detailsLabel")));
@@ -1870,6 +1989,9 @@ function renderPapers() {
   const selectedArea = elements.paperArea.value;
   const selectedControl = elements.paperControl.value;
   const selectedTrack = elements.paperTrack.value;
+  const selectedTopic = elements.paperTopic.value;
+  const selectedStage = elements.paperStage.value;
+  const selectedOutput = elements.paperOutput.value;
   const selectedRecognition = elements.paperRecognition.value;
   const filtered = state.papers.filter((paper) => {
     const matchesArea = selectedArea === "all" || paper.areas.includes(selectedArea);
@@ -1877,6 +1999,12 @@ function renderPapers() {
     const scopes = paperTrackScopes(paper);
     const matchesControl = selectedControl === "all" || approaches.includes(selectedControl);
     const matchesTrack = selectedTrack === "all" || scopes.includes(selectedTrack);
+    const topics = paperValues(paper, "topics");
+    const stages = paperValues(paper, "productionStages");
+    const outputs = paperValues(paper, "outputTypes");
+    const matchesTopic = selectedTopic === "all" || topics.includes(selectedTopic);
+    const matchesStage = selectedStage === "all" || stages.includes(selectedStage);
+    const matchesOutput = selectedOutput === "all" || outputs.includes(selectedOutput);
     const matchesRecognitionFilter = matchesRecognition(paper, selectedRecognition);
     const searchable = [
       paper.shortName ?? "",
@@ -1887,12 +2015,15 @@ function renderPapers() {
       ...paper.areas.map((area) => t(`area.${area}`)),
       ...approaches.map((approach) => t(`control.${approach}`)),
       ...scopes.map((scope) => t(`track.${scope}`)),
+      ...topics.map((topic) => t(`topic.${topic}`)),
+      ...stages.map((stage) => t(`stage.${stage}`)),
+      ...outputs.map((output) => t(`output.${output}`)),
       ...(paper.aiAssessment?.rating === "highlighted" ? [t("recognition.aiHighlight")] : []),
       ...(paper.impact?.status === "high-impact" ? [t("recognition.highImpact")] : [])
     ]
       .join(" ")
       .toLocaleLowerCase(state.language);
-    return matchesArea && matchesControl && matchesTrack && matchesRecognitionFilter && searchable.includes(query);
+    return matchesArea && matchesControl && matchesTrack && matchesTopic && matchesStage && matchesOutput && matchesRecognitionFilter && searchable.includes(query);
   });
   const pagination = paginate(filtered, "papers");
 
@@ -1939,6 +2070,24 @@ function applyTranslations() {
     trackScopes.filter((scope) => state.papers.some((paper) => paperTrackScopes(paper).includes(scope))),
     "controls.allTrackScopes",
     (scope) => t(`track.${scope}`)
+  );
+  populateSelect(
+    elements.paperTopic,
+    paperTopics.filter((topic) => state.papers.some((paper) => paperValues(paper, "topics").includes(topic))),
+    "controls.allTopics",
+    (topic) => t(`topic.${topic}`)
+  );
+  populateSelect(
+    elements.paperStage,
+    productionStages.filter((stage) => state.papers.some((paper) => paperValues(paper, "productionStages").includes(stage))),
+    "controls.allProductionStages",
+    (stage) => t(`stage.${stage}`)
+  );
+  populateSelect(
+    elements.paperOutput,
+    outputTypes.filter((output) => state.papers.some((paper) => paperValues(paper, "outputTypes").includes(output))),
+    "controls.allOutputTypes",
+    (output) => t(`output.${output}`)
   );
   updateCatalogueStats();
   updateFieldPaperLinks();
@@ -2062,6 +2211,9 @@ elements.paperSearch.addEventListener("input", () => resetPageAndRender("papers"
 elements.paperArea.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.paperControl.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.paperTrack.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.paperTopic.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.paperStage.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
+elements.paperOutput.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.paperRecognition.addEventListener("change", () => resetPageAndRender("papers", renderPapers));
 elements.projectPrevious.addEventListener("click", () => changePage("projects", -1, renderProjects));
 elements.projectNext.addEventListener("click", () => changePage("projects", 1, renderProjects));

@@ -27,6 +27,9 @@
       ],
       "controlApproaches": [],
       "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [],
       "aiAssessment": {
         "rating": "highlighted",
         "rationale": {
@@ -91,6 +94,9 @@
       ],
       "controlApproaches": [],
       "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [],
       "aiAssessment": {
         "rating": "standard",
         "rationale": {
@@ -157,6 +163,9 @@
       ],
       "controlApproaches": [],
       "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [],
       "aiAssessment": {
         "rating": "standard",
         "rationale": {
@@ -198,6 +207,88 @@
       "curation": "agent"
     },
     {
+      "id": "arxiv-2608-18226",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.18226"
+      },
+      "shortName": "SynAPSE",
+      "title": "FM Synthesizer Audio-Parameter Shared Embeddings",
+      "authors": [
+        "David Braun",
+        "Adam Finkelstein"
+      ],
+      "year": 2026,
+      "published": "2026-08-18",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "SynAPSE represents FM signal routing explicitly, evaluates generalization to unseen topologies with ablations, and releases inference code and pretrained models.",
+          "zh": "SynAPSE 显式表示 FM 信号路由，通过消融实验评测未见拓扑泛化，并公开推理代码和预训练模型。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "SynAPSE learns shared embeddings for DX7 audio and synthesizer presets with a graph encoder that follows FM signal routing, enabling audio-to-preset retrieval and generalization to unseen routing topologies.",
+        "zh": "SynAPSE 使用遵循 FM 信号路由的图编码器学习 DX7 音频与合成器预设的共享表征，用于音频到预设检索并泛化到未见路由拓扑。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.18226"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/DBraun/SynAPSE"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/DBraun/SynAPSE"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
       "id": "arxiv-2608-14097",
       "source": {
         "type": "arxiv",
@@ -223,6 +314,9 @@
       ],
       "controlApproaches": [],
       "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [],
       "aiAssessment": {
         "rating": "standard",
         "rationale": {
@@ -722,6 +816,16 @@
       ],
       "controlApproaches": [],
       "trackScopes": [],
+      "topics": [
+        "agentic-production"
+      ],
+      "productionStages": [
+        "track",
+        "mix"
+      ],
+      "outputTypes": [
+        "edit"
+      ],
       "aiAssessment": {
         "rating": "standard",
         "rationale": {
@@ -956,6 +1060,92 @@
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2512-03289",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2512.03289"
+      },
+      "shortName": "DAWZY",
+      "title": "DAWZY: A New Addition to AI powered \"Human in the Loop\" Music Co-creation",
+      "authors": [
+        "Aaron C Elkins",
+        "Sanchit Singh",
+        "Adrian Kieback",
+        "Sawyer Blankenship",
+        "Uyiosa Philip Amadasun",
+        "Aman Chadha"
+      ],
+      "year": 2025,
+      "published": "2025-12-02",
+      "venue": "arXiv",
+      "areas": [
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "production-program",
+        "daw-interaction",
+        "agentic-production"
+      ],
+      "productionStages": [
+        "track",
+        "mix",
+        "project"
+      ],
+      "outputTypes": [
+        "edit",
+        "project"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "DAWZY converts text, voice, or humming requests into reversible REAPER actions, using MCP tools to query DAW state, adjust parameters, and generate beats while keeping edits grounded in the current project.",
+        "zh": "DAWZY 将文本、语音或哼唱请求转换为可撤销的 REAPER 操作，并通过 MCP 工具查询 DAW 状态、调节参数和生成节拍，使编辑与当前工程状态保持一致。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2512.03289"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/soysaucewaso/DAWZY"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/soysaucewaso/DAWZY"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
     },
     {
       "id": "arxiv-2512-01559",
@@ -1537,6 +1727,175 @@
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2507-10534",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2507.10534"
+      },
+      "shortName": "WildFX",
+      "title": "WildFX: A DAW-Powered Pipeline for In-the-Wild Audio FX Graph Modeling",
+      "authors": [
+        "Qihui Yang",
+        "Taylor Berg-Kirkpatrick",
+        "Julian McAuley",
+        "Zachary Novack"
+      ],
+      "year": 2025,
+      "published": "2025-07-14",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects",
+        "mixing",
+        "production-program"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph"
+      ],
+      "productionStages": [
+        "track",
+        "mix",
+        "project"
+      ],
+      "outputTypes": [
+        "audio",
+        "graph",
+        "project"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "WildFX exposes professional DAW and plug-in routing as reproducible production graphs, supports multitrack structures such as sidechains and crossovers, and releases the complete data-generation pipeline.",
+          "zh": "WildFX 将专业 DAW 与插件路由转化为可复现制作图，支持侧链和分频等多轨结构，并公开完整数据生成流程。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "WildFX is a containerized REAPER-backed pipeline for generating multitrack datasets with heterogeneous commercial or open plug-in graphs, including sidechains, crossovers, and structured project metadata.",
+        "zh": "WildFX 是一个基于 REAPER 的容器化流程，用于生成包含商业或开源插件异构处理图的多轨数据，并支持侧链、分频和结构化工程元数据。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2507.10534"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/IsaacYQH/WildFX"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/IsaacYQH/WildFX"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2507-08530",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2507.08530"
+      },
+      "shortName": "MIDI-VALLE",
+      "title": "MIDI-VALLE: Improving Expressive Piano Performance Synthesis Through Neural Codec Language Modelling",
+      "authors": [
+        "Jingjing Tang",
+        "Xin Wang",
+        "Zhe Zhang",
+        "Junichi Yamagishi",
+        "Geraint Wiggins",
+        "George Fazekas"
+      ],
+      "year": 2025,
+      "published": "2025-07-11",
+      "venue": "ISMIR 2025",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "MIDI-VALLE provides a focused performance-MIDI-to-audio model with objective and listening evaluations, an official implementation, and openly downloadable pretrained checkpoints.",
+          "zh": "MIDI-VALLE 面向演奏 MIDI 到音频渲染，提供客观与听音评测、官方实现以及可直接下载的预训练权重。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "MIDI-VALLE adapts a neural codec language model to synthesize expressive piano audio from performance MIDI, conditioning on paired reference MIDI and audio to improve realism and generalization.",
+        "zh": "MIDI-VALLE 将神经编解码语言模型用于从演奏 MIDI 合成富有表现力的钢琴音频，并通过配对的参考 MIDI 与音频改善真实感和泛化能力。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2507.08530"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/nii-yamagishilab/MIDI-VALLE"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://zenodo.org/records/15976272"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/nii-yamagishilab/MIDI-VALLE"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
     },
     {
       "id": "arxiv-2507-07318",
@@ -2345,6 +2704,95 @@
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2501-10222",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2501.10222"
+      },
+      "shortName": "S2A",
+      "title": "Towards An Integrated Approach for Expressive Piano Performance Synthesis from Music Scores",
+      "authors": [
+        "Jingjing Tang",
+        "Erica Cooper",
+        "Xin Wang",
+        "Junichi Yamagishi",
+        "George Fazekas"
+      ],
+      "year": 2025,
+      "published": "2025-01-17",
+      "venue": "ICASSP 2025",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "S2A joins score-to-performance and performance-to-audio stages in one evaluated pipeline and releases code, checkpoints, and objective evaluation tools for both stages.",
+          "zh": "S2A 将乐谱到演奏和演奏到音频两个阶段整合进同一评测流程，并公开两阶段代码、权重和客观评测工具。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "S2A combines a Transformer expressive performance renderer with a fine-tuned neural MIDI synthesizer to convert score MIDI into expressive piano performance MIDI and then rendered audio.",
+        "zh": "S2A 将 Transformer 表情演奏渲染器与微调后的神经 MIDI 合成器结合，把乐谱 MIDI 依次转换为富有表现力的演奏 MIDI 和最终音频。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2501.10222"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.1109/ICASSP49660.2025.10890623"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/tangjjbetsy/S2A"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://zenodo.org/records/15524693"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/tangjjbetsy/S2A"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
     },
     {
       "id": "arxiv-2501-02786",
@@ -6227,6 +6675,97 @@
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2112-09312",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2112.09312"
+      },
+      "shortName": "MIDI-DDSP",
+      "title": "MIDI-DDSP: Detailed Control of Musical Performance via Hierarchical Modeling",
+      "authors": [
+        "Yusong Wu",
+        "Ethan Manilow",
+        "Yi Deng",
+        "Rigel Swavely",
+        "Kyle Kastner",
+        "Tim Cooijmans",
+        "Aaron Courville",
+        "Cheng-Zhi Anna Huang",
+        "Jesse Engel"
+      ],
+      "year": 2022,
+      "published": "2021-12-17",
+      "venue": "ICLR 2022",
+      "areas": [
+        "symbolic-performance",
+        "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "topics": [
+        "symbolic-performance",
+        "performance-rendering"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio",
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "MIDI-DDSP establishes an editable note-performance-synthesis hierarchy, validates independent control through quantitative and listening experiments, and provides code, demos, training instructions, and pretrained weights.",
+          "zh": "MIDI-DDSP 建立可编辑的音符、演奏、合成三层结构，通过客观与听音实验验证独立控制，并公开代码、演示、训练说明和预训练权重。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "MIDI-DDSP organizes musical generation into editable note, performance, and DDSP synthesis levels, allowing users to manipulate expressive attributes or rely on learned priors between stages.",
+        "zh": "MIDI-DDSP 将音乐生成组织为可编辑的音符、演奏和 DDSP 合成三层，使用户能够调节表情属性，或使用阶段之间的学习先验。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2112.09312"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/magenta/midi-ddsp"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "manual-web-review",
+        "url": "https://github.com/magenta/midi-ddsp"
+      },
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
     },
     {
       "id": "arxiv-2111-11882",
