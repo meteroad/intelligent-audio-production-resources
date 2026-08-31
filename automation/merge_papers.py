@@ -46,9 +46,7 @@ def validate_decision(decision: dict, candidate_ids: set[str]) -> None:
     areas = decision.get("areas", [])
     if decision.get("decision") == "include":
         short_name = decision.get("shortName")
-        if short_name is not None and (
-            not isinstance(short_name, str) or not 1 <= len(short_name.strip()) <= 40
-        ):
+        if not isinstance(short_name, str) or not 1 <= len(short_name.strip()) <= 40:
             raise ValueError(f"Invalid short name for {source_id}: {short_name!r}")
         if not areas or len(areas) != len(set(areas)) or not set(areas).issubset(ALLOWED_AREAS):
             raise ValueError(f"Invalid areas for {source_id}: {areas}")
@@ -155,9 +153,7 @@ def merge_records(candidates_data: dict, review_data: dict, papers_data: dict) -
             "lastVerified": verified_date,
             "curation": "agent",
         }
-        short_name = decision.get("shortName")
-        if short_name:
-            paper["shortName"] = short_name.strip()
+        paper["shortName"] = decision["shortName"].strip()
         papers_data["papers"].append(paper)
         existing_sources.add(source_id)
         existing_titles.add(normalized_title(candidate["title"]))

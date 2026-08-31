@@ -140,6 +140,12 @@ const translations = {
     "papers.shortNameLabel": "Index name",
     "papers.openSourceAvailable": "Source available",
     "papers.projectPageAvailable": "Project page",
+    "papers.resourceReviewLabel": "Resource review",
+    "papers.resourceStatusLabel": "Result",
+    "papers.resourceCheckedLabel": "Checked",
+    "papers.resourceStatus.source": "Source verified",
+    "papers.resourceStatus.project-page": "Project page only",
+    "papers.resourceStatus.not-found": "No verified repository found",
     "papers.controlApproachesLabel": "Control approach",
     "papers.trackScopesLabel": "Track scope",
     "controls.recognition": "Recognition",
@@ -150,6 +156,7 @@ const translations = {
     "recognition.methodology": "Methodology",
     "recognition.detailsLabel": "Recognition details",
     "recognition.aiRationaleLabel": "AI assessment",
+    "recognition.standardAssessment": "Assessed under the published rubric; this record is not marked as an AI Highlight.",
     "recognition.impactLabel": "Citation impact",
     "recognition.tooRecent": "This paper is too recent for year-normalized citation ranking.",
     "recognition.notAssessed": "Citation impact was not assessed because no exact arXiv or DOI match was available.",
@@ -414,6 +421,12 @@ const translations = {
     "papers.shortNameLabel": "索引简称",
     "papers.openSourceAvailable": "已有源码",
     "papers.projectPageAvailable": "项目页",
+    "papers.resourceReviewLabel": "资源核验",
+    "papers.resourceStatusLabel": "核验结果",
+    "papers.resourceCheckedLabel": "核验时间",
+    "papers.resourceStatus.source": "已核验源码",
+    "papers.resourceStatus.project-page": "仅有项目页",
+    "papers.resourceStatus.not-found": "已核验，未发现可信仓库",
     "papers.controlApproachesLabel": "参数获取方式",
     "papers.trackScopesLabel": "轨道范围",
     "controls.recognition": "精选与影响力",
@@ -424,6 +437,7 @@ const translations = {
     "recognition.methodology": "查看方法",
     "recognition.detailsLabel": "精选与影响力",
     "recognition.aiRationaleLabel": "AI 评估",
+    "recognition.standardAssessment": "已按照公开规则完成评估，本条目未标记为 AI 精选。",
     "recognition.impactLabel": "引用影响力",
     "recognition.tooRecent": "该论文发表时间较近，暂不参与同年份引用排名。",
     "recognition.notAssessed": "未找到可精确匹配的 arXiv 或 DOI 标识，因此未评估引用影响力。",
@@ -1231,6 +1245,17 @@ function createRelatedProjects(paperId) {
   return list;
 }
 
+function createPaperResourceReview(paper) {
+  const review = paper.resourceReview;
+  const facts = document.createElement("dl");
+  facts.className = "project-facts";
+  facts.append(
+    createLabeledValue(t("papers.resourceStatusLabel"), t(`papers.resourceStatus.${review.status}`)),
+    createLabeledValue(t("papers.resourceCheckedLabel"), review.checkedAt)
+  );
+  return facts;
+}
+
 function createLicenseDetails(project) {
   const wrapper = document.createElement("div");
   wrapper.className = "project-detail-stack";
@@ -1743,6 +1768,21 @@ function renderPaperDialog(paper) {
       )
     );
     recognitionSection.append(assessment);
+  } else if (paper.aiAssessment) {
+    const assessment = document.createElement("div");
+    assessment.className = "recognition-detail";
+    assessment.append(
+      createTextElement("p", "recognition-detail-label", t("recognition.aiRationaleLabel")),
+      createTextElement("p", "paper-dialog-summary", t("recognition.standardAssessment")),
+      createTextElement(
+        "p",
+        "recognition-meta",
+        state.language === "zh"
+          ? `评估模型：${paper.aiAssessment.assessor} · 规则版本 ${paper.aiAssessment.rubricVersion} · ${paper.aiAssessment.assessedAt}`
+          : `Assessed by ${paper.aiAssessment.assessor} · rubric ${paper.aiAssessment.rubricVersion} · ${paper.aiAssessment.assessedAt}`
+      )
+    );
+    recognitionSection.append(assessment);
   }
   const impact = paper.impact;
   const impactDetail = document.createElement("div");
@@ -1790,6 +1830,13 @@ function renderPaperDialog(paper) {
     t("papers.relatedProjectsLabel"),
     createRelatedProjects(paper.id)
   );
+  if (paper.resourceReview) {
+    appendProjectDialogSection(
+      elements.paperDialogContent,
+      t("papers.resourceReviewLabel"),
+      createPaperResourceReview(paper)
+    );
+  }
   appendProjectDialogSection(
     elements.paperDialogContent,
     t("datasets.usedDatasetsLabel"),

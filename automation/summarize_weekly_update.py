@@ -42,7 +42,17 @@ def build_request(prompt: str, additions: dict, model: str) -> dict:
     payload = {
         "generatedAt": additions.get("generatedAt"),
         "addedCount": additions.get("addedCount"),
+        "addedProjectCount": additions.get("addedProjectCount", 0),
         "papers": papers,
+        "projects": [
+            {
+                "projectId": project["id"],
+                "name": project["name"],
+                "description": project["description"],
+                "links": project["links"],
+            }
+            for project in additions.get("projects", [])
+        ],
     }
     return {
         "model": model,
@@ -91,7 +101,7 @@ def build_weekly_update(additions: dict, summary: dict) -> dict:
         "publishedAt": additions["generatedAt"][:10],
         "counts": {
             "papers": additions["addedCount"],
-            "projects": 0,
+            "projects": additions.get("addedProjectCount", 0),
             "datasets": 0,
         },
         "headline": validated["headline"],

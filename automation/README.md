@@ -3,13 +3,15 @@
 The paper scout follows a reviewable pipeline:
 
 1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API.
-2. DeepSeek classifies direct relevance, preserves an explicitly stated method short name when available, assigns production-control approaches and input track scope, writes short English and Chinese summaries, and makes a conservative AI Highlight assessment under the website taxonomy.
-3. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
-4. Citation counts are refreshed from exact arXiv or DOI matches when the stored measurement is at least 28 days old. High Impact is derived within each pre-current-year index cohort; current-year papers are not ranked.
-5. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.
-6. When papers are actually added, DeepSeek writes a short bilingual weekly overview and selects up to three highlights from those exact paper IDs. Deterministic validation rejects invented or stale references.
-7. Landing-page fallback counts are synchronized before validation. Only high-confidence new records, the generated weekly overview, and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request. A week with no additions keeps the previous overview.
-8. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
+2. An authenticated GitHub search checks each candidate for an evidence-backed source repository or documentation-only project page. A repository is accepted only through an explicit URL, arXiv identifier, exact paper title, or a method-and-author identity match. Source code, license files, and model links are inspected separately. API failures stop the job; they are never recorded as "not found."
+3. DeepSeek classifies direct relevance, supplies a required method or index short name, assigns production-control approaches and input track scope, writes short English and Chinese summaries, and makes a conservative AI Highlight assessment under the website taxonomy.
+4. Each accepted paper is written with `templateVersion: 1` and a completed resource review. A verified source repository also creates or updates its Project Index record. Documentation-only repositories remain paper-level project-page links, while a completed search with no verified match is recorded explicitly as `not-found`.
+5. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
+6. Citation counts are refreshed from exact arXiv or DOI matches when the stored measurement is at least 28 days old. High Impact is derived within each pre-current-year index cohort; current-year papers are not ranked.
+7. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.
+8. When papers or linked source projects are actually added, DeepSeek writes a short bilingual weekly overview and selects up to three highlights from those exact IDs. Deterministic validation rejects invented or stale references.
+9. Landing-page fallback counts are synchronized before validation. Only complete, high-confidence records and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request. A week with no additions keeps the previous overview.
+10. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
 
 The active scope covers audio effects, differentiable production processing, effect and production representations, mixing, mastering, task-specific evaluation, and production-facing spatial audio. Spatial coverage is limited to generation, upmixing, mixing, rendering, HRTF personalization, and evaluation; localization-only and separation-only work remains out of scope. Bibliography repositories are maintained under `data/resources.json`; they are not treated as runnable projects. Dataset records and their paper/project usage relations are maintained under `data/datasets.json` and pass deterministic cross-reference validation, but the paper scout does not infer dataset usage automatically.
 
@@ -20,6 +22,8 @@ In GitHub, open **Settings → Secrets and variables → Actions**:
 - Add a repository secret named `DEEPSEEK_API_KEY`.
 - Optionally add `SEMANTIC_SCHOLAR_API_KEY` to increase the bibliographic refresh rate limit. The public batch API is used when this secret is absent.
 - Under **Actions → General → Workflow permissions**, allow read and write permissions and allow GitHub Actions to create pull requests.
+
+The resource search uses the workflow's automatically supplied `GITHUB_TOKEN`; no additional GitHub secret is required.
 
 The workflow runs every Monday at 01:00 UTC (09:00 Asia/Shanghai) and can also be started manually from **Actions → Weekly paper scout → Run workflow**. The publication refresh runs even when no new candidate paper is found.
 

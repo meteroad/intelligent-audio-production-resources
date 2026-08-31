@@ -124,10 +124,12 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
         if decision.get("confidence") not in ALLOWED_CONFIDENCE:
             raise ValueError(f"Invalid confidence for {source_id}")
         short_name = decision.get("shortName")
-        if short_name is not None and (
+        if decision["decision"] == "include" and (
             not isinstance(short_name, str) or not 1 <= len(short_name.strip()) <= 40
         ):
             raise ValueError(f"Invalid short name for {source_id}")
+        if decision["decision"] == "exclude" and short_name is not None:
+            raise ValueError(f"Excluded paper must not define a short name for {source_id}")
         if not isinstance(decision.get("areas"), list):
             raise ValueError(f"Invalid areas for {source_id}")
         control_approaches = decision.get("controlApproaches")
@@ -165,7 +167,6 @@ def validate_review(review: dict, candidates_data: dict) -> dict:
         elif not all(isinstance(rationale[key], str) and not rationale[key].strip() for key in ("en", "zh")):
             raise ValueError(f"Standard AI assessment rationale must be empty for {source_id}")
         if decision["decision"] == "exclude":
-            decision["shortName"] = None
             decision["areas"] = []
             decision["controlApproaches"] = []
             decision["trackScopes"] = []

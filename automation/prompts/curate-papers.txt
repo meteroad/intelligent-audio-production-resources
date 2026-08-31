@@ -15,7 +15,7 @@ Exclude papers mainly about source separation, generic music generation, generic
 
 For every candidate:
 1. Copy sourceId exactly.
-2. For an included paper, copy a concise method acronym or project name into shortName only when it is explicitly stated in the title or abstract. Preserve its spelling, never invent an abbreviation, and otherwise return null. Excluded papers must use null.
+2. Every included paper must have a shortName between 1 and 40 characters. Prefer an explicitly stated method acronym or project name and preserve its spelling. If none exists, use a concise plain-language index name copied or shortened directly from the title; do not invent an acronym. Excluded papers must use null.
 3. Use decision "include" only for direct relevance; when uncertain, use "exclude".
 4. Use only these area identifiers: "audio-effects", "differentiable-processing", "representation", "mixing", "mastering", "evaluation", "spatial-audio".
    Assign "differentiable-processing" only when differentiability of DSP, an effect chain, or a processing graph is a substantive method contribution; ordinary neural-network training alone is insufficient.
@@ -45,7 +45,7 @@ Return one JSON object and no surrounding prose. It must follow this exact shape
       "sourceId": "arxiv:0000.00000",
       "decision": "include",
       "confidence": "high",
-      "shortName": null,
+      "shortName": "Method name or concise title-derived index name",
       "areas": ["audio-effects"],
       "controlApproaches": ["direct-prediction"],
       "trackScopes": ["single-track"],

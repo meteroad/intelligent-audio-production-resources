@@ -23,6 +23,14 @@ jobs:
       - name: Discover recent arXiv candidates
         run: python3 automation/discover_papers.py
 
+      - name: Verify related GitHub resources
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: >-
+          python3 automation/discover_resources.py
+          --candidates automation/candidates.json
+          --output automation/candidates.json
+
       - name: Read candidate count
         id: count
         run: echo "candidate_count=$(python3 -c 'import json; print(json.load(open("automation/candidates.json"))["candidateCount"])')" >> "$GITHUB_OUTPUT"
@@ -121,6 +129,14 @@ jobs:
           --output data/papers.json
           --added-output automation/added-papers.json
 
+      - name: Attach resources and create project records
+        run: >-
+          python3 automation/merge_resources.py
+          --candidates automation/candidates.json
+          --additions automation/added-papers.json
+          --papers data/papers.json
+          --projects data/projects.json
+
       - name: Read added paper count
         id: additions
         run: echo "added_count=$(python3 -c 'import json; print(json.load(open("automation/added-papers.json"))["addedCount"])')" >> "$GITHUB_OUTPUT"
@@ -164,7 +180,7 @@ jobs:
       - name: Detect publishable changes
         id: changes
         run: |
-          if git diff --quiet -- data/papers.json data/weekly-update.json index.html README.md; then
+          if git diff --quiet -- data/papers.json data/projects.json data/weekly-update.json index.html README.md; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
@@ -180,10 +196,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$branch"
-          git add data/papers.json data/weekly-update.json index.html README.md
+          git add data/papers.json data/projects.json data/weekly-update.json index.html README.md
           git commit -m "Update recent intelligent audio papers"
           git push origin "$branch"
-          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers, AI Highlight assessments, and a plain-language bilingual homepage summary are proposed by the configured curation model for human review. Titles and authors remain anchored to arXiv; DOI links, formal venues, and year-normalized Semantic Scholar citation metadata are refreshed before deterministic validation.")
+          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers use the complete catalogue template: index names, bilingual summaries, AI Highlight assessments, formal publication metadata, and evidence-backed resource reviews. Verified source repositories create linked project records; documentation-only repositories remain project-page links. All changes pass deterministic validation before this pull request is opened.")
           if [ "$AUTO_MERGE" = "true" ]; then
             gh pr merge --auto --squash "$pr_url"
           fi

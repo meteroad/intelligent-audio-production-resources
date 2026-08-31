@@ -61,6 +61,13 @@
           "url": "https://github.com/MM-Speech/CSAVocoder"
         }
       ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-08-31",
+        "provider": "github-search",
+        "url": "https://github.com/MM-Speech/CSAVocoder"
+      },
       "lastVerified": "2026-08-31",
       "curation": "agent"
     },
@@ -118,6 +125,13 @@
           "url": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
         }
       ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-08-31",
+        "provider": "github-search",
+        "url": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
+      },
       "lastVerified": "2026-08-31",
       "curation": "agent"
     },
@@ -173,6 +187,13 @@
           "url": "https://arxiv.org/abs/2608.24579"
         }
       ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "github-search",
+        "url": null
+      },
       "lastVerified": "2026-08-31",
       "curation": "agent"
     },
@@ -182,6 +203,7 @@
         "type": "arxiv",
         "id": "arxiv:2608.14097"
       },
+      "shortName": "Device-Agnostic HOA Encoder",
       "title": "Ambisonics Encoding of Room Impulse Responses using a Device-Agnostic Diffusion Model",
       "authors": [
         "Eloi Moliner",
@@ -231,6 +253,13 @@
           "url": "https://arxiv.org/abs/2608.14097"
         }
       ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "github-search",
+        "url": null
+      },
       "lastVerified": "2026-08-31",
       "curation": "agent"
     },
@@ -723,6 +752,13 @@
           "url": "https://arxiv.org/abs/2607.19605"
         }
       ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-08-31",
+        "provider": "github-search",
+        "url": null
+      },
       "lastVerified": "2026-08-31",
       "curation": "agent"
     },

@@ -60,6 +60,7 @@ ALLOWED_CONTROL_APPROACHES = {
 ALLOWED_TRACK_SCOPES = {"single-track", "multitrack"}
 AI_ASSESSMENT_RATINGS = {"highlighted", "standard"}
 IMPACT_STATUSES = {"high-impact", "standard", "too-recent", "not-assessed"}
+RESOURCE_REVIEW_STATUSES = {"source", "project-page", "not-found"}
 ALLOWED_DATASET_CONTENT_TYPES = {
     "multitrack",
     "stems",
@@ -425,6 +426,35 @@ def validate_papers(path: Path) -> int:
         )
         require(paper.get("curation") in {"manual", "agent"}, f"{paper_id}.curation is invalid")
         require(isinstance(paper.get("lastVerified"), str), f"{paper_id}.lastVerified is required")
+        template_version = paper.get("templateVersion")
+        if template_version is not None:
+            require(template_version == 1, f"{paper_id}.templateVersion is invalid")
+            require(paper.get("curation") == "agent", f"{paper_id} complete template requires agent curation")
+            require(isinstance(short_name, str) and short_name.strip(), f"{paper_id} complete template requires shortName")
+            review = paper.get("resourceReview")
+            require(isinstance(review, dict), f"{paper_id}.resourceReview must be an object")
+            require(
+                set(review) == {"status", "checkedAt", "provider", "url"},
+                f"{paper_id}.resourceReview has invalid fields",
+            )
+            status = review.get("status")
+            require(status in RESOURCE_REVIEW_STATUSES, f"{paper_id}.resourceReview.status is invalid")
+            validate_date(review.get("checkedAt"), f"{paper_id}.resourceReview.checkedAt")
+            require(review.get("provider") == "github-search", f"{paper_id}.resourceReview.provider is invalid")
+            resource_url = review.get("url")
+            if status == "not-found":
+                require(resource_url is None, f"{paper_id}.resourceReview.url must be null")
+            else:
+                validate_https_url(resource_url, f"{paper_id}.resourceReview.url")
+                expected_label = "source" if status == "source" else "project"
+                require(
+                    any(
+                        link["label"] == expected_label
+                        and canonical_resource_url(link["url"]) == canonical_resource_url(resource_url)
+                        for link in paper["links"]
+                    ),
+                    f"{paper_id}.resourceReview has no matching {expected_label} link",
+                )
     return len(papers)
 
 
@@ -601,6 +631,21 @@ def main() -> None:
     project_count = validate_projects(args.projects, paper_ids, paper_resource_urls)
     project_data = json.loads(args.projects.read_text(encoding="utf-8"))
     project_ids = {project["id"] for project in project_data["projects"]}
+    linked_project_papers = {
+        paper_id
+        for project in project_data["projects"]
+        for paper_id in project["relations"]["paperIds"]
+    }
+    complete_source_papers = {
+        paper["id"]
+        for paper in paper_data["papers"]
+        if paper.get("templateVersion") == 1
+        and paper.get("resourceReview", {}).get("status") == "source"
+    }
+    require(
+        complete_source_papers.issubset(linked_project_papers),
+        "complete source papers must have a project catalogue relation",
+    )
     dataset_count = validate_datasets(args.datasets, paper_ids, project_ids)
     dataset_data = json.loads(args.datasets.read_text(encoding="utf-8"))
     dataset_ids = {dataset["id"] for dataset in dataset_data["datasets"]}

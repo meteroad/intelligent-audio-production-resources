@@ -86,6 +86,42 @@ class WeeklyUpdateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unknown or duplicated"):
             summarize_weekly_update.build_weekly_update(additions, invalid)
 
+    def test_summary_builder_reports_linked_project_additions(self):
+        additions = {
+            "generatedAt": "2026-08-28T01:00:00+00:00",
+            "addedCount": 1,
+            "addedProjectCount": 1,
+            "papers": [
+                {
+                    "id": "paper-1",
+                    "title": "A Useful Audio Effect",
+                    "areas": ["audio-effects"],
+                    "summary": {"en": "A factual paper summary.", "zh": "一条事实性论文简介。"},
+                    "aiAssessment": {"rating": "standard", "rationale": {"en": "", "zh": ""}},
+                }
+            ],
+            "projects": [
+                {
+                    "id": "project-1",
+                    "name": "UsefulFX",
+                    "description": {"en": "A verified implementation.", "zh": "一个已核验实现。"},
+                    "links": [{"label": "source", "url": "https://github.com/example/usefulfx"}],
+                }
+            ],
+        }
+        ai_summary = {
+            "headline": self.document["headline"],
+            "summary": self.document["summary"],
+            "highlights": [{"paperId": "paper-1", "note": self.document["highlights"][0]["note"]}],
+        }
+        request = summarize_weekly_update.build_request("prompt", additions, "model")
+        payload = json.loads(request["messages"][1]["content"].split("\n", 1)[1])
+        weekly = summarize_weekly_update.build_weekly_update(additions, ai_summary)
+
+        self.assertEqual(payload["addedProjectCount"], 1)
+        self.assertEqual(payload["projects"][0]["projectId"], "project-1")
+        self.assertEqual(weekly["counts"]["projects"], 1)
+
     def test_formal_schema_is_valid_json(self):
         schema = json.loads((ROOT / "schemas" / "weekly-update-v1.schema.json").read_text(encoding="utf-8"))
         self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")

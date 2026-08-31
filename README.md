@@ -64,7 +64,7 @@ See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and 
 
 ## Automation
 
-The weekly paper scout searches arXiv, screens candidates with a configured language model, proposes conservative AI Highlight assessments, writes a concise bilingual update from the papers that actually pass the merge rules, refreshes formal venue, DOI, and citation metadata, validates the data, and opens a reviewable pull request. It does not publish unreviewed candidates or generated summaries directly.
+The weekly paper scout searches arXiv, verifies related GitHub resources, screens candidates with a configured language model, and writes complete paper records with short names, bilingual summaries, classifications, AI assessments, publication metadata, and resource-review results. Verified source repositories create linked project records; documentation-only pages are kept distinct from source code. The workflow then refreshes DOI, venue, and citation metadata, writes a concise bilingual update, validates every relation, and opens a reviewable pull request. It does not publish unreviewed candidates or generated summaries directly.
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
 

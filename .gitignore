@@ -4,4 +4,5 @@ __pycache__/
 _site/
 automation/candidates.json
 automation/reviewed-papers.json
+automation/added-papers.json
 .DS_Store
