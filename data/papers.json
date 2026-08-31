@@ -1,7 +1,228 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-08-31",
   "papers": [
+    {
+      "id": "arxiv-2608-25404",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.25404"
+      },
+      "title": "CSAVocoder: A Causal Spatial Audio Vocoder Towards Real-Time Spatial Audio Generation",
+      "authors": [
+        "Zhiyuan Zhu",
+        "Han Wang",
+        "Wenxiang Guo",
+        "Yu Zhang",
+        "Changhao Pan",
+        "Rui Yang",
+        "Zhou Zhao"
+      ],
+      "year": 2026,
+      "published": "2026-08-26",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper proposes CSAVocoder, a causal GAN-based spatial audio vocoder that uses a Spatial Adaptor and a spatial consistency discriminator to generate spatial audio from mel-spectrograms with real-time performance.",
+        "zh": "本文提出了 CSAVocoder，一种基于因果 GAN 的空间音频声码器，通过空间适配器和空间一致性判别器从梅尔频谱图生成空间音频，并支持实时推理。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.25404"
+        }
+      ],
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2608-24726",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.24726"
+      },
+      "title": "Arbitrary Polygon Oscillator: Generalizing Polygonal Synthesis to Arbitrary Shapes, Morphing, and Three-Dimensional Polyhedra",
+      "authors": [
+        "Antonio Argentieri",
+        "Francesco Scagliola"
+      ],
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper generalizes polygonal synthesis to arbitrary vertex configurations, unequal vertex-count morphing, and 3D polyhedra using a unified arc-length DSP engine with runtime geometric antialiasing.",
+        "zh": "本文通过统一的弧长 DSP 引擎，将多边形合成推广到任意顶点配置、不等顶点数变形和三维多面体，并采用运行时几何抗混叠技术。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.24726"
+        }
+      ],
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2608-24579",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.24579"
+      },
+      "title": "Visually-Guided Spatial Audio Generation for $360^\\circ$ In-the-Wild Speech Scenes",
+      "authors": [
+        "Qingyu Luo",
+        "Peng Zhang",
+        "Wenwu Wang",
+        "Philip J. B. Jackson"
+      ],
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": "INTERSPEECH 2026",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper introduces YT-SPEECH dataset and a Localizer-Renderer framework with a conditional complex-domain U-Net for visually-guided FOA speech spatialization from 360-degree video and omnidirectional audio.",
+        "zh": "本文提出了 YT-SPEECH 数据集和一个包含条件复数域 U-Net 的定位器-渲染器框架，用于在野外场景中通过视频引导从全向音频重建 FOA 语音信号。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.24579"
+        }
+      ],
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
+    {
+      "id": "arxiv-2608-14097",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2608.14097"
+      },
+      "title": "Ambisonics Encoding of Room Impulse Responses using a Device-Agnostic Diffusion Model",
+      "authors": [
+        "Eloi Moliner",
+        "Christoph Hold",
+        "Juan Azcarreta Ortiz",
+        "Sebastian Prepelita",
+        "Ishwarya Ananthabhotla",
+        "Daniel Wong",
+        "Sanjeel Parekh",
+        "Sanha Lee"
+      ],
+      "year": 2026,
+      "published": "2026-08-14",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper presents a diffusion-based framework for encoding room impulse responses into high-order Ambisonics from arbitrary microphone arrays, using posterior sampling for consistency and outperforming baselines in a listening test.",
+        "zh": "本文提出了一种基于扩散模型的框架，用于从任意麦克风阵列将房间冲激响应编码为高阶 Ambisonics，通过后验采样保证一致性，并在听感测试中优于基线。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2608.14097"
+        }
+      ],
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
+    },
     {
       "id": "relfx-ismir-2026",
       "source": {
@@ -438,6 +659,60 @@
         "measuredAt": "2026-08-27",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2607-19605",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2607.19605"
+      },
+      "title": "RIME: Enabling Large-Scale Agentic Music Post-Production",
+      "authors": [
+        "Noah Schaffer",
+        "Nikhil Singh"
+      ],
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects",
+        "evaluation",
+        "representation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-08-31"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper introduces RIME, a framework for generating paired edit-instruction data using POEMS (stem separation, mixing, effects) to enable large-scale agentic music post-production and evaluate multimodal LLMs on this task.",
+        "zh": "本文提出了 RIME 框架，利用结合了分轨分离、混音和常用效果器的 POEMS 工具包生成配对的编辑指令数据，以支持大规模智能体音乐后期制作，并评估多模态大语言模型在这项任务上的表现。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2607.19605"
+        }
+      ],
+      "lastVerified": "2026-08-31",
+      "curation": "agent"
     },
     {
       "id": "arxiv-2606-22005",
