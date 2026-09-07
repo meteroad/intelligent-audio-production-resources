@@ -82,6 +82,53 @@ def paper():
 
 
 class ResourceDiscoveryTests(unittest.TestCase):
+    def test_only_high_confidence_includes_are_selected_for_resource_search(self):
+        review = {
+            "decisions": [
+                {"sourceId": "arxiv:2608.10000", "decision": "include", "confidence": "high"},
+                {"sourceId": "arxiv:2608.20000", "decision": "include", "confidence": "medium"},
+                {"sourceId": "arxiv:2608.30000", "decision": "exclude", "confidence": "high"},
+            ]
+        }
+        self.assertEqual(discover_resources.accepted_source_ids(review), {"arxiv:2608.10000"})
+
+    def test_unselected_candidates_are_not_searched(self):
+        first = candidate()
+        second = copy.deepcopy(first)
+        second["sourceId"] = "arxiv:2608.54321"
+        client = FakeGitHubClient({})
+
+        original = discover_resources.discover_for_candidate
+        calls = []
+        try:
+            discover_resources.discover_for_candidate = lambda _client, item, checked_at: calls.append(
+                item["sourceId"]
+            ) or {
+                "status": "not-found",
+                "checkedAt": checked_at,
+                "provider": "github-search",
+                "resource": None,
+            }
+            enriched = discover_resources.enrich_candidates(
+                {"generatedAt": "2026-08-28T01:00:00+00:00", "candidates": [first, second]},
+                client,
+                {first["sourceId"]},
+            )
+        finally:
+            discover_resources.discover_for_candidate = original
+
+        self.assertEqual(calls, [first["sourceId"]])
+        self.assertIn("resourceSearch", enriched["candidates"][0])
+        self.assertNotIn("resourceSearch", enriched["candidates"][1])
+
+    def test_explicit_repository_skips_search_endpoints(self):
+        record = candidate()
+        record["comment"] = "Code: https://github.com/team/methodfx"
+        self.assertEqual(
+            discover_resources.repository_candidates(FakeGitHubClient({}), record),
+            ["team/methodfx"],
+        )
+
     def test_source_repository_is_verified_from_arxiv_id_and_tree(self):
         readme = "# MethodFX\nPaper: https://arxiv.org/abs/2608.12345\nhttps://huggingface.co/team/methodfx"
         encoded = base64.b64encode(readme.encode()).decode()

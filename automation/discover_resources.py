@@ -110,8 +110,27 @@ def detected_license(text: str) -> tuple[str, str] | None:
 
 
 class GitHubClient:
-    def __init__(self, token: str):
+    def __init__(self, token: str, sleep=time.sleep):
         self.token = token
+        self.sleep = sleep
+
+    @staticmethod
+    def retry_delay(error: urllib.error.HTTPError, attempt: int) -> float:
+        retry_after = error.headers.get("Retry-After")
+        if retry_after:
+            try:
+                return max(1.0, min(float(retry_after), 120.0))
+            except ValueError:
+                pass
+
+        remaining = error.headers.get("X-RateLimit-Remaining")
+        reset = error.headers.get("X-RateLimit-Reset")
+        if remaining == "0" and reset:
+            try:
+                return max(1.0, min(float(reset) - time.time() + 1.0, 120.0))
+            except ValueError:
+                pass
+        return min(5.0 * (2**attempt), 60.0)
 
     def get(self, path: str, parameters: dict | None = None, allow_missing: bool = False) -> dict:
         query = f"?{urllib.parse.urlencode(parameters)}" if parameters else ""
@@ -125,7 +144,7 @@ class GitHubClient:
             },
         )
         last_error: Exception | None = None
-        for attempt in range(3):
+        for attempt in range(5):
             try:
                 with urllib.request.urlopen(request, timeout=60) as response:
                     return json.loads(response.read().decode("utf-8"))
@@ -137,8 +156,9 @@ class GitHubClient:
                     break
             except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
                 last_error = error
-            if attempt < 2:
-                time.sleep(2**attempt)
+            if attempt < 4:
+                delay = self.retry_delay(last_error, attempt) if isinstance(last_error, urllib.error.HTTPError) else 2**attempt
+                self.sleep(delay)
         raise RuntimeError(f"GitHub API request failed for {path}: {last_error}")
 
 
@@ -179,6 +199,8 @@ def repository_candidates(client: GitHubClient, candidate: dict) -> list[str]:
     identifier = candidate["sourceId"].removeprefix("arxiv:")
     seed = index_name_seed(candidate["title"])
     repositories = set(explicit_repositories(candidate))
+    if repositories:
+        return sorted(repositories, key=str.casefold)
 
     code_results = client.get(
         "/search/code",
@@ -189,6 +211,8 @@ def repository_candidates(client: GitHubClient, candidate: dict) -> list[str]:
         for item in code_results.get("items", [])
         if item.get("repository", {}).get("full_name")
     )
+    if repositories:
+        return sorted(repositories, key=str.casefold)
 
     repository_results = client.get(
         "/search/repositories",
@@ -319,9 +343,20 @@ def discover_for_candidate(client: GitHubClient, candidate: dict, checked_at: st
     }
 
 
-def enrich_candidates(data: dict, client: GitHubClient) -> dict:
+def accepted_source_ids(review: dict) -> set[str]:
+    return {
+        decision["sourceId"]
+        for decision in review.get("decisions", [])
+        if decision.get("decision") == "include" and decision.get("confidence") == "high"
+    }
+
+
+def enrich_candidates(data: dict, client: GitHubClient, selected_ids: set[str] | None = None) -> dict:
     checked_at = str(data.get("generatedAt") or date.today().isoformat())[:10]
     for candidate in data.get("candidates", []):
+        if selected_ids is not None and candidate.get("sourceId") not in selected_ids:
+            candidate.pop("resourceSearch", None)
+            continue
         candidate["resourceSearch"] = discover_for_candidate(client, candidate, checked_at)
     return data
 
@@ -329,6 +364,7 @@ def enrich_candidates(data: dict, client: GitHubClient) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--candidates", type=Path, required=True)
+    parser.add_argument("--review", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
@@ -336,10 +372,15 @@ def main() -> None:
     if not token:
         raise SystemExit("GITHUB_TOKEN is required for evidence-backed repository search")
     data = json.loads(args.candidates.read_text(encoding="utf-8"))
-    enriched = enrich_candidates(data, GitHubClient(token))
+    selected_ids = None
+    if args.review:
+        review = json.loads(args.review.read_text(encoding="utf-8"))
+        selected_ids = accepted_source_ids(review)
+    enriched = enrich_candidates(data, GitHubClient(token), selected_ids)
     args.output.write_text(json.dumps(enriched, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    matched = sum(candidate["resourceSearch"]["status"] == "matched" for candidate in enriched.get("candidates", []))
-    print(f"Verified GitHub resources for {matched}/{len(enriched.get('candidates', []))} candidates.")
+    searched = [candidate for candidate in enriched.get("candidates", []) if "resourceSearch" in candidate]
+    matched = sum(candidate["resourceSearch"]["status"] == "matched" for candidate in searched)
+    print(f"Verified GitHub resources for {matched}/{len(searched)} accepted candidates.")
 
 
 if __name__ == "__main__":

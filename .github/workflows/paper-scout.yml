@@ -23,14 +23,6 @@ jobs:
       - name: Discover recent arXiv candidates
         run: python3 automation/discover_papers.py
 
-      - name: Verify related GitHub resources
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: >-
-          python3 automation/discover_resources.py
-          --candidates automation/candidates.json
-          --output automation/candidates.json
-
       - name: Read candidate count
         id: count
         run: echo "candidate_count=$(python3 -c 'import json; print(json.load(open("automation/candidates.json"))["candidateCount"])')" >> "$GITHUB_OUTPUT"
@@ -119,6 +111,15 @@ jobs:
         with:
           name: paper-review
           path: automation
+
+      - name: Verify resources for accepted candidates
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: >-
+          python3 automation/discover_resources.py
+          --candidates automation/candidates.json
+          --review automation/reviewed-papers.json
+          --output automation/candidates.json
 
       - name: Merge high-confidence records
         run: >-
