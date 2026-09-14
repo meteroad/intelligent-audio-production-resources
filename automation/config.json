@@ -2,7 +2,7 @@
   "lookbackDays": 45,
   "maxResultsPerQuery": 40,
   "maxCandidates": 80,
-  "rssCategories": ["eess.AS", "cs.SD", "cs.HC"],
+  "rssCategories": ["eess.AS", "cs.SD"],
   "queries": [
     {
       "name": "automatic-mixing",

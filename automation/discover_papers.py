@@ -8,8 +8,8 @@ import json
 import re
 import sys
 import time
-import urllib.parse
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -115,6 +115,9 @@ def parse_rss(xml_text: str, category: str) -> list[dict]:
     root = ET.fromstring(xml_text)
     papers = []
     for item in root.findall("./channel/item"):
+        announce_type = compact_text(item.findtext(f"{ARXIV}announce_type")).casefold()
+        if announce_type not in {"new", "cross"}:
+            continue
         entry_url = compact_text(item.findtext("link"))
         if not entry_url:
             continue

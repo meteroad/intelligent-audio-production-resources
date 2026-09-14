@@ -45,6 +45,7 @@ ARXIV_RSS = """<?xml version="1.0" encoding="UTF-8"?>
       <category>eess.AS</category>
       <category>cs.SD</category>
       <pubDate>Mon, 14 Sep 2026 00:00:00 -0400</pubDate>
+      <arxiv:announce_type>new</arxiv:announce_type>
       <dc:creator>First Author, Second Author (Audio Lab, University)</dc:creator>
     </item>
   </channel>
@@ -79,6 +80,13 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(paper["authors"], ["First Author", "Second Author (Audio Lab, University)"])
         self.assertEqual(paper["abstract"], "We introduce an editable production tool.")
         self.assertEqual(paper["matchedQueries"], ["rss:eess.AS"])
+
+    def test_parse_rss_skips_replacement_announcements(self):
+        replacement = ARXIV_RSS.replace(
+            "<arxiv:announce_type>new</arxiv:announce_type>",
+            "<arxiv:announce_type>replace</arxiv:announce_type>",
+        )
+        self.assertEqual(discover_papers.parse_rss(replacement, "eess.AS"), [])
 
     def test_rate_limit_response_is_detected_before_xml_parsing(self):
         with self.assertRaises(discover_papers.ArxivRateLimitError):
