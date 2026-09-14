@@ -2,7 +2,7 @@
 
 The paper scout follows a reviewable pipeline:
 
-1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API.
+1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API. Requests are serialized and spaced according to arXiv's published rate limit. If the search API remains rate-limited after backoff, official category RSS feeds supply a current-day fallback; the 45-day API lookback recovers missed records on a later successful run.
 2. DeepSeek classifies direct relevance, supplies a required method or index short name, assigns topic, production-stage, output-type, production-control, and input-track labels, writes short English and Chinese summaries, and makes a conservative AI Highlight assessment under the website taxonomy.
 3. An authenticated GitHub search checks only high-confidence accepted candidates for an evidence-backed source repository or documentation-only project page. Explicit repository links are verified directly; otherwise a repository is accepted only through an arXiv identifier, exact paper title, or a method-and-author identity match. Source code, license files, and model links are inspected separately. API failures stop the job; they are never recorded as "not found."
 4. Each accepted paper is written with `templateVersion: 1` and a completed resource review. A verified source repository also creates or updates its Project Index record. Documentation-only repositories remain paper-level project-page links, while a completed search with no verified match is recorded explicitly as `not-found`.

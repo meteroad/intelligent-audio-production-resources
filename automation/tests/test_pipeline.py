@@ -2,7 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 
@@ -35,6 +35,22 @@ ARXIV_FEED = """<?xml version="1.0" encoding="UTF-8"?>
 </feed>
 """
 
+ARXIV_RSS = """<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <item>
+      <title>A Controllable Music Production Tool</title>
+      <link>https://arxiv.org/abs/2609.12345</link>
+      <description>arXiv:2609.12345v1 Announce Type: new Abstract: We introduce an editable production tool.</description>
+      <category>eess.AS</category>
+      <category>cs.SD</category>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 -0400</pubDate>
+      <dc:creator>First Author, Second Author (Audio Lab, University)</dc:creator>
+    </item>
+  </channel>
+</rss>
+"""
+
 
 class DiscoveryTests(unittest.TestCase):
     def test_display_title_normalizes_degree_latex(self):
@@ -54,6 +70,58 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(paper["matchedQueries"], ["audio-effects"])
         self.assertEqual(paper["publicationVenue"], "ISMIR 2026")
         self.assertEqual(paper["venueEvidence"], "comment")
+
+    def test_parse_rss_provides_complete_fallback_metadata(self):
+        papers = discover_papers.parse_rss(ARXIV_RSS, "eess.AS")
+        self.assertEqual(len(papers), 1)
+        paper = papers[0]
+        self.assertEqual(paper["sourceId"], "arxiv:2609.12345")
+        self.assertEqual(paper["authors"], ["First Author", "Second Author (Audio Lab, University)"])
+        self.assertEqual(paper["abstract"], "We introduce an editable production tool.")
+        self.assertEqual(paper["matchedQueries"], ["rss:eess.AS"])
+
+    def test_rate_limit_response_is_detected_before_xml_parsing(self):
+        with self.assertRaises(discover_papers.ArxivRateLimitError):
+            discover_papers.validate_response("Rate exceeded.\n")
+
+    def test_arxiv_client_spaces_requests_by_at_least_three_seconds(self):
+        now = [100.0]
+        waits = []
+
+        def sleep(seconds):
+            waits.append(seconds)
+            now[0] += seconds
+
+        client = discover_papers.ArxivClient(sleep=sleep, clock=lambda: now[0])
+        client._pace()
+        now[0] += 1.0
+        client._pace()
+
+        self.assertAlmostEqual(waits[-1], discover_papers.MIN_REQUEST_INTERVAL - 1.0)
+
+    def test_discovery_falls_back_to_rss_after_api_rate_limit(self):
+        class RateLimitedClient:
+            def fetch_feed(self, query, max_results):
+                raise discover_papers.ArxivRateLimitError("arXiv rate limit exceeded")
+
+            def fetch_rss(self, category):
+                return ARXIV_RSS
+
+        papers, errors = discover_papers.discover(
+            {
+                "lookbackDays": 45,
+                "maxResultsPerQuery": 40,
+                "maxCandidates": 80,
+                "rssCategories": ["eess.AS"],
+                "queries": [{"name": "audio-effects", "query": "all:audio"}],
+            },
+            set(),
+            set(),
+            datetime(2026, 9, 14, 12, tzinfo=timezone.utc),
+            RateLimitedClient(),
+        )
+        self.assertEqual([paper["sourceId"] for paper in papers], ["arxiv:2609.12345"])
+        self.assertEqual(errors[0]["query"], "audio-effects")
 
     def test_existing_records_include_title_level_deduplication(self):
         with tempfile.TemporaryDirectory() as directory:
