@@ -1,42 +1,42 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-08-31",
+  "publishedAt": "2026-09-07",
   "counts": {
-    "papers": 35,
-    "projects": 22,
+    "papers": 6,
+    "projects": 0,
     "datasets": 0
   },
   "headline": {
-    "en": "A broader map from score to editable production",
-    "zh": "从乐谱到可编辑制作的完整链路"
+    "en": "New papers on automatic mixing, spatial audio generation, and reverb parameter estimation",
+    "zh": "新增自动混音、空间音频与混响参数估计论文"
   },
   "summary": {
-    "en": "This historical expansion adds 35 papers and 22 public implementations. It follows the production chain from score-aware expressive performance and instrument rendering, through editable synthesizer programs and sound matching, to multitrack arrangement and DAW-integrated tools. Project pages and source repositories are kept distinct so readers can see what is actually reusable.",
-    "zh": "本次历史扩展新增 35 篇论文和 22 个公开实现，沿着乐谱驱动的表现力演奏与乐器渲染、可编辑合成器程序与音色匹配，一直整理到多轨编排和 DAW 集成工具。页面同时区分项目演示与真实源码，方便读者判断哪些内容可以直接复用。"
+    "en": "This week's additions include empirical guidance for two-stage automatic mixing, a reward-based approach for spatial upmixing with audio language models, physics-guided spatial audio generation, and a method for estimating plate reverb parameters, along with symbolic music generation and performance interface papers.",
+    "zh": "本周新增了自动混音两阶段设计的实证指导、基于奖励的空间上混音方法、物理引导的空间音频生成、板混响参数估计，以及符号音乐生成和表演界面相关论文。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "ismir-2019-virtuosonet",
+      "id": "arxiv-2609-02835",
       "note": {
-        "en": "VirtuosoNet is an influential early reference for turning structured scores into expressive, editable piano performances.",
-        "zh": "VirtuosoNet 是从结构化乐谱生成具有表现力且可编辑钢琴演奏的重要早期代表。"
+        "en": "Controlled listening experiments show that decomposing automatic mixing into two stages improves perceived full-mix quality.",
+        "zh": "受控听音实验表明，将自动混音分解为两阶段可提升整体混音感知质量。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2608-03032",
+      "id": "arxiv-2608-30559",
       "note": {
-        "en": "DDSynth-RL recovers editable synthesizer presets from target audio and publishes both code and model checkpoints.",
-        "zh": "DDSynth-RL 从目标音频恢复可编辑合成器预设，并同时公开代码和模型权重。"
+        "en": "SPHERE uses spatial heuristic rewards to post-train an audio language model for predicting spatial mixing parameters, improving upmixing quality.",
+        "zh": "SPHERE 利用空间启发式奖励对音频语言模型进行后训练，以预测空间混音参数，从而提升上混音质量。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2506-23094",
+      "id": "arxiv-2608-28818",
       "note": {
-        "en": "TOMI organizes clips, sections, tracks, and transformations into full songs that can be rendered and edited inside REAPER.",
-        "zh": "TOMI 将片段、段落、轨道和变换组织成完整歌曲，并可在 REAPER 中继续渲染和编辑。"
+        "en": "A two-stage evolutionary search reliably recovers the six physical parameters of a plate reverb from a single impulse response.",
+        "zh": "两阶段进化搜索方法可从单个冲激响应中可靠恢复板混响的六个物理参数。"
       }
     }
   ]
