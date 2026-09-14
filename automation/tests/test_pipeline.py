@@ -524,6 +524,44 @@ class MergeTests(unittest.TestCase):
 
 
 class PublicationRefreshTests(unittest.TestCase):
+    def test_semantic_scholar_can_refresh_when_arxiv_is_rate_limited(self):
+        def arxiv_failure(_identifiers):
+            raise discover_papers.ArxivRateLimitError("arXiv rate limit exceeded")
+
+        def semantic_success(_identifiers):
+            return {
+                "arxiv:2608.12345": {
+                    "venue": "ISMIR",
+                    "year": 2026,
+                    "publicationVenue": {"name": "ISMIR", "type": "conference"},
+                    "externalIds": {"DOI": "10.1234/ismir.2026.1"},
+                }
+            }
+
+        metadata, warnings = refresh_publication_metadata.collect_metadata(
+            ["2608.12345"],
+            arxiv_failure,
+            semantic_success,
+        )
+        self.assertEqual(metadata[0]["publicationVenue"], "ISMIR 2026")
+        self.assertEqual(metadata[0]["doi"], "10.1234/ismir.2026.1")
+        self.assertIn("rate limit exceeded", warnings[0])
+
+    def test_both_metadata_sources_can_fail_without_stopping_publication(self):
+        def failure(_identifiers):
+            raise RuntimeError("service unavailable")
+
+        metadata, warnings = refresh_publication_metadata.collect_metadata(
+            ["2608.12345"],
+            failure,
+            failure,
+        )
+        self.assertEqual(
+            metadata,
+            [{"sourceId": "arxiv:2608.12345", "publicationVenue": None, "doi": None}],
+        )
+        self.assertEqual(len(warnings), 2)
+
     def test_refresh_upgrades_arxiv_venue_and_adds_doi(self):
         papers = {
             "schemaVersion": 1,

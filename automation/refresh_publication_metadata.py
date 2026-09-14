@@ -20,29 +20,21 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def fetch_arxiv_ids(arxiv_ids: list[str], batch_size: int = 40) -> list[dict]:
+def fetch_arxiv_ids(
+    arxiv_ids: list[str],
+    batch_size: int = 40,
+    client: discover_papers.ArxivClient | None = None,
+) -> list[dict]:
     records = []
+    client = client or discover_papers.ArxivClient()
     for offset in range(0, len(arxiv_ids), batch_size):
         batch = arxiv_ids[offset : offset + batch_size]
         parameters = urllib.parse.urlencode({"id_list": ",".join(batch), "max_results": len(batch)})
-        request = urllib.request.Request(
-            f"https://export.arxiv.org/api/query?{parameters}",
-            headers={"User-Agent": discover_papers.USER_AGENT, "Accept": "application/atom+xml"},
+        response = client.get(
+            f"{discover_papers.API_ROOT}?{parameters}",
+            "application/atom+xml",
         )
-        last_error = None
-        for attempt in range(3):
-            try:
-                with urllib.request.urlopen(request, timeout=45) as response:
-                    records.extend(discover_papers.parse_feed(response.read().decode("utf-8"), "venue-refresh"))
-                break
-            except Exception as error:
-                last_error = error
-                if attempt < 2:
-                    time.sleep(2**attempt)
-        else:
-            raise RuntimeError(f"arXiv venue refresh failed after 3 attempts: {last_error}")
-        if offset + batch_size < len(arxiv_ids):
-            time.sleep(3)
+        records.extend(discover_papers.parse_feed(response, "venue-refresh"))
     return records
 
 
@@ -92,6 +84,33 @@ def enrich_with_semantic_scholar(metadata: list[dict], semantic_records: dict[st
     return metadata
 
 
+def collect_metadata(
+    arxiv_ids: list[str],
+    arxiv_fetcher=fetch_arxiv_ids,
+    semantic_fetcher=fetch_semantic_scholar,
+) -> tuple[list[dict], list[str]]:
+    warnings = []
+    try:
+        metadata = arxiv_fetcher(arxiv_ids)
+    except Exception as error:
+        warnings.append(f"{error}; continuing without an arXiv metadata refresh")
+        metadata = [
+            {
+                "sourceId": f"arxiv:{identifier}",
+                "publicationVenue": None,
+                "doi": None,
+            }
+            for identifier in arxiv_ids
+        ]
+
+    try:
+        semantic_records = semantic_fetcher(arxiv_ids)
+        metadata = enrich_with_semantic_scholar(metadata, semantic_records)
+    except Exception as error:
+        warnings.append(f"{error}; continuing without a Semantic Scholar metadata refresh")
+    return metadata, warnings
+
+
 def refresh_records(papers_data: dict, metadata: list[dict], verified_date: str) -> tuple[dict, int]:
     evidence = {record["sourceId"]: record for record in metadata}
     changed = 0
@@ -137,16 +156,13 @@ def main() -> None:
         for paper in papers_data.get("papers", [])
         if paper.get("source", {}).get("type") == "arxiv"
     )
-    metadata = fetch_arxiv_ids(arxiv_ids)
-    try:
-        semantic_records = fetch_semantic_scholar(arxiv_ids)
-        metadata = enrich_with_semantic_scholar(metadata, semantic_records)
-    except Exception as error:
-        print(f"Warning: {error}; continuing with arXiv metadata only.")
+    metadata, warnings = collect_metadata(arxiv_ids)
+    for warning in warnings:
+        print(f"Warning: {warning}.")
     refreshed, changed = refresh_records(papers_data, metadata, args.verified_date)
     output = args.output or args.papers
     output.write_text(json.dumps(refreshed, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Refreshed {len(metadata)} arXiv records; updated {changed} publication entries.")
+    print(f"Processed {len(metadata)} indexed arXiv records; updated {changed} publication entries.")
 
 
 if __name__ == "__main__":
