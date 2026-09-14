@@ -1,7 +1,83 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-14",
   "papers": [
+    {
+      "id": "arxiv-2609-12607",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2609.12607"
+      },
+      "title": "Direct Preference Density Alignment for Conversational Audio Equalization",
+      "authors": [
+        "Ioannis Stylianou",
+        "Sven Ewan Shepstone",
+        "Jon Francombe",
+        "Pablo Martinez Nuevo",
+        "Zheng-Hua Tan"
+      ],
+      "year": 2026,
+      "published": "2026-09-14",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects",
+        "evaluation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "track"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-09-14"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper proposes Direct Preference Density Alignment, which uses non-parametric preference density maps from about 90,000 user samples to align a language model for conversational audio equalization and validates it with a blind equalization listening test against a GPT-4o mini baseline.",
+        "zh": "该论文提出直接偏好密度对齐方法，利用约9万条用户样本构建非参数偏好密度图来对齐语言模型以实现对话式音频均衡，并通过盲听均衡测试与 GPT-4o mini 基线进行对比验证。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2609.12607"
+        }
+      ],
+      "lastVerified": "2026-09-14",
+      "curation": "agent",
+      "shortName": "Direct Preference Density Alignment",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-09-14",
+        "provider": "github-search",
+        "url": null
+      }
+    },
     {
       "id": "arxiv-2609-02835",
       "source": {

@@ -1,42 +1,26 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-09-07",
+  "publishedAt": "2026-09-14",
   "counts": {
-    "papers": 6,
+    "papers": 1,
     "projects": 0,
     "datasets": 0
   },
   "headline": {
-    "en": "New papers on automatic mixing, spatial audio generation, and reverb parameter estimation",
-    "zh": "新增自动混音、空间音频与混响参数估计论文"
+    "en": "Preference Density Alignment for Conversational Audio EQ",
+    "zh": "偏好密度对齐用于对话式音频均衡"
   },
   "summary": {
-    "en": "This week's additions include empirical guidance for two-stage automatic mixing, a reward-based approach for spatial upmixing with audio language models, physics-guided spatial audio generation, and a method for estimating plate reverb parameters, along with symbolic music generation and performance interface papers.",
-    "zh": "本周新增了自动混音两阶段设计的实证指导、基于奖励的空间上混音方法、物理引导的空间音频生成、板混响参数估计，以及符号音乐生成和表演界面相关论文。"
+    "en": "This week adds one paper on aligning a language model for conversational audio equalization using preference density maps from roughly 90,000 user samples, evaluated with a blind listening test against a GPT-4o mini baseline. No verified source projects were added.",
+    "zh": "本周新增一篇论文，利用约9万条用户样本构建偏好密度图来对齐语言模型，实现对话式音频均衡，并通过盲听测试与 GPT-4o mini 基线对比验证。本周没有新增经核实的源码项目。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2609-02835",
+      "id": "arxiv-2609-12607",
       "note": {
-        "en": "Controlled listening experiments show that decomposing automatic mixing into two stages improves perceived full-mix quality.",
-        "zh": "受控听音实验表明，将自动混音分解为两阶段可提升整体混音感知质量。"
-      }
-    },
-    {
-      "type": "paper",
-      "id": "arxiv-2608-30559",
-      "note": {
-        "en": "SPHERE uses spatial heuristic rewards to post-train an audio language model for predicting spatial mixing parameters, improving upmixing quality.",
-        "zh": "SPHERE 利用空间启发式奖励对音频语言模型进行后训练，以预测空间混音参数，从而提升上混音质量。"
-      }
-    },
-    {
-      "type": "paper",
-      "id": "arxiv-2608-28818",
-      "note": {
-        "en": "A two-stage evolutionary search reliably recovers the six physical parameters of a plate reverb from a single impulse response.",
-        "zh": "两阶段进化搜索方法可从单个冲激响应中可靠恢复板混响的六个物理参数。"
+        "en": "It aligns a language model to listener preferences with non-parametric density maps built from about 90,000 user samples, then checks the result in a blind equalization listening test against a GPT-4o mini baseline.",
+        "zh": "该方法用约9万条用户样本构建非参数偏好密度图，将语言模型对齐到听者偏好，并通过盲听均衡测试与 GPT-4o mini 基线进行对比。"
       }
     }
   ]
