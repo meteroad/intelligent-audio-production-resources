@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-09-23",
   "datasets": [
     {
       "id": "sixdof-srir",
@@ -1432,6 +1432,76 @@
         {
           "label": "doi",
           "url": "https://doi.org/10.21437/Interspeech.2023-2117"
+        }
+      ]
+    },
+    {
+      "id": "strudel-synth",
+      "name": "Strudel-Synth",
+      "description": {
+        "en": "A synthetic corpus pairing executable Strudel music programs with their rendered MIDI for symbolic music decompilation.",
+        "zh": "将可执行 Strudel 音乐程序与其渲染 MIDI 配对的合成语料库，用于符号音乐反编译。"
+      },
+      "scale": {
+        "en": "21,174 MIDI-program pairs: 20,152 training examples and 1,022 evaluation examples.",
+        "zh": "共 21,174 组 MIDI-程序配对，其中训练集 20,152 组，评测集 1,022 组。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "production-program"
+        ],
+        "effects": [],
+        "contentTypes": [
+          "symbolic-music",
+          "program-code"
+        ],
+        "evidence": [
+          "https://huggingface.co/datasets/haiyewon/Strudel-Synth"
+        ]
+      },
+      "access": {
+        "status": "direct-download",
+        "evidenceUrl": "https://huggingface.co/datasets/haiyewon/Strudel-Synth"
+      },
+      "license": {
+        "en": "CC-BY-4.0",
+        "zh": "CC-BY-4.0",
+        "status": "identified",
+        "spdx": "CC-BY-4.0",
+        "evidenceUrl": "https://huggingface.co/datasets/haiyewon/Strudel-Synth"
+      },
+      "relations": {
+        "papers": [
+          {
+            "id": "arxiv-2607-01849",
+            "evidenceUrl": "https://arxiv.org/abs/2607.01849"
+          }
+        ],
+        "projects": [
+          {
+            "id": "elianakim-decomposer",
+            "evidenceUrl": "https://github.com/elianakim/Decomposer"
+          }
+        ]
+      },
+      "lastVerified": "2026-09-23",
+      "links": [
+        {
+          "label": "dataset",
+          "url": "https://huggingface.co/datasets/haiyewon/Strudel-Synth"
+        },
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2607.01849"
+        },
+        {
+          "label": "project",
+          "url": "https://github.com/elianakim/Decomposer"
         }
       ]
     },

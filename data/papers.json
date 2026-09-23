@@ -1515,6 +1515,99 @@
       "curation": "agent"
     },
     {
+      "id": "arxiv-2607-01849",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2607.01849"
+      },
+      "shortName": "Decomposer",
+      "title": "Decomposer: Learning to Decompile Symbolic Music to Programs",
+      "authors": [
+        "Yewon Kim",
+        "Apurva Gandhi",
+        "David Chung",
+        "Graham Neubig",
+        "Chris Donahue"
+      ],
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv",
+      "areas": [
+        "symbolic-performance",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [],
+      "topics": [
+        "symbolic-performance",
+        "production-program"
+      ],
+      "productionStages": [
+        "score",
+        "performance"
+      ],
+      "outputTypes": [
+        "program"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Decomposer defines and evaluates symbolic music decompilation with execution-based training, while releasing inference code, an open model, and paired MIDI-program data.",
+          "zh": "Decomposer 提出并评测了符号音乐反编译任务，采用基于执行的训练，同时公开推理代码、模型和 MIDI-程序配对数据。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-09-23"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-09-23",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Decomposer maps MIDI performances to executable, readable Strudel programs, using supervised fine-tuning followed by execution-based reinforcement learning for reconstruction fidelity and code readability.",
+        "zh": "Decomposer 将 MIDI 演奏转换为可执行、可读的 Strudel 程序，并通过监督微调和基于执行的强化学习兼顾重建忠实度与代码可读性。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2607.01849"
+        },
+        {
+          "label": "project",
+          "url": "https://yewon-kim.com/decomposer/"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/elianakim/Decomposer"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/haiyewon/Decomposer-Qwen3-8B"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2607.01849"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-09-23",
+        "provider": "manual-web-review",
+        "url": "https://github.com/elianakim/Decomposer"
+      },
+      "lastVerified": "2026-09-23",
+      "curation": "agent"
+    },
+    {
       "id": "arxiv-2606-22005",
       "source": {
         "type": "arxiv",
@@ -6389,6 +6482,83 @@
       "curation": "agent"
     },
     {
+      "id": "manual-synthax-aes-2023",
+      "source": {
+        "type": "manual",
+        "id": "synthax-aes-2023"
+      },
+      "shortName": "SynthAX",
+      "title": "SynthAX: A Fast Modular Synthesizer in JAX",
+      "authors": [
+        "Manuel Cherep",
+        "Nikhil Singh"
+      ],
+      "year": 2023,
+      "published": "2023-10-25",
+      "venue": "AES Convention 155",
+      "areas": [
+        "differentiable-processing",
+        "production-program"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "SynthAX provides a modular, differentiable synthesis implementation with extensive throughput benchmarks and a permissively licensed public package for large-scale sound design research.",
+          "zh": "SynthAX 提供模块化可微合成实现、系统性的吞吐性能评测，以及采用宽松许可证公开的软件包，可支持大规模声音设计研究。"
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-09-23"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-09-23",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "SynthAX implements a modular synthesizer in JAX for differentiable, massively batched sound generation, reporting peak rendering speeds above 80,000 times real time.",
+        "zh": "SynthAX 使用 JAX 实现支持可微计算和大规模批处理的模块化合成器，报告的峰值渲染速度超过实时的 80,000 倍。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://www.media.mit.edu/publications/synthax/"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/PapayaResearch/synthax"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-09-23",
+        "provider": "manual-web-review",
+        "url": "https://github.com/PapayaResearch/synthax"
+      },
+      "lastVerified": "2026-09-23",
+      "curation": "agent"
+    },
+    {
       "id": "arxiv-2310-13430",
       "source": {
         "type": "arxiv",
@@ -7306,6 +7476,95 @@
         "measuredAt": "2026-09-07",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
+    },
+    {
+      "id": "arxiv-2305-12868",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2305.12868"
+      },
+      "shortName": "NAS-FM",
+      "title": "NAS-FM: Neural Architecture Search for Tunable and Interpretable Sound Synthesis based on Frequency Modulation",
+      "authors": [
+        "Zhen Ye",
+        "Wei Xue",
+        "Xu Tan",
+        "Qifeng Liu",
+        "Yike Guo"
+      ],
+      "year": 2023,
+      "published": "2023-05-22",
+      "venue": "IJCAI 2023",
+      "areas": [
+        "differentiable-processing",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization",
+        "derivative-free-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "production-graph"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "graph",
+        "parameter",
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "Codex",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-09-23"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-09-23",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "NAS-FM trains a differentiable FM synthesis supernet and uses evolutionary search to recover an interpretable oscillator graph and frequency ratios for a target instrument timbre.",
+        "zh": "NAS-FM 训练可微 FM 合成超网络，并通过进化搜索为目标乐器音色恢复可解释的振荡器图结构与频率比。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2305.12868"
+        },
+        {
+          "label": "project",
+          "url": "https://nas-fm.github.io/"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.24963/ijcai.2023/651"
+        }
+      ],
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-09-23",
+        "provider": "manual-web-review",
+        "url": "https://nas-fm.github.io/"
+      },
+      "lastVerified": "2026-09-23",
+      "curation": "agent"
     },
     {
       "id": "arxiv-2303-08610",

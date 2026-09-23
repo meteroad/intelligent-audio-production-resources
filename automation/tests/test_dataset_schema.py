@@ -67,6 +67,13 @@ class DatasetSchemaTests(unittest.TestCase):
         spatial["datasets"][0]["taxonomy"]["contentTypes"] = ["binaural-audio", "hrtf"]
         self.assertEqual(self.validate(spatial), 1)
 
+    def test_validator_accepts_symbolic_program_taxonomy(self):
+        symbolic = copy.deepcopy(self.document)
+        symbolic["datasets"][0]["areas"] = ["symbolic-performance", "production-program"]
+        symbolic["datasets"][0]["taxonomy"]["tasks"] = ["symbolic-performance", "production-program"]
+        symbolic["datasets"][0]["taxonomy"]["contentTypes"] = ["symbolic-music", "program-code"]
+        self.assertEqual(self.validate(symbolic), 1)
+
     def test_validator_rejects_unknown_relation(self):
         invalid = copy.deepcopy(self.document)
         invalid["datasets"][0]["relations"]["projects"][0]["id"] = "missing-project"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-09-23",
   "projects": [
     {
       "id": "facebookresearch-2-5d-visual-sound",
@@ -920,6 +920,74 @@
       ]
     },
     {
+      "id": "cmajor-lang-cmajor",
+      "name": "Cmajor",
+      "description": {
+        "en": "A portable DSP language and runtime for building processor graphs and deployable instrument or effect patches.",
+        "zh": "用于构建处理器图并部署乐器或效果器补丁的可移植 DSP 语言与运行时。"
+      },
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-modeling",
+          "production-program",
+          "production-graph"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://cmajor.dev/docs/GettingStarted"
+        ]
+      },
+      "license": {
+        "en": "GPL-3.0-or-later; commercial licensing is also available",
+        "zh": "GPL-3.0-or-later；另提供商业许可",
+        "status": "identified",
+        "spdx": "GPL-3.0-or-later",
+        "evidenceUrl": "https://github.com/cmajor-lang/cmajor/blob/main/LICENSE.md"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/cmajor-lang/cmajor"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "verified"
+      },
+      "lastVerified": "2026-09-23",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/cmajor-lang/cmajor"
+        }
+      ]
+    },
+    {
       "id": "nilsdem-control-transfer-diffusion",
       "name": "Control-Transfer Diffusion",
       "description": {
@@ -1683,6 +1751,83 @@
         {
           "label": "checkpoint",
           "url": "https://huggingface.co/MINNE-WU/DDSynth-RL"
+        }
+      ]
+    },
+    {
+      "id": "elianakim-decomposer",
+      "name": "Decomposer",
+      "description": {
+        "en": "Inference code and an open model for recovering executable, editable Strudel programs from symbolic MIDI.",
+        "zh": "从符号 MIDI 恢复可执行、可编辑 Strudel 程序的推理代码与开放模型。"
+      },
+      "areas": [
+        "symbolic-performance",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "symbolic-performance",
+          "production-program"
+        ],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/elianakim/Decomposer/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache-2.0",
+        "zh": "Apache-2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/elianakim/Decomposer/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/elianakim/Decomposer"
+          ]
+        },
+        "checkpoint": {
+          "status": "linked",
+          "evidence": [
+            "https://huggingface.co/haiyewon/Decomposer-Qwen3-8B"
+          ]
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/elianakim/Decomposer/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-found",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "documented",
+          "evidence": [
+            "https://huggingface.co/datasets/haiyewon/Strudel-Synth"
+          ]
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2607-01849"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-09-23",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/elianakim/Decomposer"
+        },
+        {
+          "label": "checkpoint",
+          "url": "https://huggingface.co/haiyewon/Decomposer-Qwen3-8B"
         }
       ]
     },
@@ -2516,6 +2661,74 @@
         {
           "label": "source",
           "url": "https://github.com/ebu/ear-production-suite"
+        }
+      ]
+    },
+    {
+      "id": "grame-cncm-faust",
+      "name": "Faust",
+      "description": {
+        "en": "A functional, block-diagram-oriented language and compiler for portable real-time DSP, synthesis, and audio plug-ins.",
+        "zh": "面向可移植实时 DSP、声音合成与音频插件的函数式块图语言和编译器。"
+      },
+      "areas": [
+        "audio-effects",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "effect-modeling",
+          "production-program",
+          "production-graph"
+        ],
+        "effects": [
+          "multi-effect"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://faustdoc.grame.fr/manual/introduction/"
+        ]
+      },
+      "license": {
+        "en": "LGPL-2.1-or-later",
+        "zh": "LGPL-2.1-or-later",
+        "status": "identified",
+        "spdx": "LGPL-2.1-or-later",
+        "evidenceUrl": "https://github.com/grame-cncm/faust/blob/master/COPYING.txt"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/grame-cncm/faust"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [],
+        "reviewStatus": "verified"
+      },
+      "lastVerified": "2026-09-23",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/grame-cncm/faust"
         }
       ]
     },
@@ -6655,6 +6868,78 @@
         {
           "label": "checkpoint",
           "url": "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"
+        }
+      ]
+    },
+    {
+      "id": "papayaresearch-synthax",
+      "name": "SynthAX",
+      "description": {
+        "en": "A fast, modular JAX synthesizer for differentiable sound synthesis, batched rendering, and large-scale optimization.",
+        "zh": "用于可微声音合成、批量渲染和大规模优化的高速模块化 JAX 合成器。"
+      },
+      "areas": [
+        "differentiable-processing",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "differentiable-processing",
+          "production-program",
+          "production-graph"
+        ],
+        "effects": [
+          "other"
+        ],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/PapayaResearch/synthax/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT",
+        "zh": "MIT",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/PapayaResearch/synthax/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/PapayaResearch/synthax"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "inference": {
+          "status": "documented",
+          "evidence": [
+            "https://github.com/PapayaResearch/synthax/blob/main/README.md"
+          ]
+        },
+        "training": {
+          "status": "not-applicable",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-applicable",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "manual-synthax-aes-2023"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-09-23",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/PapayaResearch/synthax"
         }
       ]
     },

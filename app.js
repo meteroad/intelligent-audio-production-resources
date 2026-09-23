@@ -240,6 +240,7 @@ const translations = {
     "output.audio": "Audio",
     "output.parameter": "Parameter",
     "output.graph": "Graph",
+    "output.program": "Program",
     "output.edit": "Edit",
     "output.project": "Project",
     "link.paper": "Paper",
@@ -286,6 +287,8 @@ const translations = {
     "content.hrtf": "HRTF",
     "content.spatial-metadata": "Spatial metadata",
     "content.video": "Video",
+    "content.symbolic-music": "Symbolic music",
+    "content.program-code": "Program code",
     "task.effect-modeling": "Effect modeling",
     "task.parameter-estimation": "Parameter estimation",
     "task.effect-control": "Effect control",
@@ -560,6 +563,7 @@ const translations = {
     "output.audio": "音频",
     "output.parameter": "参数",
     "output.graph": "图结构",
+    "output.program": "程序",
     "output.edit": "编辑操作",
     "output.project": "工程",
     "link.paper": "论文",
@@ -606,6 +610,8 @@ const translations = {
     "content.hrtf": "HRTF",
     "content.spatial-metadata": "空间元数据",
     "content.video": "视频",
+    "content.symbolic-music": "符号音乐",
+    "content.program-code": "程序代码",
     "task.effect-modeling": "效果建模",
     "task.parameter-estimation": "参数估计",
     "task.effect-control": "效果控制",
@@ -733,7 +739,7 @@ const controlApproaches = ["gradient-based-optimization", "derivative-free-optim
 const trackScopes = ["single-track", "multitrack"];
 const paperTopics = ["symbolic-performance", "performance-rendering", "production-program", "production-graph", "daw-interaction", "agentic-production"];
 const productionStages = ["score", "performance", "synthesis", "track", "mix", "project"];
-const outputTypes = ["audio", "parameter", "graph", "edit", "project"];
+const outputTypes = ["audio", "parameter", "graph", "program", "edit", "project"];
 const PAGE_SIZE = 10;
 
 function getInitialLanguage() {

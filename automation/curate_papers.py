@@ -46,7 +46,7 @@ ALLOWED_TOPICS = {
     "agentic-production",
 }
 ALLOWED_PRODUCTION_STAGES = {"score", "performance", "synthesis", "track", "mix", "project"}
-ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "edit", "project"}
+ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "program", "edit", "project"}
 
 
 def load_json(path: Path) -> dict:

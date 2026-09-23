@@ -102,7 +102,9 @@
         "ambisonics",
         "hrtf",
         "spatial-metadata",
-        "video"
+        "video",
+        "symbolic-music",
+        "program-code"
       ]
     },
     "taxonomy": {

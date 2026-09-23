@@ -75,7 +75,7 @@ ALLOWED_PAPER_TOPICS = {
     "agentic-production",
 }
 ALLOWED_PRODUCTION_STAGES = {"score", "performance", "synthesis", "track", "mix", "project"}
-ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "edit", "project"}
+ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "program", "edit", "project"}
 AI_ASSESSMENT_RATINGS = {"highlighted", "standard"}
 IMPACT_STATUSES = {"high-impact", "standard", "too-recent", "not-assessed"}
 RESOURCE_REVIEW_STATUSES = {"source", "project-page", "not-found"}
@@ -97,6 +97,8 @@ ALLOWED_DATASET_CONTENT_TYPES = {
     "hrtf",
     "spatial-metadata",
     "video",
+    "symbolic-music",
+    "program-code",
 }
 DATASET_ACCESS_STATUSES = {
     "direct-download",

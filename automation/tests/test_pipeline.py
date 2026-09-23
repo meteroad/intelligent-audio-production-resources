@@ -416,7 +416,7 @@ class MergeTests(unittest.TestCase):
                     "trackScopes": ["single-track"],
                     "topics": ["production-program", "daw-interaction"],
                     "productionStages": ["track", "project"],
-                    "outputTypes": ["edit", "project"],
+                    "outputTypes": ["program", "edit", "project"],
                     "aiAssessment": {
                         "rating": "highlighted",
                         "rationale": {
@@ -443,7 +443,7 @@ class MergeTests(unittest.TestCase):
         self.assertEqual(merged["papers"][0]["trackScopes"], ["single-track"])
         self.assertEqual(merged["papers"][0]["topics"], ["production-program", "daw-interaction"])
         self.assertEqual(merged["papers"][0]["productionStages"], ["track", "project"])
-        self.assertEqual(merged["papers"][0]["outputTypes"], ["edit", "project"])
+        self.assertEqual(merged["papers"][0]["outputTypes"], ["program", "edit", "project"])
         self.assertEqual(merged["papers"][0]["aiAssessment"]["rating"], "highlighted")
         self.assertEqual(merged["papers"][0]["impact"]["status"], "not-assessed")
         self.assertEqual(merged["papers"][0]["venue"], "ISMIR 2026")
