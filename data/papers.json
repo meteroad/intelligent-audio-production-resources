@@ -1,7 +1,590 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07",
+  "updatedAt": "2026-10-05",
   "papers": [
+    {
+      "id": "arxiv-2610-03405",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.03405"
+      },
+      "title": "PEACE: Joint Embeddings of DSP Effects Code and Audio",
+      "authors": [
+        "David Braun",
+        "Adam Finkelstein"
+      ],
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": "ISMIR 2026",
+      "areas": [
+        "audio-effects",
+        "representation"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [],
+      "outputTypes": [
+        "parameter",
+        "graph"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "PEACE learns joint embeddings of DSP effect code and audio, using a T5 transformer over Faust source and a graph neural network over the compiler's intermediate representation, and evaluates on audio-to-code retrieval where masking UI parameters encodes effect chain topology.",
+        "zh": "PEACE 提出音频效果代码与音频的联合嵌入，分别用 T5 变换器编码 Faust 源码、用图神经网络编码编译器中间表示，并在音频到代码检索任务上验证，其中遮蔽 UI 参数可得到仅编码效果链拓扑的嵌入。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.03405"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "PEACE",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2610-00642",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.00642"
+      },
+      "title": "Interpretable Destination-Aware synthesizer Modulation Recovery",
+      "authors": [
+        "David Liu",
+        "Giulio Cengarle",
+        "David Cooper",
+        "Mark Vinton",
+        "Haici Yang"
+      ],
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/9a46e37e5aeae00b1c84d8c527f74b5378c1cfa4",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper presents a destination-aware pipeline that identifies modulated destinations, recovers LFO shapes per destination, and estimates oscillator waveforms to match source timbre, trained with a differentiable synthesizer and evaluated objectively and subjectively.",
+        "zh": "该论文提出一种先识别调制目标、再逐目标恢复 LFO 波形并估计振荡器波形以匹配音色的流程，训练中使用可微合成器，并进行了客观与主观评估。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.00642"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "Destination-Aware Mod Recovery",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2610-00630",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.00630"
+      },
+      "title": "PLACE: Positional Latent Adaptation via Conditioned Embeddings for Binaural Audio Generation",
+      "authors": [
+        "Tiernon Riesenmy",
+        "You Zhang",
+        "Gautam Bhattacharya",
+        "Andrea Fanelli"
+      ],
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "synthesis",
+        "track"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/601146fb2295637f17c2260e8b5b5ba34a138cf6",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "PLACE adapts a pretrained any-to-audio model for binaural generation from text, video, and optional audio prompts using perception-encoder features, spatial-cue alignment, and low-rank latent conditioning supervised by decoded-audio ILD/ITD objectives.",
+        "zh": "PLACE 扩展预训练的任意到音频模型以支持双耳生成，利用感知编码器特征、文本-视频空间线索对齐和条件低秩潜变量变换，并以解码音频的 ILD/ITD 目标进行监督。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.00630"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "PLACE",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2609-35295",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2609.35295"
+      },
+      "title": "Simulation-Based Inference for Plate Reverb System Identification",
+      "authors": [
+        "Dylan Sechet",
+        "Marc Evrard",
+        "Matthieu Kowalski"
+      ],
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "track"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/46bb07143b3aded0289524758c31afb7c4acc0ae",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper applies simulation-based inference to retrieve physical plate-reverb parameters from an impulse response, training a network on simulator-generated data and fine-tuning per test observation with additional simulation rounds.",
+        "zh": "该论文将基于模拟的推断用于从脉冲响应中估计板式混响的物理参数，用模拟器生成数据训练网络，并针对每个测试样本通过额外模拟轮次微调专用网络。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2609.35295"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "SBI Plate Reverb ID",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2609-31024",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2609.31024"
+      },
+      "title": "Synth-JEPA: Joint Embedding Prediction for Renderer-Free Synthesizer Parameter Search",
+      "authors": [
+        "Ben Hayes",
+        "Haokun Tian",
+        "Stefan Lattner"
+      ],
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": "arXiv",
+      "areas": [
+        "representation"
+      ],
+      "controlApproaches": [
+        "derivative-free-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/60ad2c181628863e9d153c9b0a63cbc7b9942c5d",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Synth-JEPA learns mutually predictive audio and parameter representations from paired synthesizer data, enabling renderer-free synthesizer parameter search that is scored in the learned space and validated on Surge XT and out-of-domain targets.",
+        "zh": "Synth-JEPA 从成对的合成器数据中学习相互预测的音频与参数表示，从而在学习空间中直接评分以实现无需渲染的合成器参数搜索，并在 Surge XT 及域外目标上验证。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2609.31024"
+        },
+        {
+          "label": "project",
+          "url": "https://github.com/ben-hayes/synth-jepa"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "Synth-JEPA",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": "https://github.com/ben-hayes/synth-jepa"
+      }
+    },
+    {
+      "id": "arxiv-2609-29320",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2609.29320"
+      },
+      "title": "Off-manifold robustness in synthesizer inversion with joint distribution flow matching",
+      "authors": [
+        "Ben Hayes"
+      ],
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/56dd744548ee8f2cfd9537d4e26147893d726dca",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper models the joint distribution of audio and synthesizer parameters with a multimodal continuous normalizing flow using independent noise schedules, enabling unpaired real recordings to train the audio marginal and improving off-manifold synthesizer inversion on Surge XT and Dexed.",
+        "zh": "该论文用多模态连续归一化流并对各模态使用独立噪声调度来建模音频与合成器参数的联合分布，使无配对真实录音可仅训练音频边缘分布，从而提升 Surge XT 与 Dexed 上的域外合成器反演效果。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2609.29320"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/DoHeyYeah/arXiV-favor"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "Joint Flow Synth Inversion",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": "https://github.com/DoHeyYeah/arXiV-favor"
+      }
+    },
+    {
+      "id": "arxiv-2609-28320",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2609.28320"
+      },
+      "title": "A multi-resolution spectrogram approach for estimating the physical parameters of a plate reverb",
+      "authors": [
+        "Jared Lipkin",
+        "Meiying Chen",
+        "Benjamin R. Thompson",
+        "Andrea Cogliati",
+        "David A. Anderson",
+        "Michael C. Heilemann"
+      ],
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [
+        "track"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/6ba5f1109ba7ade1bd2db1f99502e11e41429679",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "A ResNet-18 adapted to normalized multi-resolution spectrograms plus spectral phase is used to predict the physical parameters of a plate reverb from impulse responses, achieving low normalized mean squared error on a 5000-IR validation set.",
+        "zh": "该工作将 ResNet-18 适配到归一化多分辨率频谱图并结合频谱相位，从脉冲响应预测板式混响的物理参数，在 5000 条脉冲响应验证集上取得较低归一化均方误差。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2609.28320"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "Multi-Res Plate Reverb Params",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2609-25995",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2609.25995"
+      },
+      "title": "HRTF Upsampling Across Varying Measurement Configurations with Geometry-Aware Query-Conditioned Aggregation",
+      "authors": [
+        "Xingyu Chen",
+        "Hanwen Bi",
+        "Sipei Zhao",
+        "Fei Ma",
+        "Eva Cheng",
+        "Ian S. Burnett"
+      ],
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-05"
+      },
+      "impact": {
+        "status": "too-recent",
+        "citationCount": 0,
+        "influentialCitationCount": 0,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": "https://www.semanticscholar.org/paper/adc4233aa3473d0cfaaada6d3030b66c84ec27f9",
+        "measuredAt": "2026-10-05",
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "GeoAtt is a variable-context HRTF upsampling framework that uses geometry-aware query-conditioned spatial aggregation per frequency bin plus Conformer modeling, with relative geometry as additive cross-attention bias, achieving the lowest log-spectral distortion across four LAP measurement configurations on SONICOM.",
+        "zh": "GeoAtt 是一种可变测量配置的 HRTF 上采样框架，在每个频点上进行几何感知的查询条件空间聚合并用 Conformer 建模，将相对几何作为交叉注意力加性偏置，在 SONICOM 上于四种 LAP 配置中取得最低对数谱失真。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2609.25995"
+        }
+      ],
+      "lastVerified": "2026-10-05",
+      "curation": "agent",
+      "shortName": "GeoAtt",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-05",
+        "provider": "github-search",
+        "url": null
+      }
+    },
     {
       "id": "arxiv-2609-02835",
       "source": {
@@ -52,7 +635,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/a39244ebe5d68cd27177109d1d5686749a0ff87f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -130,7 +713,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/583a5990c6ed4631258e907c6f4c78c710c05e59",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -205,7 +788,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/a713cd634ebcd59e92d7aecc4d8724ab69f7ca1e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -282,7 +865,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/b44a229efbb7731f00947cdbe654902f2fe33956",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -351,7 +934,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/2f5d7e1d0717e5bf7e70415f7bc66855c16fe740",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -418,7 +1001,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/198cd3494c70242be83ea011c330c2099e45895c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -487,7 +1070,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/4b55089681f0a3e0398e52823e6b922cb19c9a75",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -556,12 +1139,12 @@
       },
       "impact": {
         "status": "too-recent",
-        "citationCount": 0,
-        "influentialCitationCount": 0,
+        "citationCount": 1,
+        "influentialCitationCount": 1,
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/7673f170abe4d8d8d76569dc1021faae0fa1aa88",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -633,12 +1216,12 @@
       },
       "impact": {
         "status": "too-recent",
-        "citationCount": 0,
+        "citationCount": 1,
         "influentialCitationCount": 0,
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/c6d5cc536e29ddcf193f407960ebae0ef67bd9cb",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -728,7 +1311,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -787,7 +1370,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/95f1dede70c97f89727f96295a504f60f882cd2e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -871,7 +1454,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/98a9518fb8f38ff4055e2c070f2b4c66a403c6d0",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -934,7 +1517,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/62e7443fcfd795795d401d2b4dd6d5883a35c20c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1002,7 +1585,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/3ffc7ad8797b5a074d9d3a60e23f9a713f5693b7",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1060,12 +1643,12 @@
       },
       "impact": {
         "status": "too-recent",
-        "citationCount": 0,
+        "citationCount": 1,
         "influentialCitationCount": 0,
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/3987b2287e367a9ff15bc629fa4384bf50186d00",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1145,7 +1728,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/32c24e6c8cdd90e113815b3152e8bacf935237e9",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1229,7 +1812,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/3e4123cf9162b232f77a3df1c44856e838b933e5",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1315,7 +1898,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/6224bba1bec4a595031ff2d5ead2ac321f007fd7",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1372,7 +1955,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/d5fec3e3fc7229432c80f9f33e18ca479102ef98",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1434,7 +2017,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/76c1687bdd24023c389ac24532e82351efb60c17",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1487,7 +2070,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/1d475fd26ac7ee5e69f1719ccf29cd4878b56f2b",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1567,8 +2150,8 @@
         "influentialCitationCount": 0,
         "yearRank": null,
         "cohortSize": null,
-        "sourceUrl": null,
-        "measuredAt": "2026-09-23",
+        "sourceUrl": "https://www.semanticscholar.org/paper/d0575b0c80a742d56a77e500ce7d3f8aa96ab030",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1675,7 +2258,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/5f7daaa29669d4222b8333952673c2931ebcad57",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1730,7 +2313,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/a7b251277bbf9100a85dc4a7f262ccfbfd5b630e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1820,7 +2403,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/316138721ef199c4785319115fe6ad8cd3eebfcd",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -1898,12 +2481,12 @@
       },
       "impact": {
         "status": "too-recent",
-        "citationCount": 0,
-        "influentialCitationCount": 0,
+        "citationCount": 2,
+        "influentialCitationCount": 2,
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/806bf0edc6c0cd9689f9e01c4d9ec49b9f987d88",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -1966,7 +2549,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/c7fb925d034127124f5a159d2e79432eb6fefebb",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2029,7 +2612,7 @@
         "yearRank": 24,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/c2b59e3853041b94e8ccbaf93c4227c08ccf8bb1",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -2117,7 +2700,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/8256130b0b5a5e70fd3c2c01be762ab2fb2d2cbb",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -2220,7 +2803,7 @@
         "yearRank": 8,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/95de1f0022c638d99f7a5efee51bfef549d1ef1b",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2280,7 +2863,7 @@
         "yearRank": 22,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/cd63e97b41adeae7901083ad2974243195060b9c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2347,10 +2930,10 @@
         "status": "standard",
         "citationCount": 8,
         "influentialCitationCount": 3,
-        "yearRank": 9,
+        "yearRank": 10,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/04f0069c0a9c0169f76a98f64eda33f2998a2080",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2410,7 +2993,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": "https://www.semanticscholar.org/paper/ea81ba71bf2a33f2eac79db12e53b6bbfcdfaca8",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -2502,7 +3085,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2574,7 +3157,7 @@
         "yearRank": 17,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/d5512c886fc2d6cd69cf4d0cbfc8a46d2419895e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2632,7 +3215,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2691,7 +3274,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2751,7 +3334,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2811,12 +3394,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 11,
+        "citationCount": 12,
         "influentialCitationCount": 1,
         "yearRank": 5,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/68fcad1ebcc5787a75e6d5ab4d7eb6beebbf9945",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -2877,7 +3460,7 @@
         "yearRank": 24,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/5d3a114ceed64706d3c28bf23ede916afcfb490d",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -2957,12 +3540,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 8,
-        "influentialCitationCount": 1,
-        "yearRank": 9,
+        "citationCount": 10,
+        "influentialCitationCount": 2,
+        "yearRank": 8,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/b2553876e1593996f8df5e0ad79682ca53f1e1b9",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -3053,7 +3636,7 @@
         "yearRank": 22,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/e3cd9558ab4f172bc35f6b2f7fa9903194596f42",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3106,12 +3689,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 3,
+        "citationCount": 5,
         "influentialCitationCount": 0,
-        "yearRank": 21,
+        "yearRank": 17,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/62cfa51a4d32b311c1385afc2207c0056369e231",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -3208,7 +3791,7 @@
         "yearRank": 14,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/4f32ed2e32dbbd3b9c6f9cb85a21f946a6a4cb2f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3271,12 +3854,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 14,
+        "citationCount": 15,
         "influentialCitationCount": 1,
-        "yearRank": 3,
+        "yearRank": 4,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/3efa251891e186f3015f3396e55d8af3517dd55a",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3340,7 +3923,7 @@
         "yearRank": 24,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/7c71d017b8f90c64ff8d1fefce6b14fdbeab0271",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -3438,7 +4021,7 @@
         "yearRank": 17,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/9829f5a588503e1531f9e434f2f786982ded8178",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3497,12 +4080,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 22,
-        "influentialCitationCount": 6,
+        "citationCount": 26,
+        "influentialCitationCount": 7,
         "yearRank": 2,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/c1b4249cd3f5c1bd73f655c91cf686d57bbeca19",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3558,12 +4141,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 11,
+        "citationCount": 12,
         "influentialCitationCount": 0,
         "yearRank": 5,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/4838640498cfe4f9efb89830ecbce4b39a101f68",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -3658,10 +4241,10 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 19,
+        "yearRank": 20,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/0fa94ae7961867bc7cbeb7179717df21a6b82b2f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3723,12 +4306,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 14,
+        "citationCount": 16,
         "influentialCitationCount": 0,
         "yearRank": 3,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/0ce9fb5ca7a8afdd291994b35c820663bfa38c56",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3798,12 +4381,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 25,
-        "influentialCitationCount": 6,
+        "citationCount": 27,
+        "influentialCitationCount": 8,
         "yearRank": 1,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/cb58ca914bea212ba18fe5fa6064875e33938d6e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3869,7 +4452,7 @@
         "yearRank": 14,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/ad041a4fbdb334599603f161fd37d2b22cd3f0af",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3933,7 +4516,7 @@
         "yearRank": 11,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/852614a147f3010d51dfffccc506408bb70614f8",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -3993,13 +4576,13 @@
         "assessedAt": "2026-08-27"
       },
       "impact": {
-        "status": "high-impact",
+        "status": "standard",
         "citationCount": 11,
         "influentialCitationCount": 2,
-        "yearRank": 5,
+        "yearRank": 7,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/a3ee4346326461e88e744669f8e0df44630b3f30",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4062,10 +4645,10 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 19,
+        "yearRank": 20,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/50dd299ba5c775743e956c5e125ce0324abf4d7b",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4122,7 +4705,7 @@
         "yearRank": 14,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/08b1839bb5170c591b5c6bbcda3881c0eb23b790",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -4207,7 +4790,7 @@
         "yearRank": 11,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/a6e3c3940d492b65633b967b29f1ba2695505849",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -4308,7 +4891,7 @@
         "yearRank": 11,
         "cohortSize": 26,
         "sourceUrl": "https://www.semanticscholar.org/paper/93a449a553655a81157d472f157ca6c142a07483",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4372,7 +4955,7 @@
         "yearRank": 23,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/fde001780947b52d23f87072f2c2f60eb0f042c9",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4444,7 +5027,7 @@
         "yearRank": 2,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/18446eb3348f6601d108315f01e7c60c88e4fa23",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4499,7 +5082,7 @@
         "yearRank": 27,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/c6c4db76007a948d56db189a36bb19ff08e41544",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -4578,12 +5161,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 23,
+        "citationCount": 25,
         "influentialCitationCount": 4,
-        "yearRank": 4,
+        "yearRank": 5,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/fab83bd8947fced1b57072cc40b094d4598cc490",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4640,12 +5223,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 12,
+        "citationCount": 13,
         "influentialCitationCount": 2,
         "yearRank": 15,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/783e630e65837e1304ff5db9223da1dfc5d5abad",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4709,12 +5292,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 38,
-        "influentialCitationCount": 2,
+        "citationCount": 43,
+        "influentialCitationCount": 3,
         "yearRank": 1,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/cba6d8c2b97049f7a9d7f2100945140c655d22cc",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4778,12 +5361,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 19,
+        "citationCount": 20,
         "influentialCitationCount": 1,
-        "yearRank": 8,
+        "yearRank": 9,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/a97b19f498d2b69d64fdab4f4e5f729db17a0e02",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4853,10 +5436,10 @@
         "status": "standard",
         "citationCount": 10,
         "influentialCitationCount": 0,
-        "yearRank": 18,
+        "yearRank": 19,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/bff7da8ac59d49a0595d0cebe799fae26fca11a0",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -4911,7 +5494,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -5001,10 +5584,10 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 0,
-        "yearRank": 24,
+        "yearRank": 26,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/cf4ee4abb62cc6c92e389fd4aa3a41a4cd5932b4",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -5096,10 +5679,10 @@
         "status": "standard",
         "citationCount": 10,
         "influentialCitationCount": 0,
-        "yearRank": 18,
+        "yearRank": 19,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/7ed36286e5031430054e2fe7c6954f1ba9016287",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5154,12 +5737,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 23,
+        "citationCount": 26,
         "influentialCitationCount": 3,
-        "yearRank": 4,
+        "yearRank": 3,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/e02b5b2daf87590c99514a560db9940da451f846",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -5252,12 +5835,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 4,
+        "citationCount": 5,
         "influentialCitationCount": 0,
         "yearRank": 24,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/95c2b03e298b74801bcffb61081f1a07ea492555",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5309,12 +5892,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 9,
+        "citationCount": 11,
         "influentialCitationCount": 1,
-        "yearRank": 20,
+        "yearRank": 18,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/11a2d9a719ba8f8b786df9bfef2bed410558ddd3",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -5406,7 +5989,7 @@
         "yearRank": 13,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/0547245687a15f472b1c9d759eaedf7d2b2b963c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5471,12 +6054,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 23,
-        "influentialCitationCount": 1,
-        "yearRank": 4,
+        "citationCount": 24,
+        "influentialCitationCount": 2,
+        "yearRank": 6,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/c69db516ebe81d9c7050587fb28e99bd38a41569",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5531,12 +6114,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 20,
+        "citationCount": 22,
         "influentialCitationCount": 3,
         "yearRank": 7,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/4015b6315b1738e8abeaa3bbfff50cd4b932d8b5",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -5623,12 +6206,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 19,
-        "influentialCitationCount": 8,
-        "yearRank": 8,
+        "citationCount": 22,
+        "influentialCitationCount": 11,
+        "yearRank": 7,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/6f346dba69901865d4d2bed97ca628e00ed18e6f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5701,10 +6284,10 @@
         "status": "standard",
         "citationCount": 12,
         "influentialCitationCount": 0,
-        "yearRank": 15,
+        "yearRank": 16,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/d48273dc852207454a298c0054b38effd09b5d9c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5760,10 +6343,10 @@
         "status": "standard",
         "citationCount": 12,
         "influentialCitationCount": 0,
-        "yearRank": 15,
+        "yearRank": 16,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/b23f3a01ebd9b06da95f74d5f3b846fdc1fb0c61",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -5852,12 +6435,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 4,
+        "citationCount": 5,
         "influentialCitationCount": 1,
         "yearRank": 24,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/7eeabc7a6e380a082524f102ade441e67dcf16ba",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5924,7 +6507,7 @@
         "yearRank": 13,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/0862fe90dd915f9e51a5f99c35401ec2e96031d2",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -5991,12 +6574,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 19,
+        "citationCount": 20,
         "influentialCitationCount": 0,
-        "yearRank": 8,
+        "yearRank": 9,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/2a3ca2ea61f0a20a9ede746c8a9533dcaeece063",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6060,7 +6643,7 @@
         "yearRank": 11,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/9ee2c1f37d6c934adf1dbe2bafd5794f923aedb8",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6128,10 +6711,10 @@
         "status": "standard",
         "citationCount": 8,
         "influentialCitationCount": 0,
-        "yearRank": 21,
+        "yearRank": 22,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/c70fef3d235ffedeaab2b2a6a2bfa2abfd59019e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6190,12 +6773,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 15,
+        "citationCount": 16,
         "influentialCitationCount": 0,
-        "yearRank": 12,
+        "yearRank": 11,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/5ee00a39651c39eac59ff92db9f12c99cfc108e2",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6259,12 +6842,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 25,
+        "citationCount": 26,
         "influentialCitationCount": 3,
         "yearRank": 3,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/20c5f73c359e01ca76f6a3b5a6d0503d45c8805f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6327,12 +6910,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 8,
+        "citationCount": 9,
         "influentialCitationCount": 0,
         "yearRank": 21,
         "cohortSize": 27,
         "sourceUrl": "https://www.semanticscholar.org/paper/448241a365485e15ba303bd13ed5ab8341c05ba7",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6392,9 +6975,9 @@
         "citationCount": 11,
         "influentialCitationCount": 0,
         "yearRank": 11,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/000acd90982199ab8cd776ce14ae73d4ab636b5c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6450,7 +7033,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -6531,7 +7114,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-23",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -6610,12 +7193,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 14,
+        "citationCount": 15,
         "influentialCitationCount": 1,
-        "yearRank": 8,
-        "cohortSize": 16,
+        "yearRank": 7,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/3869e4eb612fa4518be0010afdb7a70ae5018f0d",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6674,10 +7257,10 @@
         "status": "standard",
         "citationCount": 14,
         "influentialCitationCount": 2,
-        "yearRank": 8,
-        "cohortSize": 16,
+        "yearRank": 9,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/ef0623c780654afc012d637204d1cc1ea8335fb2",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6740,9 +7323,9 @@
         "citationCount": 7,
         "influentialCitationCount": 0,
         "yearRank": 13,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/51b3f509cb0266645e13436efe67cb2fed9ed279",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6802,10 +7385,10 @@
         "status": "standard",
         "citationCount": 0,
         "influentialCitationCount": 0,
-        "yearRank": 15,
-        "cohortSize": 16,
+        "yearRank": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/5718fab79876efe81cb9f0845a708375339c19cb",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6862,7 +7445,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6919,7 +7502,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -6986,9 +7569,9 @@
         "citationCount": 22,
         "influentialCitationCount": 4,
         "yearRank": 4,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/8c25234ee479eeea370d33a83533ba73384b82f9",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7046,12 +7629,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 54,
+        "citationCount": 57,
         "influentialCitationCount": 4,
         "yearRank": 2,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/e08467f2e3dbca0aab191dfc46f9800bd9fc1c62",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7119,9 +7702,9 @@
         "citationCount": 15,
         "influentialCitationCount": 6,
         "yearRank": 7,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/8e5d66e802084898fc628685a3b8d8cc331b2276",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7178,12 +7761,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 11,
+        "citationCount": 10,
         "influentialCitationCount": 0,
-        "yearRank": 11,
-        "cohortSize": 16,
+        "yearRank": 12,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/5fe5af5e3629d9a9f1e485a8907b4280d7d42ad9",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7246,12 +7829,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 46,
+        "citationCount": 47,
         "influentialCitationCount": 5,
         "yearRank": 3,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/8689ffcf9128e363ea6b9f2d94a53dcd0f5ed837",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7308,7 +7891,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -7403,9 +7986,9 @@
         "citationCount": 13,
         "influentialCitationCount": 1,
         "yearRank": 10,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/89ffb176ff1802c9f742926cab474a3e7bddadd8",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7470,10 +8053,10 @@
         "status": "standard",
         "citationCount": 0,
         "influentialCitationCount": 0,
-        "yearRank": 15,
-        "cohortSize": 16,
+        "yearRank": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/e193b95b2428f4054982265b781c8252eb16a08c",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7529,13 +8112,13 @@
         "assessedAt": "2026-09-23"
       },
       "impact": {
-        "status": "not-assessed",
-        "citationCount": null,
-        "influentialCitationCount": null,
-        "yearRank": null,
-        "cohortSize": null,
-        "sourceUrl": null,
-        "measuredAt": "2026-09-23",
+        "status": "standard",
+        "citationCount": 5,
+        "influentialCitationCount": 2,
+        "yearRank": 14,
+        "cohortSize": 17,
+        "sourceUrl": "https://www.semanticscholar.org/paper/064f49644df676cd5233e71ec1c6d51ff72e72e8",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -7628,9 +8211,9 @@
         "citationCount": 19,
         "influentialCitationCount": 2,
         "yearRank": 6,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/333cf970eac8ae940eedaccb9124e1b78a17b57d",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7692,12 +8275,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 73,
-        "influentialCitationCount": 12,
+        "citationCount": 77,
+        "influentialCitationCount": 13,
         "yearRank": 1,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/241ea8d37afe19f13c435516279abf13568549c6",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7761,9 +8344,9 @@
         "citationCount": 21,
         "influentialCitationCount": 2,
         "yearRank": 5,
-        "cohortSize": 16,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/30bd42c1ea5d41d4976a3011d7f6d98d2f423169",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7829,7 +8412,7 @@
         "yearRank": 16,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/36a2e88b3909e8bd7da321f9c1155b5e88a15a2a",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -7884,10 +8467,10 @@
         "status": "standard",
         "citationCount": 4,
         "influentialCitationCount": 1,
-        "yearRank": 14,
-        "cohortSize": 16,
+        "yearRank": 15,
+        "cohortSize": 17,
         "sourceUrl": "https://www.semanticscholar.org/paper/8ee9cb94a3327736281e9794449addeec317c1c2",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -7980,7 +8563,7 @@
         "yearRank": 18,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/d4395faf405376b24b935e8aa09868b019d09cfc",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8044,12 +8627,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 40,
-        "influentialCitationCount": 4,
+        "citationCount": 41,
+        "influentialCitationCount": 3,
         "yearRank": 5,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/ba258ff1190e48059f2e2da68f4ec1026a12b63f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8111,10 +8694,10 @@
         "status": "standard",
         "citationCount": 20,
         "influentialCitationCount": 2,
-        "yearRank": 9,
+        "yearRank": 10,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/e37c7ac2b6727f6834f62610e695cea51bfafcb5",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8174,12 +8757,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 29,
+        "citationCount": 30,
         "influentialCitationCount": 8,
         "yearRank": 6,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/bad626961d1c904f80779362e7bc4661a7773c3e",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8242,7 +8825,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8301,7 +8884,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8359,7 +8942,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8416,7 +8999,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -8506,7 +9089,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8566,7 +9149,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8623,7 +9206,7 @@
         "yearRank": 14,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/51413f1700db809e0481acbe89d9fd3d5f5cfb25",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -8714,12 +9297,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 51,
+        "citationCount": 52,
         "influentialCitationCount": 1,
         "yearRank": 4,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/923c55abf7e5141c511b052e186961a14009c0f1",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8780,12 +9363,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 26,
+        "citationCount": 27,
         "influentialCitationCount": 3,
         "yearRank": 8,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/6375347d7f0b07e8d7cba71382621ce718b0bb09",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8848,12 +9431,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 73,
-        "influentialCitationCount": 9,
+        "citationCount": 75,
+        "influentialCitationCount": 10,
         "yearRank": 2,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/c0bd83aaf15f086275d1c29fd1f829799ffc3192",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8917,7 +9500,7 @@
         "yearRank": 14,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/166cd4d54cfdb6e1fb577697d28a8946d79fc6f8",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -8977,7 +9560,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9047,12 +9630,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 85,
+        "citationCount": 86,
         "influentialCitationCount": 7,
         "yearRank": 1,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/99ad33f57c270a6563eeffccc178247f4c2b9f33",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9107,12 +9690,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 19,
+        "citationCount": 20,
         "influentialCitationCount": 3,
-        "yearRank": 11,
+        "yearRank": 10,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/b05f6b61d232ec5d28b569955f2ddfadf779a020",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -9199,12 +9782,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 20,
+        "citationCount": 21,
         "influentialCitationCount": 2,
         "yearRank": 9,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/81699b99471d31024e4f888554567d28b4eb3322",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9266,12 +9849,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 6,
+        "citationCount": 7,
         "influentialCitationCount": 2,
-        "yearRank": 17,
+        "yearRank": 16,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/347c2c79b120f38604273997f8c70d2b641884ff",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9335,7 +9918,7 @@
         "yearRank": 13,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/180c86f42f4a98f7b0eb0b396302010f3bbd8e9b",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9393,7 +9976,7 @@
         "yearRank": 7,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/4e3016617e5e254bafebcbd7e96c509f670bdd37",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -9483,7 +10066,7 @@
         "yearRank": 12,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/997d7e31cfa56afe242eabb472c85e460927387f",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9542,12 +10125,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 70,
+        "citationCount": 71,
         "influentialCitationCount": 4,
         "yearRank": 3,
         "cohortSize": 18,
         "sourceUrl": "https://www.semanticscholar.org/paper/95a35473fd1936927dd4a53fe0a5d2d6762d99b3",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -9624,12 +10207,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 24,
+        "citationCount": 26,
         "influentialCitationCount": 2,
-        "yearRank": 10,
+        "yearRank": 8,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/820f2529152c88fa4bbcc0c9369d69e2505d131a",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9691,7 +10274,7 @@
         "yearRank": 6,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/379d090ba62669ecabd1857f8599b9d46830e8e6",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9750,7 +10333,7 @@
         "yearRank": 12,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/4d4f797009a018967c80f9e300482044da696984",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -9830,12 +10413,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 35,
+        "citationCount": 36,
         "influentialCitationCount": 1,
         "yearRank": 5,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/88bf3acddc10d9901a089d4e01ae3f5acd20b479",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9906,7 +10489,7 @@
         "yearRank": 14,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/21a2c21fd922323819eb87a4ce75b9e36d6269e6",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -9974,7 +10557,7 @@
         "yearRank": 8,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/96d43160c5cc2313f97e18067633812644f83a21",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10033,7 +10616,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10088,7 +10671,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -10173,7 +10756,7 @@
         "yearRank": 13,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/293876cefc418caf9726c9e058bd8f761a1baa23",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10231,12 +10814,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 21,
+        "citationCount": 22,
         "influentialCitationCount": 0,
         "yearRank": 11,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/70a2eb398ba5b4b624cb2dc5f96a6b835e9a397a",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10302,7 +10885,7 @@
         "yearRank": 2,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/30a5c6223d0a9433991c1f7f80134f1f0b21c2a3",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10369,7 +10952,7 @@
         "yearRank": 3,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/df43c5c2a589eda1e2eabf9172a1c648c8feddb7",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10437,7 +11020,7 @@
         "yearRank": 4,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/a3ce75ccbd335a3a98d74e65a138daa9443fa232",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10503,7 +11086,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10564,7 +11147,7 @@
         "yearRank": 8,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/0bcab67058596c6ca5dc5d691c9e1004457063e3",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10628,12 +11211,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 79,
+        "citationCount": 80,
         "influentialCitationCount": 10,
         "yearRank": 1,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/06a48439d4eab9d73f440c1db57fa67bf023f030",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10689,7 +11272,7 @@
         "yearRank": 15,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/551cd02612486bdd54db9a6e8e6c7c6074fabe58",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -10777,7 +11360,7 @@
         "yearRank": 6,
         "cohortSize": 15,
         "sourceUrl": "https://www.semanticscholar.org/paper/c6244b07f129146c579fe09846b5ab8f4f769e17",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10833,7 +11416,7 @@
         "yearRank": 6,
         "cohortSize": 6,
         "sourceUrl": "https://www.semanticscholar.org/paper/4c2d65bd5b6e911889678b0c4daebf6bb1a163d0",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -10923,7 +11506,7 @@
         "yearRank": 4,
         "cohortSize": 6,
         "sourceUrl": "https://www.semanticscholar.org/paper/6cf011f63ab51862d24de7781ad61877ae5ffb93",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -10988,12 +11571,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 77,
+        "citationCount": 78,
         "influentialCitationCount": 2,
         "yearRank": 3,
         "cohortSize": 6,
         "sourceUrl": "https://www.semanticscholar.org/paper/20a1b599f0967415e26e26d6115af8900547bce9",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11050,7 +11633,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11107,7 +11690,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11175,7 +11758,7 @@
         "yearRank": 2,
         "cohortSize": 6,
         "sourceUrl": "https://www.semanticscholar.org/paper/73aa926dad010a3f1bb89faa31241f97a89cc461",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11233,7 +11816,7 @@
         "yearRank": 5,
         "cohortSize": 6,
         "sourceUrl": "https://www.semanticscholar.org/paper/182b656accfb8ea7c28779f3388129905aaa0690",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -11314,12 +11897,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 515,
-        "influentialCitationCount": 79,
+        "citationCount": 525,
+        "influentialCitationCount": 81,
         "yearRank": 1,
         "cohortSize": 6,
         "sourceUrl": "https://www.semanticscholar.org/paper/468aa95cfdf66da9fc3dc6a1b9042a52a6ec99c6",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11378,7 +11961,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -11462,7 +12045,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -11546,12 +12129,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 196,
-        "influentialCitationCount": 14,
+        "citationCount": 206,
+        "influentialCitationCount": 15,
         "yearRank": 1,
         "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/6235de880364a1c4dedd6b446a7dd55f925a95fb",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11611,7 +12194,7 @@
         "yearRank": 2,
         "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/d89925f1c8278f908be43ec4a648b2a033ba4ded",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -11693,7 +12276,7 @@
         "yearRank": null,
         "cohortSize": null,
         "sourceUrl": null,
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -11768,12 +12351,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 37,
+        "citationCount": 39,
         "influentialCitationCount": 2,
-        "yearRank": 4,
+        "yearRank": 3,
         "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/e697a756becd894264434942a04571d5d1dceb4d",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -11856,12 +12439,12 @@
       },
       "impact": {
         "status": "standard",
-        "citationCount": 155,
+        "citationCount": 156,
         "influentialCitationCount": 21,
         "yearRank": 2,
         "cohortSize": 2,
         "sourceUrl": "https://www.semanticscholar.org/paper/b809837560cf11937ee857338eb1a7ccd2abc7b2",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     },
@@ -11917,7 +12500,7 @@
         "yearRank": 3,
         "cohortSize": 4,
         "sourceUrl": "https://www.semanticscholar.org/paper/36a77ad6e52e7a4493b673c0fd5eea8a9c135e98",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       },
       "summary": {
@@ -12002,12 +12585,12 @@
       },
       "impact": {
         "status": "high-impact",
-        "citationCount": 203,
+        "citationCount": 204,
         "influentialCitationCount": 26,
         "yearRank": 1,
         "cohortSize": 2,
         "sourceUrl": "https://www.semanticscholar.org/paper/029490920cd736e91d6c57f3cfb850adddcf2725",
-        "measuredAt": "2026-09-07",
+        "measuredAt": "2026-10-05",
         "methodVersion": "semantic-scholar-year-cohort-v1"
       }
     }

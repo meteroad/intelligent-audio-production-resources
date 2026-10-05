@@ -1,42 +1,42 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-09-07",
+  "publishedAt": "2026-10-05",
   "counts": {
-    "papers": 6,
-    "projects": 0,
+    "papers": 8,
+    "projects": 1,
     "datasets": 0
   },
   "headline": {
-    "en": "New papers on automatic mixing, spatial audio generation, and reverb parameter estimation",
-    "zh": "新增自动混音、空间音频与混响参数估计论文"
+    "en": "Synthesizer inversion, plate reverb, and HRTF upsampling lead this week's additions",
+    "zh": "本周新增：合成器反演、板式混响与 HRTF 上采样"
   },
   "summary": {
-    "en": "This week's additions include empirical guidance for two-stage automatic mixing, a reward-based approach for spatial upmixing with audio language models, physics-guided spatial audio generation, and a method for estimating plate reverb parameters, along with symbolic music generation and performance interface papers.",
-    "zh": "本周新增了自动混音两阶段设计的实证指导、基于奖励的空间上混音方法、物理引导的空间音频生成、板混响参数估计，以及符号音乐生成和表演界面相关论文。"
+    "en": "This week adds eight papers on synthesizer parameter estimation, reverb system identification, and spatial audio, plus one public code release for joint-distribution flow-matching synthesizer inversion. Together they show how differentiable simulators and learned embeddings are being used to recover effect and synth parameters, and how spatial audio models are being adapted to new measurement conditions.",
+    "zh": "本周新增八篇论文，涉及合成器参数估计、混响系统辨识和空间音频，另有一个用于联合分布流匹配合成器反演的公开代码。整体上，这些工作展示了如何借助可微模拟器和学习到的表示来恢复效果器与合成器参数，以及如何让空间音频模型适应不同的测量条件。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2609-02835",
+      "id": "arxiv-2609-29320",
       "note": {
-        "en": "Controlled listening experiments show that decomposing automatic mixing into two stages improves perceived full-mix quality.",
-        "zh": "受控听音实验表明，将自动混音分解为两阶段可提升整体混音感知质量。"
+        "en": "It trains a multimodal continuous normalizing flow on audio and synth parameters with independent noise schedules, so unpaired real recordings can shape the audio marginal and improve inversion on Surge XT and Dexed, with a public implementation released.",
+        "zh": "该工作用独立噪声调度的多模态连续归一化流建模音频与合成器参数，使无配对真实录音也能塑造音频边缘分布，提升 Surge XT 与 Dexed 上的反演效果，并公开了实现代码。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2608-30559",
+      "id": "arxiv-2609-35295",
       "note": {
-        "en": "SPHERE uses spatial heuristic rewards to post-train an audio language model for predicting spatial mixing parameters, improving upmixing quality.",
-        "zh": "SPHERE 利用空间启发式奖励对音频语言模型进行后训练，以预测空间混音参数，从而提升上混音质量。"
+        "en": "It treats plate-reverb parameter estimation as simulation-based inference, training on simulator data and fine-tuning per impulse response with extra simulation rounds.",
+        "zh": "该工作把板式混响参数估计视为基于模拟的推断：先在模拟数据上训练，再针对每条脉冲响应通过额外模拟轮次微调。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2608-28818",
+      "id": "arxiv-2609-25995",
       "note": {
-        "en": "A two-stage evolutionary search reliably recovers the six physical parameters of a plate reverb from a single impulse response.",
-        "zh": "两阶段进化搜索方法可从单个冲激响应中可靠恢复板混响的六个物理参数。"
+        "en": "Its geometry-aware, query-conditioned aggregation and Conformer model upsample HRTFs across four different LAP measurement configurations, reporting the lowest log-spectral distortion on SONICOM.",
+        "zh": "该方法用几何感知的查询条件聚合与 Conformer 模型在四种 LAP 测量配置下上采样 HRTF，在 SONICOM 上取得最低对数谱失真。"
       }
     }
   ]

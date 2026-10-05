@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-09-23",
+  "updatedAt": "2026-10-05",
   "projects": [
     {
       "id": "facebookresearch-2-5d-visual-sound",
@@ -3846,6 +3846,67 @@
         {
           "label": "source",
           "url": "https://github.com/AaronZ345/ISDrama"
+        }
+      ]
+    },
+    {
+      "id": "doheyyeah-arxiv-favor",
+      "name": "Joint Flow Synth Inversion",
+      "description": {
+        "en": "Public implementation associated with Joint Flow Synth Inversion. The paper models the joint distribution of audio and synthesizer parameters with a multimodal continuous normalizing flow using independent noise schedules, enabling unpaired real recordings to train the audio marginal and improving off-manifold synthesizer inversion on Surge XT and Dexed.",
+        "zh": "与 Joint Flow Synth Inversion 关联的公开实现。该论文用多模态连续归一化流并对各模态使用独立噪声调度来建模音频与合成器参数的联合分布，使无配对真实录音可仅训练音频边缘分布，从而提升 Surge XT 与 Dexed 上的域外合成器反演效果。"
+      },
+      "areas": [
+        "audio-effects"
+      ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed",
+        "evidence": []
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/DoHeyYeah/arXiV-favor/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/DoHeyYeah/arXiV-favor"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2609-29320"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-10-05",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/DoHeyYeah/arXiV-favor"
         }
       ]
     },
