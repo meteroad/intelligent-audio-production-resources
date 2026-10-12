@@ -17,9 +17,9 @@ Consumers should inspect the top-level `schemaVersion` before processing a catal
 
 ## Papers v1
 
-New agent-curated records use `templateVersion: 1` as a completeness contract. These records always include a non-empty `shortName`, authoritative paper link, bilingual summary, area and method classifications, topic, production-stage and output-type arrays, AI assessment, citation-impact state, and a completed GitHub resource review. `resourceReview.status` is `source`, `project-page`, or `not-found`; the last state means the automated evidence search completed without finding a repository that passed identity verification. A source match must also appear in the project catalogue, while a documentation-only repository remains a paper-level project-page link.
+New agent-curated records use `templateVersion: 1` as a completeness contract. These records always include a non-empty `shortName`, authoritative paper link, bilingual summary, area and method classifications, topic, production-stage and output-type arrays, AI assessment, citation-impact state, and a GitHub resource-review state. `resourceReview.status` is `source`, `project-page`, `not-found`, or `not-reviewed`. `not-found` means the evidence search completed without finding a repository that passed identity verification; `not-reviewed` means a transient service failure deferred that check. A source match must also appear in the project catalogue, while a documentation-only repository remains a paper-level project-page link.
 
-The resource scout fails the weekly job when GitHub search itself is unavailable. It therefore never converts an API failure into `not-found`, and incomplete resource checks cannot enter a review pull request.
+The resource scout retries GitHub failures and records an exhausted attempt as `not-reviewed`. It never converts an API failure into `not-found`, and a later catalogue review can complete the deferred check.
 
 Paper records include a `controlApproaches` array when the method obtains effect or production-control parameters at inference or target-matching time:
 

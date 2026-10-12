@@ -7,6 +7,10 @@ on:
 
 permissions: {}
 
+concurrency:
+  group: weekly-paper-scout
+  cancel-in-progress: false
+
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -120,6 +124,7 @@ jobs:
           --candidates automation/candidates.json
           --review automation/reviewed-papers.json
           --output automation/candidates.json
+          --best-effort
 
       - name: Merge high-confidence records
         run: >-
@@ -187,11 +192,20 @@ jobs:
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Publish validated update
+        if: steps.changes.outputs.has_changes == 'true' && vars.PAPER_SCOUT_AUTO_MERGE != 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers.json data/projects.json data/weekly-update.json index.html README.md
+          git commit -m "Update recent intelligent audio papers"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
       - name: Create review pull request
-        if: steps.changes.outputs.has_changes == 'true'
+        if: steps.changes.outputs.has_changes == 'true' && vars.PAPER_SCOUT_AUTO_MERGE == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
-          AUTO_MERGE: ${{ vars.PAPER_SCOUT_AUTO_MERGE }}
         run: |
           branch="automation/paper-scout-${GITHUB_RUN_ID}"
           git config user.name "github-actions[bot]"
@@ -200,7 +214,4 @@ jobs:
           git add data/papers.json data/projects.json data/weekly-update.json index.html README.md
           git commit -m "Update recent intelligent audio papers"
           git push origin "$branch"
-          pr_url=$(gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers use the complete catalogue template: index names, bilingual summaries, AI Highlight assessments, formal publication metadata, and evidence-backed resource reviews. Verified source repositories create linked project records; documentation-only repositories remain project-page links. All changes pass deterministic validation before this pull request is opened.")
-          if [ "$AUTO_MERGE" = "true" ]; then
-            gh pr merge --auto --squash "$pr_url"
-          fi
+          gh pr create --base main --head "$branch" --title "Update intelligent audio paper index" --body "Weekly paper-scout update. New papers use the complete catalogue template: index names, bilingual summaries, AI Highlight assessments, formal publication metadata, and evidence-backed resource reviews. Verified source repositories create linked project records; documentation-only repositories remain project-page links. All changes pass deterministic validation before this pull request is opened."

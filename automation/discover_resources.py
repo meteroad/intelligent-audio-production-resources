@@ -351,13 +351,29 @@ def accepted_source_ids(review: dict) -> set[str]:
     }
 
 
-def enrich_candidates(data: dict, client: GitHubClient, selected_ids: set[str] | None = None) -> dict:
+def enrich_candidates(
+    data: dict,
+    client: GitHubClient,
+    selected_ids: set[str] | None = None,
+    best_effort: bool = False,
+) -> dict:
     checked_at = str(data.get("generatedAt") or date.today().isoformat())[:10]
     for candidate in data.get("candidates", []):
         if selected_ids is not None and candidate.get("sourceId") not in selected_ids:
             candidate.pop("resourceSearch", None)
             continue
-        candidate["resourceSearch"] = discover_for_candidate(client, candidate, checked_at)
+        try:
+            candidate["resourceSearch"] = discover_for_candidate(client, candidate, checked_at)
+        except RuntimeError as error:
+            if not best_effort:
+                raise
+            candidate["resourceSearch"] = {
+                "status": "not-reviewed",
+                "checkedAt": checked_at,
+                "provider": "github-search",
+                "resource": None,
+            }
+            print(f"Resource review deferred for {candidate['sourceId']}: {error}")
     return data
 
 
@@ -366,6 +382,11 @@ def main() -> None:
     parser.add_argument("--candidates", type=Path, required=True)
     parser.add_argument("--review", type=Path)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument(
+        "--best-effort",
+        action="store_true",
+        help="Defer resource review instead of failing when GitHub is temporarily unavailable.",
+    )
     args = parser.parse_args()
 
     token = os.environ.get("GITHUB_TOKEN", "").strip()
@@ -376,11 +397,15 @@ def main() -> None:
     if args.review:
         review = json.loads(args.review.read_text(encoding="utf-8"))
         selected_ids = accepted_source_ids(review)
-    enriched = enrich_candidates(data, GitHubClient(token), selected_ids)
+    enriched = enrich_candidates(data, GitHubClient(token), selected_ids, best_effort=args.best_effort)
     args.output.write_text(json.dumps(enriched, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     searched = [candidate for candidate in enriched.get("candidates", []) if "resourceSearch" in candidate]
     matched = sum(candidate["resourceSearch"]["status"] == "matched" for candidate in searched)
-    print(f"Verified GitHub resources for {matched}/{len(searched)} accepted candidates.")
+    deferred = sum(candidate["resourceSearch"]["status"] == "not-reviewed" for candidate in searched)
+    print(
+        f"Verified GitHub resources for {matched}/{len(searched)} accepted candidates; "
+        f"deferred {deferred}."
+    )
 
 
 if __name__ == "__main__":

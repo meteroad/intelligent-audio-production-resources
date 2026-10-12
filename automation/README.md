@@ -4,14 +4,14 @@ The paper scout follows a reviewable pipeline:
 
 1. A scheduled GitHub Action retrieves recent metadata from the public arXiv API. Requests are serialized and spaced according to arXiv's published rate limit. If the search API remains rate-limited after backoff, official category RSS feeds supply a current-day fallback; the 45-day API lookback recovers missed records on a later successful run.
 2. DeepSeek classifies direct relevance, supplies a required method or index short name, assigns topic, production-stage, output-type, production-control, and input-track labels, writes short English and Chinese summaries, and makes a conservative AI Highlight assessment under the website taxonomy.
-3. An authenticated GitHub search checks only high-confidence accepted candidates for an evidence-backed source repository or documentation-only project page. Explicit repository links are verified directly; otherwise a repository is accepted only through an arXiv identifier, exact paper title, or a method-and-author identity match. Source code, license files, and model links are inspected separately. API failures stop the job; they are never recorded as "not found."
-4. Each accepted paper is written with `templateVersion: 1` and a completed resource review. A verified source repository also creates or updates its Project Index record. Documentation-only repositories remain paper-level project-page links, while a completed search with no verified match is recorded explicitly as `not-found`.
+3. An authenticated GitHub search checks only high-confidence accepted candidates for an evidence-backed source repository or documentation-only project page. Explicit repository links are verified directly; otherwise a repository is accepted only through an arXiv identifier, exact paper title, or a method-and-author identity match. Source code, license files, and model links are inspected separately. Exhausted API retries defer the resource review instead of failing the entire paper update or being misreported as "not found."
+4. Each accepted paper is written with `templateVersion: 1` and a resource-review state. A verified source repository also creates or updates its Project Index record. Documentation-only repositories remain paper-level project-page links, a completed search with no verified match is `not-found`, and a transiently incomplete search is `not-reviewed`.
 5. A deterministic refresh rechecks every indexed arXiv record for DOI and formal publication information, using Semantic Scholar as a secondary bibliographic fallback.
 6. Citation counts are refreshed from exact arXiv or DOI matches when the stored measurement is at least 28 days old. High Impact is derived within each pre-current-year index cohort; current-year papers are not ranked.
 7. Titles, authors, dates, and paper URLs remain anchored to arXiv. Formal venues prioritize arXiv `journal_ref`, recognized DOI metadata, and arXiv comments; Semantic Scholar is used only when those fields do not identify a venue. Submission or under-review comments are never treated as acceptance evidence.
 8. When papers or linked source projects are actually added, DeepSeek writes a short bilingual weekly overview and selects up to three highlights from those exact IDs. Deterministic validation rejects invented or stale references.
-9. Landing-page fallback counts are synchronized before validation. Only complete, high-confidence records and verified metadata changes that pass deterministic validation and unit tests are proposed in a pull request. A week with no additions keeps the previous overview.
-10. Merging the pull request updates `main`; the Pages workflow then deploys the validated static site.
+9. Landing-page fallback counts are synchronized before validation. Only complete, high-confidence records and verified metadata changes that pass deterministic validation and unit tests are published. A week with no additions keeps the previous overview.
+10. A successful scheduled run publishes directly to `main` by default, and the Pages workflow deploys the validated static site. Set `PAPER_SCOUT_AUTO_MERGE=false` to use a review pull request instead.
 
 The active scope covers audio effects, differentiable production processing, effect and production representations, editable symbolic performance, performance-to-audio rendering, production programs and graphs, DAW interaction, agentic editing, mixing, mastering, task-specific evaluation, and production-facing spatial audio. Generic text-to-music and one-shot music generation remain out of scope unless a paper contributes an explicit, editable production stage. Spatial coverage is limited to generation, upmixing, mixing, rendering, HRTF personalization, and evaluation; localization-only and separation-only work remains out of scope. Bibliography repositories are maintained under `data/resources.json`; they are not treated as runnable projects. Dataset records and their paper/project usage relations are maintained under `data/datasets.json` and pass deterministic cross-reference validation, but the paper scout does not infer dataset usage automatically.
 
@@ -21,13 +21,13 @@ In GitHub, open **Settings → Secrets and variables → Actions**:
 
 - Add a repository secret named `DEEPSEEK_API_KEY`.
 - Optionally add `SEMANTIC_SCHOLAR_API_KEY` to increase the bibliographic refresh rate limit. The public batch API is used when this secret is absent.
-- Under **Actions → General → Workflow permissions**, allow read and write permissions and allow GitHub Actions to create pull requests.
+- Under **Actions → General → Workflow permissions**, allow read and write permissions. Enable pull-request creation only when using manual review mode.
 
 The resource search uses the workflow's automatically supplied `GITHUB_TOKEN`; no additional GitHub secret is required.
 
 The workflow runs every Monday at 01:00 UTC (09:00 Asia/Shanghai) and can also be started manually from **Actions → Weekly paper scout → Run workflow**. The publication refresh runs even when no new candidate paper is found.
 
-For unattended publication after validation, add the repository variable `PAPER_SCOUT_AUTO_MERGE` with the value `true`. The safer default is to review and merge the generated pull request manually.
+Validated updates publish automatically by default. To require manual review, add the repository variable `PAPER_SCOUT_AUTO_MERGE` with the value `false`; the workflow will then create a pull request instead of pushing to `main`.
 
 Never commit an API key or place it in workflow-level environment variables.
 

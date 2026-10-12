@@ -4,7 +4,7 @@ A curated, bilingual research index covering audio effects, differentiable proce
 
 [Browse the index](https://meteroad.github.io/intelligent-audio-production-resources/) · [Submit a resource](https://github.com/meteroad/intelligent-audio-production-resources/issues/new/choose) · [Report an issue](https://github.com/meteroad/intelligent-audio-production-resources/issues/new?template=correction.yml)
 
-**177 papers · 106 verified projects · 24 datasets · 3 reference collections**
+**178 papers · 106 verified projects · 24 datasets · 3 reference collections**
 
 [![Intelligent Audio Production: papers, code, models, datasets, and benchmarks](assets/social-preview.jpg)](https://meteroad.github.io/intelligent-audio-production-resources/)
 
@@ -66,7 +66,7 @@ See [DATA.md](DATA.md) for endpoint URLs, schema versions, field semantics, and 
 
 ## Automation
 
-The weekly paper scout searches arXiv, verifies related GitHub resources, screens candidates with a configured language model, and writes complete paper records with short names, bilingual summaries, production stages, output types, classifications, AI assessments, publication metadata, and resource-review results. Verified source repositories create linked project records; documentation-only pages are kept distinct from source code. The workflow then refreshes DOI, venue, and citation metadata, writes a concise bilingual update, validates every relation, and opens a reviewable pull request. It does not publish unreviewed candidates or generated summaries directly.
+The weekly paper scout searches arXiv, verifies related GitHub resources, screens candidates with a configured language model, and writes complete paper records with short names, bilingual summaries, production stages, output types, classifications, AI assessments, publication metadata, and resource-review results. Verified source repositories create linked project records; documentation-only pages are kept distinct from source code. The workflow then refreshes DOI, venue, and citation metadata, writes a concise bilingual update, and validates every relation before publishing to `main`. A transient GitHub search failure is recorded as a deferred review rather than "not found" and does not block the remaining update.
 
 See [automation/README.md](automation/README.md) for configuration and review rules.
 
@@ -88,7 +88,7 @@ See [automation/README.md](automation/README.md) for configuration and review ru
 
 ### Maintenance and access
 
-- [x] Run a weekly paper scout that opens reviewable pull requests instead of publishing automatically.
+- [x] Run a validated weekly paper scout with optional pull-request review mode.
 - [ ] Add a lightweight contributor review process for recurring community submissions.
 - [ ] Publish versioned catalogue snapshots and document a stable downstream data interface.
 

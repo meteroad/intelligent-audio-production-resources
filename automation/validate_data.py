@@ -78,7 +78,7 @@ ALLOWED_PRODUCTION_STAGES = {"score", "performance", "synthesis", "track", "mix"
 ALLOWED_OUTPUT_TYPES = {"audio", "parameter", "graph", "program", "edit", "project"}
 AI_ASSESSMENT_RATINGS = {"highlighted", "standard"}
 IMPACT_STATUSES = {"high-impact", "standard", "too-recent", "not-assessed"}
-RESOURCE_REVIEW_STATUSES = {"source", "project-page", "not-found"}
+RESOURCE_REVIEW_STATUSES = {"source", "project-page", "not-found", "not-reviewed"}
 RESOURCE_REVIEW_PROVIDERS = {"github-search", "manual-web-review"}
 ALLOWED_DATASET_CONTENT_TYPES = {
     "multitrack",
@@ -487,7 +487,7 @@ def validate_papers(path: Path) -> int:
             validate_date(review.get("checkedAt"), f"{paper_id}.resourceReview.checkedAt")
             require(review.get("provider") in RESOURCE_REVIEW_PROVIDERS, f"{paper_id}.resourceReview.provider is invalid")
             resource_url = review.get("url")
-            if status == "not-found":
+            if status in {"not-found", "not-reviewed"}:
                 require(resource_url is None, f"{paper_id}.resourceReview.url must be null")
             else:
                 validate_https_url(resource_url, f"{paper_id}.resourceReview.url")

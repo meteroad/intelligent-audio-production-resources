@@ -28,9 +28,9 @@ def project_id(full_name: str) -> str:
 
 def resource_review(search: dict) -> dict:
     resource = search.get("resource")
-    if search.get("status") == "not-found":
+    if search.get("status") in {"not-found", "not-reviewed"}:
         return {
-            "status": "not-found",
+            "status": search["status"],
             "checkedAt": search["checkedAt"],
             "provider": search["provider"],
             "url": None,

@@ -121,6 +121,31 @@ class ResourceDiscoveryTests(unittest.TestCase):
         self.assertIn("resourceSearch", enriched["candidates"][0])
         self.assertNotIn("resourceSearch", enriched["candidates"][1])
 
+    def test_best_effort_defers_resource_review_after_api_failure(self):
+        record = candidate()
+        original = discover_resources.discover_for_candidate
+        try:
+            discover_resources.discover_for_candidate = lambda *_args: (_ for _ in ()).throw(
+                RuntimeError("temporary GitHub API failure")
+            )
+            enriched = discover_resources.enrich_candidates(
+                {"generatedAt": "2026-10-12T01:00:00+00:00", "candidates": [record]},
+                FakeGitHubClient({}),
+                best_effort=True,
+            )
+        finally:
+            discover_resources.discover_for_candidate = original
+
+        self.assertEqual(
+            enriched["candidates"][0]["resourceSearch"],
+            {
+                "status": "not-reviewed",
+                "checkedAt": "2026-10-12",
+                "provider": "github-search",
+                "resource": None,
+            },
+        )
+
     def test_explicit_repository_skips_search_endpoints(self):
         record = candidate()
         record["comment"] = "Code: https://github.com/team/methodfx"
@@ -267,6 +292,25 @@ class ResourceMergeTests(unittest.TestCase):
             {"schemaVersion": 3, "updatedAt": "2026-08-01", "projects": []},
         )
         self.assertEqual(papers["papers"][0]["resourceReview"]["status"], "not-found")
+        self.assertEqual(projects["projects"], [])
+        self.assertEqual(additions["addedProjectCount"], 0)
+
+    def test_deferred_search_is_recorded_without_creating_a_project(self):
+        record = paper()
+        candidate_record = candidate()
+        candidate_record["resourceSearch"] = {
+            "status": "not-reviewed",
+            "checkedAt": "2026-10-12",
+            "provider": "github-search",
+            "resource": None,
+        }
+        papers, projects, additions = merge_resources.merge_resources(
+            {"generatedAt": "2026-10-12T01:00:00+00:00", "candidates": [candidate_record]},
+            {"generatedAt": "2026-10-12T01:00:00+00:00", "addedCount": 1, "papers": [copy.deepcopy(record)]},
+            {"schemaVersion": 1, "updatedAt": "2026-10-12", "papers": [record]},
+            {"schemaVersion": 3, "updatedAt": "2026-10-12", "projects": []},
+        )
+        self.assertEqual(papers["papers"][0]["resourceReview"]["status"], "not-reviewed")
         self.assertEqual(projects["projects"], [])
         self.assertEqual(additions["addedProjectCount"], 0)
 
