@@ -122,6 +122,49 @@ class WeeklyUpdateTests(unittest.TestCase):
         self.assertEqual(payload["projects"][0]["projectId"], "project-1")
         self.assertEqual(weekly["counts"]["projects"], 1)
 
+    def test_fallback_summary_is_valid_for_one_paper(self):
+        additions = {
+            "generatedAt": "2026-10-12T07:00:00+00:00",
+            "addedCount": 1,
+            "addedProjectCount": 0,
+            "papers": [
+                {
+                    "id": "paper-1",
+                    "title": "A Useful Audio Effect",
+                    "summary": {"en": "A factual paper summary.", "zh": "一条事实性论文简介。"},
+                }
+            ],
+        }
+
+        summary = summarize_weekly_update.build_fallback_summary(additions)
+        weekly = summarize_weekly_update.build_weekly_update(additions, summary)
+
+        self.assertEqual(weekly["counts"]["papers"], 1)
+        self.assertEqual(weekly["highlights"][0]["id"], "paper-1")
+        self.assertIn("1 new paper", weekly["headline"]["en"])
+
+    def test_fallback_summary_reports_projects_and_limits_highlights(self):
+        papers = [
+            {
+                "id": f"paper-{index}",
+                "title": f"Paper {index}",
+                "summary": {"en": "A factual paper summary.", "zh": "一条事实性论文简介。"},
+            }
+            for index in range(1, 5)
+        ]
+        additions = {
+            "generatedAt": "2026-10-12T07:00:00+00:00",
+            "addedCount": 4,
+            "addedProjectCount": 1,
+            "papers": papers,
+        }
+
+        summary = summarize_weekly_update.build_fallback_summary(additions)
+        weekly = summarize_weekly_update.build_weekly_update(additions, summary)
+
+        self.assertEqual(len(weekly["highlights"]), 3)
+        self.assertIn("1 linked source project", weekly["summary"]["en"])
+
     def test_formal_schema_is_valid_json(self):
         schema = json.loads((ROOT / "schemas" / "weekly-update-v1.schema.json").read_text(encoding="utf-8"))
         self.assertEqual(schema["$schema"], "https://json-schema.org/draft/2020-12/schema")

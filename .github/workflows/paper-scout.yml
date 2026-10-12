@@ -149,6 +149,7 @@ jobs:
 
       - name: Summarize weekly additions with DeepSeek
         if: steps.additions.outputs.added_count != '0'
+        continue-on-error: true
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
