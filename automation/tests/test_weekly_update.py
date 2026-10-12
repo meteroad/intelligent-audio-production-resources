@@ -141,7 +141,7 @@ class WeeklyUpdateTests(unittest.TestCase):
 
         self.assertEqual(weekly["counts"]["papers"], 1)
         self.assertEqual(weekly["highlights"][0]["id"], "paper-1")
-        self.assertIn("1 new paper", weekly["headline"]["en"])
+        self.assertIn("A Useful Audio Effect", weekly["headline"]["en"])
 
     def test_fallback_summary_reports_projects_and_limits_highlights(self):
         papers = [

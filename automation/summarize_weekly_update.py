@@ -122,6 +122,16 @@ def build_fallback_summary(additions: dict) -> dict:
     paper_count = additions["addedCount"]
     project_count = additions.get("addedProjectCount", 0)
     paper_word = "paper" if paper_count == 1 else "papers"
+    first_paper = additions.get("papers", [{}])[0]
+    first_name = (first_paper.get("shortName") or first_paper.get("title") or "New paper").strip()[:80]
+    headline = (
+        {"en": f"{first_name} leads this week's addition", "zh": f"本周新增：{first_name}"}
+        if paper_count == 1
+        else {
+            "en": f"This week adds {paper_count} new papers to the index",
+            "zh": f"本周资源库新增 {paper_count} 篇论文",
+        }
+    )
     project_clause_en = (
         f" and {project_count} linked source "
         f"{'project' if project_count == 1 else 'projects'}"
@@ -146,19 +156,16 @@ def build_fallback_summary(additions: dict) -> dict:
 
     return validate_summary(
         {
-            "headline": {
-                "en": f"This week adds {paper_count} new {paper_word} to the index",
-                "zh": f"本周资源库新增 {paper_count} 篇论文",
-            },
+            "headline": headline,
             "summary": {
                 "en": (
                     f"This week's automated review adds {paper_count} {paper_word}"
                     f"{project_clause_en}. Open the highlighted entries for paper links, "
-                    "summaries, topics, and available source code."
+                    "summaries, topics, and resource status."
                 ),
                 "zh": (
                     f"本周自动检索与审核新增 {paper_count} 篇论文{project_clause_zh}。"
-                    "可打开下方精选条目查看论文链接、摘要、分类与可用源码。"
+                    "可打开下方精选条目查看论文链接、摘要、分类与开源资源状态。"
                 ),
             },
             "highlights": highlights,
@@ -194,7 +201,8 @@ def main() -> None:
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(weekly_update, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Summarized {additions['addedCount']} new papers with {method}.")
+    noun = "paper" if additions["addedCount"] == 1 else "papers"
+    print(f"Summarized {additions['addedCount']} new {noun} with {method}.")
 
 
 if __name__ == "__main__":

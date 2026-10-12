@@ -1,42 +1,26 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-10-05",
+  "publishedAt": "2026-10-12",
   "counts": {
-    "papers": 8,
-    "projects": 1,
+    "papers": 1,
+    "projects": 0,
     "datasets": 0
   },
   "headline": {
-    "en": "Synthesizer inversion, plate reverb, and HRTF upsampling lead this week's additions",
-    "zh": "本周新增：合成器反演、板式混响与 HRTF 上采样"
+    "en": "AutoSynth leads this week's addition",
+    "zh": "本周新增：AutoSynth"
   },
   "summary": {
-    "en": "This week adds eight papers on synthesizer parameter estimation, reverb system identification, and spatial audio, plus one public code release for joint-distribution flow-matching synthesizer inversion. Together they show how differentiable simulators and learned embeddings are being used to recover effect and synth parameters, and how spatial audio models are being adapted to new measurement conditions.",
-    "zh": "本周新增八篇论文，涉及合成器参数估计、混响系统辨识和空间音频，另有一个用于联合分布流匹配合成器反演的公开代码。整体上，这些工作展示了如何借助可微模拟器和学习到的表示来恢复效果器与合成器参数，以及如何让空间音频模型适应不同的测量条件。"
+    "en": "This week's automated review adds 1 paper. Open the highlighted entries for paper links, summaries, topics, and resource status.",
+    "zh": "本周自动检索与审核新增 1 篇论文。可打开下方精选条目查看论文链接、摘要、分类与开源资源状态。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2609-29320",
+      "id": "arxiv-2610-10774",
       "note": {
-        "en": "It trains a multimodal continuous normalizing flow on audio and synth parameters with independent noise schedules, so unpaired real recordings can shape the audio marginal and improve inversion on Surge XT and Dexed, with a public implementation released.",
-        "zh": "该工作用独立噪声调度的多模态连续归一化流建模音频与合成器参数，使无配对真实录音也能塑造音频边缘分布，提升 Surge XT 与 Dexed 上的反演效果，并公开了实现代码。"
-      }
-    },
-    {
-      "type": "paper",
-      "id": "arxiv-2609-35295",
-      "note": {
-        "en": "It treats plate-reverb parameter estimation as simulation-based inference, training on simulator data and fine-tuning per impulse response with extra simulation rounds.",
-        "zh": "该工作把板式混响参数估计视为基于模拟的推断：先在模拟数据上训练，再针对每条脉冲响应通过额外模拟轮次微调。"
-      }
-    },
-    {
-      "type": "paper",
-      "id": "arxiv-2609-25995",
-      "note": {
-        "en": "Its geometry-aware, query-conditioned aggregation and Conformer model upsample HRTFs across four different LAP measurement configurations, reporting the lowest log-spectral distortion on SONICOM.",
-        "zh": "该方法用几何感知的查询条件聚合与 Conformer 模型在四种 LAP 测量配置下上采样 HRTF，在 SONICOM 上取得最低对数谱失真。"
+        "en": "AutoSynth learns an audio-conditioned autoregressive model that predicts complete, editable synthesizer programs, using a pretrained audio generation model to convert text into audio and then into programs, evaluated on synthesizer inversion and text-driven generation.",
+        "zh": "AutoSynth 学习音频条件的自回归模型以直接预测完整可编辑的合成器程序，并借助预训练音频生成模型将文本转为音频再转为程序，在合成器反演与文本驱动生成任务上进行评估。"
       }
     }
   ]

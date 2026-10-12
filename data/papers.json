@@ -1,7 +1,87 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-05",
+  "updatedAt": "2026-10-12",
   "papers": [
+    {
+      "id": "arxiv-2610-10774",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.10774"
+      },
+      "title": "AutoSynth: Learning to Generate Editable Synthesizer Programs from Audio and Text",
+      "authors": [
+        "Tristan Wu",
+        "Daniel Chin",
+        "Liwei Lin",
+        "Junan Zhang",
+        "Gus Xia"
+      ],
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": "arXiv",
+      "areas": [
+        "audio-effects",
+        "representation",
+        "production-program"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program",
+        "agentic-production"
+      ],
+      "productionStages": [
+        "synthesis"
+      ],
+      "outputTypes": [
+        "program",
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "AutoSynth unifies MIDI events, fixed synthesizer parameters, and variable-length modulation routes into an editable program sequence, trains audio- and text-conditioned models in two stages without requiring a differentiable synthesizer, and validates synthesizer inversion and text-driven generation with demos and code.",
+          "zh": "AutoSynth 将 MIDI 事件、固定合成器参数与可变长度调制路由统一为可编辑程序序列，在无需可微合成器的条件下分两阶段训练音频与文本条件模型，并通过演示与代码验证了合成器反演和文本驱动生成。"
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-12"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "AutoSynth learns an audio-conditioned autoregressive model that predicts complete, editable synthesizer programs, using a pretrained audio generation model to convert text into audio and then into programs, evaluated on synthesizer inversion and text-driven generation.",
+        "zh": "AutoSynth 学习音频条件的自回归模型以直接预测完整可编辑的合成器程序，并借助预训练音频生成模型将文本转为音频再转为程序，在合成器反演与文本驱动生成任务上进行评估。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.10774"
+        }
+      ],
+      "lastVerified": "2026-10-12",
+      "curation": "agent",
+      "shortName": "AutoSynth",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-12",
+        "provider": "github-search",
+        "url": null
+      }
+    },
     {
       "id": "arxiv-2610-03405",
       "source": {
