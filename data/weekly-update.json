@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-10-12",
+  "publishedAt": "2026-10-19",
   "counts": {
     "papers": 1,
     "projects": 0,
     "datasets": 0
   },
   "headline": {
-    "en": "AutoSynth leads this week's addition",
-    "zh": "本周新增：AutoSynth"
+    "en": "New paper: neural operator upsamples sparse HRTF measurements",
+    "zh": "新论文：神经算子实现稀疏HRTF上采样"
   },
   "summary": {
-    "en": "This week's automated review adds 1 paper. Open the highlighted entries for paper links, summaries, topics, and resource status.",
-    "zh": "本周自动检索与审核新增 1 篇论文。可打开下方精选条目查看论文链接、摘要、分类与开源资源状态。"
+    "en": "This week adds one spatial-audio paper: SPARO, a neural operator that turns sparse HRTF measurements into a continuous field queryable in any direction. It reports lower log-spectral distortion and interaural level difference error than baselines on SONICOM and HUTUBS. No source projects were added.",
+    "zh": "本周新增一篇空间音频论文：SPARO 用神经算子把稀疏的 HRTF 测量转换为可沿任意方向查询的连续场，并在 SONICOM 和 HUTUBS 数据集上报告了比基线更低的对数谱失真和双耳声级差误差。本周没有新增源码项目。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2610-10774",
+      "id": "arxiv-2610-20400",
       "note": {
-        "en": "AutoSynth learns an audio-conditioned autoregressive model that predicts complete, editable synthesizer programs, using a pretrained audio generation model to convert text into audio and then into programs, evaluated on synthesizer inversion and text-driven generation.",
-        "zh": "AutoSynth 学习音频条件的自回归模型以直接预测完整可编辑的合成器程序，并借助预训练音频生成模型将文本转为音频再转为程序，在合成器反演与文本驱动生成任务上进行评估。"
+        "en": "SPARO upamples sparse HRTF measurements into a continuous field that can be queried at arbitrary directions, and reports lower log-spectral distortion and interaural level difference error than baselines on SONICOM and HUTUBS.",
+        "zh": "SPARO 将稀疏 HRTF 测量上采样为可按任意方向查询的连续场，在 SONICOM 与 HUTUBS 上报告的对数谱失真和双耳声级差误差均低于基线。"
       }
     }
   ]

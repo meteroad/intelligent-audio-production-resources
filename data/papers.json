@@ -1,7 +1,74 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12",
+  "updatedAt": "2026-10-19",
   "papers": [
+    {
+      "id": "arxiv-2610-20400",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.20400"
+      },
+      "title": "HRTF Upsampling and Personalization via Neural Operators",
+      "authors": [
+        "Meenakshi Krishnan",
+        "You Zhang",
+        "Ramani Duraiswami",
+        "C. Phillip Brown"
+      ],
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": "arXiv",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-19"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "SPARO is a neural operator that upsamples sparse HRTF measurements into a continuous field queried at arbitrary directions, achieving lower log-spectral distortion and interaural level difference error than baselines on SONICOM and HUTUBS.",
+        "zh": "SPARO 是一种神经算子，可将稀疏的 HRTF 测量上采样为可在任意方向查询的连续场，在 SONICOM 和 HUTUBS 上取得比基线更低的对数谱失真和双耳声级差误差。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.20400"
+        }
+      ],
+      "lastVerified": "2026-10-19",
+      "curation": "agent",
+      "shortName": "SPARO",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-19",
+        "provider": "github-search",
+        "url": null
+      }
+    },
     {
       "id": "arxiv-2610-10774",
       "source": {
