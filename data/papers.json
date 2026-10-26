@@ -1,7 +1,404 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "papers": [
+    {
+      "id": "arxiv-2610-29093",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.29093"
+      },
+      "title": "Agentic Music Post-Production",
+      "authors": [
+        "Jaywon Koo",
+        "Junghyun Koo",
+        "Marco A. Martinez-Ramirez",
+        "Wei-Hsiang Liao",
+        "Seungheon Doh",
+        "Qiyu Wu",
+        "Vicente Ordonez",
+        "Yuki Mitsufuji"
+      ],
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": "arXiv",
+      "areas": [
+        "mixing",
+        "audio-effects",
+        "evaluation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "agentic-production",
+        "production-program"
+      ],
+      "productionStages": [
+        "track",
+        "mix"
+      ],
+      "outputTypes": [
+        "parameter",
+        "audio",
+        "edit"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Introduces an agentic reference-guided mixing pipeline with interpretable editable plans, a new 45k-critique dataset, and empirical validation including a human listening test.",
+          "zh": "提出了参考引导的智能混音流程，生成可解释可编辑的混音方案，构建了约4.5万条评语的数据集，并通过数值与主观听感实验进行了验证。"
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-26"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "MixAgent is an agentic post-production pipeline that groups tracks, plans and orders audio effects guided by a reference song, and refines parameters with a detector and a critic trained on the MixCritic dataset.",
+        "zh": "MixAgent 是一个智能后期制作流程，先对音轨分组，再在参考歌曲引导下选择并排列音频效果，并用检测器与基于 MixCritic 数据集训练的评语模型修正参数。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.29093"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/grrlkk/writing-agent-arxiv-daily"
+        }
+      ],
+      "lastVerified": "2026-10-26",
+      "curation": "agent",
+      "shortName": "MixAgent",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-10-26",
+        "provider": "github-search",
+        "url": "https://github.com/grrlkk/writing-agent-arxiv-daily"
+      }
+    },
+    {
+      "id": "arxiv-2610-28100",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.28100"
+      },
+      "title": "Transformer-Based Plate Parameter Estimation with Differentiable and Particle-Swarm Refinement",
+      "authors": [
+        "David Marttila",
+        "Rodrigo Diaz",
+        "Pablo Tablas De Paula",
+        "Ilias Ibnyahya",
+        "Chin-Yun Yu"
+      ],
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects",
+        "differentiable-processing"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization",
+        "derivative-free-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-26"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper presents Transformer-based methods for estimating the six parameters of a synthetic plate-reverb model from an impulse response, refined with differentiable IR optimization or particle-swarm optimization plus gradient polishing.",
+        "zh": "该文提出基于 Transformer 的方法，从冲激响应中估计合成板式混响模型的六个有效物理参数，并通过可微冲激响应优化或粒子群优化加梯度精修进行细化。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.28100"
+        },
+        {
+          "label": "project",
+          "url": "https://github.com/davidmarttila/dafx_challenge"
+        }
+      ],
+      "lastVerified": "2026-10-26",
+      "curation": "agent",
+      "shortName": "Plate Param Estimation",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-10-26",
+        "provider": "github-search",
+        "url": "https://github.com/davidmarttila/dafx_challenge"
+      }
+    },
+    {
+      "id": "arxiv-2610-28043",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.28043"
+      },
+      "title": "Sound Matching with a Differentiable Karplus-Strong Algorithm",
+      "authors": [
+        "Pablo Tablas de Paula",
+        "David Marttila",
+        "Rodrigo Díaz",
+        "Irán Román",
+        "Emmanouil Benetos",
+        "Joshua D. Reiss"
+      ],
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects",
+        "differentiable-processing",
+        "representation"
+      ],
+      "controlApproaches": [
+        "gradient-based-optimization"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [
+        "production-program"
+      ],
+      "productionStages": [
+        "synthesis",
+        "performance"
+      ],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-26"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper builds a self-supervised sound-matching model around a differentiable extended Karplus-Strong algorithm, analyzing gradient behavior of delay interpolation and spectral losses and recovering interpretable synthesis parameters.",
+        "zh": "该文基于可微扩展 Karplus-Strong 算法构建自监督音色匹配模型，分析延迟插值与频谱损失的梯度特性，并恢复可解释的合成参数。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.28043"
+        }
+      ],
+      "lastVerified": "2026-10-26",
+      "curation": "agent",
+      "shortName": "DiffKS Sound Matching",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-26",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2610-25344",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.25344"
+      },
+      "title": "TOMORI: A Tool-Orchestrated Mixing Operator for REAPER Interaction",
+      "authors": [
+        "Yining Wang",
+        "Tianjiao Li"
+      ],
+      "year": 2026,
+      "published": "2026-10-18",
+      "venue": "arXiv",
+      "areas": [
+        "mixing",
+        "evaluation",
+        "representation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "daw-interaction",
+        "agentic-production",
+        "production-program"
+      ],
+      "productionStages": [
+        "track",
+        "mix",
+        "project"
+      ],
+      "outputTypes": [
+        "edit",
+        "project",
+        "audio",
+        "program"
+      ],
+      "aiAssessment": {
+        "rating": "highlighted",
+        "rationale": {
+          "en": "Delivers a native REAPER-controlling mixing agent with an extensive 990-case human-reviewed benchmark evaluating project edits and rendered audio.",
+          "zh": "提出了可原生控制 REAPER 的混音智能体，并构建了含 110 条人工评审参考编辑、共 990 个用例的基准，端到端评估工程编辑与渲染音频。"
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-26"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "TOMORI is a code-based agent harness that inspects and edits REAPER projects via generated Lua, paired with TOMORI-BENCH evaluating DAW execution and rendered mixes across instruction forms.",
+        "zh": "TOMORI 是一个基于代码的智能体框架，通过生成的 Lua 代码检查并编辑 REAPER 工程，并配套 TOMORI-BENCH 评估不同指令形式下的 DAW 执行与渲染混音效果。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.25344"
+        }
+      ],
+      "lastVerified": "2026-10-26",
+      "curation": "agent",
+      "shortName": "TOMORI",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-10-26",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2610-24622",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2610.24622"
+      },
+      "title": "Fluxion: A Differentiable DSP Runtime from Training GPU to Real-Time Edge",
+      "authors": [
+        "Matteo Spanio",
+        "Antonio Rodà"
+      ],
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": "arXiv",
+      "areas": [
+        "differentiable-processing",
+        "audio-effects"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-10-26"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Fluxion is a Rust differentiable DSP runtime for filters and delay-line effects with analytic adjoints, lowered from one graph algebra into training and real-time engines with stability checks.",
+        "zh": "Fluxion 是一个 Rust 可微 DSP 运行时，支持滤波器与延迟线效果并实现解析伴随，将同一图代数降为目标训练引擎与实时引擎，并进行稳定性检查。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2610.24622"
+        },
+        {
+          "label": "source",
+          "url": "https://github.com/matteospanio/fluxion"
+        }
+      ],
+      "lastVerified": "2026-10-26",
+      "curation": "agent",
+      "shortName": "Fluxion",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "source",
+        "checkedAt": "2026-10-26",
+        "provider": "github-search",
+        "url": "https://github.com/matteospanio/fluxion"
+      }
+    },
     {
       "id": "arxiv-2610-20400",
       "source": {

@@ -1,26 +1,42 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-10-19",
+  "publishedAt": "2026-10-26",
   "counts": {
-    "papers": 1,
-    "projects": 0,
+    "papers": 5,
+    "projects": 2,
     "datasets": 0
   },
   "headline": {
-    "en": "New paper: neural operator upsamples sparse HRTF measurements",
-    "zh": "新论文：神经算子实现稀疏HRTF上采样"
+    "en": "Five papers and two public implementations added to the index",
+    "zh": "本周新增五篇论文和两个公开实现"
   },
   "summary": {
-    "en": "This week adds one spatial-audio paper: SPARO, a neural operator that turns sparse HRTF measurements into a continuous field queryable in any direction. It reports lower log-spectral distortion and interaural level difference error than baselines on SONICOM and HUTUBS. No source projects were added.",
-    "zh": "本周新增一篇空间音频论文：SPARO 用神经算子把稀疏的 HRTF 测量转换为可沿任意方向查询的连续场，并在 SONICOM 和 HUTUBS 数据集上报告了比基线更低的对数谱失真和双耳声级差误差。本周没有新增源码项目。"
+    "en": "This week adds five papers on agentic post-production, differentiable reverb and physical-model matching, DAW-controlling mixing agents, and a differentiable DSP runtime, plus public implementations for MixAgent and Fluxion.",
+    "zh": "本周新增五篇论文，分别涉及智能后期制作、可微混响与物理模型匹配、可操控 DAW 的混音智能体以及可微 DSP 运行时，并为 MixAgent 和 Fluxion 补充了公开实现。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2610-20400",
+      "id": "arxiv-2610-29093",
       "note": {
-        "en": "SPARO upamples sparse HRTF measurements into a continuous field that can be queried at arbitrary directions, and reports lower log-spectral distortion and interaural level difference error than baselines on SONICOM and HUTUBS.",
-        "zh": "SPARO 将稀疏 HRTF 测量上采样为可按任意方向查询的连续场，在 SONICOM 与 HUTUBS 上报告的对数谱失真和双耳声级差误差均低于基线。"
+        "en": "MixAgent plans and orders effects against a reference song as an editable, interpretable mix plan, refining parameters with a detector and a critic trained on the new 45k-critique MixCritic dataset, with a human listening test.",
+        "zh": "MixAgent 以参考歌曲为引导，生成可编辑、可解释的效果编排方案，并用检测器和基于新构建的约4.5万条评语的 MixCritic 数据集训练的评语模型修正参数，还进行了主观听感测试。"
+      }
+    },
+    {
+      "type": "paper",
+      "id": "arxiv-2610-25344",
+      "note": {
+        "en": "TOMORI edits REAPER projects through generated Lua code, and TOMORI-BENCH tests DAW execution and rendered mixes with 990 human-reviewed cases across instruction forms.",
+        "zh": "TOMORI 通过生成 Lua 代码直接检查和修改 REAPER 工程，配套的 TOMORI-BENCH 用 990 个经人工评审的用例评估不同指令形式下的工程执行与渲染混音效果。"
+      }
+    },
+    {
+      "type": "paper",
+      "id": "arxiv-2610-24622",
+      "note": {
+        "en": "Fluxion compiles one differentiable DSP graph algebra into both a training engine and a real-time edge engine, with analytic adjoints and stability checks for filters and delay-line effects; a public Rust implementation is listed.",
+        "zh": "Fluxion 把同一套可微 DSP 图代数降低为训练引擎和实时边缘引擎，支持滤波器与延迟线效果，用解析伴随求梯度并做稳定性检查；索引中已列出其 Rust 公开实现。"
       }
     }
   ]

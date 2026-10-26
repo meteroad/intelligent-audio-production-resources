@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-10-19",
+  "updatedAt": "2026-10-26",
   "projects": [
     {
       "id": "facebookresearch-2-5d-visual-sound",
@@ -2901,6 +2901,68 @@
       ]
     },
     {
+      "id": "matteospanio-fluxion",
+      "name": "Fluxion",
+      "description": {
+        "en": "Public implementation associated with Fluxion. Fluxion is a Rust differentiable DSP runtime for filters and delay-line effects with analytic adjoints, lowered from one graph algebra into training and real-time engines with stability checks.",
+        "zh": "与 Fluxion 关联的公开实现。Fluxion 是一个 Rust 可微 DSP 运行时，支持滤波器与延迟线效果并实现解析伴随，将同一图代数降为目标训练引擎与实时引擎，并进行稳定性检查。"
+      },
+      "areas": [
+        "differentiable-processing",
+        "audio-effects"
+      ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed",
+        "evidence": []
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/matteospanio/fluxion/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/matteospanio/fluxion"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2610-24622"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-10-26",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/matteospanio/fluxion"
+        }
+      ]
+    },
+    {
       "id": "sonyresearch-fx-encoder-plusplus",
       "name": "Fx-Encoder++",
       "description": {
@@ -4479,6 +4541,74 @@
         {
           "label": "source",
           "url": "https://github.com/f90/Mix-Wave-U-Net"
+        }
+      ]
+    },
+    {
+      "id": "grrlkk-writing-agent-arxiv-daily",
+      "name": "MixAgent",
+      "description": {
+        "en": "Public implementation associated with MixAgent. MixAgent is an agentic post-production pipeline that groups tracks, plans and orders audio effects guided by a reference song, and refines parameters with a detector and a critic trained on the MixCritic dataset.",
+        "zh": "与 MixAgent 关联的公开实现。MixAgent 是一个智能后期制作流程，先对音轨分组，再在参考歌曲引导下选择并排列音频效果，并用检测器与基于 MixCritic 数据集训练的评语模型修正参数。"
+      },
+      "areas": [
+        "mixing",
+        "audio-effects",
+        "evaluation"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "agentic-production",
+          "production-program"
+        ],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/grrlkk/writing-agent-arxiv-daily/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "MIT License",
+        "zh": "MIT License",
+        "status": "identified",
+        "spdx": "MIT",
+        "evidenceUrl": "https://github.com/grrlkk/writing-agent-arxiv-daily/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/grrlkk/writing-agent-arxiv-daily"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2610-29093"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-10-26",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/grrlkk/writing-agent-arxiv-daily"
         }
       ]
     },
