@@ -1,42 +1,42 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-10-26",
+  "publishedAt": "2026-11-02",
   "counts": {
     "papers": 5,
     "projects": 2,
     "datasets": 0
   },
   "headline": {
-    "en": "Five papers and two public implementations added to the index",
-    "zh": "本周新增五篇论文和两个公开实现"
+    "en": "New papers on audio effect control, spatial audio, and a piano dataset",
+    "zh": "本周新增：音效控制、空间音频与钢琴数据集"
   },
   "summary": {
-    "en": "This week adds five papers on agentic post-production, differentiable reverb and physical-model matching, DAW-controlling mixing agents, and a differentiable DSP runtime, plus public implementations for MixAgent and Fluxion.",
-    "zh": "本周新增五篇论文，分别涉及智能后期制作、可微混响与物理模型匹配、可操控 DAW 的混音智能体以及可微 DSP 运行时，并为 MixAgent 和 Fluxion 补充了公开实现。"
+    "en": "This week adds five papers and two linked project pages. The additions cover editable audio-effect parameters inferred from a reference, personalised vocal effect recommendations, 6DoF Ambisonic rendering, a large aligned piano dataset, and plan-based spatial audio generation.",
+    "zh": "本周新增五篇论文和两个关联项目页面，内容涉及从参考音频推断可编辑音效参数、人声效果个性化推荐、6DoF Ambisonic渲染、大型对齐钢琴数据集，以及基于可执行计划的空间音频生成。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2610-29093",
+      "id": "arxiv-2610-40759",
       "note": {
-        "en": "MixAgent plans and orders effects against a reference song as an editable, interpretable mix plan, refining parameters with a detector and a critic trained on the new 45k-critique MixCritic dataset, with a human listening test.",
-        "zh": "MixAgent 以参考歌曲为引导，生成可编辑、可解释的效果编排方案，并用检测器和基于新构建的约4.5万条评语的 MixCritic 数据集训练的评语模型修正参数，还进行了主观听感测试。"
+        "en": "TAPE infers editable parameters for an explicit differentiable EQ, compression, waveshaping, residual and reverb chain from a processed reference and applies them to a different recording in one forward pass.",
+        "zh": "TAPE从处理后参考音频推断可微均衡、压缩、波形整形、残差与混响链的可编辑参数，并一次前向传播应用于另一段录音。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2610-25344",
+      "id": "arxiv-2610-35741",
       "note": {
-        "en": "TOMORI edits REAPER projects through generated Lua code, and TOMORI-BENCH tests DAW execution and rendered mixes with 990 human-reviewed cases across instruction forms.",
-        "zh": "TOMORI 通过生成 Lua 代码直接检查和修改 REAPER 工程，配套的 TOMORI-BENCH 用 990 个经人工评审的用例评估不同指令形式下的工程执行与渲染混音效果。"
+        "en": "A lightweight graph neural network refines array-interpolation weights for wide-area 6DoF Ambisonic rendering, with an analytical DirAC layer reconstructing energy, diffuseness and direction of arrival.",
+        "zh": "轻量图神经网络细化阵列插值权重以实现广域6DoF Ambisonic渲染，解析DirAC层重建能量、扩散度和到达方向。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2610-24622",
+      "id": "arxiv-2610-34415",
       "note": {
-        "en": "Fluxion compiles one differentiable DSP graph algebra into both a training engine and a real-time edge engine, with analytic adjoints and stability checks for filters and delay-line effects; a public Rust implementation is listed.",
-        "zh": "Fluxion 把同一套可微 DSP 图代数降低为训练引擎和实时边缘引擎，支持滤波器与延迟线效果，用解析伴随求梯度并做稳定性检查；索引中已列出其 Rust 公开实现。"
+        "en": "AMBIT uses executable ScenePlans to specify source content, activity and 3D trajectories, coupling autoregressive planning with rectified-flow rendering for native first-order Ambisonic generation and instruction-guided editing.",
+        "zh": "AMBIT通过可执行ScenePlan指定声源内容、活动与三维轨迹，将自回归规划与整流流渲染结合，实现原生一阶Ambisonics生成和指令引导编辑。"
       }
     }
   ]

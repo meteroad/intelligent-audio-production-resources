@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-11-02",
   "projects": [
     {
       "id": "facebookresearch-2-5d-visual-sound",
@@ -216,6 +216,73 @@
         {
           "label": "source",
           "url": "https://github.com/yongyizang/ambisonizer"
+        }
+      ]
+    },
+    {
+      "id": "will-rice-tts-papers",
+      "name": "AMBIT",
+      "description": {
+        "en": "Public implementation associated with AMBIT. AMBIT couples autoregressive planning and rectified-flow rendering through executable ScenePlans specifying source content, activity and 3D trajectories for native FOA spatial-audio generation and instruction-guided editing.",
+        "zh": "与 AMBIT 关联的公开实现。AMBIT通过可执行ScenePlan将自回归规划与整流流渲染耦合，用其指定声源内容、活动与三维轨迹，实现原生一阶Ambisonics空间音频生成与指令引导编辑。"
+      },
+      "areas": [
+        "spatial-audio",
+        "production-program"
+      ],
+      "taxonomy": {
+        "tasks": [
+          "production-program",
+          "agentic-production"
+        ],
+        "effects": [],
+        "reviewStatus": "reviewed",
+        "evidence": [
+          "https://github.com/will-rice/tts-papers/blob/main/README.md"
+        ]
+      },
+      "license": {
+        "en": "Apache License 2.0",
+        "zh": "Apache License 2.0",
+        "status": "identified",
+        "spdx": "Apache-2.0",
+        "evidenceUrl": "https://github.com/will-rice/tts-papers/blob/main/LICENSE"
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/will-rice/tts-papers"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2610-34415"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-11-02",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/will-rice/tts-papers"
         }
       ]
     },
@@ -3231,6 +3298,67 @@
         {
           "label": "source",
           "url": "https://github.com/jin-woo-lee/hrtf-interpolation"
+        }
+      ]
+    },
+    {
+      "id": "doublepoints-cv-arxiv-daily",
+      "name": "GNN Ambisonic Rendering",
+      "description": {
+        "en": "Public implementation associated with GNN Ambisonic Rendering. A lightweight graph neural network refines array-interpolation weights for wide-area 6DoF Ambisonic rendering, with an analytical DirAC layer reconstructing energy, diffuseness and direction of arrival.",
+        "zh": "与 GNN Ambisonic Rendering 关联的公开实现。该文用轻量图神经网络细化阵列插值权重以进行广域6DoF Ambisonic渲染，并由解析DirAC层重建能量、扩散度与到达方向。"
+      },
+      "areas": [
+        "spatial-audio"
+      ],
+      "taxonomy": {
+        "tasks": [],
+        "effects": [],
+        "reviewStatus": "not-reviewed",
+        "evidence": []
+      },
+      "license": {
+        "en": "No repository license file verified",
+        "zh": "未核验到仓库许可证文件",
+        "status": "not-verified",
+        "spdx": null,
+        "evidenceUrl": null
+      },
+      "availability": {
+        "source": {
+          "status": "linked",
+          "evidence": [
+            "https://github.com/doublepoints/cv-arxiv-daily"
+          ]
+        },
+        "checkpoint": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "inference": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "training": {
+          "status": "not-reviewed",
+          "evidence": []
+        },
+        "dataset": {
+          "status": "not-reviewed",
+          "evidence": []
+        }
+      },
+      "relations": {
+        "paperIds": [
+          "arxiv-2610-35741"
+        ],
+        "reviewStatus": "exact-link-match"
+      },
+      "lastVerified": "2026-11-02",
+      "links": [
+        {
+          "label": "source",
+          "url": "https://github.com/doublepoints/cv-arxiv-daily"
         }
       ]
     },
