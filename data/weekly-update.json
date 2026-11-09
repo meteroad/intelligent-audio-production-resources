@@ -1,42 +1,42 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-11-02",
+  "publishedAt": "2026-11-09",
   "counts": {
-    "papers": 5,
-    "projects": 2,
+    "papers": 3,
+    "projects": 0,
     "datasets": 0
   },
   "headline": {
-    "en": "New papers on audio effect control, spatial audio, and a piano dataset",
-    "zh": "本周新增：音效控制、空间音频与钢琴数据集"
+    "en": "Open stem corpus, low-cost spatial audio network, and neural plate reverb estimation",
+    "zh": "开放分轨数据集、低成本空间音频网络与神经板混响估计"
   },
   "summary": {
-    "en": "This week adds five papers and two linked project pages. The additions cover editable audio-effect parameters inferred from a reference, personalised vocal effect recommendations, 6DoF Ambisonic rendering, a large aligned piano dataset, and plan-based spatial audio generation.",
-    "zh": "本周新增五篇论文和两个关联项目页面，内容涉及从参考音频推断可编辑音效参数、人声效果个性化推荐、6DoF Ambisonic渲染、大型对齐钢琴数据集，以及基于可执行计划的空间音频生成。"
+    "en": "This week adds three papers: SPDMX, an openly licensed multitrack stem corpus rendered from public-domain symbolic scores, Ananas, a networked audio system for distributed spatial rendering on low-cost hardware, and two neural networks that estimate modal plate reverb parameters from impulse responses. No source projects were added.",
+    "zh": "本周新增三篇论文：基于公有领域乐谱渲染的开放多轨分轨数据集 SPDMX；面向低成本硬件的分布式空间音频网络系统 Ananas；以及从冲激响应估计板混响模态参数的两种神经网络。本周没有新增源码项目。"
   },
   "highlights": [
     {
       "type": "paper",
-      "id": "arxiv-2610-40759",
+      "id": "arxiv-2611-09140",
       "note": {
-        "en": "TAPE infers editable parameters for an explicit differentiable EQ, compression, waveshaping, residual and reverb chain from a processed reference and applies them to a different recording in one forward pass.",
-        "zh": "TAPE从处理后参考音频推断可微均衡、压缩、波形整形、残差与混响链的可编辑参数，并一次前向传播应用于另一段录音。"
+        "en": "SPDMX provides 253,982 songs and 490,159 mono stems with paired MIDI and an open rendering pipeline, giving stem-separation and source-separation research a large openly licensed dataset.",
+        "zh": "SPDMX 提供 253,982 首歌曲和 490,159 条单声道分轨，配有对齐 MIDI 和开放渲染流程，为分轨与音源分离研究提供大规模开放许可数据。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2610-35741",
+      "id": "arxiv-2611-03077",
       "note": {
-        "en": "A lightweight graph neural network refines array-interpolation weights for wide-area 6DoF Ambisonic rendering, with an analytical DirAC layer reconstructing energy, diffuseness and direction of arrival.",
-        "zh": "轻量图神经网络细化阵列插值权重以实现广域6DoF Ambisonic渲染，解析DirAC层重建能量、扩散度和到达方向。"
+        "en": "Ananas offers protocols, control software, and microcontroller firmware for wave field synthesis and higher-order ambisonics on low-cost Faust-programmed boards synchronized via PTP.",
+        "zh": "Ananas 提供协议、控制软件与微控制器固件，可在经 PTP 同步的低成本 Faust 开发板上实现波场合成与高阶 Ambisonics。"
       }
     },
     {
       "type": "paper",
-      "id": "arxiv-2610-34415",
+      "id": "arxiv-2611-02083",
       "note": {
-        "en": "AMBIT uses executable ScenePlans to specify source content, activity and 3D trajectories, coupling autoregressive planning with rectified-flow rendering for native first-order Ambisonic generation and instruction-guided editing.",
-        "zh": "AMBIT通过可执行ScenePlan指定声源内容、活动与三维轨迹，将自回归规划与整流流渲染结合，实现原生一阶Ambisonics生成和指令引导编辑。"
+        "en": "Two count-density networks jointly estimate modal count and per-mode frequency, decay, and gain from plate-reverb impulse responses, outperforming classical baselines on the challenge set.",
+        "zh": "两种计数密度网络从板混响冲激响应中联合估计模态数量及各模态的频率、衰减与增益，在挑战赛测试集上优于经典基线。"
       }
     }
   ]

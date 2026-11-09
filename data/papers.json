@@ -1,7 +1,225 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02",
+  "updatedAt": "2026-11-09",
   "papers": [
+    {
+      "id": "arxiv-2611-09140",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2611.09140"
+      },
+      "title": "SPDMX: Large-Scale Open Stem Audio From Symbolic Music",
+      "authors": [
+        "Phillip Long",
+        "Eduardo Escoto",
+        "Julian McAuley",
+        "Zachary Novack"
+      ],
+      "year": 2026,
+      "published": "2026-11-06",
+      "venue": "arXiv",
+      "areas": [
+        "symbolic-performance"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [
+        "multitrack"
+      ],
+      "topics": [
+        "symbolic-performance"
+      ],
+      "productionStages": [
+        "score",
+        "performance",
+        "track"
+      ],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-11-09"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "SPDMX renders public-domain PDMX scores into an openly-licensed multitrack stem corpus with paired MIDI and an open rendering pipeline, yielding 253,982 songs and 490,159 mono stems.",
+        "zh": "SPDMX 将公有领域的 PDMX 乐谱渲染为开放许可的多轨分轨语料，配套对齐的 MIDI 与开放渲染流程，共 253,982 首歌曲、490,159 条单声道分轨。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2611.09140"
+        }
+      ],
+      "lastVerified": "2026-11-09",
+      "curation": "agent",
+      "shortName": "SPDMX",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-11-09",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2611-03077",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2611.03077"
+      },
+      "title": "Ananas: A Networked Audio System for Distributed Spatial Audio Applications",
+      "authors": [
+        "Thomas Rushton",
+        "Romain Michon",
+        "Tanguy Risset"
+      ],
+      "year": 2026,
+      "published": "2026-11-02",
+      "venue": "IS2 2026 - IEEE 7th International Symposium on the Internet of Sounds, Oct 2026, Cannes, France",
+      "areas": [
+        "spatial-audio"
+      ],
+      "controlApproaches": [],
+      "trackScopes": [],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [
+        "audio"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-11-09"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "Ananas is a networked audio system with protocols, control software, and microcontroller firmware for rendering spatial audio applications such as wave field synthesis and higher-order ambisonics using low-cost Faust-programmed boards synchronized via PTP.",
+        "zh": "Ananas 是一套网络音频系统，包含协议、控制软件与微控制器固件，基于 Faust 编程的低成本开发板并通过 PTP 同步，用于波场合成与高阶 Ambisonics 等空间音频渲染。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2611.03077"
+        }
+      ],
+      "lastVerified": "2026-11-09",
+      "curation": "agent",
+      "shortName": "Ananas",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "not-found",
+        "checkedAt": "2026-11-09",
+        "provider": "github-search",
+        "url": null
+      }
+    },
+    {
+      "id": "arxiv-2611-02083",
+      "source": {
+        "type": "arxiv",
+        "id": "arxiv:2611.02083"
+      },
+      "title": "Count-Density Networks for Modal Plate Parameter Estimation",
+      "authors": [
+        "Rodrigo Diaz",
+        "Pablo Tablas De Paula",
+        "David Marttila",
+        "Ilias Ibnyahya",
+        "Chin-Yun Yu"
+      ],
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": "DAFx 2026",
+      "areas": [
+        "audio-effects",
+        "evaluation"
+      ],
+      "controlApproaches": [
+        "direct-prediction"
+      ],
+      "trackScopes": [
+        "single-track"
+      ],
+      "topics": [],
+      "productionStages": [],
+      "outputTypes": [
+        "parameter"
+      ],
+      "aiAssessment": {
+        "rating": "standard",
+        "rationale": {
+          "en": "",
+          "zh": ""
+        },
+        "assessor": "DeepSeek",
+        "rubricVersion": "1.0",
+        "assessedAt": "2026-11-09"
+      },
+      "impact": {
+        "status": "not-assessed",
+        "citationCount": null,
+        "influentialCitationCount": null,
+        "yearRank": null,
+        "cohortSize": null,
+        "sourceUrl": null,
+        "measuredAt": null,
+        "methodVersion": "semantic-scholar-year-cohort-v1"
+      },
+      "summary": {
+        "en": "The paper presents two neural count-density networks that jointly infer modal count and per-mode frequency, decay, and gain triples from plate-reverb impulse responses, outperforming classical baselines on the challenge set.",
+        "zh": "该文提出两种神经计数密度网络，从板混响冲激响应中联合估计模态数量及各模态的频率、衰减与增益三元组，在挑战赛测试集上优于经典基线。"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2611.02083"
+        },
+        {
+          "label": "project",
+          "url": "https://github.com/davidmarttila/dafx_challenge"
+        }
+      ],
+      "lastVerified": "2026-11-09",
+      "curation": "agent",
+      "shortName": "Count-Density Modal Estimator",
+      "templateVersion": 1,
+      "resourceReview": {
+        "status": "project-page",
+        "checkedAt": "2026-11-09",
+        "provider": "github-search",
+        "url": "https://github.com/davidmarttila/dafx_challenge"
+      }
+    },
     {
       "id": "arxiv-2610-40759",
       "source": {
@@ -1204,9 +1422,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2609.35295"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2609.35295"
         }
       ],
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "SBI Plate Reverb ID",
       "templateVersion": 1,
@@ -1280,9 +1502,13 @@
         {
           "label": "project",
           "url": "https://github.com/ben-hayes/synth-jepa"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2609.31024"
         }
       ],
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "Synth-JEPA",
       "templateVersion": 1,
@@ -1354,9 +1580,13 @@
         {
           "label": "source",
           "url": "https://github.com/DoHeyYeah/arXiV-favor"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2609.29320"
         }
       ],
-      "lastVerified": "2026-10-05",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "Joint Flow Synth Inversion",
       "templateVersion": 1,
@@ -1576,9 +1806,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2609.12607"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2609.12607"
         }
       ],
-      "lastVerified": "2026-09-14",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "Direct Preference Density Alignment",
       "templateVersion": 1,
@@ -1650,9 +1884,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2609.02835"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2609.02835"
         }
       ],
-      "lastVerified": "2026-09-07",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "Two-Stage Mixing Analysis",
       "templateVersion": 1,
@@ -1728,9 +1966,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.30559"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.30559"
         }
       ],
-      "lastVerified": "2026-09-07",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "SPHERE",
       "templateVersion": 1,
@@ -1807,9 +2049,13 @@
         {
           "label": "project",
           "url": "https://github.com/lingfengyao/PhysWave"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.29549"
         }
       ],
-      "lastVerified": "2026-09-07",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "PhysWave",
       "templateVersion": 1,
@@ -1880,9 +2126,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.28818"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.28818"
         }
       ],
-      "lastVerified": "2026-09-07",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "Plate Reverb Parameter Estimation",
       "templateVersion": 1,
@@ -1953,6 +2203,10 @@
         {
           "label": "project",
           "url": "https://github.com/MM-Speech/CSAVocoder"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.18653/2026.emnlp-main.496"
         }
       ],
       "templateVersion": 1,
@@ -1962,7 +2216,7 @@
         "provider": "github-search",
         "url": "https://github.com/MM-Speech/CSAVocoder"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -2020,6 +2274,10 @@
         {
           "label": "source",
           "url": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.24726"
         }
       ],
       "templateVersion": 1,
@@ -2029,7 +2287,7 @@
         "provider": "github-search",
         "url": "https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -2171,6 +2429,10 @@
         {
           "label": "checkpoint",
           "url": "https://huggingface.co/davidbraun/fm-synapse-dx7-gnn"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.18226"
         }
       ],
       "templateVersion": 1,
@@ -2180,7 +2442,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/DBraun/SynAPSE"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -2240,6 +2502,10 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.14097"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.14097"
         }
       ],
       "templateVersion": 1,
@@ -2249,7 +2515,7 @@
         "provider": "github-search",
         "url": null
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -2393,6 +2659,10 @@
         {
           "label": "source",
           "url": "https://github.com/User-tian/VIOLET"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.07944"
         }
       ],
       "templateVersion": 1,
@@ -2402,7 +2672,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/User-tian/VIOLET"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -2572,9 +2842,13 @@
         {
           "label": "project",
           "url": "https://zys711.github.io/Diff2Mix"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.05442"
         }
       ],
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "aiAssessment": {
         "rating": "highlighted",
@@ -2671,9 +2945,13 @@
         {
           "label": "project",
           "url": "https://github.com/affige/genmusic_demo_list"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.03999"
         }
       ],
-      "lastVerified": "2026-09-07",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "shortName": "PMT",
       "templateVersion": 1,
@@ -2839,6 +3117,10 @@
         {
           "label": "checkpoint",
           "url": "https://huggingface.co/MINNE-WU/DDSynth-RL"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.03032"
         }
       ],
       "templateVersion": 1,
@@ -2848,7 +3130,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/DDSynth-RL/DDSynthRL"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -2885,9 +3167,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.00667"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.00667"
         }
       ],
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "aiAssessment": {
         "rating": "standard",
@@ -2942,9 +3228,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2608.00656"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2608.00656"
         }
       ],
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-11-09",
       "curation": "agent",
       "aiAssessment": {
         "rating": "standard",
@@ -11157,6 +11447,10 @@
         {
           "label": "checkpoint",
           "url": "https://github.com/magenta/midi-ddsp/raw/models/midi_ddsp_model_weights_urmp_9_10.zip"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2112.09312"
         }
       ],
       "templateVersion": 1,
@@ -11166,7 +11460,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/magenta/midi-ddsp"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -11199,9 +11493,13 @@
         {
           "label": "paper",
           "url": "https://arxiv.org/abs/2111.11882"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2111.11882"
         }
       ],
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-11-09",
       "curation": "manual",
       "aiAssessment": {
         "rating": "standard",
@@ -11356,6 +11654,10 @@
         {
           "label": "source",
           "url": "https://github.com/DBraun/DawDreamer"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2111.09931"
         }
       ],
       "templateVersion": 1,
@@ -11365,7 +11667,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/DBraun/DawDreamer"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -12439,6 +12741,10 @@
         {
           "label": "project",
           "url": "https://bit.ly/serum_rnn"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2102.03170"
         }
       ],
       "templateVersion": 1,
@@ -12448,7 +12754,7 @@
         "provider": "manual-web-review",
         "url": "https://bit.ly/serum_rnn"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -12839,6 +13145,10 @@
         {
           "label": "source",
           "url": "https://github.com/gudgud96/piano-synthesis"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2006.09833"
         }
       ],
       "templateVersion": 1,
@@ -12848,7 +13158,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/gudgud96/piano-synthesis"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -12889,9 +13199,13 @@
         {
           "label": "source",
           "url": "https://github.com/magenta/ddsp"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.2001.04643"
         }
       ],
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-11-09",
       "curation": "manual",
       "aiAssessment": {
         "rating": "highlighted",
@@ -13217,6 +13531,10 @@
         {
           "label": "source",
           "url": "https://github.com/acids-ircam/flow_synthesizer"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.1907.00971"
         }
       ],
       "templateVersion": 1,
@@ -13226,7 +13544,7 @@
         "provider": "manual-web-review",
         "url": "https://github.com/acids-ircam/flow_synthesizer"
       },
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-11-09",
       "curation": "agent"
     },
     {
@@ -13577,9 +13895,13 @@
         {
           "label": "source",
           "url": "https://github.com/pedro-morgado/spatialaudiogen"
+        },
+        {
+          "label": "doi",
+          "url": "https://doi.org/10.48550/arXiv.1809.02587"
         }
       ],
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-11-09",
       "curation": "manual",
       "aiAssessment": {
         "rating": "standard",
